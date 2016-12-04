@@ -1,6 +1,6 @@
 PORTNAME=	html2ps
 DISTVERSION=	1.0b7
-PORTREVISION=	5
+PORTREVISION=	6
 PORTEPOCH=	1
 CATEGORIES=	print www perl5
 MASTER_SITES=	LOCAL/hrs
@@ -12,11 +12,12 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 RUN_DEPENDS=	p5-libwww>=0:www/p5-libwww \
+		p5-libwww>=0:www/p5-libwww \
 		weblint++:www/weblint++ \
 		paperconf:print/libpaper
 
 NO_BUILD=	yes
-USES=		ghostscript:run magick:6,run perl5
+USES=		ghostscript:run magick:7,run perl5
 
 CONFLICTS_INSTALL=	p5-DocSet # bin/html2ps
 
