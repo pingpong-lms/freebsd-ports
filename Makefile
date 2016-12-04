@@ -41,6 +41,7 @@ SUBDIR += net-mgmt
 SUBDIR += net-p2p
 SUBDIR += news
 SUBDIR += palm
+SUBDIR += pingpong
 SUBDIR += polish
 SUBDIR += ports-mgmt
 SUBDIR += portuguese
