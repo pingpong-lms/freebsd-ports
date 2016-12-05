@@ -38,4 +38,11 @@ post-install:
 	@${RMDIR} ${STAGEDIR}${DATADIR}/completions
 	@${RMDIR} ${STAGEDIR}${DATADIR}
 
+post-install:
+	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d
+	${MV} ${STAGEDIR}${DATADIR}/completions/ag.bashcomp.sh \
+		${STAGEDIR}${PREFIX}/etc/bash_completion.d
+	@${RMDIR} ${STAGEDIR}${DATADIR}/completions
+	@${RMDIR} ${STAGEDIR}${DATADIR}
+
 .include <bsd.port.mk>
