@@ -1,7 +1,7 @@
 # Created by: girgen
 # 
 PORTNAME=	pingpong-generic
-PORTVERSION=	0.10
+PORTVERSION=	0.11
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
 DISTFILES=	#
@@ -45,7 +45,6 @@ RUN_DEPENDS= \
 	collectd:net-mgmt/collectd5 \
 	telegraf:net-mgmt/telegraf \
 	snmpd:net-mgmt/net-snmp \
-	${LOCALBASE}/share/statsd/backends/graphite.js:net-mgmt/statsd \
 	lsof:sysutils/lsof \
 	dig:dns/bind-tools \
 	lynx:www/lynx \
