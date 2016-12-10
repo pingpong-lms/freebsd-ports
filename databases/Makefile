@@ -798,8 +798,6 @@
     SUBDIR += py34-gdbm
     SUBDIR += py34-sqlite3
     SUBDIR += py35-gdbm
-    SUBDIR += py35-mysqlclient
-    SUBDIR += py35-psycopg2
     SUBDIR += py35-sqlite3
     SUBDIR += py36-gdbm
     SUBDIR += py36-sqlite3
