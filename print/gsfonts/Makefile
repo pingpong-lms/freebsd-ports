@@ -19,9 +19,6 @@ NO_BUILD=	yes
 PLIST_SUB=	FONTSDIR="${FONTSDIR:S|${STAGEDIR}${PREFIX}/||}"
 OPTIONS_DEFINE=	DOCS
 
-RUN_DEPENDS+=	${LOCALBASE}/share/fonts/std.ja_JP/Ryumin-Light:japanese/font-std \
-		${LOCALBASE}/share/fonts/std.zh_CN/STSong-Light:chinese/font-std \
-
 FONTSDIR=	${STAGEDIR}${PREFIX}/share/ghostscript/fonts
 CJKFONTS?=	std.ja_JP/Ryumin-Light \
 		std.ja_JP/GothicBBB-Medium \
