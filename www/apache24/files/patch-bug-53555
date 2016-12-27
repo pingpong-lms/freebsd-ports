@@ -1,3 +1,7 @@
+Apache har problem med hängande uppkopplingar
+
+https://bz.apache.org/bugzilla/show_bug.cgi?id=53555
+
 --- server/mpm/event/event.c	(revision 1706598)
 +++ server/mpm/event/event.c	(working copy)
 @@ -181,6 +181,8 @@ 
