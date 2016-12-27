@@ -45,6 +45,7 @@
     SUBDIR += R-cran-reshape
     SUBDIR += R-cran-reshape2
     SUBDIR += R-cran-rngtools
+    SUBDIR += R-cran-rprojroot
     SUBDIR += R-cran-rstudioapi
     SUBDIR += R-cran-sourcetools
     SUBDIR += R-cran-tibble
@@ -749,7 +750,9 @@
     SUBDIR += go-codec
     SUBDIR += go-faker
     SUBDIR += go-form
+    SUBDIR += go-glide
     SUBDIR += go-go.uuid
+    SUBDIR += go-gocode
     SUBDIR += go-goregen
     SUBDIR += go-hashicorp-logutils
     SUBDIR += go-json-rest
@@ -1228,7 +1231,6 @@
     SUBDIR += libconcurrent
     SUBDIR += libconfig
     SUBDIR += libconfuse
-    SUBDIR += libcppformat
     SUBDIR += libcrossguid
     SUBDIR += libcutl
     SUBDIR += libcwd
@@ -1277,6 +1279,7 @@
     SUBDIR += libffi
     SUBDIR += libfirm
     SUBDIR += libflatarray
+    SUBDIR += libfmt
     SUBDIR += libfortuna
     SUBDIR += libfreefare
     SUBDIR += libfsntfs
@@ -1567,6 +1570,7 @@
     SUBDIR += luajava
     SUBDIR += lutok
     SUBDIR += lwp
+    SUBDIR += lxqt-build-tools
     SUBDIR += m17n-db
     SUBDIR += m17n-docs
     SUBDIR += m17n-lib
@@ -1705,6 +1709,7 @@
     SUBDIR += omniORB-4.1
     SUBDIR += oniguruma4
     SUBDIR += oniguruma5
+    SUBDIR += oniguruma6
     SUBDIR += onscripter
     SUBDIR += onscripter-1byte
     SUBDIR += oozie
@@ -3217,6 +3222,7 @@
     SUBDIR += p5-Sub-Name
     SUBDIR += p5-Sub-Override
     SUBDIR += p5-Sub-Prototype
+    SUBDIR += p5-Sub-Quote
     SUBDIR += p5-Sub-Signatures
     SUBDIR += p5-Sub-Uplevel
     SUBDIR += p5-Sub-WrapPackages
@@ -3278,6 +3284,7 @@
     SUBDIR += p5-Term-Size-Any
     SUBDIR += p5-Term-Size-Perl
     SUBDIR += p5-Term-Sk
+    SUBDIR += p5-Term-Table
     SUBDIR += p5-Term-Title
     SUBDIR += p5-Term-UI
     SUBDIR += p5-Term-VT102
@@ -3847,6 +3854,7 @@
     SUBDIR += pecl-qb
     SUBDIR += pecl-raphf
     SUBDIR += pecl-raphf2
+    SUBDIR += pecl-request
     SUBDIR += pecl-runkit
     SUBDIR += pecl-scream
     SUBDIR += pecl-spl_types
@@ -3983,6 +3991,7 @@
     SUBDIR += py-MultiMapping
     SUBDIR += py-PEAK-Rules
     SUBDIR += py-Persistence
+    SUBDIR += py-Pint
     SUBDIR += py-Products.ATContentTypes
     SUBDIR += py-Products.ATReferenceBrowserWidget
     SUBDIR += py-Products.Archetypes
@@ -4033,6 +4042,34 @@
     SUBDIR += py-TGScheduler
     SUBDIR += py-ToscaWidgets
     SUBDIR += py-TurboJinja
+    SUBDIR += py-XStatic
+    SUBDIR += py-XStatic-Angular
+    SUBDIR += py-XStatic-Angular-Bootstrap
+    SUBDIR += py-XStatic-Angular-FileUpload
+    SUBDIR += py-XStatic-Angular-Gettext
+    SUBDIR += py-XStatic-Angular-Schema-Form
+    SUBDIR += py-XStatic-Angular-lrdragndrop
+    SUBDIR += py-XStatic-Bootstrap-Datepicker
+    SUBDIR += py-XStatic-Bootstrap-SCSS
+    SUBDIR += py-XStatic-D3
+    SUBDIR += py-XStatic-Font-Awesome
+    SUBDIR += py-XStatic-Hogan
+    SUBDIR += py-XStatic-JQuery-Migrate
+    SUBDIR += py-XStatic-JQuery.TableSorter
+    SUBDIR += py-XStatic-JQuery.quicksearch
+    SUBDIR += py-XStatic-JSEncrypt
+    SUBDIR += py-XStatic-Jasmine
+    SUBDIR += py-XStatic-Rickshaw
+    SUBDIR += py-XStatic-Spin
+    SUBDIR += py-XStatic-bootswatch
+    SUBDIR += py-XStatic-jQuery
+    SUBDIR += py-XStatic-jquery-ui
+    SUBDIR += py-XStatic-mdi
+    SUBDIR += py-XStatic-objectpath
+    SUBDIR += py-XStatic-roboto-fontface
+    SUBDIR += py-XStatic-smart-table
+    SUBDIR += py-XStatic-term.js
+    SUBDIR += py-XStatic-tv4
     SUBDIR += py-ZopeUndo
     SUBDIR += py-adb
     SUBDIR += py-akismet
@@ -4127,6 +4164,7 @@
     SUBDIR += py-country
     SUBDIR += py-cov-core
     SUBDIR += py-coverage
+    SUBDIR += py-crank
     SUBDIR += py-crcmod
     SUBDIR += py-ctags
     SUBDIR += py-cuisine
@@ -4153,6 +4191,7 @@
     SUBDIR += py-dexml
     SUBDIR += py-dialog
     SUBDIR += py-diazo
+    SUBDIR += py-dill
     SUBDIR += py-dirspec
     SUBDIR += py-distorm
     SUBDIR += py-django-rq
@@ -4261,7 +4300,6 @@
     SUBDIR += py-isodate
     SUBDIR += py-isort
     SUBDIR += py-iterpipes
-    SUBDIR += py-itools
     SUBDIR += py-jaraco.classes
     SUBDIR += py-jaraco.functools
     SUBDIR += py-jaraco.itertools
@@ -4305,6 +4343,7 @@
     SUBDIR += py-libusb1
     SUBDIR += py-libvirt
     SUBDIR += py-libzfs
+    SUBDIR += py-linecache2
     SUBDIR += py-ll-core
     SUBDIR += py-llfuse
     SUBDIR += py-llvmlite
@@ -4474,12 +4513,14 @@
     SUBDIR += py-pyte
     SUBDIR += py-pytemplate
     SUBDIR += py-pytest
+    SUBDIR += py-pytest-asyncio
     SUBDIR += py-pytest-cache
     SUBDIR += py-pytest-capturelog
     SUBDIR += py-pytest-django
     SUBDIR += py-pytest-localserver
     SUBDIR += py-pytest-runner
     SUBDIR += py-pytest-timeout
+    SUBDIR += py-pytest-tornado
     SUBDIR += py-pytest-xdist
     SUBDIR += py-python-bugzilla
     SUBDIR += py-python-distutils-extra
@@ -4497,6 +4538,7 @@
     SUBDIR += py-pytvmaze
     SUBDIR += py-pytz
     SUBDIR += py-pyutil
+    SUBDIR += py-pyvalid
     SUBDIR += py-pyvisa
     SUBDIR += py-pyvisa-py
     SUBDIR += py-pyxml2obj
@@ -4575,6 +4617,7 @@
     SUBDIR += py-setuptools33
     SUBDIR += py-setuptools34
     SUBDIR += py-setuptools35
+    SUBDIR += py-setuptools36
     SUBDIR += py-setuptools_darcs
     SUBDIR += py-setuptools_hg
     SUBDIR += py-setuptools_scm
@@ -4635,6 +4678,7 @@
     SUBDIR += py-total-ordering
     SUBDIR += py-tox
     SUBDIR += py-trace2html
+    SUBDIR += py-traceback2
     SUBDIR += py-traitlets
     SUBDIR += py-traits
     SUBDIR += py-transaction
@@ -4662,6 +4706,7 @@
     SUBDIR += py-uncompyle2
     SUBDIR += py-unicodecsv
     SUBDIR += py-unipath
+    SUBDIR += py-unittest2
     SUBDIR += py-unpaddedbase64
     SUBDIR += py-update_checker
     SUBDIR += py-urlimport
@@ -4712,11 +4757,11 @@
     SUBDIR += py-z3c.formwidget.query
     SUBDIR += py-z3c.zcmlhook
     SUBDIR += py-zExceptions
-    SUBDIR += py-zkpython
     SUBDIR += py-zLOG
     SUBDIR += py-zc.buildout
     SUBDIR += py-zclockfile
     SUBDIR += py-zconfig
+    SUBDIR += py-zkpython
     SUBDIR += py-zope.annotation
     SUBDIR += py-zope.app.applicationcontrol
     SUBDIR += py-zope.app.appsetup
@@ -4799,8 +4844,10 @@
     SUBDIR += py3-libpeas
     SUBDIR += py3-lxml
     SUBDIR += py3-nose
+    SUBDIR += py3-py
     SUBDIR += py3-pyicu
     SUBDIR += py3-pylru-cache
+    SUBDIR += py3-pytest
     SUBDIR += py3-python-magic
     SUBDIR += py3-pytz
     SUBDIR += py3-threema-msgapi
@@ -4833,6 +4880,7 @@
     SUBDIR += qdevelop
     SUBDIR += qgit
     SUBDIR += qjson
+    SUBDIR += qjson-qt5
     SUBDIR += qmake
     SUBDIR += qmake4
     SUBDIR += qmake5
@@ -5114,8 +5162,8 @@
     SUBDIR += rubygem-formatador
     SUBDIR += rubygem-forwardable-extended
     SUBDIR += rubygem-gdata
-    SUBDIR += rubygem-gem_plugin
     SUBDIR += rubygem-gem-compare
+    SUBDIR += rubygem-gem_plugin
     SUBDIR += rubygem-gemcutter
     SUBDIR += rubygem-gemnasium-gitlab-service
     SUBDIR += rubygem-gemnasium-parser

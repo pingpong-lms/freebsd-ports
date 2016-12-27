@@ -210,7 +210,7 @@
     SUBDIR += py-gtksourceview
     SUBDIR += py-gui
     SUBDIR += py-kivy
-    SUBDIR += py-kiwi
+    SUBDIR += py-kiwi-gtk
     SUBDIR += py-qt4-gui
     SUBDIR += py-qt5-gui
     SUBDIR += py-qt5-quick
@@ -228,6 +228,7 @@
     SUBDIR += py33-tkinter
     SUBDIR += py34-tkinter
     SUBDIR += py35-tkinter
+    SUBDIR += py36-tkinter
     SUBDIR += pypy-tkinter
     SUBDIR += qt4-declarative
     SUBDIR += qt4-gui

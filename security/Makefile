@@ -604,6 +604,7 @@
     SUBDIR += p5-Dancer-Plugin-Passphrase
     SUBDIR += p5-Dancer2-Plugin-Auth-Extensible
     SUBDIR += p5-Dancer2-Plugin-Auth-Extensible-Provider-DBIC
+    SUBDIR += p5-Dancer2-Plugin-Auth-Extensible-Provider-Database
     SUBDIR += p5-Dancer2-Plugin-Auth-Extensible-Provider-IMAP
     SUBDIR += p5-Dancer2-Plugin-Auth-Extensible-Provider-Usergroup
     SUBDIR += p5-Dancer2-Plugin-Passphrase
@@ -821,6 +822,7 @@
     SUBDIR += pulledpork
     SUBDIR += pure-sfv
     SUBDIR += putty
+    SUBDIR += putty-nogtk
     SUBDIR += pvk
     SUBDIR += pwauth
     SUBDIR += pwman

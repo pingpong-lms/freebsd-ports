@@ -4,6 +4,7 @@
 PORTNAME=	remmina
 DISTVERSIONPREFIX=v
 DISTVERSION=	1.2.0-rcgit.16
+PORTREVISION=	1
 CATEGORIES=	net gnome
 
 MAINTAINER=	woodsb02@FreeBSD.org
@@ -16,7 +17,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	FreeRDP
 GH_PROJECT=	Remmina
 
-USES=		cmake:outsource gettext gmake localbase:ldflags pathfix pkgconfig
+USES=		cmake:outsource gettext localbase:ldflags pathfix pkgconfig
 USE_GNOME=	atk cairo gdkpixbuf2 glib20 gtk30 pango
 USE_XORG=	ice sm x11 xext
 PATHFIX_WRKSRC=		${WRKSRC}/remmina

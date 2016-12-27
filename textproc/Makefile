@@ -18,6 +18,7 @@
     SUBDIR += R-cran-xml2
     SUBDIR += R-cran-xtable
     SUBDIR += R-cran-yaml
+    SUBDIR += UCD
     SUBDIR += ack
     SUBDIR += adabrowse
     SUBDIR += add-css-links
@@ -361,9 +362,10 @@
     SUBDIR += jrefentry
     SUBDIR += jshon
     SUBDIR += kdiff3
+    SUBDIR += kenlm
     SUBDIR += kf5-kcodecs
     SUBDIR += kf5-sonnet
-    SUBDIR += kenlm
+    SUBDIR += kf5-syntax-highlighting
     SUBDIR += kibana3
     SUBDIR += kibana41
     SUBDIR += kibana43
@@ -799,6 +801,7 @@
     SUBDIR += p5-String-Fraction
     SUBDIR += p5-String-HexConvert
     SUBDIR += p5-String-Koremutake
+    SUBDIR += p5-String-LCSS
     SUBDIR += p5-String-Print
     SUBDIR += p5-String-RewritePrefix
     SUBDIR += p5-String-Scanf
@@ -1253,6 +1256,7 @@
     SUBDIR += py-guess-language
     SUBDIR += py-hexdump
     SUBDIR += py-html2text
+    SUBDIR += py-hunspell
     SUBDIR += py-hyperestraier-python
     SUBDIR += py-hypua2jamo
     SUBDIR += py-jaxml
@@ -1346,6 +1350,7 @@
     SUBDIR += py3-MarkupSafe
     SUBDIR += py3-asciinema
     SUBDIR += py3-chardet
+    SUBDIR += py3-hunspell
     SUBDIR += py3-libxml2
     SUBDIR += py3-pager
     SUBDIR += pychm
@@ -1498,9 +1503,9 @@
     SUBDIR += rubygem-rmmseg-cpp
     SUBDIR += rubygem-rouge
     SUBDIR += rubygem-rttool
-    SUBDIR += rubygem-ruby_expect
     SUBDIR += rubygem-ruby-augeas
     SUBDIR += rubygem-ruby-xslt
+    SUBDIR += rubygem-ruby_expect
     SUBDIR += rubygem-rubypants
     SUBDIR += rubygem-rugments
     SUBDIR += rubygem-sanitize
@@ -1642,7 +1647,6 @@
     SUBDIR += txt2html
     SUBDIR += txt2man
     SUBDIR += txt2tags
-    SUBDIR += UCD
     SUBDIR += uchardet
     SUBDIR += uim
     SUBDIR += uim-el
@@ -1737,5 +1741,6 @@
     SUBDIR += zsh-syntax-highlighting
     SUBDIR += zu-aspell
     SUBDIR += zu-hunspell
+    SUBDIR += zxing-cpp
 
 .include <bsd.port.subdir.mk>

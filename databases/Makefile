@@ -611,6 +611,7 @@
     SUBDIR += php56-sybase_ct
     SUBDIR += php70-dba
     SUBDIR += php70-interbase
+    SUBDIR += php70-memcache
     SUBDIR += php70-memcached
     SUBDIR += php70-mysqli
     SUBDIR += php70-odbc
@@ -763,6 +764,7 @@
     SUBDIR += py-python-memcached
     SUBDIR += py-python-rrdtool
     SUBDIR += py-python-sql
+    SUBDIR += py-python-swiftclient
     SUBDIR += py-qt4-sql
     SUBDIR += py-qt5-sql
     SUBDIR += py-queries
@@ -772,8 +774,6 @@
     SUBDIR += py-rrdtool_lgpl
     SUBDIR += py-south
     SUBDIR += py-sqlalchemy-migrate
-    SUBDIR += py-sqlalchemy06
-    SUBDIR += py-sqlalchemy07
     SUBDIR += py-sqlalchemy08
     SUBDIR += py-sqlalchemy09
     SUBDIR += py-sqlalchemy10
@@ -782,15 +782,17 @@
     SUBDIR += py-sqlite3dbm
     SUBDIR += py-sqlobject
     SUBDIR += py-sqlparse
+    SUBDIR += py-sqlparse01
     SUBDIR += py-sqlrelay
     SUBDIR += py-swift
-    SUBDIR += py-swiftclient
     SUBDIR += py-sybase
     SUBDIR += py-tarantool
     SUBDIR += py-umemcache
     SUBDIR += py-unqlite
     SUBDIR += py-whisper
     SUBDIR += py3-bsddb3
+    SUBDIR += py3-mysqlclient
+    SUBDIR += py3-psycopg2
     SUBDIR += py33-gdbm
     SUBDIR += py33-sqlite3
     SUBDIR += py34-gdbm
@@ -799,6 +801,8 @@
     SUBDIR += py35-mysqlclient
     SUBDIR += py35-psycopg2
     SUBDIR += py35-sqlite3
+    SUBDIR += py36-gdbm
+    SUBDIR += py36-sqlite3
     SUBDIR += pydbx
     SUBDIR += pymongo
     SUBDIR += pypy-gdbm

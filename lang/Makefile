@@ -143,6 +143,7 @@
     SUBDIR += jimtcl
     SUBDIR += jruby
     SUBDIR += js_of_ocaml
+    SUBDIR += julia
     SUBDIR += jython
     SUBDIR += kawa
     SUBDIR += kf5-kross
@@ -279,6 +280,7 @@
     SUBDIR += python33
     SUBDIR += python34
     SUBDIR += python35
+    SUBDIR += python36
     SUBDIR += qore
     SUBDIR += qscheme
     SUBDIR += qt5-qml
@@ -296,6 +298,7 @@
     SUBDIR += ruby21
     SUBDIR += ruby22
     SUBDIR += ruby23
+    SUBDIR += ruby24
     SUBDIR += runawk
     SUBDIR += rust
     SUBDIR += rust-nightly
