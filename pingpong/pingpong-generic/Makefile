@@ -1,5 +1,5 @@
 # Created by: girgen
-# 
+#
 PORTNAME=	pingpong-generic
 PORTVERSION=	0.11
 CATEGORIES=	pingpong sysutils
@@ -56,7 +56,7 @@ RUN_DEPENDS= \
 	xauth:x11/xauth \
 	tmux:sysutils/tmux \
 	screen:sysutils/screen
-	
+
 configure:
 	${DO_NADA}
 

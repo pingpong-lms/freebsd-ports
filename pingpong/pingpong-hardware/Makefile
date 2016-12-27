@@ -1,5 +1,5 @@
 # Created by: girgen
-# 
+#
 PORTNAME=	pingpong-hardware
 PORTVERSION=	0.4
 CATEGORIES=	pingpong sysutils
