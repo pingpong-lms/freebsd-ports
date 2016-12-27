@@ -1,5 +1,5 @@
 # Created by: girgen
-# 
+#
 PORTNAME=	pingpong-database
 PORTVERSION=	0.5
 CATEGORIES=	pingpong databases

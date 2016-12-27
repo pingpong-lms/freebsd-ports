@@ -1,5 +1,5 @@
 # Created by: girgen
-# 
+#
 PORTNAME=	pingpong-app
 PORTVERSION=	0.9
 CATEGORIES=	pingpong

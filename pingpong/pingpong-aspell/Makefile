@@ -1,5 +1,5 @@
 # Created by: girgen
-# 
+#
 PORTNAME=	pingpong-aspell
 PORTVERSION=	0.3
 CATEGORIES=	pingpong
