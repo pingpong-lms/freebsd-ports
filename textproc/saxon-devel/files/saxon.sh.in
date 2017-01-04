@@ -10,7 +10,7 @@ else
 fi
 
 SAXON_CLASSPATH=""
-for jarfile in %%SAXON_JARS%%
+for jarfile in %%SAXON_JARS%% /opt/pingpong/data/WEB-INF/lib/postgresql.jar
 do
 	SAXON_CLASSPATH="${SAXON_CLASSPATH}:${jarfile}"
 done
