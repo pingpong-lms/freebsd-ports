@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gdal
-PORTVERSION=	2.1.2
-PORTREVISION=	2
+PORTVERSION=	2.1.3
 CATEGORIES=	graphics geography
 MASTER_SITES=	http://download.osgeo.org/gdal/${PORTVERSION}/ \
 		ftp://ftp.remotesensing.org/pub/gdal/${PORTVERSION}/ \
@@ -113,12 +112,6 @@ WEBP_LIB_DEPENDS=	libwebp.so:graphics/webp
 XERCES_CONFIGURE_WITH=	xerces
 XERCES_LIB_DEPENDS=	libxerces-c.so:textproc/xerces-c3
 
-.include <bsd.port.pre.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1000000
-CFLAGS+=	-flax-vector-conversions
-.endif
-
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$(INST_LIB)/pkgconfig|${PREFIX}/libdata/pkgconfig|' ${WRKSRC}/GNUmakefile
 	@${REINPLACE_CMD} -e 's|-lminizip|-lkmlminizip|' ${WRKSRC}/configure
@@ -139,4 +132,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/GDALmake.opt ${STAGEDIR}${DATADIR}/
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgdal.so.${PORTVERSION}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

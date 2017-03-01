@@ -2,12 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	afl
-PORTVERSION=	2.32
+PORTVERSION=	2.36
 DISTVERSIONSUFFIX=	b
 CATEGORIES=	security
 MASTER_SITES=	http://lcamtuf.coredump.cx/afl/releases/
 
-MAINTAINER=	t@tobik.me
+MAINTAINER=	tobik@FreeBSD.org
 COMMENT=	Fast instrumented fuzzer
 
 LICENSE=	APACHE20
@@ -33,13 +33,6 @@ LLVM_RUN_DEPENDS=	clang${LLVM_VERSION}:devel/llvm${LLVM_VERSION}
 MINIMIZE_CORPUS_RUN_DEPENDS=	${LOCALBASE}/bin/bash:shells/bash
 
 .include <bsd.port.options.mk>
-
-.if ${OSVERSION} < 1000013
-# Broken on FreeBSD 9
-PLIST_SUB+=	LLVM_SUB="@comment "
-.else
-PLIST_SUB+=	LLVM_SUB=""
-.endif
 
 .if ${ARCH} == "i386"
 # Clang i386 emits .cfi_sections which base as(1) doesn't understand
@@ -69,8 +62,6 @@ post-patch-LLVM-on:
 		-e 's|"clang\+\+"|"clang\+\+${LLVM_VERSION}"|g' \
 		${WRKSRC}/llvm_mode/afl-clang-fast.c
 
-.if ! ${OSVERSION} < 1000013
-# Broken on FreeBSD 9
 post-build-LLVM-on:
 	@(cd ${WRKSRC}/llvm_mode; ${SETENV} \
 		CC=clang${LLVM_VERSION} \
@@ -79,7 +70,6 @@ post-build-LLVM-on:
 		CFLAGS="${CFLAGS}" \
 		CXXFLAGS="${CXXFLAGS}" \
 		${GMAKE})
-.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/COPYING ${STAGEDIR}${DOCSDIR}/

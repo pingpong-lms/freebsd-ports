@@ -3,9 +3,10 @@
 
 PORTNAME=	pulseaudio-module-sndio
 PORTVERSION=	9.0
+PORTREVISION=	1
 CATEGORIES=	audio
 
-MAINTAINER=	t@tobik.me
+MAINTAINER=	tobik@FreeBSD.org
 COMMENT=	Sndio module for PulseAudio
 
 LICENSE=	ISCL

@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	qemu
-PORTVERSION=	2.8.50.g20161225
+PORTVERSION=	2.8.50.g20170221
 CATEGORIES=	emulators
 MASTER_SITES=	GH \
 		LOCAL/nox:dtc \
@@ -15,13 +15,11 @@ DIST_SUBDIR=	qemu/${PORTVERSION}
 MAINTAINER=	sbruno@FreeBSD.org
 COMMENT?=	QEMU CPU Emulator - github bsd-user branch
 
-BROKEN_FreeBSD_9=	does not build
-
 LICENSE=	GPLv2
 USE_GITHUB=	yes
 GH_ACCOUNT=	seanbruno
 GH_PROJECT=	${PORTNAME}-bsd-user
-GH_TAGNAME=	17ce3d8
+GH_TAGNAME=	f51cf14
 HAS_CONFIGURE=	yes
 USES=		gmake pkgconfig bison perl5 python:2,build
 USE_PERL5=	build
@@ -74,7 +72,7 @@ USE_GNOME+=	glib20
 CONFIGURE_ARGS+=	--localstatedir=/var
 CONFIGURE_ARGS+=	--extra-ldflags=-L\"${LOCALBASE}/lib\"
 CONFIGURE_ARGS+=	--disable-libssh2
-PORTDOCS=	docs qemu-doc.html qmp-commands.txt
+PORTDOCS=	docs qemu-doc.html
 
 .if defined(QEMU_USER_STATIC)
 .if ${ARCH} != "amd64"

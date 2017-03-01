@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	ffmpeg
-PORTVERSION=	3.2.2
-PORTREVISION=	2
+PORTVERSION=	3.2.4
+PORTREVISION=	4
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio ipv6 net
 MASTER_SITES=	http://ffmpeg.org/releases/
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	yasm:devel/yasm \
 		${LOCALBASE}/bin/as:devel/binutils
 
 HAS_CONFIGURE=	yes
-USES=		compiler:c11 cpe gmake localbase perl5 pkgconfig shebangfix tar:bzip2
+USES=		compiler:c11 cpe gmake localbase:ldflags perl5 \
+		pkgconfig shebangfix tar:bzip2
 USE_LDCONFIG=	yes
 USE_PERL5=	build
 SHEBANG_FILES=	doc/texi2pod.pl
@@ -37,8 +38,8 @@ OPTIONS_DEFINE=	ALSA AMR_NB AMR_WB ASS BS2B CACA CDIO CELT CHROMAPRINT DC1394 \
 		XVIDEO ZIMG ZMQ ZVBI
 
 OPTIONS_DEFAULT=	FFSERVER FONTCONFIG FREETYPE FREI0R GMP GNUTLS ICONV \
-			OPENCV RTCPU SCHROEDINGER THEORA V4L VAAPI VDPAU \
-			VORBIS VPX X264 XVID
+			OPENCV OPTIMIZED_CFLAGS RTCPU SCHROEDINGER THEORA V4L VAAPI VDPAU \
+			VORBIS VPX X264 X265 XVID
 
 OPTIONS_RADIO=	RTMP SSL
 OPTIONS_RADIO_RTMP=	GCRYPT GMP LIBRTMP
@@ -271,7 +272,7 @@ OPENSSL_CONFIGURE_ENABLE=	openssl
 OPENSSL_IMPLIES=	NONFREE
 
 # optimizations
-OPTIMIZED_CFLAGS_CFLAGS=-O3 -ffast-math -fno-finite-math-only -fomit-frame-pointer
+OPTIMIZED_CFLAGS_CONFIGURE_ENABLE=	optimizations
 
 # opus
 OPUS_LIB_DEPENDS=	libopus.so:audio/opus
@@ -439,13 +440,14 @@ DATADIR=	${PREFIX}/share/${PORTNAME}${PKGNAMESUFFIX}
 DATADIR=	${PREFIX}/share/${PORTNAME}${PKGNAMESUFFIX}
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}${PKGNAMESUFFIX}
 CONFIGURE_ENV+=	COMPILER_PATH=${LOCALBASE}/bin
-MAKE_ENV+=	COMPILER_PATH=${LOCALBASE}/bin
+MAKE_ENV+=	COMPILER_PATH=${LOCALBASE}/bin V=1
 
 CONFIGURE_ARGS+=--prefix="${PREFIX}" \
 		--mandir="${PREFIX}/man" \
 		--datadir="${DATADIR}" \
 		--pkgconfigdir="${PREFIX}/libdata/pkgconfig" \
 		--enable-shared \
+		--enable-pic \
 		--enable-gpl \
 		--enable-postproc \
 		--enable-avfilter \
@@ -455,7 +457,6 @@ CONFIGURE_ARGS+=--prefix="${PREFIX}" \
 
 CONFIGURE_ENV_armv6_clang=	ASFLAGS=-no-integrated-as
 CONFIGURE_ARGS_armv6=		--disable-fast-unaligned
-CONFIGURE_ARGS_FreeBSD_9=	--enable-memalign-hack
 
 DOC_FILES=	Changelog CREDITS INSTALL.md LICENSE.md MAINTAINERS \
 		README.md RELEASE_NOTES

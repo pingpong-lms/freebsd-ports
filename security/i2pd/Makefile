@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	i2pd
-PORTVERSION=	2.11.0
-PORTREVISION=	2
+PORTVERSION=	2.12.0
 CATEGORIES=	security net-p2p
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -15,7 +14,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libboost_thread.so:devel/boost-libs
 
 BROKEN_powerpc64=	does not build
-BROKEN_FreeBSD_9=	does not build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	PurpleI2P
@@ -31,6 +29,7 @@ GROUPS=		_i2pd
 
 PLIST_SUB=	USER="${USERS}" GROUP="${GROUPS}"
 SUB_LIST=	USER="${USERS}" GROUP="${GROUPS}"
+SUB_FILES=	i2pd.newsyslog.conf
 
 OPTIONS_DEFINE=	AESNI UPNP DOCS
 
@@ -40,15 +39,11 @@ UPNP_DESC=		Include support for UPnP client
 UPNP_CMAKE_BOOL=	WITH_UPNP
 UPNP_LIB_DEPENDS=	libminiupnpc.so:net/miniupnpc
 
-.include <bsd.port.pre.mk>
-
-.if ${SSL_DEFAULT:Mlibressl*}
-BROKEN=		does not build with LibreSSL (boost libressl compatibility problems)
-.endif
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/debian/${PORTNAME}.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
+	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d
+	${INSTALL_DATA} ${WRKDIR}/i2pd.newsyslog.conf ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d/i2pd.conf
 	@${MKDIR} ${STAGEDIR}/var/run/i2pd
 	@${MKDIR} ${STAGEDIR}/var/log/i2pd
 	@${MKDIR} ${STAGEDIR}/var/db/i2pd
@@ -58,4 +53,4 @@ do-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/configuration.md ${STAGEDIR}${DOCSDIR}/
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

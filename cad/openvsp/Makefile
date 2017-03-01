@@ -2,9 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	openvsp
-PORTVERSION=	3.9.1
+PORTVERSION=	3.10.0
 DISTVERSIONPREFIX=	${GH_PROJECT}_
-PORTREVISION=	2
 CATEGORIES=	cad
 
 MAINTAINER=	fernando.apesteguia@gmail.com
@@ -29,29 +28,13 @@ BUILD_DEPENDS=	${LOCALBASE}/lib/libopenNURBS.a:graphics/opennurbs \
 		${LOCALBASE}/include/glm/glm.hpp:math/glm \
 		${LOCALBASE}/include/eigen3/Eigen/Array:math/eigen3
 
-BROKEN_FreeBSD_9=	dependency graphics/code-eli needs additional math functions
-
 USE_GITHUB=	yes
 GH_PROJECT=	OpenVSP
 GH_ACCOUNT=	${GH_PROJECT}
 
-WRKSRC=		${WRKDIR}/${GH_PROJECT}-${GH_PROJECT}_${PORTVERSION}
-
 CMAKE_SOURCE_PATH=	${WRKSRC}/SuperProject
 CMAKE_INSTALL_PREFIX=	${STAGEDIR}${PREFIX}
-USES=		cmake:outsource jpeg
-
-.include <bsd.port.options.mk>
-
-.if ${OSVERSION} == 1001000
-# Fails to build with GCC 4.9 in 10.1
-USE_GCC=	4.8
-LDFLAGS+=	-L${LOCALBASE}/lib/c++
-CXXFLAGS+=	-nostdinc++ -isystem ${LOCALBASE}/include/c++/v1
-BUILD_DEPENDS+=	${LOCALBASE}/lib/c++/libstdc++.so:devel/libc++
-.else
-USES +=		compiler:gcc-c++11-lib
-.endif
+USES=		cmake:outsource compiler:gcc-c++11-lib jpeg
 
 CMAKE_ARGS=	-DVSP_USE_SYSTEM_CMINPACK:BOOLEAN=yes \
 		-DVSP_USE_SYSTEM_CPPTEST:BOOLEAN=yes \

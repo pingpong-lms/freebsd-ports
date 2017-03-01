@@ -27,8 +27,6 @@ LIB_DEPENDS=	libyaml-cpp.so:devel/yaml-cpp \
 		libspeexdsp.so:audio/speexdsp \
 		libuuid.so:misc/e2fsprogs-libuuid
 
-BROKEN_FreeBSD_9=	Fails due to compiler issues
-
 USE_GITHUB=	yes
 GH_TUPLE+=	savoirfairelinux:ring-daemon:56ec56f
 GH_TUPLE+=	pjsip:pjproject:2.4.5:pj
@@ -59,11 +57,9 @@ DBUS_LIB_DEPENDS=	\
 	libdbus-c++-1.so:devel/dbus-c++
 OPTIONS_SUB=	yes
 
-.include <bsd.port.pre.mk>
+BROKEN_aarch64=		Fails to configure: machine arm64-portbld not recognized
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1002000
-BROKEN=		does not build
-.endif
+.include <bsd.port.pre.mk>
 
 post-extract:
 	@${MKDIR} ${WRKSRC}/contrib/native

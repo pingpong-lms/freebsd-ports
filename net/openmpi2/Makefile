@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	openmpi
-PORTVERSION=	2.0.1
+PORTVERSION=	2.0.2
 PORTREVISION=	2
 CATEGORIES=	net parallel
 MASTER_SITES=	http://www.open-mpi.org/software/ompi/v${PORTVERSION:R}/downloads/
@@ -10,9 +10,12 @@ PKGNAMESUFFIX=	2
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	High Performance Message Passing Library
 
+LICENSE=	BSD3CLAUSE
+LICENSE_FILE=	${WRKSRC}/LICENSE
+
 LIB_DEPENDS=	libhwloc.so:devel/hwloc \
 		libltdl.so:devel/libltdl \
-		libevent.so:devel/libevent2 \
+		libevent.so:devel/libevent \
 		libmunge.so:security/munge
 
 HAS_CONFIGURE=	yes

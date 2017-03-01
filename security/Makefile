@@ -36,6 +36,7 @@
     SUBDIR += bcrypt
     SUBDIR += bcwipe
     SUBDIR += bdc
+    SUBDIR += bdes
     SUBDIR += bearssl
     SUBDIR += beecrypt
     SUBDIR += belier
@@ -96,6 +97,7 @@
     SUBDIR += cryptlib
     SUBDIR += cryptopp
     SUBDIR += cvm
+    SUBDIR += cyberchef
     SUBDIR += cyrus-sasl2
     SUBDIR += cyrus-sasl2-gssapi
     SUBDIR += cyrus-sasl2-ldapdb
@@ -116,7 +118,6 @@
     SUBDIR += doorman
     SUBDIR += doscan
     SUBDIR += dotdotpwn
-    SUBDIR += dradis
     SUBDIR += dropbear
     SUBDIR += dsniff
     SUBDIR += duo
@@ -163,6 +164,7 @@
     SUBDIR += gag
     SUBDIR += gcipher
     SUBDIR += gcr
+    SUBDIR += git-crypt
     SUBDIR += gnome-gpg
     SUBDIR += gnome-keyring
     SUBDIR += gnome-keyring-sharp
@@ -346,7 +348,6 @@
     SUBDIR += linux-c6-libtasn1
     SUBDIR += linux-c6-nss
     SUBDIR += linux-c6-openssl
-    SUBDIR += linux-c6-openssl-compat
     SUBDIR += linux-c7-cyrus-sasl2
     SUBDIR += linux-c7-gnutls
     SUBDIR += linux-c7-libgcrypt
@@ -355,19 +356,11 @@
     SUBDIR += linux-c7-libtasn1
     SUBDIR += linux-c7-nss
     SUBDIR += linux-c7-openssl
-    SUBDIR += linux-c7-openssl-compat
-    SUBDIR += linux-f10-cyrus-sasl2
-    SUBDIR += linux-f10-gnutls
-    SUBDIR += linux-f10-libgcrypt
-    SUBDIR += linux-f10-libgpg-error
-    SUBDIR += linux-f10-libssh2
-    SUBDIR += linux-f10-libtasn1
-    SUBDIR += linux-f10-nss
-    SUBDIR += linux-f10-openssl
     SUBDIR += lockdown
     SUBDIR += log2timeline
     SUBDIR += logcheck
     SUBDIR += luasec
+    SUBDIR += luasec-51
     SUBDIR += lynis
     SUBDIR += mac-robber
     SUBDIR += maia
@@ -388,6 +381,7 @@
     SUBDIR += mhash
     SUBDIR += mindterm-binary
     SUBDIR += monkeysphere
+    SUBDIR += morphis
     SUBDIR += munge
     SUBDIR += mussh
     SUBDIR += nacl
@@ -412,10 +406,10 @@
     SUBDIR += oinkmaster
     SUBDIR += op
     SUBDIR += openbsm
-    SUBDIR += openbsm-devel
     SUBDIR += openca-tools-forked
     SUBDIR += opencdk
     SUBDIR += openconnect
+    SUBDIR += openconnect-gui
     SUBDIR += opencryptoki
     SUBDIR += openct
     SUBDIR += openiked
@@ -436,7 +430,9 @@
     SUBDIR += openvpn-auth-ldap
     SUBDIR += openvpn-auth-radius
     SUBDIR += openvpn-devel
-    SUBDIR += openvpn-polarssl
+    SUBDIR += openvpn-mbedtls
+    SUBDIR += openvpn23
+    SUBDIR += openvpn23-polarssl
     SUBDIR += ophcrack
     SUBDIR += orthrus
     SUBDIR += osiris
@@ -769,6 +765,7 @@
     SUBDIR += pecl-crack
     SUBDIR += pecl-crypto
     SUBDIR += pecl-gnupg
+    SUBDIR += pecl-krb5
     SUBDIR += pecl-libsodium
     SUBDIR += pecl-pam
     SUBDIR += pecl-scrypt
@@ -788,6 +785,10 @@
     SUBDIR += php70-hash
     SUBDIR += php70-mcrypt
     SUBDIR += php70-openssl
+    SUBDIR += php71-filter
+    SUBDIR += php71-hash
+    SUBDIR += php71-mcrypt
+    SUBDIR += php71-openssl
     SUBDIR += phpdeadlock
     SUBDIR += phpsecinfo
     SUBDIR += pidentd
@@ -932,6 +933,7 @@
     SUBDIR += py-tuf
     SUBDIR += py-twistedConch
     SUBDIR += py-twofish
+    SUBDIR += py-virustotal-api
     SUBDIR += py-volatility
     SUBDIR += py-vulndb
     SUBDIR += py-xmlsec
@@ -951,6 +953,7 @@
     SUBDIR += py-zope.security
     SUBDIR += py-zope.securitypolicy
     SUBDIR += py-zope.session
+    SUBDIR += py-zxcvbn-python
     SUBDIR += py3-libnacl
     SUBDIR += qtkeychain-qt4
     SUBDIR += qtkeychain-qt5
@@ -988,9 +991,6 @@
     SUBDIR += rkhunter
     SUBDIR += rndpassw
     SUBDIR += ruby-camellia
-    SUBDIR += ruby-hmac
-    SUBDIR += ruby-password
-    SUBDIR += ruby-tcpwrap
     SUBDIR += rubygem-airbrussh
     SUBDIR += rubygem-attr_encrypted
     SUBDIR += rubygem-bcrypt
@@ -1015,6 +1015,7 @@
     SUBDIR += rubygem-net-ssh
     SUBDIR += rubygem-net-ssh-gateway
     SUBDIR += rubygem-net-ssh-multi
+    SUBDIR += rubygem-net-telnet
     SUBDIR += rubygem-nmap-parser
     SUBDIR += rubygem-omniauth
     SUBDIR += rubygem-omniauth-bitbucket
@@ -1056,6 +1057,7 @@
     SUBDIR += rubygem-six
     SUBDIR += rubygem-sshkey
     SUBDIR += rubygem-sshkit
+    SUBDIR += rubygem-timfel-krb5
     SUBDIR += rubygem-twitter_oauth
     SUBDIR += s2n
     SUBDIR += safesh
@@ -1108,8 +1110,8 @@
     SUBDIR += sqlninja
     SUBDIR += srm
     SUBDIR += ssdeep
-    SUBDIR += ssh-copy-id
     SUBDIR += ssh-multiadd
+    SUBDIR += ssh-vault
     SUBDIR += ssh_askpass_gtk2
     SUBDIR += sshblock
     SUBDIR += sshguard

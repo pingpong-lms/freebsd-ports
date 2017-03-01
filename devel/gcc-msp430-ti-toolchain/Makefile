@@ -24,18 +24,19 @@ EXTRACT_ONLY=	gcc-${GCC_VERSION}.tar.bz2 \
 		newlib-${NEWLIB_VERSION}.tar.gz \
 		msp430-gcc-${PATCHSET_VERSION}_source-patches.tar.bz2 \
 		msp430-gcc-support-files-${SUPPORT_VERSION}.zip
+
 MAINTAINER=	lev@FreeBSD.org
 COMMENT=	Complete gcc-based toolcahin for TI MSP430 uC
 
 LICENSE=	GPLv2 LGPL20 LGPL21 GPLv3 LGPL3
 LICENSE_COMB=	multi
 
-BROKEN_FreeBSD_9=	does not patch (patch: **** can't find 1)
-
 LIB_DEPENDS=	libgmp.so:math/gmp \
 		libmpfr.so:math/mpfr \
 		libmpc.so:math/mpc \
 		libisl.so:devel/isl
+
+BROKEN_aarch64=		fails to compile: c++: error: unsupported option -print-multi-os-directory
 
 USES=		bison compiler cpe gmake iconv libtool makeinfo ncurses \
 		tar:bzip2
@@ -66,7 +67,7 @@ DOCSDIR=	${GNU_CONFIGURE_PREFIX}/docs
 PLIST_SUB+=	TARGET=${TARGET} GCC_VERSION=${GCC_VERSION} \
 		TI_VERSION=${TI_VERSION} DOC_VERSION=${DOC_VERSION}
 
-DIST_PATCH_ARGS=--forward --force --quiet --remove-empty-files --strip 1
+DIST_PATCH_ARGS=--forward --force --quiet --remove-empty-files --strip=1
 
 UNNEEDED_HOST_FILES=	lib/lib${TARGET}-sim.a
 UNNEEDED_HOST_DIRS=	lib/gcc/${TARGET}/${GCC_VERSION}/plugin/include/ada \

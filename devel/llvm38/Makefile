@@ -181,7 +181,6 @@ _USES_PYTHON=	python
 .if ! ${OPTIONS_DEFINE:MCOMPILER_RT}
 # Hack to disable COMPILER_RT in plist of unsupported architectures
 PLIST_SUB+=    COMPILER_RT="@comment "
-.else
 .endif
 
 .if ! ${OPTIONS_DEFINE:MGOLD}
@@ -305,6 +304,7 @@ post-patch:
 
 post-patch-COMPILER_RT-on:
 	cd ${WRKSRC_compiler_rt} && patch < ${PATCHDIR}/compiler-rt-patch-svn-261229
+	cd ${WRKSRC_compiler_rt} && patch < ${PATCHDIR}/compiler-rt-patch-svn-294806
 .if ${ARCH} == "amd64"
 	cd ${WRKSRC_compiler_rt} && patch < ${PATCHDIR}/compiler-rt-patch-no-m32
 .endif
@@ -426,7 +426,6 @@ build-plist:
 	    if ($$0 ~ /LLVMgold/) {printf "%%%%GOLD%%%%"} \
 	    if ($$0 !~ /libclang_rt/) {print}}' ${PLIST}.tmp >> ${PLIST}
 	${RM} ${PLIST}.tmp
-
 
 check-commands:
 .for command in ${COMMANDS}

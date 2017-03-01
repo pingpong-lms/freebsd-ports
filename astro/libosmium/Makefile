@@ -2,9 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	libosmium
-PORTVERSION=	2.10.3
+PORTVERSION=	2.11.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	astro geography devel
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -20,8 +19,6 @@ LIB_DEPENDS=	libgdal.so:graphics/gdal \
 BUILD_DEPENDS=	sparsehash>=0:devel/sparsehash \
 		${LOCALBASE}/include/utf8.h:devel/utf8cpp
 RUN_DEPENDS=	${LOCALBASE}/include/utf8.h:devel/utf8cpp
-
-BROKEN_FreeBSD_9=	does not build (lack of c++11 support)
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	osmcode

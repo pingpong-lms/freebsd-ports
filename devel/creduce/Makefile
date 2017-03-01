@@ -19,8 +19,6 @@ RUN_DEPENDS=	llvm-config38:devel/llvm38 \
 		devel/p5-Sys-Cpu>=0:devel/p5-Sys-Cpu \
 		p5-Getopt-Tabular>=0:devel/p5-Getopt-Tabular
 
-BROKEN_FreeBSD_9=	does not build (configure: error: cannot compile and link test program with selected LLVM)
-
 GNU_CONFIGURE=	yes
 CONFIGURE_FLAGS=	--with-llvm=${LOCALBASE}
 CONFIGURE_ENV=	LLVM_CONFIG=${LOCALBASE}/bin/llvm-config38 \
@@ -30,11 +28,4 @@ CONFIGURE_ENV=	LLVM_CONFIG=${LOCALBASE}/bin/llvm-config38 \
 
 USES=		autoreconf gmake libtool perl5
 
-.include <bsd.port.pre.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1000000
-CONFIGURE_ENV+=	CPPFLAGS="-stdlib=libstdc++ -I${LOCALBASE}/lib/gcc48/include/c++/ -I${LOCALBASE}/lib/gcc48/include/ -I${LOCALBASE}/lib/gcc48/include/c++/${ARCH:C/amd64/x86_64/}-portbld-${OPSYS:tl}${OSREL}/ -L${LOCALBASE}/lib -L${LOCALBASE}/lib/gcc48" \
-		LDFLAGS="-L/usr/local/lib/gcc48 -lstdc++"
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

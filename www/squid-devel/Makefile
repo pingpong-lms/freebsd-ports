@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	squid
-PORTVERSION=	4.0.17
+PORTVERSION=	4.0.18
 CATEGORIES=	www ipv6
 MASTER_SITES=	http://www.squid-cache.org/Versions/v4/ \
 		http://www2.us.squid-cache.org/Versions/v4/ \
@@ -227,10 +227,6 @@ CONFIGURE_ARGS=	--with-default-user=squid \
 		--disable-arch-native
 
 .include <bsd.port.options.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1000000
-IGNORE=		doesn't build, messes C++ headers and libs
-.endif
 
 # Authentication methods and modules:
 

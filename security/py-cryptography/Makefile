@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	cryptography
-PORTVERSION=	1.6
+PORTVERSION=	1.7.2
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,8 +12,6 @@ COMMENT=	Cryptographic recipes and primitives for Python developers
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
-
-BROKEN_FreeBSD_9=	does not build (_openssl.c:75298: error: storage class specified for parameter '_cffi_type_context')
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cffi>=1.4.1:devel/py-cffi
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>=1.4.1:devel/py-six \

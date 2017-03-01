@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	mod_auth_gssapi
-PORTVERSION=	1.4.1
+PORTVERSION=	1.5.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
@@ -31,9 +31,7 @@ PLIST_SUB+=	APMOD_FILE=${APMOD_FILE}
 
 .include <bsd.port.pre.mk>
 
-.if ${OSVERSION} < 1000000 && ${SSL_DEFAULT} == base
-IGNORE=		mod_auth_gssapi requires OpenSSL 1.0.0+
-.elif ${SSL_DEFAULT:Mlibressl*}
+.if ${SSL_DEFAULT:Mlibressl*}
 IGNORE=		mod_auth_gssapi currently only supports OpenSSL
 .endif
 

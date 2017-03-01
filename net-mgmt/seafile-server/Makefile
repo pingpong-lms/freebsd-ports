@@ -1,9 +1,10 @@
 # $FreeBSD$
 
 PORTNAME=	seafile-server
-PORTVERSION=	6.0.6
+PORTVERSION=	6.0.7
 DISTVERSIONPREFIX=	v
 DISTVERSIONSUFFIX=	-server
+PORTREVISION=	3
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	ultima1252@gmail.com
@@ -19,7 +20,7 @@ LIB_DEPENDS=	libsearpc.so:devel/libsearpc \
 		libcurl.so:ftp/curl \
 		libinotify.so:devel/libinotify \
 		libccnet.so:net-mgmt/ccnet-server \
-		libevent.so:devel/libevent2 \
+		libevent.so:devel/libevent \
 		libuuid.so:misc/e2fsprogs-libuuid \
 		libjansson.so:devel/jansson
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3 \
@@ -93,6 +94,7 @@ post-patch:
 			${WRKSRC}/scripts/seaf-cli-wrapper.sh
 	${REINPLACE_CMD} 's/<evhtp.h>/<evhtp\/evhtp.h>/' ${WRKSRC}/server/upload-file.c \
 			${WRKSRC}/server/access-file.c ${WRKSRC}/server/http-server.c
+	${REINPLACE_CMD} -E 's/stat.+\$$/stat -f %Su $$/' ${WRKSRC}/scripts/seafile.sh
 post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/${SEABIN} ${STAGEDIR}${PREFIX}/${SEALIB} \
 		${STAGEDIR}${PREFIX}/${SEAFILE_SERVER}/seafile/share/doc/seafile \
@@ -111,8 +113,6 @@ post-install:
 	(cd ${STAGEDIR}${PREFIX}/lib && \
 		${COPYTREE_SHARE} ${PYTHON_VERSION} ${STAGEDIR}${PREFIX}/${SEALIB})
 	@${RM} -rf ${STAGEDIR}${PREFIX}/lib/${PYTHON_VERSION} \
-		${WRKSRC}/scripts/sqlite2mysql.[ps][yh] \
-		${WRKSRC}/scripts/setup-seafile.sh \
 		${STAGEDIR}${PREFIX}/bin/seafile-admin
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/*.[ps][yh] ${STAGEDIR}${PREFIX}/${SEAFILE_SERVER}
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/upgrade/*.[ps][yh] \

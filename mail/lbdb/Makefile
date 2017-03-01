@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	lbdb
-PORTVERSION=	0.42
+PORTVERSION=	0.42.1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.spinnaker.de/debian/
 DISTNAME=	${PORTNAME}_${PORTVERSION}
@@ -11,7 +11,7 @@ MAINTAINER=	alexey@renatasystems.org
 COMMENT=	Tools for use with mutt external mail address query feature
 
 LICENSE=	GPLv2+
-LICENSE_FILE=	${WRKSRC]/COPYING
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 RUN_DEPENDS=	gsed:textproc/gsed
 

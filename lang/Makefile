@@ -40,6 +40,7 @@
     SUBDIR += clang36
     SUBDIR += clang37
     SUBDIR += clang38
+    SUBDIR += cling
     SUBDIR += clojure
     SUBDIR += clojure-mode.el
     SUBDIR += clover
@@ -109,6 +110,9 @@
     SUBDIR += ghc
     SUBDIR += gjs
     SUBDIR += gnat_util
+    SUBDIR += gnatcross-aarch64
+    SUBDIR += gnatcross-binutils-aarch64
+    SUBDIR += gnatcross-sysroot-aarch64
     SUBDIR += gnatdroid-armv7
     SUBDIR += gnatdroid-binutils
     SUBDIR += gnatdroid-binutils-x86
@@ -150,16 +154,14 @@
     SUBDIR += kturtle
     SUBDIR += lafontaine
     SUBDIR += lci
+    SUBDIR += ldc
     SUBDIR += lfe
     SUBDIR += libhx
-    SUBDIR += libjit
     SUBDIR += libobjc2
     SUBDIR += librep
     SUBDIR += libstdc++_stldoc_4.2.2
     SUBDIR += linux-c6-tcl85
     SUBDIR += linux-c7-tcl85
-    SUBDIR += linux-f10-libg2c
-    SUBDIR += linux-f10-tcl85
     SUBDIR += linux-j
     SUBDIR += lua-ada
     SUBDIR += lua51
@@ -240,7 +242,6 @@
     SUBDIR += pcc
     SUBDIR += pecl-perl
     SUBDIR += perl5-devel
-    SUBDIR += perl5.18
     SUBDIR += perl5.20
     SUBDIR += perl5.22
     SUBDIR += perl5.24
@@ -254,6 +255,8 @@
     SUBDIR += php56-extensions
     SUBDIR += php70
     SUBDIR += php70-extensions
+    SUBDIR += php71
+    SUBDIR += php71-extensions
     SUBDIR += php_doc
     SUBDIR += picoc
     SUBDIR += pike78
@@ -262,6 +265,7 @@
     SUBDIR += ptoc
     SUBDIR += pure
     SUBDIR += py-clojure
+    SUBDIR += py-hy
     SUBDIR += py-mx-base
     SUBDIR += py-prolog
     SUBDIR += py-qt5-qml

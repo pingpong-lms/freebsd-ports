@@ -63,6 +63,7 @@
     SUBDIR += autotrace
     SUBDIR += aview
     SUBDIR += ayam
+    SUBDIR += azpainter
     SUBDIR += backfract
     SUBDIR += barbecue
     SUBDIR += barcode
@@ -107,6 +108,7 @@
     SUBDIR += converseen
     SUBDIR += copperspice
     SUBDIR += cosmoplayer
+    SUBDIR += cptutils
     SUBDIR += crw
     SUBDIR += cthumb
     SUBDIR += cuneiform
@@ -131,6 +133,7 @@
     SUBDIR += devil
     SUBDIR += dia
     SUBDIR += diacanvas2
+    SUBDIR += diffpdf
     SUBDIR += digikam-kde4
     SUBDIR += digikam-kde4-doc
     SUBDIR += digikam-kde4-l10n
@@ -201,6 +204,7 @@
     SUBDIR += frei0r-plugins
     SUBDIR += frei0r-plugins-gavl
     SUBDIR += frei0r-plugins-opencv
+    SUBDIR += frogr
     SUBDIR += ftgl
     SUBDIR += fujiplay
     SUBDIR += fusefs-gphotofs
@@ -225,6 +229,7 @@
     SUBDIR += geomorph
     SUBDIR += geomview
     SUBDIR += geos
+    SUBDIR += geos35
     SUBDIR += geoserver
     SUBDIR += gexiv2
     SUBDIR += giblib
@@ -336,7 +341,6 @@
     SUBDIR += hs-dia-base
     SUBDIR += hs-dia-functions
     SUBDIR += hs-svgcairo
-    SUBDIR += hsetroot
     SUBDIR += hugin
     SUBDIR += icat
     SUBDIR += icc-profiles-basiccolor
@@ -560,19 +564,6 @@
     SUBDIR += linux-c7-sdl_image
     SUBDIR += linux-c7-sdl_ttf
     SUBDIR += linux-c7-tiff
-    SUBDIR += linux-f10-cairo
-    SUBDIR += linux-f10-dri
-    SUBDIR += linux-f10-gdk-pixbuf
-    SUBDIR += linux-f10-glew
-    SUBDIR += linux-f10-imlib
-    SUBDIR += linux-f10-jpeg
-    SUBDIR += linux-f10-libGLU
-    SUBDIR += linux-f10-libmng
-    SUBDIR += linux-f10-png
-    SUBDIR += linux-f10-sdl_image
-    SUBDIR += linux-f10-sdl_ttf
-    SUBDIR += linux-f10-tiff
-    SUBDIR += linux-f10-ungif
     SUBDIR += llpp
     SUBDIR += lprof-devel
     SUBDIR += lua-gd
@@ -784,6 +775,8 @@
     SUBDIR += php56-gd
     SUBDIR += php70-exif
     SUBDIR += php70-gd
+    SUBDIR += php71-exif
+    SUBDIR += php71-gd
     SUBDIR += phplot
     SUBDIR += picpuz
     SUBDIR += piddle
@@ -877,6 +870,7 @@
     SUBDIR += py-poppler
     SUBDIR += py-poppler-qt4
     SUBDIR += py-pycha
+    SUBDIR += py-pycollada
     SUBDIR += py-pydot
     SUBDIR += py-pygal
     SUBDIR += py-pyganim
@@ -930,6 +924,7 @@
     SUBDIR += raster3d
     SUBDIR += rawstudio
     SUBDIR += rawtherapee
+    SUBDIR += rawtherapee-devel
     SUBDIR += rayshade
     SUBDIR += reallyslick
     SUBDIR += recoverjpeg
@@ -940,9 +935,6 @@
     SUBDIR += rigsofrods-pagedgeometry
     SUBDIR += ristretto
     SUBDIR += ruby-gd
-    SUBDIR += ruby-image_size
-    SUBDIR += ruby-imlib2
-    SUBDIR += ruby-svg
     SUBDIR += rubygem-cairo
     SUBDIR += rubygem-captcha
     SUBDIR += rubygem-chunky_png
@@ -1062,6 +1054,8 @@
     SUBDIR += vp
     SUBDIR += waffle
     SUBDIR += waifu2x-converter-cpp
+    SUBDIR += wayland
+    SUBDIR += wayland-protocols
     SUBDIR += webp
     SUBDIR += wings
     SUBDIR += wmicons

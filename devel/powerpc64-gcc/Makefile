@@ -38,8 +38,6 @@ EXTRA_PATCHES+= ${FILESDIR}/freebsd-format-extensions
 .endif
 .endif
 
-CONFIGURE_ENV=	LC_ALL=C
-MAKE_ENV=	LC_ALL=C
 GNU_CONFIGURE=	yes
 CONFIGURE_OUTSOURCE=	yes
 CONFIGURE_ARGS+=--target=${GCC_TARGET} --disable-nls --enable-languages=c,c++ \
@@ -53,7 +51,6 @@ CONFIGURE_ARGS+=--target=${GCC_TARGET} --disable-nls --enable-languages=c,c++ \
 
 ALL_TARGET?=	all-gcc
 INSTALL_TARGET?=	install-gcc
-BROKEN_FreeBSD_9=	plist is different on 9.x that on other arches
 
 .include <bsd.port.options.mk>
 

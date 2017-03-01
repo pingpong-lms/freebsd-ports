@@ -25,6 +25,7 @@
     SUBDIR += cqrlog
     SUBDIR += cutecom
     SUBDIR += cwdaemon
+    SUBDIR += cwstudio
     SUBDIR += dabstick-radio
     SUBDIR += dcf77pi
     SUBDIR += deforaos-phone
@@ -153,6 +154,7 @@
     SUBDIR += rtl-sdr
     SUBDIR += rubygem-callsign
     SUBDIR += rubygem-ruby-termios
+    SUBDIR += rubygem-serialport
     SUBDIR += rxtx
     SUBDIR += scmxx
     SUBDIR += sdr-wspr

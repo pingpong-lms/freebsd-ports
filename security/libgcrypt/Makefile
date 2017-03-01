@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	libgcrypt
-PORTVERSION=	1.7.5
+PORTVERSION=	1.7.6
 CATEGORIES=	security
 MASTER_SITES=	GNUPG
 
@@ -32,6 +32,10 @@ PORTDOCS=	*
 OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
+
+.if ${ARCH} == "armv6" || ${ARCH} == "aarch64"
+EXTRA_PATCHES+=		${FILESDIR}/extra-patch-aarch64
+.endif
 
 .if ${ARCH} == "powerpc"
 CONFIGURE_ARGS+=	--disable-asm

@@ -26,7 +26,6 @@
     SUBDIR += aft
     SUBDIR += agrep
     SUBDIR += aiksaurus
-    SUBDIR += aiksaurus-gtk
     SUBDIR += align
     SUBDIR += am-aspell
     SUBDIR += amberfish
@@ -81,7 +80,6 @@
     SUBDIR += cl-ppcre-sbcl
     SUBDIR += clit
     SUBDIR += clucene
-    SUBDIR += clucene-qt4
     SUBDIR += cmark
     SUBDIR += coccigrep
     SUBDIR += code2html
@@ -91,6 +89,7 @@
     SUBDIR += confget
     SUBDIR += consul-template
     SUBDIR += crimson
+    SUBDIR += crunch
     SUBDIR += cs-aspell
     SUBDIR += cs-hunspell
     SUBDIR += cs-hyphen
@@ -133,7 +132,6 @@
     SUBDIR += docbook2X
     SUBDIR += docbook2mdoc
     SUBDIR += docbook2odf
-    SUBDIR += docdiff
     SUBDIR += doclifter
     SUBDIR += docproj
     SUBDIR += dom4j
@@ -356,6 +354,7 @@
     SUBDIR += jaxup
     SUBDIR += jdictionary
     SUBDIR += jdictionary-int-eng
+    SUBDIR += jid
     SUBDIR += jing
     SUBDIR += jo
     SUBDIR += jq
@@ -373,6 +372,7 @@
     SUBDIR += kibana45
     SUBDIR += kibana50
     SUBDIR += kibana50-x-pack
+    SUBDIR += kiss-templates
     SUBDIR += kmfl-european-latin
     SUBDIR += kmfl-khmer
     SUBDIR += kmfl-sil-ezra
@@ -451,20 +451,17 @@
     SUBDIR += linux-c7-aspell
     SUBDIR += linux-c7-expat
     SUBDIR += linux-c7-libxml2
-    SUBDIR += linux-f10-aspell
-    SUBDIR += linux-f10-expat
-    SUBDIR += linux-f10-libxml2
-    SUBDIR += linux-f10-scim-gtk
-    SUBDIR += linux-f10-scim-libs
     SUBDIR += linuxdoc
     SUBDIR += linuxdoc-tools
     SUBDIR += localize
     SUBDIR += loook
+    SUBDIR += lowdown
     SUBDIR += lt-aspell
     SUBDIR += lt-hyphen
     SUBDIR += lttoolbox
     SUBDIR += ltxml
     SUBDIR += luaexpat
+    SUBDIR += luaexpat-51
     SUBDIR += lucene
     SUBDIR += lucene4
     SUBDIR += lucene5
@@ -817,6 +814,7 @@
     SUBDIR += p5-Syntax-Highlight-Engine-Kate
     SUBDIR += p5-Syntax-Highlight-Perl-Improved
     SUBDIR += p5-TOML
+    SUBDIR += p5-TOML-Parser
     SUBDIR += p5-TeX-Encode
     SUBDIR += p5-TeX-Hyphen
     SUBDIR += p5-Template-Declare
@@ -1209,6 +1207,16 @@
     SUBDIR += php70-xmlreader
     SUBDIR += php70-xmlwriter
     SUBDIR += php70-xsl
+    SUBDIR += php71-ctype
+    SUBDIR += php71-dom
+    SUBDIR += php71-enchant
+    SUBDIR += php71-pspell
+    SUBDIR += php71-simplexml
+    SUBDIR += php71-wddx
+    SUBDIR += php71-xml
+    SUBDIR += php71-xmlreader
+    SUBDIR += php71-xmlwriter
+    SUBDIR += php71-xsl
     SUBDIR += plover
     SUBDIR += po4a
     SUBDIR += pocketreader
@@ -1265,6 +1273,7 @@
     SUBDIR += py-libxml2
     SUBDIR += py-libxslt
     SUBDIR += py-ltxml
+    SUBDIR += py-m2r
     SUBDIR += py-mako
     SUBDIR += py-markdown
     SUBDIR += py-markdown2
@@ -1273,6 +1282,7 @@
     SUBDIR += py-nltk
     SUBDIR += py-numpydoc
     SUBDIR += py-openpyxl
+    SUBDIR += py-pandocfilters
     SUBDIR += py-paragrep
     SUBDIR += py-parsimonious
     SUBDIR += py-pdfminer
@@ -1305,6 +1315,7 @@
     SUBDIR += py-rst2html5
     SUBDIR += py-rstyoutube
     SUBDIR += py-rxp
+    SUBDIR += py-scour
     SUBDIR += py-sgrep
     SUBDIR += py-snowballstemmer
     SUBDIR += py-sparqlwrapper
@@ -1316,9 +1327,11 @@
     SUBDIR += py-sphinx_wikipedia
     SUBDIR += py-sphinxcontrib-adadomain
     SUBDIR += py-sphinxcontrib-bitbucket
+    SUBDIR += py-sphinxcontrib-fulltoc
     SUBDIR += py-sphinxcontrib-httpdomain
     SUBDIR += py-sphinxcontrib-programoutput
     SUBDIR += py-syck
+    SUBDIR += py-tabletext
     SUBDIR += py-terminaltables
     SUBDIR += py-texttable
     SUBDIR += py-tinycss
@@ -1357,6 +1370,7 @@
     SUBDIR += qprint
     SUBDIR += qrcodegen
     SUBDIR += qstardict
+    SUBDIR += qt4-clucene
     SUBDIR += qt4-xml
     SUBDIR += qt4-xmlpatterns
     SUBDIR += qt4-xmlpatterns-tool
@@ -1398,19 +1412,14 @@
     SUBDIR += ruby-deplate
     SUBDIR += ruby-escape
     SUBDIR += ruby-format
-    SUBDIR += ruby-htmlrepair
-    SUBDIR += ruby-htmlsplit
     SUBDIR += ruby-htree
     SUBDIR += ruby-rd-mode.el
     SUBDIR += ruby-rdtool
-    SUBDIR += ruby-rss
-    SUBDIR += ruby-rss.alt
     SUBDIR += ruby-rttool
     SUBDIR += ruby-sary
-    SUBDIR += ruby-xml-configfile
     SUBDIR += ruby-xmlparser
-    SUBDIR += ruby-xmlscan
     SUBDIR += rubygem-actionpack-xml_parser
+    SUBDIR += rubygem-actionpack-xml_parser1
     SUBDIR += rubygem-albino
     SUBDIR += rubygem-amatch
     SUBDIR += rubygem-asciidoctor
@@ -1431,6 +1440,7 @@
     SUBDIR += rubygem-cssmin
     SUBDIR += rubygem-diff-lcs
     SUBDIR += rubygem-diffy
+    SUBDIR += rubygem-docdiff
     SUBDIR += rubygem-elasticsearch
     SUBDIR += rubygem-elasticsearch-api
     SUBDIR += rubygem-elasticsearch-transport
@@ -1473,7 +1483,7 @@
     SUBDIR += rubygem-libxml-ruby
     SUBDIR += rubygem-linguistics
     SUBDIR += rubygem-liquid
-    SUBDIR += rubygem-liquid2
+    SUBDIR += rubygem-liquid3
     SUBDIR += rubygem-loggability
     SUBDIR += rubygem-loofah
     SUBDIR += rubygem-ltsv
@@ -1481,7 +1491,6 @@
     SUBDIR += rubygem-multi_xml
     SUBDIR += rubygem-nokogiri
     SUBDIR += rubygem-nokogiri-diff
-    SUBDIR += rubygem-nokogiri14
     SUBDIR += rubygem-nokogumbo
     SUBDIR += rubygem-octopress-escape-code
     SUBDIR += rubygem-opml
@@ -1491,6 +1500,7 @@
     SUBDIR += rubygem-phone
     SUBDIR += rubygem-pretty-xml
     SUBDIR += rubygem-rails-dom-testing
+    SUBDIR += rubygem-rails-dom-testing1
     SUBDIR += rubygem-rails-html-sanitizer
     SUBDIR += rubygem-rak
     SUBDIR += rubygem-rchardet
@@ -1501,7 +1511,9 @@
     SUBDIR += rubygem-ri_cal
     SUBDIR += rubygem-rich
     SUBDIR += rubygem-rmmseg-cpp
+    SUBDIR += rubygem-ronn
     SUBDIR += rubygem-rouge
+    SUBDIR += rubygem-rouge1
     SUBDIR += rubygem-rttool
     SUBDIR += rubygem-ruby-augeas
     SUBDIR += rubygem-ruby-xslt
@@ -1510,14 +1522,13 @@
     SUBDIR += rubygem-rugments
     SUBDIR += rubygem-sanitize
     SUBDIR += rubygem-sass
-    SUBDIR += rubygem-sass-rails
-    SUBDIR += rubygem-sass-rails4
     SUBDIR += rubygem-sass-rails5
     SUBDIR += rubygem-sass32
     SUBDIR += rubygem-sax-machine
     SUBDIR += rubygem-scss_lint
     SUBDIR += rubygem-shell2html
     SUBDIR += rubygem-simplecov-html
+    SUBDIR += rubygem-sixarm_ruby_unaccent
     SUBDIR += rubygem-spreadsheet
     SUBDIR += rubygem-stamp
     SUBDIR += rubygem-syntax
@@ -1591,6 +1602,7 @@
     SUBDIR += sphinxsearch
     SUBDIR += sphinxsearch-devel
     SUBDIR += spiff
+    SUBDIR += splitpatch
     SUBDIR += sq-hunspell
     SUBDIR += sr-aspell
     SUBDIR += sr-hunspell

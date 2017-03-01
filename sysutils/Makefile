@@ -28,6 +28,7 @@
     SUBDIR += aird
     SUBDIR += am-utils
     SUBDIR += amazon-ssm-agent
+    SUBDIR += amdmsrtweaker
     SUBDIR += amrstat
     SUBDIR += amtc
     SUBDIR += anacron
@@ -40,7 +41,6 @@
     SUBDIR += apachetop
     SUBDIR += apcpwr
     SUBDIR += apcupsd
-    SUBDIR += apt
     SUBDIR += arcconf
     SUBDIR += archivemount
     SUBDIR += areca-cli
@@ -92,6 +92,7 @@
     SUBDIR += bchunk
     SUBDIR += beadm
     SUBDIR += beadm-devel
+    SUBDIR += beats
     SUBDIR += bhyve-firmware
     SUBDIR += bhyve-rc
     SUBDIR += biosfont
@@ -138,6 +139,7 @@
     SUBDIR += cfengine-masterfiles37
     SUBDIR += cfengine-masterfiles38
     SUBDIR += cfengine-masterfiles39
+    SUBDIR += cfengine-masterfiles310
     SUBDIR += cfengine22
     SUBDIR += cfengine32
     SUBDIR += cfengine33
@@ -147,6 +149,7 @@
     SUBDIR += cfengine37
     SUBDIR += cfengine38
     SUBDIR += cfengine39
+    SUBDIR += cfengine310
     SUBDIR += chgrep
     SUBDIR += chyves
     SUBDIR += cinnamon-control-center
@@ -243,6 +246,7 @@
     SUBDIR += dsbmd
     SUBDIR += dsbwrtsysctl
     SUBDIR += dt
+    SUBDIR += dtc
     SUBDIR += dtpstree
     SUBDIR += du2ps
     SUBDIR += duff
@@ -287,7 +291,6 @@
     SUBDIR += fetchlog
     SUBDIR += ffs2recov
     SUBDIR += file
-    SUBDIR += filebeat
     SUBDIR += filedupe
     SUBDIR += filelight-kde4
     SUBDIR += fileprune
@@ -321,7 +324,9 @@
     SUBDIR += froxlor
     SUBDIR += fsbackup
     SUBDIR += fsc
+    SUBDIR += fsearch
     SUBDIR += fstyp
+    SUBDIR += fswatch-mon
     SUBDIR += ftwin
     SUBDIR += fusefs-afuse
     SUBDIR += fusefs-chironfs
@@ -339,7 +344,6 @@
     SUBDIR += fusefs-gunzip
     SUBDIR += fusefs-httpfs
     SUBDIR += fusefs-ifuse
-    SUBDIR += fusefs-kmod
     SUBDIR += fusefs-libs
     SUBDIR += fusefs-lkl
     SUBDIR += fusefs-mhddfs
@@ -372,7 +376,6 @@
     SUBDIR += gdmap
     SUBDIR += genisoimage
     SUBDIR += geomWatch
-    SUBDIR += geomgui
     SUBDIR += getdelta
     SUBDIR += geteltorito
     SUBDIR += gigolo
@@ -405,6 +408,7 @@
     SUBDIR += grub2-bhyve
     SUBDIR += grub2-efi
     SUBDIR += grub2-pcbsd
+    SUBDIR += gsh
     SUBDIR += gsmartcontrol
     SUBDIR += gstopd
     SUBDIR += gstreamer-plugins-cdio
@@ -468,7 +472,7 @@
     SUBDIR += isc-cron
     SUBDIR += isomaster
     SUBDIR += isomd5sum
-    SUBDIR += istatd
+    SUBDIR += istatserver
     SUBDIR += jadm
     SUBDIR += jail-primer
     SUBDIR += jail2
@@ -534,7 +538,6 @@
     SUBDIR += lineakd
     SUBDIR += linrename
     SUBDIR += linux-crashplan
-    SUBDIR += linux-f10-procps
     SUBDIR += linux-nero
     SUBDIR += linuxfdisk
     SUBDIR += livecd
@@ -553,6 +556,8 @@
     SUBDIR += lr
     SUBDIR += lsof
     SUBDIR += ltrace
+    SUBDIR += lttng-tools
+    SUBDIR += lttng-ust
     SUBDIR += luckybackup
     SUBDIR += lxinput
     SUBDIR += lxsplit
@@ -597,7 +602,6 @@
     SUBDIR += memtest86
     SUBDIR += memtest86+
     SUBDIR += metalog
-    SUBDIR += metricbeat
     SUBDIR += mfid
     SUBDIR += mgeupsd
     SUBDIR += minimunin
@@ -641,6 +645,7 @@
     SUBDIR += mtxorbd
     SUBDIR += multitail
     SUBDIR += munin-common
+    SUBDIR += munin-contrib
     SUBDIR += munin-master
     SUBDIR += munin-node
     SUBDIR += muse
@@ -660,7 +665,6 @@
     SUBDIR += nomad
     SUBDIR += npadmin
     SUBDIR += nrg2iso
-    SUBDIR += ntfsprogs
     SUBDIR += nut
     SUBDIR += nvclock
     SUBDIR += nvramtool
@@ -749,9 +753,9 @@
     SUBDIR += p5-arclog
     SUBDIR += p5-reslog
     SUBDIR += packer
-    SUBDIR += packetbeat
     SUBDIR += pacman
     SUBDIR += paicc
+    SUBDIR += paladin
     SUBDIR += pam_mount
     SUBDIR += panicmail
     SUBDIR += parafly
@@ -761,6 +765,7 @@
     SUBDIR += pax-utils
     SUBDIR += pbi-manager
     SUBDIR += pbimaker
+    SUBDIR += pcapfix
     SUBDIR += pcbsd-appweb
     SUBDIR += pcbsd-libsh
     SUBDIR += pcbsd-syscache
@@ -796,6 +801,8 @@
     SUBDIR += php56-posix
     SUBDIR += php70-fileinfo
     SUBDIR += php70-posix
+    SUBDIR += php71-fileinfo
+    SUBDIR += php71-posix
     SUBDIR += phybs
     SUBDIR += pick
     SUBDIR += pidof
@@ -828,7 +835,6 @@
     SUBDIR += ptools
     SUBDIR += puppet-lint
     SUBDIR += puppet-mode.el
-    SUBDIR += puppet37
     SUBDIR += puppet38
     SUBDIR += puppet4
     SUBDIR += puppetserver
@@ -840,6 +846,7 @@
     SUBDIR += py-analyzemft
     SUBDIR += py-bcfg2
     SUBDIR += py-cdmi
+    SUBDIR += py-consul
     SUBDIR += py-croniter
     SUBDIR += py-crontab
     SUBDIR += py-danzfs
@@ -854,8 +861,10 @@
     SUBDIR += py-glances
     SUBDIR += py-halite
     SUBDIR += py-honcho
+    SUBDIR += py-iocage
     SUBDIR += py-iowait
     SUBDIR += py-nagiosplugin
+    SUBDIR += py-nomad
     SUBDIR += py-pkginfo
     SUBDIR += py-ploy
     SUBDIR += py-ploy_ansible
@@ -928,7 +937,6 @@
     SUBDIR += rsyncrypto
     SUBDIR += rsyslog8
     SUBDIR += rtty
-    SUBDIR += ruby-quota
     SUBDIR += rubygem-SyslogLogger
     SUBDIR += rubygem-backup
     SUBDIR += rubygem-bosh-gen
@@ -991,6 +999,7 @@
     SUBDIR += rubygem-sys-uname
     SUBDIR += rubygem-sys-uptime
     SUBDIR += rubygem-teamocil
+    SUBDIR += rubygem-tmuxinator
     SUBDIR += rubygem-vagrant-bhyve
     SUBDIR += rubygem-vagrant-mutate
     SUBDIR += rubygem-vagrant-vbguest
@@ -1002,8 +1011,10 @@
     SUBDIR += runit
     SUBDIR += runwhen
     SUBDIR += s6
+    SUBDIR += s6-rc
     SUBDIR += safe-rm
     SUBDIR += safecat
+    SUBDIR += safecopy
     SUBDIR += samefile
     SUBDIR += samesame
     SUBDIR += sample
@@ -1020,7 +1031,6 @@
     SUBDIR += schedutils
     SUBDIR += scprotect
     SUBDIR += screen
-    SUBDIR += screen-legacy
     SUBDIR += screenfetch
     SUBDIR += screenie
     SUBDIR += scterc
@@ -1038,6 +1048,7 @@
     SUBDIR += shlock
     SUBDIR += shmcat
     SUBDIR += showbeastie
+    SUBDIR += siegfried
     SUBDIR += sievelog
     SUBDIR += skill
     SUBDIR += slack
@@ -1046,6 +1057,7 @@
     SUBDIR += slst
     SUBDIR += slurm-wlm
     SUBDIR += smartmontools
+    SUBDIR += smenu
     SUBDIR += smp_utils
     SUBDIR += snap
     SUBDIR += snowlog
@@ -1111,6 +1123,7 @@
     SUBDIR += tmpreaper
     SUBDIR += tmpwatch
     SUBDIR += tmux
+    SUBDIR += tmux-mem-cpu-load
     SUBDIR += topless
     SUBDIR += torque
     SUBDIR += toshctl

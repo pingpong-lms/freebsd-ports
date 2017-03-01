@@ -14,6 +14,7 @@
     SUBDIR += biew
     SUBDIR += bitedit
     SUBDIR += boiling-egg
+    SUBDIR += bpatch
     SUBDIR += bvi
     SUBDIR += calligra
     SUBDIR += calligra-l10n
@@ -191,6 +192,7 @@
     SUBDIR += libreoffice-ug
     SUBDIR += libreoffice-uz
     SUBDIR += libreoffice-ve
+    SUBDIR += libreoffice-vec
     SUBDIR += libreoffice-xh
     SUBDIR += libreoffice-zu
     SUBDIR += libreoffice4
@@ -199,6 +201,7 @@
     SUBDIR += madedit
     SUBDIR += manedit
     SUBDIR += mg
+    SUBDIR += micro
     SUBDIR += mined
     SUBDIR += morla
     SUBDIR += mousepad
@@ -256,6 +259,7 @@
     SUBDIR += vile
     SUBDIR += vim
     SUBDIR += vim-lite
+    SUBDIR += web-mode
     SUBDIR += with-editor
     SUBDIR += wordgrinder
     SUBDIR += xcoral

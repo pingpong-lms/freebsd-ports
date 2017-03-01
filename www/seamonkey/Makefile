@@ -4,7 +4,7 @@
 PORTNAME=	seamonkey
 DISTVERSION=	2.46
 MOZILLA_VER=	49 # above + 3
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES?=	www mail news editors irc ipv6
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source \
 		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}-candidates/build9/source
@@ -16,8 +16,7 @@ COMMENT=	The open source, standards compliant web browser
 
 BUILD_DEPENDS=	nspr>=4.12:devel/nspr \
 		nss>=3.25:security/nss \
-		libevent2>=2.0.21_2:devel/libevent2 \
-		soundtouch>=1.9.0:audio/soundtouch \
+		libevent>=2.0.21_2:devel/libevent \
 		harfbuzz>=1.2.6:print/harfbuzz \
 		graphite2>=1.3.8:graphics/graphite2 \
 		png>=1.6.21:graphics/png \
@@ -29,6 +28,7 @@ BUILD_DEPENDS=	nspr>=4.12:devel/nspr \
 		autoconf-2.13:devel/autoconf213 \
 		yasm:devel/yasm \
 		zip:archivers/zip
+#		soundtouch>=1.9.0:audio/soundtouch \
 
 LIB_DEPENDS=	libv4l2.so:multimedia/libv4l
 
@@ -41,10 +41,8 @@ MOZ_PIS_SCRIPTS=	moz_pis_S50cleanhome
 MOZ_EXTENSIONS=	default
 MOZ_OPTIONS+=	--enable-application=suite
 
-USE_MOZILLA=	# empty
+USE_MOZILLA=	-soundtouch
 MOZ_PKGCONFIG_FILES=
-
-BROKEN_aarch64=		Fails to link: error adding symbols: File in wrong format
 
 OPTIONS_DEFINE=	LDAP LIGHTNING RUST
 OPTIONS_SINGLE=	TOOLKIT

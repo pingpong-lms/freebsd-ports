@@ -2,9 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	firefox
-DISTVERSION=	45.6.0
+DISTVERSION=	45.8.0
 DISTVERSIONSUFFIX=esr.source
-PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	www ipv6
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}esr/source \
@@ -15,8 +14,8 @@ MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Web browser based on the browser portion of Mozilla
 
 BUILD_DEPENDS=	nspr>=4.12:devel/nspr \
-		nss>=3.21.1:security/nss \
-		libevent2>=2.0.21_2:devel/libevent2 \
+		nss>=3.21.3:security/nss \
+		libevent>=2.0.21_2:devel/libevent \
 		soundtouch>=1.9.0:audio/soundtouch \
 		harfbuzz>=1.1.0:print/harfbuzz \
 		graphite2>=1.3.6:graphics/graphite2 \
@@ -41,8 +40,6 @@ MOZILLA_NAME=	Firefox
 
 USE_GL=		gl
 USES=		tar:xz
-
-BROKEN_aarch64=		Fails to link: error adding symbols: File in wrong format
 
 FIREFOX_ICON=		${MOZILLA}.png
 FIREFOX_ICON_SRC=	${PREFIX}/lib/${MOZILLA}/browser/chrome/icons/default/default48.png

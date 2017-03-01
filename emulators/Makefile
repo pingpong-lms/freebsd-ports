@@ -27,7 +27,6 @@
     SUBDIR += dgen-sdl
     SUBDIR += dolphin-emu
     SUBDIR += dosbox
-    SUBDIR += doscmd
     SUBDIR += dtcyber
     SUBDIR += dynagen
     SUBDIR += dynagui
@@ -71,10 +70,8 @@
     SUBDIR += libspectrum
     SUBDIR += linux-c6
     SUBDIR += linux-c7
-    SUBDIR += linux-f10
     SUBDIR += linux_base-c6
     SUBDIR += linux_base-c7
-    SUBDIR += linux_base-f10
     SUBDIR += lisaem
     SUBDIR += loemu
     SUBDIR += m2000
@@ -132,6 +129,8 @@
     SUBDIR += qtemu
     SUBDIR += quasi88
     SUBDIR += raine
+    SUBDIR += riscv-fesvr
+    SUBDIR += riscv-isa-sim
     SUBDIR += rtc
     SUBDIR += rubygem-fission
     SUBDIR += simh

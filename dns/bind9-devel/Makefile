@@ -30,8 +30,8 @@ COMMENT=	BIND DNS suite with updated DNSSEC and DNS64
 LICENSE=	MPL
 
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=	9.12.0a.2016.12.23
-HASH=		e17d2f9
+ISCVERSION=	9.12.0a.2017.02.14
+HASH=		af2b20e
 
 USES=	cpe libedit
 
@@ -71,7 +71,7 @@ OPTIONS_RADIO_GOSTDEF=	GOST GOST_ASN1
 
 .if !defined(BIND_TOOLS_SLAVE)
 OPTIONS_DEFAULT+=	DLZ_FILESYSTEM LMDB RPZ_NSDNAME RPZ_NSIP
-OPTIONS_DEFINE+=	LINKS RPZ_NSIP RPZ_NSDNAME DOCS GEOIP \
+OPTIONS_DEFINE+=	RPZ_NSIP RPZ_NSDNAME DOCS GEOIP \
 			MINCACHE PORTREVISION QUERYTRACE LMDB DNSTAP \
 			START_LATE
 OPTIONS_GROUP=		DLZ
@@ -102,7 +102,6 @@ QUERYTRACE_DESC=	Enable the very verbose query tracelogging
 LMDB_DESC=		Use LMDB for zone management
 DNSTAP_DESC=		Provides fast passive logging of DNS messages
 
-LINKS_DESC=		Create conf file symlinks in ${PREFIX}
 RPZ_NSIP_DESC=		Enable RPZ NSIP trigger rules
 RPZ_NSDNAME_DESC=	Enable RPZ NSDNAME policy records
 DLZ_DESC=		Dynamically Loadable Zones
@@ -204,15 +203,12 @@ QUERYTRACE_CONFIGURE_ENABLE=	querytrace
 DNSTAP_CONFIGURE_ENABLE=	dnstap
 DNSTAP_LIB_DEPENDS=	libfstrm.so:devel/fstrm \
 			libprotobuf-c.so:devel/protobuf-c
+DNSTAP_IMPLIES=		THREADS
 
 .include <bsd.port.options.mk>
 
 .if !${PORT_OPTIONS:MGOST} && !${PORT_OPTIONS:MGOST_ASN1}
 CONFIGURE_ARGS+=	--without-gost
-.endif
-
-.if !${PORT_OPTIONS:MLINKS}
-PKGINSTALL=${NONEXISTENT}
 .endif
 
 .if ${PORT_OPTIONS:MTHREADS} && !${PORT_OPTIONS:MDLZ_MYSQL}
@@ -221,20 +217,10 @@ CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ARGS+=	--disable-threads
 .endif
 
-.if ${OPSYS} == DragonFly || (${OPSYS} == FreeBSD && ${OSVERSION} >= 1000100)
-PKGINSTALL=	${NONEXISTENT}
-PLIST_SUB+=	NOBASE="" BASE="@comment "
-SUB_LIST+=	NOBASE="" BASE="@comment "
 .if !defined(BIND_TOOLS_SLAVE)
 USE_RC_SUBR+=	named
 SUB_FILES+=	named.conf
 .endif # !defined(BIND_TOOLS_SLAVE)
-.else
-PLIST_SUB+=	NOBASE="@comment " BASE=""
-SUB_LIST+=	NOBASE="@comment " BASE=""
-.endif
-
-PKGDEINSTALL=	${PKGINSTALL}
 
 MAKE_JOBS_UNSAFE=	yes
 
@@ -289,7 +275,6 @@ post-install:
 		${WRKSRC}/HISTORY ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 .endif
 
-.if ${OPSYS} == DragonFly || (${OPSYS} == FreeBSD && ${OSVERSION} >= 1000100)
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/mtree
 	${MKDIR} ${STAGEDIR}${ETCDIR}
 .for i in dynamic master slave working
@@ -302,7 +287,6 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/localhost-reverse.db ${STAGEDIR}${ETCDIR}/master
 	${INSTALL_DATA} ${FILESDIR}/BIND.chroot.dist ${STAGEDIR}${PREFIX}/etc/mtree
 	${INSTALL_DATA} ${FILESDIR}/BIND.chroot.local.dist ${STAGEDIR}${PREFIX}/etc/mtree
-.endif
 	${INSTALL_DATA} ${WRKSRC}/bin/rndc/rndc.conf \
 		${STAGEDIR}${ETCDIR}/rndc.conf.sample
 

@@ -7,7 +7,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	# none
 DISTFILES=	# none
 
-MAINTAINER=	t@tobik.me
+MAINTAINER=	tobik@FreeBSD.org
 COMMENT=	Preview FreeBSD loader logos
 
 LICENSE=	BSD2CLAUSE
@@ -24,8 +24,6 @@ PLIST_FILES=	bin/${PORTNAME}
 
 # Make sure building succeeds on HEAD
 MAKE_ARGS+=	-m ${SRC_BASE}/share/mk
-
-BROKEN_FreeBSD_9=	builds but expects newer loader environment
 
 WRKSRC_SUBDIR=	ficl
 

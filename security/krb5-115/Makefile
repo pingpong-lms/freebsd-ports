@@ -3,6 +3,7 @@
 
 PORTNAME=		krb5
 PORTVERSION=		1.15
+PORTREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		http://web.mit.edu/kerberos/dist/${PORTNAME}/${PORTVERSION:C/^[0-9]*\.[0-9]*/&X/:C/X\.[0-9]*$//:C/X//}/
 .if !defined(MASTERDIR)
@@ -26,7 +27,7 @@ USE_LDCONFIG=		yes
 USE_CSTD=		gnu99
 GNU_CONFIGURE=		yes
 USES=			cpe gettext gmake perl5 libtool:build \
-			gssapi:bootstrap,mit pkgconfig:both ssl
+			gssapi:bootstrap,mit pkgconfig:run ssl
 CONFIGURE_ARGS?=	--enable-shared --without-system-verto \
 			--disable-rpath --localstatedir="${PREFIX}/var"
 CONFIGURE_ENV=		INSTALL="${INSTALL}" INSTALL_LIB="${INSTALL_LIB}" YACC="${YACC}"
@@ -109,10 +110,6 @@ PDF_DOC_DIR=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/doc/pdf
 
 
 .include <bsd.port.pre.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1000000
-BROKEN=		Does not build under FreeBSD-9, fails to build pkinit.so
-.endif
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/doc/krb5

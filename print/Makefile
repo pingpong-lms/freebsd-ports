@@ -127,7 +127,6 @@
     SUBDIR += linux-c6-cups-libs
     SUBDIR += linux-c7-cups-libs
     SUBDIR += linux-c7-harfbuzz
-    SUBDIR += linux-f10-cups-libs
     SUBDIR += lout
     SUBDIR += lpr-wrapper
     SUBDIR += lprps
@@ -198,6 +197,7 @@
     SUBDIR += py-preppy
     SUBDIR += py-pycups
     SUBDIR += py-pyscript
+    SUBDIR += py-python-ly
     SUBDIR += py-qt5-printsupport
     SUBDIR += py-relatorio
     SUBDIR += py-reportlab

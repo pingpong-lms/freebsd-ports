@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	yt
-PORTVERSION=	3.3.3
+PORTVERSION=	3.3.4
 CATEGORIES=	math astro python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -22,17 +22,11 @@ RUN_DEPENDS=	isympy:math/py-sympy \
 LIB_DEPENDS=	libembree.so:graphics/embree \
 		libomp.so:devel/openmp
 
-USES=		localbase python
+USES=		dos2unix localbase python
 USE_PYTHON=	autoplist distutils
 
 post-patch:
 	@${REINPLACE_CMD} -e "s|\['-fopenmp', filename\]|['-I${LOCALBASE}/include', '-L${LOCALBASE}/lib', '-lm', '-fopenmp', filename]|" \
 		${WRKSRC}/setupext.py
-
-post-install:
-	# workaround for the bug https://bitbucket.org/yt_analysis/yt/issues/1296
-	@${ECHO} "${PYTHON_SITELIBDIR}/yt/__hg_version__.py" >> ${_PYTHONPKGLIST}
-	@${ECHO} "${PYTHON_SITELIBDIR}/yt/__hg_version__.pyc" >> ${_PYTHONPKGLIST}
-	@${ECHO} "${PYTHON_SITELIBDIR}/yt/__hg_version__.pyo" >> ${_PYTHONPKGLIST}
 
 .include <bsd.port.mk>

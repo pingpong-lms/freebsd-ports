@@ -2,7 +2,7 @@
 
 PORTNAME=	icinga2
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.6.0
+DISTVERSION=	2.6.1
 PORTREVISION=	1
 CATEGORIES=	net-mgmt
 
@@ -17,7 +17,6 @@ LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 RUN_DEPENDS=	${LOCALBASE}/bin/bash:shells/bash
 
 BROKEN_powerpc64=	does not build
-BROKEN_FreeBSD_9=	does not configure (Your version of GCC (4.2.1) is too old for building Icinga 2 (GCC >= 4.6.0 is required).)
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	icinga
@@ -90,19 +89,10 @@ PLIST_SUB+=	DBBACKEND="@comment "
 PLIST_SUB+=	DBBACKEND=""
 .endif
 
-.if ${OSVERSION} < 1000033
-BUILD_DEPENDS+=	flex>=2.5.31:textproc/flex
-CMAKE_ARGS+=	-DFLEX_EXECUTABLE:STRING=${LOCALBASE}/bin/flex
-CXXFLAGS+=	-I${LOCALBASE}/include/flex
-.endif
-
 post-patch:
 .for f in ${LINUX_CONFIG}
 	${REINPLACE_CMD} 's,[Ll]inux,FreeBSD,g' ${WRKSRC}/etc/icinga2/conf.d/${f}
 .endfor
-.if ${OSVERSION} < 1000000
-	${REINPLACE_CMD} 's|,--no-export-dynamic||' ${WRKSRC}/CMakeLists.txt
-.endif
 
 pre-install:
 	${FIND} ${WRKSRC}/etc -type f -name "*.conf" -exec ${MV} {} {}.sample \;

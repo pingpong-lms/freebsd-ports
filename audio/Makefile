@@ -15,6 +15,7 @@
     SUBDIR += adplay
     SUBDIR += afsp
     SUBDIR += aften
+    SUBDIR += alac
     SUBDIR += alienwah
     SUBDIR += alsa-lib
     SUBDIR += alsa-plugins
@@ -26,6 +27,7 @@
     SUBDIR += ample
     SUBDIR += aqualung
     SUBDIR += ardour
+    SUBDIR += ardour5
     SUBDIR += ario
     SUBDIR += arss
     SUBDIR += ascd
@@ -42,7 +44,6 @@
     SUBDIR += audiere
     SUBDIR += audiotag
     SUBDIR += aumix
-    SUBDIR += aureal-kmod
     SUBDIR += autocd
     SUBDIR += autotalent
     SUBDIR += autozen
@@ -286,6 +287,7 @@
     SUBDIR += gstreamer1-plugins-pulse
     SUBDIR += gstreamer1-plugins-shout2
     SUBDIR += gstreamer1-plugins-sidplay
+    SUBDIR += gstreamer1-plugins-sndio
     SUBDIR += gstreamer1-plugins-soundtouch
     SUBDIR += gstreamer1-plugins-speex
     SUBDIR += gstreamer1-plugins-taglib
@@ -416,13 +418,12 @@
     SUBDIR += libvorbis
     SUBDIR += libworkman
     SUBDIR += libxmp
+    SUBDIR += lilv
     SUBDIR += lingot
     SUBDIR += linux-c6-alsa-lib
     SUBDIR += linux-c6-alsa-plugins-oss
     SUBDIR += linux-c6-alsa-plugins-pulseaudio
     SUBDIR += linux-c6-alsa-utils
-    SUBDIR += linux-c6-arts
-    SUBDIR += linux-c6-esound
     SUBDIR += linux-c6-flac
     SUBDIR += linux-c6-libaudiofile
     SUBDIR += linux-c6-libogg
@@ -439,7 +440,6 @@
     SUBDIR += linux-c7-alsa-plugins-pulseaudio
     SUBDIR += linux-c7-alsa-utils
     SUBDIR += linux-c7-audiofile
-    SUBDIR += linux-c7-esound
     SUBDIR += linux-c7-flac
     SUBDIR += linux-c7-libogg
     SUBDIR += linux-c7-libsndfile
@@ -448,20 +448,6 @@
     SUBDIR += linux-c7-pulseaudio-libs
     SUBDIR += linux-c7-pulseaudio-utils
     SUBDIR += linux-c7-sdl_mixer
-    SUBDIR += linux-f10-alsa-lib
-    SUBDIR += linux-f10-alsa-plugins-oss
-    SUBDIR += linux-f10-arts
-    SUBDIR += linux-f10-esound
-    SUBDIR += linux-f10-freealut
-    SUBDIR += linux-f10-libaudiofile
-    SUBDIR += linux-f10-libogg
-    SUBDIR += linux-f10-libvorbis
-    SUBDIR += linux-f10-mikmod
-    SUBDIR += linux-f10-nas-libs
-    SUBDIR += linux-f10-openal
-    SUBDIR += linux-f10-openal-soft
-    SUBDIR += linux-f10-pulseaudio-libs
-    SUBDIR += linux-f10-sdl_mixer
     SUBDIR += linux-genpuid
     SUBDIR += linux-laudio
     SUBDIR += linux-mbrola
@@ -557,6 +543,7 @@
     SUBDIR += normalize
     SUBDIR += nosefart
     SUBDIR += nspmod
+    SUBDIR += nuvolaplayer
     SUBDIR += ocp
     SUBDIR += ogg2mp3
     SUBDIR += openal
@@ -690,8 +677,6 @@
     SUBDIR += rplay
     SUBDIR += rsynth
     SUBDIR += rubberband
-    SUBDIR += ruby-audiofile
-    SUBDIR += ruby-mp3tag
     SUBDIR += ruby-smf
     SUBDIR += ruby-taglib
     SUBDIR += ruby-xmms2
@@ -752,9 +737,11 @@
     SUBDIR += splay
     SUBDIR += splaytk
     SUBDIR += squash
+    SUBDIR += sratom
     SUBDIR += streamripper
     SUBDIR += streamtranscoder
     SUBDIR += stymulator
+    SUBDIR += suil
     SUBDIR += sweep
     SUBDIR += swhplugins
     SUBDIR += taglib
@@ -846,7 +833,6 @@
     SUBDIR += xmms-mailnotify
     SUBDIR += xmms-nas
     SUBDIR += xmms-nsf
-    SUBDIR += xmms-openspc
     SUBDIR += xmms-sapplug
     SUBDIR += xmms-scrobbler
     SUBDIR += xmms-sexypsf
@@ -868,6 +854,7 @@
     SUBDIR += xwave
     SUBDIR += yell
     SUBDIR += zinf
+    SUBDIR += zita-resampler
     SUBDIR += zynaddsubfx
 
 .include <bsd.port.subdir.mk>

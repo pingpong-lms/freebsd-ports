@@ -2,14 +2,13 @@
 # $FreeBSD$
 
 PORTNAME=	blender
-PORTVERSION=	2.77a
-PORTREVISION=	3
+PORTVERSION=	2.78b
 CATEGORIES=	graphics games
 MASTER_SITES=	http://download.blender.org/source/ \
 		http://mirror.cs.umn.edu/blender.org/source/ \
 		http://public.planetmirror.com/pub/blender/source/
 
-MAINTAINER=	mva@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	3D modeling/rendering/animation/gaming package
 
 LICENSE=	GPLv2+
@@ -37,7 +36,7 @@ SHEBANG_FILES=	release/bin/blender-thumbnailer.py \
 		release/scripts/modules/bl_i18n_utils/utils_rtl.py \
 		release/scripts/modules/blend_render_info.py
 
-BL_VERSION=	2.77
+BL_VERSION=	2.78
 OUTDIR=		${INSTALL_WRKSRC}/bin/${BL_VERSION}
 
 PLIST_SUB+=	VER=${BL_VERSION}
