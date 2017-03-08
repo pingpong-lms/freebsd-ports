@@ -225,7 +225,6 @@
     SUBDIR += grafana3
     SUBDIR += grafana4
     SUBDIR += grails
-    SUBDIR += graylog-web-interface
     SUBDIR += gregarius
     SUBDIR += groupoffice
     SUBDIR += grr
@@ -1461,6 +1460,7 @@
     SUBDIR += pecl-yaf
     SUBDIR += pecl-yaf2
     SUBDIR += pecl-yar
+    SUBDIR += pecl-yar1
     SUBDIR += perlbal
     SUBDIR += pglogd
     SUBDIR += phalcon
@@ -1659,6 +1659,7 @@
     SUBDIR += py-flask-restful
     SUBDIR += py-flask-restplus
     SUBDIR += py-flask-restplus08
+    SUBDIR += py-flask-socketio
     SUBDIR += py-flask-sockets
     SUBDIR += py-flask-uploads
     SUBDIR += py-flask-wtf
@@ -1941,6 +1942,7 @@
     SUBDIR += rubygem-d3_rails-rails4
     SUBDIR += rubygem-dashing
     SUBDIR += rubygem-davclient
+    SUBDIR += rubygem-deckar01-task_list
     SUBDIR += rubygem-domainatrix
     SUBDIR += rubygem-dropzonejs-rails
     SUBDIR += rubygem-em-http-request
@@ -1963,6 +1965,7 @@
     SUBDIR += rubygem-gitlab-flowdock-git-hook
     SUBDIR += rubygem-gitlab-gollum-lib
     SUBDIR += rubygem-gitlab-grack
+    SUBDIR += rubygem-gitlab-turbolinks-classic
     SUBDIR += rubygem-gollum-grit_adapter
     SUBDIR += rubygem-gollum-lib
     SUBDIR += rubygem-gollum-lib-gitlab

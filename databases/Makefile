@@ -492,6 +492,7 @@
     SUBDIR += p5-Search-Namazu
     SUBDIR += p5-Search-Xapian
     SUBDIR += p5-Search-Xapian10
+    SUBDIR += p5-Store-CouchDB
     SUBDIR += p5-T2
     SUBDIR += p5-Tangram
     SUBDIR += p5-Template-DBI
@@ -965,6 +966,7 @@
     SUBDIR += sqlite3
     SUBDIR += sqlitebrowser
     SUBDIR += sqlitebrowser-qt5
+    SUBDIR += sqliteconvert
     SUBDIR += sqliteman
     SUBDIR += sqlitemanager
     SUBDIR += sqliteodbc
