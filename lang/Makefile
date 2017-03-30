@@ -50,6 +50,7 @@
     SUBDIR += cparser
     SUBDIR += csharp-mode.el
     SUBDIR += cython
+    SUBDIR += cython3
     SUBDIR += diveintopython
     SUBDIR += dlv
     SUBDIR += dmd1
@@ -184,6 +185,7 @@
     SUBDIR += mosml
     SUBDIR += mtasc
     SUBDIR += munger
+    SUBDIR += myrddin
     SUBDIR += nawk
     SUBDIR += nbc
     SUBDIR += nbfc
@@ -205,6 +207,7 @@
     SUBDIR += ohugs
     SUBDIR += onyx
     SUBDIR += oo2c
+    SUBDIR += opencoarrays
     SUBDIR += opendylan
     SUBDIR += p2c
     SUBDIR += p5-Data-JavaScript

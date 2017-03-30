@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	poudriere
-DISTVERSION=	3.1.99.20170306
+DISTVERSION=	3.1.99.20170322
 PORTREVISION=	0
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	LOCAL/bdrewery/${PORTNAME}/ \
@@ -18,7 +18,7 @@ CONFLICTS_INSTALL=	poudriere-[0-9]*
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	freebsd
-GH_TAGNAME=	3.0-1957-gb3d3e0c2
+GH_TAGNAME=	3.0-2102-g58315dbf
 #DISTNAME=	${GH_ACCOUNT}-${GH_PROJECT}-${GH_TAGNAME}
 
 GNU_CONFIGURE=	yes
@@ -46,6 +46,11 @@ PLIST_SUB+=	RM=""
 .else
 PLIST_SUB+=	RM="@comment "
 .endif
+
+pre-install:
+	${REINPLACE_CMD} \
+	    -e "s,^\(POUDRIERE_VERSION\)=.*,\1='${PKGVERSION}'," \
+	    ${WRKSRC}/src/bin/poudriere
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/zsh/site-functions/

@@ -762,6 +762,7 @@
     SUBDIR += popstar
     SUBDIR += pouetchess
     SUBDIR += powder
+    SUBDIR += powder-toy
     SUBDIR += powermanga
     SUBDIR += powwow
     SUBDIR += ppracer
@@ -983,7 +984,6 @@
     SUBDIR += traingame
     SUBDIR += tremulous
     SUBDIR += trenchbroom
-    SUBDIR += trigger-data
     SUBDIR += trigger-rally
     SUBDIR += trimines
     SUBDIR += triplane
