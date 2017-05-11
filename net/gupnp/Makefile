@@ -3,6 +3,7 @@
 
 PORTNAME=	gupnp
 PORTVERSION=	1.0.2
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
@@ -25,10 +26,10 @@ VALA_DESC=	Vala binding (requires net/gssdp with VALA enabled)
 CONFIGURE_ARGS=	--enable-introspection=yes
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
+USE_CSTD=	c11
 USE_GNOME=	glib20 introspection:build libxml2
 USE_LDCONFIG=	yes
-USE_CSTD=	c11
-USES=		compiler:c11 gmake libtool pathfix pkgconfig python:run shebangfix tar:xz
+USES=		compiler:c11 gmake gnome libtool pathfix pkgconfig python:run shebangfix tar:xz
 
 SHEBANG_FILES=	tools/gupnp-binding-tool
 

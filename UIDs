@@ -420,7 +420,7 @@ serf:*:470:470::0:0:Serf Daemon:/nonexistent:/usr/sbin/nologin
 vault:*:471:471::0:0:Vault Daemon:/nonexistent:/usr/sbin/nologin
 nomad:*:472:472::0:0:Nomad Daemon:/var/tmp/nomad:/usr/sbin/nologin
 minio:*:473:473::0:0:Minio Daemon:/var/tmp/minio:/usr/sbin/nologin
-# free: 474
+gitlab-runner:*:474:474::0:0:GitLab Runner Daemon:/var/tmp/minio:/usr/sbin/nologin
 # free: 475
 # free: 476
 # free: 477
@@ -841,7 +841,7 @@ chronyd:*:849:849::0:0:chronyd user:/nonexistent:/usr/sbin/nologin
 # free: 892
 # free: 893
 # free: 894
-# free: 895
+snmptt:*:895:895::0:0:SNMPTT User:/var/spool/snmptt:/usr/sbin/nologin
 istat:*:896:896::0:0:istatserver user:/nonexistent:/usr/sbin/nologin
 znc:*:897:897::0:0:ZNC User:/nonexistent:/usr/sbin/nologin
 ufdb:*:898:898::0:0:ufdb user:/nonexistent:/usr/sbin/nologin

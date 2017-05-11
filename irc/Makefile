@@ -51,6 +51,7 @@
     SUBDIR += irssi
     SUBDIR += irssi-dcc_send_limiter
     SUBDIR += irssi-fish
+    SUBDIR += irssi-icb
     SUBDIR += irssi-otr
     SUBDIR += irssi-scripts
     SUBDIR += irssi-xmpp
@@ -94,7 +95,6 @@
     SUBDIR += polari
     SUBDIR += psybnc
     SUBDIR += py-fishcrypt
-    SUBDIR += py-gozerbot
     SUBDIR += py-irc
     SUBDIR += py-limnoria
     SUBDIR += py-supybot
@@ -118,7 +118,6 @@
     SUBDIR += smartirc4net
     SUBDIR += srvx
     SUBDIR += thales
-    SUBDIR += tircd
     SUBDIR += tircproxy
     SUBDIR += undernet-ircu
     SUBDIR += unreal

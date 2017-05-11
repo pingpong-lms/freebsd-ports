@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	zimg
-PORTVERSION=	2.5
+PORTVERSION=	2.5.1
 DISTVERSIONPREFIX=	release-
 CATEGORIES=	graphics
 PKGNAMEPREFIX=	${GH_ACCOUNT}-
@@ -9,10 +9,8 @@ PKGNAMEPREFIX=	${GH_ACCOUNT}-
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Scaling, colorspace conversion, and dithering library
 
-LICENSE=	WTFPL2
-LICENSE_NAME=	Do What The Fuck You Want To Public License version 2
+LICENSE=	WTFPL
 LICENSE_FILE=	${WRKSRC}/COPYING
-LICENSE_PERMS=	${_LICENSE_PERMS_DEFAULT}
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	sekrit-twc

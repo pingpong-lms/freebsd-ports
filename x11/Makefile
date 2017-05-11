@@ -33,6 +33,7 @@
     SUBDIR += cinnamon-session
     SUBDIR += cl-clx
     SUBDIR += compositeproto
+    SUBDIR += controllermap
     SUBDIR += cool-retro-term
     SUBDIR += damageproto
     SUBDIR += decurs
@@ -98,7 +99,6 @@
     SUBDIR += gtkchtheme
     SUBDIR += gtkterm2
     SUBDIR += guake
-    SUBDIR += hotwire-shell
     SUBDIR += hs-X11
     SUBDIR += hs-X11-xft
     SUBDIR += hs-xmobar
@@ -125,7 +125,6 @@
     SUBDIR += keybinder-gtk3
     SUBDIR += keyboardcast
     SUBDIR += keylaunch
-    SUBDIR += keynav
     SUBDIR += kf5-frameworkintegration
     SUBDIR += kf5-frameworks
     SUBDIR += kf5-kactivities
@@ -207,7 +206,6 @@
     SUBDIR += lsw
     SUBDIR += luit
     SUBDIR += lumina
-    SUBDIR += lumina-i18n
     SUBDIR += lupe
     SUBDIR += lxde-meta
     SUBDIR += lxhotkey

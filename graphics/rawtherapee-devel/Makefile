@@ -3,6 +3,7 @@
 
 PORTNAME=	rawtherapee
 PORTVERSION=	5.0.1
+PORTREVISION=	1
 DISTVERSIONSUFFIX=	-gtk3
 DISTNAME=	${PORTNAME}-${PORTVERSION:R}-r${PORTVERSION:E}${DISTVERSIONSUFFIX}
 CATEGORIES=	graphics
@@ -76,6 +77,8 @@ OPTIMIZED_CFLAGS_CFLAGS=	-O3 -funroll-loops -msse2
 # -------------------------------------------------------------------
 #
 
+BROKEN_aarch64=		fails to build: gcc5: error: unrecognized command line option -msse2
+
 .if ${OPSYS} == FreeBSD
 .if ${OSVERSION} >= 1200000
 # don't waste everybody's time with Tier-2 and moving targets.
@@ -116,11 +119,6 @@ USES+=		compiler:gcc-c++11-lib
 .include <bsd.port.pre.mk>
 
 .if ${CHOSEN_COMPILER_TYPE} == gcc
-# Workaround: this needs to be late because Mk/Uses/compiler.mk tramples
-# over previously set values with gcc-libc++-configure as of r432539.
-# GCC 4.9 doesn't generate usable code on FreeBSD 11.0.
-USE_GCC=	5+
-
 # work around compiler faults
 .if ${ARCH} == i386
 CFLAGS+=	-mstackrealign

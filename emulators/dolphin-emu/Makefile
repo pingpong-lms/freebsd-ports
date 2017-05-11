@@ -3,7 +3,7 @@
 
 PORTNAME=	dolphin-emu
 PORTVERSION=	5.0
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	emulators
 
 MAINTAINER=	martymac@FreeBSD.org

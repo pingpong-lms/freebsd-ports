@@ -3,7 +3,7 @@
 
 PORTNAME=	viking
 PORTVERSION=	1.6.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	astro
 MASTER_SITES=	SF/${PORTNAME}/
 
@@ -12,6 +12,8 @@ COMMENT=	Program to manage GPS data (tracks, waypoints, etc.)
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+BROKEN=		wrong LIB_DEPENDS
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/pthread-stubs.pc:devel/libpthread-stubs
 LIB_DEPENDS=	libcurl.so:ftp/curl \

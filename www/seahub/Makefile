@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	seahub
-PORTVERSION=	6.0.8
+PORTVERSION=	${SEAHUB_VER}
 DISTVERSIONPREFIX=	v
 DISTVERSIONSUFFIX=	-pro
 CATEGORIES=	www
@@ -55,32 +55,9 @@ SEAFDAV_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}seafdav>0:www/py-seafdav
 NLS_USES=		gettext iconv
 NLS_CONFIGURE_OFF=	--disable-nls
 
-HAIWENDIR=	www/haiwen
-SEAFILE_SERVER=	${HAIWENDIR}/seafile-server
-SEAHUBDIR=	${SEAFILE_SERVER}/seahub
-SEALIB=		${SEAFILE_SERVER}/seafile/lib
-SITEPACKAGEDIR=	${SEAHUBDIR}/thirdpart
-SEAFILE_VER=	`${CAT} ${.CURDIR}/../../net-mgmt/seafile-server/Makefile | ${GREP} -Eom1 '[0-9]+\.[0-9]+\.[0-9]+'`
-SEAHUB_DATA_DIR=	${HAIWENDIR}/seahub-data
-
-USERS=		seafile
-GROUPS=		${USERS}
-
 USE_RC_SUBR=	${PORTNAME}
-PLIST_SUB=	USERS=${USERS} \
-		GROUPS=${GROUPS} \
-		SEAFILE_SERVER=${SEAFILE_SERVER} \
-		SEAHUBDIR=${SEAHUBDIR} \
-		HAIWENDIR=${HAIWENDIR} \
-		SITEPACKAGEDIR=${SITEPACKAGEDIR}
 
 SUB_FILES=	pkg-message
-
-SUB_LIST+=	USERS=${USERS} \
-		GROUPS=${GROUPS} \
-		SEAFILE_SERVER=${SEAFILE_SERVER} \
-		HAIWENDIR=${HAIWENDIR} \
-		PYTHON=${PYTHON_VERSION}
 
 do-patch:
 	echo "${WRKSRC}..."
@@ -114,5 +91,7 @@ do-install:
 		 ${STAGEDIR}${PREFIX}/${SEAHUB_DATA_DIR})
 	${LN} -fs ../../../seahub-data/avatars \
 		${STAGEDIR}${PREFIX}/${SEAHUBDIR}/media/avatars
+
+.include "${.CURDIR}/../../net-mgmt/seafile-server/Makefile.include"
 
 .include <bsd.port.mk>

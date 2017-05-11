@@ -3,6 +3,7 @@
 
 PORTNAME=	rapidjson
 PORTVERSION=	1.1.0
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel textproc
 
@@ -14,7 +15,8 @@ LICENSE_NAME=	RapidJSON
 LICENSE_FILE=	${WRKSRC}/license.txt
 LICENSE_PERMS=	${_LICENSE_PERMS_DEFAULT}
 
-BROKEN_powerpc64=	Does not build
+BROKEN_aarch64=		does not build: c++: error: the clang compiler does not support -march=native
+BROKEN_powerpc64=	does not build
 
 DOXYGEN_BUILD_DEPENDS+=	doxygen:devel/doxygen
 

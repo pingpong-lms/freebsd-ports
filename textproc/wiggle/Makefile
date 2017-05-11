@@ -3,7 +3,7 @@
 
 PORTNAME=	wiggle
 PORTVERSION=	1.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	http://neil.brown.name/wiggle/
 
@@ -12,9 +12,9 @@ COMMENT=	Apply rejected patches and perform word-wise diffs
 
 LICENSE=	GPLv2
 
-BROKEN_powerpc64=	Does not build
-
 BUILD_DEPENDS=	bash:shells/bash
+
+BROKEN_powerpc64=	Does not build: error: nested functions are disabled, use -fnested-functions to re-enable
 
 USES=		compiler:nestedfct gmake ncurses
 

@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/devel/libsigc++20/Makefile 19952 2014-10-15 08:11:00Z gusi $
 
 PORTNAME=	libsigc++
-PORTVERSION=	2.4.1
+PORTVERSION=	2.10.0
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 
@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
-USES=		gmake libtool pathfix perl5 tar:xz
+USES=		compiler:c++11-lang gmake libtool pathfix perl5 tar:xz
 USE_PERL5=	build
 USE_LDCONFIG=	yes
 

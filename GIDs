@@ -415,7 +415,7 @@ serf:*:470:
 vault:*:471:
 nomad:*:472:
 minio:*:473:
-# free: 474
+gitlab-runner:*:474:
 # free: 475
 # free: 476
 # free: 477
@@ -836,7 +836,7 @@ chronyd:*:849:
 # free: 892
 # free: 893
 # free: 894
-# free: 895
+snmptt:*:895:
 istat:*:896:
 znc:*:897:
 ufdb:*:898:

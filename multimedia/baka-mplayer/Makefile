@@ -3,6 +3,7 @@
 PORTNAME=	baka-mplayer
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.0.4
+PORTREVISION=	2
 CATEGORIES=	multimedia audio
 
 MAINTAINER=	jbeich@FreeBSD.org

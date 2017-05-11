@@ -5,7 +5,7 @@
 
 PORTNAME=	x49gp
 PORTVERSION=	20100425
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	emulators math
 MASTER_SITES=	LOCAL/shaun
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} sdcard64.tar.gz
@@ -14,6 +14,8 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	shaun@FreeBSD.org
 COMMENT=	HP 49g+/50g graphics calculator emulator
 
+BROKEN_aarch64=		does not build on arm: unsupported CPU = unknown
+BROKEN_armv6=		does not build on arm: unsupported CPU = unknown
 BROKEN_i386=		does not build on i386 (error: frame pointer required, but reserved)
 
 WRKSRC=		${WRKDIR}/x49gp/x49gp-code

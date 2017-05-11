@@ -4,10 +4,8 @@
 PORTNAME=	ssh2
 PORTVERSION=	0.13
 CATEGORIES=	security pear
-MASTER_SITES=	http://pecl.php.net/get/
-PKGNAMEPREFIX=	pecl-
 
-MAINTAINER=	dbaio@bsd.com.br
+MAINTAINER=	dbaio@FreeBSD.org
 COMMENT=	PECL extension to the libssh2 library
 
 LICENSE=	PHP301
@@ -15,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libssh2.so:security/libssh2
 
-USES=		php:ext tar:tgz
+USES=		php:pecl
 IGNORE_WITH_PHP=	70 71
 
 CPPFLAGS+=	-I${LOCALBASE}/include

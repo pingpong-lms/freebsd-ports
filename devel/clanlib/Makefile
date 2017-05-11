@@ -3,7 +3,7 @@
 
 PORTNAME=	clanlib
 PORTVERSION=	2.3.7
-PORTREVISION=	9
+PORTREVISION=	10
 PORTEPOCH=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.clanlib.org/download/releases-2.0/
@@ -19,6 +19,9 @@ LIB_DEPENDS=	libpng.so:graphics/png \
 		libvorbis.so:audio/libvorbis \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libpcre.so:devel/pcre
+
+NOT_FOR_ARCHS=		aarch64 armv6
+NOT_FOR_ARCHS_REASON=	invokes x86 asm
 
 USES=		execinfo gmake jpeg libtool pathfix pkgconfig sqlite tar:tgz
 USE_GCC=	yes

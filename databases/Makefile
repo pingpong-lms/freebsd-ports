@@ -14,7 +14,6 @@
     SUBDIR += adodb
     SUBDIR += adodb5
     SUBDIR += akonadi
-    SUBDIR += akonadi-googledata
     SUBDIR += animenfo-client
     SUBDIR += animenfo-client-gtk
     SUBDIR += apq
@@ -95,7 +94,6 @@
     SUBDIR += glom
     SUBDIR += gnats4
     SUBDIR += gnatsweb4
-    SUBDIR += godis
     SUBDIR += gomdb
     SUBDIR += gosqlite3
     SUBDIR += gqlplus
@@ -122,7 +120,6 @@
     SUBDIR += jasperreports
     SUBDIR += jdb
     SUBDIR += jdbc-oracle11g
-    SUBDIR += jdbm2
     SUBDIR += jlog
     SUBDIR += jrobin
     SUBDIR += jrrd
@@ -139,14 +136,6 @@
     SUBDIR += libdbi-drivers
     SUBDIR += libdrizzle
     SUBDIR += libdrizzle-redux
-    SUBDIR += libgda4
-    SUBDIR += libgda4-bdb
-    SUBDIR += libgda4-jdbc
-    SUBDIR += libgda4-ldap
-    SUBDIR += libgda4-mdb
-    SUBDIR += libgda4-mysql
-    SUBDIR += libgda4-postgresql
-    SUBDIR += libgda4-reference
     SUBDIR += libgda5
     SUBDIR += libgda5-bdb
     SUBDIR += libgda5-jdbc
@@ -155,7 +144,6 @@
     SUBDIR += libgda5-mysql
     SUBDIR += libgda5-postgresql
     SUBDIR += libgda5-ui
-    SUBDIR += libgdamm
     SUBDIR += libgdamm5
     SUBDIR += libhsclient
     SUBDIR += libiodbc
@@ -176,6 +164,7 @@
     SUBDIR += linux-oracle-instantclient-sqlplus
     SUBDIR += liquibase
     SUBDIR += lmdb
+    SUBDIR += lua-xapian
     SUBDIR += luadbi
     SUBDIR += luasql-firebird
     SUBDIR += luasql-mysql
@@ -199,6 +188,9 @@
     SUBDIR += mongodb
     SUBDIR += mongodb32
     SUBDIR += mongodb32-tools
+    SUBDIR += mongodb34
+    SUBDIR += mongodb34-rocks
+    SUBDIR += mongodb34-tools
     SUBDIR += mrtg-mysql-load
     SUBDIR += mtools-mongodb
     SUBDIR += mtop
@@ -484,8 +476,8 @@
     SUBDIR += p5-SQLite-Work
     SUBDIR += p5-Search-InvertedIndex
     SUBDIR += p5-Search-Namazu
-    SUBDIR += p5-Search-Xapian
     SUBDIR += p5-Search-Xapian10
+    SUBDIR += p5-Search-Xapian12
     SUBDIR += p5-Store-CouchDB
     SUBDIR += p5-T2
     SUBDIR += p5-Tangram
@@ -503,6 +495,7 @@
     SUBDIR += p5-Tie-LevelDB
     SUBDIR += p5-Time-Piece-MySQL
     SUBDIR += p5-TokyoCabinet
+    SUBDIR += p5-Xapian
     SUBDIR += p5-mysql-genocide
     SUBDIR += p5-tokyotyrant
     SUBDIR += pear-DB
@@ -579,14 +572,11 @@
     SUBDIR += pgdbf
     SUBDIR += pgespresso
     SUBDIR += pgfouine
-    SUBDIR += pglesslog
     SUBDIR += pgloader
     SUBDIR += pglogical
     SUBDIR += pgmodeler
     SUBDIR += pgpool
     SUBDIR += pgpool-II
-    SUBDIR += pgpool-II-22
-    SUBDIR += pgpool-II-23
     SUBDIR += pgpool-II-30
     SUBDIR += pgpool-II-33
     SUBDIR += pgpoolAdmin
@@ -599,6 +589,7 @@
     SUBDIR += pguri
     SUBDIR += pgworksheet
     SUBDIR += php-mdcached
+    SUBDIR += php-xapian
     SUBDIR += php5-pdo_cassandra
     SUBDIR += php5-tarantool
     SUBDIR += php56-dba
@@ -714,8 +705,6 @@
     SUBDIR += proftpd-mod_sql_postgres
     SUBDIR += proftpd-mod_sql_sqlite
     SUBDIR += proftpd-mod_sql_tds
-    SUBDIR += puppetdb
-    SUBDIR += puppetdb-terminus
     SUBDIR += puppetdb-terminus3
     SUBDIR += puppetdb-terminus4
     SUBDIR += puppetdb3
@@ -811,7 +800,10 @@
     SUBDIR += py-tarantool
     SUBDIR += py-umemcache
     SUBDIR += py-unqlite
+    SUBDIR += py-varstack
     SUBDIR += py-whisper
+    SUBDIR += py-xapian
+    SUBDIR += py3-apsw
     SUBDIR += py3-bsddb3
     SUBDIR += py3-mysqlclient
     SUBDIR += py3-psycopg2
@@ -853,9 +845,11 @@
     SUBDIR += redigo
     SUBDIR += redis
     SUBDIR += redis-devel
+    SUBDIR += retcl
     SUBDIR += riak
     SUBDIR += riak2
     SUBDIR += rocksdb
+    SUBDIR += rocksdb-lite
     SUBDIR += rrdman
     SUBDIR += rrdmerge
     SUBDIR += rrdtool
@@ -866,14 +860,18 @@
     SUBDIR += ruby-odbc
     SUBDIR += ruby-qdbm
     SUBDIR += ruby-tokyocabinet
+    SUBDIR += ruby-xapian
+    SUBDIR += rubygem-active_record_query_trace
     SUBDIR += rubygem-activemodel4
     SUBDIR += rubygem-activemodel5
+    SUBDIR += rubygem-activemodel50
     SUBDIR += rubygem-activerecord-import
     SUBDIR += rubygem-activerecord-jdbc-adapter
     SUBDIR += rubygem-activerecord-jdbcmysql-adapter
     SUBDIR += rubygem-activerecord-session_store
     SUBDIR += rubygem-activerecord4
     SUBDIR += rubygem-activerecord5
+    SUBDIR += rubygem-activerecord50
     SUBDIR += rubygem-after_commit_queue
     SUBDIR += rubygem-amalgalite
     SUBDIR += rubygem-arel
@@ -913,6 +911,7 @@
     SUBDIR += rubygem-em-redis-unified
     SUBDIR += rubygem-familia
     SUBDIR += rubygem-globalid
+    SUBDIR += rubygem-globalid-rails5
     SUBDIR += rubygem-her
     SUBDIR += rubygem-hiredis
     SUBDIR += rubygem-jdbc-mysql
@@ -925,11 +924,13 @@
     SUBDIR += rubygem-paranoia
     SUBDIR += rubygem-pg
     SUBDIR += rubygem-pg_array_parser
+    SUBDIR += rubygem-pghero
+    SUBDIR += rubygem-pghero-rails5
     SUBDIR += rubygem-postgres_ext
     SUBDIR += rubygem-rbase
     SUBDIR += rubygem-redis
     SUBDIR += rubygem-redis-actionpack
-    SUBDIR += rubygem-redis-actionpack4
+    SUBDIR += rubygem-redis-actionpack-rails5
     SUBDIR += rubygem-redis-namespace
     SUBDIR += rubygem-seed-fu
     SUBDIR += rubygem-sqlite3
@@ -994,8 +995,10 @@
     SUBDIR += wfb2sql
     SUBDIR += wmjsql
     SUBDIR += xapian-bindings
+    SUBDIR += xapian-bindings12
     SUBDIR += xapian-core
     SUBDIR += xapian-core10
+    SUBDIR += xapian-core12
     SUBDIR += xtrabackup
     SUBDIR += zodb3
 

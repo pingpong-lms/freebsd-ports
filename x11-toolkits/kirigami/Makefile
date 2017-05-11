@@ -3,10 +3,10 @@
 
 PORTNAME=	kirigami
 PORTVERSION=	1.1.0
-MASTER_SITES=	KDE/stable/${PORTNAME}
-# kirigami will likely become a framework. So already put the distfile there.
-DIST_SUBDIR=	KDE/kirigami
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits kde # kde-framework
+MASTER_SITES=	KDE/stable/${PORTNAME}
+DIST_SUBDIR=	KDE/kirigami
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	QtQuick based components set

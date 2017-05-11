@@ -3,6 +3,7 @@
 
 PORTNAME=	afnix
 PORTVERSION=	2.6.3
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://www.afnix.org/ftp/ \
 		ftp://ftp.stack.nl/pub/users/johans/afnix/
@@ -12,7 +13,7 @@ MAINTAINER=	johans@FreeBSD.org
 COMMENT=	Multi-threaded functional programming language
 
 BROKEN_powerpc=		does not configure
-BROKEN_powerpc64=	does not build
+BROKEN_powerpc64=	does not build: afnix-setup: cannot determine linking type
 BROKEN_i386=		does not build
 
 USES=		compiler:c++11-lang gmake tar:tgz

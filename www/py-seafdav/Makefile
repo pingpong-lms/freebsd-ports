@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	seafdav
-PORTVERSION=	6.0.8
+PORTVERSION=	${SEAHUB_VER}
 DISTVERSIONPREFIX=	v
 DISTVERSIONSUFFIX=	-pro
 CATEGORIES=	www python
@@ -21,21 +21,6 @@ SHEBANG_FILES=	*.sh *.template wsgidav/addons/seafile/*.py
 NO_ARCH=	yes
 NO_BUILD=	yes
 
-HAIWENDIR=	www/haiwen
-SEAFILE_SERVER=	${HAIWENDIR}/seafile-server
-SEAHUBDIR=	${SEAFILE_SERVER}/seahub
-SITEPACKAGEDIR=	${SEAHUBDIR}/thirdpart
-
-USERS=		seafile
-GROUPS=		${USERS}
-
-PLIST_SUB=	USERS=${USERS} \
-		GROUPS=${GROUPS} \
-		SEAFILE_SERVER=${SEAFILE_SERVER} \
-		SEAHUBDIR=${SEAHUBDIR} \
-		HAIWENDIR=${HAIWENDIR} \
-		SITEPACKAGEDIR=${SITEPACKAGEDIR}
-
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/${SITEPACKAGEDIR}/wsgidav
 	(cd ${WRKSRC}/wsgidav && \
@@ -47,5 +32,7 @@ do-install:
 			-f ${WRKSRC}/wsgidav)
 	(cd ${WRKSRC}/wsgidav && \
 		${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/${SITEPACKAGEDIR}/wsgidav)
+
+.include "${.CURDIR}/../../net-mgmt/seafile-server/Makefile.include"
 
 .include <bsd.port.mk>

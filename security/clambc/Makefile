@@ -3,7 +3,7 @@
 
 PORTNAME=	clambc
 DISTVERSION=	0.98.5rc1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	SF/clamav/${PORTNAME:tl}
 
@@ -11,6 +11,9 @@ MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Bytecode signature compiler for ClamAV
 
 LICENSE=	GPLv2
+
+NOT_FOR_ARCHS=		aarch64
+NOT_FOR_ARCHS_REASON=	fails to configure: error: Can not set target to build
 
 USES=		gmake libtool perl5
 ALL_TARGET=	clambc-only

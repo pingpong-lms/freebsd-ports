@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=		docker-machine
-PORTVERSION=		0.10.0
+PORTVERSION=		0.11.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=		sysutils
 
@@ -10,6 +10,7 @@ MAINTAINER=		lifanov@FreeBSD.org
 COMMENT=		Tool to create Docker hosts
 
 LICENSE=		APACHE20
+LICENSE_FILE=		${WRKSRC}/LICENSE
 
 PLIST_FILES=		bin/docker-machine
 

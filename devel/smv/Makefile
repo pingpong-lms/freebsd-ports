@@ -3,13 +3,16 @@
 
 PORTNAME=	smv
 PORTVERSION=	2.5.4.3
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cs.cmu.edu/~modelcheck/smv/
 DISTNAME=	${PORTNAME}.r${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Symbolic Model Verifier System for checking finite state systems
+
+BROKEN_aarch64=		fails to build: undefined reference to sbrk
+BROKEN_armv6=		fails to build: error: non-void function check_bdd should return a value
 
 USE_GCC=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}

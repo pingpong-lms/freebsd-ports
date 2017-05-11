@@ -124,11 +124,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  ${MASTER_SITE_OVERRIDE})
 # EXTRACT_ONLY	- If set, a subset of ${DISTFILES} you want to
 #				  actually extract.
-# ALWAYS_KEEP_DISTFILES
-#				- If set, the package building cluster will save the distfiles
-#				  along with the packages. This may be required to comply with
-#				  some licenses, e.g. GPL in some cases.
-#				  Default: not set.
 #
 # (NOTE: by convention, the MAINTAINER entry (see above) should go here.)
 #
@@ -1040,9 +1035,7 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 
 LANG=		C
 LC_ALL=		C
-.if defined(.PARSEDIR)
 .export		LANG LC_ALL
-.endif
 
 # These need to be absolute since we don't know how deep in the ports
 # tree we are and thus can't go relative.  They can, of course, be overridden
@@ -1061,15 +1054,15 @@ STAGEDIR?=	${WRKDIR}/stage
 NOTPHONY?=
 MINIMAL_PKG_VERSION=	1.6.0
 
+_PORTS_DIRECTORIES+=	${PKG_DBDIR} ${PREFIX} ${WRKDIR} ${EXTRACT_WRKDIR} \
+						${STAGEDIR}${PREFIX} ${WRKDIR}/pkg
+
 # make sure bmake treats -V as expected
 .MAKE.EXPAND_VARIABLES= yes
 
 .include "${PORTSDIR}/Mk/bsd.commands.mk"
 
 .if defined(CROSS_TOOLCHAIN)
-.if !defined(.PARSEDIR)
-IGNORE=	Cross building can only be done when using bmake(1) as make(1)
-.endif
 .if !defined(CROSS_SYSROOT)
 IGNORE=	CROSS_SYSROOT should be defined
 .endif
@@ -1163,9 +1156,9 @@ WARNING+=			"${_UNSUPPORTED_SYSTEM_MESSAGE}"
 show-unsupported-system-error:
 	@${ECHO_MSG} "/!\\ ERROR: /!\\"
 	@${ECHO_MSG}
-	@${ECHO_MSG} "${_UNSUPPORTED_SYSTEM_MESSAGE}" | ${FMT} 75 79
+	@${ECHO_MSG} "${_UNSUPPORTED_SYSTEM_MESSAGE}" | ${FMT_80}
 	@${ECHO_MSG}
-	@${ECHO_MSG} "No support will be provided if you silence this message by defining ALLOW_UNSUPPORTED_SYSTEM." | ${FMT} 75 79
+	@${ECHO_MSG} "No support will be provided if you silence this message by defining ALLOW_UNSUPPORTED_SYSTEM." | ${FMT_80}
 	@${ECHO_MSG}
 	@${FALSE}
 . endif
@@ -1298,7 +1291,7 @@ _PREMKINCLUDED=	yes
 IGNORE=			PORTVERSION ${PORTVERSION} may not contain '-' '_' or ','
 .endif
 .if defined(DISTVERSION)
-DEV_WARNING+=	"Defining both PORTVERSION and DISTVERSION is wrong, only set one and let the framework create the other one"
+DEV_ERROR+=	"Defining both PORTVERSION and DISTVERSION is wrong, only set one, if necessary, set DISTNAME"
 .endif
 DISTVERSION?=	${PORTVERSION:S/:/::/g}
 .elif defined(DISTVERSION)
@@ -2115,8 +2108,6 @@ PKGMESSAGE?=	${PKGDIR}/pkg-message
 _PKGMESSAGES+=	${PKGMESSAGE}
 
 TMPPLIST?=	${WRKDIR}/.PLIST.mktmp
-TMPPLIST_SORT?=	${WRKDIR}/.PLIST.mktmp.sorted
-TMPGUCMD?=	${WRKDIR}/.PLIST.gucmd
 
 .if defined(PKG_NOCOMPRESS)
 PKG_SUFX?=		.tar
@@ -2507,6 +2498,7 @@ check-categories:
 PKGREPOSITORYSUBDIR?=	All
 PKGREPOSITORY?=		${PACKAGES}/${PKGREPOSITORYSUBDIR}
 .if exists(${PACKAGES})
+_HAVE_PACKAGES=	yes
 PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
 .else
 PKGFILE?=		${.CURDIR}/${PKGNAME}${PKG_SUFX}
@@ -2759,7 +2751,7 @@ clean:
 .if defined(IGNORE_SILENT)
 IGNORECMD=	${DO_NADA}
 .else
-IGNORECMD=	${ECHO_MSG} "===>  ${PKGNAME} "${IGNORE:Q}. | ${FMT} 75 79 ; exit 1
+IGNORECMD=	${ECHO_MSG} "===>  ${PKGNAME} "${IGNORE:Q}. | ${FMT_80} ; exit 1
 .endif
 
 _TARGETS=	check-sanity fetch checksum extract patch configure all build \
@@ -2779,23 +2771,16 @@ ${target}:
 
 .endif # !defined(NO_IGNORE)
 
+ignorelist:
 .if defined(IGNORE) || defined(NO_PACKAGE)
 ignorelist: package-name
-.else
-ignorelist:
-	@${DO_NADA}
 .endif
 
-.if defined(IGNORE) || defined(NO_PACKAGE)
 ignorelist-verbose:
 .if defined(IGNORE)
 	@${ECHO_CMD} "${PKGNAME}|IGNORE: "${IGNORE:Q}
-.else
+.elif defined(NO_PACKAGE)
 	@${ECHO_CMD} "${PKGNAME}|NO_PACKAGE: "${NO_PACKAGE:Q}
-.endif
-.else
-ignorelist-verbose:
-	@${DO_NADA}
 .endif
 
 ################################################################
@@ -2877,38 +2862,18 @@ _OPTIONS_OK=yes
 # override from an individual Makefile.
 ################################################################
 
-# Disable checksum
-.if defined(NO_CHECKSUM) && !target(checksum)
-checksum: fetch
-	@${DO_NADA}
-.endif
-
 # Disable build
 .if defined(NO_BUILD) && !target(build)
 build: configure
 	@${TOUCH} ${TOUCH_FLAGS} ${BUILD_COOKIE}
 .endif
 
-# Disable test
-.if defined(NO_TEST) && !target(test)
-test: stage
-	@${DO_NADA}
-.endif
-
 # Disable package
 .if defined(NO_PACKAGE) && !target(package)
 package:
-.if defined(IGNORE_SILENT)
-	@${DO_NADA}
-.else
+.if !defined(IGNORE_SILENT)
 	@${ECHO_MSG} "===>  ${PKGNAME} may not be packaged: "${NO_PACKAGE:Q}.
 .endif
-.endif
-
-# Disable describe
-.if defined(NO_DESCRIBE) && !target(describe)
-describe:
-	@${DO_NADA}
 .endif
 
 ################################################################
@@ -2919,30 +2884,10 @@ describe:
 # adding pre-* or post-* targets/scripts, override these.
 ################################################################
 
-# Pre-everything
-
-pre-everything::
-	@${DO_NADA}
-
 .if defined(TRYBROKEN) && defined(BROKEN)
 buildanyway-message:
 	@${ECHO_MSG} "Trying build of ${PKGNAME} even though it is marked BROKEN."
 .endif
-
-options-message:
-.if defined(GNOME_OPTION_MSG) && (!defined(PACKAGE_BUILDING) || !defined(BATCH))
-	@for m in ${GNOME_OPTION_MSG}; do \
-		${ECHO_MSG} $$m; \
-	done
-.else
-	@${DO_NADA}
-.endif
-.if defined(_OPTIONS_READ)
-	@${ECHO_MSG} "===>  Found saved configuration for ${_OPTIONS_READ}"
-.endif
-
-${PKG_DBDIR} ${PREFIX} ${WRKDIR} ${EXTRACT_WRKDIR}:
-	@${MKDIR} ${.TARGET}
 
 # Warn user about deprecated packages.  Advisory only.
 
@@ -3095,7 +3040,7 @@ clean-wrkdir:
 	@${RM} -r ${WRKDIR}
 
 .if !target(do-extract)
-do-extract:
+do-extract: ${EXTRACT_WRKDIR}
 	@for file in ${EXTRACT_ONLY}; do \
 		if ! (cd ${EXTRACT_WRKDIR} && ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${_DISTDIR}/$$file ${EXTRACT_AFTER_ARGS});\
 		then \
@@ -3194,7 +3139,7 @@ do-configure:
 	    INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
 	    ${CONFIGURE_ENV} ${CONFIGURE_CMD} ${CONFIGURE_ARGS}; then \
 			 ${ECHO_MSG} "===>  Script \"${CONFIGURE_SCRIPT}\" failed unexpectedly."; \
-			 (${ECHO_CMD} ${CONFIGURE_FAIL_MESSAGE}) | ${FMT} 75 79 ; \
+			 (${ECHO_CMD} ${CONFIGURE_FAIL_MESSAGE}) | ${FMT_80} ; \
 			 ${FALSE}; \
 		fi)
 .endif
@@ -3208,7 +3153,7 @@ do-build:
 	@(cd ${BUILD_WRKSRC}; if ! ${DO_MAKE_BUILD} ${ALL_TARGET}; then \
 		if [ -n "${BUILD_FAIL_MESSAGE}" ] ; then \
 			${ECHO_MSG} "===> Compilation failed unexpectedly."; \
-			(${ECHO_CMD} "${BUILD_FAIL_MESSAGE}") | ${FMT} 75 79 ; \
+			(${ECHO_CMD} "${BUILD_FAIL_MESSAGE}") | ${FMT_80} ; \
 			fi; \
 		${FALSE}; \
 		fi)
@@ -3327,59 +3272,51 @@ do-test:
 	@(cd ${TEST_WRKSRC}; if ! ${DO_MAKE_TEST} ${TEST_TARGET}; then \
 		if [ -n "${TEST_FAIL_MESSAGE}" ] ; then \
 			${ECHO_MSG} "===> Tests failed unexpectedly."; \
-			(${ECHO_CMD} "${TEST_FAIL_MESSAGE}") | ${FMT} 75 79 ; \
+			(${ECHO_CMD} "${TEST_FAIL_MESSAGE}") | ${FMT_80} ; \
 			fi; \
 		${FALSE}; \
 		fi)
-.elif !target(do-test)
-do-test:
-	@${DO_NADA}
 .endif
 
 # Package
 
-.if !target(do-package)
-PKG_CREATE_ARGS=	-r ${STAGEDIR} -m ${METADIR} -p ${TMPPLIST}
-.if defined(PKG_CREATE_VERBOSE)
-PKG_CREATE_ARGS+=	-v
+.if defined(_HAVE_PACKAGES)
+_EXTRA_PACKAGE_TARGET_DEP+= ${PKGFILE}
+_PORTS_DIRECTORIES+=	${PKGREPOSITORY}
+
+${PKGFILE}: ${WRKDIR_PKGFILE} ${PKGREPOSITORY}
+	@${LN} -f ${WRKDIR_PKGFILE} ${PKGFILE} 2>/dev/null \
+			|| ${CP} -f ${WRKDIR_PKGFILE} ${PKGFILE}
+
+.  if ${PKGORIGIN} == "ports-mgmt/pkg" || ${PKGORIGIN} == "ports-mgmt/pkg-devel"
+_EXTRA_PACKAGE_TARGET_DEP+=	${PKGLATESTREPOSITORY}
+_PORTS_DIRECTORIES+=	${PKGLATESTREPOSITORY}
+_EXTRA_PACKAGE_TARGET_DEP+=	${PKGLATESTFILE}
+
+${PKGLATESTFILE}: ${PKGFILE} ${PKGLATESTREPOSITORY}
+	${INSTALL} -l rs ${PKGFILE} ${PKGLATESTFILE}
+.  endif
+
 .endif
-do-package: create-manifest
-do-package: ${TMPPLIST}
-	@if [ -d ${PACKAGES} ]; then \
-		if [ ! -d ${PKGREPOSITORY} ]; then \
-			if ! ${MKDIR} ${PKGREPOSITORY}; then \
-				${ECHO_MSG} "=> Can't create directory ${PKGREPOSITORY}."; \
-				exit 1; \
-			fi; \
-		fi; \
-	fi
-	@for cat in ${CATEGORIES}; do \
-		${RM} ${PACKAGES}/$$cat/${PKGNAMEPREFIX}${PORTNAME}*${PKG_SUFX} ; \
-	done
-	@${MKDIR} ${WRKDIR}/pkg
-	@if ${SETENV} ${PKG_ENV} FORCE_POST="${_FORCE_POST_PATTERNS}" ${PKG_CREATE} ${PKG_CREATE_ARGS} -f ${PKG_SUFX:S/.//} -o ${WRKDIR}/pkg ${PKGNAME}; then \
-		if [ -d ${PKGREPOSITORY} -a -w ${PKGREPOSITORY} ]; then \
-			${LN} -f ${WRKDIR_PKGFILE} ${PKGFILE} 2>/dev/null \
-				|| ${CP} -f ${WRKDIR_PKGFILE} ${PKGFILE}; \
-			if [ "${PKGORIGIN}" = "ports-mgmt/pkg" -o "${PKGORIGIN}" = "ports-mgmt/pkg-devel" ]; then \
-				if [ ! -d ${PKGLATESTREPOSITORY} ]; then \
-					if ! ${MKDIR} ${PKGLATESTREPOSITORY}; then \
-						${ECHO_MSG} "=> Can't create directory ${PKGLATESTREPOSITORY}."; \
-						exit 1; \
-					fi; \
-				fi ; \
-				${LN} -sf ../${PKGREPOSITORYSUBDIR}/${PKGNAME}${PKG_SUFX} ${PKGLATESTFILE} ; \
-			fi; \
-		elif [ ! -d ${PACKAGES} ]; then \
-			${LN} -f ${WRKDIR_PKGFILE} ${PKGFILE} 2>/dev/null \
-				|| ${CP} -f ${WRKDIR_PKGFILE} ${PKGFILE}; \
-		fi; \
-	else \
+
+# from here this will become a loop for subpackages
+${WRKDIR_PKGFILE}: ${TMPPLIST} create-manifest ${WRKDIR}/pkg
+	@if ! ${SETENV} ${PKG_ENV} FORCE_POST="${_FORCE_POST_PATTERNS}" ${PKG_CREATE} ${PKG_CREATE_ARGS} -m ${METADIR} -p ${TMPPLIST} -f ${PKG_SUFX:S/.//} -o ${WRKDIR}/pkg ${PKGNAME}; then \
 		cd ${.CURDIR} && eval ${MAKE} delete-package >/dev/null; \
 		exit 1; \
 	fi
+	#
+# Temporary will be later dynamically added per subpackages
+_EXTRA_PACKAGE_TARGET_DEP+=	${WRKDIR_PKGFILE}
+# This will be the end of the loop
+
+.if !target(do-package)
+PKG_CREATE_ARGS=	-r ${STAGEDIR}
+.  if defined(PKG_CREATE_VERBOSE)
+PKG_CREATE_ARGS+=	-v
+.  endif
+do-package: ${_EXTRA_PACKAGE_TARGET_DEP} ${WRKDIR}/pkg
 .endif
-# Some support rules for do-package
 
 .if !target(delete-package)
 delete-package:
@@ -3445,9 +3382,10 @@ check-umask:
 	fi
 .endif
 
+# Needed for poudriere wait for at least a year before removing
+# XXX 2017-04-09
 .if !target(install-mtree)
 install-mtree:
-		@${DO_NADA}
 .endif
 
 .if !target(install-ldconfig-file)
@@ -3717,13 +3655,8 @@ clean:
 .endif
 .endif
 
-.if !target(pre-distclean)
-pre-distclean:
-	@${DO_NADA}
-.endif
-
 .if !target(distclean)
-distclean: pre-distclean clean
+distclean: clean
 	@cd ${.CURDIR} && ${MAKE} delete-distfiles RESTRICTED_FILES="${_DISTFILES:Q} ${_PATCHFILES:Q}"
 .endif
 
@@ -3816,7 +3749,7 @@ makesum:
 
 .if !target(checksum)
 checksum: fetch
-.if !empty(_CKSUMFILES)
+.if !empty(_CKSUMFILES) && !defined(NO_CHECKSUM)
 	@${SETENV} \
 			${_CHECKSUM_INIT_ENV} \
 			dp_CHECKSUM_ALGORITHMS='${CHECKSUM_ALGORITHMS:tu}' \
@@ -3916,14 +3849,8 @@ _UNIFIED_DEPENDS=${PKG_DEPENDS} ${EXTRACT_DEPENDS} ${PATCH_DEPENDS} ${FETCH_DEPE
 _DEPEND_SPECIALS=	${_UNIFIED_DEPENDS:M*\:*\:*:C,^[^:]*:([^:]*):.*$,\1,}
 
 .for d in ${_UNIFIED_DEPENDS:M*\:/*}
-# Fight .for variable interpolation differently for each version of make...
-.if defined(.PARSEDIR)
 _PORTSDIR_STR=	$${PORTSDIR}/
 DEV_WARNING+=	"It looks like the ${d} depends line has an absolute port origin, make sure to remove \$${_PORTSDIR_STR} from it."
-.else
-_PORTSDIR_STR=	$$$${PORTSDIR}/
-DEV_WARNING+=	"It looks like the ${d} depends line has an absolute port origin, make sure to remove \$${_PORTSDIR_STR} from it."
-.endif
 .endfor
 
 all-depends-list:
@@ -4420,9 +4347,6 @@ generate-plist: ${WRKDIR}
 ${TMPPLIST}:
 	@cd ${.CURDIR} && ${MAKE} generate-plist
 
-${TMPPLIST_SORT}: ${TMPPLIST}
-	@${SORT} -u ${TMPPLIST} >${TMPPLIST_SORT}
-
 .for _type in EXAMPLES DOCS
 .if !target(add-plist-${_type:tl})
 .if defined(PORT${_type}) && !defined(NOPORT${_type})
@@ -4536,8 +4460,7 @@ compress-man:
 .endif
 
 .if !target(stage-dir)
-stage-dir:
-	@${MKDIR} ${STAGEDIR}${PREFIX}
+stage-dir: ${STAGEDIR}${PREFIX}
 .if !defined(NO_MTREE)
 	@${MTREE_CMD} ${MTREE_ARGS} ${STAGEDIR}${PREFIX} > /dev/null
 .endif
@@ -5079,7 +5002,7 @@ check-desktop-entries:
 			${ECHO_MSG} "${PKGNAME}: Makefile error: in desktop entry $$entry: field 1 (Name) is empty"; \
 			exit 1; \
 		fi; \
-		if ${ECHO_CMD} "$$3" | ${GREP} -iq '.\(png\|svg\|xpm\)$$'; then \
+		if ${ECHO_CMD} "$$3" | ${EGREP} -iq '.(png|svg|xpm)$$'; then \
 			if ! ${ECHO_CMD} "$$3" | ${GREP} -iq '^/'; then \
 				${ECHO_MSG} "${PKGNAME}: Makefile warning: in desktop entry $$entry: field 3 (Icon) should be either absolute path or icon name without extension if installed icons follow Icon Theme Specification"; \
 			fi; \
@@ -5155,10 +5078,11 @@ install-desktop-entries:
 WARNING_WAIT?=	10
 show-warnings:
 	@${ECHO_MSG} "/!\\ WARNING /!\\"
-.for m in ${WARNING}
-	@${ECHO_MSG} "${m}"
-.endfor
 	@${ECHO_MSG}
+.for m in ${WARNING}
+	@${ECHO_MSG} "${m}" | ${FMT_80}
+	@${ECHO_MSG}
+.endfor
 	@sleep ${WARNING_WAIT}
 .endif
 
@@ -5169,9 +5093,9 @@ show-dev-warnings:
 	@${ECHO_MSG} "/!\\ ${PKGNAME}: Makefile warnings, please consider fixing /!\\"
 	@${ECHO_MSG}
 .for m in ${DEV_WARNING}
-	@${ECHO_MSG} ${m}
-.endfor
+	@${ECHO_MSG} ${m} | ${FMT_80}
 	@${ECHO_MSG}
+.endfor
 .if defined(DEV_WARNING_FATAL)
 	@${FALSE}
 .else
@@ -5184,12 +5108,15 @@ show-dev-errors:
 	@${ECHO_MSG} "/!\\ ${PKGNAME}: Makefile errors /!\\"
 	@${ECHO_MSG}
 .for m in ${DEV_ERROR}
-	@${ECHO_MSG} "${m}"
-.endfor
+	@${ECHO_MSG} "${m}" | ${FMT_80}
 	@${ECHO_MSG}
+.endfor
 	@${FALSE}
 .endif
 .endif #DEVELOPER
+
+${_PORTS_DIRECTORIES}:
+	@${MKDIR} ${.TARGET}
 
 # Please note that the order of the following targets is important, and
 # should not be modified.
@@ -5362,9 +5289,7 @@ ${${target:tu}_COOKIE}: ${_${target:tu}_DEP} ${_${target:tu}_REAL_SEQ} ${_${targ
 
 .else # exists(cookie)
 ${${target:tu}_COOKIE}::
-	@if [ -e ${.TARGET} ]; then \
-		${DO_NADA}; \
-	else \
+	@if [ ! -e ${.TARGET} ]; then \
 		cd ${.CURDIR} && ${MAKE} ${.TARGET}; \
 	fi
 .endif # !exists(cookie)
@@ -5386,7 +5311,10 @@ pkg: ${_PKG_DEP} ${_PKG_REAL_SEQ}
 .endif
 
 .if !target(test)
-test: ${_TEST_DEP} ${_TEST_REAL_SEQ}
+test: ${_TEST_DEP}
+.if !defined(NO_TEST)
+test: ${_TEST_REAL_SEQ}
+.endif
 .endif
 
 .endif

@@ -2,11 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	duplicity
-PORTVERSION=	0.7.11
+PORTVERSION=	0.7.12
 CATEGORIES=	sysutils
 MASTER_SITES=	http://launchpad.net/duplicity/0.7-series/${PORTVERSION}/+download/
 
-MAINTAINER=	dbaio@bsd.com.br
+MAINTAINER=	dbaio@FreeBSD.org
 COMMENT=	Backup tool that uses librsync and GnuPG
 
 LICENSE=	GPLv2+

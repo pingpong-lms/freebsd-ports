@@ -3,6 +3,7 @@
 
 PORTNAME=	photivo
 PORTVERSION=	0.0.2015.03.21
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/${PORTNAME}/
 DISTNAME=	source-archive
@@ -13,6 +14,8 @@ COMMENT=	Free and open source photo processor
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+BROKEN_aarch64=		fails to compile: error: constant expression evaluates to -2 which cannot be narrowed to type char
 
 LIB_DEPENDS=	liblcms2.so:graphics/lcms2 \
 		libexiv2.so:graphics/exiv2 \

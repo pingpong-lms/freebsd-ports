@@ -3,7 +3,7 @@
 
 PORTNAME=	rump
 PORTVERSION=	20131213
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/misc/stacktic/
 DISTNAME=	buildrump-${PORTVERSION}
@@ -13,9 +13,7 @@ COMMENT=	Virtualized NetBSD kernel components in userspace
 
 LICENSE=	BSD2CLAUSE
 
-BROKEN_powerpc64=	Does not build
-
-NOT_FOR_ARCHS=	armv6 mips mips64 sparc64
+NOT_FOR_ARCHS=	aarch64 armv6 mips mips64 powerpc powerpc64 sparc64
 NOT_FOR_ARCHS_REASON=	not yet ported to FreeBSD on this architecture
 
 USE_LDCONFIG=	yes

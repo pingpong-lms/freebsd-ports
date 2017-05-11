@@ -3,7 +3,7 @@
 
 PORTNAME=	openh323
 PORTVERSION=	1.19.0.1
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	net
 MASTER_SITES=	SF
 DISTNAME=	${PORTNAME}-v${PORTVERSION:S/./_/g}-src
@@ -13,9 +13,9 @@ DIST_SUBDIR=	openh323
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	H323 Video Conferencing library
 
-BROKEN_powerpc64=	Does not build
-
 LIB_DEPENDS=	libpt_r.so:devel/pwlib
+
+BROKEN_powerpc64=	Does not build: call to H261Encoder::~H261Encoder() lacks nop, can't restore toc
 
 CONFLICTS=	h323plus-1.*
 

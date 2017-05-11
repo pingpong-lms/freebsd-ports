@@ -3,7 +3,7 @@
 
 PORTNAME=	classpath
 PORTVERSION=	0.99
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	java devel
 MASTER_SITES=	GNU \
 		SAVANNAH
@@ -14,6 +14,9 @@ MAINTAINER=	java@FreeBSD.org
 COMMENT=	GNU project to create a free Java class library
 
 LICENSE=	GPLv2
+
+BROKEN_aarch64=		fails to configure: error: The jar tool /usr/local/bin/gjar5 was not found
+BROKEN_armv6=		fails to configure: error: The jar tool /usr/local/bin/gjar5 was not found
 
 GNU_CONFIGURE=	yes
 USES=		gmake iconv libtool perl5 pkgconfig

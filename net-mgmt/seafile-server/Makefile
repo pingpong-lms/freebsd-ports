@@ -1,10 +1,9 @@
 # $FreeBSD$
 
 PORTNAME=	seafile-server
-PORTVERSION=	6.0.8
+PORTVERSION=	${SEAFILE_VER}
 DISTVERSIONPREFIX=	v
 DISTVERSIONSUFFIX=	-server
-PORTREVISION=	1
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	ultima1252@gmail.com
@@ -47,26 +46,9 @@ INSTALL_TARGET=	install-strip
 CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/evhtp
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-HAIWENDIR=	www/haiwen
-SEAFILE_SERVER=	${HAIWENDIR}/seafile-server
-SEABIN=		${SEAFILE_SERVER}/seafile/bin
-SEALIB=		${SEAFILE_SERVER}/seafile/lib
-
-USERS=		seafile
-GROUPS=		${USERS}
-
 USE_RC_SUBR=	seafile
-PLIST_SUB=	USERS=${USERS} \
-		GROUPS=${GROUPS} \
-		SEAFILE_SERVER=${SEAFILE_SERVER} \
-		HAIWENDIR=${HAIWENDIR}
 
 SUB_FILES=	pkg-message
-
-SUB_LIST+=	USERS=${USERS} \
-		GROUPS=${GROUPS} \
-		SEAFILE_SERVER=${SEAFILE_SERVER} \
-		HAIWENDIR=${HAIWENDIR}
 
 MAKE_JOBS_UNSAFE=	yes
 
@@ -85,7 +67,7 @@ OPTIONS_EXCLUDE_DragonFly=	FUSE
 
 post-patch:
 # Fix P_KTHREAD r295435
-.if ${OSVERSION} >= 1100097
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1100097
 	${REINPLACE_CMD} 's/P_KTHREAD/P_KPROC/' ${WRKSRC}/lib/utils.c
 .endif
 	${REINPLACE_CMD} 's/python/${PYTHON_VERSION}/' \
@@ -123,5 +105,12 @@ post-install:
 		${STAGEDIR}${PREFIX}/${SEAFILE_SERVER}/seafile/share/doc/seafile/
 	(cd ${WRKSRC}/scripts/upgrade && \
 		${COPYTREE_SHARE} sql ${STAGEDIR}${PREFIX}/${SEAFILE_SERVER}/upgrade)
+
+makesum-all:
+.for PORT in net-mgmt/ccnet-server net-mgmt/seafile-server www/py-seafdav www/py-seafobj www/seahub
+	${MAKE} -C "${PORTSDIR}/${PORT}" makesum
+.endfor
+
+.include "${.CURDIR}/Makefile.include"
 
 .include <bsd.port.mk>

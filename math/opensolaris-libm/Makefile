@@ -3,11 +3,11 @@
 
 PORTNAME=	opensolaris-libm
 PORTVERSION=	2006.01.31
-PORTREVISION=	1
+PORTREVISION=	2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	math
 
-MAINTAINER=	freebsd.contact@marino.st
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C99 Math and vector libraries from OpenSolaris snv_33
 
 LICENSE=	CDDL

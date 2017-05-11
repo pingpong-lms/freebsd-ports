@@ -37,8 +37,6 @@
     SUBDIR += clang33
     SUBDIR += clang34
     SUBDIR += clang35
-    SUBDIR += clang36
-    SUBDIR += clang37
     SUBDIR += clang38
     SUBDIR += cling
     SUBDIR += clojure
@@ -106,6 +104,7 @@
     SUBDIR += gcc6-aux
     SUBDIR += gcc6-devel
     SUBDIR += gcc7-devel
+    SUBDIR += gcc8-devel
     SUBDIR += gcl
     SUBDIR += gforth
     SUBDIR += ghc
@@ -203,7 +202,6 @@
     SUBDIR += ocaml
     SUBDIR += ocaml-autoconf
     SUBDIR += ocaml-nox11
-    SUBDIR += ofc
     SUBDIR += ohugs
     SUBDIR += onyx
     SUBDIR += oo2c
@@ -220,6 +218,7 @@
     SUBDIR += p5-JavaScript-Squish
     SUBDIR += p5-JavaScript-Value-Escape
     SUBDIR += p5-List-MoreUtils
+    SUBDIR += p5-List-MoreUtils-XS
     SUBDIR += p5-Marpa
     SUBDIR += p5-Marpa-PP
     SUBDIR += p5-Marpa-XS
@@ -302,7 +301,6 @@
     SUBDIR += rexx-wrapper
     SUBDIR += rhino
     SUBDIR += rubinius
-    SUBDIR += ruby21
     SUBDIR += ruby22
     SUBDIR += ruby23
     SUBDIR += ruby24

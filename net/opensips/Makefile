@@ -3,6 +3,7 @@
 
 PORTNAME=		opensips
 PORTVERSION=		2.2.3
+PORTREVISION=	1
 CATEGORIES=		net
 MASTER_SITES=		http://opensips.org/pub/opensips/${PORTVERSION}/
 
@@ -31,8 +32,6 @@ BUILD_DEPENDS=		ginstall:sysutils/coreutils \
 RUN_DEPENDS=		${LOCALBASE}/bin/bash:shells/bash \
 			${LOCALBASE}/bin/python2:lang/python2 \
 			${LOCALBASE}/bin/grep:textproc/gnugrep
-
-BROKEN_powerpc64=	Does not build
 
 GINSTALL=		ginstall
 

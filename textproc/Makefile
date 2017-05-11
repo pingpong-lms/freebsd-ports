@@ -8,6 +8,7 @@
     SUBDIR += R-cran-DT
     SUBDIR += R-cran-R2HTML
     SUBDIR += R-cran-XML
+    SUBDIR += R-cran-brew
     SUBDIR += R-cran-formatR
     SUBDIR += R-cran-highr
     SUBDIR += R-cran-htmltools
@@ -72,7 +73,6 @@
     SUBDIR += cdif
     SUBDIR += cdiff
     SUBDIR += cgrep
-    SUBDIR += chm2pdf
     SUBDIR += chpp
     SUBDIR += cl-meta
     SUBDIR += cl-meta-sbcl
@@ -139,7 +139,6 @@
     SUBDIR += dsssl-docbook-modular
     SUBDIR += dtd-catalogs
     SUBDIR += dtd2relax
-    SUBDIR += dtdinst
     SUBDIR += dtdparse
     SUBDIR += duncan
     SUBDIR += dwdiff
@@ -219,13 +218,13 @@
     SUBDIR += gnome-doc-utils
     SUBDIR += gnome-spell
     SUBDIR += gnugrep
-    SUBDIR += go-text
     SUBDIR += go.text
     SUBDIR += goldendict
     SUBDIR += google-ctemplate
     SUBDIR += google-translate-cli
     SUBDIR += gpp
     SUBDIR += grap
+    SUBDIR += greple
     SUBDIR += grc-aspell
     SUBDIR += groff
     SUBDIR += groonga
@@ -322,9 +321,7 @@
     SUBDIR += ibus
     SUBDIR += ibus-el
     SUBDIR += ibus-kmfl
-    SUBDIR += ibus-m17n
     SUBDIR += ibus-qt
-    SUBDIR += ibus-table
     SUBDIR += ibus-typing-booster
     SUBDIR += icdiff
     SUBDIR += id-aspell
@@ -372,8 +369,8 @@
     SUBDIR += kibana43
     SUBDIR += kibana44
     SUBDIR += kibana45
-    SUBDIR += kibana50
-    SUBDIR += kibana50-x-pack
+    SUBDIR += kibana5
+    SUBDIR += kibana5-x-pack
     SUBDIR += kiss-templates
     SUBDIR += kmfl-european-latin
     SUBDIR += kmfl-khmer
@@ -420,7 +417,6 @@
     SUBDIR += libodfgen01
     SUBDIR += libparsifal
     SUBDIR += librevenge
-    SUBDIR += libroxml
     SUBDIR += libsass
     SUBDIR += libsoldout
     SUBDIR += libsphinxclient
@@ -1122,7 +1118,6 @@
     SUBDIR += p5-XML-XPath
     SUBDIR += p5-XML-XPathEngine
     SUBDIR += p5-XML-XQL
-    SUBDIR += p5-XML-XSH
     SUBDIR += p5-XML-XSLT
     SUBDIR += p5-XML-XUpdate-LibXML
     SUBDIR += p5-YAML
@@ -1245,6 +1240,7 @@
     SUBDIR += py-agate-excel
     SUBDIR += py-alabaster
     SUBDIR += py-asv
+    SUBDIR += py-autopep8
     SUBDIR += py-awesome-slugify
     SUBDIR += py-bugzillatools
     SUBDIR += py-chardet
@@ -1272,6 +1268,7 @@
     SUBDIR += py-guess-language
     SUBDIR += py-hexdump
     SUBDIR += py-html2text
+    SUBDIR += py-humanfriendly
     SUBDIR += py-hunspell
     SUBDIR += py-hyperestraier-python
     SUBDIR += py-hypua2jamo
@@ -1362,7 +1359,6 @@
     SUBDIR += py-xlutils
     SUBDIR += py-xlwriter
     SUBDIR += py-xlwt
-    SUBDIR += py-xmltv
     SUBDIR += py-zope.app.i18n
     SUBDIR += py-zope.app.locales
     SUBDIR += py-zope.i18nmessageid
@@ -1374,9 +1370,11 @@
     SUBDIR += py3-alabaster
     SUBDIR += py3-asciinema
     SUBDIR += py3-chardet
+    SUBDIR += py3-docutils
     SUBDIR += py3-hunspell
     SUBDIR += py3-libxml2
     SUBDIR += py3-pager
+    SUBDIR += py3-pygments
     SUBDIR += py3-pystemmer
     SUBDIR += py3-snowballstemmer
     SUBDIR += py3-sphinx_rtd_theme
@@ -1517,6 +1515,7 @@
     SUBDIR += rubygem-phone
     SUBDIR += rubygem-pretty-xml
     SUBDIR += rubygem-rails-dom-testing
+    SUBDIR += rubygem-rails-dom-testing-rails5
     SUBDIR += rubygem-rails-dom-testing1
     SUBDIR += rubygem-rails-html-sanitizer
     SUBDIR += rubygem-rak
@@ -1540,6 +1539,7 @@
     SUBDIR += rubygem-rugments
     SUBDIR += rubygem-sanitize
     SUBDIR += rubygem-sass
+    SUBDIR += rubygem-sass-rails-rails5
     SUBDIR += rubygem-sass-rails5
     SUBDIR += rubygem-sass32
     SUBDIR += rubygem-sax-machine
@@ -1559,6 +1559,7 @@
     SUBDIR += rubygem-unf
     SUBDIR += rubygem-unf_ext
     SUBDIR += rubygem-version_sorter
+    SUBDIR += rubygem-whatlanguage
     SUBDIR += rubygem-wikicloth
     SUBDIR += rubygem-xml-simple
     SUBDIR += rubygem-ya2yaml
@@ -1592,6 +1593,7 @@
     SUBDIR += scss
     SUBDIR += sdcv
     SUBDIR += sdf
+    SUBDIR += sdif
     SUBDIR += sdocbook-xml
     SUBDIR += sdom
     SUBDIR += senna
@@ -1687,6 +1689,7 @@
     SUBDIR += uim-m17nlib
     SUBDIR += uim-qt4
     SUBDIR += uml2svg
+    SUBDIR += uncle
     SUBDIR += uncrustify
     SUBDIR += uni2ascii
     SUBDIR += unoconv

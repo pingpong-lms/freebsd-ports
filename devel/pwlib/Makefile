@@ -3,7 +3,7 @@
 
 PORTNAME=	pwlib
 PORTVERSION=	1.12.0
-PORTREVISION=	11
+PORTREVISION=	12
 PORTEPOCH=	1
 CATEGORIES=	devel
 MASTER_SITES=	SF/openh323/${PORTNAME}/${PORTVERSION}
@@ -14,6 +14,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Cross platform C++ library, used by OpenH323
 
 LIB_DEPENDS=	libexpat.so:textproc/expat2
+
+BROKEN_aarch64=		fails to compile: fatal error: trclib.h: No such file or directory
+BROKEN_mips64=		fails to compile: fatal error: trclib.h: No such file or directory
 
 CONFLICTS=	ptlib-2.*
 
@@ -93,11 +96,11 @@ PLIST_SUB+=	DC1394="@comment "
 
 .include <bsd.port.pre.mk>
 
-.if (${ARCH} == "amd64") || (${ARCH} == "ia64") || (${ARCH} == "powerpc") || (${ARCH} == "sparc64")
+.if (${ARCH} == "amd64") || (${ARCH} == "powerpc") || (${ARCH} == "sparc64")
 CFLAGS+=	-fPIC
 .endif
 
-.if (${ARCH} == "amd64") || (${ARCH} == "i386") || (${ARCH} == "ia64") || (${ARCH} == "powerpc") || (${ARCH} == "sparc64")
+.if (${ARCH} == "amd64") || (${ARCH} == "i386") || (${ARCH} == "powerpc") || (${ARCH} == "sparc64")
 PLIST_SUB+=	BSDVIDEO=""
 .else
 PLIST_SUB+=	BSDVIDEO="@comment "

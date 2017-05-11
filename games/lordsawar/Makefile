@@ -2,6 +2,7 @@
 
 PORTNAME=	lordsawar
 PORTVERSION=	0.3.1
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	SAVANNAH
 
@@ -10,6 +11,8 @@ COMMENT=	Warlords II clone
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+BROKEN=		Doesn't build after cairomm was updated to 1.12.
 
 USES=		compiler:c++11-lib gettext gmake libarchive pkgconfig shebangfix
 USE_GNOME=	gtkmm30 intltool libxslt

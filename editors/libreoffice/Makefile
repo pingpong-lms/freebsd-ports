@@ -2,7 +2,6 @@
 
 .include "${.CURDIR}/Makefile.common"
 
-PORTREVISION=	0
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${PORTVERSION}/ \
 		http://dev-www.libreoffice.org/src/:src \
 		http://dev-www.libreoffice.org/extern/:ext
@@ -50,6 +49,7 @@ LIB_DEPENDS=	libapr-1.so:devel/apr1 \
 		liblpsolve55.so:math/lp_solve \
 		libcmis-0.5.so:net/libcmis \
 		libharfbuzz.so:print/harfbuzz \
+		libharfbuzz-icu.so:print/harfbuzz-icu \
 		libmspub-0.1.so:print/libmspub01 \
 		libpagemaker-0.0.so:print/libpagemaker \
 		libnss3.so:security/nss \
@@ -103,7 +103,7 @@ WANT_GNOME=	yes
 
 OPTIONS_DEFINE=	CUPS GNOME GTK2 GTK3 JAVA KDE4 MMEDIA PGSQL SDK SYSTRAY \
 		TEST VERBOSE WEBDAV
-OPTIONS_DEFAULT=	CUPS GTK2
+OPTIONS_DEFAULT=	CUPS GTK2 MMEDIA
 
 GTK3_DESC=	GTK+ 3 GUI toolkit support (experimental)
 JAVA_DESC=	Add Java support (XML filters, macros)

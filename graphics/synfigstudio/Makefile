@@ -3,6 +3,7 @@
 
 PORTNAME=	synfigstudio
 PORTVERSION=	1.0.2
+PORTREVISION=	1
 CATEGORIES=	graphics multimedia
 MASTER_SITES=	SF/synfig/releases/${PORTVERSION}/source
 
@@ -15,7 +16,9 @@ BUILD_DEPENDS=	etl>=0.04.19_1:devel/etl
 LIB_DEPENDS=	libsynfig.so:devel/synfig
 RUN_DEPENDS=	xdg-open:devel/xdg-utils
 
-USES=		desktop-file-utils gmake libtool pathfix pkgconfig shared-mime-info
+USES=		compiler:c++11-lang desktop-file-utils gmake libtool pathfix \
+		pkgconfig shared-mime-info
+USE_CXXSTD=	c++11
 USE_GNOME=	gtkmm30 intltool
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-update-mimedb
