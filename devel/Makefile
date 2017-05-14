@@ -3116,6 +3116,7 @@
     SUBDIR += p5-Readonly-XS
     SUBDIR += p5-ReadonlyX
     SUBDIR += p5-Ref-Util
+    SUBDIR += p5-Ref-Util-XS
     SUBDIR += p5-Reflex
     SUBDIR += p5-Regexp-Assemble
     SUBDIR += p5-Regexp-Assemble-Compressed
@@ -4121,6 +4122,7 @@
     SUBDIR += py-appdirs
     SUBDIR += py-application
     SUBDIR += py-apptools
+    SUBDIR += py-argparse
     SUBDIR += py-apscheduler
     SUBDIR += py-archetypes.querywidget
     SUBDIR += py-archetypes.referencebrowserwidget
@@ -5196,6 +5198,7 @@
     SUBDIR += rubygem-cliprompt
     SUBDIR += rubygem-cloudfiles
     SUBDIR += rubygem-cocaine
+    SUBDIR += rubygem-cocaine-rails5
     SUBDIR += rubygem-coercible
     SUBDIR += rubygem-coffee-rails-rails5
     SUBDIR += rubygem-coffee-rails4
@@ -5638,6 +5641,7 @@
     SUBDIR += rubygem-web-console
     SUBDIR += rubygem-web-console2
     SUBDIR += rubygem-webby
+    SUBDIR += rubygem-webpacker-rails5
     SUBDIR += rubygem-will_paginate
     SUBDIR += rubygem-windows_error
     SUBDIR += rubygem-wmi-lite
