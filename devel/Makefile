@@ -46,6 +46,7 @@
     SUBDIR += R-cran-reshape
     SUBDIR += R-cran-reshape2
     SUBDIR += R-cran-rgexf
+    SUBDIR += R-cran-rlang
     SUBDIR += R-cran-rngtools
     SUBDIR += R-cran-rprojroot
     SUBDIR += R-cran-rstudioapi
@@ -163,6 +164,7 @@
     SUBDIR += avro-cpp
     SUBDIR += awless
     SUBDIR += aws-sdk-cpp
+    SUBDIR += aws-sdk-php
     SUBDIR += awscli
     SUBDIR += b2
     SUBDIR += babeltrace
@@ -557,6 +559,7 @@
     SUBDIR += erlang-sbroker
     SUBDIR += erlang-ssl_verify_fun
     SUBDIR += erlang-syslog
+    SUBDIR += erlang-unicode_util_compat
     SUBDIR += es-eric6
     SUBDIR += etcd
     SUBDIR += etcd3
@@ -578,6 +581,8 @@
     SUBDIR += fifechan
     SUBDIR += firmware-utils
     SUBDIR += fistgen
+    SUBDIR += flang
+    SUBDIR += flang-clang
     SUBDIR += flatbuffers
     SUBDIR += flatzebra
     SUBDIR += flex-sdk
@@ -1679,6 +1684,11 @@
     SUBDIR += node-thrift
     SUBDIR += notify-sharp
     SUBDIR += noweb
+    SUBDIR += npm-amdefine
+    SUBDIR += npm-clean-css
+    SUBDIR += npm-commander
+    SUBDIR += npm-graceful-readlink
+    SUBDIR += npm-source-map
     SUBDIR += npth
     SUBDIR += nsgenbind
     SUBDIR += nspr
@@ -4077,6 +4087,8 @@
     SUBDIR += py-Products.contentmigration
     SUBDIR += py-Products.statusmessages
     SUBDIR += py-Products.validation
+    SUBDIR += py-PyDispatcher
+    SUBDIR += py-PyExecJS
     SUBDIR += py-PyLD
     SUBDIR += py-RPyC
     SUBDIR += py-Record
@@ -4317,6 +4329,7 @@
     SUBDIR += py-gevent
     SUBDIR += py-git-up
     SUBDIR += py-gitdb
+    SUBDIR += py-gitdb2
     SUBDIR += py-gitless
     SUBDIR += py-gitosis
     SUBDIR += py-gitpython
@@ -4691,6 +4704,7 @@
     SUBDIR += py-ruamel.yaml
     SUBDIR += py-rubymarshal
     SUBDIR += py-ruledispatch
+    SUBDIR += py-rwt
     SUBDIR += py-sanetime
     SUBDIR += py-sarge
     SUBDIR += py-scripttest
@@ -4717,6 +4731,7 @@
     SUBDIR += py-sip
     SUBDIR += py-six
     SUBDIR += py-smmap
+    SUBDIR += py-smmap2
     SUBDIR += py-sortedcontainers
     SUBDIR += py-sourcemap
     SUBDIR += py-spark
@@ -4926,6 +4941,7 @@
     SUBDIR += py3-babel
     SUBDIR += py3-click
     SUBDIR += py3-click-log
+    SUBDIR += py3-click-threading
     SUBDIR += py3-colorama
     SUBDIR += py3-dbus
     SUBDIR += py3-defusedxml
@@ -4965,6 +4981,7 @@
     SUBDIR += py3-six
     SUBDIR += py3-tabulate
     SUBDIR += py3-threema-msgapi
+    SUBDIR += py3-urwid
     SUBDIR += py3-vcversioner
     SUBDIR += py3-wcwidth
     SUBDIR += py3-xdg
@@ -5193,14 +5210,13 @@
     SUBDIR += rubygem-classifier
     SUBDIR += rubygem-classifier-reborn
     SUBDIR += rubygem-climate_control
-    SUBDIR += rubygem-climate_control-rails5
     SUBDIR += rubygem-clio
     SUBDIR += rubygem-cliprompt
     SUBDIR += rubygem-cloudfiles
     SUBDIR += rubygem-cocaine
-    SUBDIR += rubygem-cocaine-rails5
     SUBDIR += rubygem-coercible
     SUBDIR += rubygem-coffee-rails-rails5
+    SUBDIR += rubygem-coffee-rails-rails50
     SUBDIR += rubygem-coffee-rails4
     SUBDIR += rubygem-coffee-rails41
     SUBDIR += rubygem-coffee-script
@@ -5241,6 +5257,7 @@
     SUBDIR += rubygem-descendants_tracker
     SUBDIR += rubygem-devise
     SUBDIR += rubygem-devise-rails5
+    SUBDIR += rubygem-devise-rails50
     SUBDIR += rubygem-directory_watcher
     SUBDIR += rubygem-ditz
     SUBDIR += rubygem-docile
@@ -5293,13 +5310,15 @@
     SUBDIR += rubygem-gemnasium-gitlab-service
     SUBDIR += rubygem-gemnasium-parser
     SUBDIR += rubygem-gems
-    SUBDIR += rubygem-generator_spec
     SUBDIR += rubygem-generator_spec-rails4
+    SUBDIR += rubygem-generator_spec-rails5
     SUBDIR += rubygem-georuby
     SUBDIR += rubygem-get_process_mem
     SUBDIR += rubygem-getopt
     SUBDIR += rubygem-gettext
     SUBDIR += rubygem-gettext-setup
+    SUBDIR += rubygem-gettext_i18n_rails
+    SUBDIR += rubygem-gettext_i18n_rails_js
     SUBDIR += rubygem-gh
     SUBDIR += rubygem-gibbler
     SUBDIR += rubygem-gio2
@@ -5348,6 +5367,7 @@
     SUBDIR += rubygem-jasmine-core
     SUBDIR += rubygem-jbuilder
     SUBDIR += rubygem-jbuilder-rails5
+    SUBDIR += rubygem-jbuilder-rails50
     SUBDIR += rubygem-jekyll-coffeescript
     SUBDIR += rubygem-jeweler
     SUBDIR += rubygem-jira-ruby
@@ -5432,6 +5452,7 @@
     SUBDIR += rubygem-numerizer
     SUBDIR += rubygem-octopress-hooks
     SUBDIR += rubygem-oj
+    SUBDIR += rubygem-oj2
     SUBDIR += rubygem-omniauth_crowd
     SUBDIR += rubygem-open3_backport
     SUBDIR += rubygem-open4
@@ -5441,6 +5462,7 @@
     SUBDIR += rubygem-paint
     SUBDIR += rubygem-paperclip
     SUBDIR += rubygem-paperclip-rails5
+    SUBDIR += rubygem-paperclip-rails50
     SUBDIR += rubygem-parser
     SUBDIR += rubygem-patch_finder
     SUBDIR += rubygem-pathutil
@@ -5468,12 +5490,15 @@
     SUBDIR += rubygem-pygments.rb
     SUBDIR += rubygem-r18n-core
     SUBDIR += rubygem-rabl
+    SUBDIR += rubygem-rabl-rails50
     SUBDIR += rubygem-racc
     SUBDIR += rubygem-rack-mini-profiler
     SUBDIR += rubygem-rack-raw-upload
     SUBDIR += rubygem-rails-deprecated_sanitizer
     SUBDIR += rubygem-rails-deprecated_sanitizer-rails5
+    SUBDIR += rubygem-rails-deprecated_sanitizer-rails50
     SUBDIR += rubygem-rails-i18n
+    SUBDIR += rubygem-rails-i18n-rails50
     SUBDIR += rubygem-rails-observers
     SUBDIR += rubygem-rainbow
     SUBDIR += rubygem-rake
@@ -5494,6 +5519,7 @@
     SUBDIR += rubygem-recursive-open-struct
     SUBDIR += rubygem-redis-activesupport
     SUBDIR += rubygem-redis-activesupport-rails5
+    SUBDIR += rubygem-redis-activesupport-rails50
     SUBDIR += rubygem-redis-store
     SUBDIR += rubygem-redmine_plugin_support
     SUBDIR += rubygem-ref
@@ -5543,6 +5569,7 @@
     SUBDIR += rubygem-schash
     SUBDIR += rubygem-sdoc
     SUBDIR += rubygem-semantic_puppet
+    SUBDIR += rubygem-semantic_puppet0
     SUBDIR += rubygem-semi_semantic
     SUBDIR += rubygem-sentry-raven
     SUBDIR += rubygem-sequel
@@ -5558,11 +5585,14 @@
     SUBDIR += rubygem-sidekiq-limit_fetch
     SUBDIR += rubygem-sidekiq-scheduler
     SUBDIR += rubygem-sidekiq-unique-jobs
+    SUBDIR += rubygem-sidekiq4
     SUBDIR += rubygem-sidetiq
     SUBDIR += rubygem-sigdump
     SUBDIR += rubygem-simple-navigation
+    SUBDIR += rubygem-simple-navigation-rails50
     SUBDIR += rubygem-simple_form
     SUBDIR += rubygem-simple_form-rails5
+    SUBDIR += rubygem-simple_form-rails50
     SUBDIR += rubygem-simplecov
     SUBDIR += rubygem-slack-notifier
     SUBDIR += rubygem-slack-notifier1
@@ -5572,11 +5602,13 @@
     SUBDIR += rubygem-soap4r
     SUBDIR += rubygem-spring
     SUBDIR += rubygem-spring-rails5
+    SUBDIR += rubygem-spring-rails50
     SUBDIR += rubygem-sprockets
     SUBDIR += rubygem-sprockets-es6
     SUBDIR += rubygem-sprockets-helpers
     SUBDIR += rubygem-sprockets-rails
     SUBDIR += rubygem-sprockets-rails-rails5
+    SUBDIR += rubygem-sprockets-rails-rails50
     SUBDIR += rubygem-sprockets-sass
     SUBDIR += rubygem-sprockets3
     SUBDIR += rubygem-spruz
@@ -5639,9 +5671,11 @@
     SUBDIR += rubygem-warden
     SUBDIR += rubygem-wdm
     SUBDIR += rubygem-web-console
+    SUBDIR += rubygem-web-console-rails50
     SUBDIR += rubygem-web-console2
     SUBDIR += rubygem-webby
     SUBDIR += rubygem-webpacker-rails5
+    SUBDIR += rubygem-webpacker-rails50
     SUBDIR += rubygem-will_paginate
     SUBDIR += rubygem-windows_error
     SUBDIR += rubygem-wmi-lite

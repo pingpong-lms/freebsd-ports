@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	osquery
-PORTVERSION=	2.4.3
-PORTREVISION=	1
+PORTVERSION=	2.4.5
 CATEGORIES=	sysutils
 
 MAINTAINER=	zi@FreeBSD.org
@@ -22,12 +21,16 @@ LIB_DEPENDS=	libaugeas.so:textproc/augeas \
 		libgflags.so:devel/gflags \
 		libglog.so:devel/glog \
 		libicuuc.so:devel/icu \
+		liblz4.so:archivers/liblz4 \
+		libsnappy.so:archivers/snappy \
 		librocksdb-lite.so:databases/rocksdb-lite \
 		libthrift.so:devel/thrift-cpp \
 		libcppnetlib-uri.so:devel/cpp-netlib
 RUN_DEPENDS=	ca_root_nss>0:security/ca_root_nss
 
-USES=		cmake:outsource gmake libtool python:build compiler:c++11-lib
+USES=		cmake:outsource gmake libtool python:build compiler:c++11-lib \
+	libarchive ssl
+USE_GNOME=	libxml2
 CONFIGURE_ENV+=	OSQUERY_BUILD_VERSION="${PORTVERSION}" HOME="${WRKDIR}" \
 		SKIP_TESTS="yes" CC="${CC}" CXX="${CXX}"
 CMAKE_ARGS+=	-DFREEBSD=awesome -DCMAKE_SYSTEM_NAME="FreeBSD"
@@ -37,7 +40,6 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	facebook ${PORTNAME}:tp
 GH_PROJECT=	third-party:tp
 GH_SUBDIR=	third-party:tp
-MAKE_JOBS_UNSAFE=	yes
 
 # Some options for things that bring in many dependencies
 OPTIONS_DEFINE=	TSK AWS YARA LLDPD
@@ -69,10 +71,6 @@ CXX=	clang++38
 post-patch:
 	${REINPLACE_CMD} -e 's|/var/osquery/|/var/db/osquery/|g' \
 		${WRKSRC}/tools/deployment/osquery.example.conf
-	${REINPLACE_CMD} -e 's|/etc/osquery/yara/|/var/db/osquery/yara/|g' \
-		${WRKSRC}/osquery/tables/yara/yara.cpp \
-		${WRKSRC}/osquery/tables/yara/yara_utils.cpp \
-		${WRKSRC}/specs/yara/yara.table
 	${REINPLACE_CMD} -e 's|python|${PYTHON_CMD}|g' \
 		${WRKSRC}/CMakeLists.txt \
 		${WRKSRC}/tools/get_platform.py

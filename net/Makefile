@@ -73,6 +73,7 @@
     SUBDIR += citrix_ica
     SUBDIR += cjdns
     SUBDIR += cloud-init
+    SUBDIR += cloud-init-azure
     SUBDIR += clusterit
     SUBDIR += cnd
     SUBDIR += coda6_client
@@ -193,6 +194,8 @@
     SUBDIR += grdesktop
     SUBDIR += grilo
     SUBDIR += grilo-plugins
+    SUBDIR += grilo-plugins2
+    SUBDIR += grilo2
     SUBDIR += grive
     SUBDIR += grive2
     SUBDIR += grsync
@@ -396,6 +399,7 @@
     SUBDIR += mDNSResponder
     SUBDIR += macchanger
     SUBDIR += mad_fcl
+    SUBDIR += madonctl
     SUBDIR += malo-firmware-kmod
     SUBDIR += mdns-repeater
     SUBDIR += mediastreamer
@@ -967,7 +971,7 @@
     SUBDIR += py-avahi
     SUBDIR += py-beanstalkc
     SUBDIR += py-cjdns
-    SUBDIR += py-cloudfiles
+    SUBDIR += py-cloudflare-scrape
     SUBDIR += py-coherence
     SUBDIR += py-cymruwhois
     SUBDIR += py-dpkt
@@ -1025,6 +1029,7 @@
     SUBDIR += py-python-bitcoinrpc
     SUBDIR += py-python-ceilometerclient
     SUBDIR += py-python-cinderclient
+    SUBDIR += py-python-cloudfiles
     SUBDIR += py-python-designateclient
     SUBDIR += py-python-glanceclient
     SUBDIR += py-python-heatclient
@@ -1033,6 +1038,8 @@
     SUBDIR += py-python-novaclient
     SUBDIR += py-python-ntlm
     SUBDIR += py-python-openstackclient
+    SUBDIR += py-python-swiftclient
+    SUBDIR += py-python-twitter
     SUBDIR += py-pyvmomi
     SUBDIR += py-pyzmq
     SUBDIR += py-qt4-network
@@ -1059,7 +1066,6 @@
     SUBDIR += py-tofu
     SUBDIR += py-tweepy
     SUBDIR += py-twistedPair
-    SUBDIR += py-twitter
     SUBDIR += py-twitter-tools
     SUBDIR += py-txamqp
     SUBDIR += py-txrestapi
@@ -1089,6 +1095,7 @@
     SUBDIR += rabbitmq
     SUBDIR += rabbitmq-c
     SUBDIR += rabbitmq-c-devel
+    SUBDIR += radcli
     SUBDIR += raddump
     SUBDIR += radiator
     SUBDIR += radiusclient
