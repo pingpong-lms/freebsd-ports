@@ -121,6 +121,7 @@
     SUBDIR += clarence
     SUBDIR += clasp
     SUBDIR += clblas
+    SUBDIR += clblast
     SUBDIR += clfft
     SUBDIR += clipper
     SUBDIR += cln
@@ -316,6 +317,7 @@
     SUBDIR += octave-forge-base
     SUBDIR += octave-forge-bim
     SUBDIR += octave-forge-bioinfo
+    SUBDIR += octave-forge-bsltl
     SUBDIR += octave-forge-cgi
     SUBDIR += octave-forge-civil-engineering
     SUBDIR += octave-forge-communications
@@ -712,6 +714,7 @@
     SUBDIR += ump
     SUBDIR += units
     SUBDIR += unuran
+    SUBDIR += viennacl
     SUBDIR += vowpal_wabbit
     SUBDIR += vtk5
     SUBDIR += vtk5-data

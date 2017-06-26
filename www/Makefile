@@ -546,9 +546,10 @@
     SUBDIR += npapi-xine
     SUBDIR += npc
     SUBDIR += npm
+    SUBDIR += npm-less-plugin-clean-css
     SUBDIR += npm2
     SUBDIR += npm3
-    SUBDIR += npm-less-plugin-clean-css
+    SUBDIR += npm4
     SUBDIR += nspluginwrapper
     SUBDIR += nuvolaplayer-8tracks
     SUBDIR += nuvolaplayer-all-services
@@ -1503,6 +1504,7 @@
     SUBDIR += py-WebFlash
     SUBDIR += py-WebTest
     SUBDIR += py-aiohttp
+    SUBDIR += py-aiohttp-wsgi
     SUBDIR += py-albatross
     SUBDIR += py-amf
     SUBDIR += py-apachelog
@@ -1643,7 +1645,6 @@
     SUBDIR += py-flask-principal
     SUBDIR += py-flask-restful
     SUBDIR += py-flask-restplus
-    SUBDIR += py-flask-restplus08
     SUBDIR += py-flask-socketio
     SUBDIR += py-flask-sockets
     SUBDIR += py-flask-uploads
@@ -1674,6 +1675,7 @@
     SUBDIR += py-httplib2
     SUBDIR += py-hyper
     SUBDIR += py-hyperframe
+    SUBDIR += py-hyperlink
     SUBDIR += py-imdbpy
     SUBDIR += py-jonpy
     SUBDIR += py-jswebkit
@@ -1683,6 +1685,7 @@
     SUBDIR += py-meld
     SUBDIR += py-meld3
     SUBDIR += py-mt
+    SUBDIR += py-multidict
     SUBDIR += py-nevow
     SUBDIR += py-notebook
     SUBDIR += py-octoprint
@@ -1830,7 +1833,7 @@
     SUBDIR += py-urlgrabber
     SUBDIR += py-urlobject
     SUBDIR += py-user_agent
-    SUBDIR += py-utidy
+    SUBDIR += py-utidylib
     SUBDIR += py-w3lib
     SUBDIR += py-waitress
     SUBDIR += py-webassets
@@ -1846,6 +1849,7 @@
     SUBDIR += py-wsaccel
     SUBDIR += py-wsgiauth
     SUBDIR += py-wsgidav
+    SUBDIR += py-yarl
     SUBDIR += py-zope.app.wsgi
     SUBDIR += py3-cssutils
     SUBDIR += py3-requests
@@ -1857,8 +1861,8 @@
     SUBDIR += qdecoder
     SUBDIR += qooxdoo
     SUBDIR += qt4-webkit
-    SUBDIR += qt5-webkit
     SUBDIR += qt5-webchannel
+    SUBDIR += qt5-webkit
     SUBDIR += qt5-websockets
     SUBDIR += quickie
     SUBDIR += qupzilla-qt4
@@ -1939,6 +1943,7 @@
     SUBDIR += rubygem-deckar01-task_list1
     SUBDIR += rubygem-domainatrix
     SUBDIR += rubygem-dropzonejs-rails
+    SUBDIR += rubygem-dropzonejs-rails07
     SUBDIR += rubygem-em-http-request
     SUBDIR += rubygem-em-socksify
     SUBDIR += rubygem-em-twitter
@@ -2007,6 +2012,7 @@
     SUBDIR += rubygem-jquery-ui-rails5-rails4
     SUBDIR += rubygem-jruby-rack
     SUBDIR += rubygem-jsobfu
+    SUBDIR += rubygem-json-jwt
     SUBDIR += rubygem-jwt
     SUBDIR += rubygem-kaminari
     SUBDIR += rubygem-kaminari-actionview
@@ -2070,15 +2076,15 @@
     SUBDIR += rubygem-rack-timeout
     SUBDIR += rubygem-rack15
     SUBDIR += rubygem-rack16
+    SUBDIR += rubygem-rails-settings-cached
+    SUBDIR += rubygem-rails-settings-cached-rails5
+    SUBDIR += rubygem-rails-settings-cached-rails50
     SUBDIR += rubygem-rails4
     SUBDIR += rubygem-rails5
     SUBDIR += rubygem-rails50
     SUBDIR += rubygem-rails_12factor
     SUBDIR += rubygem-rails_autolink
     SUBDIR += rubygem-rails_serve_static_assets
-    SUBDIR += rubygem-rails-settings-cached
-    SUBDIR += rubygem-rails-settings-cached-rails5
-    SUBDIR += rubygem-rails-settings-cached-rails50
     SUBDIR += rubygem-rails_stdout_logging
     SUBDIR += rubygem-railties4
     SUBDIR += rubygem-railties5
@@ -2130,9 +2136,9 @@
     SUBDIR += rubygem-totoridipjp
     SUBDIR += rubygem-tumblr_client
     SUBDIR += rubygem-turbolinks
-    SUBDIR += rubygem-turbolinks-rails50
     SUBDIR += rubygem-turbolinks-classic
     SUBDIR += rubygem-turbolinks-rails5
+    SUBDIR += rubygem-turbolinks-rails50
     SUBDIR += rubygem-turbolinks-source
     SUBDIR += rubygem-typhoeus
     SUBDIR += rubygem-uglifier

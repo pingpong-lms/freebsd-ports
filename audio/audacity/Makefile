@@ -3,9 +3,8 @@
 
 PORTNAME=	audacity
 PORTVERSION=	2.1.3
+DISTVERSIONPREFIX=	Audacity-
 CATEGORIES=	audio
-MASTER_SITES=	https://github.com/audacity/audacity/archive/
-DISTNAME=	Audacity-${PORTVERSION}
 
 MAINTAINER=	xxjack12xx@gmail.com
 COMMENT=	GUI editor for digital audio waveforms
@@ -19,9 +18,8 @@ BUILD_DEPENDS=	autogen:devel/autogen \
 LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libsndfile.so:audio/libsndfile
 
-BROKEN_powerpc64=	Does not build
-
-WRKSRC=		${WRKDIR}/${PORTNAME}-Audacity-${PORTVERSION}
+BROKEN_aarch64=		fails to configure: checking whether C++ compiler accepts -msse... no
+BROKEN_powerpc64=	fails to build
 
 GNU_CONFIGURE=	yes
 USES=		autoreconf compiler:gcc-c++11-lib cpe desktop-file-utils gettext-tools gmake iconv libtool pkgconfig shared-mime-info shebangfix dos2unix
@@ -36,6 +34,7 @@ INSTALLS_ICONS=	yes
 PORTDOCS=	README.txt
 DOS2UNIX_GLOB=	Makefile.* *.c* *.h
 SHEBANG_FILES=	lib-src/lv2/build
+USE_GITHUB=	yes
 
 OPTIONS_DEFINE=	NLS DEBUG DOCS ALSA DYNLOAD FFMPEG FLAC ID3TAG LADSPA LAME LV2 \
 		MAD SBSMS SOUNDTOUCH TWOLAME VAMP VORBIS VST

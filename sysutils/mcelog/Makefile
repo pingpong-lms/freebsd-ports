@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	mcelog
-PORTVERSION=	151
+PORTVERSION=	153
 DISTVERSIONPREFIX=	v
 CATEGORIES=	sysutils
 
@@ -16,7 +16,7 @@ TEST_DEPENDS=	bash:shells/bash
 USE_GITHUB=	yes
 GH_ACCOUNT=	andikleen
 
-ONLY_FOR_ARCHS=	amd64 i386 ia64
+ONLY_FOR_ARCHS=		amd64 i386
 
 USES=		alias gmake shebangfix
 

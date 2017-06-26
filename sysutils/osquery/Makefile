@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	osquery
-PORTVERSION=	2.4.5
+PORTVERSION=	2.5.1
 CATEGORIES=	sysutils
 
 MAINTAINER=	zi@FreeBSD.org
@@ -25,11 +25,12 @@ LIB_DEPENDS=	libaugeas.so:textproc/augeas \
 		libsnappy.so:archivers/snappy \
 		librocksdb-lite.so:databases/rocksdb-lite \
 		libthrift.so:devel/thrift-cpp \
-		libcppnetlib-uri.so:devel/cpp-netlib
+		libcppnetlib-uri.so:devel/cpp-netlib \
+		libzstd.so:archivers/zstd
 RUN_DEPENDS=	ca_root_nss>0:security/ca_root_nss
 
-USES=		cmake:outsource gmake libtool python:build compiler:c++11-lib \
-	libarchive ssl
+USES=		cmake:outsource libtool python:build compiler:c++11-lib \
+		libarchive ssl
 USE_GNOME=	libxml2
 CONFIGURE_ENV+=	OSQUERY_BUILD_VERSION="${PORTVERSION}" HOME="${WRKDIR}" \
 		SKIP_TESTS="yes" CC="${CC}" CXX="${CXX}"
@@ -40,25 +41,26 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	facebook ${PORTNAME}:tp
 GH_PROJECT=	third-party:tp
 GH_SUBDIR=	third-party:tp
+GH_TAGNAME=	${PORTVERSION}:tp
 
 # Some options for things that bring in many dependencies
 OPTIONS_DEFINE=	TSK AWS YARA LLDPD
 
-TSK_DESC=	Build with sleuthkit support
+TSK_DESC=		Build with sleuthkit support
 TSK_LIB_DEPENDS=	libtsk.so:sysutils/sleuthkit
-TSK_CONFIGURE_ENV_OFF=		SKIP_TSK=1
+TSK_CONFIGURE_ENV_OFF=	SKIP_TSK=1
 
-AWS_DESC=	Support logging to AWS Kinesis
+AWS_DESC=		Support logging to AWS Kinesis
 AWS_LIB_DEPENDS=	libaws-cpp-sdk-core.so:devel/aws-sdk-cpp
-AWS_CONFIGURE_ENV_OFF=		SKIP_AWS=1
+AWS_CONFIGURE_ENV_OFF=	SKIP_AWS=1
 
-YARA_DESC=	Build with YARA malware identification support
+YARA_DESC=		Build with YARA malware identification support
 YARA_LIB_DEPENDS=	libyara.so:security/yara
 YARA_CONFIGURE_ENV_OFF=	SKIP_YARA=1
 
-LLDPD_DESC=	Support Link Layer Discovery Protocol
+LLDPD_DESC=		Support Link Layer Discovery Protocol
 LLDPD_LIB_DEPENDS=	liblldpctl.so:net-mgmt/lldpd
-LLDPD_CONFIGURE_ENV_OFF=	SKIP_LLDPD=1
+LLDPD_CONFIGURE_ENV_OFF=SKIP_LLDPD=1
 
 .include <bsd.port.pre.mk>
 
@@ -83,8 +85,10 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/tools/deployment/osquery.example.conf \
 		${STAGEDIR}${PREFIX}/etc/osquery.conf.sample
 
-	${TOUCH} ${STAGEDIR}${PREFIX}/etc/osquery.flags
-	${MKDIR} ${STAGEDIR}/var/db/osquery
-	${MKDIR} ${STAGEDIR}/var/log/osquery
+	${MKDIR} ${STAGEDIR}/var/db/osquery ${STAGEDIR}/var/log/osquery
+	# The flags file must exist, even if empty. Using @sample
+	# prevents a populated flags file from being nuked on upgrade.
+	${TOUCH} ${STAGEDIR}${PREFIX}/etc/osquery.flags.sample \
+		${STAGEDIR}${PREFIX}/etc/osquery.flags
 
 .include <bsd.port.post.mk>
