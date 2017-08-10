@@ -2,8 +2,8 @@
 
 PORTNAME=	rpcs3
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.2-353
-DISTVERSIONSUFFIX=	-g6561ddae
+DISTVERSION=	0.0.3-101
+DISTVERSIONSUFFIX=	-ge9b020be
 CATEGORIES=	emulators
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -24,7 +24,7 @@ ONLY_FOR_ARCHS_REASON=	requires int128 and SSSE3
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	RPCS3
-GH_TUPLE=	RPCS3:hidapi:hidapi-0.8.0-rc1-23-gc095a22:hidapi/3rdparty/hidapi \
+GH_TUPLE=	RPCS3:hidapi:hidapi-0.8.0-rc1-25-gca39ce8:hidapi/3rdparty/hidapi \
 		RPCS3:pugixml:f205aaf:pugixml/3rdparty/pugixml \
 		RPCS3:yaml-cpp:release-0.5.3-62-g017626a:yamlcpp/Utilities/yaml-cpp \
 		kobalicek:asmjit:1370fe6:asmjit/asmjit \
@@ -44,18 +44,25 @@ PLIST_FILES=	bin/${PORTNAME} \
 		share/icons/hicolor/48x48/apps/${PORTNAME}.png \
 		share/icons/hicolor/scalable/apps/${PORTNAME}.svg \
 
-OPTIONS_DEFINE=	GDB LLVM
-OPTIONS_DEFAULT=LLVM
+OPTIONS_DEFINE=	ALSA EVDEV GDB LLVM
+OPTIONS_DEFAULT=ALSA LLVM
+
+ALSA_LIB_DEPENDS=	libasound.so:audio/alsa-lib
+ALSA_RUN_DEPENDS=	${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:audio/alsa-plugins
+ALSA_CMAKE_BOOL=	USE_ALSA
+
+EVDEV_DESC=		libevdev-based joystick support
+EVDEV_CMAKE_BOOL=	USE_LIBEVDEV
+EVDEV_LIB_DEPENDS=	libevdev.so:devel/libevdev
 
 GDB_DESC=		GDB remote stub (powerpc64 target)
 GDB_CMAKE_BOOL=		WITH_GDB
 
 LLVM_DESC=		LLVM-based PPU recompiler
-LLVM_LIB_DEPENDS=	libLLVM-4.0.so:devel/llvm40
+LLVM_BUILD_DEPENDS=	llvm40>0:devel/llvm40
 LLVM_CMAKE_BOOL_OFF=	WITHOUT_LLVM
 
 post-patch:
-	@${REINPLACE_CMD} -e 's/5\.8/5\.7/' ${WRKSRC}/${PORTNAME}/CMakeLists.txt
 	@${REINPLACE_CMD} -e 's/"unknown"/"${GH_TAGNAME}"/' \
 		${WRKSRC}/${PORTNAME}/git-version.cmake
 

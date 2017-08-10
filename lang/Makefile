@@ -50,6 +50,7 @@
     SUBDIR += cython
     SUBDIR += cython3
     SUBDIR += diveintopython
+    SUBDIR += dlang-tools
     SUBDIR += dlv
     SUBDIR += dmd1
     SUBDIR += dmd2
@@ -224,7 +225,6 @@
     SUBDIR += p5-Marpa-PP
     SUBDIR += p5-Marpa-XS
     SUBDIR += p5-Modern-Perl
-    SUBDIR += p5-Parse-Perl
     SUBDIR += p5-Perl6-Subs
     SUBDIR += p5-Promises
     SUBDIR += p5-Pugs-Compiler-Rule

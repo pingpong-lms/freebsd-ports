@@ -15,7 +15,7 @@
 # was removed.
 #
 # $FreeBSD$
-# $MCom: portlint/portlint.pl,v 1.409 2017/06/04 22:22:22 jclarke Exp $
+# $MCom: portlint/portlint.pl,v 1.417 2017/08/03 12:52:43 jclarke Exp $
 #
 
 use strict;
@@ -50,7 +50,7 @@ $portdir = '.';
 # version variables
 my $major = 2;
 my $minor = 17;
-my $micro = 9;
+my $micro = 11;
 
 # default setting - for FreeBSD
 my $portsdir = '/usr/ports';
@@ -159,7 +159,7 @@ my @varlist =  qw(
 	OPTIONS_GROUP OPTIONS_SUB INSTALLS_OMF USE_RC_SUBR USES DIST_SUBDIR
 	ALLFILES CHECKSUM_ALGORITHMS INSTALLS_ICONS GNU_CONFIGURE
 	CONFIGURE_ARGS MASTER_SITE_SUBDIR LICENSE LICENSE_COMB NO_STAGE
-	DEVELOPER SUB_FILES
+	DEVELOPER SUB_FILES SHEBANG_LANG
 );
 
 my %makevar;
@@ -214,7 +214,26 @@ while (<IN>) {
 close(IN);
 
 open(MK, 'Makefile') || die "Makefile: $!";
-my @muses = grep($_ = /^USES[?+]?=\s*(.*)/ && $1, <MK>);
+my $ulineno = -1;
+my $uulineno = -1;
+my @muses = ();
+while (my $mline = <MK>) {
+	if ($uulineno == -1 && $mline =~ /^USE_/) {
+		$uulineno = $.;
+	}
+    if ($mline =~ /^USES[?+]?=\s*(.*)/) {
+		if ($ulineno == -1) {
+		    $ulineno = $.;
+		}
+	    if ($1) {
+		    push @muses, split(/\s+/, $1);
+		}
+    }
+}
+if ($uulineno > -1 && $ulineno > -1 && $uulineno < $ulineno) {
+	&perror("WARN", 'Makefile', $uulineno, "USE_* seen before USES.  ".
+		"According to the porters-handbook, USES must appear first.");
+}
 foreach my $muse (@muses) {
 	$makevar{USES} .= " " . $muse;
 }
@@ -397,10 +416,6 @@ sub checkdistinfo {
 			my $now = time;
 			if ($1 > $now) {
 				&perror("FATAL", $file, $., "TIMESTAMP is in the future");
-			} else {
-				if ($now - $1 > (30 * 60 * 60 * 24)) {
-					&perror("WARN", $file, $., "TIMESTAMP is over 30 days old");
-				}
 			}
 			next;
 		}
@@ -2160,7 +2175,7 @@ xargs xmkmf
 	#
 	# whole file: USE_GCC checks
 	#
-	if ($whole =~ /^USE_GCC[?:]?=\s*(.*)$/m) {
+	if ($whole =~ /^USE_GCC[?:]?=\s*([^\s#]*).*$/m) {
 		my $lineno = &linenumber($`);
 		my $gcc_val = $1;
 		if ($gcc_val eq 'any' || $gcc_val eq 'yes') {
@@ -2251,6 +2266,19 @@ xargs xmkmf
 		&perror("WARN", $file, -1, "--build, --mandir, and --infodir ".
 			"are not needed in CONFIGURE_ARGS as they are already set in ".
 			"bsd.port.mk.");
+	}
+
+	#
+	# whole file: check for redundant SHEBANG_LANGs
+	#
+	if ($whole =~ /\nSHEBANG_LANG[?+]?=\s*([^\s#]*).*\n/) {
+		my @shebang_langs = split(/\s+/, $1 // '');
+		foreach my $shebang_lang (@shebang_langs) {
+			if ($makevar{SHEBANG_LANG} =~ /\b$shebang_lang\b/) {
+				&perror("WARN", $file, -1, "$shebang_lang is already included in ".
+					"SHEBANG_LANG.  You should remove this from $file.");
+			}
+		}
 	}
 
 	#
@@ -2734,10 +2762,6 @@ DIST_SUBDIR EXTRACT_ONLY
 		foreach my $conflict (split ' ', $makevar{CONFLICTS}) {
 			`$pkg_version -T '$makevar{PKGNAME}' '$conflict'`;
 			my $selfconflict = !$?;
-			if ($conflict !~ /[<>=-][^-]*[0-9][^-]*$/) {
-				&perror("WARN", "", -1, "Conflict \"$conflict\" specified too broad. ".
-					"You should end it with a version number fragment (-[0-9]*).");
-			}
 			if ($selfconflict) {
 				&perror("FATAL", "", -1, "Package conflicts with itself. ".
 					"You should remove \"$conflict\" from CONFLICTS.");

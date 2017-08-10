@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	grpc
-PORTVERSION=	1.4.0
+PORTVERSION=	1.4.3
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 
@@ -18,9 +18,8 @@ LIB_DEPENDS=	libgflags.so:devel/gflags \
 		libcares.so:dns/c-ares
 
 USE_GITHUB=	yes
-GH_TUPLE=	grpc:grpc:v${PORTVERSION} \
-		boringssl:boringssl:ebcb5be:boringssl/third_party/boringssl \
-		google:benchmark:v1.1.0:benchmark/third_party/benchmark
+GH_TUPLE=	google:boringssl:ba2d3df:boringssl/third_party/boringssl \
+		google:benchmark:v1.2.0:benchmark/third_party/benchmark
 
 USES=		cmake perl5 pkgconfig
 USE_LDCONFIG=	yes

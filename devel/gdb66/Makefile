@@ -3,7 +3,7 @@
 
 PORTNAME=	gdb
 PORTVERSION=	6.6
-PORTREVISION?=	5
+PORTREVISION?=	6
 CATEGORIES=	devel
 MASTER_SITES=   GNU/gdb/ \
 		http://aldan.algebra.com/~mi/:gdbtk
@@ -13,6 +13,8 @@ MAINTAINER=	mi@aldan.algebra.com
 COMMENT?=	GNU GDB of newer version than comes with the system
 
 BROKEN=		unfetchable
+DEPRECATED=	Broken for more than 6 months
+EXPIRATION_DATE=	2017-08-23
 BROKEN_powerpc=		Does not configure
 BROKEN_powerpc64=	Does not build
 

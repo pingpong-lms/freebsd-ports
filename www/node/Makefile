@@ -1,13 +1,13 @@
 # $FreeBSD$
 
 PORTNAME=	node
-PORTVERSION=	7.10.0
+PORTVERSION=	8.3.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${PORTVERSION}/
 
 MAINTAINER=	bhughes@FreeBSD.org
-COMMENT=	V8 JavaScript for client and server (7.x)
+COMMENT=	V8 JavaScript for client and server
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -24,6 +24,7 @@ OPTIONS_EXCLUDE+=	DTRACE
 .endif
 
 OPTIONS_EXCLUDE_FreeBSD_10=	DTRACE
+OPTIONS_EXCLUDE_aarch64=	DTRACE
 
 BUNDLED_SSL_DESC=		Use node.js's bundled OpenSSL implementation
 BUNDLED_SSL_USES_OFF=		ssl
@@ -41,7 +42,8 @@ USE_LDCONFIG=	yes
 
 CONFLICTS_INSTALL=	node[456]-[0-9]* node01[02]-[0-9]* node-devel-[0-9]* iojs-[0-9]*
 
-ONLY_FOR_ARCHS=	i386 amd64 armv6
+ONLY_FOR_ARCHS=		aarch64 amd64 armv6 i386
+
 CONFIGURE_ARGS=	--prefix=${PREFIX_RELDEST} \
 		--without-npm \
 		--shared-cares \
