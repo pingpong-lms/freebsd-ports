@@ -750,6 +750,7 @@
     SUBDIR += git-modes
     SUBDIR += git-review
     SUBDIR += git-subversion
+    SUBDIR += gitaly
     SUBDIR += gitblit
     SUBDIR += gitflow
     SUBDIR += gitg
@@ -5464,6 +5465,7 @@
     SUBDIR += rubygem-hike
     SUBDIR += rubygem-hike1
     SUBDIR += rubygem-hitimes
+    SUBDIR += rubygem-hocon
     SUBDIR += rubygem-hoe
     SUBDIR += rubygem-holidays
     SUBDIR += rubygem-http_accept_language
