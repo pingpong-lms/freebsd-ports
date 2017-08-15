@@ -29,16 +29,16 @@ PORTDOCS=	IRCU_MPT_GEN3_Phase16.0-17.00.00.00.pdf \
 		README_SAS3IRCU_P16.txt
 
 LSI_SITES=	https://docs.broadcom.com/docs/
-DISTFILE_INSTRUCTIONS=	\n\
+#DISTFILE_INSTRUCTIONS=	\n\
 Due to licensing restrictions, certain files must be fetched manually.\n\
 Please visit the following URL and accept the license agreement.\n\n\
 ${LSI_SITES}${DISTNAME}${EXTRACT_SUFX}\n\n\
 After the download has completed, please place ${DISTNAME}${EXTRACT_SUFX} in\n\
 ${DISTDIR}, then restart the build.\n\n
 
-.if defined(PACKAGE_BUILDING)
-IGNORE=		requires manual fetch
-.endif
+#.if defined(PACKAGE_BUILDING)
+#IGNORE=		requires manual fetch
+#.endif
 
 .include <bsd.port.pre.mk>
 
