@@ -27,6 +27,11 @@ TRIB_DESC=	Install redis-trib.rb (lang/ruby req.)
 
 .include <bsd.port.options.mk>
 
+.if ${ARCH} == i386 && ! ${CFLAGS:M-march=*}
+# Needed for __atomic_fetch_add_8
+CFLAGS+=	-march=i586
+.endif
+
 .if ${PORT_OPTIONS:MTRIB}
 CATEGORIES+=	ruby
 USE_RUBY=	yes

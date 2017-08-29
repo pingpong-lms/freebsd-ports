@@ -43,6 +43,7 @@
     SUBDIR += apachetop
     SUBDIR += apcpwr
     SUBDIR += apcupsd
+    SUBDIR += aptly
     SUBDIR += arcconf
     SUBDIR += archivemount
     SUBDIR += areca-cli
@@ -244,6 +245,7 @@
     SUBDIR += docker-compose
     SUBDIR += docker-freebsd
     SUBDIR += docker-machine
+    SUBDIR += doctl
     SUBDIR += doinkd
     SUBDIR += dolly
     SUBDIR += downtime
@@ -674,6 +676,7 @@
     SUBDIR += nbosd
     SUBDIR += ncdu
     SUBDIR += ndmpd
+    SUBDIR += neofetch
     SUBDIR += nepomuk-core
     SUBDIR += nepomuk-widgets
     SUBDIR += nfcutils
@@ -881,6 +884,7 @@
     SUBDIR += py-freenas.cli
     SUBDIR += py-glances
     SUBDIR += py-gmailfs-fuse
+    SUBDIR += py-google-compute-engine
     SUBDIR += py-halite
     SUBDIR += py-honcho
     SUBDIR += py-iowait
@@ -963,6 +967,7 @@
     SUBDIR += rmonitor
     SUBDIR += roottail
     SUBDIR += rovclock
+    SUBDIR += rpi-firmware
     SUBDIR += rsnapshot
     SUBDIR += rsyncbackup
     SUBDIR += rsyncrypto

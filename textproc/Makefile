@@ -377,6 +377,7 @@
     SUBDIR += kibana43
     SUBDIR += kibana44
     SUBDIR += kibana45
+    SUBDIR += kibana46
     SUBDIR += kibana5
     SUBDIR += kibana5-search-guard
     SUBDIR += kibana5-x-pack
@@ -1305,6 +1306,7 @@
     SUBDIR += py-parsimonious
     SUBDIR += py-pdfminer
     SUBDIR += py-pss
+    SUBDIR += py-pyPEG2
     SUBDIR += py-pyctpp2
     SUBDIR += py-pyelasticsearch
     SUBDIR += py-pyes

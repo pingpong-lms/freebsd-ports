@@ -47,6 +47,7 @@
     SUBDIR += R-cran-proto
     SUBDIR += R-cran-randomForest
     SUBDIR += R-cran-registry
+    SUBDIR += R-cran-repr
     SUBDIR += R-cran-reshape
     SUBDIR += R-cran-reshape2
     SUBDIR += R-cran-rgexf
@@ -207,6 +208,7 @@
     SUBDIR += bossa
     SUBDIR += bouml-doc
     SUBDIR += bpython
+    SUBDIR += breakpad
     SUBDIR += bsdbuild
     SUBDIR += bsdcflow
     SUBDIR += bsdowl
@@ -276,6 +278,7 @@
     SUBDIR += checkheaders
     SUBDIR += cheritrace-devel
     SUBDIR += cherivis-devel
+    SUBDIR += chromium-gn
     SUBDIR += chrpath
     SUBDIR += chruby
     SUBDIR += cil
@@ -671,7 +674,6 @@
     SUBDIR += gconfmm26
     SUBDIR += gcvs
     SUBDIR += gdb
-    SUBDIR += gdb66
     SUBDIR += gdbmods
     SUBDIR += gdcm
     SUBDIR += geany
@@ -826,6 +828,7 @@
     SUBDIR += godot-tools
     SUBDIR += goffice
     SUBDIR += goffice010
+    SUBDIR += gogland-eap
     SUBDIR += google-gdata
     SUBDIR += google-perftools
     SUBDIR += google-styleguide
@@ -1185,7 +1188,6 @@
     SUBDIR += iniparser
     SUBDIR += initutil
     SUBDIR += injeqt
-    SUBDIR += insight
     SUBDIR += ioncube
     SUBDIR += ipython
     SUBDIR += ireport
@@ -4678,9 +4680,11 @@
     SUBDIR += py-pyperclip
     SUBDIR += py-pypugjs
     SUBDIR += py-pyqi
+    SUBDIR += py-pyral
     SUBDIR += py-pyrfc3339
     SUBDIR += py-pyro
     SUBDIR += py-pyshapelib
+    SUBDIR += py-pysparklines
     SUBDIR += py-pystorm
     SUBDIR += py-pyte
     SUBDIR += py-pytemplate
@@ -4858,6 +4862,7 @@
     SUBDIR += py-tinyrpc
     SUBDIR += py-tipper
     SUBDIR += py-tooz
+    SUBDIR += py-toposort
     SUBDIR += py-total-ordering
     SUBDIR += py-tox
     SUBDIR += py-trace2html
@@ -5099,6 +5104,7 @@
     SUBDIR += py36-setuptools
     SUBDIR += py_static_check
     SUBDIR += pybugz
+    SUBDIR += pycharm-ce
     SUBDIR += pychecker
     SUBDIR += pycount
     SUBDIR += pydbus-common
@@ -5354,6 +5360,7 @@
     SUBDIR += rubygem-ddplugin
     SUBDIR += rubygem-debug_inspector
     SUBDIR += rubygem-debugger-linecache
+    SUBDIR += rubygem-debugger-ruby_core_source
     SUBDIR += rubygem-debugger-xml
     SUBDIR += rubygem-declarative
     SUBDIR += rubygem-declarative-option
@@ -5449,6 +5456,7 @@
     SUBDIR += rubygem-graf
     SUBDIR += rubygem-grape
     SUBDIR += rubygem-grape-entity
+    SUBDIR += rubygem-grape-route-helpers
     SUBDIR += rubygem-grape-swagger
     SUBDIR += rubygem-grape0
     SUBDIR += rubygem-grit
@@ -5588,6 +5596,13 @@
     SUBDIR += rubygem-patch_finder
     SUBDIR += rubygem-pathutil
     SUBDIR += rubygem-peek
+    SUBDIR += rubygem-peek-gc
+    SUBDIR += rubygem-peek-host
+    SUBDIR += rubygem-peek-performance_bar
+    SUBDIR += rubygem-peek-rails4
+    SUBDIR += rubygem-peek-rblineprof
+    SUBDIR += rubygem-peek-redis
+    SUBDIR += rubygem-peek-sidekiq
     SUBDIR += rubygem-piston
     SUBDIR += rubygem-pkg-config
     SUBDIR += rubygem-platform
@@ -5633,6 +5648,7 @@
     SUBDIR += rubygem-rb-fsevent
     SUBDIR += rubygem-rb-inotify
     SUBDIR += rubygem-rb-kqueue
+    SUBDIR += rubygem-rblineprof
     SUBDIR += rubygem-rbtrace
     SUBDIR += rubygem-rdoc
     SUBDIR += rubygem-re2
