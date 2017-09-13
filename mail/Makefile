@@ -251,7 +251,6 @@
     SUBDIR += mlmmj
     SUBDIR += mls
     SUBDIR += mmr
-    SUBDIR += movemail
     SUBDIR += mpop
     SUBDIR += mreport
     SUBDIR += msgconvert
@@ -529,11 +528,13 @@
     SUBDIR += proxsmtp
     SUBDIR += py-Products.MailHost
     SUBDIR += py-Products.SecureMailHost
+    SUBDIR += py-aiosmtpd
     SUBDIR += py-apolicy
     SUBDIR += py-authres
     SUBDIR += py-cyruslib
     SUBDIR += py-dkimpy
     SUBDIR += py-email-reply-parser
+    SUBDIR += py-flufl.bounce
     SUBDIR += py-fuglu
     SUBDIR += py-libgmail
     SUBDIR += py-milter
@@ -613,7 +614,6 @@
     SUBDIR += rubygem-email_reply_parser-discourse
     SUBDIR += rubygem-email_reply_trimmer
     SUBDIR += rubygem-exception_notification
-    SUBDIR += rubygem-larch
     SUBDIR += rubygem-mail
     SUBDIR += rubygem-mail_room
     SUBDIR += rubygem-mailboxer

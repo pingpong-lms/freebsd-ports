@@ -3,6 +3,7 @@
 
 PORTNAME=	clickhouse
 PORTVERSION=	1.1.54245
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 DISTVERSIONSUFFIX=	-stable
 #PORTREVISION=	1
@@ -12,6 +13,8 @@ MAINTAINER=	proler@gmail.com
 COMMENT=	ClickHouse is an column-oriented database management system
 
 LICENSE=	APACHE20
+
+BROKEN=		fails to build
 
 BUILD_DEPENDS=	bash:shells/bash \
 				sparsehash>=0:devel/sparsehash

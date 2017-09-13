@@ -79,6 +79,11 @@
     SUBDIR += bacula5-client-static
     SUBDIR += bacula5-docs
     SUBDIR += bacula5-server
+    SUBDIR += bacula9-bat
+    SUBDIR += bacula9-client
+    SUBDIR += bacula9-client-static
+    SUBDIR += bacula9-docs
+    SUBDIR += bacula9-server
     SUBDIR += baloo
     SUBDIR += baloo-widgets
     SUBDIR += bamf
@@ -186,6 +191,7 @@
     SUBDIR += consolehm
     SUBDIR += consolekit2
     SUBDIR += consul
+    SUBDIR += consul_exporter
     SUBDIR += consul-alerts
     SUBDIR += contractor
     SUBDIR += copytape
@@ -1135,10 +1141,11 @@
     SUBDIR += syslinux
     SUBDIR += syslog-ng
     SUBDIR += syslog-ng-incubator
+    SUBDIR += syslog-ng310
+    SUBDIR += syslog-ng311
     SUBDIR += syslog-ng36
     SUBDIR += syslog-ng37
     SUBDIR += syslog-ng39
-    SUBDIR += syslog-ng310
     SUBDIR += syslogger
     SUBDIR += sysrc
     SUBDIR += system-tools-backends
@@ -1224,6 +1231,7 @@
     SUBDIR += ufs_copy
     SUBDIR += uhidd
     SUBDIR += uif2iso
+    SUBDIR += unetbootin
     SUBDIR += unieject
     SUBDIR += uniutils
     SUBDIR += unquote

@@ -556,6 +556,7 @@
     SUBDIR += pecl-pdo_user
     SUBDIR += pecl-redis
     SUBDIR += pecl-rrd
+    SUBDIR += pecl-rrd1
     SUBDIR += pecl-tokyo_tyrant
     SUBDIR += percona-pam-for-mysql
     SUBDIR += percona-toolkit
@@ -566,6 +567,7 @@
     SUBDIR += percona57-client
     SUBDIR += percona57-pam-for-mysql
     SUBDIR += percona57-server
+    SUBDIR += pgFormatter
     SUBDIR += pg_activity
     SUBDIR += pg_citus
     SUBDIR += pg_dirtyread
@@ -584,7 +586,6 @@
     SUBDIR += pgbouncer
     SUBDIR += pgdbf
     SUBDIR += pgespresso
-    SUBDIR += pgFormatter
     SUBDIR += pgfouine
     SUBDIR += pgloader
     SUBDIR += pgloader3
@@ -777,6 +778,7 @@
     SUBDIR += py-htsql-pgsql
     SUBDIR += py-kyotocabinet
     SUBDIR += py-leveldb
+    SUBDIR += py-lmdb
     SUBDIR += py-motor
     SUBDIR += py-mycli
     SUBDIR += py-mysql-connector-python
@@ -840,8 +842,6 @@
     SUBDIR += py3-bsddb3
     SUBDIR += py3-mysqlclient
     SUBDIR += py3-psycopg2
-    SUBDIR += py33-gdbm
-    SUBDIR += py33-sqlite3
     SUBDIR += py34-gdbm
     SUBDIR += py34-sqlite3
     SUBDIR += py35-gdbm
