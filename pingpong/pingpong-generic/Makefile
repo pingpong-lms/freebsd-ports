@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-generic
-PORTVERSION=	0.11
+PORTVERSION=	0.12
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
 DISTFILES=	#
@@ -54,6 +54,7 @@ RUN_DEPENDS= \
 	${LOCALBASE}/lib/pam_mkhomedir.so:security/pam_mkhomedir \
 	xsltproc:textproc/libxslt \
 	xauth:x11/xauth \
+	ag:textproc/the_silver_searcher \
 	tmux:sysutils/tmux \
 	screen:sysutils/screen
 
