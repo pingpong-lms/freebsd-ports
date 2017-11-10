@@ -13,6 +13,7 @@
     SUBDIR += R-cran-scrapeR
     SUBDIR += R-cran-selectr
     SUBDIR += R-cran-shiny
+    SUBDIR += UniversalFeedCreator
     SUBDIR += WebMagick
     SUBDIR += ach
     SUBDIR += adzap
@@ -57,6 +58,7 @@
     SUBDIR += c-icap
     SUBDIR += c-icap-modules
     SUBDIR += cadaver
+    SUBDIR += caddy
     SUBDIR += calamaris
     SUBDIR += calamaris-devel
     SUBDIR += caldavzap
@@ -127,6 +129,7 @@
     SUBDIR += elgg
     SUBDIR += elinks
     SUBDIR += elixir-html_entities
+    SUBDIR += elixir-html_sanitize_ex
     SUBDIR += elixir-httpoison
     SUBDIR += elixir-httpotion
     SUBDIR += elixir-joken
@@ -357,6 +360,7 @@
     SUBDIR += libjwt
     SUBDIR += libmicrohttpd
     SUBDIR += libnghttp2
+    SUBDIR += libresonic-standalone
     SUBDIR += libsocialweb
     SUBDIR += libwww
     SUBDIR += libxul
@@ -424,6 +428,7 @@
     SUBDIR += mod_auth_mysql2
     SUBDIR += mod_auth_mysql_another
     SUBDIR += mod_auth_openid
+    SUBDIR += mod_auth_openidc
     SUBDIR += mod_auth_pam2
     SUBDIR += mod_auth_pgsql2
     SUBDIR += mod_auth_pubtkt
@@ -472,6 +477,7 @@
     SUBDIR += mod_mpm_itk
     SUBDIR += mod_musicindex
     SUBDIR += mod_ntlm2
+    SUBDIR += mod_pagespeed
     SUBDIR += mod_perl2
     SUBDIR += mod_php56
     SUBDIR += mod_php70
@@ -511,7 +517,6 @@
     SUBDIR += monast
     SUBDIR += mongoose
     SUBDIR += mongrel2
-    SUBDIR += moodle30
     SUBDIR += moodle31
     SUBDIR += moodle32
     SUBDIR += moodle33
@@ -542,6 +547,7 @@
     SUBDIR += node
     SUBDIR += node4
     SUBDIR += node6
+    SUBDIR += node8
     SUBDIR += nostromo
     SUBDIR += novnc
     SUBDIR += novnc-websockify
@@ -1367,6 +1373,7 @@
     SUBDIR += p5-WebService-Linode
     SUBDIR += p5-WebService-MoviePosterDB
     SUBDIR += p5-WebService-MusicBrainz
+    SUBDIR += p5-WebService-MusicBrainz0
     SUBDIR += p5-WebService-NoPaste
     SUBDIR += p5-WebService-Pushover
     SUBDIR += p5-WebService-Rakuten
@@ -1494,6 +1501,7 @@
     SUBDIR += podcastamatic
     SUBDIR += polipo
     SUBDIR += pound
+    SUBDIR += privatebin
     SUBDIR += privoxy
     SUBDIR += protovis
     SUBDIR += pserv
@@ -1667,6 +1675,9 @@
     SUBDIR += py-goobook
     SUBDIR += py-google
     SUBDIR += py-google-api-python-client
+    SUBDIR += py-google-cloud-core
+    SUBDIR += py-google-cloud-storage
+    SUBDIR += py-google-resumable-media
     SUBDIR += py-graphite-api
     SUBDIR += py-graphite-web
     SUBDIR += py-grequests
@@ -1702,6 +1713,7 @@
     SUBDIR += py-pastedeploy
     SUBDIR += py-pastescript
     SUBDIR += py-pelican
+    SUBDIR += py-planet
     SUBDIR += py-plone.alterego
     SUBDIR += py-plone.app.blob
     SUBDIR += py-plone.app.caching
@@ -1805,7 +1817,10 @@
     SUBDIR += py-recaptcha
     SUBDIR += py-requestbuilder
     SUBDIR += py-requests
+    SUBDIR += py-requests-cache
+    SUBDIR += py-requests-file
     SUBDIR += py-requests-futures
+    SUBDIR += py-requests-mock
     SUBDIR += py-requests-oauthlib
     SUBDIR += py-requests-toolbelt
     SUBDIR += py-requests1
@@ -1833,10 +1848,9 @@
     SUBDIR += py-tmdb3
     SUBDIR += py-tornado
     SUBDIR += py-trello
+    SUBDIR += py-treq
     SUBDIR += py-turbogears2
     SUBDIR += py-tvdb_api
-    SUBDIR += py-twistedWeb
-    SUBDIR += py-twistedWeb2
     SUBDIR += py-txrequests
     SUBDIR += py-uliweb
     SUBDIR += py-urlgrabber
@@ -1861,6 +1875,7 @@
     SUBDIR += py-yarl
     SUBDIR += py-zope.app.wsgi
     SUBDIR += py3-cssutils
+    SUBDIR += py3-httplib2
     SUBDIR += py3-requests
     SUBDIR += pyblosxom
     SUBDIR += pycarddav
@@ -1950,7 +1965,6 @@
     SUBDIR += rubygem-dashing
     SUBDIR += rubygem-davclient
     SUBDIR += rubygem-deckar01-task_list
-    SUBDIR += rubygem-deckar01-task_list1
     SUBDIR += rubygem-domainatrix
     SUBDIR += rubygem-dropzonejs-rails
     SUBDIR += rubygem-dropzonejs-rails07
@@ -2103,7 +2117,9 @@
     SUBDIR += rubygem-raindrops
     SUBDIR += rubygem-ramaze
     SUBDIR += rubygem-raphael-rails
+    SUBDIR += rubygem-rbovirt
     SUBDIR += rubygem-rdf
+    SUBDIR += rubygem-rdf-normalize
     SUBDIR += rubygem-redcloth
     SUBDIR += rubygem-redis-rack
     SUBDIR += rubygem-redis-rack1

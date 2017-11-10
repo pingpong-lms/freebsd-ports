@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	rabbitmq-c
-PORTVERSION=	0.7.1
+PORTVERSION=	0.8.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net
 PKGNAMESUFFIX=	-devel
@@ -10,8 +10,8 @@ PKGNAMESUFFIX=	-devel
 MAINTAINER=	freebsd@geoffgarside.co.uk
 COMMENT=	RabbitMQ C AMQP client library
 
-LICENSE=	GPLv2 MPL
-LICENSE_COMB=	dual
+LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/LICENSE-MIT
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}simplejson>=2.0:devel/py-simplejson
 

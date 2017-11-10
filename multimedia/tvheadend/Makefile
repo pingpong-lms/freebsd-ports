@@ -4,6 +4,7 @@
 PORTNAME=	tvheadend
 PORTVERSION=	4.2.3
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	multimedia
 
 MAINTAINER=	decke@FreeBSD.org
@@ -23,7 +24,7 @@ BROKEN_mips=		fails to configure: No C compiler found
 BROKEN_mips64=		fails to configure: No C compiler found
 BROKEN_powerpc64=	fails to configure: No C compiler found
 
-USES=		execinfo gettext gmake pkgconfig python shebangfix ssl
+USES=		gettext gmake pkgconfig python shebangfix ssl
 USE_GITHUB=	yes
 
 GNU_CONFIGURE=	yes

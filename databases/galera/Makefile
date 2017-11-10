@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	galera
-PORTVERSION?=	25.3.21
+PORTVERSION?=	25.3.22
 DISTVERSIONPREFIX?=	release_
 CATEGORIES=	databases
 
@@ -28,7 +28,7 @@ NOT_FOR_ARCHS=		i386
 # https://tracker.crystax.net/issues/1263
 NOT_FOR_ARCHS_REASON_i386=Uses 64 bit atomics that clang cannot generate on i386
 
-USES=		execinfo python:build scons ssl
+USES=		python:build scons ssl
 
 USE_LDCONFIG=	yes
 

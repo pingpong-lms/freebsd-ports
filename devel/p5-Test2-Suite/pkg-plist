@@ -12,6 +12,7 @@
 %%SITE_PERL%%/Test2/Compare/Delta.pm
 %%SITE_PERL%%/Test2/Compare/Event.pm
 %%SITE_PERL%%/Test2/Compare/EventMeta.pm
+%%SITE_PERL%%/Test2/Compare/Float.pm
 %%SITE_PERL%%/Test2/Compare/Hash.pm
 %%SITE_PERL%%/Test2/Compare/Meta.pm
 %%SITE_PERL%%/Test2/Compare/Negatable.pm
@@ -55,6 +56,7 @@
 %%SITE_PERL%%/Test2/Tools/Event.pm
 %%SITE_PERL%%/Test2/Tools/Exception.pm
 %%SITE_PERL%%/Test2/Tools/Exports.pm
+%%SITE_PERL%%/Test2/Tools/GenTemp.pm
 %%SITE_PERL%%/Test2/Tools/Grab.pm
 %%SITE_PERL%%/Test2/Tools/Mock.pm
 %%SITE_PERL%%/Test2/Tools/Ref.pm
@@ -85,6 +87,7 @@
 %%PERL5_MAN3%%/Test2::Compare::Delta.3.gz
 %%PERL5_MAN3%%/Test2::Compare::Event.3.gz
 %%PERL5_MAN3%%/Test2::Compare::EventMeta.3.gz
+%%PERL5_MAN3%%/Test2::Compare::Float.3.gz
 %%PERL5_MAN3%%/Test2::Compare::Hash.3.gz
 %%PERL5_MAN3%%/Test2::Compare::Meta.3.gz
 %%PERL5_MAN3%%/Test2::Compare::Negatable.3.gz
@@ -127,6 +130,7 @@
 %%PERL5_MAN3%%/Test2::Tools::Event.3.gz
 %%PERL5_MAN3%%/Test2::Tools::Exception.3.gz
 %%PERL5_MAN3%%/Test2::Tools::Exports.3.gz
+%%PERL5_MAN3%%/Test2::Tools::GenTemp.3.gz
 %%PERL5_MAN3%%/Test2::Tools::Grab.3.gz
 %%PERL5_MAN3%%/Test2::Tools::Mock.3.gz
 %%PERL5_MAN3%%/Test2::Tools::Ref.3.gz

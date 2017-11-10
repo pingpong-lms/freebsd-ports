@@ -180,7 +180,6 @@
     SUBDIR += crafty-open-large
     SUBDIR += crafty-open-medium
     SUBDIR += crafty-tablebase-no-pawn
-    SUBDIR += crafty-tablebase-pawn
     SUBDIR += crashtest
     SUBDIR += cre
     SUBDIR += cretan-hubris
@@ -244,7 +243,6 @@
     SUBDIR += einstein
     SUBDIR += el
     SUBDIR += el-data
-    SUBDIR += ember
     SUBDIR += emptyepsilon
     SUBDIR += endgame-singularity
     SUBDIR += endgame-singularity-music
@@ -410,6 +408,7 @@
     SUBDIR += gturing
     SUBDIR += gtypist
     SUBDIR += gunfudeadlands
+    SUBDIR += gzdoom
     SUBDIR += hangman
     SUBDIR += hedgewars
     SUBDIR += help_hannahs_horse
@@ -672,6 +671,7 @@
     SUBDIR += numptyphysics
     SUBDIR += numptyphysics-npcomplete
     SUBDIR += nwndata
+    SUBDIR += nxengine
     SUBDIR += odamex
     SUBDIR += oldrunner
     SUBDIR += omega
@@ -680,6 +680,7 @@
     SUBDIR += oneko-sakura
     SUBDIR += oolite
     SUBDIR += oonsoo
+    SUBDIR += open-adventure
     SUBDIR += openalchemist
     SUBDIR += openarena
     SUBDIR += openarena-data
@@ -765,7 +766,6 @@
     SUBDIR += poker-eval
     SUBDIR += pokerth
     SUBDIR += polyglot
-    SUBDIR += polypuzzle
     SUBDIR += pongix
     SUBDIR += popstar
     SUBDIR += pouetchess
@@ -888,6 +888,7 @@
     SUBDIR += sdl_jewels
     SUBDIR += sdl_lopan
     SUBDIR += sdl_scavenger
+    SUBDIR += sdlpop
     SUBDIR += sdlroids
     SUBDIR += sdlsand
     SUBDIR += sea-defender
@@ -1002,6 +1003,7 @@
     SUBDIR += tt
     SUBDIR += ttraffic
     SUBDIR += ttt
+    SUBDIR += tty-solitaire
     SUBDIR += tux-aqfh
     SUBDIR += tuxfighter
     SUBDIR += tuxkart

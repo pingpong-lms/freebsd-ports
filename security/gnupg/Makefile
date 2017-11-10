@@ -1,13 +1,12 @@
 # $FreeBSD$
 
 PORTNAME=	gnupg
-PORTVERSION=	2.1.23
-PORTREVISION=	1
+PORTVERSION=	2.2.2
 CATEGORIES=	security
 MASTER_SITES=	GNUPG
 
 MAINTAINER=	adamw@FreeBSD.org
-COMMENT=	The GNU Privacy Guard (modern version)
+COMMENT=	Complete and free PGP implementation
 
 LICENSE=	GPLv3 LGPL3
 LICENSE_COMB=	multi
@@ -23,7 +22,7 @@ BUILD_DEPENDS=	libassuan>=2.4.3:security/libassuan \
 		libgpg-error>=1.16:security/libgpg-error
 RUN_DEPENDS=	pinentry:security/pinentry
 
-CONFLICTS=	gnupg-2.0.* gnupg-2.2.* dirmngr-[0-9]*
+CONFLICTS=	gnupg-2.0.* dirmngr-[0-9]*
 CPE_VENDOR=	gnupg
 
 USES=		compiler:c11 cpe gmake iconv pkgconfig readline sqlite tar:bzip2

@@ -213,6 +213,8 @@
     SUBDIR += lsw
     SUBDIR += luit
     SUBDIR += lumina
+    SUBDIR += lumina-core
+    SUBDIR += lumina-coreutils
     SUBDIR += lupe
     SUBDIR += lxde-meta
     SUBDIR += lxhotkey
@@ -256,6 +258,7 @@
     SUBDIR += p5-X11-Xlib
     SUBDIR += p5-XTerm-Conf
     SUBDIR += pantheon-terminal
+    SUBDIR += pcdm
     SUBDIR += pipeglade
     SUBDIR += pixman
     SUBDIR += plasma-scriptengine-python
@@ -325,10 +328,10 @@
     SUBDIR += tilda
     SUBDIR += tint
     SUBDIR += tint-devel
-    SUBDIR += tkXwin
     SUBDIR += trapproto
     SUBDIR += trayer
     SUBDIR += tycoon
+    SUBDIR += urxvt-font-size
     SUBDIR += urxvt-perls
     SUBDIR += vdesk
     SUBDIR += videoproto

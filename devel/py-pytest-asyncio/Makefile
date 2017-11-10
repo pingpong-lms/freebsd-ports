@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	pytest-asyncio
-PORTVERSION=	0.7.0
+PORTVERSION=	0.8.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,10 +17,4 @@ NO_ARCH=	yes
 USES=		python:3.5+
 USE_PYTHON=	autoplist distutils
 
-.include <bsd.port.pre.mk>
-
-.if ${PYTHON_REL} < 3400
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}asyncio>0:devel/py-asyncio
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

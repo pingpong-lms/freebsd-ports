@@ -2,12 +2,18 @@
 
 PORTNAME=	xpdf
 PORTVERSION=	3.04
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	graphics print
 MASTER_SITES=	http://mirrors.rit.edu/zi/ \
 		ftp://ftp.foolabs.com/pub/xpdf/ \
 		TEX_CTAN/support/xpdf \
 		http://komquats.com/distfiles/
+.if !defined(MASTERDIR)
+PKGNAMESUFFIX=	3
+CONFLICTS_INSTALL=	xpdf4-* xpdf-*
+.else
+CONFLICTS_INSTALL=	xpdf4-*	xpdf3-*
+.endif
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Display PDF files and convert them to other formats
@@ -31,16 +37,16 @@ MANPREFIX=	${PREFIX}/share/xpdf
 OPTIONS_DEFINE=	LIBPAPER TYPE1 X11 DOCS
 LIBPAPER_DESC=	Enable libpaper
 TYPE1_DESC=	Ghostscript type1 fonts
-OPTIONS_DEFAULT=	TYPE1 X11
-OPTIONS_SUB=		yes
+OPTIONS_DEFAULT=TYPE1 X11
+OPTIONS_SUB=	yes
 
 SUB_FILES=	xpdf-man.conf
 
 TYPE1_RUN_DEPENDS=	${LOCALBASE}/share/ghostscript/fonts/n021003l.pfb:print/gsfonts
 
 LIBPAPER_LIB_DEPENDS=	libpaper.so:print/libpaper
-LIBPAPER_CONFIGURE_ON=--with-libpaper-library="${LOCALBASE}/lib" \
-		--with-libpaper-includes="${LOCALBASE}/include"
+LIBPAPER_CONFIGURE_ON=	--with-libpaper-library="${LOCALBASE}/lib" \
+			--with-libpaper-includes="${LOCALBASE}/include"
 LIBPAPER_CONFIGURE_OFF=--without-libpaper-library
 
 .if defined(A4)
@@ -60,7 +66,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
 .endfor
 	@cd ${STAGEDIR}${PREFIX}; \
-	${LN} -sf libexec/xpdf/xpdf bin/xpdf
+	${LN} -sf ../libexec/xpdf/xpdf bin/xpdf
 	${INSTALL_DATA} ${WRKDIR}/xpdf-man.conf \
 		${STAGEDIR}${PREFIX}/etc/man.d/xpdf.conf
 

@@ -416,7 +416,7 @@ vault:*:471:
 nomad:*:472:
 minio:*:473:
 gitlab-runner:*:474:
-# free: 475
+traefik:*:475:
 # free: 476
 # free: 477
 prometheus:*:478:
@@ -719,10 +719,10 @@ cockroach:*:771:
 # free: 775
 # free: 776
 openxpki:*:777:
-# free: 778
+litecoin:*:778:
 bitcoin:*:779:
 zetacoin:*:780:
-# free: 781
+monero:*:781:
 # free: 782
 # free: 783
 # free: 784

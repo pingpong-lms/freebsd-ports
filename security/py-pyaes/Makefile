@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	pyaes
-PORTVERSION=	1.6.0
+PORTVERSION=	1.6.1
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 NO_ARCH=	yes
 
-USES=		python
+USES?=		python
 USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>

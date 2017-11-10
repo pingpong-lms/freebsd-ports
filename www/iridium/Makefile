@@ -3,7 +3,7 @@
 
 PORTNAME=	iridium
 PORTVERSION=	58.0
-PORTREVISION=	8
+PORTREVISION=	11
 CATEGORIES=	www
 MASTER_SITES=	https://downloads.iridiumbrowser.de/source/
 PKGNAMESUFFIX=	-browser
@@ -12,7 +12,7 @@ DISTNAME=	${PORTNAME}${PKGNAMESUFFIX}-${PORTVERSION}
 MAINTAINER=	chromium@FreeBSD.org
 COMMENT=	Iridium browser
 
-LICENSE=	BSD3CLAUSE LGPL21 MPL
+LICENSE=	BSD3CLAUSE LGPL21 MPL11
 LICENSE_COMB=	multi
 
 BUILD_DEPENDS=	gperf:devel/gperf \
@@ -61,7 +61,7 @@ RUN_DEPENDS=	xdg-open:devel/xdg-utils \
 		droid-fonts-ttf>0:x11-fonts/droid-fonts-ttf
 
 ONLY_FOR_ARCHS=	amd64 i386
-USES=		bison desktop-file-utils execinfo jpeg ninja perl5 \
+USES=		bison desktop-file-utils jpeg ninja perl5 \
 		pkgconfig python:2,build shebangfix tar:xz
 
 USE_PERL5=	build

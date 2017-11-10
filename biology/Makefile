@@ -37,6 +37,7 @@
     SUBDIR += hmmer
     SUBDIR += htslib
     SUBDIR += iolib
+    SUBDIR += iqtree
     SUBDIR += jalview
     SUBDIR += jellyfish
     SUBDIR += lagan
@@ -60,6 +61,7 @@
     SUBDIR += p5-Bio-Coordinate
     SUBDIR += p5-Bio-Das
     SUBDIR += p5-Bio-Das-Lite
+    SUBDIR += p5-Bio-FeatureIO
     SUBDIR += p5-Bio-GFF3
     SUBDIR += p5-Bio-Glite
     SUBDIR += p5-Bio-Graphics
