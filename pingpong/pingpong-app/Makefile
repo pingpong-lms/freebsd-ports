@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-app
-PORTVERSION=	0.11
+PORTVERSION=	0.12
 CATEGORIES=	pingpong
 MASTER_SITES=	#
 DISTFILES=	#
@@ -41,6 +41,7 @@ RUN_DEPENDS= \
 	saxon:textproc/saxon-devel \
 	xml:textproc/xmlstarlet \
 	xmlsec1:security/xmlsec1 \
+	wkhtmltopdf:converters/wkhtmltopdf \
 	${LOCALBASE}/share/pingpong-generic/installed.stamp:pingpong/pingpong-generic \
 	${LOCALBASE}/share/pingpong-aspell/installed.stamp:pingpong/pingpong-aspell
 
