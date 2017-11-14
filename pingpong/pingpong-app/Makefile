@@ -41,7 +41,7 @@ RUN_DEPENDS= \
 	saxon:textproc/saxon-devel \
 	xml:textproc/xmlstarlet \
 	xmlsec1:security/xmlsec1 \
-	x11-fonts/webfonts \
+	${LOCALBASE}/share/fonts/webfonts/arial.ttf:x11-fonts/webfonts \
 	wkhtmltopdf:converters/wkhtmltopdf \
 	${LOCALBASE}/share/pingpong-generic/installed.stamp:pingpong/pingpong-generic \
 	${LOCALBASE}/share/pingpong-aspell/installed.stamp:pingpong/pingpong-aspell
