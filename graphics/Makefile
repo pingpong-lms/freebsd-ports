@@ -236,7 +236,6 @@
     SUBDIR += geomorph
     SUBDIR += geomview
     SUBDIR += geos
-    SUBDIR += geos35
     SUBDIR += geoserver
     SUBDIR += gexiv2
     SUBDIR += giblib
@@ -293,6 +292,7 @@
     SUBDIR += goocanvasmm2
     SUBDIR += goom
     SUBDIR += gource
+    SUBDIR += goxel
     SUBDIR += gpaint
     SUBDIR += gphoto2
     SUBDIR += gpicview
@@ -468,6 +468,7 @@
     SUBDIR += ksnapshot
     SUBDIR += kudu
     SUBDIR += l2p
+    SUBDIR += largetifftools
     SUBDIR += laternamagica
     SUBDIR += lcdtest
     SUBDIR += lcms
@@ -553,7 +554,6 @@
     SUBDIR += libzmf
     SUBDIR += lightzone
     SUBDIR += linplasma
-    SUBDIR += linux-adobesvg
     SUBDIR += linux-c6-cairo
     SUBDIR += linux-c6-dri
     SUBDIR += linux-c6-gdk-pixbuf2
@@ -793,6 +793,8 @@
     SUBDIR += php70-gd
     SUBDIR += php71-exif
     SUBDIR += php71-gd
+    SUBDIR += php72-exif
+    SUBDIR += php72-gd
     SUBDIR += phplot
     SUBDIR += picpuz
     SUBDIR += piddle
