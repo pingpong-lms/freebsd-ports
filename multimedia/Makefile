@@ -28,6 +28,7 @@
     SUBDIR += bombono
     SUBDIR += bsdbktr_tvtune
     SUBDIR += camserv
+    SUBDIR += ccextractor
     SUBDIR += cclive
     SUBDIR += cheese
     SUBDIR += clipgrab
@@ -331,6 +332,7 @@
     SUBDIR += py-moviepy
     SUBDIR += py-openlp
     SUBDIR += py-periscope
+    SUBDIR += py-pretty_midi
     SUBDIR += py-qt4-multimedia
     SUBDIR += py-qt4-phonon
     SUBDIR += py-qt5-multimedia
@@ -338,7 +340,6 @@
     SUBDIR += py-soco
     SUBDIR += py-subliminal
     SUBDIR += py-tvnamer
-    SUBDIR += py3-gstreamer1
     SUBDIR += pyjama
     SUBDIR += pymp
     SUBDIR += qmmp

@@ -5,6 +5,7 @@
 
     SUBDIR += 0d1n
     SUBDIR += 1password-client
+    SUBDIR += 2fa
     SUBDIR += ADMsmb
     SUBDIR += ADMsnmp
     SUBDIR += R-cran-ROAuth
@@ -288,6 +289,7 @@
     SUBDIR += isnprober
     SUBDIR += jbrofuzz
     SUBDIR += john
+    SUBDIR += kbfs
     SUBDIR += kc
     SUBDIR += kdbx-viewer
     SUBDIR += kedpm
@@ -414,6 +416,8 @@
     SUBDIR += ncrypt
     SUBDIR += netpgp
     SUBDIR += nettle
+    SUBDIR += nextcloud-twofactor_totp
+    SUBDIR += nextcloud-twofactor_u2f
     SUBDIR += ngrok
     SUBDIR += nikto
     SUBDIR += nist-kat
@@ -958,7 +962,6 @@
     SUBDIR += py-python-social-auth
     SUBDIR += py-rekall
     SUBDIR += py-rekall-core
-    SUBDIR += py-rekall_gui
     SUBDIR += py-requests-kerberos
     SUBDIR += py-rsa
     SUBDIR += py-safe
@@ -968,6 +971,7 @@
     SUBDIR += py-slowaes
     SUBDIR += py-spake2
     SUBDIR += py-ssh
+    SUBDIR += py-ssh-audit
     SUBDIR += py-sslstrip
     SUBDIR += py-stem
     SUBDIR += py-stix
@@ -997,14 +1001,6 @@
     SUBDIR += py-zope.securitypolicy
     SUBDIR += py-zope.session
     SUBDIR += py-zxcvbn-python
-    SUBDIR += py3-certifi
-    SUBDIR += py3-cryptography
-    SUBDIR += py3-ecdsa
-    SUBDIR += py3-libnacl
-    SUBDIR += py3-openssl
-    SUBDIR += py3-pbkdf2
-    SUBDIR += py3-pyaes
-    SUBDIR += py3-pycrypto
     SUBDIR += qtkeychain-qt4
     SUBDIR += qtkeychain-qt5
     SUBDIR += quantis
@@ -1044,6 +1040,7 @@
     SUBDIR += rubygem-airbrussh
     SUBDIR += rubygem-attr_encrypted
     SUBDIR += rubygem-bcrypt
+    SUBDIR += rubygem-bcrypt_pbkdf
     SUBDIR += rubygem-bcrypt-ruby
     SUBDIR += rubygem-devise-two-factor
     SUBDIR += rubygem-devise-two-factor-rails5
@@ -1095,6 +1092,7 @@
     SUBDIR += rubygem-rack-oauth2
     SUBDIR += rubygem-razorback-scriptNugget
     SUBDIR += rubygem-rbnacl
+    SUBDIR += rubygem-rbnacl-libsodium
     SUBDIR += rubygem-recog
     SUBDIR += rubygem-rex-arch
     SUBDIR += rubygem-rex-bin_tools
@@ -1256,7 +1254,6 @@
     SUBDIR += wapiti
     SUBDIR += webfwlog
     SUBDIR += webscarab
-    SUBDIR += webshag
     SUBDIR += whatweb
     SUBDIR += wipe
     SUBDIR += wolfssl
