@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-hardware
-PORTVERSION=	0.4
+PORTVERSION=	0.5
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
 DISTFILES=	#
@@ -18,6 +18,7 @@ RUN_DEPENDS= \
 	zfSnap:sysutils/zfsnap \
 	amrstat:sysutils/amrstat \
 	cciss_vol_status:sysutils/cciss_vol_status \
+	${LOCALBASE}/etc/rc.d/microcode_update:sysutils/devcpu-data \
 	arcconf:sysutils/arcconf
 
 do-install: build
