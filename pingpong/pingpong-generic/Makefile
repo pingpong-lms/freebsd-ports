@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-generic
-PORTVERSION=	0.12
+PORTVERSION=	0.13
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
 DISTFILES=	#
@@ -12,14 +12,14 @@ COMMENT=	The meta-port for generic ppab server deps
 
 NO_BUILD=	yes
 
-USES=		perl5 gmake pgsql
+USES=		perl5 gmake pgsql python
 WANT_PGSQL=	client
-USE_PYTHON=	yes
 USE_AUTOTOOLS=	autoconf aclocal automake
 USE_OPENLDAP=	yes
 WANT_OPENLDAP_SASL=yes
 
-PLIST_FILES=	share/vim/vimrc
+PLIST_FILES=	share/vim/vimrc \
+		etc/periodic/daily/pp_pkg_audit etc/newsyslog.conf.d/pp_pkg_audit.conf
 PORTDATA=	installed.stamp
 
 RUN_DEPENDS= \
@@ -64,6 +64,9 @@ configure:
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/vim && \
 	${INSTALL_DATA} ${FILESDIR}/vimrc ${STAGEDIR}${PREFIX}/share/vim
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/daily ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d
+	${INSTALL_SCRIPT} ${FILESDIR}/pp_pkg_audit ${STAGEDIR}${PREFIX}/etc/periodic/daily/pp_pkg_audit
+	${INSTALL_DATA} ${FILESDIR}/pp_pkg_audit.conf ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d/pp_pkg_audit.conf
 	${MKDIR} ${STAGEDIR}${DATADIR} && \
 	${TOUCH} ${STAGEDIR}${DATADIR}/${PORTDATA}
 

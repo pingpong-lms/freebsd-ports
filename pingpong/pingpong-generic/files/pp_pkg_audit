@@ -1,0 +1,63 @@
+#!/bin/sh
+#
+# $FreeBSD$
+# pp_pkg_audit script will record installed versions of packages
+
+if [ -r /etc/defaults/periodic.conf ]; then
+	. /etc/defaults/periodic.conf
+	source_periodic_confs
+fi
+
+rc=0
+
+pp_pkg_audit() {
+	echo pp_pkg_audit
+}
+
+pp_pkg_audit_all() {
+	echo "###################################"
+	echo  "pp_pkg_audit "
+	echo
+	printf "%-40s%s" "Run date:"  `date +'%Y-%m-%dT%H:%M:%S'`
+	echo
+
+	printf "%-40s%s" "Kernel version:"  `freebsd-version -k `
+	echo
+
+	printf "%-40s%s" "Userland version:"  `freebsd-version -k `
+	echo
+
+	echo
+	echo "###################################"
+	echo "   Installed packages, versions, install date"
+	echo
+
+	pkg query -a '%n %v %t' | while read a b c ; do printf "%-40s%s\t%s\n" $a-$b "`date -r $c +'%Y-%m-%dT%H:%M:%S' `"; done
+
+	echo "###################################"
+}
+
+: ${daily_pp_pkg_audit_enable:="YES"}
+: ${daily_pp_pkg_audit_dir:="/var/log/pp_pkg_audit"}
+
+case "$daily_pp_pkg_audit_enable" in
+    [Yy][Ee][Ss])
+	logfile=${daily_pp_pkg_audit_dir}/pp_pkg_audit.log
+	pkgcmd=/usr/local/sbin/pkg
+	mkdir -p ${daily_pp_pkg_audit_dir}
+
+	if ! ${pkgcmd} -N >/dev/null 2>&1 ; then
+		echo 'pkg-audit is enabled but pkg is not used'
+		rc=2
+	else
+		echo ""
+		echo "Running pp_pkg_audit, logging to ${logfile}:"
+		pp_pkg_audit_all  >>  ${logfile}
+	fi
+	;;
+
+    *)  rc=0
+	;;
+esac
+
+exit $rc
