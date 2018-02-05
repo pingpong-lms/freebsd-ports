@@ -112,7 +112,6 @@
     SUBDIR += esmtp
     SUBDIR += evolution
     SUBDIR += evolution-ews
-    SUBDIR += evolution-mapi
     SUBDIR += exilog
     SUBDIR += exim
     SUBDIR += exim-doc-html
@@ -146,6 +145,7 @@
     SUBDIR += gmime24-sharp
     SUBDIR += gmime26
     SUBDIR += gmime26-sharp
+    SUBDIR += gmime30
     SUBDIR += gnarwl
     SUBDIR += gnubiff
     SUBDIR += gnumail
@@ -190,7 +190,6 @@
     SUBDIR += libdomainkeys
     SUBDIR += libesmtp
     SUBDIR += libetpan
-    SUBDIR += libmapi
     SUBDIR += libmilter
     SUBDIR += libpst
     SUBDIR += librfc822
@@ -531,6 +530,7 @@
     SUBDIR += py-Products.SecureMailHost
     SUBDIR += py-afew
     SUBDIR += py-aiosmtpd
+    SUBDIR += py-alot
     SUBDIR += py-apolicy
     SUBDIR += py-authres
     SUBDIR += py-cyruslib
@@ -545,8 +545,8 @@
     SUBDIR += py-premailer
     SUBDIR += py-pymailq
     SUBDIR += py-pyspf
-    SUBDIR += py-spambayes
     SUBDIR += py-pyzmail
+    SUBDIR += py-spambayes
     SUBDIR += py-zope.sendmail
     SUBDIR += pymsgauth
     SUBDIR += pysieved
@@ -625,6 +625,7 @@
     SUBDIR += rubygem-pony
     SUBDIR += rubygem-premailer
     SUBDIR += rubygem-premailer-rails
+    SUBDIR += rubygem-premailer-rails-rails5
     SUBDIR += rubygem-rmail
     SUBDIR += rubygem-roadie
     SUBDIR += rubygem-roadie-rails
@@ -643,6 +644,7 @@
     SUBDIR += sieve-connect
     SUBDIR += sigrot
     SUBDIR += simscan
+    SUBDIR += sisyphus
     SUBDIR += slapd-cyrus
     SUBDIR += sma
     SUBDIR += smfsav

@@ -72,7 +72,6 @@
     SUBDIR += awale
     SUBDIR += awele
     SUBDIR += balazar
-    SUBDIR += balazarbrothers
     SUBDIR += ballerburg
     SUBDIR += banihstypos
     SUBDIR += barbie_seahorse_adventures
@@ -151,7 +150,6 @@
     SUBDIR += cgoban
     SUBDIR += chanta
     SUBDIR += chapping
-    SUBDIR += cheech
     SUBDIR += chessx
     SUBDIR += childsplay
     SUBDIR += chocolate-doom
@@ -337,7 +335,6 @@
     SUBDIR += ggz-txt-client
     SUBDIR += gigalomania
     SUBDIR += gillo
-    SUBDIR += gish-demo
     SUBDIR += gl-117
     SUBDIR += glaxium
     SUBDIR += glbsp
@@ -458,6 +455,7 @@
     SUBDIR += joequake
     SUBDIR += jools
     SUBDIR += jtans
+    SUBDIR += jumpnbump
     SUBDIR += jutils
     SUBDIR += jvgs
     SUBDIR += jzip
@@ -476,6 +474,7 @@
     SUBDIR += kcheckers
     SUBDIR += kdegames4
     SUBDIR += kdiamond
+    SUBDIR += keeperrl
     SUBDIR += kevedit
     SUBDIR += kfourinline
     SUBDIR += kgoldrunner
@@ -531,7 +530,6 @@
     SUBDIR += liblcf
     SUBDIR += libmaitretarot
     SUBDIR += libmt_client
-    SUBDIR += libretro-cores
     SUBDIR += libshhcards
     SUBDIR += lightsoff
     SUBDIR += lightyears
@@ -609,6 +607,7 @@
     SUBDIR += minerbold
     SUBDIR += minetest
     SUBDIR += minetest_game
+    SUBDIR += minilens
     SUBDIR += mirrormagic
     SUBDIR += miscom
     SUBDIR += mkgichessclub
@@ -694,6 +693,7 @@
     SUBDIR += opencity
     SUBDIR += openclaw
     SUBDIR += openclonk
+    SUBDIR += opendungeons
     SUBDIR += opengfx
     SUBDIR += openglad
     SUBDIR += openjazz

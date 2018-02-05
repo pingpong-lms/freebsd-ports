@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	vapoursynth
-PORTVERSION=	R40
+PORTVERSION=	R43
 CATEGORIES=	multimedia
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -21,13 +21,6 @@ DATADIR=	${PREFIX}/lib/vapoursynth
 OPTIONS_DEFINE=	DEBUG DOCS FRAME_GUARD
 OPTIONS_DEFAULT=${OPTIONS_GROUP_COMPS} ${OPTIONS_GROUP_PLUGINS}
 OPTIONS_SUB=	yes
-
-# XXX After r417413 poudriere requires textproc/py-sphinx being built
-# with the same python version as USES=python here but it's currently
-# not possible due to https://github.com/freebsd/poudriere/issues/259
-.if defined(PACKAGE_BUILDING)
-OPTIONS_EXCLUDE=DOCS
-.endif
 
 OPTIONS_DEFINE_amd64=	SIMD
 OPTIONS_DEFINE_i386=	SIMD
@@ -127,7 +120,7 @@ post-build-DOCS-on:
 	fi
 
 post-install-DOCS-on:
-	${INSTALL_MAN} ${WRKSRC}/doc/_build/texinfo/VapourSynth.info \
+	${INSTALL_DATA} ${WRKSRC}/doc/_build/texinfo/VapourSynth.info \
 		${STAGEDIR}${PREFIX}/${INFO_PATH}
 	(cd ${WRKSRC}/doc/_build/html && ${COPYTREE_SHARE} \
 		"${PORTDOCS}" ${STAGEDIR}${DOCSDIR})

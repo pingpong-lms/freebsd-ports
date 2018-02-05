@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	palemoon
-DISTVERSION=	27.6.2
+DISTVERSION=	27.7.2
 DISTVERSIONSUFFIX=_Release
 CATEGORIES=	www ipv6
 
@@ -17,7 +17,7 @@ BUILD_DEPENDS=	nspr>=4.15:devel/nspr \
 		png>=1.6.16:graphics/png \
 		libvpx>=1.5.0:multimedia/libvpx \
 		sqlite3>=3.19.3:databases/sqlite3 \
-		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3 \
+		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
 		autoconf-2.13:devel/autoconf213 \
 		yasm:devel/yasm \
 		zip:archivers/zip
