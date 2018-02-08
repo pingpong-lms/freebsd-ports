@@ -361,7 +361,6 @@
     SUBDIR += cram
     SUBDIR += creduce
     SUBDIR += critcl
-    SUBDIR += cs-eric6
     SUBDIR += cscope
     SUBDIR += cscout
     SUBDIR += csmith
@@ -1214,7 +1213,6 @@
     SUBDIR += isa-l
     SUBDIR += isl
     SUBDIR += ispc
-    SUBDIR += it-eric6
     SUBDIR += itext
     SUBDIR += ivykis
     SUBDIR += iz
@@ -1339,6 +1337,7 @@
     SUBDIR += libchipcard
     SUBDIR += libcidr
     SUBDIR += libcii
+    SUBDIR += libcjson
     SUBDIR += libclc
     SUBDIR += libcli
     SUBDIR += libconcurrent
@@ -4574,6 +4573,7 @@
     SUBDIR += py-libtmux
     SUBDIR += py-libusb1
     SUBDIR += py-libusb115
+    SUBDIR += py-libversion
     SUBDIR += py-libvirt
     SUBDIR += py-libzfs
     SUBDIR += py-linecache2
@@ -4670,6 +4670,7 @@
     SUBDIR += py-oslo.versionedobjects
     SUBDIR += py-oslo.vmware
     SUBDIR += py-osprofiler
+    SUBDIR += py-p4python
     SUBDIR += py-packaging
     SUBDIR += py-palm
     SUBDIR += py-parsedatetime
@@ -4680,6 +4681,7 @@
     SUBDIR += py-paver
     SUBDIR += py-pbr
     SUBDIR += py-pefile
+    SUBDIR += py-pep8-naming
     SUBDIR += py-period
     SUBDIR += py-petname
     SUBDIR += py-pex
@@ -5400,7 +5402,6 @@
     SUBDIR += rubygem-equalizer
     SUBDIR += rubygem-errand
     SUBDIR += rubygem-et-orbi
-    SUBDIR += rubygem-event-bus
     SUBDIR += rubygem-eventmachine
     SUBDIR += rubygem-excon
     SUBDIR += rubygem-execjs
@@ -5958,8 +5959,8 @@
     SUBDIR += sysconftool
     SUBDIR += sysfsutils
     SUBDIR += t1lib
-    SUBDIR += tablist
     SUBDIR += ta-lib
+    SUBDIR += tablist
     SUBDIR += tailor
     SUBDIR += talloc
     SUBDIR += tass64
@@ -5997,6 +5998,7 @@
     SUBDIR += tig
     SUBDIR += tigcc
     SUBDIR += tijmp
+    SUBDIR += tinycbor
     SUBDIR += tinylaf
     SUBDIR += tinyq
     SUBDIR += tkcon
@@ -6011,7 +6013,6 @@
     SUBDIR += tokei
     SUBDIR += tortoisehg
     SUBDIR += tpasm
-    SUBDIR += tr-eric6
     SUBDIR += trac-bitten
     SUBDIR += tradcpp
     SUBDIR += trio
