@@ -41,7 +41,7 @@ RUN_DEPENDS= \
 	p5-Proc-ProcessTable>0:devel/p5-Proc-ProcessTable \
 	p5-Crypt-SSLeay>0:security/p5-Crypt-SSLeay \
 	p5-Net-DNS>0:dns/p5-Net-DNS \
-	nrpe2:net-mgmt/nrpe \
+	nrpe3:net-mgmt/nrpe3 \
 	collectd:net-mgmt/collectd5 \
 	telegraf:net-mgmt/telegraf \
 	snmpd:net-mgmt/net-snmp \
