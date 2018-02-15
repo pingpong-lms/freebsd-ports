@@ -523,7 +523,7 @@
     SUBDIR += k8temp
     SUBDIR += kcm-polkit-kde
     SUBDIR += kcron
-    SUBDIR += kdeadmin4
+    SUBDIR += kdeadmin-kde4
     SUBDIR += kdf
     SUBDIR += kdirstat
     SUBDIR += keyboard-daemon
@@ -575,6 +575,7 @@
     SUBDIR += lmmon
     SUBDIR += lmon
     SUBDIR += lnav
+    SUBDIR += lockfile-progs
     SUBDIR += log_analysis
     SUBDIR += logrotate
     SUBDIR += logstalgia

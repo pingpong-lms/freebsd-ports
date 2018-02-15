@@ -339,7 +339,7 @@
     SUBDIR += kannel
     SUBDIR += kannel-sqlbox
     SUBDIR += kcgi
-    SUBDIR += kdewebdev4
+    SUBDIR += kdewebdev-kde4
     SUBDIR += kf5-kdewebkit
     SUBDIR += kf5-khtml
     SUBDIR += kf5-kjs
@@ -498,7 +498,7 @@
     SUBDIR += mod_rpaf2
     SUBDIR += mod_scgi
     SUBDIR += mod_security
-    SUBDIR += mod_security-devel
+    SUBDIR += mod_security3
     SUBDIR += mod_setenvifplus
     SUBDIR += mod_spdy
     SUBDIR += mod_tidy
@@ -591,6 +591,7 @@
     SUBDIR += opera-linuxplugins
     SUBDIR += orangehrm
     SUBDIR += oscommerce
+    SUBDIR += osrm-backend
     SUBDIR += otrs
     SUBDIR += otter-browser
     SUBDIR += owncloud
@@ -2165,7 +2166,6 @@
     SUBDIR += rubygem-ruby-readability
     SUBDIR += rubygem-savon
     SUBDIR += rubygem-sawyer
-    SUBDIR += rubygem-scrapi
     SUBDIR += rubygem-select2-rails
     SUBDIR += rubygem-select2-rails3
     SUBDIR += rubygem-selenium-webdriver

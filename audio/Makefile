@@ -237,6 +237,7 @@
     SUBDIR += goobox
     SUBDIR += gqmpeg
     SUBDIR += gqradio
+    SUBDIR += gradio
     SUBDIR += gramofile
     SUBDIR += grip
     SUBDIR += gsm
@@ -418,6 +419,7 @@
     SUBDIR += libmusicbrainz3
     SUBDIR += libmusicbrainz5
     SUBDIR += libmusicxml
+    SUBDIR += libmysofa
     SUBDIR += libnjb
     SUBDIR += libnoise
     SUBDIR += libogg
@@ -509,6 +511,7 @@
     SUBDIR += mma
     SUBDIR += moc
     SUBDIR += modplugplay
+    SUBDIR += moodbar
     SUBDIR += moony-lv2
     SUBDIR += mous
     SUBDIR += mp-player
@@ -633,6 +636,7 @@
     SUBDIR += penguinsap
     SUBDIR += pianobar
     SUBDIR += picard
+    SUBDIR += picard-plugins
     SUBDIR += pithos
     SUBDIR += play
     SUBDIR += playgsf
@@ -649,6 +653,7 @@
     SUBDIR += puddletag
     SUBDIR += pulseaudio
     SUBDIR += pulseaudio-module-sndio
+    SUBDIR += py-SoundFile
     SUBDIR += py-al
     SUBDIR += py-ao
     SUBDIR += py-apetag
