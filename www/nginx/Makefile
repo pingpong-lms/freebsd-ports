@@ -3,7 +3,7 @@
 
 PORTNAME=	nginx
 PORTVERSION=	1.12.2
-PORTREVISION?=	8
+PORTREVISION?=	9
 PORTEPOCH=	2
 CATEGORIES=	www
 MASTER_SITES=	http://nginx.org/download/
@@ -1135,7 +1135,7 @@ CONFIGURE_ARGS+=--add-module=${WRKSRC_arrayvar}
 .endif
 
 .if ${PORT_OPTIONS:MBROTLI}
-NGINX_BROTLI_VERSION=	 47550a2
+NGINX_BROTLI_VERSION=	 8cd9dd5
 LIB_DEPENDS+=	libbrotlicommon.so:archivers/brotli
 GH_ACCOUNT+=	eustas:brotli
 GH_PROJECT+=	ngx_brotli:brotli
@@ -1172,8 +1172,6 @@ GROUPS?=${WWWGRP}
 
 .if defined(NGINX_OPENSSL)
 USES+=		ssl
-BROKEN_SSL=	openssl-devel
-BROKEN_SSL_REASON_openssl-devel=	undefined reference to SSLeay_version
 .endif
 
 pre-everything::
