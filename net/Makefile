@@ -134,7 +134,7 @@
     SUBDIR += enet
     SUBDIR += erlang-ranch
     SUBDIR += erlang-xmlrpc
-    SUBDIR += eternaltcp
+    SUBDIR += eternalterminal
     SUBDIR += etrace
     SUBDIR += exabgp
     SUBDIR += exaddos
@@ -999,6 +999,7 @@
     SUBDIR += py-dugong
     SUBDIR += py-ec2-cli-tools
     SUBDIR += py-eventlet
+    SUBDIR += py-flask-xml-rpc
     SUBDIR += py-gntp
     SUBDIR += py-gspread
     SUBDIR += py-gspreadsheet

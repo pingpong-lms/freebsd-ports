@@ -200,6 +200,7 @@
     SUBDIR += cpuburn
     SUBDIR += cpuid
     SUBDIR += cpulimit
+    SUBDIR += cpupdate
     SUBDIR += cramfs
     SUBDIR += crashme
     SUBDIR += createrepo
@@ -1003,7 +1004,6 @@
     SUBDIR += rtty
     SUBDIR += rubygem-backup
     SUBDIR += rubygem-bosh-gen
-    SUBDIR += rubygem-bosh_cli
     SUBDIR += rubygem-bundler
     SUBDIR += rubygem-bundler_ext
     SUBDIR += rubygem-capistrano
