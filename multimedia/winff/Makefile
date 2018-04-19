@@ -13,10 +13,13 @@ COMMENT=	Convert your videos quickly, easily, and all at once
 
 LICENSE=	GPLv3
 
+BROKEN=		fails to build
+
 BUILD_DEPENDS=	lazbuild:editors/lazarus
 LIB_DEPENDS=	libavutil.so:multimedia/ffmpeg
 
 NO_WRKSUBDIR=	yes
+USES=		fpc
 USE_XORG=	x11
 USE_FPC=	cairo fcl-base fcl-image fcl-json fcl-xml pasjpeg regexpr x11
 USE_GNOME=	cairo

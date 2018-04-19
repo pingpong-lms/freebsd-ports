@@ -2,7 +2,7 @@
 
 PORTNAME=	domoticz
 PORTVERSION=	3.${DOMOTICZ_REL}
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	www
 
 MAINTAINER=	kiwi@oav.net
@@ -10,8 +10,6 @@ COMMENT=	Home Automation System
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/License.txt
-
-BROKEN=		fails to build with boost 1.66, see bug 224181
 
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libexpat.so:textproc/expat2

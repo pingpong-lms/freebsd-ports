@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	sops
-DISTVERSION=	3.0.2
+DISTVERSION=	3.0.3
 CATEGORIES=	security editors
 
 MAINTAINER=	dg@syrec.org
@@ -23,7 +23,7 @@ PORTDOCS=	README.rst CHANGELOG.rst
 
 do-build:
 	@cd ${WRKSRC}/${GH_SUBDIR} && \
-		${SETENV} GOPATH=${WRKSRC} go build -o ${PORTNAME} ./cmd/sops
+		${SETENV} ${MAKE_ENV} GOPATH=${WRKSRC} go build -o ${PORTNAME} ./cmd/sops
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin

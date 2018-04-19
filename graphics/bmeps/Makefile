@@ -2,9 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	bmpp
-DISTVERSION=	4.11.1
+PORTVERSION=	4.12.0a
 CATEGORIES=	graphics perl5
-MASTER_SITES=	SF/dktools/dktools/dktools-${PORTVERSION}
+MASTER_SITES=	SF/dktools/dktools/dktools-${PORTVERSION:C/a//}
 DISTNAME=	dktools-${PORTVERSION}
 
 MAINTAINER=	takefu@airport.fm
@@ -18,7 +18,9 @@ LIB_DEPENDS=	libpng.so:graphics/png \
 
 CONFLICTS_INSTALL=	dktools[0-9]*
 
+USES=		gmake jpeg localbase:ldflags
 GNU_CONFIGURE=	yes
+ALL_TARGET=	bmpp
 
 # We do not want to include sys/termios.h even if it exists, and we do not want
 # to depend on BDB for db.h (it is used by other parts of dktools).
@@ -26,10 +28,8 @@ CONFIGURE_ENV=	ac_cv_header_sys_termios_h=no\
 		ac_cv_header_db_h=no\
 		DESTDIR=${STAGEDIR}
 
-USES=		gmake jpeg localbase:ldflags
-
-ALL_TARGET=	bmpp
 PLIST_FILES=	bin/bmpp man/man1/bmpp.1.gz
+WRKSRC=		${WRKDIR}/${DISTNAME:C/a//}
 
 post-patch:
 	@${REINPLACE_CMD} 's@sz->lsz =@st->lsz =@' ${WRKSRC}/dk3sf.c

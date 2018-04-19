@@ -21,9 +21,7 @@ RUN_DEPENDS=	p5-XML-Simple>=0:textproc/p5-XML-Simple \
 		p5-SOAP-Lite>=0:net/p5-SOAP-Lite \
 		p5-XML-Entities>=0:textproc/p5-XML-Entities
 
-USES=		mysql perl5
-USE_APACHE_RUN=	22+
-WANT_PHP_WEB=	yes
+USES=		apache:run,2.2+ mysql perl5 php:web
 USE_PHP=	mysql pcre zlib session xml gd zip openssl mbstring
 NO_ARCH=	yes
 NO_BUILD=	yes

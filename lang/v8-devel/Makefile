@@ -3,7 +3,7 @@
 
 PORTNAME=	v8
 PORTVERSION=	3.27.7
-PORTREVISION=	14
+PORTREVISION=	15
 CATEGORIES=	lang
 MASTER_SITES=	LOCAL/vanilla
 PKGNAMESUFFIX=	-devel
@@ -12,6 +12,8 @@ MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Open source JavaScript engine by Google
 
 LICENSE=	BSD3CLAUSE
+
+BROKEN=		fails to build
 
 LIB_DEPENDS=	libicui18n.so:devel/icu
 

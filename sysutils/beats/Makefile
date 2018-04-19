@@ -2,11 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	beats
-PORTVERSION=	6.2.2
+PORTVERSION=	6.2.3
 DISTVERSIONPREFIX=v
 CATEGORIES=	sysutils
 
-MAINTAINER=	girgen@FreeBSD.org
+MAINTAINER=	elastic@FreeBSD.org
 COMMENT=	Collect logs locally and send to remote logstash
 
 LICENSE=	APACHE20

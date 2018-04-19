@@ -304,12 +304,15 @@
     SUBDIR += keynote
     SUBDIR += keyprint
     SUBDIR += kf5-kdesu
+    SUBDIR += kgpg
     SUBDIR += kgpg-kde4
     SUBDIR += kickpass
+    SUBDIR += kleopatra
     SUBDIR += knock
     SUBDIR += knocker
     SUBDIR += kpcli
     SUBDIR += kqoauth
+    SUBDIR += kr
     SUBDIR += krb5
     SUBDIR += krb5-114
     SUBDIR += krb5-115
@@ -318,6 +321,7 @@
     SUBDIR += krb5-devel
     SUBDIR += kripp
     SUBDIR += kstart
+    SUBDIR += kwalletmanager
     SUBDIR += kwalletmanager-kde4
     SUBDIR += l0pht-watch
     SUBDIR += l0phtcrack
@@ -340,6 +344,7 @@
     SUBDIR += libgringotts
     SUBDIR += libhijack
     SUBDIR += libident
+    SUBDIR += libkleo
     SUBDIR += libkpass
     SUBDIR += libksba
     SUBDIR += libmcrypt
@@ -480,6 +485,7 @@
     SUBDIR += osslsigncode
     SUBDIR += otpw
     SUBDIR += outguess
+    SUBDIR += owasp-dependency-check
     SUBDIR += p11-kit
     SUBDIR += p5-Apache-Htpasswd
     SUBDIR += p5-App-Genpass
@@ -579,6 +585,7 @@
     SUBDIR += p5-Crypt-OpenSSL-DSA
     SUBDIR += p5-Crypt-OpenSSL-EC
     SUBDIR += p5-Crypt-OpenSSL-ECDSA
+    SUBDIR += p5-Crypt-OpenSSL-Guess
     SUBDIR += p5-Crypt-OpenSSL-PKCS10
     SUBDIR += p5-Crypt-OpenSSL-RSA
     SUBDIR += p5-Crypt-OpenSSL-Random
@@ -866,6 +873,7 @@
     SUBDIR += pulledpork
     SUBDIR += pure-sfv
     SUBDIR += putty
+    SUBDIR += putty-gtk2
     SUBDIR += putty-nogtk
     SUBDIR += pvk
     SUBDIR += pwauth
@@ -942,6 +950,8 @@
     SUBDIR += py-mhash
     SUBDIR += py-mixbox
     SUBDIR += py-mnemonic
+    SUBDIR += py-netmiko
+    SUBDIR += py-ntlm-auth
     SUBDIR += py-oauth2client
     SUBDIR += py-oauthlib
     SUBDIR += py-obfsproxy-tor
@@ -979,6 +989,7 @@
     SUBDIR += py-pyscard
     SUBDIR += py-pysha3
     SUBDIR += py-python-gnupg
+    SUBDIR += py-python-nss
     SUBDIR += py-python-openid
     SUBDIR += py-python-registry
     SUBDIR += py-python-social-auth
@@ -988,6 +999,7 @@
     SUBDIR += py-requests-kerberos
     SUBDIR += py-rsa
     SUBDIR += py-safe
+    SUBDIR += py-scp
     SUBDIR += py-scrypt
     SUBDIR += py-service_identity
     SUBDIR += py-signedjson
@@ -1009,6 +1021,7 @@
     SUBDIR += py-vulndb
     SUBDIR += py-yara
     SUBDIR += py-yubioath-desktop
+    SUBDIR += py-yubikey-manager
     SUBDIR += py-zope.app.authentication
     SUBDIR += py-zope.app.localpermission
     SUBDIR += py-zope.app.principalannotation
@@ -1023,9 +1036,8 @@
     SUBDIR += py-zope.security
     SUBDIR += py-zope.securitypolicy
     SUBDIR += py-zope.session
-    SUBDIR += py-zxcvbn-python
-    SUBDIR += qtkeychain-qt4
-    SUBDIR += qtkeychain-qt5
+    SUBDIR += py-zxcvbn
+    SUBDIR += qtkeychain
     SUBDIR += quantis
     SUBDIR += quantis-kmod
     SUBDIR += racoon2
@@ -1067,12 +1079,15 @@
     SUBDIR += rubygem-bcrypt
     SUBDIR += rubygem-bcrypt-ruby
     SUBDIR += rubygem-bcrypt_pbkdf
+    SUBDIR += rubygem-devise_pam_authenticatable2
     SUBDIR += rubygem-devise-two-factor
     SUBDIR += rubygem-devise-two-factor-rails5
     SUBDIR += rubygem-devise-two-factor-rails50
     SUBDIR += rubygem-digest-crc
     SUBDIR += rubygem-doorkeeper
+    SUBDIR += rubygem-doorkeeper42
     SUBDIR += rubygem-doorkeeper-openid_connect
+    SUBDIR += rubygem-doorkeeper-openid_connect12
     SUBDIR += rubygem-doorkeeper-rails5
     SUBDIR += rubygem-doorkeeper-rails50
     SUBDIR += rubygem-encryptor
@@ -1104,8 +1119,10 @@
     SUBDIR += rubygem-omniauth
     SUBDIR += rubygem-omniauth14
     SUBDIR += rubygem-omniauth-bitbucket
+    SUBDIR += rubygem-omniauth-cas
     SUBDIR += rubygem-omniauth-cas3
     SUBDIR += rubygem-omniauth-gitlab
+    SUBDIR += rubygem-omniauth-jwt
     SUBDIR += rubygem-omniauth-multipassword
     SUBDIR += rubygem-omniauth-oauth2-generic
     SUBDIR += rubygem-omniauth-saml
@@ -1145,6 +1162,7 @@
     SUBDIR += rubygem-rex-text
     SUBDIR += rubygem-rex-zip
     SUBDIR += rubygem-roauth
+    SUBDIR += rubygem-rpam2
     SUBDIR += rubygem-ruby-hmac
     SUBDIR += rubygem-ruby-rc4
     SUBDIR += rubygem-ruby-saml
@@ -1175,6 +1193,7 @@
     SUBDIR += secpanel
     SUBDIR += sectok
     SUBDIR += secure_delete
+    SUBDIR += setaudit 
     SUBDIR += sguil
     SUBDIR += sha
     SUBDIR += sha1collisiondetection

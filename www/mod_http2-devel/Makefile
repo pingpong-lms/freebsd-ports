@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	mod_http2
-PORTVERSION=	1.10.16
+PORTVERSION=	1.10.17
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
@@ -16,9 +16,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libnghttp2.so:www/libnghttp2
 
-USES=		autoreconf libtool ssl
+USES=		apache:2.4+ autoreconf libtool ssl
 USE_GITHUB=	yes
-USE_APACHE=	24+
 
 GH_ACCOUNT=	icing
 GH_PROJECT=	mod_h2
@@ -29,11 +28,15 @@ MODULENAME=	${GH_PROJECT}
 
 CFLAGS+=	-I${LOCALBASE}/include
 
+SUB_FILES=	200_mod_http2.conf 300_mod_proxy_http2.conf
 PORTDOCS=	README README.md
-PLIST_FILES=	${APACHEMODDIR}/mod_h2.so \
-		${APACHEMODDIR}/mod_proxy_h2.so
 
 post-install:
+	${MKDIR} ${STAGEDIR}${PREFIX}/${APACHEETCDIR}/modules.d
+	${INSTALL_DATA} ${WRKDIR}/200_mod_http2.conf \
+		${STAGEDIR}${PREFIX}/${APACHEETCDIR}/modules.d/200_mod_h2.conf.sample
+	${INSTALL_DATA} ${WRKDIR}/300_mod_proxy_http2.conf \
+		${STAGEDIR}${PREFIX}/${APACHEETCDIR}/modules.d/300_mod_proxy_h2.conf.sample
 	# Rename mod_http2 to mod_h2 to avoid conflict with Apache24
 	${MV} ${STAGEDIR}${PREFIX}/${APACHEMODDIR}/mod_http2.so.0.0.0 \
 		${STAGEDIR}${PREFIX}/${APACHEMODDIR}/${MODULENAME}.so

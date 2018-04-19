@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	zabbix34
-PORTVERSION=	3.4.7
-PORTREVISION?=	1
+PORTVERSION=	3.4.8
+PORTREVISION?=	0
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/zabbix/ZABBIX%20Latest%20Stable/${PORTVERSION}
 PKGNAMESUFFIX?=	-server
@@ -27,6 +27,7 @@ ZABBIX_BUILD=	${PKGNAMESUFFIX:S/^-//}
 
 .if ${ZABBIX_BUILD} != "frontend" # frontend only needs the version/distribution settings
 .if ${ZABBIX_BUILD} != "agent"
+CONFIGURE_ARGS+=	--with-libevent=${LOCALBASE}
 LIB_DEPENDS+=	libevent.so:devel/libevent
 USE_RC_SUBR=	zabbix_${ZABBIX_BUILD}
 .else

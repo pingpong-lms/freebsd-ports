@@ -3,6 +3,7 @@
 
 PORTNAME=	passman
 PORTVERSION=	2.1.4
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://releases.passman.cc/
 PKGNAMEPREFIX=	nextcloud-
@@ -18,11 +19,11 @@ RUN_DEPENDS=	nextcloud>=9:www/nextcloud
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-
+USES=		php
 NO_BUILD=	yes
 NO_ARCH=	yes
 
-WWWDIR=		${PREFIX}/www/nextcloud/apps/${PORTNAME}
+WWWDIR=		${PREFIX}/www/nextcloud/apps-pkg/${PORTNAME}
 
 do-install:
 	${MKDIR} ${STAGEDIR}${WWWDIR}
