@@ -42,6 +42,7 @@
     SUBDIR += R-cran-hms
     SUBDIR += R-cran-iterators
     SUBDIR += R-cran-itertools
+    SUBDIR += R-cran-later
     SUBDIR += R-cran-lubridate
     SUBDIR += R-cran-magrittr
     SUBDIR += R-cran-memoise
@@ -52,6 +53,7 @@
     SUBDIR += R-cran-plogr
     SUBDIR += R-cran-plyr
     SUBDIR += R-cran-praise
+    SUBDIR += R-cran-promises
     SUBDIR += R-cran-proto
     SUBDIR += R-cran-purrr
     SUBDIR += R-cran-randomForest
@@ -309,6 +311,7 @@
     SUBDIR += cld2
     SUBDIR += clewn
     SUBDIR += clig
+    SUBDIR += cligen
     SUBDIR += clinfo
     SUBDIR += clisp-hyperspec
     SUBDIR += clojure-cider
@@ -590,6 +593,7 @@
     SUBDIR += etcd
     SUBDIR += etcd31
     SUBDIR += etcd32
+    SUBDIR += etcd33
     SUBDIR += etl
     SUBDIR += euca2ools
     SUBDIR += evemu
@@ -1699,6 +1703,7 @@
     SUBDIR += m17n-docs
     SUBDIR += m17n-lib
     SUBDIR += m4
+    SUBDIR += mage
     SUBDIR += magit
     SUBDIR += magit-popup
     SUBDIR += make++
@@ -2529,6 +2534,7 @@
     SUBDIR += p5-File-ConfigDir
     SUBDIR += p5-File-Copy-Link
     SUBDIR += p5-File-Copy-Recursive
+    SUBDIR += p5-File-Copy-Recursive-Reduced
     SUBDIR += p5-File-CountLines
     SUBDIR += p5-File-CreationTime
     SUBDIR += p5-File-DesktopEntry
@@ -4288,6 +4294,7 @@
     SUBDIR += py-astor
     SUBDIR += py-astroid
     SUBDIR += py-asttokens
+    SUBDIR += py-async_generator
     SUBDIR += py-async_timeout
     SUBDIR += py-asyncio
     SUBDIR += py-atomiclong
@@ -4652,7 +4659,7 @@
     SUBDIR += py-monotonic
     SUBDIR += py-more-itertools
     SUBDIR += py-mox
-    SUBDIR += py-msgpack-python
+    SUBDIR += py-msgpack
     SUBDIR += py-multi_key_dict
     SUBDIR += py-multipledispatch
     SUBDIR += py-mwlib
@@ -6014,6 +6021,7 @@
     SUBDIR += sonarqube
     SUBDIR += sope2
     SUBDIR += sope3
+    SUBDIR += sope4
     SUBDIR += sord
     SUBDIR += sourcenav
     SUBDIR += sparc64-binutils
@@ -6046,7 +6054,7 @@
     SUBDIR += subversion
     SUBDIR += subversion-book
     SUBDIR += subversion-static
-    SUBDIR += subversion18
+    SUBDIR += subversion19
     SUBDIR += subversive
     SUBDIR += svk
     SUBDIR += svn2git
