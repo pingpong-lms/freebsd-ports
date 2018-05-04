@@ -314,6 +314,7 @@
     SUBDIR += cligen
     SUBDIR += clinfo
     SUBDIR += clisp-hyperspec
+    SUBDIR += clixon
     SUBDIR += clojure-cider
     SUBDIR += cloudabi
     SUBDIR += cloudabi-toolchain
@@ -360,6 +361,7 @@
     SUBDIR += cppunit
     SUBDIR += cpputest
     SUBDIR += cproto
+    SUBDIR += cpu_features
     SUBDIR += cpuflags
     SUBDIR += cquery
     SUBDIR += cram
@@ -1259,17 +1261,23 @@
     SUBDIR += kde-dev-utils
     SUBDIR += kde-dev-utils-kde4
     SUBDIR += kdebindings-kde4
+    SUBDIR += kdesdk
     SUBDIR += kdesdk-kde4
     SUBDIR += kdesdk-kioslaves-kde4
     SUBDIR += kdesdk-strigi-analyzers-kde4
     SUBDIR += kdesdk-thumbnailers
     SUBDIR += kdesdk-thumbnailers-kde4
+    SUBDIR += kdesvn
     SUBDIR += kdesvn-kde4
+    SUBDIR += kdev-php
+    SUBDIR += kdev-python
+    SUBDIR += kdevelop
     SUBDIR += kdevelop-kde4
     SUBDIR += kdevelop-pg-qt
-    SUBDIR += kdevelop-php
-    SUBDIR += kdevelop-php-docs
-    SUBDIR += kdevplatform
+    SUBDIR += kdevelop-pg-qt-kde4
+    SUBDIR += kdevelop-php-kde4
+    SUBDIR += kdevelop-php-docs-kde4
+    SUBDIR += kdevplatform-kde4
     SUBDIR += kf5-extra-cmake-modules
     SUBDIR += kf5-kapidox
     SUBDIR += kf5-kauth
@@ -4122,6 +4130,9 @@
     SUBDIR += pkg-info.el
     SUBDIR += pkgconf
     SUBDIR += plan9port
+    SUBDIR += plasma5-khotkeys
+    SUBDIR += plasma5-kwrited
+    SUBDIR += plasma5-plasma-sdk
     SUBDIR += pmccabe
     SUBDIR += pmd
     SUBDIR += poco
@@ -5489,6 +5500,7 @@
     SUBDIR += rubygem-fattr
     SUBDIR += rubygem-ffi
     SUBDIR += rubygem-ffi-compiler
+    SUBDIR += rubygem-ffi-win32-extensions
     SUBDIR += rubygem-ffi-yajl
     SUBDIR += rubygem-file-tail
     SUBDIR += rubygem-filesize
@@ -5765,6 +5777,7 @@
     SUBDIR += rubygem-recaptcha
     SUBDIR += rubygem-recaptcha3
     SUBDIR += rubygem-recursive-open-struct
+    SUBDIR += rubygem-recursive-open-struct10
     SUBDIR += rubygem-recursive-open-struct100
     SUBDIR += rubygem-redis-activesupport
     SUBDIR += rubygem-redis-activesupport-rails5
@@ -5969,6 +5982,7 @@
     SUBDIR += rvm
     SUBDIR += sabre
     SUBDIR += safe-iop
+    SUBDIR += samurai
     SUBDIR += sbt
     SUBDIR += scalatest
     SUBDIR += scandoc
@@ -5992,6 +6006,7 @@
     SUBDIR += shapelib
     SUBDIR += shards
     SUBDIR += shedskin
+    SUBDIR += shell-toolbox
     SUBDIR += shflags
     SUBDIR += shiboken
     SUBDIR += shmap
@@ -6177,6 +6192,7 @@
     SUBDIR += xorg-macros
     SUBDIR += xparam
     SUBDIR += xsd
+    SUBDIR += xtensa-esp32-elf
     SUBDIR += xtl
     SUBDIR += xtoolchain-llvm-devel
     SUBDIR += xtoolchain-llvm40

@@ -417,12 +417,10 @@
     SUBDIR += octave-forge-nlwing2
     SUBDIR += octave-forge-nnet
     SUBDIR += octave-forge-nurbs
-    SUBDIR += octave-forge-ocs
     SUBDIR += octave-forge-oct2mat
     SUBDIR += octave-forge-octclip
     SUBDIR += octave-forge-octproj
     SUBDIR += octave-forge-odebvp
-    SUBDIR += octave-forge-odepkg
     SUBDIR += octave-forge-optics
     SUBDIR += octave-forge-optim
     SUBDIR += octave-forge-optiminterp
@@ -703,6 +701,7 @@
     SUBDIR += py-pysparse
     SUBDIR += py-pysym
     SUBDIR += py-pyvtk
+    SUBDIR += py-random2
     SUBDIR += py-roman
     SUBDIR += py-scientific
     SUBDIR += py-seaborn

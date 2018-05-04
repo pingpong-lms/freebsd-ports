@@ -76,6 +76,7 @@
     SUBDIR += chems
     SUBDIR += cherokee
     SUBDIR += choqok
+    SUBDIR += choqok-kde4
     SUBDIR += chpasswd
     SUBDIR += chromium
     SUBDIR += ckeditor
@@ -1470,6 +1471,7 @@
     SUBDIR += pivotx
     SUBDIR += piwigo
     SUBDIR += planet
+    SUBDIR += plasma5-plasma-browser-integration
     SUBDIR += plexwatchweb
     SUBDIR += plone
     SUBDIR += plugger
@@ -1614,6 +1616,7 @@
     SUBDIR += py-django-threaded-multihost
     SUBDIR += py-django-timezone-field
     SUBDIR += py-django-tinymce
+    SUBDIR += py-django-treebeard
     SUBDIR += py-django-voting
     SUBDIR += py-django111
     SUBDIR += py-django18

@@ -201,13 +201,12 @@
     SUBDIR += gofish
     SUBDIR += gogoc
     SUBDIR += google-cloud-sdk
-    SUBDIR += google-daemon
-    SUBDIR += google-startup-scripts
     SUBDIR += googlecl
     SUBDIR += gopher
     SUBDIR += goreplay
     SUBDIR += gotthard
     SUBDIR += gq
+    SUBDIR += graphpath
     SUBDIR += grdesktop
     SUBDIR += grilo
     SUBDIR += grilo-plugins
@@ -321,6 +320,7 @@
     SUBDIR += kcalutils
     SUBDIR += kcontacts
     SUBDIR += kdav
+    SUBDIR += kdenetwork
     SUBDIR += kdenetwork-filesharing
     SUBDIR += kdenetwork-kde4
     SUBDIR += kdenetwork-filesharing-kde4
@@ -332,6 +332,7 @@
     SUBDIR += kget-kde4
     SUBDIR += kidentitymanagement
     SUBDIR += kimap
+    SUBDIR += kio-gdrive
     SUBDIR += kio-upnp-ms
     SUBDIR += kippo
     SUBDIR += kissd
@@ -380,11 +381,13 @@
     SUBDIR += libkgapi
     SUBDIR += libksieve
     SUBDIR += libkvkontakte
+    SUBDIR += libkvkontakte-kde4
     SUBDIR += libmaia
     SUBDIR += libmateweather
     SUBDIR += libmaxminddb
     SUBDIR += libmdf
     SUBDIR += libmediawiki
+    SUBDIR += libmediawiki-kde4
     SUBDIR += libmms
     SUBDIR += libmxp
     SUBDIR += libnatpmp
@@ -1048,6 +1051,7 @@
     SUBDIR += py-kafka-python
     SUBDIR += py-kombu
     SUBDIR += py-ldap
+    SUBDIR += py-ldap0
     SUBDIR += py-ldap3
     SUBDIR += py-ldaptor
     SUBDIR += py-libcloud
@@ -1259,6 +1263,7 @@
     SUBDIR += rubygem-gitaly-proto088
     SUBDIR += rubygem-gitaly-proto094
     SUBDIR += rubygem-gitaly-proto095
+    SUBDIR += rubygem-gitaly-proto096
     SUBDIR += rubygem-gitlab_omniauth-ldap
     SUBDIR += rubygem-gitlab_omniauth-ldap1
     SUBDIR += rubygem-grpc
