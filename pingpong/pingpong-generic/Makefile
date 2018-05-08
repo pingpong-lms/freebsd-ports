@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-generic
-PORTVERSION=	0.14
+PORTVERSION=	0.15
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
 DISTFILES=	#
@@ -50,7 +50,7 @@ RUN_DEPENDS= \
 	lynx:www/lynx \
 	gpg2:security/gnupg \
 	sudo:security/sudo \
-	${LOCALBASE}/lib/nss_ldap.so.1:net/nss_ldap \
+	nslcd:net/nss-pam-ldapd-sasl \
 	${LOCALBASE}/lib/pam_mkhomedir.so:security/pam_mkhomedir \
 	xsltproc:textproc/libxslt \
 	xauth:x11/xauth \
