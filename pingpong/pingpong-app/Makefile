@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-app
-PORTVERSION=	0.13
+PORTVERSION=	0.14
 CATEGORIES=	pingpong
 MASTER_SITES=	#
 DISTFILES=	#
@@ -43,6 +43,7 @@ RUN_DEPENDS= \
 	xmlsec1:security/xmlsec1 \
 	${LOCALBASE}/share/fonts/webfonts/arial.ttf:x11-fonts/webfonts \
 	wkhtmltopdf:converters/wkhtmltopdf \
+	flask:www/py-flask \
 	${LOCALBASE}/share/pingpong-generic/installed.stamp:pingpong/pingpong-generic \
 	${LOCALBASE}/share/pingpong-aspell/installed.stamp:pingpong/pingpong-aspell
 
