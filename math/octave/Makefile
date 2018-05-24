@@ -3,6 +3,7 @@
 
 PORTNAME=	octave
 PORTVERSION=	${OCTAVE_VERSION}
+PORTREVISION=	2
 CATEGORIES=	math java
 MASTER_SITES=	GNU
 
@@ -32,7 +33,7 @@ LIB_DEPENDS=	libGraphicsMagick.so:graphics/GraphicsMagick \
 		libumfpack.so:math/suitesparse \
 		libglpk.so:math/glpk \
 		libgl2ps.so:print/gl2ps \
-		libqscintilla2_qt4.so:devel/qscintilla2 \
+		libqscintilla2_qt5.so:devel/qscintilla2-qt5 \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
 		libdrm.so:graphics/libdrm \
@@ -47,7 +48,8 @@ USE_TEX=	dvipsk:build formats:build
 GNU_CONFIGURE=	yes
 USE_JAVA=	yes
 JAVA_VERSION=	1.7+
-USE_QT4=	corelib gui network opengl moc_build qmake_build rcc_build uic_build linguist_build
+USE_QT5=	core gui help network opengl \
+		qmake_build buildtools_build linguist_build
 USE_XORG=	x11 xext xfixes xft
 USE_GL=		gl glu
 
@@ -59,6 +61,10 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ENV=	GPERF="${LOCALBASE}/bin/gperf" \
 		JAVA_HOME=${JAVA_HOME} \
 		MAKEINFO=${LOCALBASE}/bin/makeinfo \
+		MKINFO=${LOCALBASE}/bin/makeinfo \
+		MOC_QTVER=${LOCALBASE}/bin/moc \
+		UIC_QTVER=${LOCALBASE}/bin/uic \
+		RCC_QTVER=${LOCALBASE}/bin/rcc \
 		ac_cv_type_max_align_t=yes
 CONFIGURE_ARGS=	--host=${GNU_HOST} \
 		--with-blas="-L${LOCALBASE}/lib ${BLASLIB}" \
@@ -66,7 +72,7 @@ CONFIGURE_ARGS=	--host=${GNU_HOST} \
 		--enable-shared \
 		--disable-jit \
 		--disable-openmp \
-		--with-qt=4 \
+		--with-qt=5 \
 		--with-OSMesa-includedir=${LOCALBASE}/include/GL \
 		--with-OSMesa-libdir=${LOCALBASE}/lib
 
@@ -87,6 +93,7 @@ post-patch:
 	${REINPLACE_CMD} 's+lapack lapack_rs6k+${LAPACKLIB:C/-l//}+' ${WRKSRC}/configure
 	${REINPLACE_CMD} 's+-lumfpack+-lumfpack -lsuitesparseconfig -lamd -lcholmod -lcolamd ${LAPACKLIB}+' ${WRKSRC}/configure
 	${REINPLACE_CMD} 's+-lcholmod+-lumfpack -lsuitesparseconfig -lamd -lcholmod -lcolamd ${LAPACKLIB}+' ${WRKSRC}/configure
+	${REINPLACE_CMD} 's/"-qt$$qt_version"/"-qt=qt$$qt_version"/' ${WRKSRC}/configure
 
 post-install:
 	(cd ${STAGEDIR}${DATADIR} && ${LN} -s ${PORTVERSION}/imagelib  .)

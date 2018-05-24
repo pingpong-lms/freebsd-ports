@@ -1,3 +1,3 @@
-TIMESTAMP = 1525195238
-SHA256 (rubygem/gitaly-proto-0.98.0.gem) = 440c12de015f77e20fc3f844be02c8f293288724c84d0a0f5a18a2314a73181f
-SIZE (rubygem/gitaly-proto-0.98.0.gem) = 16384
+TIMESTAMP = 1527079400
+SHA256 (rubygem/gitaly-proto-0.100.0.gem) = 1a8b7606314d529e7ab6dceed73ac5c4bc77732e572c1cc09b9190f60a13fdda
+SIZE (rubygem/gitaly-proto-0.100.0.gem) = 16896

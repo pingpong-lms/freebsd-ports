@@ -542,6 +542,7 @@
     SUBDIR += elixir-tirexs
     SUBDIR += elixir-trailing_format_plug
     SUBDIR += elixir-tzdata
+    SUBDIR += elixir-unsafe
     SUBDIR += embb
     SUBDIR += epl.el
     SUBDIR += epm
@@ -1310,6 +1311,7 @@
     SUBDIR += kimwitu
     SUBDIR += kio-extras
     SUBDIR += kore
+    SUBDIR += kronosnet
     SUBDIR += ksql
     SUBDIR += kyra
     SUBDIR += kyua
@@ -1327,6 +1329,7 @@
     SUBDIR += libafterbase
     SUBDIR += liballium
     SUBDIR += libantlr3c
+    SUBDIR += libappindicator
     SUBDIR += libaravis
     SUBDIR += libarea
     SUBDIR += libarena
@@ -1445,6 +1448,7 @@
     SUBDIR += libhtp
     SUBDIR += libhyve-remote
     SUBDIR += libical
+    SUBDIR += libindicator
     SUBDIR += libinotify
     SUBDIR += libiqxmlrpc
     SUBDIR += libisofs
@@ -1653,7 +1657,6 @@
     SUBDIR += llvm34
     SUBDIR += llvm35
     SUBDIR += llvm38
-    SUBDIR += llvm39
     SUBDIR += llvm40
     SUBDIR += llvm50
     SUBDIR += llvm60
@@ -1877,12 +1880,8 @@
     SUBDIR += p4
     SUBDIR += p4.el
     SUBDIR += p4api
-    SUBDIR += p4d
     SUBDIR += p4delta
-    SUBDIR += p4ftpd
     SUBDIR += p4genpatch
-    SUBDIR += p4p
-    SUBDIR += p4web
     SUBDIR += p5-AI-Pathfinding-AStar
     SUBDIR += p5-AI-Prolog
     SUBDIR += p5-ARGV-Struct
@@ -2041,6 +2040,7 @@
     SUBDIR += p5-Cache-Simple-TimedExpiry
     SUBDIR += p5-Cairo-GObject
     SUBDIR += p5-Calendar-Simple
+    SUBDIR += p5-Call-Context
     SUBDIR += p5-Callback-Frame
     SUBDIR += p5-Canary-Stability
     SUBDIR += p5-Capture-Tiny
@@ -3252,6 +3252,7 @@
     SUBDIR += p5-Readonly
     SUBDIR += p5-Readonly-XS
     SUBDIR += p5-ReadonlyX
+    SUBDIR += p5-Reaper
     SUBDIR += p5-Ref-Util
     SUBDIR += p5-Ref-Util-XS
     SUBDIR += p5-Reflex
@@ -3392,6 +3393,7 @@
     SUBDIR += p5-Sub-Signatures
     SUBDIR += p5-Sub-Uplevel
     SUBDIR += p5-Sub-WrapPackages
+    SUBDIR += p5-Symbol-Get
     SUBDIR += p5-Symbol-Global-Name
     SUBDIR += p5-Symbol-Util
     SUBDIR += p5-Syntax-Keyword-Gather
@@ -3412,6 +3414,7 @@
     SUBDIR += p5-Sys-Trace
     SUBDIR += p5-Sys-Virt
     SUBDIR += p5-System-Command
+    SUBDIR += p5-System-Info
     SUBDIR += p5-System-Sub
     SUBDIR += p5-System2
     SUBDIR += p5-TAP-Formatter-JUnit
@@ -3728,6 +3731,7 @@
     SUBDIR += p5-Want
     SUBDIR += p5-WeakRef
     SUBDIR += p5-Workflow
+    SUBDIR += p5-X-Tiny
     SUBDIR += p5-XML-Compile-Tester
     SUBDIR += p5-XML-Pastor
     SUBDIR += p5-XS-Object-Magic
@@ -3787,7 +3791,6 @@
     SUBDIR += p5-perlqt-kde4
     SUBDIR += p5-pip
     SUBDIR += p5-prefork
-    SUBDIR += p5-reaper
     SUBDIR += p5-relative
     SUBDIR += p5-rpm-build-perl
     SUBDIR += p5-self
@@ -4130,6 +4133,7 @@
     SUBDIR += pkg-info.el
     SUBDIR += pkgconf
     SUBDIR += plan9port
+    SUBDIR += plasma
     SUBDIR += plasma5-khotkeys
     SUBDIR += plasma5-kwrited
     SUBDIR += plasma5-plasma-sdk
@@ -4354,6 +4358,7 @@
     SUBDIR += py-canonicaljson
     SUBDIR += py-capstone
     SUBDIR += py-castellan
+    SUBDIR += py-cbor
     SUBDIR += py-cclib
     SUBDIR += py-cdg
     SUBDIR += py-celery
@@ -4738,6 +4743,7 @@
     SUBDIR += py-p4python
     SUBDIR += py-packaging
     SUBDIR += py-palm
+    SUBDIR += py-parallax
     SUBDIR += py-parsedatetime
     SUBDIR += py-path.py
     SUBDIR += py-pathlib
@@ -4783,6 +4789,7 @@
     SUBDIR += py-ptvsd
     SUBDIR += py-pudb
     SUBDIR += py-py
+    SUBDIR += py-py-ubjson
     SUBDIR += py-pyasn1
     SUBDIR += py-pyasn1-modules
     SUBDIR += py-pybind11
@@ -5048,6 +5055,7 @@
     SUBDIR += py-typed-ast
     SUBDIR += py-typing
     SUBDIR += py-tzlocal
+    SUBDIR += py-u-msgpack-python
     SUBDIR += py-ua_parser
     SUBDIR += py-ujson
     SUBDIR += py-uncompyle2
@@ -5089,6 +5097,7 @@
     SUBDIR += py-wsgitools
     SUBDIR += py-wsgiutils
     SUBDIR += py-wsme
+    SUBDIR += py-xarray
     SUBDIR += py-xattr
     SUBDIR += py-xcaplib
     SUBDIR += py-xdg
@@ -5465,6 +5474,7 @@
     SUBDIR += rubygem-deprecated
     SUBDIR += rubygem-deprecated2
     SUBDIR += rubygem-descendants_tracker
+    SUBDIR += rubygem-device_detector
     SUBDIR += rubygem-devise
     SUBDIR += rubygem-devise-rails5
     SUBDIR += rubygem-devise-rails50
@@ -5524,6 +5534,7 @@
     SUBDIR += rubygem-foreman
     SUBDIR += rubygem-formatador
     SUBDIR += rubygem-forwardable-extended
+    SUBDIR += rubygem-fugit
     SUBDIR += rubygem-gdata
     SUBDIR += rubygem-gem-compare
     SUBDIR += rubygem-gem_plugin
@@ -5888,6 +5899,7 @@
     SUBDIR += rubygem-stella
     SUBDIR += rubygem-stemmer
     SUBDIR += rubygem-stomp
+    SUBDIR += rubygem-stoplight
     SUBDIR += rubygem-storable
     SUBDIR += rubygem-stream
     SUBDIR += rubygem-streetaddress
@@ -6106,7 +6118,6 @@
     SUBDIR += tclxml
     SUBDIR += tdl
     SUBDIR += terminality
-    SUBDIR += tesla
     SUBDIR += tevent
     SUBDIR += tex-kpathsea
     SUBDIR += tex-libtexlua

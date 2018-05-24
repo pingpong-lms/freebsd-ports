@@ -416,6 +416,7 @@
     SUBDIR += librdkafka
     SUBDIR += librouteros
     SUBDIR += librsync2
+    SUBDIR += libsignal
     SUBDIR += libsocket++
     SUBDIR += libsrtp
     SUBDIR += libstorj
@@ -628,6 +629,7 @@
     SUBDIR += p5-MaxMind-DB-Reader
     SUBDIR += p5-MaxMind-DB-Writer
     SUBDIR += p5-Net
+    SUBDIR += p5-Net-ACME2
     SUBDIR += p5-Net-AMQP
     SUBDIR += p5-Net-AMQP-RabbitMQ
     SUBDIR += p5-Net-APNS
@@ -1043,6 +1045,7 @@
     SUBDIR += py-gspread
     SUBDIR += py-gspreadsheet
     SUBDIR += py-haproxy-log-analysis
+    SUBDIR += py-haproxyctl
     SUBDIR += py-httpstat
     SUBDIR += py-impacket
     SUBDIR += py-ipaddress
@@ -1227,6 +1230,7 @@
     SUBDIR += rubygem-fog-atmos
     SUBDIR += rubygem-fog-aws
     SUBDIR += rubygem-fog-aws1
+    SUBDIR += rubygem-fog-aws2
     SUBDIR += rubygem-fog-azure
     SUBDIR += rubygem-fog-brightbox
     SUBDIR += rubygem-fog-cloudatcost
@@ -1264,6 +1268,7 @@
     SUBDIR += rubygem-gitaly-proto094
     SUBDIR += rubygem-gitaly-proto095
     SUBDIR += rubygem-gitaly-proto096
+    SUBDIR += rubygem-gitaly-proto099
     SUBDIR += rubygem-gitlab_omniauth-ldap
     SUBDIR += rubygem-gitlab_omniauth-ldap1
     SUBDIR += rubygem-grpc
@@ -1515,6 +1520,8 @@
     SUBDIR += wakeonlan
     SUBDIR += whois
     SUBDIR += widentd
+    SUBDIR += wireguard
+    SUBDIR += wireguard-go
     SUBDIR += wireshark
     SUBDIR += wireshark-lite
     SUBDIR += wireshark-qt5
