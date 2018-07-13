@@ -148,6 +148,7 @@
     SUBDIR += djview4
     SUBDIR += djview4-qt4
     SUBDIR += djvulibre
+    SUBDIR += djvusmooth
     SUBDIR += dmtx-utils
     SUBDIR += drawpile
     SUBDIR += driconf
@@ -627,7 +628,6 @@
     SUBDIR += mhgui
     SUBDIR += ming
     SUBDIR += mirage
-    SUBDIR += mitsuba
     SUBDIR += mmrecover
     SUBDIR += movit
     SUBDIR += mozjpeg
@@ -892,9 +892,11 @@
     SUBDIR += py-exif
     SUBDIR += py-exifread
     SUBDIR += py-exiv2
+    SUBDIR += py-fiona
     SUBDIR += py-freeimagepy
     SUBDIR += py-gd
     SUBDIR += py-gdal
+    SUBDIR += py-geopandas
     SUBDIR += py-gimp
     SUBDIR += py-gizeh
     SUBDIR += py-glewpy
@@ -945,6 +947,8 @@
     SUBDIR += py-sorl-thumbnail
     SUBDIR += py-soya3d
     SUBDIR += py-stltools
+    SUBDIR += py-svgwrite
+    SUBDIR += py-termtosvg
     SUBDIR += py-toyplot
     SUBDIR += py-traitsui
     SUBDIR += py-wand

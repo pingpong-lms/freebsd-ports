@@ -7,7 +7,7 @@ DISTVERSIONPREFIX=	v
 PORTREVISION=	6
 CATEGORIES=	net-p2p finance
 
-MAINTAINER=	ehaupt@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	P2P crypto currency client favored by shiba inus worldwide
 
 LICENSE=	MIT
@@ -39,8 +39,8 @@ CONFIGURE_ARGS+=	--with-incompatible-bdb --disable-tests
 
 GUI_CONFIGURE_ARGS=	--with-gui=qt5
 GUI_CONFIGURE_OFF=	--with-gui=no
-GUI_USE=		QT5=buildtools,core,dbus,gui,linguist_build,network,printsupport,testlib,widgets
-GUI_USES=		desktop-file-utils
+GUI_USE=		QT=buildtools,core,dbus,gui,linguist_build,network,printsupport,testlib,widgets
+GUI_USES=		desktop-file-utils qt:5
 
 QRCODES_CONFIGURE_WITH=	qrencode
 QRCODES_LIB_DEPENDS=	libqrencode.so:graphics/libqrencode
