@@ -101,7 +101,6 @@
     SUBDIR += gawk
     SUBDIR += gcc
     SUBDIR += gcc-ecj45
-    SUBDIR += gcc47
     SUBDIR += gcc48
     SUBDIR += gcc49
     SUBDIR += gcc5
@@ -110,6 +109,7 @@
     SUBDIR += gcc6-devel
     SUBDIR += gcc7
     SUBDIR += gcc7-devel
+    SUBDIR += gcc8
     SUBDIR += gcc8-devel
     SUBDIR += gcc9-devel
     SUBDIR += gforth
@@ -147,6 +147,7 @@
     SUBDIR += icon
     SUBDIR += intercal
     SUBDIR += io
+    SUBDIR += io-devel
     SUBDIR += itcl
     SUBDIR += itcl4
     SUBDIR += jakarta-commons-jelly
@@ -347,7 +348,6 @@
     SUBDIR += smlnj
     SUBDIR += snobol4
     SUBDIR += solidity
-    SUBDIR += spec.alpha
     SUBDIR += spidermonkey17
     SUBDIR += spidermonkey170
     SUBDIR += spidermonkey185

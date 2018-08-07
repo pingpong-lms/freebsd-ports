@@ -4,7 +4,7 @@
 PORTNAME=	dogecoin
 PORTVERSION=	1.10.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	net-p2p finance
 
 MAINTAINER=	ports@FreeBSD.org
@@ -13,6 +13,8 @@ COMMENT=	P2P crypto currency client favored by shiba inus worldwide
 LICENSE=	MIT
 
 BROKEN=		fails to build with boost 1.66, see bug 224131
+DEPRECATED=	Broken for more than 5 months
+EXPIRATION_DATE=	2018-08-20
 NOT_FOR_ARCHS=		powerpc powerpc64 sparc64
 NOT_FOR_ARCHS_REASON=	fails to configure: "Big Endian not supported"
 
