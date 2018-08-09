@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-app
-PORTVERSION=	0.14
+PORTVERSION=	0.15
 CATEGORIES=	pingpong
 MASTER_SITES=	#
 DISTFILES=	#
@@ -37,7 +37,7 @@ RUN_DEPENDS= \
 	ffmpeg:multimedia/ffmpeg \
 	qt-faststart:multimedia/qt-faststart \
 	webalizer:www/webalizer \
-	shibd:security/shibboleth2-sp \
+	shibd:security/shibboleth-sp \
 	saxon:textproc/saxon-devel \
 	xml:textproc/xmlstarlet \
 	xmlsec1:security/xmlsec1 \
