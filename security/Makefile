@@ -44,6 +44,7 @@
     SUBDIR += bdes
     SUBDIR += bearssl
     SUBDIR += beecrypt
+    SUBDIR += beid
     SUBDIR += belier
     SUBDIR += bfbtester
     SUBDIR += binwalk
@@ -336,7 +337,6 @@
     SUBDIR += libadacrypt
     SUBDIR += libargon2
     SUBDIR += libassuan
-    SUBDIR += libbeid
     SUBDIR += libbf
     SUBDIR += libcryptui
     SUBDIR += libdecaf
@@ -1290,6 +1290,7 @@
     SUBDIR += tcpcrypt
     SUBDIR += teleport
     SUBDIR += testssl.sh
+    SUBDIR += theonionbox
     SUBDIR += tinc
     SUBDIR += tinc-devel
     SUBDIR += tinyca
