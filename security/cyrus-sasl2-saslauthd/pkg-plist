@@ -9,4 +9,4 @@ sbin/testsaslauthd
 %%PORTDOCS%%%%DOCSDIR%%/saslauthd/LDAP_SASLAUTHD
 %%PORTDOCS%%%%DOCSDIR%%/saslauthd/NEWS
 %%PORTDOCS%%%%DOCSDIR%%/saslauthd/README
-%%RUNPATH%%@dir(cyrus,mail,750) /var/run/saslauthd
+%%RUNPATH%%@dir(cyrus,ldap,750) /var/run/saslauthd
