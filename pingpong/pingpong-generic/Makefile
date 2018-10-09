@@ -28,7 +28,7 @@ RUN_DEPENDS= \
 	${LOCALBASE}/share/bash-completion/bash_completion:shells/bash-completion \
 	zsh:shells/zsh \
 	vim:editors/vim \
-	tree:sysutils/vim \
+	tree:sysutils/tree \
 	python:lang/python \
 	curl:ftp/curl \
 	mosh:net/mosh \
