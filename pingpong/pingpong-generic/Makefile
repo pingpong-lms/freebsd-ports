@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-generic
-PORTVERSION=	0.15
+PORTVERSION=	0.16
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
 DISTFILES=	#
@@ -28,6 +28,7 @@ RUN_DEPENDS= \
 	${LOCALBASE}/share/bash-completion/bash_completion:shells/bash-completion \
 	zsh:shells/zsh \
 	vim:editors/vim \
+	tree:sysutils/vim \
 	python:lang/python \
 	curl:ftp/curl \
 	mosh:net/mosh \
