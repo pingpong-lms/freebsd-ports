@@ -35,7 +35,6 @@
     SUBDIR += hs-aeson
     SUBDIR += hs-aeson-compat
     SUBDIR += hs-aeson-pretty
-    SUBDIR += hs-dataenc
     SUBDIR += hs-json
     SUBDIR += hs-sandi
     SUBDIR += htx
@@ -153,6 +152,9 @@
     SUBDIR += php72-iconv
     SUBDIR += php72-mbstring
     SUBDIR += php72-recode
+    SUBDIR += php73-iconv
+    SUBDIR += php73-mbstring
+    SUBDIR += php73-recode
     SUBDIR += psiconv
     SUBDIR += py-bcode
     SUBDIR += py-bencode.py
@@ -183,7 +185,6 @@
     SUBDIR += tuc
     SUBDIR += unix2dos
     SUBDIR += uudeview
-    SUBDIR += uudx
     SUBDIR += uulib
     SUBDIR += vda2fbd
     SUBDIR += wkhtmltopdf

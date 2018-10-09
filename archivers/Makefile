@@ -4,6 +4,7 @@
     COMMENT = Archivers
 
     SUBDIR += 9e
+    SUBDIR += R-cran-zip
     SUBDIR += advancecomp
     SUBDIR += amigadepacker
     SUBDIR += arc
@@ -31,7 +32,6 @@
     SUBDIR += fpc-bzip2
     SUBDIR += fpc-unzip
     SUBDIR += freetar
-    SUBDIR += freeze
     SUBDIR += gcab
     SUBDIR += gcpio
     SUBDIR += gnome-autoar
@@ -97,7 +97,7 @@
     SUBDIR += nwreckdum
     SUBDIR += ocaml-bz2
     SUBDIR += ocaml-zip
-    SUBDIR += opkg
+    SUBDIR += opkg-openwrt
     SUBDIR += p5-Archive-Any
     SUBDIR += p5-Archive-Any-Lite
     SUBDIR += p5-Archive-Any-Plugin-Rar
@@ -168,6 +168,10 @@
     SUBDIR += php72-phar
     SUBDIR += php72-zip
     SUBDIR += php72-zlib
+    SUBDIR += php73-bz2
+    SUBDIR += php73-phar
+    SUBDIR += php73-zip
+    SUBDIR += php73-zlib
     SUBDIR += pigz
     SUBDIR += pixz
     SUBDIR += plzip

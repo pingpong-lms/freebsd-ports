@@ -2,7 +2,6 @@
 
 PORTNAME=	ktp-call-ui
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	2
 CATEGORIES=	net-im kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -14,7 +13,7 @@ LIB_DEPENDS=	libKTpCommonInternals.so:net-im/ktp-common-internals \
 		libfarstream-0.2.so:net-im/farstream \
 		libtelepathy-farstream.so:net-im/telepathy-farstream \
 		libtelepathy-glib.so:net-im/telepathy-glib \
-		libtelepathy-qt5-farstream.so:net-im/telepathy-qt5
+		libtelepathy-qt5-farstream.so:net-im/telepathy-qt@qt5
 
 USES=		cmake:outsource compiler:c++11-lang gettext kde:5 pkgconfig \
 		python:2.7 qt:5 tar:xz
@@ -25,5 +24,7 @@ USE_KDE=	auth codecs config configwidgets coreaddons ecm iconthemes \
 USE_QT=		core dbus gui network qml quick widgets xml \
 		buildtools_build qmake_build
 USE_LDCONFIG=	yes
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.mk>

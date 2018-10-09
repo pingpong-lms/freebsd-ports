@@ -21,7 +21,6 @@
     SUBDIR += dclib
     SUBDIR += deluge
     SUBDIR += deluge-cli
-    SUBDIR += dogecoin
     SUBDIR += ed2k
     SUBDIR += edonkey-tool-hash
     SUBDIR += eiskaltdcpp-cli
@@ -49,12 +48,10 @@
     SUBDIR += libswift
     SUBDIR += libtorrent
     SUBDIR += libtorrent-rasterbar
-    SUBDIR += libtorrent-rasterbar-python
     SUBDIR += linuxdcpp
     SUBDIR += litecoin
     SUBDIR += litecoin-daemon
     SUBDIR += litecoin-utils
-    SUBDIR += lopster
     SUBDIR += microdc2
     SUBDIR += minder
     SUBDIR += mktorrent
@@ -64,6 +61,7 @@
     SUBDIR += monero-cli
     SUBDIR += namecoin
     SUBDIR += namecoin-daemon
+    SUBDIR += namecoin-utils
     SUBDIR += napshare
     SUBDIR += ncdc
     SUBDIR += opendchub
@@ -73,6 +71,7 @@
     SUBDIR += p5-Net-DirectConnect
     SUBDIR += p5-WWW-BitTorrent
     SUBDIR += phex
+    SUBDIR += py-libtorrent-rasterbar
     SUBDIR += py-py2play
     SUBDIR += py-transmissionrpc
     SUBDIR += py-tremc
@@ -96,7 +95,6 @@
     SUBDIR += transmission-qt
     SUBDIR += transmission-remote-gui
     SUBDIR += tribler
-    SUBDIR += twister
     SUBDIR += uhub
     SUBDIR += valknut
     SUBDIR += verlihub
@@ -111,7 +109,6 @@
     SUBDIR += verlihub-plugins-stats
     SUBDIR += vuze
     SUBDIR += xmrig
-    SUBDIR += xnap
     SUBDIR += zetacoin
     SUBDIR += zetacoin-nox11
 
