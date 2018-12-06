@@ -3,9 +3,9 @@
 
 PORTNAME=	apache-openoffice
 PORTVERSION=	${AOOVERSION}
-PORTREVISION=	9
+PORTREVISION=	1
 CATEGORIES=	editors java
-MASTER_SITES=	APACHE/openoffice/${PORTVERSION}/sources \
+MASTER_SITES=	APACHE/openoffice/${PORTVERSION}/source \
 		http://tools.openoffice.org/unowinreg_prebuild/680/:unoreg \
 		LOCAL/truckman/openoffice:extsrc
 .if defined(LANG_PKGNAME)
@@ -96,14 +96,28 @@ RUN_DEPENDS=								\
 		${LOCALBASE}/share/fonts/Carlito/Carlito-Bold.ttf:x11-fonts/crosextrafonts-carlito-ttf \
 		${LOCALBASE}/share/fonts/ChromeOS/Arimo-Bold.ttf:x11-fonts/croscorefonts-fonts-ttf
 
+USES=		autoreconf bison compiler:c++11-lib cpe desktop-file-utils \
+		gettext-runtime gl gmake gnome iconv jpeg perl5 pkgconfig \
+		python:2.7 shared-mime-info ssl tar:bzip2
+USE_GL=		gl glu
+USE_GNOME=	gtk20 libxslt libidl glib20
+USE_JAVA=	yes
+JAVA_BUILD=	jdk
+JAVA_RUN=	jdk
+JAVA_VENDOR=	openjdk
+JAVA_VERSION=	1.6+
+USE_PERL5=	build
+USE_XORG=	ice sm x11 xau xaw xcomposite xcursor xdamage xext xfixes xi \
+		xinerama xrandr xrender xt
+
 CONFLICTS_INSTALL=	apache-openoffice-devel-*
 
 AOOVERSION1=	4
 AOOVERSION2=	1
-AOOVERSION3=	5
+AOOVERSION3=	6
 # From solenv/inc/minor.mk SOURCEREVISION LAST_MINOR BUILD
-AOOTAG=		AOO415m1\(Build:9789\)
-SVNREVISION=	1817496
+AOOTAG=		AOO416m1\(Build:9790\)
+SVNREVISION=	1844436
 EXTSRC=		ApacheOpenOffice.ext_sources.${AOOVERSION1}.x.x.20150707.tar.gz
 
 AOOVERSION=	${AOOVERSION1}.${AOOVERSION2}.${AOOVERSION3}
@@ -119,20 +133,6 @@ XDGDIR=			${OOPATH}/share/xdg
 XDGREL=			../../${INSTALLATION_BASEDIR}/openoffice${AOOVERSION1}/share/xdg
 EXECBASE?=		openoffice-${AOOSUFFIX}
 
-USES=		autoreconf bison compiler:c++11-lib cpe \
-		desktop-file-utils \
-		gettext-runtime gmake iconv jpeg perl5 pkgconfig python:2.7 \
-		shared-mime-info ssl tar:bzip2
-USE_GL=		gl glu
-USE_GNOME=	gtk20 libxslt libidl glib20
-USE_JAVA=	yes
-JAVA_BUILD=	jdk
-JAVA_RUN=	jdk
-JAVA_VENDOR=	openjdk
-JAVA_VERSION=	1.6+
-USE_PERL5=	build
-USE_XORG=	ice sm x11 xau xaw xcomposite xcursor xdamage xext xfixes xi \
-		xinerama xrandr xrender xt
 INSTALLS_ICONS=	yes
 WITHOUT_CPU_CFLAGS=	true
 CPE_PRODUCT=	${PORTNAME:S|apache-||}
@@ -192,6 +192,12 @@ WIKI_PUBLISHER_VARS=	BUNDLED_EXTENSIONS+=swext/wiki-publisher.oxt
 
 # Don't run gnome-post-icons until after post-install generates the plist
 TARGET_ORDER_OVERRIDE=	710:gnome-post-icons
+
+# Force the SDK option on for makesum to ensure that unowinreg.dll is
+# included in distinfo
+.if make(makesum) || make(distclean)
+WITH=	SDK
+.endif
 
 .include <bsd.port.pre.mk>
 

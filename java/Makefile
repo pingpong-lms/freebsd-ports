@@ -11,9 +11,7 @@
     SUBDIR += bootstrap-openjdk8
     SUBDIR += bouncycastle
     SUBDIR += bouncycastle15
-    SUBDIR += cacao
     SUBDIR += castor
-    SUBDIR += classpath
     SUBDIR += cos
     SUBDIR += cryptix-jce
     SUBDIR += dbvis
@@ -53,7 +51,6 @@
     SUBDIR += jakarta-commons-primitives
     SUBDIR += jakarta-oro
     SUBDIR += jakarta-regexp
-    SUBDIR += jamvm
     SUBDIR += jasmin
     SUBDIR += jattach
     SUBDIR += java-checkstyle
@@ -129,6 +126,9 @@
     SUBDIR += visualvm
     SUBDIR += wildfly10
     SUBDIR += wildfly11
+    SUBDIR += wildfly12
+    SUBDIR += wildfly13
+    SUBDIR += wildfly14
     SUBDIR += wildfly90
     SUBDIR += xdoclet
 

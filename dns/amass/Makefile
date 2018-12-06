@@ -1,9 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	amass
-DISTVERSIONPREFIX=	v
-DISTVERSION=	2.7.0-8
-DISTVERSIONSUFFIX=	-g5ac544c
+DISTVERSION=	2.8.4
 CATEGORIES=	dns
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -37,7 +35,7 @@ GH_TUPLE=	OWASP:Amass:${DISTVERSIONFULL}:main/src/github.com/OWASP/Amass \
 		golang:text:4ae1256:text/src/golang.org/x/text \
 		golang:tools:18207bb:tools/src/golang.org/x/tools
 
-PROGS=		${PORTNAME} ${PORTNAME}.db ${PORTNAME}.maltego ${PORTNAME}.netdomains ${PORTNAME}.viz
+PROGS=		${PORTNAME} ${PORTNAME}.db ${PORTNAME}.netdomains ${PORTNAME}.viz
 
 PLIST_FILES=	${PROGS:C/^/bin\//}
 

@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	php73
-DISTVERSION=	7.3.0RC2
+DISTVERSION=	7.3.0RC6
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
 MASTER_SITES=	https://downloads.php.net/~cmb/
@@ -17,8 +17,8 @@ CPE_PRODUCT=	php
 NO_OPTIONS_SORT=yes
 
 .if !defined(PKGNAMESUFFIX)
-BUILD_DEPENDS=	pcre2>=2.31:devel/pcre2
-LIB_DEPENDS=	libargon2.so:security/libargon2
+LIB_DEPENDS=	libpcre2-8.so:devel/pcre2 \
+		libargon2.so:security/libargon2
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-layout=GNU \
@@ -32,6 +32,9 @@ CONFIGURE_ARGS+=--with-layout=GNU \
 		--program-prefix=""
 USES+=		autoreconf:build
 USE_GNOME=	libxml2
+
+# PR230207 Allow relocations against read-only segments (override lld default)
+LDFLAGS_i386=	-Wl,-z,notext
 
 OPTIONS_DEFINE+=CLI CGI FPM EMBED PHPDBG DEBUG DTRACE IPV6 LINKTHR ZTS
 OPTIONS_DEFAULT=CLI CGI FPM EMBED LINKTHR DTRACE

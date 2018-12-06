@@ -317,7 +317,7 @@ libexec/gimp/2.2/plug-ins/file-csource/file-csource
 libexec/gimp/2.2/plug-ins/file-darktable/file-darktable
 libexec/gimp/2.2/plug-ins/file-desktop-link/file-desktop-link
 libexec/gimp/2.2/plug-ins/file-dicom/file-dicom
-libexec/gimp/2.2/plug-ins/file-exr/file-exr
+%%OPENEXR%%libexec/gimp/2.2/plug-ins/file-exr/file-exr
 libexec/gimp/2.2/plug-ins/file-faxg3/file-faxg3
 libexec/gimp/2.2/plug-ins/file-fits/file-fits
 libexec/gimp/2.2/plug-ins/file-fli/file-fli
@@ -336,11 +336,12 @@ libexec/gimp/2.2/plug-ins/file-jpeg/file-jpeg
 %%LIBMNG%%libexec/gimp/2.2/plug-ins/file-mng/file-mng
 libexec/gimp/2.2/plug-ins/file-pat/file-pat
 libexec/gimp/2.2/plug-ins/file-pcx/file-pcx
-%%POPPLER%%libexec/gimp/2.2/plug-ins/file-pdf-load/file-pdf-load
+libexec/gimp/2.2/plug-ins/file-pdf-load/file-pdf-load
 libexec/gimp/2.2/plug-ins/file-pdf-save/file-pdf-save
 libexec/gimp/2.2/plug-ins/file-pix/file-pix
 libexec/gimp/2.2/plug-ins/file-png/file-png
 libexec/gimp/2.2/plug-ins/file-pnm/file-pnm
+%%GHOSTSCRIPT%%libexec/gimp/2.2/plug-ins/file-ps/file-ps
 libexec/gimp/2.2/plug-ins/file-psd/file-psd
 libexec/gimp/2.2/plug-ins/file-psp/file-psp
 libexec/gimp/2.2/plug-ins/file-raw-data/file-raw-data
@@ -351,7 +352,7 @@ libexec/gimp/2.2/plug-ins/file-sunras/file-sunras
 libexec/gimp/2.2/plug-ins/file-svg/file-svg
 libexec/gimp/2.2/plug-ins/file-tga/file-tga
 libexec/gimp/2.2/plug-ins/file-tiff/file-tiff
-libexec/gimp/2.2/plug-ins/file-webp/file-webp
+%%WEBP%%libexec/gimp/2.2/plug-ins/file-webp/file-webp
 %%WMF%%libexec/gimp/2.2/plug-ins/file-wmf/file-wmf
 libexec/gimp/2.2/plug-ins/file-xbm/file-xbm
 libexec/gimp/2.2/plug-ins/file-xmc/file-xmc
@@ -370,7 +371,7 @@ libexec/gimp/2.2/plug-ins/gradient-map/gradient-map
 libexec/gimp/2.2/plug-ins/grid/grid
 libexec/gimp/2.2/plug-ins/guillotine/guillotine
 libexec/gimp/2.2/plug-ins/help/help
-%%HELPBROWSER%%libexec/gimp/2.2/plug-ins/help-browser
+%%HELPBROWSER%%libexec/gimp/2.2/plug-ins/help-browser/help-browser
 libexec/gimp/2.2/plug-ins/hot/hot
 libexec/gimp/2.2/plug-ins/ifs-compose/ifs-compose
 libexec/gimp/2.2/plug-ins/imagemap/imagemap
@@ -406,6 +407,7 @@ libexec/gimp/2.2/plug-ins/van-gogh-lic/van-gogh-lic
 libexec/gimp/2.2/plug-ins/warp/warp
 libexec/gimp/2.2/plug-ins/wavelet-decompose/wavelet-decompose
 libexec/gimp/2.2/plug-ins/web-browser/web-browser
+%%HELPBROWSER%%libexec/gimp/2.2/plug-ins/web-page/web-page
 man/man1/gimp-2.10.1.gz
 man/man1/gimp.1.gz
 man/man1/gimptool-2.0.1.gz
@@ -835,6 +837,7 @@ share/doc/gimp/libgimpwidgets/gimp-letter-spacing.png
 share/doc/gimp/libgimpwidgets/gimp-line-spacing.png
 share/doc/gimp/libgimpwidgets/gimp-linked.png
 share/doc/gimp/libgimpwidgets/gimp-list.png
+share/doc/gimp/libgimpwidgets/gimp-marker.png
 share/doc/gimp/libgimpwidgets/gimp-menu-left.png
 share/doc/gimp/libgimpwidgets/gimp-menu-right.png
 share/doc/gimp/libgimpwidgets/gimp-merge-down.png
@@ -1696,6 +1699,7 @@ share/gimp/icons/Color/scalable/apps/gimp-letter-spacing.svg
 share/gimp/icons/Color/scalable/apps/gimp-line-spacing.svg
 share/gimp/icons/Color/scalable/apps/gimp-linked.svg
 share/gimp/icons/Color/scalable/apps/gimp-list.svg
+share/gimp/icons/Color/scalable/apps/gimp-marker.svg
 share/gimp/icons/Color/scalable/apps/gimp-menu-left.svg
 share/gimp/icons/Color/scalable/apps/gimp-menu-right.svg
 share/gimp/icons/Color/scalable/apps/gimp-merge-down.svg
@@ -1882,6 +1886,7 @@ share/gimp/icons/Color/scalable/apps/media-floppy.svg
 share/gimp/icons/Color/scalable/apps/media-optical.svg
 share/gimp/icons/Color/scalable/apps/media-playback-pause.svg
 share/gimp/icons/Color/scalable/apps/media-playback-start.svg
+share/gimp/icons/Color/scalable/apps/media-record.svg
 share/gimp/icons/Color/scalable/apps/media-seek-backward.svg
 share/gimp/icons/Color/scalable/apps/media-skip-backward.svg
 share/gimp/icons/Color/scalable/apps/media-skip-forward.svg
@@ -2644,6 +2649,7 @@ share/gimp/icons/Symbolic-Inverted/scalable/apps/gimp-letter-spacing.svg
 share/gimp/icons/Symbolic-Inverted/scalable/apps/gimp-line-spacing.svg
 share/gimp/icons/Symbolic-Inverted/scalable/apps/gimp-linked.svg
 share/gimp/icons/Symbolic-Inverted/scalable/apps/gimp-list.svg
+share/gimp/icons/Symbolic-Inverted/scalable/apps/gimp-marker.svg
 share/gimp/icons/Symbolic-Inverted/scalable/apps/gimp-menu-left.svg
 share/gimp/icons/Symbolic-Inverted/scalable/apps/gimp-menu-right.svg
 share/gimp/icons/Symbolic-Inverted/scalable/apps/gimp-merge-down.svg
@@ -2830,6 +2836,7 @@ share/gimp/icons/Symbolic-Inverted/scalable/apps/media-floppy.svg
 share/gimp/icons/Symbolic-Inverted/scalable/apps/media-optical.svg
 share/gimp/icons/Symbolic-Inverted/scalable/apps/media-playback-pause.svg
 share/gimp/icons/Symbolic-Inverted/scalable/apps/media-playback-start.svg
+share/gimp/icons/Symbolic-Inverted/scalable/apps/media-record.svg
 share/gimp/icons/Symbolic-Inverted/scalable/apps/media-seek-backward.svg
 share/gimp/icons/Symbolic-Inverted/scalable/apps/media-skip-backward.svg
 share/gimp/icons/Symbolic-Inverted/scalable/apps/media-skip-forward.svg
@@ -3145,6 +3152,7 @@ share/gimp/icons/Symbolic/scalable/apps/gimp-letter-spacing.svg
 share/gimp/icons/Symbolic/scalable/apps/gimp-line-spacing.svg
 share/gimp/icons/Symbolic/scalable/apps/gimp-linked.svg
 share/gimp/icons/Symbolic/scalable/apps/gimp-list.svg
+share/gimp/icons/Symbolic/scalable/apps/gimp-marker.svg
 share/gimp/icons/Symbolic/scalable/apps/gimp-menu-left.svg
 share/gimp/icons/Symbolic/scalable/apps/gimp-menu-right.svg
 share/gimp/icons/Symbolic/scalable/apps/gimp-merge-down.svg
@@ -3331,6 +3339,7 @@ share/gimp/icons/Symbolic/scalable/apps/media-floppy.svg
 share/gimp/icons/Symbolic/scalable/apps/media-optical.svg
 share/gimp/icons/Symbolic/scalable/apps/media-playback-pause.svg
 share/gimp/icons/Symbolic/scalable/apps/media-playback-start.svg
+share/gimp/icons/Symbolic/scalable/apps/media-record.svg
 share/gimp/icons/Symbolic/scalable/apps/media-seek-backward.svg
 share/gimp/icons/Symbolic/scalable/apps/media-skip-backward.svg
 share/gimp/icons/Symbolic/scalable/apps/media-skip-forward.svg

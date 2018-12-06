@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME?=	ixl
-PORTVERSION?=	1.9.13
-PORTREVISION?=	1
+PORTVERSION?=	1.10.4
 CATEGORIES=	net
 MASTER_SITES=	https://downloadmirror.intel.com/${MASTER_SITE_SUBDIR}/ \
 		http://downloadmirror.intel.com/${MASTER_SITE_SUBDIR}/
@@ -39,6 +38,7 @@ MANPAGENAME?=	${PORTNAME}
 MANPAGELINKS?=	if_${PORTNAME}
 PLIST_FILES=	${KMODDIR}/if_${PORTNAME}_updated.ko \
 		man/man4/${MANPAGENAME}.4.gz
+MAKE_ENV+=	WERROR=""
 
 .for link in ${MANPAGELINKS}
 PLIST_FILES+=	man/man4/${link}.4.gz
@@ -54,7 +54,7 @@ ONLY_FOR_ARCHS=		amd64
 ONLY_FOR_ARCHS_REASON=	Not supported on other architectures, amd64 only.
 .endif
 
-.if ${PORT_OPTIONS:MNETMAP_AUTO} && ${OSVERSION} >= 1100000  && ${OSVERSION} <= ${MAX_NETMAP_OSVERSION}
+.if ${PORT_OPTIONS:MNETMAP_AUTO} && ${OSVERSION} <= ${MAX_NETMAP_OSVERSION}
 CFLAGS+=	-DDEV_NETMAP
 .endif
 

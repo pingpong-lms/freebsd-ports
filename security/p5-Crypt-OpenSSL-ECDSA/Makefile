@@ -3,6 +3,7 @@
 
 PORTNAME=	Crypt-OpenSSL-ECDSA
 PORTVERSION=	0.08
+PORTREVISION=	1
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -16,10 +17,9 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Crypt-OpenSSL-EC>=0.05:security/p5-Crypt-OpenSSL-EC
 
-BROKEN_SSL=	openssl-devel
-
 USES=		perl5 ssl
-USE_PERL5=	5.18+ configure
+USE_PERL5=	configure
+
 CFLAGS+=	-I${OPENSSLINC}
 
 post-install:
