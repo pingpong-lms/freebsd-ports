@@ -46,7 +46,7 @@ DISTFILES+=	${CARGO_DIST_SUBDIR}/${_crate}.tar.gz:cargo_${_crate:S/-//g:S/.//g}
 
 CARGO_BUILDDEP?=	yes
 .if ${CARGO_BUILDDEP:tl} == "yes"
-BUILD_DEPENDS+=	 rust>=1.31.0:lang/rust
+BUILD_DEPENDS+=	${RUST_DEFAULT}>=1.31.0:lang/${RUST_DEFAULT}
 .endif
 
 # Location of cargo binary (default to lang/rust's Cargo binary)
@@ -68,7 +68,7 @@ CARGO_ENV+= \
 	CARGO_TARGET_DIR=${CARGO_TARGET_DIR} \
 	RUSTC=${LOCALBASE}/bin/rustc \
 	RUSTDOC=${LOCALBASE}/bin/rustdoc \
-	RUSTFLAGS="${RUSTFLAGS} ${LDFLAGS:S/^/-C link-arg=/}"
+	RUSTFLAGS="${RUSTFLAGS} -C linker=${CC:Q} ${LDFLAGS:S/^/-C link-arg=/}"
 
 # Adjust -C target-cpu if -march/-mcpu is set by bsd.cpu.mk
 .if ${ARCH} == amd64 || ${ARCH} == i386
@@ -251,6 +251,7 @@ do-build:
 .if !target(do-install) && ${CARGO_INSTALL:tl} == "yes"
 do-install:
 	@${CARGO_CARGO_RUN} install \
+		--path . \
 		--root "${STAGEDIR}${PREFIX}" \
 		--verbose \
 		${CARGO_INSTALL_ARGS}

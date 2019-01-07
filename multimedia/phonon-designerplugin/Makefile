@@ -18,18 +18,17 @@ FLAVOR?=	${FLAVORS:[1]}
 qt4_PKGNAMESUFFIX=	-designerplugin-qt4
 qt5_PKGNAMESUFFIX=	-designerplugin-qt5
 
-qt4_DEPRECATED=		Qt4 has been EOL since december 2015
-qt4_EXPIRATION_DATE=	2019-03-15
-
-USES=		cmake tar:xz
+USES=		cmake:insource tar:xz
 
 .  if ${FLAVOR} == qt4
-USES+=		kde:4 qt:4
+DEPRECATED=	Qt4 has been EOL since december 2015
+EXPIRATION_DATE=2019-03-15
+USES+=		qt:4
 USE_QT=		corelib designer gui phonon \
 		qmake_build moc_build rcc_build uic_build
 PLIST_FILES=	${QT_PLUGINDIR_REL}/designer/libphononwidgets.so
 .  else
-USES+=		kde:5 qt:5
+USES+=		compiler:c++11-lang kde:5 qt:5
 USE_KDE=	ecm
 USE_QT=		core designer gui phonon4 widgets xml \
 		buildtools_build qmake_build

@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	gmsh
-DISTVERSION=	4.0.6
+DISTVERSION=	4.0.7
+PORTREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	http://gmsh.info/src/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-source
@@ -25,7 +26,6 @@ RUN_DEPENDS=	getdp:science/getdp
 USES=		blaslapack compiler:c++11-lang cmake fortran gl jpeg tar:tgz
 USE_GL=		gl glu
 USE_XORG=	x11 xcursor xext xinerama xfixes xft xrender
-USE_LDCONFIG=	yes
 
 CMAKE_ARGS=	-DCMAKE_SKIP_RPATH:BOOL=YES
 
@@ -57,7 +57,7 @@ OCC_LIB_DEPENDS=	libopenblas.so:math/openblas libTKernel.so:cad/opencascade
 OCC_USES=		gnome
 OCC_USE=		gnome=cairo
 SHARED_CMAKE_BOOL=	ENABLE_BUILD_SHARED
-SHARED_VARS=		USE_LDCONFIG=yes
+SHARED_USE=		LDCONFIG=yes
 STATIC_CMAKE_BOOL=	ENABLE_BUILD_LIB
 
 post-patch:

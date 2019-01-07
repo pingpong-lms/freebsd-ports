@@ -4,6 +4,7 @@
 PORTNAME=	qgis
 DISTVERSIONPREFIX=	final-
 DISTVERSION=	2_18_26
+PORTREVISION=	1
 CATEGORIES=	graphics geography
 
 MAINTAINER=	rhurlin@gwdg.de
@@ -37,6 +38,7 @@ USE_QT=		corelib designer doc gui linguist_build moc_build \
 		network qmake_build rcc_build script sql sql-pgsql \
 		sql-sqlite3 svg testlib uic_build webkit xml
 USE_LDCONFIG=	yes
+BINARY_ALIAS=	pyrcc4=pyrcc4-${PYTHON_VER}
 
 ICON_SIZES=	8 16 22 24 32 36 42 48 64 72 80 96 128 192 256 512
 

@@ -3,7 +3,6 @@
 
 PORTNAME=	lyx
 PORTVERSION=	${MAJOR_VERSION}.${MINOR_VERSION}
-PORTREVISION=	1
 CATEGORIES=	print editors
 MASTER_SITES=	ftp://ftp.lyx.org/pub/lyx/stable/${MAJOR_VERSION}.x/ \
 		http://www-ftp.lip6.fr/ftp/pub/lyx/stable/${MAJOR_VERSION}.x/ \
@@ -14,15 +13,16 @@ MAINTAINER=	rakuco@FreeBSD.org
 COMMENT=	Document processor interfaced with LaTeX (nearly WYSIWYG)
 
 LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libboost_regex.so:devel/boost-libs \
 		libmythes-1.2.so:textproc/mythes
 
 MAJOR_VERSION=	2.3
-MINOR_VERSION=	0
+MINOR_VERSION=	2
 
-USES=		desktop-file-utils gmake iconv pkgconfig perl5 \
-		python:2.7 qt:5 shebangfix tar:xz
+USES=		compiler:c++11-lang desktop-file-utils gmake iconv pkgconfig \
+		perl5 python:2.7 qt:5 shebangfix tar:xz
 USE_QT=		core concurrent gui svg widgets buildtools_build qmake_build
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-included-boost \

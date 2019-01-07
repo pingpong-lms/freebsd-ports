@@ -109,7 +109,6 @@
     SUBDIR += SCIP
     SUBDIR += SoPlex
     SUBDIR += aamath
-    SUBDIR += abakus
     SUBDIR += abs
     SUBDIR += acalc
     SUBDIR += add
@@ -122,10 +121,10 @@
     SUBDIR += amath
     SUBDIR += ambit
     SUBDIR += analitza
-    SUBDIR += analitza-kde4
     SUBDIR += ann
     SUBDIR += antic
     SUBDIR += apc
+    SUBDIR += apron
     SUBDIR += arb
     SUBDIR += aribas
     SUBDIR += armadillo
@@ -134,6 +133,8 @@
     SUBDIR += aspcud
     SUBDIR += asymptote
     SUBDIR += atlas
+    SUBDIR += barvinok
+    SUBDIR += bcal
     SUBDIR += biggles
     SUBDIR += blacs
     SUBDIR += blas
@@ -148,7 +149,6 @@
     SUBDIR += calcoo
     SUBDIR += calctool
     SUBDIR += cantor
-    SUBDIR += cantor-kde4
     SUBDIR += cbc
     SUBDIR += cblas
     SUBDIR += ccmath
@@ -168,7 +168,12 @@
     SUBDIR += clrng
     SUBDIR += cminpack
     SUBDIR += cmlib
+    SUBDIR += coin-or-data-netlib
+    SUBDIR += coin-or-data-sample
+    SUBDIR += coin-or-data-stochastic
     SUBDIR += coinmp
+    SUBDIR += coinutils
+    SUBDIR += combblas
     SUBDIR += concorde
     SUBDIR += convertall
     SUBDIR += coq
@@ -216,6 +221,7 @@
     SUBDIR += fpc-fftw
     SUBDIR += fpc-gmp
     SUBDIR += fpc-numlib
+    SUBDIR += fplll
     SUBDIR += fricas
     SUBDIR += fxt
     SUBDIR += g2o
@@ -223,9 +229,8 @@
     SUBDIR += gambit
     SUBDIR += gap
     SUBDIR += gau2grid
-    SUBDIR += gdcalc
-    SUBDIR += geg
     SUBDIR += geogebra
+    SUBDIR += geogram
     SUBDIR += geonext
     SUBDIR += gexpr
     SUBDIR += ggobi
@@ -253,9 +258,9 @@
     SUBDIR += gretl
     SUBDIR += gri
     SUBDIR += gringo
-    SUBDIR += grpn
     SUBDIR += gsl
     SUBDIR += hexcalc
+    SUBDIR += hipmcl
     SUBDIR += hs-Agda
     SUBDIR += hs-Agda-stdlib
     SUBDIR += hs-NumInstances
@@ -265,6 +270,7 @@
     SUBDIR += hs-contravariant
     SUBDIR += hs-data-lens
     SUBDIR += hs-data-lens-template
+    SUBDIR += hs-dense-linear-algebra
     SUBDIR += hs-distributive
     SUBDIR += hs-erf
     SUBDIR += hs-fixed
@@ -295,16 +301,11 @@
     SUBDIR += jtransforms
     SUBDIR += jts
     SUBDIR += kalgebra
-    SUBDIR += kalgebra-kde4
     SUBDIR += kbruch
-    SUBDIR += kbruch-kde4
     SUBDIR += kcalc
-    SUBDIR += kcalc-kde4
     SUBDIR += kig
-    SUBDIR += kig-kde4
     SUBDIR += kktdirect
     SUBDIR += kmplot
-    SUBDIR += kmplot-kde4
     SUBDIR += labplot
     SUBDIR += latte-integrale
     SUBDIR += lambda
@@ -315,6 +316,7 @@
     SUBDIR += laspack
     SUBDIR += ldouble
     SUBDIR += lean
+    SUBDIR += lemon
     SUBDIR += levmar
     SUBDIR += libRmath
     SUBDIR += libccd
@@ -370,7 +372,6 @@
     SUBDIR += mpir
     SUBDIR += mppp
     SUBDIR += mprime
-    SUBDIR += msieve
     SUBDIR += mtrxmath
     SUBDIR += multichoose
     SUBDIR += mumps
@@ -394,7 +395,6 @@
     SUBDIR += octave
     SUBDIR += octave-forge
     SUBDIR += octave-forge-actuarial
-    SUBDIR += octave-forge-audio
     SUBDIR += octave-forge-base
     SUBDIR += octave-forge-bim
     SUBDIR += octave-forge-bioinfo
@@ -409,11 +409,9 @@
     SUBDIR += octave-forge-divand
     SUBDIR += octave-forge-doctest
     SUBDIR += octave-forge-econometrics
-    SUBDIR += octave-forge-engine
     SUBDIR += octave-forge-fenv
     SUBDIR += octave-forge-financial
     SUBDIR += octave-forge-fits
-    SUBDIR += octave-forge-fl-core
     SUBDIR += octave-forge-fpl
     SUBDIR += octave-forge-fuzzy-logic-toolkit
     SUBDIR += octave-forge-ga
@@ -455,7 +453,6 @@
     SUBDIR += octave-forge-optiminterp
     SUBDIR += octave-forge-outliers
     SUBDIR += octave-forge-parallel
-    SUBDIR += octave-forge-pdb
     SUBDIR += octave-forge-plot
     SUBDIR += octave-forge-quaternion
     SUBDIR += octave-forge-queueing
@@ -490,6 +487,7 @@
     SUBDIR += openmesh
     SUBDIR += opensolaris-libm
     SUBDIR += orpie
+    SUBDIR += osi
     SUBDIR += osqp
     SUBDIR += p5-AI-DecisionTree
     SUBDIR += p5-AI-Genetic
@@ -648,15 +646,9 @@
     SUBDIR += pdal
     SUBDIR += pear-Math_BigInteger
     SUBDIR += pear-Math_Combinatorics
-    SUBDIR += pecl-big_int
     SUBDIR += pecl-bitset
-    SUBDIR += pecl-bitset2
-    SUBDIR += pecl-stats
     SUBDIR += pecl-stats2
-    SUBDIR += pecl-trader
     SUBDIR += petiga
-    SUBDIR += php56-bcmath
-    SUBDIR += php56-gmp
     SUBDIR += php71-bcmath
     SUBDIR += php71-gmp
     SUBDIR += php72-bcmath
@@ -671,6 +663,7 @@
     SUBDIR += ploticus-nox11
     SUBDIR += plplot
     SUBDIR += plplot-ada
+    SUBDIR += polylib
     SUBDIR += primegen
     SUBDIR += primme
     SUBDIR += prng
@@ -681,6 +674,7 @@
     SUBDIR += py-CyLP
     SUBDIR += py-Diofant
     SUBDIR += py-GridDataFormats
+    SUBDIR += py-MutatorMath
     SUBDIR += py-PuLP
     SUBDIR += py-PyMetis
     SUBDIR += py-PySCIPOpt
@@ -701,6 +695,7 @@
     SUBDIR += py-cvxopt
     SUBDIR += py-cvxpy
     SUBDIR += py-cyipopt
+    SUBDIR += py-deap
     SUBDIR += py-ecos
     SUBDIR += py-fastcluster
     SUBDIR += py-fastdtw
@@ -744,6 +739,7 @@
     SUBDIR += py-pyFFTW
     SUBDIR += py-pyasp
     SUBDIR += py-pybloom
+    SUBDIR += py-pyclipper
     SUBDIR += py-pycosat
     SUBDIR += py-pygsl
     SUBDIR += py-pygslodeiv2
@@ -789,6 +785,7 @@
     SUBDIR += qd
     SUBDIR += qhull
     SUBDIR += qhull5
+    SUBDIR += qposases
     SUBDIR += qrupdate
     SUBDIR += qtiplot
     SUBDIR += qtiplot-doc
@@ -804,7 +801,6 @@
     SUBDIR += rkward-kde
     SUBDIR += rngstreams
     SUBDIR += rocs
-    SUBDIR += rocs-kde4
     SUBDIR += rpcalc
     SUBDIR += rpy
     SUBDIR += rubygem-algebra
@@ -850,7 +846,6 @@
     SUBDIR += sundials
     SUBDIR += superlu
     SUBDIR += superlu_mt
-    SUBDIR += surf
     SUBDIR += symmetrica
     SUBDIR += tablix
     SUBDIR += taucs
@@ -870,6 +865,7 @@
     SUBDIR += units
     SUBDIR += unuran
     SUBDIR += viennacl
+    SUBDIR += visualpolylib
     SUBDIR += vowpal_wabbit
     SUBDIR += vtk6
     SUBDIR += vtk8

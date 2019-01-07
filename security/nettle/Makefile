@@ -3,6 +3,7 @@
 
 PORTNAME=	nettle
 PORTVERSION=	3.4.1
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	GNU \
 		https://www.lysator.liu.se/~nisse/archive/
@@ -20,11 +21,12 @@ LIB_DEPENDS=	libgmp.so:math/gmp
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
-USES=		gmake localbase makeinfo pathfix
+USES=		compiler:c11 gmake localbase makeinfo pathfix
 
 CONFIGURE_ARGS=	--enable-shared
 CONFIGURE_ENV=	M4="/usr/bin/m4 -g"
 GNU_CONFIGURE=	yes
+#USE_CSTD=	c11
 USE_LDCONFIG=	yes
 
 INFO=		nettle

@@ -100,6 +100,7 @@
     SUBDIR += confetti
     SUBDIR += confget
     SUBDIR += consul-template
+    SUBDIR += crex
     SUBDIR += crimson
     SUBDIR += crunch
     SUBDIR += cs-aspell
@@ -223,7 +224,6 @@
     SUBDIR += glark
     SUBDIR += gmetadom
     SUBDIR += gnome-doc-utils
-    SUBDIR += gnome-spell
     SUBDIR += gnugrep
     SUBDIR += go.text
     SUBDIR += goldendict
@@ -253,6 +253,7 @@
     SUBDIR += hr-aspell
     SUBDIR += hs-Diff
     SUBDIR += hs-HStringTemplate
+    SUBDIR += hs-HsYAML
     SUBDIR += hs-appar
     SUBDIR += hs-attoparsec
     SUBDIR += hs-attoparsec-iso8601
@@ -280,6 +281,7 @@
     SUBDIR += hs-lhs2tex
     SUBDIR += hs-libxml
     SUBDIR += hs-libxml-sax
+    SUBDIR += hs-libyaml
     SUBDIR += hs-magic
     SUBDIR += hs-pandoc
     SUBDIR += hs-pandoc-citeproc
@@ -303,6 +305,7 @@
     SUBDIR += hs-tagsoup
     SUBDIR += hs-tagstream-conduit
     SUBDIR += hs-texmath
+    SUBDIR += hs-unicode-transforms
     SUBDIR += hs-uri
     SUBDIR += hs-uri-bytestring
     SUBDIR += hs-uri-bytestring-aeson
@@ -378,6 +381,7 @@
     SUBDIR += jq
     SUBDIR += jrefentry
     SUBDIR += jshon
+    SUBDIR += json-yaml
     SUBDIR += kdiff3
     SUBDIR += kenlm
     SUBDIR += kf5-kcodecs
@@ -398,7 +402,6 @@
     SUBDIR += kmflcomp
     SUBDIR += kn-aspell
     SUBDIR += kompare
-    SUBDIR += kompare-kde4
     SUBDIR += kreport
     SUBDIR += ku-aspell
     SUBDIR += ky-aspell
@@ -422,16 +425,15 @@
     SUBDIR += libexttextcat
     SUBDIR += libflate
     SUBDIR += libfo
+    SUBDIR += libfolia
     SUBDIR += libgepub
     SUBDIR += libguess
     SUBDIR += libkmfl
     SUBDIR += libkolabxml
     SUBDIR += libkomparediff2
-    SUBDIR += libkomparediff2-kde4
     SUBDIR += liblingoteach
     SUBDIR += liblrdf
     SUBDIR += libmrss
-    SUBDIR += libmrss-php
     SUBDIR += libmwaw03
     SUBDIR += libnxml
     SUBDIR += libodfgen01
@@ -541,7 +543,6 @@
     SUBDIR += opentoken
     SUBDIR += openvanilla-framework
     SUBDIR += or-aspell
-    SUBDIR += ots
     SUBDIR += p5-AI-Categorizer
     SUBDIR += p5-Algorithm-CheckDigits
     SUBDIR += p5-Algorithm-RabinKarp
@@ -687,6 +688,7 @@
     SUBDIR += p5-PDF-API3
     SUBDIR += p5-PDF-Create
     SUBDIR += p5-PDF-FromHTML
+    SUBDIR += p5-PDF-Reuse
     SUBDIR += p5-PDF-Table
     SUBDIR += p5-PDF-Tiny
     SUBDIR += p5-PDF-WebKit
@@ -803,6 +805,7 @@
     SUBDIR += p5-Sphinx-Search
     SUBDIR += p5-Spreadsheet-GenerateXLSX
     SUBDIR += p5-Spreadsheet-ParseExcel
+    SUBDIR += p5-Spreadsheet-ParseXLSX
     SUBDIR += p5-Spreadsheet-Read
     SUBDIR += p5-Spreadsheet-ReadSXC
     SUBDIR += p5-Spreadsheet-WriteExcel
@@ -888,6 +891,7 @@
     SUBDIR += p5-Text-Diff-HTML
     SUBDIR += p5-Text-Diff-Parser
     SUBDIR += p5-Text-Diff3
+    SUBDIR += p5-Text-Distill
     SUBDIR += p5-Text-DoubleMetaphone
     SUBDIR += p5-Text-Emoticon
     SUBDIR += p5-Text-Emoticon-GoogleTalk
@@ -968,6 +972,7 @@
     SUBDIR += p5-Text-TabularDisplay
     SUBDIR += p5-Text-Tags
     SUBDIR += p5-Text-Template
+    SUBDIR += p5-Text-Template-Simple
     SUBDIR += p5-Text-TestBase
     SUBDIR += p5-Text-Textile
     SUBDIR += p5-Text-Tmpl
@@ -1159,6 +1164,7 @@
     SUBDIR += p5-YAPE-Regex-Explain
     SUBDIR += p5-ack
     SUBDIR += p5-dTemplate
+    SUBDIR += p5-docx2txt
     SUBDIR += p5-libsoldout
     SUBDIR += p5-libxml
     SUBDIR += p5-pod2pdf
@@ -1203,30 +1209,12 @@
     SUBDIR += pear-XML_HTMLSax
     SUBDIR += pear-XML_Wddx
     SUBDIR += pear-YAML
-    SUBDIR += pecl-ctemplate
-    SUBDIR += pecl-doublemetaphone
-    SUBDIR += pecl-stem
-    SUBDIR += pecl-syck
-    SUBDIR += pecl-wbxml
-    SUBDIR += pecl-xdiff
     SUBDIR += pecl-xdiff2
-    SUBDIR += pecl-xslcache
     SUBDIR += pecl-yaml
-    SUBDIR += pecl-yaml1
     SUBDIR += peco
     SUBDIR += perl2html
     SUBDIR += permute
     SUBDIR += php-mecab
-    SUBDIR += php56-ctype
-    SUBDIR += php56-dom
-    SUBDIR += php56-enchant
-    SUBDIR += php56-pspell
-    SUBDIR += php56-simplexml
-    SUBDIR += php56-wddx
-    SUBDIR += php56-xml
-    SUBDIR += php56-xmlreader
-    SUBDIR += php56-xmlwriter
-    SUBDIR += php56-xsl
     SUBDIR += php71-ctype
     SUBDIR += php71-dom
     SUBDIR += php71-enchant
@@ -1518,6 +1506,7 @@
     SUBDIR += rubygem-albino
     SUBDIR += rubygem-amatch
     SUBDIR += rubygem-asciidoctor
+    SUBDIR += rubygem-asciidoctor-diagram
     SUBDIR += rubygem-asciidoctor-plantuml
     SUBDIR += rubygem-autoprefixer-rails
     SUBDIR += rubygem-babel-source
@@ -1674,7 +1663,6 @@
     SUBDIR += rxp
     SUBDIR += s5
     SUBDIR += sablotron
-    SUBDIR += sagasu
     SUBDIR += sansi
     SUBDIR += sarep
     SUBDIR += sary
@@ -1682,7 +1670,9 @@
     SUBDIR += saxon
     SUBDIR += saxon-devel
     SUBDIR += saxon-he
+    SUBDIR += scancode-toolkit
     SUBDIR += sc-aspell
+    SUBDIR += scdoc
     SUBDIR += scew
     SUBDIR += scim
     SUBDIR += scim-bridge
@@ -1788,11 +1778,12 @@
     SUBDIR += txt2man
     SUBDIR += txt2tags
     SUBDIR += uchardet
+    SUBDIR += ucto
+    SUBDIR += uctodata
     SUBDIR += uim
     SUBDIR += uim-el
     SUBDIR += uim-gtk
     SUBDIR += uim-gtk3
-    SUBDIR += uim-kde4
     SUBDIR += uim-m17nlib
     SUBDIR += uim-qt4
     SUBDIR += uim-qt5

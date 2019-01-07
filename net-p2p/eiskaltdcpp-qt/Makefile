@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	eiskaltdcpp
-PORTREVISION=	9
+PORTREVISION=	11
 CATEGORIES=	net-p2p
 PKGNAMESUFFIX=	-qt
 
@@ -19,7 +19,7 @@ LIB_DEPENDS=	libeiskaltdcpp.so:net-p2p/eiskaltdcpp-lib
 
 MASTERDIR=	${.CURDIR}/../eiskaltdcpp-lib
 
-USES=		cmake gettext compiler:c++11-lib desktop-file-utils qt:4 ssl
+USES=		cmake:insource gettext compiler:c++11-lib desktop-file-utils qt:4 ssl
 USE_QT=		gui xml network qmake_build uic_build \
 		moc_build rcc_build linguisttools_build
 

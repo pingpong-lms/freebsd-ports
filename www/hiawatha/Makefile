@@ -3,7 +3,7 @@
 
 PORTNAME=	hiawatha
 PORTVERSION=	10.8.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	https://www.hiawatha-webserver.org/files/
 
@@ -13,7 +13,7 @@ COMMENT=	Advanced and secure webserver for Unix
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cmake compiler:c11
+USES=		cmake:insource compiler:c11
 USE_RC_SUBR=	hiawatha
 
 CMAKE_ARGS=	-DCMAKE_INSTALL_LOCALSTATEDIR=/var \

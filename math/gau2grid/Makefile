@@ -3,6 +3,7 @@
 PORTNAME=	gau2grid
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.3.0
+PORTREVISION=	1
 CATEGORIES=	math python
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -19,7 +20,7 @@ ONLY_FOR_ARCHS_REASON=	BUG: ValueError: descr is not a valid dtype descriptor: '
 
 BUILD_DEPENDS=	${PYNUMPY}
 
-USES=		cmake:outsource compiler:c11 python:build # C code build depends on python to generate some headers
+USES=		cmake compiler:c11 python:build # C code build depends on python to generate some headers
 USE_GITHUB=	yes
 GH_ACCOUNT=	dgasmith
 USE_LDCONFIG=	yes

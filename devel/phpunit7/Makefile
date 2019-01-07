@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	phpunit
-DISTVERSION=	7.4.5
+DISTVERSION=	7.5.1
 CATEGORIES=	devel www
 MASTER_SITES=	https://phar.phpunit.de/
 PKGNAMESUFFIX=	7${PHP_PKGNAMESUFFIX}
@@ -11,8 +11,6 @@ MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	Testing framework for unit tests
 
 LICENSE=	BSD3CLAUSE
-
-IGNORE_WITH_PHP=	56
 
 CONFLICTS_INSTALL=	phpunit
 

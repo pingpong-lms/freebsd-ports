@@ -2,6 +2,7 @@
 
 PORTNAME=	openal-soft
 PORTVERSION=	1.19.1
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://openal-soft.org/openal-releases/
 
@@ -13,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 CONFLICTS=	openal-200[0-9]*
 
-USES=		cmake:outsource compiler:c11 tar:bzip2
+USES=		cmake compiler:c11 tar:bzip2
 USE_LDCONFIG=	yes
 LLD_UNSAFE=	yes
 CMAKE_ARGS=	-DCMAKE_INSTALL_DATADIR:STRING="${PREFIX}/etc"
