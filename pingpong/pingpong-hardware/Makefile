@@ -1,17 +1,15 @@
 # Created by: girgen
-#
+# $FreeBSD$
+
 PORTNAME=	pingpong-hardware
-PORTVERSION=	0.5
+PORTVERSION=	0.6
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
-DISTFILES=	#
-EXTRACT_ONLY=	#
 
 MAINTAINER=	girgen@pingpong.net
-COMMENT=	The meta-port for PING PONG hardware monitoring tools
+COMMENT=	Meta-port for PING PONG hardware monitoring tools
 
-NO_BUILD=	yes
-NO_MTREE=	yes
+LICENSE=	BSD2CLAUSE
 
 RUN_DEPENDS= \
 	${LOCALBASE}/libexec/nagios/check_smartmon:net-mgmt/nagios-check_smartmon \
@@ -19,9 +17,12 @@ RUN_DEPENDS= \
 	amrstat:sysutils/amrstat \
 	cciss_vol_status:sysutils/cciss_vol_status \
 	${LOCALBASE}/etc/rc.d/microcode_update:sysutils/devcpu-data \
+	p5-HTML-Table>0:www/p5-HTML-Table \
 	arcconf:sysutils/arcconf
 
-do-install: build
-	${CHMOD} u+s ${LOCALBASE}/sbin/smartctl ${LOCALBASE}/bin/cciss_vol_status
+USES=		metaport
+
+NO_BUILD=	yes
+NO_MTREE=	yes
 
 .include <bsd.port.mk>
