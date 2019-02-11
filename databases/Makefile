@@ -28,6 +28,7 @@
     SUBDIR += buzhug
     SUBDIR += c3p0
     SUBDIR += cassandra-cpp-driver
+    SUBDIR += cassandra3
     SUBDIR += casstcl
     SUBDIR += cayley
     SUBDIR += cdb
@@ -136,6 +137,7 @@
     SUBDIR += ldb
     SUBDIR += ldb12
     SUBDIR += ldb13
+    SUBDIR += ldb14
     SUBDIR += leo_center
     SUBDIR += leofs
     SUBDIR += leveldb

@@ -15,6 +15,7 @@
     SUBDIR += artwiz-aleczapka-se
     SUBDIR += artwiz-fonts
     SUBDIR += averiagwf
+    SUBDIR += b612
     SUBDIR += bdfresize
     SUBDIR += bdftopcf
     SUBDIR += bitstream-vera
@@ -28,6 +29,7 @@
     SUBDIR += comfortaa-ttf
     SUBDIR += comic-neue
     SUBDIR += consolamono-ttf
+    SUBDIR += courier-prime
     SUBDIR += croscorefonts-fonts-ttf
     SUBDIR += crosextrafonts-caladea-ttf
     SUBDIR += crosextrafonts-carlito-ttf
@@ -42,10 +44,12 @@
     SUBDIR += encodings
     SUBDIR += exo
     SUBDIR += fantasque-sans-mono
+    SUBDIR += fanwood
     SUBDIR += farsifonts
     SUBDIR += fifteen
     SUBDIR += fira
     SUBDIR += firacode
+    SUBDIR += firago
     SUBDIR += fntsample
     SUBDIR += font-adobe-100dpi
     SUBDIR += font-adobe-75dpi
@@ -110,16 +114,19 @@
     SUBDIR += google-fonts
     SUBDIR += hack-font
     SUBDIR += hanazono-fonts-ttf
+    SUBDIR += hermit
     SUBDIR += inconsolata-lgc-ttf
     SUBDIR += inconsolata-ttf
     SUBDIR += indic-ttf
     SUBDIR += intlfonts
+    SUBDIR += iosevka
     SUBDIR += isabella
     SUBDIR += jmk-x11-fonts
     SUBDIR += junction
     SUBDIR += junicode
     SUBDIR += kaputa
     SUBDIR += khmeros
+    SUBDIR += lato
     SUBDIR += league-gothic
     SUBDIR += league-spartan
     SUBDIR += lfpfonts-fix
@@ -138,6 +145,7 @@
     SUBDIR += linuxlibertine-g
     SUBDIR += lohit
     SUBDIR += manu-gothica
+    SUBDIR += material-icons-ttf
     SUBDIR += materialdesign-ttf
     SUBDIR += meslo
     SUBDIR += mgopen

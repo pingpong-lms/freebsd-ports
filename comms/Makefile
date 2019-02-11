@@ -14,6 +14,7 @@
     SUBDIR += bfhist
     SUBDIR += bforce-kst
     SUBDIR += birda
+    SUBDIR += bladerf
     SUBDIR += bluegps
     SUBDIR += bluez-firmware
     SUBDIR += bpl+
@@ -158,6 +159,7 @@
     SUBDIR += rubygem-serialport
     SUBDIR += rxtx
     SUBDIR += scmxx
+    SUBDIR += scrcpy
     SUBDIR += sdr-wspr
     SUBDIR += ser2net
     SUBDIR += serialoverip
@@ -165,6 +167,13 @@
     SUBDIR += sms_client
     SUBDIR += smstools3
     SUBDIR += snap7
+    SUBDIR += soapyairspy
+    SUBDIR += soapybladerf
+    SUBDIR += soapyplutosdr
+    SUBDIR += soapyredpitaya
+    SUBDIR += soapyremote
+    SUBDIR += soapysdrhackrf
+    SUBDIR += soapyuhd
     SUBDIR += spandsp
     SUBDIR += splat
     SUBDIR += sredird

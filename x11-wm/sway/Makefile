@@ -1,13 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	sway
-DISTVERSION=	1.0-beta.2-270
-DISTVERSIONSUFFIX=	-g1a1133dc
-PORTREVISION=	1
+DISTVERSION=	1.0-rc1
 CATEGORIES=	x11-wm
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES=	f24c0e7b92a5.patch:-p1
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	i3-compatible Wayland compositor
@@ -17,7 +12,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
 		wayland-protocols>=1.14:graphics/wayland-protocols \
-		wlroots>=0.2.138:x11-toolkits/wlroots
+		wlroots>=0.3:x11-toolkits/wlroots
 LIB_DEPENDS=	libjson-c.so:devel/json-c \
 		libevdev.so:devel/libevdev \
 		libpcre.so:devel/pcre \
@@ -37,7 +32,7 @@ OPTIONS_DEFINE=	MANPAGES PIXBUF SUID X11
 OPTIONS_DEFAULT=MANPAGES PIXBUF SUID X11
 OPTIONS_SUB=	yes
 
-MANPAGES_BUILD_DEPENDS=	scdoc:textproc/scdoc
+MANPAGES_BUILD_DEPENDS=	scdoc>=1.8.1:textproc/scdoc
 MANPAGES_MESON_ON=	-Dman-pages=enabled
 MANPAGES_MESON_OFF=	-Dman-pages=disabled
 

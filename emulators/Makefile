@@ -33,6 +33,7 @@
     SUBDIR += dynagui
     SUBDIR += dynamips-community
     SUBDIR += e-uae
+    SUBDIR += emulationstation
     SUBDIR += fceux
     SUBDIR += fmsx
     SUBDIR += frodo
@@ -134,6 +135,7 @@
     SUBDIR += stella
     SUBDIR += stonx
     SUBDIR += swine
+    SUBDIR += teo
     SUBDIR += tiemu3
     SUBDIR += tilem
     SUBDIR += tme
