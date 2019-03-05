@@ -150,7 +150,6 @@
     SUBDIR += erlang-mochiweb
     SUBDIR += erlang-mochiweb-basho
     SUBDIR += erlang-webmachine
-    SUBDIR += erwn
     SUBDIR += fabio
     SUBDIR += falkon
     SUBDIR += fancybox
@@ -432,7 +431,6 @@
     SUBDIR += mod_fcgid
     SUBDIR += mod_fileiri
     SUBDIR += mod_flickr
-    SUBDIR += mod_geoip2
     SUBDIR += mod_gnutls
     SUBDIR += mod_gzip2
     SUBDIR += mod_h264_streaming
@@ -478,8 +476,6 @@
     SUBDIR += monast
     SUBDIR += mongoose
     SUBDIR += mongrel2
-    SUBDIR += moodle31
-    SUBDIR += moodle34
     SUBDIR += moodle35
     SUBDIR += moodle36
     SUBDIR += mozplugger
@@ -1029,6 +1025,7 @@
     SUBDIR += p5-Jifty
     SUBDIR += p5-LWP-Authen-Negotiate
     SUBDIR += p5-LWP-Authen-OAuth
+    SUBDIR += p5-LWP-Authen-OAuth2
     SUBDIR += p5-LWP-Authen-Wsse
     SUBDIR += p5-LWP-ConnCache-MaxKeepAliveRequests
     SUBDIR += p5-LWP-MediaTypes
@@ -1517,6 +1514,17 @@
     SUBDIR += py-cssselect
     SUBDIR += py-cssutils
     SUBDIR += py-ddgr
+    SUBDIR += py-dj21-django-cors-headers
+    SUBDIR += py-dj21-django-debug-toolbar
+    SUBDIR += py-dj21-django-filter
+    SUBDIR += py-dj21-django-js-asset
+    SUBDIR += py-dj21-django-mptt
+    SUBDIR += py-dj21-django-tables2
+    SUBDIR += py-dj21-django-taggit
+    SUBDIR += py-dj21-django-taggit-serializer
+    SUBDIR += py-dj21-django-timezone-field
+    SUBDIR += py-dj21-djangorestframework
+    SUBDIR += py-dj21-drf-yasg
     SUBDIR += py-django
     SUBDIR += py-django-allauth
     SUBDIR += py-django-annotations
@@ -1695,6 +1703,7 @@
     SUBDIR += py-hyperlink
     SUBDIR += py-imdbpy
     SUBDIR += py-internetarchive
+    SUBDIR += py-instabot
     SUBDIR += py-jonpy
     SUBDIR += py-jsonfield
     SUBDIR += py-jswebkit
@@ -1811,6 +1820,7 @@
     SUBDIR += py-pysearch
     SUBDIR += py-python-digitalocean
     SUBDIR += py-python-dotenv
+    SUBDIR += py-python-multipart
     SUBDIR += py-pywebdav
     SUBDIR += py-pyweblib
     SUBDIR += py-pywikibot
@@ -1825,6 +1835,7 @@
     SUBDIR += py-recaptcha
     SUBDIR += py-requestbuilder
     SUBDIR += py-requests
+    SUBDIR += py-requests-aws4auth
     SUBDIR += py-requests-cache
     SUBDIR += py-requests-file
     SUBDIR += py-requests-futures
@@ -1852,6 +1863,7 @@
     SUBDIR += py-splinter
     SUBDIR += py-spyne
     SUBDIR += py-sseclient
+    SUBDIR += py-starlette
     SUBDIR += py-surl
     SUBDIR += py-swapper
     SUBDIR += py-textile
@@ -1905,7 +1917,6 @@
     SUBDIR += qt5-webview
     SUBDIR += quark
     SUBDIR += qupzilla-qt4
-    SUBDIR += qupzilla-qt5
     SUBDIR += qutebrowser
     SUBDIR += radicale
     SUBDIR += radicale2
@@ -2052,7 +2063,6 @@
     SUBDIR += rubygem-jsobfu
     SUBDIR += rubygem-json-jwt
     SUBDIR += rubygem-jwt
-    SUBDIR += rubygem-jwt1
     SUBDIR += rubygem-kaminari
     SUBDIR += rubygem-kaminari-actionview
     SUBDIR += rubygem-kaminari-actionview-rails5
@@ -2106,7 +2116,6 @@
     SUBDIR += rubygem-rack-cache
     SUBDIR += rubygem-rack-contrib
     SUBDIR += rubygem-rack-cors
-    SUBDIR += rubygem-rack-cors0
     SUBDIR += rubygem-rack-mount
     SUBDIR += rubygem-rack-openid
     SUBDIR += rubygem-rack-protection
@@ -2449,7 +2458,6 @@
     SUBDIR += webtrees
     SUBDIR += wgetpaste
     SUBDIR += wikicalc
-    SUBDIR += wml
     SUBDIR += woof
     SUBDIR += wordpress
     SUBDIR += wsdlpull

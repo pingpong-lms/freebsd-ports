@@ -8,12 +8,14 @@
     SUBDIR += PDL
     SUBDIR += R
     SUBDIR += R-cran-Amelia
+    SUBDIR += R-cran-BsMD
     SUBDIR += R-cran-CVST
     SUBDIR += R-cran-ChangeAnomalyDetection
     SUBDIR += R-cran-DEoptimR
     SUBDIR += R-cran-DRR
     SUBDIR += R-cran-DoE.base
     SUBDIR += R-cran-Formula
+    SUBDIR += R-cran-FrF2
     SUBDIR += R-cran-KFAS
     SUBDIR += R-cran-LearnBayes
     SUBDIR += R-cran-MCMCpack
@@ -93,6 +95,7 @@
     SUBDIR += R-cran-rgenoud
     SUBDIR += R-cran-robustbase
     SUBDIR += R-cran-sandwich
+    SUBDIR += R-cran-scatterplot3d
     SUBDIR += R-cran-sf
     SUBDIR += R-cran-sm
     SUBDIR += R-cran-sp
@@ -687,6 +690,7 @@
     SUBDIR += py-algopy
     SUBDIR += py-altgraph
     SUBDIR += py-apgl
+    SUBDIR += py-autograd
     SUBDIR += py-basemap
     SUBDIR += py-basemap-data
     SUBDIR += py-bayesian-optimization
@@ -714,6 +718,7 @@
     SUBDIR += py-gmpy
     SUBDIR += py-gmpy2
     SUBDIR += py-gnuplot
+    SUBDIR += py-grandalf
     SUBDIR += py-graphillion
     SUBDIR += py-igakit
     SUBDIR += py-igraph
@@ -728,6 +733,7 @@
     SUBDIR += py-matplotlib
     SUBDIR += py-mpmath
     SUBDIR += py-munkres
+    SUBDIR += py-munkres10
     SUBDIR += py-networkx
     SUBDIR += py-networkx1
     SUBDIR += py-numarray
@@ -764,6 +770,7 @@
     SUBDIR += py-pysym
     SUBDIR += py-python-louvain
     SUBDIR += py-pyvtk
+    SUBDIR += py-quadprog
     SUBDIR += py-random2
     SUBDIR += py-rapi
     SUBDIR += py-roman

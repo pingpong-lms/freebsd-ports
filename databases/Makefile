@@ -205,6 +205,7 @@
     SUBDIR += mongodb34-tools
     SUBDIR += mongodb36
     SUBDIR += mongodb36-tools
+    SUBDIR += mongodb40
     SUBDIR += mroonga
     SUBDIR += mrtg-mysql-load
     SUBDIR += mtools-mongodb
@@ -742,10 +743,8 @@
     SUBDIR += proftpd-mod_sql_tds
     SUBDIR += pspg
     SUBDIR += puppetdb-cli
-    SUBDIR += puppetdb-terminus4
     SUBDIR += puppetdb-terminus5
     SUBDIR += puppetdb-terminus6
-    SUBDIR += puppetdb4
     SUBDIR += puppetdb5
     SUBDIR += puppetdb6
     SUBDIR += pure-sql3
@@ -802,6 +801,7 @@
     SUBDIR += py-oursql
     SUBDIR += py-peewee
     SUBDIR += py-pg8000
+    SUBDIR += py-pg8000-112
     SUBDIR += py-pg_pqueue
     SUBDIR += py-pgcli
     SUBDIR += py-pgdbconn
@@ -847,7 +847,6 @@
     SUBDIR += py-sqlite3dbm
     SUBDIR += py-sqlobject
     SUBDIR += py-sqlparse
-    SUBDIR += py-sqlparse01
     SUBDIR += py-sqlparse020
     SUBDIR += py-sqlrelay
     SUBDIR += py-swift

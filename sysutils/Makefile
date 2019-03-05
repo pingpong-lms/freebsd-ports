@@ -75,11 +75,6 @@
     SUBDIR += backuppc-devel
     SUBDIR += backuppc4
     SUBDIR += backupuser
-    SUBDIR += bacula-bat
-    SUBDIR += bacula-client
-    SUBDIR += bacula-client-static
-    SUBDIR += bacula-docs
-    SUBDIR += bacula-server
     SUBDIR += bacula9-bat
     SUBDIR += bacula9-client
     SUBDIR += bacula9-client-static
@@ -97,6 +92,7 @@
     SUBDIR += bareos16-client-static
     SUBDIR += bareos16-server
     SUBDIR += bareos16-traymonitor
+    SUBDIR += bastille
     SUBDIR += batmon
     SUBDIR += battmond
     SUBDIR += battray
@@ -855,6 +851,7 @@
     SUBDIR += panicmail
     SUBDIR += parafly
     SUBDIR += parallel
+    SUBDIR += pass-otp
     SUBDIR += password-store
     SUBDIR += passwordsafe
     SUBDIR += patchelf
@@ -943,10 +940,8 @@
     SUBDIR += ptools
     SUBDIR += puppet-lint
     SUBDIR += puppet-mode.el
-    SUBDIR += puppet4
     SUBDIR += puppet5
     SUBDIR += puppet6
-    SUBDIR += puppetserver
     SUBDIR += puppetserver5
     SUBDIR += puppetserver6
     SUBDIR += pv
@@ -991,6 +986,7 @@
     SUBDIR += py-azure-cli-iot
     SUBDIR += py-azure-cli-iotcentral
     SUBDIR += py-azure-cli-keyvault
+    SUBDIR += py-azure-cli-kusto
     SUBDIR += py-azure-cli-lab
     SUBDIR += py-azure-cli-maps
     SUBDIR += py-azure-cli-monitor
@@ -1004,14 +1000,17 @@
     SUBDIR += py-azure-cli-resource
     SUBDIR += py-azure-cli-role
     SUBDIR += py-azure-cli-search
+    SUBDIR += py-azure-cli-security
     SUBDIR += py-azure-cli-servicebus
     SUBDIR += py-azure-cli-servicefabric
     SUBDIR += py-azure-cli-signalr
     SUBDIR += py-azure-cli-sql
+    SUBDIR += py-azure-cli-sqlvm
     SUBDIR += py-azure-cli-storage
     SUBDIR += py-azure-cli-telemetry
     SUBDIR += py-azure-cli-vm
     SUBDIR += py-bcfg2
+    SUBDIR += py-bitrot
     SUBDIR += py-cdmi
     SUBDIR += py-croniter
     SUBDIR += py-crontab
@@ -1314,6 +1313,7 @@
     SUBDIR += syslog-ng317
     SUBDIR += syslog-ng318
     SUBDIR += syslog-ng319
+    SUBDIR += syslog-ng320
     SUBDIR += syslog-ng39
     SUBDIR += syslogger
     SUBDIR += sysrc
@@ -1370,6 +1370,7 @@
     SUBDIR += u-boot-bananapim2
     SUBDIR += u-boot-beaglebone
     SUBDIR += u-boot-chip
+    SUBDIR += u-boot-clearfog
     SUBDIR += u-boot-cubieboard
     SUBDIR += u-boot-cubieboard2
     SUBDIR += u-boot-cubox-hummingboard
@@ -1498,7 +1499,7 @@
     SUBDIR += xe
     SUBDIR += xe-guest-utilities
     SUBDIR += xen-guest-tools
-    SUBDIR += xen-tools411
+    SUBDIR += xen-tools
     SUBDIR += xen-tools47
     SUBDIR += xfburn
     SUBDIR += xfce4-battery-plugin
@@ -1507,6 +1508,7 @@
     SUBDIR += xfce4-diskperf-plugin
     SUBDIR += xfce4-fsguard-plugin
     SUBDIR += xfce4-genmon-plugin
+    SUBDIR += xfce4-kbdleds-plugin
     SUBDIR += xfce4-mount-plugin
     SUBDIR += xfce4-netload-plugin
     SUBDIR += xfce4-power-manager
@@ -1544,6 +1546,8 @@
     SUBDIR += zisofs-tools
     SUBDIR += znapzend
     SUBDIR += zogftw
+    SUBDIR += zol
+    SUBDIR += zol-kmod
     SUBDIR += zrep
     SUBDIR += zrepl
     SUBDIR += zsd

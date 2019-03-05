@@ -10,6 +10,7 @@
     SUBDIR += anyremote
     SUBDIR += apitran
     SUBDIR += aprsd
+    SUBDIR += ath3k-firmware
     SUBDIR += atslog
     SUBDIR += bfhist
     SUBDIR += bforce-kst
@@ -26,6 +27,7 @@
     SUBDIR += conserver
     SUBDIR += conserver-com
     SUBDIR += cqrlog
+    SUBDIR += cubicsdr
     SUBDIR += cutecom
     SUBDIR += cwdaemon
     SUBDIR += cwstudio
@@ -152,6 +154,7 @@
     SUBDIR += qt5-serialport
     SUBDIR += qtel
     SUBDIR += quisk
+    SUBDIR += redsea
     SUBDIR += remserial
     SUBDIR += rtl-sdr
     SUBDIR += rubygem-callsign

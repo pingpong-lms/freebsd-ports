@@ -63,6 +63,7 @@
     SUBDIR += evilvte
     SUBDIR += fbdesk
     SUBDIR += fbpanel
+    SUBDIR += find-cursor
     SUBDIR += fireflies
     SUBDIR += florence
     SUBDIR += flruler
@@ -110,6 +111,7 @@
     SUBDIR += imwheel
     SUBDIR += innerspace
     SUBDIR += ipager
+    SUBDIR += j4-dmenu-desktop
     SUBDIR += kb2mb2
     SUBDIR += kde-baseapps
     SUBDIR += kde5
@@ -282,6 +284,7 @@
     SUBDIR += rendercheck
     SUBDIR += rgb
     SUBDIR += rofi
+    SUBDIR += rofi-pass
     SUBDIR += rox-wallpaper
     SUBDIR += roxbg
     SUBDIR += roxterm
@@ -419,7 +422,6 @@
     SUBDIR += xfindproxy
     SUBDIR += xfishtank
     SUBDIR += xforward
-    SUBDIR += xfree86_xkb_xml
     SUBDIR += xfwp
     SUBDIR += xgamma
     SUBDIR += xgc

@@ -3,6 +3,7 @@
 
     COMMENT = X11 fonts and font utilities
 
+    SUBDIR += 3270font
     SUBDIR += Hasklig
     SUBDIR += alef
     SUBDIR += alegreya
@@ -161,7 +162,12 @@
     SUBDIR += nerd-fonts
     SUBDIR += nexfontsel
     SUBDIR += noto
-    SUBDIR += noto-lite
+    SUBDIR += noto-basic
+    SUBDIR += noto-extra
+    SUBDIR += noto-jp
+    SUBDIR += noto-kr
+    SUBDIR += noto-sc
+    SUBDIR += noto-tc
     SUBDIR += nucleus
     SUBDIR += ohsnap
     SUBDIR += oldschool-pc-fonts

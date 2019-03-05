@@ -12,7 +12,7 @@ COMMENT=	General purpose 3D CAD modeller
 LICENSE=	LGPL20+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	pyside2-rcc:devel/pyside2-tools \
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyside2-tools>0:devel/pyside2-tools@${PY_FLAVOR} \
 		swig3.0:devel/swig30
 LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libfreetype.so:print/freetype2 \
@@ -32,7 +32,7 @@ LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 RUN_DEPENDS=	pivy-devel>0:graphics/py-pivy-devel@${PY_FLAVOR}
 
 USES=		dos2unix compiler:c++11-lib cmake gl eigen:3 fortran jpeg \
-		python:2.7 localbase qt:5
+		localbase:ldflags python:2.7 localbase qt:5
 USE_GITHUB=	yes
 USE_XORG=	ice sm x11 xext xt
 USE_GL=		gl glu

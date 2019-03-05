@@ -2,7 +2,6 @@
 
 PORTNAME=	plasma-workspace
 DISTVERSION=	${KDE_PLASMA_VERSION}
-PORTREVISION=	1
 CATEGORIES=	x11 kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org
@@ -44,6 +43,9 @@ USE_QT=		concurrent core declarative dbus graphicaleffects gui network phonon4 \
 USE_XORG=	ice sm x11 xau xcb xcomposite xext xfixes xft xkbfile xrender xtst
 
 CMAKE_OFF=	BUILD_TESTING
+
+# In 5.15 a file was moved from x11/plasma5-plasma-desktop to x11/plasma5-plasma-workspace:
+CONFLICTS_INSTALL=	plasma5-plasma-desktop-5.14.*
 
 post-patch:
 # set the paths in startkde

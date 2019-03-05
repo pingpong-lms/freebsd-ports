@@ -215,6 +215,7 @@
     SUBDIR += hitch
     SUBDIR += hlfl
     SUBDIR += hmap
+    SUBDIR += hockeypuck
     SUBDIR += honeybadger
     SUBDIR += honggfuzz
     SUBDIR += hotssh
@@ -290,7 +291,6 @@
     SUBDIR += john
     SUBDIR += kbfs
     SUBDIR += kbfsd
-    SUBDIR += kc
     SUBDIR += kc24
     SUBDIR += kdbx-viewer
     SUBDIR += kedpm
@@ -335,6 +335,7 @@
     SUBDIR += libcryptui
     SUBDIR += libdecaf
     SUBDIR += libecc
+    SUBDIR += libfido2
     SUBDIR += libfprint
     SUBDIR += libgcrypt
     SUBDIR += libgnome-keyring
@@ -1045,6 +1046,7 @@
     SUBDIR += py-stix
     SUBDIR += py-stix2
     SUBDIR += py-stix2-patterns
+    SUBDIR += py-taxii2-client
     SUBDIR += py-tlslite
     SUBDIR += py-trezor
     SUBDIR += py-trustedpickle
@@ -1201,6 +1203,7 @@
     SUBDIR += rubygem-signet
     SUBDIR += rubygem-six
     SUBDIR += rubygem-sshkey
+    SUBDIR += rubygem-sshkey1
     SUBDIR += rubygem-sshkit
     SUBDIR += rubygem-timfel-krb5
     SUBDIR += rubygem-twitter_oauth
@@ -1225,7 +1228,6 @@
     SUBDIR += sectok
     SUBDIR += secure_delete
     SUBDIR += setaudit
-    SUBDIR += sguil
     SUBDIR += sha
     SUBDIR += sha1collisiondetection
     SUBDIR += sha2wordlist
@@ -1256,6 +1258,7 @@
     SUBDIR += snuffleupagus
     SUBDIR += softether
     SUBDIR += softether-devel
+    SUBDIR += softether5
     SUBDIR += softhsm
     SUBDIR += softhsm2
     SUBDIR += sops
@@ -1273,6 +1276,7 @@
     SUBDIR += sshguard
     SUBDIR += sshpass
     SUBDIR += ssl-admin
+    SUBDIR += ssllabs-scan
     SUBDIR += sslscan
     SUBDIR += sslsniffer
     SUBDIR += sslsplit
@@ -1308,7 +1312,6 @@
     SUBDIR += titus
     SUBDIR += tls-check
     SUBDIR += tlswrap
-    SUBDIR += tmux-cssh
     SUBDIR += tor
     SUBDIR += tor-devel
     SUBDIR += tpm-tools

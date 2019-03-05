@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	llvm
-DISTVERSION=	8.0.0rc1
-PORTREVISION=	0
+DISTVERSION=	8.0.0rc2
+PORTREVISION=	1
 CATEGORIES=	devel lang
 MASTER_SITES=	http://${PRE_}releases.llvm.org/${LLVM_RELEASE}/${RCDIR}
 PKGNAMESUFFIX=	${LLVM_SUFFIX}
@@ -190,6 +190,7 @@ STRIP_LIBS=	BugpointPasses.so \
 EXTRAS_COMMANDS+= \
 		clang-apply-replacements \
 		clang-change-namespace \
+		clang-doc \
 		clang-include-fixer \
 		clang-modernize \
 		clang-query \
@@ -202,6 +203,7 @@ EXTRAS_COMMANDS+= \
 EXTRAS_LIBS=	libclangApplyReplacements \
 		libclangChangeNamespace \
 		libclangDaemon \
+		libclangDoc \
 		libclangIncludeFixer \
 		libclangMove \
 		libclangQuery \
@@ -315,15 +317,15 @@ FREEBSD_BACKENDS=	AArch64 ARM Mips PowerPC Sparc X86
 NATIVE_BACKENDS=	X86
 .elif ${ARCH} == arm64
 NATIVE_BACKENDS=	AAarch64
-.elif ${ARCH} == arm
+.elif ${ARCH:Marmv*}
 NATIVE_BACKENDS=	ARM
 .elif ${ARCH} == i386
 NATIVE_BACKENDS=	X86
-.elif ${ARCH} == mips
+.elif ${ARCH:Mmips*}
 NATIVE_BACKENDS=	Mips
 .elif ${ARCH:Mpowerpc*}
 NATIVE_BACKENDS=	PowerPC
-.elif ${ARCH} == riscv
+.elif ${ARCH:Mriscv*}
 BROKEN_riscv=	No non-experimental native backend
 .endif
 STANDARD_BACKENDS=	${FREEBSD_BACKENDS} AMDGPU BPF Hexagon Lanai MSP430 \
@@ -450,7 +452,7 @@ PORTDOCS+=	lld
 CXXFLAGS+=	-D_GLIBCXX_USE_C99
 .endif
 
-.if ${ARCH} == "armv6" || ${ARCH} == "armv7"
+.if ${ARCH} == "armv6"
 BUILD_DEPENDS+=	${LOCALBASE}/bin/ld:devel/binutils
 CONFIGURE_ENV+=	COMPILER_PATH=${LOCALBASE}/bin
 MAKE_ENV+=	COMPILER_PATH=${LOCALBASE}/bin
@@ -611,7 +613,6 @@ build-plist:
 	    if ($$0 ~ /${COMPILER_RT_PATTERN}/) \
 		{printf "%%%%COMPILER_RT%%%%"} \
 	    if ($$0 ~ /(${EXTRAS_PATTERN})/) {printf "%%%%EXTRAS%%%%"} \
-	    if ($$0 ~ /(libclangDoc.a)/) {printf "%%%%DOCS%%%%"} \
 	    if ($$0 ~ /(lld|wasm-ld)/ && $$0 !~ /(lldb)/) {printf "%%%%LLD%%%%"} \
 	    if ($$0 ~ /(argdumper|lldb|six.py)/) {printf "%%%%LLDB%%%%"} \
 	    if ($$0 ~ /(lib.*omp|omp.h|ompt.h)/) {printf "%%%%OPENMP%%%%"} \
