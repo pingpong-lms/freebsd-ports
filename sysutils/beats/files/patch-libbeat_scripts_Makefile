@@ -1,6 +1,6 @@
---- libbeat/scripts/Makefile.orig	2018-02-01 16:56:52.000000000 +0100
-+++ libbeat/scripts/Makefile	2018-02-07 12:53:00.911420000 +0100
-@@ -27,7 +27,7 @@
+--- libbeat/scripts/Makefile.orig	2019-02-13 15:31:53.000000000 +0100
++++ libbeat/scripts/Makefile	2019-03-06 16:38:06.728865000 +0100
+@@ -35,7 +35,7 @@
  GOFILES_NOVENDOR = $(shell find . -type f -name '*.go' -not -path "*/vendor/*")
  GOFILES_ALL = $(GOFILES) $(shell find $(ES_BEATS) -type f -name '*.go')
  GOPACKAGES_STRESSTESTS=$(shell find . -name '*.go' | xargs awk 'FNR>1 {nextfile} /\+build.*stresstest/ {print FILENAME; nextfile}' | xargs dirname | uniq)
@@ -9,3 +9,21 @@
  ES_HOST?="elasticsearch"
  PWD=$(shell pwd)
  BUILD_DIR?=$(shell pwd)/build
+@@ -107,7 +107,7 @@
+ .PHONY: crosscompile
+ crosscompile: ## @build Cross-compile beat for the OS'es specified in GOX_OS variable. The binaries are placed in the build/bin directory.
+ crosscompile: $(GOFILES)
+-ifneq ($(shell [[ $(BEAT_NAME) == journalbeat ]] && echo true ),true)
++ifneq ($(shell [ $(BEAT_NAME) = journalbeat ] && echo true ),true)
+ 	go get github.com/mitchellh/gox
+ 	mkdir -p ${BUILD_DIR}/bin
+ 	gox -output="${BUILD_DIR}/bin/{{.Dir}}-{{.OS}}-{{.Arch}}" -os="$(strip $(GOX_OS))" -osarch="$(strip $(GOX_OSARCH))" ${GOX_FLAGS}
+@@ -337,7 +337,7 @@
+ 	@chmod 0640 ${BEAT_NAME}.reference.yml
+ endif
+ 
+-ifneq ($(shell [[ $(BEAT_NAME) == libbeat || $(BEAT_NAME) == metricbeat ]] && echo true ),true)
++ifneq ($(shell [ $(BEAT_NAME) = libbeat -o $(BEAT_NAME) = metricbeat ] && echo true ),true)
+ 	mkdir -p include
+ 	go run  ${ES_BEATS}/dev-tools/cmd/asset/asset.go -license $(LICENSE) -pkg include -in fields.yml -out include/fields.go $(BEAT_NAME)
+ endif
