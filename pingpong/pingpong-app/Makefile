@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-app
-PORTVERSION=	0.16
+PORTVERSION=	0.17
 CATEGORIES=	pingpong
 MASTER_SITES=	#
 DISTFILES=	#
@@ -32,7 +32,6 @@ RUN_DEPENDS= \
 	html2ps:print/html2ps \
 	ant:devel/apache-ant \
 	npm:www/npm-node6 \
-	phantomjs:lang/phantomjs \
 	clamd:security/clamav \
 	ffmpeg:multimedia/ffmpeg \
 	qt-faststart:multimedia/qt-faststart \
