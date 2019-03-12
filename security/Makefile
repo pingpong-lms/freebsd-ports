@@ -206,7 +206,6 @@
     SUBDIR += gtkpasman
     SUBDIR += gwee
     SUBDIR += hackbot
-    SUBDIR += hamachi
     SUBDIR += hardening-check
     SUBDIR += hashcat
     SUBDIR += hashcat-legacy
@@ -1108,6 +1107,7 @@
     SUBDIR += rifiuti2
     SUBDIR += rkhunter
     SUBDIR += rndpassw
+    SUBDIR += ruby-bitwarden
     SUBDIR += ruby-camellia
     SUBDIR += rubygem-aes_key_wrap
     SUBDIR += rubygem-airbrussh

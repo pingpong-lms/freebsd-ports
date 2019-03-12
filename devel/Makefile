@@ -234,6 +234,7 @@
     SUBDIR += bouml-doc
     SUBDIR += bpython
     SUBDIR += breakpad
+    SUBDIR += brz
     SUBDIR += bsdbuild
     SUBDIR += bsdcflow
     SUBDIR += bsdowl
@@ -539,7 +540,6 @@
     SUBDIR += elixir-gettext
     SUBDIR += elixir-hex
     SUBDIR += elixir-inflex
-    SUBDIR += elixir-lager_logger
     SUBDIR += elixir-libring
     SUBDIR += elixir-make
     SUBDIR += elixir-math
@@ -876,7 +876,6 @@
     SUBDIR += gperf
     SUBDIR += gpm
     SUBDIR += gprbuild
-    SUBDIR += gpsim
     SUBDIR += gputils
     SUBDIR += gradle
     SUBDIR += gradle4
@@ -922,7 +921,6 @@
     SUBDIR += hg-git
     SUBDIR += hgreviewboard
     SUBDIR += hgsvn
-    SUBDIR += hgview
     SUBDIR += hhdate
     SUBDIR += highlighterkit
     SUBDIR += hive
@@ -1683,6 +1681,7 @@
     SUBDIR += liteide
     SUBDIR += llbuild
     SUBDIR += llnextgen
+    SUBDIR += llvm
     SUBDIR += llvm-cheri
     SUBDIR += llvm-devel
     SUBDIR += llvm35
@@ -1948,6 +1947,8 @@
     SUBDIR += p5-Algorithm-Permute
     SUBDIR += p5-Algorithm-SVM
     SUBDIR += p5-Alias
+    SUBDIR += p5-Alien-Base-ModuleBuild
+    SUBDIR += p5-Alien-Build
     SUBDIR += p5-Alien-SDL
     SUBDIR += p5-Alzabo
     SUBDIR += p5-Any-Daemon
@@ -3383,7 +3384,9 @@
     SUBDIR += p5-Set-Tiny
     SUBDIR += p5-Shape
     SUBDIR += p5-Shell-Base
+    SUBDIR += p5-Shell-Config-Generate
     SUBDIR += p5-Shell-EnvImporter
+    SUBDIR += p5-Shell-Guess
     SUBDIR += p5-Shell-Parser
     SUBDIR += p5-Shell-Source
     SUBDIR += p5-ShipIt
@@ -4573,6 +4576,7 @@
     SUBDIR += py-epsilon
     SUBDIR += py-evdev
     SUBDIR += py-eventlib
+    SUBDIR += py-ewmh
     SUBDIR += py-exam
     SUBDIR += py-expiringdict
     SUBDIR += py-extras
@@ -4595,6 +4599,7 @@
     SUBDIR += py-five.localsitemanager
     SUBDIR += py-fixtures
     SUBDIR += py-flake8
+    SUBDIR += py-flake8-bugbear
     SUBDIR += py-flake8-builtins
     SUBDIR += py-flake8-docstrings
     SUBDIR += py-flake8-import-order
@@ -4750,8 +4755,11 @@
     SUBDIR += py-knack
     SUBDIR += py-kqueue
     SUBDIR += py-lark-parser
+    SUBDIR += py-launchpadlib
     SUBDIR += py-lazr.config
     SUBDIR += py-lazr.delegates
+    SUBDIR += py-lazr.restfulclient
+    SUBDIR += py-lazr.uri
     SUBDIR += py-lazy
     SUBDIR += py-lazy-object-proxy
     SUBDIR += py-libiocage
@@ -5276,6 +5284,7 @@
     SUBDIR += py-voluptuous
     SUBDIR += py-vsts-cd-manager
     SUBDIR += py-vulture
+    SUBDIR += py-wadllib
     SUBDIR += py-warlock
     SUBDIR += py-watchdog
     SUBDIR += py-wcwidth
@@ -5510,6 +5519,7 @@
     SUBDIR += readline
     SUBDIR += rebar
     SUBDIR += rebar3
+    SUBDIR += redasm
     SUBDIR += redo
     SUBDIR += regexx
     SUBDIR += regexxer

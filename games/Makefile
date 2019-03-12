@@ -161,6 +161,7 @@
     SUBDIR += cleanq3
     SUBDIR += cockatrice
     SUBDIR += coffeebreak
+    SUBDIR += colobot
     SUBDIR += colorcode
     SUBDIR += columns
     SUBDIR += concentration
@@ -613,7 +614,6 @@
     SUBDIR += mt_dolphin_ia
     SUBDIR += mt_gtk_client
     SUBDIR += mtaserver
-    SUBDIR += mudmagic
     SUBDIR += multimc
     SUBDIR += mvdsv
     SUBDIR += nInvaders

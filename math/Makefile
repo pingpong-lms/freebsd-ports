@@ -382,8 +382,7 @@
     SUBDIR += mtrxmath
     SUBDIR += multichoose
     SUBDIR += mumps
-    SUBDIR += mumps-edf
-    SUBDIR += mumps-mpich
+    SUBDIR += mumps4
     SUBDIR += muparser
     SUBDIR += nanoflann
     SUBDIR += naturalmath
@@ -837,7 +836,6 @@
     SUBDIR += scilab-toolbox-swt
     SUBDIR += scs
     SUBDIR += sdpa
-    SUBDIR += sdpara
     SUBDIR += secp256k1
     SUBDIR += sfft
     SUBDIR += sfst
