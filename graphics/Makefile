@@ -533,7 +533,6 @@
     SUBDIR += luxrender
     SUBDIR += luxrender14
     SUBDIR += lximage-qt
-    SUBDIR += lximageqt-l10n
     SUBDIR += magnum
     SUBDIR += magnum-examples
     SUBDIR += magnum-extras
@@ -803,7 +802,6 @@
     SUBDIR += py-PyOpenGL
     SUBDIR += py-PyOpenGL-accelerate
     SUBDIR += py-PyX
-    SUBDIR += py-PyX12
     SUBDIR += py-actdiag
     SUBDIR += py-blockdiag
     SUBDIR += py-blockdiagcontrib-cisco
