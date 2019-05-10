@@ -3,7 +3,7 @@
 
 PORTNAME=	vdr-plugin-upnp
 PORTVERSION=	0.0.2a2
-PORTREVISION=	38
+PORTREVISION=	39
 CATEGORIES=	multimedia
 MASTER_SITES=	http://projects.vdr-developer.org/attachments/download/177/
 DISTNAME=	${PORTNAME:S/-plugin-/-/}-${DISTVERSIONPREFIX}${DISTVERSION:S/a/-alpha/}${DISTVERSIONSUFFIX}
@@ -14,6 +14,9 @@ COMMENT=	Video Disk Recorder - UPnP/DLNA plugin (alpha!)
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+DEPRECATED=		Unmaintained upstream and does not build with upnp >= 1.8
+EXPIRATION_DATE=	2019-05-15
 
 BROKEN_FreeBSD_12=	fails to compile: inc/util.h:21:10: 'libavformat/avformat.h' file not found
 BROKEN_FreeBSD_13=	fails to compile: inc/util.h:21:10: 'libavformat/avformat.h' file not found

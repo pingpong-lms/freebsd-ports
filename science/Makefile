@@ -26,6 +26,7 @@
     SUBDIR += agrum
     SUBDIR += aircraft-datcom
     SUBDIR += antioch
+    SUBDIR += apbs
     SUBDIR += atom
     SUBDIR += atompaw
     SUBDIR += avogadro2
@@ -54,6 +55,7 @@
     SUBDIR += coordgenlibs
     SUBDIR += coot
     SUBDIR += cp2k
+    SUBDIR += cp2k-data
     SUBDIR += crf++
     SUBDIR += dalton
     SUBDIR += datawarrior
@@ -202,6 +204,7 @@
     SUBDIR += p5-Mcstas-Tools
     SUBDIR += p5-PerlMol
     SUBDIR += p5-Physics-Unit
+    SUBDIR += pagmo2
     SUBDIR += paje
     SUBDIR += paraview
     SUBDIR += pcmsolver

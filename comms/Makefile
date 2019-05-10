@@ -24,7 +24,6 @@
     SUBDIR += comserv
     SUBDIR += concordance
     SUBDIR += congruity
-    SUBDIR += conserver
     SUBDIR += conserver-com
     SUBDIR += cqrlog
     SUBDIR += cubicsdr
@@ -206,6 +205,7 @@
     SUBDIR += wy60
     SUBDIR += xastir
     SUBDIR += xcwcp
+    SUBDIR += xdemorse
     SUBDIR += xdx
     SUBDIR += xlog
     SUBDIR += xmorse

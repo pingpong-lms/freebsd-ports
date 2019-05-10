@@ -23,7 +23,6 @@
     SUBDIR += cpmtools
     SUBDIR += cpmtools2
     SUBDIR += darcnes
-    SUBDIR += desmume
     SUBDIR += dgen-sdl
     SUBDIR += dolphin-emu
     SUBDIR += dosbox
@@ -32,6 +31,7 @@
     SUBDIR += dynagui
     SUBDIR += dynamips-community
     SUBDIR += e-uae
+    SUBDIR += edumips64
     SUBDIR += emulationstation
     SUBDIR += fceux
     SUBDIR += fmsx
@@ -100,6 +100,7 @@
     SUBDIR += openmsx
     SUBDIR += p5-Acme-6502
     SUBDIR += parallels-tools
+    SUBDIR += pcem
     SUBDIR += pcemu
     SUBDIR += pcsxr
     SUBDIR += pearpc
@@ -110,6 +111,7 @@
     SUBDIR += py-gns3-converter
     SUBDIR += py-unicorn
     SUBDIR += qemu
+    SUBDIR += qemu2
     SUBDIR += qemu-cheri
     SUBDIR += qemu-devel
     SUBDIR += qemu-powernv
@@ -172,8 +174,6 @@
     SUBDIR += xhomer
     SUBDIR += xsystem35
     SUBDIR += xzx
-    SUBDIR += yabause
-    SUBDIR += yape
     SUBDIR += zsnes
 
 .include <bsd.port.subdir.mk>

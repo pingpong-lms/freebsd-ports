@@ -27,6 +27,7 @@
     SUBDIR += binclock
     SUBDIR += biosfont-demos
     SUBDIR += birthday
+    SUBDIR += bitwise
     SUBDIR += bogosort
     SUBDIR += bottlerocket
     SUBDIR += box2d
@@ -271,6 +272,7 @@
     SUBDIR += openmvg
     SUBDIR += openr2
     SUBDIR += orange3
+    SUBDIR += orion
     SUBDIR += orville-write
     SUBDIR += osinfo-db
     SUBDIR += ossp-uuid
@@ -284,6 +286,7 @@
     SUBDIR += p5-Array-LineReader
     SUBDIR += p5-Array-PrintCols
     SUBDIR += p5-Array-RefElem
+    SUBDIR += p5-Array-Utils
     SUBDIR += p5-Asterisk-FastAGI
     SUBDIR += p5-Bot-Training
     SUBDIR += p5-Bot-Training-MegaHAL
@@ -372,6 +375,7 @@
     SUBDIR += py-colorbrewer
     SUBDIR += py-colored
     SUBDIR += py-crudini
+    SUBDIR += py-eemeter
     SUBDIR += py-emoji
     SUBDIR += py-fast-histogram
     SUBDIR += py-fuzzy

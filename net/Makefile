@@ -93,7 +93,6 @@
     SUBDIR += corosync3
     SUBDIR += courier-authlib-ldap
     SUBDIR += cppzmq
-    SUBDIR += crtmpserver
     SUBDIR += cryptcat
     SUBDIR += csocks
     SUBDIR += csync2
@@ -167,10 +166,9 @@
     SUBDIR += freerdp1
     SUBDIR += freeswitch
     SUBDIR += freevrrpd
-    SUBDIR += frr3
-    SUBDIR += frr4
     SUBDIR += frr5
     SUBDIR += frr6
+    SUBDIR += frr7
     SUBDIR += fspclient
     SUBDIR += fspd
     SUBDIR += fsplib
@@ -192,13 +190,8 @@
     SUBDIR += gnome-online-miners
     SUBDIR += gnu-dico
     SUBDIR += gnu-radius
-    SUBDIR += go-amqp
     SUBDIR += go-bapu
     SUBDIR += go-cs
-    SUBDIR += go-httppath
-    SUBDIR += go-httptreemux
-    SUBDIR += go-nats
-    SUBDIR += go.net
     SUBDIR += gobgp
     SUBDIR += gofish
     SUBDIR += gogoc
@@ -245,25 +238,7 @@
     SUBDIR += hostapd
     SUBDIR += howl
     SUBDIR += hping
-    SUBDIR += hs-aws
-    SUBDIR += hs-bsb-http-chunked
-    SUBDIR += hs-connection
-    SUBDIR += hs-gsasl
-    SUBDIR += hs-hoauth2
-    SUBDIR += hs-hostname
-    SUBDIR += hs-iproute
-    SUBDIR += hs-maccatcher
     SUBDIR += hs-network
-    SUBDIR += hs-network-info
-    SUBDIR += hs-network-multicast
-    SUBDIR += hs-network-protocol-xmpp
-    SUBDIR += hs-network-uri
-    SUBDIR += hs-pcap
-    SUBDIR += hs-publicsuffixlist
-    SUBDIR += hs-resolv
-    SUBDIR += hs-sendfile
-    SUBDIR += hs-simple-sendfile
-    SUBDIR += hs-socks
     SUBDIR += hsflowd
     SUBDIR += htpdate
     SUBDIR += http_ping
@@ -434,13 +409,13 @@
     SUBDIR += linux-c7-avahi-libs
     SUBDIR += linux-c7-openldap
     SUBDIR += linux-c7-tcp_wrappers-libs
-    SUBDIR += linuxigd
     SUBDIR += liveMedia
     SUBDIR += lla
     SUBDIR += ltm
     SUBDIR += lualdap
     SUBDIR += luasocket
     SUBDIR += luasocket-51
+    SUBDIR += luasocket-53
     SUBDIR += lvwimax
     SUBDIR += mDNSResponder
     SUBDIR += macchanger
@@ -551,7 +526,6 @@
     SUBDIR += onioncat
     SUBDIR += opal
     SUBDIR += open-isns
-    SUBDIR += openafs
     SUBDIR += openbgpd
     SUBDIR += openbsc
     SUBDIR += openggsn
@@ -869,6 +843,7 @@
     SUBDIR += p5-Sort-Key-IPv4
     SUBDIR += p5-TFTP
     SUBDIR += p5-Test-URI
+    SUBDIR += p5-Text-Authinfo
     SUBDIR += p5-Twitter-API
     SUBDIR += p5-URI
     SUBDIR += p5-URI-FromHash
@@ -1016,7 +991,9 @@
     SUBDIR += pwhois
     SUBDIR += pxe
     SUBDIR += pxe-pdhcp
+    SUBDIR += py-DTLSSocket
     SUBDIR += py-GeoIP2
+    SUBDIR += py-aiocoap
     SUBDIR += py-aiohttp-socks
     SUBDIR += py-amqp
     SUBDIR += py-amqplib
@@ -1024,6 +1001,7 @@
     SUBDIR += py-beanstalkc
     SUBDIR += py-cjdns
     SUBDIR += py-cloudflare-scrape
+    SUBDIR += py-cloudflare-scrape-js2py
     SUBDIR += py-coherence
     SUBDIR += py-confluent-kafka
     SUBDIR += py-cymruwhois
@@ -1101,6 +1079,7 @@
     SUBDIR += py-python-ntlm
     SUBDIR += py-python-openstackclient
     SUBDIR += py-python-twitter
+    SUBDIR += py-pytradfri
     SUBDIR += py-pyvmomi
     SUBDIR += py-pyzmq
     SUBDIR += py-qt5-network
@@ -1142,6 +1121,7 @@
     SUBDIR += py-wolframalpha
     SUBDIR += py-wsproto
     SUBDIR += py-xmlrpc
+    SUBDIR += py-zeep
     SUBDIR += py-zeroconf
     SUBDIR += py-zope.proxy
     SUBDIR += py-zsi
@@ -1213,6 +1193,7 @@
     SUBDIR += rubygem-azure-core
     SUBDIR += rubygem-bunny
     SUBDIR += rubygem-connection_pool
+    SUBDIR += rubygem-docker-api
     SUBDIR += rubygem-dogapi
     SUBDIR += rubygem-domain_name
     SUBDIR += rubygem-dropbox-sdk
@@ -1222,10 +1203,8 @@
     SUBDIR += rubygem-epp-client-secdns
     SUBDIR += rubygem-epp-client-smallregistry
     SUBDIR += rubygem-fog-aliyun
-    SUBDIR += rubygem-fog-aliyun02
     SUBDIR += rubygem-fog-atmos
     SUBDIR += rubygem-fog-aws
-    SUBDIR += rubygem-fog-aws2
     SUBDIR += rubygem-fog-azure
     SUBDIR += rubygem-fog-brightbox
     SUBDIR += rubygem-fog-brightbox0
@@ -1235,7 +1214,6 @@
     SUBDIR += rubygem-fog-dynect
     SUBDIR += rubygem-fog-ecloud
     SUBDIR += rubygem-fog-google
-    SUBDIR += rubygem-fog-google17
     SUBDIR += rubygem-fog-internet-archive
     SUBDIR += rubygem-fog-joyent
     SUBDIR += rubygem-fog-local
@@ -1295,6 +1273,7 @@
     SUBDIR += rubygem-omniauth-twitter
     SUBDIR += rubygem-open-uri-cached
     SUBDIR += rubygem-opennebula
+    SUBDIR += rubygem-orchestrator_client
     SUBDIR += rubygem-ovirt-engine-sdk
     SUBDIR += rubygem-packetfu
     SUBDIR += rubygem-pcaprub
@@ -1430,6 +1409,7 @@
     SUBDIR += tcpxd
     SUBDIR += tcpxtract
     SUBDIR += tdetect
+    SUBDIR += termshark
     SUBDIR += tftpgrab
     SUBDIR += thcrut
     SUBDIR += throttled
@@ -1479,6 +1459,7 @@
     SUBDIR += urlendec
     SUBDIR += usbredir
     SUBDIR += utftpd
+    SUBDIR += v2ray
     SUBDIR += vblade
     SUBDIR += vde
     SUBDIR += vde2

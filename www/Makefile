@@ -43,6 +43,7 @@
     SUBDIR += baikal
     SUBDIR += bareos-webui
     SUBDIR += bareos16-webui
+    SUBDIR += bareos17-webui
     SUBDIR += bigbluebutton
     SUBDIR += bins
     SUBDIR += bkmrkconv
@@ -155,6 +156,7 @@
     SUBDIR += fcgiwrap
     SUBDIR += feedjack
     SUBDIR += ffproxy
+    SUBDIR += ffsend
     SUBDIR += fgallery
     SUBDIR += firefox
     SUBDIR += firefox-esr
@@ -197,7 +199,6 @@
     SUBDIR += glpi
     SUBDIR += gnome-user-share
     SUBDIR += go-appengine-sdk
-    SUBDIR += go-fasthttp
     SUBDIR += go-www
     SUBDIR += gobuffalo
     SUBDIR += gohugo
@@ -239,49 +240,9 @@
     SUBDIR += horde-wicked
     SUBDIR += hotcrp
     SUBDIR += hs-DAV
-    SUBDIR += hs-HTTP
-    SUBDIR += hs-authenticate
-    SUBDIR += hs-cgi
-    SUBDIR += hs-cookie
-    SUBDIR += hs-css-text
-    SUBDIR += hs-fastcgi
-    SUBDIR += hs-happstack-server
-    SUBDIR += hs-heist
     SUBDIR += hs-hjsmin
-    SUBDIR += hs-http-api-data
-    SUBDIR += hs-http-client
-    SUBDIR += hs-http-client-tls
-    SUBDIR += hs-http-conduit
-    SUBDIR += hs-http-date
-    SUBDIR += hs-http-reverse-proxy
-    SUBDIR += hs-http-server
-    SUBDIR += hs-http-types
-    SUBDIR += hs-http2
-    SUBDIR += hs-multipart
-    SUBDIR += hs-oeis
-    SUBDIR += hs-path-pieces
-    SUBDIR += hs-recaptcha
-    SUBDIR += hs-shakespeare
-    SUBDIR += hs-snap
-    SUBDIR += hs-snap-core
-    SUBDIR += hs-snap-server
-    SUBDIR += hs-url
-    SUBDIR += hs-wai
     SUBDIR += hs-wai-app-static
-    SUBDIR += hs-wai-extra
-    SUBDIR += hs-wai-logger
-    SUBDIR += hs-warp
-    SUBDIR += hs-warp-tls
-    SUBDIR += hs-xss-sanitize
-    SUBDIR += hs-yesod
-    SUBDIR += hs-yesod-auth
-    SUBDIR += hs-yesod-auth-hashdb
     SUBDIR += hs-yesod-bin
-    SUBDIR += hs-yesod-core
-    SUBDIR += hs-yesod-form
-    SUBDIR += hs-yesod-persistent
-    SUBDIR += hs-yesod-static
-    SUBDIR += hs-yesod-test
     SUBDIR += htdigest
     SUBDIR += htdump
     SUBDIR += html2hdml
@@ -371,8 +332,6 @@
     SUBDIR += matomo
     SUBDIR += mattermost-server
     SUBDIR += mattermost-webapp
-    SUBDIR += mediawiki127
-    SUBDIR += mediawiki130
     SUBDIR += mediawiki131
     SUBDIR += mediawiki132
     SUBDIR += mergelog
@@ -432,7 +391,6 @@
     SUBDIR += mod_line_edit
     SUBDIR += mod_log_sql2
     SUBDIR += mod_maxminddb
-    SUBDIR += mod_md-devel
     SUBDIR += mod_memcache
     SUBDIR += mod_memcache_block
     SUBDIR += mod_mono
@@ -656,7 +614,6 @@
     SUBDIR += p5-CGI-Upload
     SUBDIR += p5-CGI-Utils
     SUBDIR += p5-CGI-XMLApplication
-    SUBDIR += p5-CGI.pm
     SUBDIR += p5-CIF-Client
     SUBDIR += p5-CSS-DOM
     SUBDIR += p5-CSS-Inliner
@@ -805,6 +762,7 @@
     SUBDIR += p5-Dancer-Plugin-REST
     SUBDIR += p5-Dancer-Plugin-RPC
     SUBDIR += p5-Dancer-Plugin-SiteMap
+    SUBDIR += p5-Dancer-Plugin-Swagger
     SUBDIR += p5-Dancer-Plugin-ValidationClass
     SUBDIR += p5-Dancer-Session-Cookie
     SUBDIR += p5-Dancer-Template-Xslate
@@ -996,6 +954,7 @@
     SUBDIR += p5-HTTP-Session-State-MobileAgentID
     SUBDIR += p5-HTTP-Session-Store-DBI
     SUBDIR += p5-HTTP-Session2
+    SUBDIR += p5-HTTP-Simple
     SUBDIR += p5-HTTP-SimpleLinkChecker
     SUBDIR += p5-HTTP-Size
     SUBDIR += p5-HTTP-Thin
@@ -1049,6 +1008,7 @@
     SUBDIR += p5-ModPerl-VersionUtil
     SUBDIR += p5-Mojo-IOLoop-ForkCall
     SUBDIR += p5-Mojo-Server-FastCGI
+    SUBDIR += p5-Mojo-Weixin
     SUBDIR += p5-MojoMojo
     SUBDIR += p5-MojoX-Log-Dispatch-Simple
     SUBDIR += p5-MojoX-Renderer-Xslate
@@ -1483,6 +1443,7 @@
     SUBDIR += py-beaker
     SUBDIR += py-beautifulsoup
     SUBDIR += py-beautifulsoup32
+    SUBDIR += py-beautifulsoup460
     SUBDIR += py-biscuits
     SUBDIR += py-bjoern
     SUBDIR += py-bleach
@@ -1496,7 +1457,6 @@
     SUBDIR += py-caldav
     SUBDIR += py-cheroot
     SUBDIR += py-cherrypy
-    SUBDIR += py-cherrypy-old
     SUBDIR += py-clientform
     SUBDIR += py-collective.easytemplate
     SUBDIR += py-collective.templateengines
@@ -1521,6 +1481,9 @@
     SUBDIR += py-dj21-djangoql
     SUBDIR += py-dj21-djangorestframework
     SUBDIR += py-dj21-drf-yasg
+    SUBDIR += py-dj22-django-taggit
+    SUBDIR += py-dj22-django-treebeard
+    SUBDIR += py-dj22-djangorestframework
     SUBDIR += py-django
     SUBDIR += py-django-allauth
     SUBDIR += py-django-annotations
@@ -1535,6 +1498,7 @@
     SUBDIR += py-django-bootstrap3
     SUBDIR += py-django-braces
     SUBDIR += py-django-bulk-update
+    SUBDIR += py-django-cacheops
     SUBDIR += py-django-caching-app-plugins
     SUBDIR += py-django-classy-tags
     SUBDIR += py-django-cms
@@ -1585,6 +1549,7 @@
     SUBDIR += py-django-pipeline
     SUBDIR += py-django-post_office
     SUBDIR += py-django-profiles
+    SUBDIR += py-django-prometheus
     SUBDIR += py-django-pyscss
     SUBDIR += py-django-ranged-response
     SUBDIR += py-django-recaptcha
@@ -1619,6 +1584,7 @@
     SUBDIR += py-django111
     SUBDIR += py-django20
     SUBDIR += py-django21
+    SUBDIR += py-django22
     SUBDIR += py-django_compressor
     SUBDIR += py-django_openstack_auth
     SUBDIR += py-django_polymorphic
@@ -1678,6 +1644,7 @@
     SUBDIR += py-google-api-python-client
     SUBDIR += py-google-cloud-core
     SUBDIR += py-google-cloud-dlp
+    SUBDIR += py-google-cloud-logging
     SUBDIR += py-google-cloud-storage
     SUBDIR += py-google-cloud-translate
     SUBDIR += py-google-cloud-vision
@@ -1857,6 +1824,7 @@
     SUBDIR += py-slimmer
     SUBDIR += py-slumber
     SUBDIR += py-sockjs-tornado
+    SUBDIR += py-soupsieve
     SUBDIR += py-splinter
     SUBDIR += py-spyne
     SUBDIR += py-sseclient
@@ -2047,7 +2015,6 @@
     SUBDIR += rubygem-jekyll-watch
     SUBDIR += rubygem-journey
     SUBDIR += rubygem-jquery-atwho-rails
-    SUBDIR += rubygem-jquery-atwho-rails13
     SUBDIR += rubygem-jquery-rails
     SUBDIR += rubygem-jquery-rails-rails5
     SUBDIR += rubygem-jquery-rails-rails50
@@ -2167,7 +2134,6 @@
     SUBDIR += rubygem-savon
     SUBDIR += rubygem-sawyer
     SUBDIR += rubygem-select2-rails
-    SUBDIR += rubygem-select2-rails3
     SUBDIR += rubygem-selenium-webdriver
     SUBDIR += rubygem-semantic-ui-sass
     SUBDIR += rubygem-simple-rss
@@ -2242,7 +2208,6 @@
     SUBDIR += spreadlogd
     SUBDIR += sqstat
     SUBDIR += squid
-    SUBDIR += squid-devel
     SUBDIR += squid3
     SUBDIR += squid_radius_auth
     SUBDIR += squidanalyzer
@@ -2391,7 +2356,6 @@
     SUBDIR += udmsearch
     SUBDIR += ufdbguard
     SUBDIR += unit
-    SUBDIR += unit-go
     SUBDIR += unit-perl
     SUBDIR += unit-php
     SUBDIR += uwsgi
@@ -2424,7 +2388,6 @@
     SUBDIR += webcopy
     SUBDIR += webcrawl
     SUBDIR += webfs
-    SUBDIR += webgo
     SUBDIR += webgrind
     SUBDIR += webhook
     SUBDIR += webinject

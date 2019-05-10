@@ -2,6 +2,7 @@
 
 PORTNAME=	GPy
 DISTVERSION=	1.9.6
+PORTREVISION=	1
 CATEGORIES=	science python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -19,7 +20,7 @@ RUN_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}six>0:devel/py-six@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}paramz>=0.9.0:science/py-paramz@${PY_FLAVOR}
 
-USES=		localbase python
+USES=		localbase python:-3.6
 USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>
