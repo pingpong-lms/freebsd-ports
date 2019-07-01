@@ -3,6 +3,7 @@
 
 PORTNAME=	lsof
 DISTVERSION=	4.93.2
+PORTREVISION=	2
 PORTEPOCH=	8
 CATEGORIES=	sysutils
 
@@ -30,7 +31,7 @@ CONFIGURE_ARGS=	-n freebsd
 CONFIGURE_ENV=	LSOF_CC="${CC}" FREEBSD_SYS="${SRC_BASE}/sys"
 
 .if !exists(${SRC_BASE}/sys/kern/kern_lockf.c)
-IGNORE=		requires kernel sources
+IGNORE+=		requires kernel sources
 .endif
 
 do-install:

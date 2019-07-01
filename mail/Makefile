@@ -7,6 +7,7 @@
     SUBDIR += adcomplain
     SUBDIR += addresses
     SUBDIR += addresses-goodies
+    SUBDIR += aerc
     SUBDIR += akpop3d
     SUBDIR += alpine
     SUBDIR += altermime
@@ -227,6 +228,7 @@
     SUBDIR += milter-bogom
     SUBDIR += milter-callback
     SUBDIR += milter-greylist
+    SUBDIR += milter-manager
     SUBDIR += milter-regex
     SUBDIR += milter-skem
     SUBDIR += mime-construct
@@ -616,7 +618,7 @@
     SUBDIR += rubygem-premailer
     SUBDIR += rubygem-premailer-rails
     SUBDIR += rubygem-premailer-rails-rails5
-    SUBDIR += rubygem-premailer-rails19-rails50
+    SUBDIR += rubygem-premailer-rails19-rails5
     SUBDIR += rubygem-rmail
     SUBDIR += rubygem-roadie
     SUBDIR += rubygem-roadie-rails

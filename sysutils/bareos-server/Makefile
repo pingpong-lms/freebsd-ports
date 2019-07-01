@@ -19,7 +19,8 @@ CONFLICTS?=	bacula17*-server-* bareos16-server-*
 LIB_DEPENDS+=	liblzo2.so:archivers/lzo2 \
 		libjansson.so:devel/jansson
 
-USES+=		cmake:insource pkgconfig readline:port shebangfix
+USES+=		cmake:insource compiler:c++11-lang pkgconfig readline:port \
+		shebangfix
 USE_GITHUB=	yes
 
 USERS=		bareos
@@ -65,9 +66,9 @@ SCSICRYPTO_CMAKE_ON=	-Dscsi-crypto=ON
 SCSICRYPTO_CMAKE_OFF=	-Dscsi-crypto=OFF
 
 .if ${PKGNAMESUFFIX} == "-client" || ${PKGNAMESUFFIX} == "-server"  #Till end of the file
-PYTHON_USES=		  python
-PYTHON_CMAKE_ON=	-Dpython=yes
-PYTHON_CMAKE_OFF=	-Dpython=no
+PYTHON_USES=		python:2.7
+PYTHON_CMAKE_ON=	-Dpython=ON
+PYTHON_CMAKE_OFF=	-Dpython=OFF
 PYTHON_PLUGIN=		yes
 
 .if !defined(WITH_CLIENT_ONLY)
@@ -138,7 +139,7 @@ SUB_LIST=	BAREOS_USER=${BAREOS_USER} \
 		BAREOS_DIR=${BAREOS_DIR}
 
 NLS_USES=		gettext
-NLS_CMAKE_ON=		-DENABLE_NLS=1
+NLS_CMAKE_ON=		-Dnls=ON
 
 # Client only or full server version
 .if defined(WITH_CLIENT_ONLY)
@@ -192,7 +193,6 @@ MAKE_ENV+=	MAN8="${MP8}" MAN1="${MP1}"
 
 post-patch:
 	@${REINPLACE_CMD}  '21d' ${WRKSRC}/CMakeLists.txt
-	@${REINPLACE_CMD}  '579d' ${WRKSRC}/core/CMakeLists.txt
 .if ${PKGNAMESUFFIX} == "-server"
 	@${REINPLACE_CMD}  '25d' ${WRKSRC}/core/src/plugins/CMakeLists.txt
 .endif

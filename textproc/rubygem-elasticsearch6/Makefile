@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	elasticsearch
-PORTVERSION=	6.3.0
+PORTVERSION=	6.8.0
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	6

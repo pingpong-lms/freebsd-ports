@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	pandoc
-PORTVERSION=	2.7.1
+PORTVERSION=	2.7.2
+PORTREVISION=	1
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -62,9 +63,8 @@ USE_CABAL=	Glob-0.10.0 HTTP-4000.3.12_2 HsYAML-0.1.1.3 JuicyPixels-3.3.3_1 \
 
 CABAL_FLAGS=	-static derive_json_via_th
 
-PLIST_FILES=	man/man1/pandoc.1.gz
-
 post-install:
+	cd ${WRKSRC} && ${COPYTREE_SHARE} data ${STAGEDIR}${DATADIR}
 	${INSTALL_MAN} ${WRKSRC}/man/pandoc.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 
 .include <bsd.port.mk>

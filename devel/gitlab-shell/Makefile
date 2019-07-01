@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gitlab-shell
-PORTVERSION=	9.0.0
+PORTVERSION=	9.1.0
 CATEGORIES=	devel
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -10,13 +10,14 @@ COMMENT=	GitLab Shell handles git commands for GitLab
 
 LICENSE=	MIT
 
-BUILD_DEPENDS=	gem:devel/ruby-gems \
-		go>=1.5.3:lang/go
+BUILD_DEPENDS=	gem:devel/ruby-gems
+
+USES=		go
 
 USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 # Find the commit hash here: https://gitlab.com/gitlab-org/gitlab-shell/tags
-GL_COMMIT=	ffe54c21ffc42c03bfbca0dd21e23ae956517c2c
+GL_COMMIT=	0e3052be5642c90ee173ff9af1e28358f227fbed
 
 USERS=		git
 GROUPS=		git

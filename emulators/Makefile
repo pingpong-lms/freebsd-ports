@@ -111,14 +111,13 @@
     SUBDIR += py-gns3-converter
     SUBDIR += py-unicorn
     SUBDIR += qemu
-    SUBDIR += qemu2
     SUBDIR += qemu-cheri
     SUBDIR += qemu-devel
     SUBDIR += qemu-powernv
-    SUBDIR += qemu-riscv
     SUBDIR += qemu-sbruno
     SUBDIR += qemu-user-static
     SUBDIR += qemu-utils
+    SUBDIR += qemu2
     SUBDIR += qmc2
     SUBDIR += quasi88
     SUBDIR += riscv-fesvr
@@ -170,9 +169,10 @@
     SUBDIR += xbraitenberg
     SUBDIR += xcpc
     SUBDIR += xen-kernel
-    SUBDIR += xen-kernel47
     SUBDIR += xhomer
     SUBDIR += xsystem35
+    SUBDIR += yuzu
+    SUBDIR += yuzu-qt5
     SUBDIR += xzx
     SUBDIR += zsnes
 
