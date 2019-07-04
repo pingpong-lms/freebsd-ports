@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-generic
-PORTVERSION=	0.16
+PORTVERSION=	0.17
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
 DISTFILES=	#
@@ -58,6 +58,11 @@ RUN_DEPENDS= \
 	ag:textproc/the_silver_searcher \
 	tmux:sysutils/tmux \
 	screen:sysutils/screen
+
+.include <bsd.port.options.mk>
+.if ${OSVERSION} >= 1200000
+RUN_DEPENDS+=	rcs:devel/rcs
+.endif
 
 configure:
 	${DO_NADA}
