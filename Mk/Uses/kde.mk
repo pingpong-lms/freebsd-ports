@@ -54,16 +54,16 @@ _KDE_RELNAME=		KDE${_KDE_VERSION}
 
 # === VERSIONS OF THE DIFFERENT COMPONENTS =====================================
 # Current KDE desktop.
-KDE_PLASMA_VERSION?=		5.16.2
+KDE_PLASMA_VERSION?=		5.16.4
 KDE_PLASMA_BRANCH?=		stable
 
 # Current KDE frameworks.
-KDE_FRAMEWORKS_VERSION?=	5.59.0
+KDE_FRAMEWORKS_VERSION?=	5.61.0
 KDE_FRAMEWORKS_BRANCH?= 	stable
 
 # Current KDE applications.
-KDE_APPLICATIONS_VERSION?=	19.04.2
-KDE_APPLICATIONS_SHLIB_VER?=	5.11.2
+KDE_APPLICATIONS_VERSION?=	19.08.0
+KDE_APPLICATIONS_SHLIB_VER?=	5.12.0
 KDE_APPLICATIONS_BRANCH?=	stable
 # Upstream moves old software to Attic/. Specify the newest applications release there.
 # Only the major version is used for the comparison.
@@ -128,7 +128,7 @@ PORTVERSION?=		${KDE_FRAMEWORKS_VERSION}
 PKGNAMEPREFIX?=		kf5-
 # This is a slight duplication of _USE_FRAMEWORKS_PORTING -- it maybe would be
 # better to rely on ${_USE_FRAMEWORKS_PORTING:S/^/k/g}
-_PORTINGAIDS=		kjs kjsembed kdelibs4support khtml kmediaplayer kross
+_PORTINGAIDS=		kjs kjsembed kdelibs4support kdewebkit khtml kmediaplayer kross
 .        if ${_PORTINGAIDS:M*${PORTNAME}*}
 MASTER_SITES?=		KDE/${KDE_FRAMEWORKS_BRANCH}/frameworks/${KDE_FRAMEWORKS_VERSION:R}/portingAids
 .        else
@@ -746,7 +746,7 @@ kde-mbox-importer_PORT=		deskutils/mbox-importer
 kde-mbox-importer_PATH=		${KDE_PREFIX}/bin/mboximporter
 
 kde-pim-data-exporter_PORT=	deskutils/pim-data-exporter
-kde-pim-data-exporter_PATH=	${KDE_PREFIX}/bin/pimsettingexporter
+kde-pim-data-exporter_PATH=	${KDE_PREFIX}/bin/pimdataexporter
 # ====================== end of pim5 components ================================
 
 # ====================== multiversion component ================================

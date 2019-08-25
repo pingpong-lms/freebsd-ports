@@ -12,6 +12,7 @@
     SUBDIR += R-cran-digest
     SUBDIR += R-cran-openssl
     SUBDIR += acme.sh
+    SUBDIR += acmed
     SUBDIR += acmetool
     SUBDIR += aescrypt
     SUBDIR += aespipe
@@ -39,6 +40,7 @@
     SUBDIR += barnyard2-sguil
     SUBDIR += base
     SUBDIR += base-audit
+    SUBDIR += bastillion
     SUBDIR += bcrypt
     SUBDIR += bcwipe
     SUBDIR += bdes
@@ -91,6 +93,7 @@
     SUBDIR += clamfs
     SUBDIR += clamsmtp
     SUBDIR += clamtk
+    SUBDIR += cloak
     SUBDIR += clusterssh
     SUBDIR += cops
     SUBDIR += courier-authlib
@@ -132,6 +135,7 @@
     SUBDIR += dotdotpwn
     SUBDIR += dropbear
     SUBDIR += dsniff
+    SUBDIR += dsvpn
     SUBDIR += duo
     SUBDIR += easy-rsa
     SUBDIR += elixir-comeonin
@@ -277,6 +281,7 @@
     SUBDIR += l5
     SUBDIR += lasso
     SUBDIR += lastpass-cli
+    SUBDIR += lego
     SUBDIR += libadacrypt
     SUBDIR += libargon2
     SUBDIR += libassuan
@@ -371,6 +376,7 @@
     SUBDIR += mkp224o
     SUBDIR += modsecurity3
     SUBDIR += modsecurity3-apache
+    SUBDIR += modsecurity3-nginx
     SUBDIR += monkeysphere
     SUBDIR += morphis
     SUBDIR += munge
@@ -931,6 +937,7 @@
     SUBDIR += py-mixbox
     SUBDIR += py-mnemonic
     SUBDIR += py-msoffcrypto-tool
+    SUBDIR += py-muacrypt
     SUBDIR += py-netmiko
     SUBDIR += py-ntlm-auth
     SUBDIR += py-oauth2client
@@ -1080,6 +1087,7 @@
     SUBDIR += rubygem-bcrypt_pbkdf
     SUBDIR += rubygem-devise-two-factor
     SUBDIR += rubygem-devise-two-factor-rails5
+    SUBDIR += rubygem-devise-two-factor30-rails5
     SUBDIR += rubygem-devise_pam_authenticatable2
     SUBDIR += rubygem-digest-crc
     SUBDIR += rubygem-doorkeeper
@@ -1091,7 +1099,6 @@
     SUBDIR += rubygem-encryptor
     SUBDIR += rubygem-ezcrypto
     SUBDIR += rubygem-googleauth
-    SUBDIR += rubygem-googleauth06
     SUBDIR += rubygem-gpgme
     SUBDIR += rubygem-gpgr
     SUBDIR += rubygem-gssapi
@@ -1212,7 +1219,6 @@
     SUBDIR += snort-rep
     SUBDIR += snort2pfcd
     SUBDIR += snort3
-    SUBDIR += snortreport
     SUBDIR += snortsam
     SUBDIR += snortsnarf
     SUBDIR += snuffleupagus

@@ -110,6 +110,7 @@
     SUBDIR += jmol
     SUBDIR += jstrack
     SUBDIR += kalzium
+    SUBDIR += kim-api
     SUBDIR += kst2
     SUBDIR += lammps
     SUBDIR += lamprop
@@ -162,6 +163,7 @@
     SUBDIR += msms
     SUBDIR += multiwfn
     SUBDIR += namd
+    SUBDIR += ncnn
     SUBDIR += nest
     SUBDIR += netcdf
     SUBDIR += netcdf-cxx
@@ -172,6 +174,7 @@
     SUBDIR += octopus
     SUBDIR += openbabel
     SUBDIR += openkim
+    SUBDIR += openkim-models
     SUBDIR += openmx
     SUBDIR += opensim-core
     SUBDIR += opensph
@@ -229,6 +232,8 @@
     SUBDIR += py-ase
     SUBDIR += py-avogadrolibs
     SUBDIR += py-cdo
+    SUBDIR += py-chainer
+    SUBDIR += py-chainer-chemistry
     SUBDIR += py-chempy
     SUBDIR += py-coards
     SUBDIR += py-dlib
@@ -247,6 +252,7 @@
     SUBDIR += py-netCDF4
     SUBDIR += py-obspy
     SUBDIR += py-oddt
+    SUBDIR += py-onnx
     SUBDIR += py-openpiv
     SUBDIR += py-paida
     SUBDIR += py-paramz
@@ -268,6 +274,7 @@
     SUBDIR += py-quantities
     SUBDIR += py-rmf
     SUBDIR += py-rmsd
+    SUBDIR += py-ruffus
     SUBDIR += py-scikit-fuzzy
     SUBDIR += py-scikit-learn
     SUBDIR += py-scikit-sparse
@@ -275,6 +282,8 @@
     SUBDIR += py-scipy
     SUBDIR += py-scoria
     SUBDIR += py-spglib
+    SUBDIR += py-tensorflow
+    SUBDIR += py-tensorflow-estimator
     SUBDIR += py-veusz
     SUBDIR += py-ws2300
     SUBDIR += pybrain
@@ -324,6 +333,7 @@
     SUBDIR += voro++
     SUBDIR += wannier90
     SUBDIR += wxmacmolplt
+    SUBDIR += wwplot
     SUBDIR += xcrysden
     SUBDIR += xdrawchem
     SUBDIR += xfce4-equake-plugin

@@ -2,7 +2,7 @@
 
 PORTNAME=	pet
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.3.5
+DISTVERSION=	0.3.6
 CATEGORIES=	deskutils
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,7 +11,7 @@ COMMENT=	Simple command-line snippet manager, written in Go
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go
+USES=		go:modules
 USE_GITHUB=	yes
 GH_ACCOUNT=	knqyf263
 GH_TUPLE=	\

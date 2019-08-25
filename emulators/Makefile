@@ -14,6 +14,7 @@
     SUBDIR += bfe
     SUBDIR += bochs
     SUBDIR += bsvc
+    SUBDIR += cannonball
     SUBDIR += catapult
     SUBDIR += cinc
     SUBDIR += cingb
@@ -73,6 +74,7 @@
     SUBDIR += mame
     SUBDIR += mastergear
     SUBDIR += mednafen
+    SUBDIR += mesen
     SUBDIR += mess
     SUBDIR += mgba
     SUBDIR += mtools
@@ -103,7 +105,6 @@
     SUBDIR += pcem
     SUBDIR += pcemu
     SUBDIR += pcsxr
-    SUBDIR += pearpc
     SUBDIR += pipelight
     SUBDIR += playonbsd
     SUBDIR += ppsspp
@@ -118,6 +119,7 @@
     SUBDIR += qemu-user-static
     SUBDIR += qemu-utils
     SUBDIR += qemu2
+    SUBDIR += qemu30
     SUBDIR += qmc2
     SUBDIR += quasi88
     SUBDIR += riscv-fesvr

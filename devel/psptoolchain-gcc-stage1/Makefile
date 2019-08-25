@@ -3,7 +3,7 @@
 
 PORTNAME=		gcc
 PORTVERSION=		4.9.3
-PORTREVISION?=		0
+PORTREVISION?=		1
 CATEGORIES=		devel
 MASTER_SITES=		GCC
 PKGNAMEPREFIX=		psptoolchain-
@@ -36,7 +36,7 @@ BUILD_DEPENDS+=		psp-addr2line:devel/psptoolchain-binutils \
 			psp-strings:devel/psptoolchain-binutils \
 			psp-strip:devel/psptoolchain-binutils
 
-USES+=			gmake libtool tar:bzip2
+USES+=			compiler:c11 gmake libtool tar:bzip2
 
 MAKE_ENV+=		PATH=${LOCALBASE}/${PSP_GCC_STAGE_PREFIX}/bin:${PREFIX}/bin:${PATH}
 HAS_CONFIGURE=		yes

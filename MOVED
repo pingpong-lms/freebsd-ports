@@ -10353,7 +10353,6 @@ security/shibboleth2-sp|security/shibboleth-sp|2018-08-07|Project updated to ver
 security/opensaml2|security/opensaml|2018-08-07|Project updated to version 3, so the 2 suffix is not valid anymore
 devel/lldb38|devel/llvm38|2018-08-08|METAPORT removed
 lang/clang38|devel/llvm38|2018-08-08|METAPORT removed
-science/py-tensorflow||2018-08-08|Has expired: build broken
 devel/bazel-clang38|devel/bazel|2018-08-08|Slave port depends on obsolete LLVM version
 security/libbeid|security/beid|2018-08-12|No longer just a library
 editors/joe2|editors/joe|2018-08-12|Patches from editors/joe2 have been integrated into editors/joe
@@ -10706,7 +10705,6 @@ games/gnomeattacks||2018-12-11|Has expired: GNOME 2 application
 games/gnomebreakout||2018-12-11|Has expired: GNOME 2 application
 x11-clocks/gtubeclock||2018-12-11|Has expired: GNOME 2 application
 x11-clocks/sanduhr||2018-12-11|Has expired: GNOME 2 application
-audio/grip||2018-12-11|Has expired: GNOME 2 application
 audio/jack-rack||2018-12-11|Has expired: GNOME 2 application
 math/gdcalc||2018-12-11|Has expired: GNOME 2 application
 x11/brightside||2018-12-11|Has expired: GNOME 2 application
@@ -10875,7 +10873,6 @@ security/py-yubioath-desktop|security/yubioath-desktop|2018-12-27|New Yubikey Oa
 audio/amarok-kde4|audio/amarok|2018-12-28|Renamed as no longer kde4 based
 games/knights-kde|games/knights|2018-12-30|Switch to version from KDE Applications
 multimedia/kmplayer-kde4|multimedia/kmplayer|2018-12-30|Moved to KF5 based version
-net/pecl-mosquitto||2018-12-30|Has expired: Works only with EOL php 5.6
 net/pecl-ip2location||2018-12-30|Has expired: Works only with EOL php 5.6
 net/pecl-yp||2018-12-30|Has expired: Works only with EOL php 5.6
 net/pecl-oauth||2018-12-30|Has expired: Works only with EOL php 5.6
@@ -10957,7 +10954,6 @@ devel/pecl-jsonc||2018-12-30|Has expired: Works only with EOL php 5.6
 devel/pecl-weakref||2018-12-30|Has expired: Works only with EOL php 5.6
 devel/pecl-pthreads2|devel/pecl-pthreads|2018-12-30|Has expired: Works only with EOL php 5.6
 devel/pecl-gearman||2018-12-30|Has expired: Works only with EOL php 5.6
-devel/pecl-inotify||2018-12-30|Has expired: Works only with EOL php 5.6
 devel/pecl-raphf||2018-12-30|Has expired: Works only with EOL php 5.6
 devel/php5-thrift||2018-12-30|Has expired: Works only with EOL php 5.6
 devel/php5-ice||2018-12-30|Has expired: Works only with EOL php 5.6
@@ -11423,7 +11419,6 @@ security/pecl-ssh2-0|security/pecl-ssh2|2019-01-01|Has expired: Works only with 
 security/bitwarden-ruby||2019-01-01|Has expired: Expects very specific rubygem versions for new updates. Please follow instructions in git repo
 devel/pecl-intl||2019-01-01|Has expired: Works only with EOL php 5.6
 devel/pecl-APCu4|devel/pecl-APCu|2019-01-01|Has expired: Works only with EOL php 5.6
-databases/pecl-memcache||2019-01-01|Has expired: Works only with EOL php 5.6
 databases/pecl-memcached2|databases/pecl-memcached|2019-01-01|Has expired: Works only with EOL php 5.6
 math/pecl-bitset2|math/pecl-bitset|2019-01-01|Has expired: Works only with EOL php 5.6
 multimedia/zoneminder-h264|multimedia/zoneminder|2019-01-01|Has expired: h264 feature was commited to main branch, please upgrade to www/zoneminder
@@ -11552,7 +11547,6 @@ ftp/proftpd-mod_geoip||2019-02-16|Has expired: Uses legacy GeoIP 1 format which 
 net/go-geoip||2019-02-16|Has expired: Uses legacy GeoIP 1 format which no longer works; switch to GeoIP 2 where possible
 net/py-GeoIP|net/py-GeoIP2|2019-02-16|Has expired: Uses legacy GeoIP 1 format which no longer works; switch to GeoIP 2 where possible
 net/pecl-geoip||2019-02-16|Has expired: Uses legacy GeoIP 1 format which no longer works; switch to GeoIP 2 where possible
-net/subnetcalc||2019-02-16|Has expired: Uses legacy GeoIP 1 format which no longer works; switch to GeoIP 2 where possible
 net/p5-Geo-IP||2019-02-16|Has expired: Uses legacy GeoIP 1 format which no longer works; switch to GeoIP 2 where possible
 net/rubygem-geoip||2019-02-16|Has expired: Uses legacy GeoIP 1 format which no longer works; switch to GeoIP 2 where possible
 security/sguil||2019-02-16|Has expired: Uses legacy GeoIP 1 format which no longer works; switch to GeoIP 2 where possible
@@ -11681,7 +11675,6 @@ multimedia/phonon-designerplugin@qt4||2019-03-16|Qt4 deprecation
 multimedia/phonon-designerplugin@qt5|multimedia/phonon-designerplugin|2019-03-16|Flavor has been removed
 multimedia/phonon-gstreamer@qt4||2019-03-16|Qt4 deprecation
 multimedia/phonon-gstreamer@qt5|multimedia/phonon-gstreamer|2019-03-16|Flavor has been removed
-devel/git-cola||2019-03-16|Removed
 emulators/gns3||2019-03-16|Removed
 accessibility/qt4-accessible||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 astro/qlandkartegt||2019-03-16|Has expired: Qt4 has been EOL since december 2015
@@ -11913,7 +11906,6 @@ sysutils/qzeitgeist||2019-03-16|Has expired: Qt4 has been EOL since december 201
 sysutils/searchmonkey||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 textproc/beediff||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 textproc/dixit||2019-03-16|Has expired: Qt4 has been EOL since december 2015
-textproc/goldendict||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 textproc/ibus-qt||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 textproc/py-qt4-xml||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 textproc/py-qt4-xmlpatterns||2019-03-16|Has expired: Qt4 has been EOL since december 2015
@@ -12786,7 +12778,7 @@ www/rubygem-heroku||2019-05-31|Has expired: Upstream has changed to node-based C
 multimedia/gmerlin-avdecoder||2019-05-31|Has expired: unused in the ports tree and depends on vulnerable multimedia/ffmpeg0
 security/racoon2-legacy|security/racoon2|2019-05-31|Has expired: No longer supported upstream, use security/racoon2
 www/pivotx||2019-05-31|Has expired: inactive upstream and does not work with PHP 7
-dns/bind912|dns/bind914|2019-05-31|Has expired: Support ends, please move to dns/bind914.
+dns/bind912|dns/bind914|2019-05-31|Has expired: Support ends, please move to dns/bind914
 multimedia/vdr-plugin-softhddevice||2019-05-31|Has expired: unmaintained and depends on vulnerable multimedia/ffmpeg0
 devel/pecl-pthreads||2019-06-02|Has expired: Does not work with recent versions of php
 net-mgmt/ccnet-client||2019-06-10|Removed, no longer has dependencies and has been abandoned upstream
@@ -12807,9 +12799,9 @@ security/py-bro-pkg|security/py-zkg|2019-06-17|Renamed to match upstream changes
 devel/py-pydocumentdb|devel/py-azure-cosmos|2019-06-20|Renamed upstream
 www/rubygem-lograge-rails50|www/rubygem-lograge-rails5|2019-06-21|Obsolete by gitlab-ce upgrade, use www/rubygem-lograge-rails5 instead
 devel/rubygem-batch-loader12|devel/rubygem-batch-loader|2019-06-21|Obsolete by gitlab-ce upgrade, use devel/rubygem-batch-loader instead
-security/easy-rsa2|security/easy-rsa|2019-06-23|Has expired: Use easy-rsa 3 instead.
+security/easy-rsa2|security/easy-rsa|2019-06-23|Has expired: Use easy-rsa 3 instead
 devel/py-robotframework-selenium2library|devel/py-robotframework-seleniumlibrary|2019-06-25|Renamed to match upstream
-net-p2p/zetacoin-nox11|net-p2p/zetacoin|2019-06-26|Slave port folded back into now text-only master port.
+net-p2p/zetacoin-nox11|net-p2p/zetacoin|2019-06-26|Slave port folded back into now text-only master port
 net/tigervnc||2019-06-29|Removed: Non-essential meta port
 sysutils/cfengine33|sysutils/cfengine313|2019-06-30|Has expired: No longer supported upstream
 sysutils/cfengine-masterfiles38|sysutils/cfengine-masterfiles313|2019-06-30|Has expired: No longer supported upstream
@@ -12841,3 +12833,49 @@ devel/rubygem-fastthread||2019-06-30|Has expired: Does not build for all support
 www/rubygem-responders-rails50|www/rubygem-responders|2019-06-30|Has expired: Use www/rubygem-responders (depends on Rails 5.0) instead
 emulators/xen-kernel47|emulators/xen-kernel|2019-07-01|Has expired: This port is about to be removed, please update to a newer Xen version
 sysutils/xen-tools47|sysutils/xen-tools|2019-07-01|Has expired: This port is about to be removed, please update to a newer Xen version
+www/palemoon||2019-07-03|Not maintained and full of security holes
+www/seamonkey||2019-07-03|2.49.* is not maintained upstream and full of security holes
+www/tomcat8||2019-07-06|Has expired: EoL since 2018-06-30
+devel/libevent-hiphop||2019-07-10|Has expired: Obsoleted with removal of lang/hiphop-php
+textproc/apache-solr3|textproc/apache-solr|2019-07-12|Obsolete
+misc/tcb||2019-07-13|Has expired: Abandonware that uses sys/dir.h
+editors/xed||2019-07-13|Has expired: Abandonware using sys/dir.h
+databases/gtksql||2019-07-13|Has expired: Abandonware using sys/dir.h
+security/snortreport||2019-07-16|Has expired: Abandonware
+databases/pecl-redis3|databases/pecl-redis|2019-07-19|No longer needed after PHP 5 removal
+www/weblint||2019-07-20|Broken, uses nonexistant perl libraries, and upstream disappeared. Use www/p5-HTML-Lint instead
+www/august||2019-07-20|Uses removed weblint
+misc/bitwise|math/bitwise|2019-07-21|Moved to math category
+devel/gradle46||2019-07-26|Removed because the only user, biology/gatk, doesn't need it any more
+devel/subversion19|devel/subversion|2019-07-27|Has expired: subversion 1.9.x is end of life log time ago. Consider installing devel/subversion or devel/subversion-lts
+www/p5-WebService-MusicBrainz0|www/p5-WebService-MusicBrainz|2019-07-28|0.9x branch is no longer required after audio/abcde was updated to 2.9.1
+security/rubygem-googleauth06|security/rubygem-googleauth|2019-07-31|Has expired: Use security/rubygem-googleauth instead
+devel/ddd||2019-07-31|Has expired: does not work with modern gdb
+devel/py-pip-tools2|devel/py-pip-tools|2019-07-31|Has expired: Use devel/py-pip-tools instead
+lang/cint|lang/cling|2019-07-31|Has expired: Abandonware; superseded by lang/cling
+emulators/pearpc||2019-08-01|Has expired: Abandonware
+sysutils/bbcp||2019-08-03|Has expired: the port is broken for more than a year
+multimedia/gnome-mpv|multimedia/celluloid|2019-08-08|Renamed upstream
+net/remmina-plugin-telepathy||2019-08-04|Disabled upstream for build Issues
+devel/py-mimeparse|devel/py-python-mimeparse|2019-08-11|Rename to match upstream naming
+devel/rubygem-web-console|devel/rubygem-web-console-rails5|2019-08-11|Rename to match our rubygem- port naming
+devel/rubygem-spring-rails5|devel/rubygem-spring|2019-08-11|Remove unnecessary port after devel/rubygem-spring update
+devel/rubygem-spring-rails50|devel/rubygem-spring|2019-08-11|Remove unnecessary port after devel/rubygem-spring update
+www/rubygem-turbolinks-rails5|www/rubygem-turbolinks|2019-08-11|Remove unnecessary port after www/rubygem-turbolinks RUN_DEPENDS fix
+www/rubygem-turbolinks-rails50|www/rubygem-turbolinks|2019-08-11|Remove unnecessary port after www/rubygem-turbolinks RUN_DEPENDS fix
+textproc/sphinxsearch-devel|textproc/sphinxsearch|2019-08-11|Has expired: Broken for more than 6 months
+lang/dmd2||2019-08-11|Has expired: Broken for more than 6 months and upstream has no fix for statfs64
+cad/elmerfem||2019-08-12|Has expired: Broken for more than 6 months
+sysutils/openhpi||2019-08-12|Has expired: Broken for more than 6 months
+textproc/scim-bridge||2019-08-17|Has expired: Broken for more than 6 months
+devel/py-efilter||2019-08-17|Has expired: No longer maintained
+sysutils/grub2||2019-08-17|Has expired: Unmaintained (more than five years), not updated (one-and-a-half years), does not build with modern compilers
+net/samba46|net/samba48|2019-08-19|Has expired: yes
+net/samba47|net/samba48|2019-08-19|Has expired: yes
+palm/bibelot|sysutils/bibelot|2019-08-20|Move to more applicable category
+palm/imgvtopgm|graphics/imgvtopgm|2019-08-20|Move to more applicable category
+palm/libmal|devel/libmal|2019-08-20|Move to more applicable category
+palm/makeztxt|sysutils/makeztxt|2019-08-20|Move to more applicable category
+palm/mdbconv|databases/mdbconv|2019-08-20|Move to more applicable category
+palm/palm-db-tools|databases/palm-db-tools|2019-08-20|Move to more applicable category
+palm/jpilot-picsnvideos|comms/jpilot-picsnvideos|2019-08-20|Move to more applicable category
