@@ -4,6 +4,7 @@
 PORTNAME=	InsightToolkit
 PORTVERSION=	5.0.1
 DISTVERSIONPREFIX=v
+PORTREVISION=	2
 CATEGORIES=	science biology
 MASTER_SITES=	https://github.com/InsightSoftwareConsortium/ITK/releases/download/v5.0.1/:data
 DISTFILES=	InsightData-5.0.1.tar.gz:data
@@ -53,8 +54,16 @@ TESTING_DESC=	Build testing programs (very time consuming)
 EXAMPLES_CMAKE_ON=	-DBUILD_EXAMPLES:BOOL=ON
 TESTING_CMAKE_ON=	-DBUILD_TESTING:BOOL=ON
 
+.include <bsd.port.pre.mk>
+
+.if ${CHOSEN_COMPILER_TYPE} == gcc
+PLIST_SUB+=	CHOSEN_COMPILER_TYPE="GNU"
+.else
+PLIST_SUB+=	CHOSEN_COMPILER_TYPE="Clang"
+.endif
+
 post-extract:
 	${MV} ${WRKDIR}/${PORTNAME}-${PORTVERSION}/.ExternalData/* ${WRKSRC}/.ExternalData/
 	${RM} -r ${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

@@ -15,6 +15,7 @@
     SUBDIR += adodb
     SUBDIR += adodb5
     SUBDIR += akonadi
+    SUBDIR += apache-commons-dbutils
     SUBDIR += apq
     SUBDIR += apq-mysql
     SUBDIR += apq-odbc
@@ -91,6 +92,7 @@
     SUBDIR += frontbase-jdbc
     SUBDIR += gadfly
     SUBDIR += galera
+    SUBDIR += galera26
     SUBDIR += gdbm
     SUBDIR += geoserver-mysql-plugin
     SUBDIR += gigabase
@@ -112,7 +114,6 @@
     SUBDIR += ipa_sdb
     SUBDIR += iplike
     SUBDIR += isql-viewer
-    SUBDIR += jakarta-commons-dbutils
     SUBDIR += jasperreports
     SUBDIR += jdb
     SUBDIR += jdbc-oracle11g
@@ -186,7 +187,6 @@
     SUBDIR += mariadb104-server
     SUBDIR += mariadb55-client
     SUBDIR += mariadb55-server
-    SUBDIR += mdbconv
     SUBDIR += mdbtools
     SUBDIR += mdcached
     SUBDIR += memcached
@@ -522,7 +522,6 @@
     SUBDIR += p5-Xapian
     SUBDIR += p5-mysql-genocide
     SUBDIR += p5-tokyotyrant
-    SUBDIR += palm-db-tools
     SUBDIR += pear-DB
     SUBDIR += pear-DBA
     SUBDIR += pear-DBA_Relational
@@ -656,9 +655,22 @@
     SUBDIR += php73-pdo_sqlite
     SUBDIR += php73-pgsql
     SUBDIR += php73-sqlite3
+    SUBDIR += php74-dba
+    SUBDIR += php74-mysqli
+    SUBDIR += php74-odbc
+    SUBDIR += php74-pdo
+    SUBDIR += php74-pdo_dblib
+    SUBDIR += php74-pdo_firebird
+    SUBDIR += php74-pdo_mysql
+    SUBDIR += php74-pdo_odbc
+    SUBDIR += php74-pdo_pgsql
+    SUBDIR += php74-pdo_sqlite
+    SUBDIR += php74-pgsql
+    SUBDIR += php74-sqlite3
     SUBDIR += phpliteadmin
     SUBDIR += phpminiadmin
     SUBDIR += phpmyadmin
+    SUBDIR += phpmyadmin-devel
     SUBDIR += phppgadmin
     SUBDIR += pldebugger
     SUBDIR += plpgsql_check
@@ -678,7 +690,6 @@
     SUBDIR += postgresql-odbc
     SUBDIR += postgresql-orafce
     SUBDIR += postgresql-plproxy
-    SUBDIR += postgresql-plruby
     SUBDIR += postgresql-plv8js
     SUBDIR += postgresql-prefix
     SUBDIR += postgresql-relay
@@ -747,7 +758,6 @@
     SUBDIR += puppetdb-terminus6
     SUBDIR += puppetdb5
     SUBDIR += puppetdb6
-    SUBDIR += pure-sql3
     SUBDIR += puredb
     SUBDIR += pxlib
     SUBDIR += pxtools
@@ -833,6 +843,7 @@
     SUBDIR += py-queries
     SUBDIR += py-rb
     SUBDIR += py-redis
+    SUBDIR += py-redis2
     SUBDIR += py-riak
     SUBDIR += py-rrdtool_lgpl
     SUBDIR += py-sispy
@@ -898,6 +909,7 @@
     SUBDIR += rubygem-activemodel4
     SUBDIR += rubygem-activemodel5
     SUBDIR += rubygem-activemodel50
+    SUBDIR += rubygem-activemodel52
     SUBDIR += rubygem-activerecord-explain-analyze
     SUBDIR += rubygem-activerecord-import
     SUBDIR += rubygem-activerecord-jdbc-adapter
@@ -906,6 +918,7 @@
     SUBDIR += rubygem-activerecord4
     SUBDIR += rubygem-activerecord5
     SUBDIR += rubygem-activerecord50
+    SUBDIR += rubygem-activerecord52
     SUBDIR += rubygem-after_commit_queue
     SUBDIR += rubygem-amalgalite
     SUBDIR += rubygem-arel
@@ -953,6 +966,7 @@
     SUBDIR += rubygem-globalid
     SUBDIR += rubygem-globalid-rails5
     SUBDIR += rubygem-globalid-rails50
+    SUBDIR += rubygem-globalid-rails52
     SUBDIR += rubygem-her
     SUBDIR += rubygem-hiredis
     SUBDIR += rubygem-influxdb
@@ -967,6 +981,7 @@
     SUBDIR += rubygem-paranoia
     SUBDIR += rubygem-peek-mysql2-rails5
     SUBDIR += rubygem-peek-pg-rails5
+    SUBDIR += rubygem-peek-pg-rails52
     SUBDIR += rubygem-pg
     SUBDIR += rubygem-pg0
     SUBDIR += rubygem-pg018
@@ -982,6 +997,7 @@
     SUBDIR += rubygem-redis-actionpack
     SUBDIR += rubygem-redis-actionpack-rails5
     SUBDIR += rubygem-redis-actionpack-rails50
+    SUBDIR += rubygem-redis-actionpack-rails52
     SUBDIR += rubygem-redis-namespace
     SUBDIR += rubygem-redis3
     SUBDIR += rubygem-seed-fu
@@ -994,7 +1010,6 @@
     SUBDIR += sequeler
     SUBDIR += sfcgal
     SUBDIR += sharedance
-    SUBDIR += skytools
     SUBDIR += slony1v2
     SUBDIR += soci
     SUBDIR += spatialite
@@ -1021,7 +1036,6 @@
     SUBDIR += sqlrelay
     SUBDIR += sqsh
     SUBDIR += squirrel-sql
-    SUBDIR += tablelog
     SUBDIR += tarantool
     SUBDIR += tarantool-c
     SUBDIR += tcl-Mysql

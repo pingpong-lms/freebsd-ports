@@ -32,6 +32,7 @@
     SUBDIR += gstreamer-plugins-pango
     SUBDIR += gstreamer1-plugins-gtk
     SUBDIR += gstreamer1-plugins-pango
+    SUBDIR += gtk-layer-shell
     SUBDIR += gtk-sharp-beans
     SUBDIR += gtk-sharp20
     SUBDIR += gtk-sharp30
@@ -103,6 +104,7 @@
     SUBDIR += linux-c6-qt47-x11
     SUBDIR += linux-c6-tk85
     SUBDIR += linux-c7-gtk2
+    SUBDIR += linux-c7-gtk3
     SUBDIR += linux-c7-openmotif
     SUBDIR += linux-c7-pango
     SUBDIR += linux-c7-qt-x11
@@ -169,17 +171,12 @@
     SUBDIR += p5-Tk-TableMatrix
     SUBDIR += p5-Tk-ToolBar
     SUBDIR += p5-Tk-WaitBox
-    SUBDIR += p5-Wx
-    SUBDIR += p5-Wx-GLCanvas
-    SUBDIR += p5-Wx-Perl-ProcessStream
     SUBDIR += pango
     SUBDIR += pangomm
     SUBDIR += pangox-compat
     SUBDIR += pangoxsl
     SUBDIR += plasma5-kdeplasma-addons
     SUBDIR += plib
-    SUBDIR += pure-gtk
-    SUBDIR += pure-tk
     SUBDIR += py-AnyQt
     SUBDIR += py-Pmw
     SUBDIR += py-SquareMap
@@ -208,7 +205,6 @@
     SUBDIR += py-xlib
     SUBDIR += pypy-tkinter
     SUBDIR += qml-box2d
-    SUBDIR += qt5-canvas3d
     SUBDIR += qt5-charts
     SUBDIR += qt5-datavis3d
     SUBDIR += qt5-declarative

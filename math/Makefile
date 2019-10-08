@@ -144,9 +144,9 @@
     SUBDIR += bitwise
     SUBDIR += blacs
     SUBDIR += blas
+    SUBDIR += blasfeo
     SUBDIR += blaze
     SUBDIR += blazeiterative
-    SUBDIR += blasfeo
     SUBDIR += blis
     SUBDIR += blitz++
     SUBDIR += blocksolve95
@@ -190,11 +190,13 @@
     SUBDIR += convertall
     SUBDIR += coq
     SUBDIR += couenne
+    SUBDIR += cppad
     SUBDIR += crlibm
     SUBDIR += cryptominisat
     SUBDIR += curv
     SUBDIR += cvc3
     SUBDIR += cvc4
+    SUBDIR += darknet
     SUBDIR += dbcsr
     SUBDIR += deal.ii
     SUBDIR += diehard
@@ -228,7 +230,6 @@
     SUBDIR += fftw3-float
     SUBDIR += fftw3-long
     SUBDIR += fftw3-quad
-    SUBDIR += fityk
     SUBDIR += flann
     SUBDIR += flint2
     SUBDIR += flintqs
@@ -245,6 +246,7 @@
     SUBDIR += gambit
     SUBDIR += gap
     SUBDIR += gau2grid
+    SUBDIR += gemmlowp
     SUBDIR += geogebra
     SUBDIR += geogram
     SUBDIR += geonext
@@ -354,6 +356,7 @@
     SUBDIR += matlab-installer
     SUBDIR += maxima
     SUBDIR += mbasecalc
+    SUBDIR += mcsim
     SUBDIR += metis
     SUBDIR += metis-edf
     SUBDIR += metis4
@@ -406,10 +409,8 @@
     SUBDIR += octave-forge-dicom
     SUBDIR += octave-forge-divand
     SUBDIR += octave-forge-doctest
-    SUBDIR += octave-forge-econometrics
     SUBDIR += octave-forge-fenv
     SUBDIR += octave-forge-financial
-    SUBDIR += octave-forge-fits
     SUBDIR += octave-forge-fpl
     SUBDIR += octave-forge-fuzzy-logic-toolkit
     SUBDIR += octave-forge-ga
@@ -426,11 +427,9 @@
     SUBDIR += octave-forge-io
     SUBDIR += octave-forge-irsa
     SUBDIR += octave-forge-level-set
-    SUBDIR += octave-forge-linear-algebra
     SUBDIR += octave-forge-lssa
     SUBDIR += octave-forge-ltfat
     SUBDIR += octave-forge-mapping
-    SUBDIR += octave-forge-mechanics
     SUBDIR += octave-forge-miscellaneous
     SUBDIR += octave-forge-missing-functions
     SUBDIR += octave-forge-msh
@@ -450,7 +449,6 @@
     SUBDIR += octave-forge-optim
     SUBDIR += octave-forge-optiminterp
     SUBDIR += octave-forge-outliers
-    SUBDIR += octave-forge-parallel
     SUBDIR += octave-forge-plot
     SUBDIR += octave-forge-quaternion
     SUBDIR += octave-forge-queueing
@@ -466,19 +464,17 @@
     SUBDIR += octave-forge-splines
     SUBDIR += octave-forge-statistics
     SUBDIR += octave-forge-stk
-    SUBDIR += octave-forge-strings
     SUBDIR += octave-forge-struct
     SUBDIR += octave-forge-symband
     SUBDIR += octave-forge-symbolic
     SUBDIR += octave-forge-tcl-octave
-    SUBDIR += octave-forge-tisean
     SUBDIR += octave-forge-tsa
-    SUBDIR += octave-forge-video
     SUBDIR += octave-forge-zenity
     SUBDIR += octave-forge-zeromq
     SUBDIR += octomap
     SUBDIR += ogdf
     SUBDIR += oleo
+    SUBDIR += onnx
     SUBDIR += openblas
     SUBDIR += openfst
     SUBDIR += openlibm
@@ -655,6 +651,8 @@
     SUBDIR += php72-gmp
     SUBDIR += php73-bcmath
     SUBDIR += php73-gmp
+    SUBDIR += php74-bcmath
+    SUBDIR += php74-gmp
     SUBDIR += physcalc
     SUBDIR += picosat
     SUBDIR += piranha
@@ -670,8 +668,6 @@
     SUBDIR += prng
     SUBDIR += proofgeneral
     SUBDIR += pspp
-    SUBDIR += pure-mpfr
-    SUBDIR += pure-rational
     SUBDIR += py-CyLP
     SUBDIR += py-Diofant
     SUBDIR += py-GridDataFormats
@@ -737,6 +733,7 @@
     SUBDIR += py-numexpr
     SUBDIR += py-numpy
     SUBDIR += py-nzmath
+    SUBDIR += py-onnx
     SUBDIR += py-osqp
     SUBDIR += py-pandas
     SUBDIR += py-pandas-datareader
@@ -764,6 +761,7 @@
     SUBDIR += py-pyodesys
     SUBDIR += py-pysparse
     SUBDIR += py-pysym
+    SUBDIR += py-pystan
     SUBDIR += py-python-louvain
     SUBDIR += py-pyvtk
     SUBDIR += py-quadprog
@@ -870,10 +868,12 @@
     SUBDIR += triangle
     SUBDIR += trlan
     SUBDIR += truthtable
+    SUBDIR += tvm
     SUBDIR += tvmet
     SUBDIR += ump
     SUBDIR += units
     SUBDIR += unuran
+    SUBDIR += vampire
     SUBDIR += viennacl
     SUBDIR += visualpolylib
     SUBDIR += vowpal_wabbit
