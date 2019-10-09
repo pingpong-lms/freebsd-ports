@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-app
-PORTVERSION=	0.18
+PORTVERSION=	0.19
 CATEGORIES=	pingpong
 MASTER_SITES=	#
 DISTFILES=	#
@@ -22,7 +22,7 @@ USE_APACHE_RUN=	24
 USES=		perl5
 
 RUN_DEPENDS= \
-	jsvc:devel/jakarta-commons-daemon \
+	jsvc:devel/apache-commons-daemon \
 	convert:graphics/ImageMagick7 \
 	p5-Pg>0:databases/p5-Pg \
 	p5-XML-Writer>0:textproc/p5-XML-Writer \
