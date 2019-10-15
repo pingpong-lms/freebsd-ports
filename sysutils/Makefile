@@ -581,6 +581,7 @@
     SUBDIR += libretto-config
     SUBDIR += libsunacl
     SUBDIR += libsysstat
+    SUBDIR += libudisks
     SUBDIR += liburcu
     SUBDIR += life-preserver
     SUBDIR += lineak-defaultplugin
@@ -1176,6 +1177,8 @@
     SUBDIR += samefile
     SUBDIR += samesame
     SUBDIR += sample
+    SUBDIR += sanoid
+    SUBDIR += sanoid-devel
     SUBDIR += sas2ircu
     SUBDIR += sas3ircu
     SUBDIR += savelogs
@@ -1272,6 +1275,7 @@
     SUBDIR += syslog-ng321
     SUBDIR += syslog-ng322
     SUBDIR += syslog-ng323
+    SUBDIR += syslog-ng324
     SUBDIR += syslogger
     SUBDIR += sysrc
     SUBDIR += system-tools-backends

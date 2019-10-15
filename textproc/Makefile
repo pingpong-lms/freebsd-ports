@@ -491,6 +491,7 @@
     SUBDIR += p5-Apache-ParseLog
     SUBDIR += p5-Apache-Solr
     SUBDIR += p5-BibTeX-Parser
+    SUBDIR += p5-BigIP-ParseConfig
     SUBDIR += p5-Bloom-Filter
     SUBDIR += p5-CAM-PDF
     SUBDIR += p5-CQL-Parser
@@ -1135,6 +1136,7 @@
     SUBDIR += p5-texcount
     SUBDIR += p5-xmltv
     SUBDIR += pa-aspell
+    SUBDIR += pageedit
     SUBDIR += par
     SUBDIR += pcrs
     SUBDIR += pdfgrep
