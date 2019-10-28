@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	rav1e
-PORTVERSION=	s20191011
+PORTVERSION=	s20191026
 CATEGORIES=	multimedia
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -16,7 +16,7 @@ BUILD_DEPENDS_amd64=	nasm:devel/nasm
 USES=		cargo
 USE_GITHUB=	yes
 GH_ACCOUNT=	xiph
-GH_TAGNAME=	4a0a0b13
+GH_TAGNAME=	e4683b18
 PLIST_FILES=	bin/${PORTNAME}
 
 CARGO_CRATES=	adler32-1.0.4 \
@@ -29,19 +29,19 @@ CARGO_CRATES=	adler32-1.0.4 \
 		arrayvec-0.4.12 \
 		arrayvec-0.5.1 \
 		atty-0.2.13 \
-		autocfg-0.1.6 \
-		backtrace-0.3.38 \
-		backtrace-sys-0.1.31 \
+		autocfg-0.1.7 \
+		backtrace-0.3.40 \
+		backtrace-sys-0.1.32 \
 		better-panic-0.2.0 \
 		bincode-1.2.0 \
 		bindgen-0.51.1 \
-		bitflags-1.2.0 \
+		bitflags-1.2.1 \
 		bitstream-io-0.8.4 \
 		bstr-0.2.8 \
 		byteorder-1.3.2 \
-		c2-chacha-0.2.2 \
+		c2-chacha-0.2.3 \
 		cast-0.2.2 \
-		cc-1.0.45 \
+		cc-1.0.46 \
 		cexpr-0.3.5 \
 		cfg-if-0.1.10 \
 		chrono-0.4.9 \
@@ -67,7 +67,7 @@ CARGO_CRATES=	adler32-1.0.4 \
 		env_logger-0.6.2 \
 		err-derive-0.2.1 \
 		error-chain-0.10.0 \
-		getrandom-0.1.12 \
+		getrandom-0.1.13 \
 		glob-0.3.0 \
 		humantime-1.3.0 \
 		image-0.22.3 \
@@ -76,7 +76,7 @@ CARGO_CRATES=	adler32-1.0.4 \
 		itertools-0.8.0 \
 		itoa-0.4.4 \
 		lazy_static-1.4.0 \
-		libc-0.2.62 \
+		libc-0.2.65 \
 		libloading-0.5.2 \
 		log-0.4.8 \
 		memchr-2.2.1 \
@@ -96,12 +96,12 @@ CARGO_CRATES=	adler32-1.0.4 \
 		peeking_take_while-0.1.2 \
 		pkg-config-0.3.16 \
 		png-0.15.0 \
-		ppv-lite86-0.2.5 \
+		ppv-lite86-0.2.6 \
 		pretty_assertions-0.6.1 \
 		pretty_env_logger-0.3.1 \
 		proc-macro-error-0.2.6 \
-		proc-macro-hack-0.5.10 \
-		proc-macro2-1.0.5 \
+		proc-macro-hack-0.5.11 \
+		proc-macro2-1.0.6 \
 		quick-error-1.2.2 \
 		quote-1.0.2 \
 		rand-0.7.2 \
@@ -119,7 +119,7 @@ CARGO_CRATES=	adler32-1.0.4 \
 		rustc-demangle-0.1.16 \
 		rustc-hash-1.0.1 \
 		rustc_version-0.2.3 \
-		ryu-1.0.1 \
+		ryu-1.0.2 \
 		same-file-1.0.5 \
 		scan_fmt-0.2.4 \
 		scopeguard-1.0.0 \

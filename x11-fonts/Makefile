@@ -11,6 +11,7 @@
     SUBDIR += alfont
     SUBDIR += andika
     SUBDIR += anonymous-pro
+    SUBDIR += apl385
     SUBDIR += artwiz-aleczapka
     SUBDIR += artwiz-aleczapka-de
     SUBDIR += artwiz-aleczapka-se
@@ -118,7 +119,6 @@
     SUBDIR += hermit
     SUBDIR += inconsolata-lgc-ttf
     SUBDIR += inconsolata-ttf
-    SUBDIR += indic-ttf
     SUBDIR += intlfonts
     SUBDIR += iosevka
     SUBDIR += isabella
@@ -154,6 +154,7 @@
     SUBDIR += mkfontscale
     SUBDIR += mkitalic
     SUBDIR += mondulkiri
+    SUBDIR += monoid
     SUBDIR += montecarlo_fonts
     SUBDIR += montserrat
     SUBDIR += moveable-type-fonts
@@ -179,7 +180,6 @@
     SUBDIR += padauk
     SUBDIR += paratype
     SUBDIR += pcf2bdf
-    SUBDIR += pingwi
     SUBDIR += plex-ttf
     SUBDIR += powerline-fonts
     SUBDIR += prociono
@@ -208,6 +208,7 @@
     SUBDIR += sourceserifpro-ttf
     SUBDIR += spleen
     SUBDIR += stix-fonts
+    SUBDIR += sudo-font
     SUBDIR += suxus
     SUBDIR += symbola
     SUBDIR += tamsyn

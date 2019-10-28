@@ -201,7 +201,6 @@
     SUBDIR += mongodb40
     SUBDIR += mongodb40-tools
     SUBDIR += mroonga
-    SUBDIR += mrtg-mysql-load
     SUBDIR += mtools-mongodb
     SUBDIR += mtop
     SUBDIR += mydbf2mysql
@@ -680,7 +679,6 @@
     SUBDIR += postgis23
     SUBDIR += postgis24
     SUBDIR += postgis25
-    SUBDIR += postgres-xl
     SUBDIR += postgresql-cstore_fdw
     SUBDIR += postgresql-jdbc
     SUBDIR += postgresql-libpgeasy
@@ -689,6 +687,7 @@
     SUBDIR += postgresql-libpqxx4
     SUBDIR += postgresql-mysql_fdw
     SUBDIR += postgresql-odbc
+    SUBDIR += postgresql-ogr_fdw
     SUBDIR += postgresql-orafce
     SUBDIR += postgresql-plproxy
     SUBDIR += postgresql-plv8js
@@ -1062,7 +1061,6 @@
     SUBDIR += virtuoso
     SUBDIR += vsqlite
     SUBDIR += wfb2sql
-    SUBDIR += wmjsql
     SUBDIR += xapian-bindings
     SUBDIR += xapian-bindings12
     SUBDIR += xapian-core
