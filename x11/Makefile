@@ -8,6 +8,7 @@
     SUBDIR += 9menu
     SUBDIR += admiral
     SUBDIR += alacritty
+    SUBDIR += albert
     SUBDIR += alltray
     SUBDIR += alttab
     SUBDIR += aminal
@@ -147,7 +148,6 @@
     SUBDIR += libXfixes
     SUBDIR += libXi
     SUBDIR += libXinerama
-    SUBDIR += libXp
     SUBDIR += libXpm
     SUBDIR += libXpresent
     SUBDIR += libXrandr
@@ -157,7 +157,6 @@
     SUBDIR += libXv
     SUBDIR += libXvMC
     SUBDIR += libXxf86dga
-    SUBDIR += libXxf86misc
     SUBDIR += libXxf86vm
     SUBDIR += libdmx
     SUBDIR += libexo
@@ -185,8 +184,6 @@
     SUBDIR += lightdm
     SUBDIR += lightdm-gtk-greeter
     SUBDIR += lilyterm
-    SUBDIR += linux-c6-pixman
-    SUBDIR += linux-c6-xorg-libs
     SUBDIR += linux-c7-libxkbcommon
     SUBDIR += linux-c7-pixman
     SUBDIR += linux-c7-xorg-libs
@@ -209,6 +206,7 @@
     SUBDIR += lxqt-globalkeys
     SUBDIR += lxqt-runner
     SUBDIR += lxrandr
+    SUBDIR += ly
     SUBDIR += mate
     SUBDIR += mate-applets
     SUBDIR += mate-base
@@ -221,7 +219,6 @@
     SUBDIR += menu-cache
     SUBDIR += menulibre
     SUBDIR += metalock
-    SUBDIR += metisse
     SUBDIR += mkcomposecache
     SUBDIR += mlterm
     SUBDIR += mons
@@ -237,7 +234,6 @@
     SUBDIR += nvidia-settings
     SUBDIR += nvidia-xconfig
     SUBDIR += nxcomp
-    SUBDIR += ooxcb
     SUBDIR += p5-Clipboard
     SUBDIR += p5-X11-GUITest
     SUBDIR += p5-X11-IdleTime
@@ -265,6 +261,7 @@
     SUBDIR += printscreen
     SUBDIR += props
     SUBDIR += py-caffeine-ng
+    SUBDIR += py-i3ipc
     SUBDIR += py-pyscreenshot
     SUBDIR += py-pyvirtualdisplay
     SUBDIR += py-qt5-opengl
@@ -306,6 +303,7 @@
     SUBDIR += slop
     SUBDIR += slurp
     SUBDIR += smproxy
+    SUBDIR += squeekboard
     SUBDIR += sselp
     SUBDIR += stalonetray
     SUBDIR += startup-notification
@@ -360,6 +358,7 @@
     SUBDIR += x3270
     SUBDIR += xaniroc
     SUBDIR += xantfarm
+    SUBDIR += xapps
     SUBDIR += xascii
     SUBDIR += xauth
     SUBDIR += xautolock
@@ -421,10 +420,8 @@
     SUBDIR += xfce4-whiskermenu-plugin
     SUBDIR += xfce4-wmdock-plugin
     SUBDIR += xfd
-    SUBDIR += xfindproxy
     SUBDIR += xfishtank
     SUBDIR += xforward
-    SUBDIR += xfwp
     SUBDIR += xgamma
     SUBDIR += xgc
     SUBDIR += xgrab
