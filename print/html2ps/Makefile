@@ -6,13 +6,11 @@ DISTVERSION=	1.0b7
 PORTREVISION=	5
 PORTEPOCH=	1
 CATEGORIES=	print www perl5
-MASTER_SITES=	http://user.it.uu.se/~jan/ \
+MASTER_SITES=	https://archive.is/ioQyB/ http://user.it.uu.se/~jan/ \
 		http://fossies.org/unix/www/
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	HTML to PostScript converter
-
-BROKEN=		unfetchable
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
