@@ -67,7 +67,6 @@
     SUBDIR += elixir-mongo
     SUBDIR += elixir-postgrex
     SUBDIR += elixir-timex_ecto
-    SUBDIR += emma
     SUBDIR += erlang-couchbeam
     SUBDIR += erlang-epgsql
     SUBDIR += erlang-eredis
@@ -188,7 +187,6 @@
     SUBDIR += mdcached
     SUBDIR += memcached
     SUBDIR += memcacheq
-    SUBDIR += monetdb
     SUBDIR += mongodb34
     SUBDIR += mongodb34-tools
     SUBDIR += mongodb36
@@ -761,7 +759,6 @@
     SUBDIR += py-cassandra-driver
     SUBDIR += py-cdb
     SUBDIR += py-couchdb
-    SUBDIR += py-cql
     SUBDIR += py-dbf
     SUBDIR += py-dbutils
     SUBDIR += py-django-transaction-hooks
@@ -789,6 +786,7 @@
     SUBDIR += py-mysql2pgsql
     SUBDIR += py-mysqlclient
     SUBDIR += py-oursql
+    SUBDIR += py-partd
     SUBDIR += py-peewee
     SUBDIR += py-peewee_migrate
     SUBDIR += py-pg8000
@@ -967,7 +965,6 @@
     SUBDIR += rubygem-paranoia
     SUBDIR += rubygem-peek-mysql2-rails5
     SUBDIR += rubygem-peek-pg-rails5
-    SUBDIR += rubygem-peek-pg-rails52
     SUBDIR += rubygem-pg
     SUBDIR += rubygem-pg0
     SUBDIR += rubygem-pg018
@@ -984,6 +981,7 @@
     SUBDIR += rubygem-redis-actionpack-rails5
     SUBDIR += rubygem-redis-actionpack-rails50
     SUBDIR += rubygem-redis-actionpack-rails52
+    SUBDIR += rubygem-redis-actionpack-rails60
     SUBDIR += rubygem-redis-namespace
     SUBDIR += rubygem-seed-fu
     SUBDIR += rubygem-sqlite3
@@ -1052,6 +1050,5 @@
     SUBDIR += xrootd
     SUBDIR += xtrabackup
     SUBDIR += zabbix3-libzbxpgsql
-    SUBDIR += zodb3
 
 .include <bsd.port.subdir.mk>

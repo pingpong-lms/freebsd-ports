@@ -25,6 +25,7 @@
     SUBDIR += bible-kjv
     SUBDIR += bibletime
     SUBDIR += biblical-curse
+    SUBDIR += biblesync
     SUBDIR += binclock
     SUBDIR += biosfont-demos
     SUBDIR += birthday
@@ -40,6 +41,7 @@
     SUBDIR += cheat
     SUBDIR += chef
     SUBDIR += chmlib
+    SUBDIR += chrono
     SUBDIR += cinnamon-translations
     SUBDIR += cldr-emoji-annotation
     SUBDIR += clex
@@ -50,6 +52,7 @@
     SUBDIR += colwide
     SUBDIR += compat10x
     SUBDIR += compat11x
+    SUBDIR += compat12x
     SUBDIR += compat4x
     SUBDIR += compat5x
     SUBDIR += compat6x
@@ -78,6 +81,7 @@
     SUBDIR += dnetc
     SUBDIR += dtach
     SUBDIR += dvorak7min
+    SUBDIR += dynomite
     SUBDIR += e2fsprogs-libblkid
     SUBDIR += e2fsprogs-libuuid
     SUBDIR += elixir-mime
@@ -91,7 +95,6 @@
     SUBDIR += excel-writer
     SUBDIR += exercism
     SUBDIR += explosions
-    SUBDIR += fbless
     SUBDIR += felis
     SUBDIR += figlet
     SUBDIR += figlet-fonts
@@ -136,17 +139,7 @@
     SUBDIR += gcstar
     SUBDIR += geekcode
     SUBDIR += getopt
-    SUBDIR += gimp-help-ca
-    SUBDIR += gimp-help-da
-    SUBDIR += gimp-help-el
     SUBDIR += gimp-help-en
-    SUBDIR += gimp-help-en_GB
-    SUBDIR += gimp-help-es
-    SUBDIR += gimp-help-it
-    SUBDIR += gimp-help-nl
-    SUBDIR += gimp-help-nn
-    SUBDIR += gimp-help-sl
-    SUBDIR += gimp-help-sv
     SUBDIR += gkrellm-gamma
     SUBDIR += gkrellm-xkb
     SUBDIR += gkrellmbgchg2
@@ -245,7 +238,6 @@
     SUBDIR += mdp
     SUBDIR += metalink-checker
     SUBDIR += metalink-tools
-    SUBDIR += metromap
     SUBDIR += mime-support
     SUBDIR += mirmon
     SUBDIR += mmdnn
@@ -425,7 +417,6 @@
     SUBDIR += py-tvm
     SUBDIR += py-xgboost
     SUBDIR += py-yolk
-    SUBDIR += pylize
     SUBDIR += pyobd
     SUBDIR += qbrew
     SUBDIR += qlas
@@ -499,7 +490,6 @@
     SUBDIR += tudu
     SUBDIR += tvbrowser
     SUBDIR += tvm
-    SUBDIR += typetrainer
     SUBDIR += tzdiff
     SUBDIR += uk-phone
     SUBDIR += uk-postcodes
@@ -541,6 +531,7 @@
     SUBDIR += xfce4-wm-themes
     SUBDIR += xgas
     SUBDIR += xgboost
+    SUBDIR += xiphos
     SUBDIR += xless
     SUBDIR += xosd
     SUBDIR += xtail

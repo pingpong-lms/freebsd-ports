@@ -67,7 +67,6 @@
     SUBDIR += libredwg
     SUBDIR += librepcb
     SUBDIR += linux-eagle5
-    SUBDIR += linuxcnc-devel
     SUBDIR += logisim
     SUBDIR += magic
     SUBDIR += meshdev
@@ -86,7 +85,6 @@
     SUBDIR += py-gdspy
     SUBDIR += py-lcapy
     SUBDIR += py-phidl
-    SUBDIR += py-pycam
     SUBDIR += py-pyfda
     SUBDIR += python-gdsii
     SUBDIR += qcad

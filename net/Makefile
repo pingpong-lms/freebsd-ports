@@ -10,6 +10,7 @@
     SUBDIR += Sockets
     SUBDIR += activemq
     SUBDIR += adasockets
+    SUBDIR += addrwatch
     SUBDIR += afpfs-ng
     SUBDIR += aget
     SUBDIR += akonadi-calendar
@@ -155,6 +156,7 @@
     SUBDIR += fb
     SUBDIR += fiche
     SUBDIR += file2pcap
+    SUBDIR += findomain
     SUBDIR += findmtu
     SUBDIR += flent
     SUBDIR += flower
@@ -434,6 +436,7 @@
     SUBDIR += mailcommon
     SUBDIR += mailimporter
     SUBDIR += malo-firmware-kmod
+    SUBDIR += mcjoin
     SUBDIR += mdns-repeater
     SUBDIR += measurement-kit
     SUBDIR += mediastreamer
@@ -889,7 +892,6 @@
     SUBDIR += p5-XMLRPC-Lite
     SUBDIR += p5-XPC
     SUBDIR += p5-ZMQ-FFI
-    SUBDIR += p5-ZeroMQ
     SUBDIR += p5-ip2location-perl
     SUBDIR += p5-ldap2pf
     SUBDIR += p5-ldap2pw
@@ -1044,7 +1046,6 @@
     SUBDIR += py-ldap0
     SUBDIR += py-ldap3
     SUBDIR += py-ldappool
-    SUBDIR += py-ldaptor
     SUBDIR += py-libcloud
     SUBDIR += py-libdnet
     SUBDIR += py-libfte
@@ -1478,7 +1479,7 @@
     SUBDIR += tshark
     SUBDIR += tshark-lite
     SUBDIR += tsocks
-    SUBDIR += tucan
+    SUBDIR += tunneller
     SUBDIR += turnserver
     SUBDIR += twitux
     SUBDIR += u6rd

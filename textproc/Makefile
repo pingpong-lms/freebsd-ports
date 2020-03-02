@@ -155,7 +155,6 @@
     SUBDIR += dwdiff
     SUBDIR += easydiff
     SUBDIR += ebook-tools
-    SUBDIR += ecromedos
     SUBDIR += ekhtml
     SUBDIR += el-aspell
     SUBDIR += el-hyphen
@@ -249,6 +248,7 @@
     SUBDIR += hs-lhs2tex
     SUBDIR += hs-pandoc
     SUBDIR += hs-pandoc-citeproc
+    SUBDIR += hs-pandoc-crossref
     SUBDIR += hs-yaml
     SUBDIR += hsb-aspell
     SUBDIR += htdig
@@ -392,6 +392,7 @@
     SUBDIR += libxml++26-reference
     SUBDIR += libxml2
     SUBDIR += libxml2-reference
+    SUBDIR += libxmlbird
     SUBDIR += libxode
     SUBDIR += libxslt
     SUBDIR += libxslt-reference
@@ -1344,6 +1345,7 @@
     SUBDIR += py-python-slugify
     SUBDIR += py-python-xmp-toolkit
     SUBDIR += py-pytidylib
+    SUBDIR += py-pytoml
     SUBDIR += py-pyx12
     SUBDIR += py-qrcode
     SUBDIR += py-qt5-xml
@@ -1398,7 +1400,6 @@
     SUBDIR += py-ucl
     SUBDIR += py-ufal.udpipe
     SUBDIR += py-whoosh
-    SUBDIR += py-wicked
     SUBDIR += py-wordnet
     SUBDIR += py-wstools
     SUBDIR += py-wtf-peewee
@@ -1411,7 +1412,6 @@
     SUBDIR += py-xml-default-dict
     SUBDIR += py-xmldiff
     SUBDIR += py-yapf
-    SUBDIR += py-zope.app.i18n
     SUBDIR += py-zope.app.locales
     SUBDIR += py-zope.i18nmessageid
     SUBDIR += py-zope.structuredtext
@@ -1434,6 +1434,7 @@
     SUBDIR += re-flex
     SUBDIR += re_graph
     SUBDIR += redet
+    SUBDIR += redisearch
     SUBDIR += redland
     SUBDIR += redland-bindings
     SUBDIR += refdb
@@ -1572,6 +1573,7 @@
     SUBDIR += rubygem-org-ruby
     SUBDIR += rubygem-ox
     SUBDIR += rubygem-parslet
+    SUBDIR += rubygem-parslet1
     SUBDIR += rubygem-phone
     SUBDIR += rubygem-pretty-xml
     SUBDIR += rubygem-psych
