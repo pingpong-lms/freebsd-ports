@@ -13,6 +13,9 @@ COMMENT=	Fork of GNOME Shell with layout similar to GNOME 2
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+DEPRECATED=	Uses deprecated version of python
+EXPIRATION_DATE=	2020-09-15
+
 BUILD_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		gnome-autogen.sh:devel/gnome-common
 LIB_DEPENDS=	libstartup-notification-1.so:x11/startup-notification \
@@ -43,7 +46,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dbus>=0:devel/py-dbus@${PY_FLAVOR} \
 		cinnamon-translations>=0:misc/cinnamon-translations \
 		cinnamon-screensaver:x11/cinnamon-screensaver \
 		nemo:x11-fm/nemo \
-		${PYTHON_PKGNAMEPREFIX}pillow6>=0:graphics/py-pillow6@${PY_FLAVOR} \
+		${PY_PILLOW} \
 		${PYTHON_PKGNAMEPREFIX}lxml>=0:devel/py-lxml@${PY_FLAVOR}
 
 USES=		autoreconf compiler:c11 gettext gmake gnome gl libtool \

@@ -1,6 +1,6 @@
---- chrome/browser/ui/views/first_run_dialog.cc.orig	2019-12-16 21:51:24 UTC
+--- chrome/browser/ui/views/first_run_dialog.cc.orig	2020-03-16 18:40:30 UTC
 +++ chrome/browser/ui/views/first_run_dialog.cc
-@@ -115,8 +115,10 @@ std::unique_ptr<views::View> FirstRunDialog::CreateExt
+@@ -114,8 +114,10 @@ void FirstRunDialog::Done() {
  bool FirstRunDialog::Accept() {
    GetWidget()->Hide();
  

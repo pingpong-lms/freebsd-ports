@@ -2,18 +2,18 @@
 # $FreeBSD$
 
 PORTNAME=	go
-PORTVERSION=	1.14
-PORTREVISION=	1
-PORTEPOCH=	1
+PORTVERSION?=	1.14.2
+PORTREVISION?=	0
+PORTEPOCH?=	1
 CATEGORIES=	lang
-MASTER_SITES=	https://golang.org/dl/ \
+MASTER_SITES?=	https://golang.org/dl/ \
 		https://github.com/dmgk/go-bootstrap/releases/download/${BOOTSTRAP_TAG}/:bootstrap \
 		LOCAL/dmgk:bootstrap
-DISTFILES=	go${PORTVERSION}.src.tar.gz \
+DISTFILES?=	go${PORTVERSION}.src.tar.gz \
 		go-${OPSYS:tl}-${GOARCH_${ARCH}}${GOARM_${ARCH}}-${BOOTSTRAP_TAG}.tar.xz:bootstrap
 
-MAINTAINER=	jlaffaye@FreeBSD.org
-COMMENT=	Go programming language
+MAINTAINER=	dmgk@FreeBSD.org
+COMMENT?=	Go programming language
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -36,15 +36,15 @@ USES=		shebangfix
 SHEBANG_FILES=	misc/wasm/go_js_wasm_exec \
 		src/net/http/cgi/testdata/test.cgi
 SHEBANG_GLOB=	*.bash *.pl *.sh
-sh_OLD_CMD=	/bin/bash "/usr/bin/env bash"
-sh_CMD=		${SH}
 
-CONFLICTS_INSTALL=	go-devel
+CONFLICTS_INSTALL?=	go-devel
 
 # Upstream archive contains files with UTF-8 names
 EXTRACT_CMD=	${SETENV} LC_ALL=en_US.UTF-8 ${TAR}
 
+.ifndef MASTERDIR
 WRKSRC=		${WRKDIR}/go
+.endif
 
 OPTIONS_DEFINE_i386=	GO387
 
@@ -53,7 +53,7 @@ GO387_DESC=	Do not generate code with SSE2 (for old x86 CPU)
 GO387_VARS=	GO386=387
 
 BINARIES=	go gofmt
-BOOTSTRAP_TAG=	go1.14beta1
+BOOTSTRAP_TAG=	go1.14
 
 GOARCH_aarch64=	arm64
 GOARCH_amd64=	amd64
@@ -67,7 +67,7 @@ GOARM_armv7=	7
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == aarch64 && ${OSVERSION} < 1200000
-IGNORE=	aarch64 support requires FreeBSD 12.0 or newer
+IGNORE=		aarch64 support requires FreeBSD 12.0 or newer
 .endif
 
 post-patch:

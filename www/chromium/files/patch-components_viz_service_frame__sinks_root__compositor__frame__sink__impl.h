@@ -1,8 +1,8 @@
---- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h.orig	2019-12-17 19:31:54 UTC
+--- components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h.orig	2020-03-16 18:40:31 UTC
 +++ components/viz/service/frame_sinks/root_compositor_frame_sink_impl.h
-@@ -140,7 +140,7 @@ class RootCompositorFrameSinkImpl : public mojom::Comp
-   // to the BFS.
-   std::unique_ptr<Display> display_;
+@@ -149,7 +149,7 @@ class RootCompositorFrameSinkImpl : public mojom::Comp
+   base::TimeDelta preferred_frame_interval_ =
+       FrameRateDecider::UnspecifiedFrameInterval();
  
 -#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
 +#if (defined(OS_LINUX) && !defined(OS_CHROMEOS)) || defined(OS_BSD)

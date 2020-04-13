@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	erkale
-DISTVERSION=	g20200110
-PORTREVISION=	1
+DISTVERSION=	g20200319
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -29,7 +28,7 @@ serial_PKGNAMESUFFIX=	-serial
 USES=		cmake:noninja fortran pkgconfig
 USE_GITHUB=	yes
 GH_ACCOUNT=	susilehtola
-GH_TAGNAME=	0d0c895b0d9bcbcb523e7d7c3a11f590d18827d2
+GH_TAGNAME=	ae9df2c14f0acf4eefe82c3fb351a75584159675
 USE_LDCONFIG=	yes
 
 TEST_TARGET=	test
@@ -44,7 +43,6 @@ CMAKE_OFF=	USE_OPENMP
 .else # parallel
 CMAKE_ON+=	USE_OPENMP
 SUFFIX=		_omp
-LIB_DEPENDS+=	libomp.so:devel/llvm${LLVM_DEFAULT}
 .endif
 
 OPTIONS_SINGLE=		LINALG
@@ -56,17 +54,11 @@ NETLIB_USES=		blaslapack:netlib
 NETLIB_CMAKE_ON=	-DLAPACK_LIBRARIES:STRING=-llapack -DBLAS_LIBRARIES:STRING=-lblas
 NETLIB_LDFLAGS=		${LOCALBASE}/lib/libcblas.so ${LOCALBASE}/lib/liblapack.so ${LOCALBASE}/lib/libblas.so
 NETLIB_LIB_DEPENDS=	libcblas.so:math/cblas
+NETLIB_BROKEN=		choosing NETLIB causes a conflict: openblas-0.3.7_3,1 conflicts with cblas-1.0_12 on /usr/local/include/cblas.h
 
 OPENBLAS_USES=		blaslapack:openblas
 OPENBLAS_CMAKE_ON=	-DLAPACK_LIBRARIES:STRING=-lopenblas -DBLAS_LIBRARIES:STRING=-lopenblas
 OPENBLAS_LIB_DEPENDS=	libopenblas.so:math/openblas
-
-# use clang from ports because cmake can't find OpenMP with base clang, see https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=223678
-# have the same compiler for both serial and parallel flavors so that performance numbers can be compared
-BUILD_DEPENDS+=	clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
-CPP=		clang-cpp${LLVM_DEFAULT}
-CC=		clang${LLVM_DEFAULT}
-CXX=		clang++${LLVM_DEFAULT}
 
 .if ${FLAVOR} == parallel
 post-install:

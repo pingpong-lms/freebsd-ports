@@ -107,6 +107,7 @@
     SUBDIR += csb-aspell
     SUBDIR += csv2latex
     SUBDIR += csvdiff
+    SUBDIR += csvq
     SUBDIR += ctpl
     SUBDIR += ctpp2
     SUBDIR += cwtext
@@ -314,12 +315,14 @@
     SUBDIR += jrefentry
     SUBDIR += jshon
     SUBDIR += json-yaml
+    SUBDIR += jtc
     SUBDIR += kdiff3
     SUBDIR += kenlm
     SUBDIR += kf5-kcodecs
     SUBDIR += kf5-sonnet
     SUBDIR += kf5-syntax-highlighting
     SUBDIR += kibana6
+    SUBDIR += kibana7
     SUBDIR += kiss-templates
     SUBDIR += kmfl-european-latin
     SUBDIR += kmfl-khmer
@@ -775,6 +778,7 @@
     SUBDIR += p5-TOML-Parser
     SUBDIR += p5-TeX-Encode
     SUBDIR += p5-TeX-Hyphen
+    SUBDIR += p5-Template-AutoFilter
     SUBDIR += p5-Template-Declare
     SUBDIR += p5-Template-Extract
     SUBDIR += p5-Template-Magic
@@ -1274,6 +1278,7 @@
     SUBDIR += py-hypua2jamo
     SUBDIR += py-isbnlib
     SUBDIR += py-isbntools
+    SUBDIR += py-jinja2-cli
     SUBDIR += py-jsonslicer
     SUBDIR += py-jsx-lexer
     SUBDIR += py-jtextfsm
@@ -1283,7 +1288,6 @@
     SUBDIR += py-libxml2
     SUBDIR += py-libxslt
     SUBDIR += py-license-expression
-    SUBDIR += py-ltxml
     SUBDIR += py-m2r
     SUBDIR += py-mako
     SUBDIR += py-markdown
@@ -1412,12 +1416,10 @@
     SUBDIR += py-xml-default-dict
     SUBDIR += py-xmldiff
     SUBDIR += py-yapf
-    SUBDIR += py-zope.app.locales
     SUBDIR += py-zope.i18nmessageid
     SUBDIR += py-zope.structuredtext
     SUBDIR += py-zope.tal
     SUBDIR += py-zpt
-    SUBDIR += pychm
     SUBDIR += qprint
     SUBDIR += qrcodegen
     SUBDIR += qstardict
@@ -1464,9 +1466,9 @@
     SUBDIR += ruby-rdtool
     SUBDIR += ruby-rttool
     SUBDIR += ruby-xmlparser
-    SUBDIR += rubygem-actionpack-xml_parser
-    SUBDIR += rubygem-actionpack-xml_parser1
-    SUBDIR += rubygem-actionpack-xml_parser52
+    SUBDIR += rubygem-actionpack-xml_parser-rails5
+    SUBDIR += rubygem-actionpack-xml_parser-rails52
+    SUBDIR += rubygem-actionpack-xml_parser1-rails4
     SUBDIR += rubygem-actiontext60
     SUBDIR += rubygem-albino
     SUBDIR += rubygem-amatch
@@ -1474,6 +1476,7 @@
     SUBDIR += rubygem-asciidoctor-diagram
     SUBDIR += rubygem-asciidoctor-include-ext
     SUBDIR += rubygem-asciidoctor-plantuml
+    SUBDIR += rubygem-asciidoctor-plantuml0010
     SUBDIR += rubygem-autoprefixer-rails
     SUBDIR += rubygem-babel-source
     SUBDIR += rubygem-babel-transpiler
@@ -1499,7 +1502,6 @@
     SUBDIR += rubygem-diff-lcs
     SUBDIR += rubygem-diff_match_patch
     SUBDIR += rubygem-diffy
-    SUBDIR += rubygem-diffy31
     SUBDIR += rubygem-docdiff
     SUBDIR += rubygem-elasticsearch
     SUBDIR += rubygem-elasticsearch-api
@@ -1559,6 +1561,7 @@
     SUBDIR += rubygem-linguistics
     SUBDIR += rubygem-liquid
     SUBDIR += rubygem-liquid-tag-parser
+    SUBDIR += rubygem-liquid-tag-parser1
     SUBDIR += rubygem-loggability
     SUBDIR += rubygem-loofah
     SUBDIR += rubygem-ltsv
@@ -1742,6 +1745,7 @@
     SUBDIR += texi2html
     SUBDIR += texi2mdoc
     SUBDIR += textogif
+    SUBDIR += textql
     SUBDIR += the_silver_searcher
     SUBDIR += ti-hunspell
     SUBDIR += tidyp
@@ -1760,6 +1764,7 @@
     SUBDIR += tr-aspell
     SUBDIR += trang
     SUBDIR += translate-toolkit
+    SUBDIR += trdsql
     SUBDIR += ts-hunspell
     SUBDIR += tth
     SUBDIR += tttcmds

@@ -81,6 +81,7 @@
     SUBDIR += chordpack
     SUBDIR += chromaprint
     SUBDIR += clementine-player
+    SUBDIR += cli-visualizer
     SUBDIR += clunk
     SUBDIR += cmp3
     SUBDIR += cmt
@@ -232,6 +233,7 @@
     SUBDIR += gnustep-cdplayer
     SUBDIR += goattracker
     SUBDIR += gogglesmm
+    SUBDIR += gonic
     SUBDIR += goobox
     SUBDIR += gqradio
     SUBDIR += gradio
@@ -346,6 +348,7 @@
     SUBDIR += jalv
     SUBDIR += jalv-select
     SUBDIR += jamin
+    SUBDIR += jamulus
     SUBDIR += jid3lib
     SUBDIR += juk
     SUBDIR += juke
@@ -483,6 +486,7 @@
     SUBDIR += milkytracker
     SUBDIR += mio2jack
     SUBDIR += mixer.app
+    SUBDIR += mixertui
     SUBDIR += mixmos
     SUBDIR += mixxx
     SUBDIR += mixxx21
@@ -651,7 +655,6 @@
     SUBDIR += py-music21
     SUBDIR += py-musicbrainzngs
     SUBDIR += py-mutagen
-    SUBDIR += py-ogg
     SUBDIR += py-openal
     SUBDIR += py-opuslib
     SUBDIR += py-py-jack
@@ -667,7 +670,6 @@
     SUBDIR += py-soundscrape
     SUBDIR += py-speechrecognition
     SUBDIR += py-tagpy
-    SUBDIR += py-vorbis
     SUBDIR += py-wavio
     SUBDIR += py-webrtcvad
     SUBDIR += py-xmms2
@@ -678,7 +680,6 @@
     SUBDIR += qsampler
     SUBDIR += qsynth
     SUBDIR += quimup
-    SUBDIR += raul
     SUBDIR += rawrec
     SUBDIR += re
     SUBDIR += rebot3
@@ -723,7 +724,6 @@
     SUBDIR += shntool
     SUBDIR += shorten
     SUBDIR += shout
-    SUBDIR += shout-idjc
     SUBDIR += sidplay
     SUBDIR += sidplay2
     SUBDIR += sidplayer

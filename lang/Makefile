@@ -18,7 +18,6 @@
     SUBDIR += awka
     SUBDIR += bas2tap
     SUBDIR += basic256
-    SUBDIR += beignet
     SUBDIR += bf2c
     SUBDIR += bsh
     SUBDIR += bwbasic
@@ -96,7 +95,6 @@
     SUBDIR += gcc-ecj45
     SUBDIR += gcc10-devel
     SUBDIR += gcc48
-    SUBDIR += gcc6
     SUBDIR += gcc6-aux
     SUBDIR += gcc7
     SUBDIR += gcc8
@@ -120,7 +118,6 @@
     SUBDIR += gnustep-base
     SUBDIR += go
     SUBDIR += go-devel
-    SUBDIR += go14
     SUBDIR += gomacro
     SUBDIR += gravity
     SUBDIR += groovy
@@ -280,6 +277,7 @@
     SUBDIR += ptoc
     SUBDIR += purescript
     SUBDIR += py-hy
+    SUBDIR += py-lupa
     SUBDIR += py-mx-base
     SUBDIR += py-qt5-qml
     SUBDIR += py-textX
@@ -312,7 +310,6 @@
     SUBDIR += rexx-regutil
     SUBDIR += rexx-wrapper
     SUBDIR += rhino
-    SUBDIR += ruby24
     SUBDIR += ruby25
     SUBDIR += ruby26
     SUBDIR += ruby27

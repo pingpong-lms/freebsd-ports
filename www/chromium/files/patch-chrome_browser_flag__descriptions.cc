@@ -1,15 +1,15 @@
---- chrome/browser/flag_descriptions.cc.orig	2019-12-16 21:51:23 UTC
+--- chrome/browser/flag_descriptions.cc.orig	2020-04-03 04:11:29 UTC
 +++ chrome/browser/flag_descriptions.cc
-@@ -3744,7 +3744,7 @@ const char kZeroStateFilesDescription[] =
+@@ -3646,7 +3646,7 @@ const char kZeroStateFilesDescription[] =
  
  #endif  // defined(OS_CHROMEOS)
  
 -#if defined(OS_CHROMEOS) || defined(OS_LINUX)
 +#if defined(OS_CHROMEOS) || defined(OS_LINUX) || defined(OS_BSD)
- const char kTerminalSystemAppName[] = "Terminal System App";
- const char kTerminalSystemAppDescription[] =
-     "Enables the Terminal System App at chrome://terminal which is used for "
-@@ -3757,7 +3757,7 @@ const char kDynamicTcmallocDescription[] =
+ 
+ #if BUILDFLAG(USE_TCMALLOC)
+ const char kDynamicTcmallocName[] = "Dynamic Tcmalloc Tuning";
+@@ -3655,7 +3655,7 @@ const char kDynamicTcmallocDescription[] =
      "utilization.";
  #endif  // BUILDFLAG(USE_TCMALLOC)
  
@@ -18,7 +18,7 @@
  
  // All views-based platforms --------------------------------------------------
  
-@@ -3782,13 +3782,13 @@ const char kReopenTabInProductHelpDescription[] =
+@@ -3680,13 +3680,13 @@ const char kReopenTabInProductHelpDescription[] =
  
  // Random platform combinations -----------------------------------------------
  
@@ -34,21 +34,32 @@
  
  #if BUILDFLAG(ENABLE_CLICK_TO_CALL)
  
-@@ -3806,7 +3806,7 @@ const char kClickToCallUIDescription[] =
+@@ -3703,7 +3703,7 @@ const char kClickToCallDetectionV2Description[] =
  
  #endif  // BUILDFLAG(ENABLE_CLICK_TO_CALL)
+ 
+-#if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || \
++#if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || defined(OS_BSD) || \
+     defined(OS_CHROMEOS)
+ 
+ const char kRemoteCopyReceiverName[] =
+@@ -3712,16 +3712,16 @@ const char kRemoteCopyReceiverDescription[] =
+     "Enables the remote copy feature to handle messages by writing content to "
+     "the clipboard and showing a notification to the user.";
+ 
+-#endif  // defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) ||
++#endif  // defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || defined(OS_BSD) ||
+         // defined(OS_CHROMEOS)
  
 -#if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX)
 +#if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || defined(OS_BSD)
  
  const char kDirectManipulationStylusName[] = "Direct Manipulation Stylus";
  const char kDirectManipulationStylusDescription[] =
-@@ -3825,7 +3825,7 @@ const char kSyncClipboardServiceName[] = "Sync Clipboa
- const char kSyncClipboardServiceDescription[] =
-     "Enables clipboard syncing via Chrome Sync.";
+     "If enabled, Chrome will scroll web pages on stylus drag.";
  
 -#endif  // defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX)
 +#endif  // defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || defined(OS_BSD)
  
- #if defined(OS_MACOSX) || defined(OS_CHROMEOS)
+ #if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_CHROMEOS)
  

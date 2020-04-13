@@ -6,6 +6,7 @@
     SUBDIR += anope
     SUBDIR += atheme-services
     SUBDIR += bip
+    SUBDIR += birch
     SUBDIR += bitchx
     SUBDIR += bitlbee
     SUBDIR += bitlbee-discord
@@ -94,7 +95,6 @@
     SUBDIR += py-fishcrypt
     SUBDIR += py-irc
     SUBDIR += py-limnoria
-    SUBDIR += py-supybot
     SUBDIR += quassel
     SUBDIR += quassel-core
     SUBDIR += quirc

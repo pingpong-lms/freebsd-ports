@@ -586,6 +586,7 @@
     SUBDIR += rubygem-email_reply_parser-discourse
     SUBDIR += rubygem-email_reply_trimmer
     SUBDIR += rubygem-exception_notification
+    SUBDIR += rubygem-gitlab-mail_room
     SUBDIR += rubygem-mail
     SUBDIR += rubygem-mail_room
     SUBDIR += rubygem-mailboxer
@@ -599,8 +600,8 @@
     SUBDIR += rubygem-premailer-rails-rails60
     SUBDIR += rubygem-rmail
     SUBDIR += rubygem-roadie
-    SUBDIR += rubygem-roadie-rails
-    SUBDIR += rubygem-roadie-rails52
+    SUBDIR += rubygem-roadie-rails-rails4
+    SUBDIR += rubygem-roadie-rails-rails52
     SUBDIR += rubygem-roadie3
     SUBDIR += rubygem-ruby-qmail
     SUBDIR += rubygem-tmail

@@ -1,7 +1,7 @@
---- gpu/command_buffer/service/external_vk_image_backing.h.orig	2019-12-16 21:51:26 UTC
+--- gpu/command_buffer/service/external_vk_image_backing.h.orig	2020-03-16 18:40:32 UTC
 +++ gpu/command_buffer/service/external_vk_image_backing.h
-@@ -131,7 +131,7 @@ class ExternalVkImageBacking final : public SharedImag
-                          base::Optional<DawnTextureFormat> dawn_format,
+@@ -132,7 +132,7 @@ class ExternalVkImageBacking final : public ClearTrack
+                          base::Optional<WGPUTextureFormat> wgpu_format,
                           base::Optional<uint32_t> memory_type_index);
  
 -#ifdef OS_LINUX

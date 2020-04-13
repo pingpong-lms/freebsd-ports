@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	wine
-DISTVERSION=	5.2
+DISTVERSION=	5.6
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/Source \
@@ -43,7 +43,8 @@ CONFIGURE_ARGS+=--verbose \
 		--without-sane \
 		--without-sdl \
 		--without-tiff \
-		--without-udev
+		--without-udev \
+		--without-unwind 
 CONFIGURE_ENV=	CPPBIN="${CPP}" FLEX="${LOCALBASE}/bin/flex"
 WINELIBDIR?=	${PREFIX}/lib
 .if !defined(USE_LDCONFIG32)
@@ -128,7 +129,11 @@ X11_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 			liblcms2.so:graphics/lcms2 \
 			libpng.so:graphics/png
 
+# Include this only if it has not been already included by the
+# i386-wine-devel slave port.
+.ifndef WINE_SLAVE_BUILD
 .include <bsd.port.pre.mk>
+.endif
 
 .if ${ARCH} == amd64
 # Wine is composed of three parts:
@@ -175,10 +180,12 @@ post-install:
 
 check-wine-devel-vs-staging:
 	@${GREP} %%STAGING%% pkg-plist | while read f; do \
-	  f=`echo $$f | ${SED} -e 's/%%STAGING%%//'`; \
-	  if [ -f "$$STAGEDIR/$$PREFIX/$$f" ]; then \
+	  f=`echo $$f | ${SED} -e 's:%%STAGING%%::' -e "s:%%DATADIR%%:${DATADIR}:"`; \
+	  if [ -f "$$STAGEDIR/$$PREFIX/$$f" ] || [ -f "$$STAGEDIR/$$f" ]; then \
 	    ${PRINTF} "%s no longer contingent on %%STAGING%%?\n" "$$f"; \
 	  fi \
 	done
 
+.ifndef WINE_SLAVE_BUILD
 .include <bsd.port.post.mk>
+.endif

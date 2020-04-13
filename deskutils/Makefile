@@ -12,6 +12,7 @@
     SUBDIR += anydesk
     SUBDIR += appwrapper
     SUBDIR += aspostit
+    SUBDIR += ausweisapp2
     SUBDIR += autocutsel
     SUBDIR += baobab
     SUBDIR += basket
@@ -175,6 +176,7 @@
     SUBDIR += p5-Goo
     SUBDIR += pal
     SUBDIR += parcellite
+    SUBDIR += peaclock
     SUBDIR += pet
     SUBDIR += phpicalendar
     SUBDIR += pim-data-exporter
@@ -216,7 +218,6 @@
     SUBDIR += spice-gtk
     SUBDIR += sugarcrm
     SUBDIR += synapse
-    SUBDIR += syncthing-gtk
     SUBDIR += syncthingtray
     SUBDIR += sysctlview
     SUBDIR += systempreferences

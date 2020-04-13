@@ -23,9 +23,9 @@
     SUBDIR += bdelta
     SUBDIR += bestfit
     SUBDIR += bible-kjv
+    SUBDIR += biblesync
     SUBDIR += bibletime
     SUBDIR += biblical-curse
-    SUBDIR += biblesync
     SUBDIR += binclock
     SUBDIR += biosfont-demos
     SUBDIR += birthday
@@ -239,6 +239,7 @@
     SUBDIR += metalink-checker
     SUBDIR += metalink-tools
     SUBDIR += mime-support
+    SUBDIR += minidnn
     SUBDIR += mirmon
     SUBDIR += mmdnn
     SUBDIR += mmv

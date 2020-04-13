@@ -13,10 +13,12 @@
     SUBDIR += R-cran-rvest
     SUBDIR += R-cran-scrapeR
     SUBDIR += R-cran-selectr
+    SUBDIR += R-cran-servr
     SUBDIR += R-cran-shiny
     SUBDIR += Stikked
     SUBDIR += UniversalFeedCreator
     SUBDIR += ach
+    SUBDIR += adguardhome
     SUBDIR += adzap
     SUBDIR += alef-webfont
     SUBDIR += amphetadesk
@@ -32,6 +34,7 @@
     SUBDIR += archiva
     SUBDIR += aria2
     SUBDIR += asql
+    SUBDIR += authelia
     SUBDIR += awffull
     SUBDIR += aws
     SUBDIR += aws-demos
@@ -85,6 +88,7 @@
     SUBDIR += colly
     SUBDIR += coppermine
     SUBDIR += cplanet
+    SUBDIR += cpp-httplib
     SUBDIR += cpr
     SUBDIR += crawl
     SUBDIR += crp
@@ -294,6 +298,7 @@
     SUBDIR += libnghttp2
     SUBDIR += libnghttp3
     SUBDIR += libresonic-standalone
+    SUBDIR += librtcdcpp
     SUBDIR += libwpe
     SUBDIR += libwww
     SUBDIR += lightsquid
@@ -456,7 +461,6 @@
     SUBDIR += node
     SUBDIR += node10
     SUBDIR += node12
-    SUBDIR += node8
     SUBDIR += nostromo
     SUBDIR += novnc
     SUBDIR += novnc-websockify
@@ -465,7 +469,6 @@
     SUBDIR += npm
     SUBDIR += npm-node10
     SUBDIR += npm-node12
-    SUBDIR += npm-node8
     SUBDIR += nspluginwrapper
     SUBDIR += obhttpd
     SUBDIR += onionbalance
@@ -946,6 +949,7 @@
     SUBDIR += p5-HTTP-Thin
     SUBDIR += p5-HTTP-Throwable
     SUBDIR += p5-HTTP-Tiny
+    SUBDIR += p5-HTTP-Tiny-Multipart
     SUBDIR += p5-HTTP-Tiny-SPDY
     SUBDIR += p5-HTTP-Tiny-UA
     SUBDIR += p5-HTTP-WebTest
@@ -1435,6 +1439,7 @@
     SUBDIR += py-bottle-cork
     SUBDIR += py-branca
     SUBDIR += py-cachecontrol
+    SUBDIR += py-cachelib
     SUBDIR += py-caldav
     SUBDIR += py-cheroot
     SUBDIR += py-cherrypy
@@ -1504,6 +1509,7 @@
     SUBDIR += py-django-crispy-forms
     SUBDIR += py-django-cron
     SUBDIR += py-django-datetime-widget
+    SUBDIR += py-django-debreach
     SUBDIR += py-django-debug-toolbar
     SUBDIR += py-django-dpaste
     SUBDIR += py-django-evolution
@@ -1541,6 +1547,7 @@
     SUBDIR += py-django-photologue
     SUBDIR += py-django-picklefield
     SUBDIR += py-django-pipeline
+    SUBDIR += py-django-polymorphic
     SUBDIR += py-django-post_office
     SUBDIR += py-django-profiles
     SUBDIR += py-django-prometheus
@@ -1581,7 +1588,6 @@
     SUBDIR += py-django30
     SUBDIR += py-django_compressor
     SUBDIR += py-django_openstack_auth
-    SUBDIR += py-django_polymorphic
     SUBDIR += py-djangocms-admin-style
     SUBDIR += py-djangorestframework
     SUBDIR += py-djangorestframework-csv
@@ -1705,8 +1711,6 @@
     SUBDIR += py-prawcore
     SUBDIR += py-priority
     SUBDIR += py-puppetboard
-    SUBDIR += py-puppetboard02
-    SUBDIR += py-puppetboard03
     SUBDIR += py-py-restclient
     SUBDIR += py-pySmartDL
     SUBDIR += py-pyjwt
@@ -1806,7 +1810,6 @@
     SUBDIR += py-wsgidav
     SUBDIR += py-yarl
     SUBDIR += pyblosxom
-    SUBDIR += pycarddav
     SUBDIR += pyjamas
     SUBDIR += qdecoder
     SUBDIR += qhttpengine
@@ -2168,6 +2171,7 @@
     SUBDIR += shellinabox
     SUBDIR += shttpd
     SUBDIR += silicon
+    SUBDIR += simple-web-server
     SUBDIR += sitecopy
     SUBDIR += skytemplate
     SUBDIR += slowcgi
@@ -2223,6 +2227,7 @@
     SUBDIR += tivoka
     SUBDIR += tntnet
     SUBDIR += tokyopromenade
+    SUBDIR += tomcat-devel
     SUBDIR += tomcat-native
     SUBDIR += tomcat7
     SUBDIR += tomcat85
@@ -2324,6 +2329,7 @@
     SUBDIR += unit
     SUBDIR += unit-perl
     SUBDIR += unit-php
+    SUBDIR += uwebsockets
     SUBDIR += uwsgi
     SUBDIR += uwsgitop
     SUBDIR += validator
@@ -2393,7 +2399,6 @@
     SUBDIR += yarn
     SUBDIR += yarn-node10
     SUBDIR += yarn-node12
-    SUBDIR += yarn-node8
     SUBDIR += yaws
     SUBDIR += you-get
     SUBDIR += yourls

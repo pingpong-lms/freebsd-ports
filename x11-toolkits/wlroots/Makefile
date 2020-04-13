@@ -1,13 +1,13 @@
 # $FreeBSD$
 
 PORTNAME=	wlroots
-DISTVERSION=	0.10.0
-PORTREVISION=	4
+DISTVERSION=	0.10.1
 CATEGORIES=	x11-toolkits
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 PATCHFILES+=	f0594fb73225.patch:-p1 144d2041adfb.patch:-p1
 PATCHFILES+=	2bad34e02423.patch:-p1
+PATCHFILES+=	8d2e8d8a0612.patch:-p1
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Modular Wayland compositor library
@@ -33,7 +33,7 @@ USE_LDCONFIG=	yes
 GH_ACCOUNT=	swaywm
 MESON_ARGS=	-Dexamples=false
 
-# XXX Drop after FreeBSD 12.0 EOL
+# XXX Drop after FreeBSD 11.3 EOL (aarch64)
 .if exists(/usr/lib/clang/8.0.0)
 # https://github.com/swaywm/wlroots/issues/1450
 LLD_UNSAFE=	yes

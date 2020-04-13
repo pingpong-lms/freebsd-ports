@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	cliqz
-DISTVERSION=	1.33.0
-PORTREVISION=	2
+DISTVERSION=	1.34.1
 CATEGORIES=	www
 MASTER_SITES=	https://s3.amazonaws.com/cdn.cliqz.com/browser-f/APT/:amazon \
 		http://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${DISTVERSION}/${CLIQZ_LAST_BUILD_ID}/:cliqz
@@ -20,6 +19,9 @@ COMMENT=	Secure browser (Mozilla based) with built-in quick search
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+DEPRECATED=	Uses deprecated version of python
+EXPIRATION_DATE=	2020-12-31
+
 FETCH_DEPENDS=	ca_root_nss>=0:security/ca_root_nss
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libdbus-glib-1.so:devel/dbus-glib \
@@ -33,11 +35,12 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libplds4.so:devel/nspr
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/xt.pc:x11-toolkits/libXt \
+		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
 		${RUST_DEFAULT}>=1.39:lang/${RUST_DEFAULT} \
 		autoconf-2.13:devel/autoconf213 \
 		bash:shells/bash \
 		graphite2>=1.3.13:graphics/graphite2 \
-		harfbuzz>=2.6.1:print/harfbuzz \
+		harfbuzz>=2.6.4:print/harfbuzz \
 		icu>=64.1,1:devel/icu \
 		libevent>=2.1.8:devel/libevent \
 		libvorbis>=1.3.6,3:audio/libvorbis \
@@ -46,10 +49,10 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/xt.pc:x11-toolkits/libXt \
 		llvm${LLVM_DEFAULT}>=0:devel/llvm${LLVM_DEFAULT} \
 		nasm:devel/nasm \
 		node:www/node \
-		nspr>=4.24:devel/nspr \
-		nss>=3.49.2:security/nss \
+		nspr>=4.25:devel/nspr \
+		nss>=3.50:security/nss \
 		png>=1.6.35:graphics/png \
-		rust-cbindgen>=0.12.0:devel/rust-cbindgen \
+		rust-cbindgen>=0.13.0:devel/rust-cbindgen \
 		sqlite3>=3.30.1:databases/sqlite3 \
 		v4l_compat>0:multimedia/v4l_compat \
 		yasm:devel/yasm \
@@ -75,7 +78,7 @@ SHEBANG_FILES=	magic_build_and_package.sh
 CLIQZ_CHANNEL=		release
 # If the DISTVERSION is updated, make sure to update the last build id from
 # fetch -qo - https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${DISTVERSION}/lastbuildid
-CLIQZ_LAST_BUILD_ID=	20200219152122
+CLIQZ_LAST_BUILD_ID=	20200404160144
 CLIQZ_ICON=		${PORTNAME}.png
 CLIQZ_ICON_SRC=		${WRKSRC}/mozilla-release/browser/branding/${PORTNAME}/default48.png
 MOZ_DESKTOP=		${WRKSRC}/mozilla-release/toolkit/mozapps/installer/linux/rpm/mozilla.desktop
@@ -95,9 +98,9 @@ MOZ_CONFIGURE_ARGS+=	"--disable-crashreporter" \
 			"--disable-debug-symbols" \
 			"--disable-tests" \
 			"--disable-updater" \
-			"--libclang-path=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib" \
-			"--with-system-graphite2" \
-			"--with-system-harfbuzz"
+			"--libclang-path=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib" 
+#			"--with-system-graphite2" \
+#			"--with-system-harfbuzz"
 
 .include "${.CURDIR}/Makefile.options"
 

@@ -1,6 +1,6 @@
---- components/sync_device_info/device_info_sync_bridge.cc.orig	2019-12-31 14:39:30 UTC
+--- components/sync_device_info/device_info_sync_bridge.cc.orig	2020-03-16 18:40:31 UTC
 +++ components/sync_device_info/device_info_sync_bridge.cc
-@@ -432,11 +432,13 @@ void DeviceInfoSyncBridge::OnStoreCreated(
+@@ -456,11 +456,13 @@ void DeviceInfoSyncBridge::OnStoreCreated(
      return;
    }
  

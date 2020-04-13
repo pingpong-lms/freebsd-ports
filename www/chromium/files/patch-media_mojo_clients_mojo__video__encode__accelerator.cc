@@ -1,6 +1,6 @@
---- media/mojo/clients/mojo_video_encode_accelerator.cc.orig	2019-12-16 21:51:27 UTC
+--- media/mojo/clients/mojo_video_encode_accelerator.cc.orig	2020-03-16 18:40:33 UTC
 +++ media/mojo/clients/mojo_video_encode_accelerator.cc
-@@ -124,7 +124,7 @@ void MojoVideoEncodeAccelerator::Encode(scoped_refptr<
+@@ -132,7 +132,7 @@ void MojoVideoEncodeAccelerator::Encode(scoped_refptr<
              frame->layout().num_planes());
    DCHECK(vea_.is_bound());
  

@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	slurm
-DISTVERSION=	19.05.5
+DISTVERSION=	20.02.1
 CATEGORIES=	sysutils python
 MASTER_SITES=	https://download.schedmd.com/slurm/
 PKGNAMESUFFIX=	-wlm
@@ -82,7 +82,7 @@ CONFIGURE_ARGS=	--without-ofed
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-${DISTVERSION}
 
 CFLAGS+=	-I${WRKSRC}/slurm -I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -lsysinfo -lkvm
+LDFLAGS+=	-L${LOCALBASE}/lib -lsysinfo -lprocstat
 
 # Hack around nonfunctional --disable-gtktest flag
 pre-configure-GUI-off:
@@ -96,16 +96,9 @@ pre-configure:
 	@${CP} ${FILESDIR}/pty.h ${WRKSRC}/slurm
 	@${REINPLACE_CMD} -e 's|sched_setaffinity|cpuset_setaffinity|g' \
 		${WRKSRC}/configure
-	@${REINPLACE_CMD} -e 's|/bin/mail|/usr/bin/mail|g' \
-		${WRKSRC}/src/common/read_config.h \
-		${WRKSRC}/contribs/seff/smail \
-		${WRKSRC}/doc/html/configurator.easy.html.in \
-		${WRKSRC}/doc/html/configurator.html.in \
-		${WRKSRC}/contribs/cray/slurm.conf.template \
-		${WRKSRC}/doc/man/man1/strigger.1 \
-		${WRKSRC}/doc/man/man5/slurm.conf.5
 
 	@${REINPLACE_CMD} -e 's|"/proc|"/compat/linux/proc|g' \
+		-e 's|(/proc)|(/compat/linux/proc)|g' \
 		${WRKSRC}/src/slurmd/slurmstepd/req.c \
 		${WRKSRC}/src/slurmd/slurmstepd/pdebug.c \
 		${WRKSRC}/src/slurmd/common/xcpuinfo.c \
