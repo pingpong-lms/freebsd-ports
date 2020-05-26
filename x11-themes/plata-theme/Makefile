@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	plata-theme
-PORTVERSION=	0.9.6
+PORTVERSION=	0.9.8
 CATEGORIES=	x11-themes
 
 MAINTAINER=	tagattie@FreeBSD.org
@@ -24,7 +24,7 @@ USE_GNOME=	gdkpixbuf2 gtk30 libxml2
 USE_GITLAB=	yes
 GL_SITE=	https://gitlab.com
 GL_ACCOUNT=	tista500
-GL_COMMIT=	1c0cf5812c21dc0922498b67812f14824c312b35
+GL_COMMIT=	99473c250f5381f66e6b3513bf7cdc4184728de0
 
 NO_ARCH=	yes
 

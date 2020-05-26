@@ -3,7 +3,7 @@
 
 PORTNAME=	vips
 PORTVERSION=	1.0.9
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics
 
 MAINTAINER=	mops@punkt.de
@@ -14,6 +14,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 LIB_DEPENDS=	libvips.so:graphics/vips
 
-USES=		php:pecl pkgconfig
+USES=		compiler:c11 php:pecl pkgconfig
 
 .include <bsd.port.mk>

@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	rails
-PORTVERSION=	6.0.2.2
-PORTREVISION=	1
+PORTVERSION=	6.0.3.1
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	60
@@ -12,8 +11,6 @@ MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Full-stack web application framework
 
 LICENSE=	MIT
-
-BROKEN_RUBY24=	yes
 
 RUN_DEPENDS=	rubygem-actioncable60>=${PORTVERSION}:www/rubygem-actioncable60 \
 		rubygem-actionmailbox60>=${PORTVERSION}:mail/rubygem-actionmailbox60 \
