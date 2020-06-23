@@ -184,6 +184,7 @@
     SUBDIR += py-preppy
     SUBDIR += py-psautohint
     SUBDIR += py-pycups
+    SUBDIR += py-pycups1
     SUBDIR += py-pyscript
     SUBDIR += py-python-ly
     SUBDIR += py-qt5-printsupport
@@ -222,6 +223,7 @@
     SUBDIR += scribus-devel
     SUBDIR += sgf2tex
     SUBDIR += shrinkpdf
+    SUBDIR += simple-fb2-reader
     SUBDIR += splix
     SUBDIR += system-config-printer
     SUBDIR += t1utils

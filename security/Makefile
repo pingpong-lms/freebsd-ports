@@ -54,7 +54,6 @@
     SUBDIR += boringssl
     SUBDIR += botan110
     SUBDIR += botan2
-    SUBDIR += bro
     SUBDIR += broccoli
     SUBDIR += bruteblock
     SUBDIR += bruteforceblocker
@@ -155,6 +154,7 @@
     SUBDIR += fcrackzip
     SUBDIR += fiked
     SUBDIR += find-zlib
+    SUBDIR += fizz
     SUBDIR += fl0p
     SUBDIR += flawfinder
     SUBDIR += fpc-openssl
@@ -717,7 +717,6 @@
     SUBDIR += pam_mkhomedir
     SUBDIR += pam_ocra
     SUBDIR += pam_p11
-    SUBDIR += pam_pseudo
     SUBDIR += pam_pwdfile
     SUBDIR += pam_require
     SUBDIR += pam_script
@@ -850,6 +849,7 @@
     SUBDIR += py-certbot-apache
     SUBDIR += py-certbot-dns-cloudflare
     SUBDIR += py-certbot-dns-cloudxns
+    SUBDIR += py-certbot-dns-cpanel
     SUBDIR += py-certbot-dns-digitalocean
     SUBDIR += py-certbot-dns-dnsimple
     SUBDIR += py-certbot-dns-dnsmadeeasy
@@ -1079,6 +1079,7 @@
     SUBDIR += rubygem-net-ssh-krb
     SUBDIR += rubygem-net-ssh-multi
     SUBDIR += rubygem-net-ssh4
+    SUBDIR += rubygem-net-ssh5
     SUBDIR += rubygem-net-telnet
     SUBDIR += rubygem-nexpose
     SUBDIR += rubygem-nmap-parser
@@ -1259,6 +1260,7 @@
     SUBDIR += vanguards-tor
     SUBDIR += vault
     SUBDIR += veracrypt
+    SUBDIR += vigenere
     SUBDIR += vinetto
     SUBDIR += vlock
     SUBDIR += vm-to-tor
@@ -1288,6 +1290,7 @@
     SUBDIR += ykpers
     SUBDIR += ylva
     SUBDIR += yubico-piv-tool
+    SUBDIR += yubikey-agent
     SUBDIR += yubikey-manager-qt
     SUBDIR += yubikey-personalization-gui
     SUBDIR += yubioath-desktop

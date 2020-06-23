@@ -814,13 +814,13 @@ ebusd:*:854:
 # free: 871
 bitmark:*:872:
 bitmark-recorder:*:873:
-# free: 874
+librespeed:*:874:
 # free: 875
 # free: 876
 # free: 877
 # free: 878
 # free: 879
-# free: 880
+pyspf-milter:*:880:
 ultimaker:*:881:
 midpoint:*:882:
 ipfs-go:*:883:

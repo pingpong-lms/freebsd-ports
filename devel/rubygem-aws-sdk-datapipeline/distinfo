@@ -1,3 +1,3 @@
-TIMESTAMP = 1588930459
-SHA256 (rubygem/aws-sdk-datapipeline-1.18.0.gem) = 85e3ce2e1821bd68ea32c013b2c109bd32990b34ad5f5ac55dae18f9225ba67a
-SIZE (rubygem/aws-sdk-datapipeline-1.18.0.gem) = 28160
+TIMESTAMP = 1592145295
+SHA256 (rubygem/aws-sdk-datapipeline-1.20.1.gem) = f1d825bcf3f9a999d476e540ec5607e6b5900e5ca219e4efb2f2c193af5c5293
+SIZE (rubygem/aws-sdk-datapipeline-1.20.1.gem) = 28160

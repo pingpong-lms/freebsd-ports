@@ -87,7 +87,6 @@
     SUBDIR += pircbot
     SUBDIR += pisg
     SUBDIR += polari
-    SUBDIR += psybnc
     SUBDIR += py-fishcrypt
     SUBDIR += py-irc
     SUBDIR += py-limnoria
@@ -106,6 +105,8 @@
     SUBDIR += simpleirc
     SUBDIR += sirc
     SUBDIR += smartirc4net
+    SUBDIR += smuxi
+    SUBDIR += srain
     SUBDIR += srvx
     SUBDIR += thales
     SUBDIR += tircproxy

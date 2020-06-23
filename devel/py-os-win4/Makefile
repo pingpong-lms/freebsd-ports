@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	os-win
-PORTVERSION=	4.3.2
-PORTREVISION=	5
+PORTVERSION=	4.3.3
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -25,6 +24,7 @@ USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
 
+# os-win 5.0.0+ requires Python 3.6+
 PORTSCOUT=	limit:^4\.
 
 .include <bsd.port.pre.mk>

@@ -42,6 +42,7 @@
     SUBDIR += aalib
     SUBDIR += aaphoto
     SUBDIR += acidwarp
+    SUBDIR += acidwarp-sdl
     SUBDIR += agg
     SUBDIR += alembic
     SUBDIR += alpng
@@ -441,6 +442,7 @@
     SUBDIR += libgfx
     SUBDIR += libgltext
     SUBDIR += libgltf
+    SUBDIR += libglvnd
     SUBDIR += libgnomecanvas
     SUBDIR += libgnomecanvas-reference
     SUBDIR += libgnomecanvasmm26
@@ -528,6 +530,7 @@
     SUBDIR += megapov
     SUBDIR += meh
     SUBDIR += mesa-demos
+    SUBDIR += mesa-devel
     SUBDIR += mesa-dri
     SUBDIR += mesa-libs
     SUBDIR += metacam
@@ -886,6 +889,7 @@
     SUBDIR += py-yaswfp
     SUBDIR += pymorph
     SUBDIR += qcomicbook
+    SUBDIR += qcustomplot-qt5
     SUBDIR += qgis
     SUBDIR += qgis-ltr
     SUBDIR += qiv
@@ -1024,6 +1028,7 @@
     SUBDIR += tinyows
     SUBDIR += tkpng
     SUBDIR += togl
+    SUBDIR += tslib
     SUBDIR += ttygif
     SUBDIR += ttyplot
     SUBDIR += tumble

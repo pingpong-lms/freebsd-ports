@@ -20,6 +20,7 @@
     SUBDIR += compiz
     SUBDIR += compiz-plugins-extra
     SUBDIR += compiz-plugins-main
+    SUBDIR += compiz-plugins-unsupported
     SUBDIR += compizconfig-backend-gconf
     SUBDIR += compizconfig-python
     SUBDIR += compton
@@ -53,7 +54,6 @@
     SUBDIR += herbstluftwm
     SUBDIR += hikari
     SUBDIR += hs-xmonad
-    SUBDIR += hs-xmonad-contrib
     SUBDIR += i3
     SUBDIR += i3-gaps
     SUBDIR += icewm

@@ -16,6 +16,7 @@
     SUBDIR += accounts-qml-module
     SUBDIR += accountsservice
     SUBDIR += acerhdf-kmod
+    SUBDIR += acltool
     SUBDIR += acpi_call
     SUBDIR += acpica-tools
     SUBDIR += acts
@@ -37,12 +38,9 @@
     SUBDIR += and
     SUBDIR += android-file-transfer
     SUBDIR += android-file-transfer-qt5
+    SUBDIR += angrysearch
     SUBDIR += ansible
     SUBDIR += ansible-sysrc
-    SUBDIR += ansible23
-    SUBDIR += ansible24
-    SUBDIR += ansible25
-    SUBDIR += ansible26
     SUBDIR += ansible27
     SUBDIR += ansible28
     SUBDIR += anvil
@@ -104,7 +102,8 @@
     SUBDIR += bchunk
     SUBDIR += beadm
     SUBDIR += beadm-devel
-    SUBDIR += beats
+    SUBDIR += beats6
+    SUBDIR += beats7
     SUBDIR += bfs
     SUBDIR += bhyve-firmware
     SUBDIR += bhyve-rc
@@ -180,6 +179,7 @@
     SUBDIR += cmogstored
     SUBDIR += cmospwd
     SUBDIR += colorize
+    SUBDIR += conan
     SUBDIR += condor
     SUBDIR += confctl
     SUBDIR += conky
@@ -274,7 +274,6 @@
     SUBDIR += dunst
     SUBDIR += dupd
     SUBDIR += duplicity
-    SUBDIR += duplicity07
     SUBDIR += duply
     SUBDIR += dupmerge
     SUBDIR += dvd+rw-tools
@@ -363,6 +362,7 @@
     SUBDIR += fswatch-mon
     SUBDIR += ftwin
     SUBDIR += fusefs-afuse
+    SUBDIR += fusefs-bindfs
     SUBDIR += fusefs-chironfs
     SUBDIR += fusefs-cryptofs
     SUBDIR += fusefs-curlftpfs
@@ -479,6 +479,7 @@
     SUBDIR += hstr
     SUBDIR += htop
     SUBDIR += httplog
+    SUBDIR += hw-probe
     SUBDIR += hwstat
     SUBDIR += i2c-tools
     SUBDIR += i7z
@@ -734,6 +735,7 @@
     SUBDIR += npadmin
     SUBDIR += nq
     SUBDIR += nrg2iso
+    SUBDIR += nss_ndb
     SUBDIR += nsysctl
     SUBDIR += ntfy
     SUBDIR += nut
@@ -743,6 +745,7 @@
     SUBDIR += nvramtool
     SUBDIR += oak
     SUBDIR += obliterate
+    SUBDIR += oc
     SUBDIR += odo
     SUBDIR += ods2
     SUBDIR += ohmu
@@ -753,6 +756,7 @@
     SUBDIR += openipmi
     SUBDIR += opensbi
     SUBDIR += openseachest
+    SUBDIR += openshift-install
     SUBDIR += openupsd
     SUBDIR += openzfs
     SUBDIR += openzfs-kmod
@@ -905,6 +909,7 @@
     SUBDIR += plasma5-user-manager
     SUBDIR += plconfig
     SUBDIR += pmt
+    SUBDIR += pnscan
     SUBDIR += policykit
     SUBDIR += policykit-gnome
     SUBDIR += polkit
@@ -936,6 +941,7 @@
     SUBDIR += pv
     SUBDIR += pwd_unmkdb
     SUBDIR += pwgen
+    SUBDIR += pwol
     SUBDIR += pwsafe
     SUBDIR += pxattr
     SUBDIR += py-analyzemft
@@ -970,6 +976,7 @@
     SUBDIR += py-hpilo
     SUBDIR += py-iowait
     SUBDIR += py-leviathan
+    SUBDIR += py-liquidctl
     SUBDIR += py-mitogen
     SUBDIR += py-mqttwarn
     SUBDIR += py-nagiosplugin
@@ -995,6 +1002,7 @@
     SUBDIR += py-ranger
     SUBDIR += py-rdiff-backup
     SUBDIR += py-salt
+    SUBDIR += py-salt-2019
     SUBDIR += py-scandir
     SUBDIR += py-scarab
     SUBDIR += py-scriptine
@@ -1061,6 +1069,7 @@
     SUBDIR += rsyncbackup
     SUBDIR += rsyncrypto
     SUBDIR += rsyslog8
+    SUBDIR += rtsx-kmod
     SUBDIR += rtty
     SUBDIR += rubygem-backup
     SUBDIR += rubygem-bolt
@@ -1268,6 +1277,7 @@
     SUBDIR += tealdeer
     SUBDIR += tenshi
     SUBDIR += terraform
+    SUBDIR += terraform-provider-gridscale
     SUBDIR += terraform-provider-vultr
     SUBDIR += testdisk
     SUBDIR += thefish
@@ -1347,6 +1357,7 @@
     SUBDIR += u-boot-rpi-0-w
     SUBDIR += u-boot-rpi2
     SUBDIR += u-boot-rpi3
+    SUBDIR += u-boot-rpi3-32
     SUBDIR += u-boot-rpi4
     SUBDIR += u-boot-sinovoip-bpi-m3
     SUBDIR += u-boot-sopine

@@ -109,6 +109,7 @@
     SUBDIR += agar
     SUBDIR += ahven
     SUBDIR += aifad
+    SUBDIR += aixlog
     SUBDIR += ald
     SUBDIR += allegro
     SUBDIR += allegro-devel
@@ -272,7 +273,6 @@
     SUBDIR += capstone3
     SUBDIR += capstone4
     SUBDIR += cargo-c
-    SUBDIR += cargo-tree
     SUBDIR += cask
     SUBDIR += catch
     SUBDIR += cbrowser
@@ -487,6 +487,7 @@
     SUBDIR += dmlc-core
     SUBDIR += dmucs
     SUBDIR += docopt.cpp
+    SUBDIR += doctest
     SUBDIR += doctorj
     SUBDIR += dolphin-plugins
     SUBDIR += dotconf
@@ -691,6 +692,7 @@
     SUBDIR += frama-c
     SUBDIR += freebsd-gcc6
     SUBDIR += freebsd-gcc9
+    SUBDIR += frink
     SUBDIR += fsmtrie
     SUBDIR += fstrcmp
     SUBDIR += fstrm
@@ -874,7 +876,6 @@
     SUBDIR += gradle5
     SUBDIR += gradle62
     SUBDIR += grantlee5
-    SUBDIR += graphql.el
     SUBDIR += grpc
     SUBDIR += grumpy
     SUBDIR += grv
@@ -924,38 +925,21 @@
     SUBDIR += hs-cabal-install
     SUBDIR += hs-cpphs
     SUBDIR += hs-darcs
-    SUBDIR += hs-data-default
-    SUBDIR += hs-data-default-class
-    SUBDIR += hs-data-default-instances-base
-    SUBDIR += hs-data-default-instances-containers
-    SUBDIR += hs-data-default-instances-dlist
-    SUBDIR += hs-data-default-instances-old-locale
-    SUBDIR += hs-dlist
-    SUBDIR += hs-extensible-exceptions
     SUBDIR += hs-ghc-events
     SUBDIR += hs-ghcprofview
     SUBDIR += hs-git-annex
     SUBDIR += hs-haddock
     SUBDIR += hs-happy
-    SUBDIR += hs-hashable
     SUBDIR += hs-hasktags
     SUBDIR += hs-hlint
     SUBDIR += hs-hoogle
     SUBDIR += hs-hpack
     SUBDIR += hs-hspec-discover
-    SUBDIR += hs-mtl
     SUBDIR += hs-mueval
-    SUBDIR += hs-old-locale
-    SUBDIR += hs-old-time
     SUBDIR += hs-profiteur
-    SUBDIR += hs-random
-    SUBDIR += hs-setlocale
     SUBDIR += hs-shake
     SUBDIR += hs-spago
     SUBDIR += hs-threadscope
-    SUBDIR += hs-transformers-compat
-    SUBDIR += hs-unordered-containers
-    SUBDIR += hs-utf8-string
     SUBDIR += htable
     SUBDIR += hub
     SUBDIR += hwloc
@@ -1098,6 +1082,7 @@
     SUBDIR += libafterbase
     SUBDIR += liballium
     SUBDIR += libantlr3c
+    SUBDIR += libantlr4
     SUBDIR += libappindicator
     SUBDIR += libaravis
     SUBDIR += libarea
@@ -1204,6 +1189,7 @@
     SUBDIR += libglade2
     SUBDIR += libglade2-reference
     SUBDIR += libglademm24
+    SUBDIR += libgnt
     SUBDIR += libgpc
     SUBDIR += libgpkg
     SUBDIR += libgrading
@@ -1267,8 +1253,6 @@
     SUBDIR += liborcus
     SUBDIR += libosinfo
     SUBDIR += libosmo-abis
-    SUBDIR += libosmo-netif
-    SUBDIR += libosmo-sccp
     SUBDIR += libosmocore
     SUBDIR += libowfat
     SUBDIR += libpafe
@@ -1560,6 +1544,7 @@
     SUBDIR += nlohmann-json
     SUBDIR += node-thrift
     SUBDIR += notcurses
+    SUBDIR += notify-sharp
     SUBDIR += npth
     SUBDIR += nsgenbind
     SUBDIR += nspr
@@ -3262,6 +3247,9 @@
     SUBDIR += p5-Term-ANSIScreen
     SUBDIR += p5-Term-Animation
     SUBDIR += p5-Term-App-Roles
+    SUBDIR += p5-Term-App-Util-Color
+    SUBDIR += p5-Term-App-Util-Interactive
+    SUBDIR += p5-Term-App-Util-Size
     SUBDIR += p5-Term-CallEditor
     SUBDIR += p5-Term-Choose
     SUBDIR += p5-Term-Choose-Util
@@ -4342,7 +4330,6 @@
     SUBDIR += py-distributed
     SUBDIR += py-dj22-django-rq
     SUBDIR += py-django-rq
-    SUBDIR += py-django-rq-dashboard
     SUBDIR += py-docker-py
     SUBDIR += py-dockerpty
     SUBDIR += py-docopt
@@ -4484,7 +4471,9 @@
     SUBDIR += py-holidays
     SUBDIR += py-http-prompt
     SUBDIR += py-humanize
+    SUBDIR += py-hvac
     SUBDIR += py-hypothesis
+    SUBDIR += py-hypothesmith
     SUBDIR += py-icalendar
     SUBDIR += py-ice
     SUBDIR += py-ice37
@@ -4668,6 +4657,7 @@
     SUBDIR += py-nbconvert
     SUBDIR += py-nbdime
     SUBDIR += py-nbformat
+    SUBDIR += py-node-semver
     SUBDIR += py-nodeenv
     SUBDIR += py-nose
     SUBDIR += py-nose-cov
@@ -4758,6 +4748,7 @@
     SUBDIR += py-parver
     SUBDIR += py-pastel
     SUBDIR += py-patch
+    SUBDIR += py-patch-ng
     SUBDIR += py-path.py
     SUBDIR += py-pathlib
     SUBDIR += py-pathlib2
@@ -5035,6 +5026,7 @@
     SUBDIR += py-ruamel.yaml
     SUBDIR += py-ruamel.yaml.clib
     SUBDIR += py-rubymarshal
+    SUBDIR += py-rush
     SUBDIR += py-rx
     SUBDIR += py-rx1
     SUBDIR += py-sanetime
@@ -5286,6 +5278,7 @@
     SUBDIR += py-zope.testing
     SUBDIR += py-zope.traversing
     SUBDIR += py-zsm-lib
+    SUBDIR += py3c
     SUBDIR += py_static_check
     SUBDIR += pybind11
     SUBDIR += pybugz
@@ -5395,6 +5388,7 @@
     SUBDIR += ros-urdfdom_headers
     SUBDIR += ros-vcstools
     SUBDIR += ros-wstool
+    SUBDIR += roswell
     SUBDIR += rote
     SUBDIR += rpc2
     SUBDIR += rpclib
@@ -5433,6 +5427,7 @@
     SUBDIR += rubygem-akismet
     SUBDIR += rubygem-algebrick
     SUBDIR += rubygem-algorithms
+    SUBDIR += rubygem-aliyun-sdk
     SUBDIR += rubygem-allison
     SUBDIR += rubygem-analogger
     SUBDIR += rubygem-annoy
@@ -5494,6 +5489,7 @@
     SUBDIR += rubygem-aws-sdk-cloudwatch
     SUBDIR += rubygem-aws-sdk-cloudwatchevents
     SUBDIR += rubygem-aws-sdk-cloudwatchlogs
+    SUBDIR += rubygem-aws-sdk-codeartifact
     SUBDIR += rubygem-aws-sdk-codebuild
     SUBDIR += rubygem-aws-sdk-codecommit
     SUBDIR += rubygem-aws-sdk-codedeploy
@@ -5871,6 +5867,7 @@
     SUBDIR += rubygem-chef-provisioning
     SUBDIR += rubygem-cheffish
     SUBDIR += rubygem-childprocess
+    SUBDIR += rubygem-childprocess3
     SUBDIR += rubygem-chronic
     SUBDIR += rubygem-chronic_duration
     SUBDIR += rubygem-clamp
@@ -5911,10 +5908,12 @@
     SUBDIR += rubygem-csv
     SUBDIR += rubygem-cucumber
     SUBDIR += rubygem-cucumber-core
+    SUBDIR += rubygem-cucumber-cucumber-expressions
     SUBDIR += rubygem-cucumber-expressions
     SUBDIR += rubygem-cucumber-expressions6
     SUBDIR += rubygem-cucumber-formatter-dots
     SUBDIR += rubygem-cucumber-messages
+    SUBDIR += rubygem-cucumber-messages4
     SUBDIR += rubygem-cucumber-rails
     SUBDIR += rubygem-cucumber-tag-expressions
     SUBDIR += rubygem-cucumber-tag_expressions1
@@ -6251,17 +6250,13 @@
     SUBDIR += rubygem-pathutil
     SUBDIR += rubygem-pdk
     SUBDIR += rubygem-peek
-    SUBDIR += rubygem-peek-gc-rails5
     SUBDIR += rubygem-peek-gc-rails52
     SUBDIR += rubygem-peek-host
     SUBDIR += rubygem-peek-performance_bar
     SUBDIR += rubygem-peek-rails4
-    SUBDIR += rubygem-peek-rails5
     SUBDIR += rubygem-peek-rails52
     SUBDIR += rubygem-peek-rails60
-    SUBDIR += rubygem-peek-rblineprof-rails5
     SUBDIR += rubygem-peek-rblineprof-rails52
-    SUBDIR += rubygem-peek-redis-rails5
     SUBDIR += rubygem-peek-redis-rails52
     SUBDIR += rubygem-pkg-config
     SUBDIR += rubygem-platform
@@ -6279,6 +6274,7 @@
     SUBDIR += rubygem-progressbar
     SUBDIR += rubygem-prometheus-client-mmap
     SUBDIR += rubygem-protected_attributes
+    SUBDIR += rubygem-protobuf-cucumber
     SUBDIR += rubygem-protocol
     SUBDIR += rubygem-pry
     SUBDIR += rubygem-pry-byebug
@@ -6668,7 +6664,7 @@
     SUBDIR += svn_load_dirs
     SUBDIR += svntrac
     SUBDIR += swank-clojure
-    SUBDIR += swig30
+    SUBDIR += swig
     SUBDIR += synfig
     SUBDIR += sysconftool
     SUBDIR += sysfsutils

@@ -36,8 +36,9 @@ RUN_DEPENDS=	xdg-open:devel/xdg-utils
 
 NO_CDROM=	French documentation is for non-commercial use only
 
-USES=		blaslapack desktop-file-utils fortran gettext gl gmake gnome jpeg \
-		libtool localbase ncurses perl5 readline shebangfix xorg
+USES=		blaslapack compiler:c++14-lang desktop-file-utils fortran \
+		gettext gl gmake gnome jpeg libtool localbase ncurses perl5 \
+		readline shebangfix xorg
 GNU_CONFIGURE=	yes
 USE_GL=		gl
 USE_XORG=	x11 xcursor xext xft xi xinerama
@@ -126,6 +127,9 @@ pre-configure:
 	@(cd ${FLTKDEV-GIAC} && ${SETENV} ${CONFIGURE_ENV} ./configure \
 		--prefix=${FLTKDEV-GIAC} \
 		CXX="${CXX}" CXXFLAGS="${CXXFLAGS}")
+
+post-configure:	# malloc.h on 13-CURRENT is missing mallinfo and compilation fails after it is discovered
+	@${FIND} ${WRKSRC} -name config.h | ${XARGS} ${REINPLACE_CMD} -e 's|#define HAVE_MALLOC_H 1|/* #undef HAVE_MALLOC_H */|'
 
 pre-build:
 	@cd ${COCOALIB-GIAC} && ${DO_MAKE_BUILD} \

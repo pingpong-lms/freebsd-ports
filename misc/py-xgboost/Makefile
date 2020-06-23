@@ -2,7 +2,7 @@
 
 PORTNAME=	xgboost
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.1.0
+DISTVERSION=	1.1.1
 CATEGORIES=	misc # machine-learning
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -18,7 +18,7 @@ LIB_DEPENDS=	libdmlc.so:devel/dmlc-core \
 RUN_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}scipy>0:science/py-scipy@${PY_FLAVOR}
 
-USES=		python localbase:ldflags
+USES=		python:3.5+ localbase:ldflags
 USE_GITHUB=	yes
 GH_ACCOUNT=	dmlc
 USE_PYTHON=	distutils autoplist

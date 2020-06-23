@@ -169,7 +169,6 @@
     SUBDIR += freeradius-client
     SUBDIR += freeradius3
     SUBDIR += freerdp
-    SUBDIR += freerdp1
     SUBDIR += freeswitch
     SUBDIR += freevrrpd
     SUBDIR += frr5
@@ -245,7 +244,6 @@
     SUBDIR += hostapd
     SUBDIR += hping
     SUBDIR += hping3
-    SUBDIR += hs-network
     SUBDIR += hsflowd
     SUBDIR += htpdate
     SUBDIR += http_ping
@@ -362,6 +360,7 @@
     SUBDIR += libgrss
     SUBDIR += libgweather
     SUBDIR += libilbc
+    SUBDIR += libiscsi
     SUBDIR += libjson-rpc-cpp
     SUBDIR += libkgapi
     SUBDIR += libksieve
@@ -396,6 +395,8 @@
     SUBDIR += libproxy-python
     SUBDIR += libproxy-webkit3
     SUBDIR += librdkafka
+    SUBDIR += librespeed-cli
+    SUBDIR += librespeed-go
     SUBDIR += librsync
     SUBDIR += libsignal
     SUBDIR += libsrtp2
@@ -475,6 +476,7 @@
     SUBDIR += nats-streaming-server
     SUBDIR += nats-top
     SUBDIR += nbd-server
+    SUBDIR += nbdkit
     SUBDIR += nc
     SUBDIR += ncp
     SUBDIR += ndisc6
@@ -530,11 +532,12 @@
     SUBDIR += onedrive
     SUBDIR += onenetd
     SUBDIR += onioncat
+    SUBDIR += ooni-mini
+    SUBDIR += ooni-probe-cli
     SUBDIR += opal
     SUBDIR += open-isns
     SUBDIR += openbgpd
     SUBDIR += openbgpd6
-    SUBDIR += openbsc
     SUBDIR += openggsn
     SUBDIR += openldap24-client
     SUBDIR += openldap24-sasl-client
@@ -852,6 +855,7 @@
     SUBDIR += p5-Text-Authinfo
     SUBDIR += p5-Twitter-API
     SUBDIR += p5-URI
+    SUBDIR += p5-URI-Based
     SUBDIR += p5-URI-Encode-XS
     SUBDIR += p5-URI-Fast
     SUBDIR += p5-URI-FromHash
@@ -990,6 +994,7 @@
     SUBDIR += ptunnel
     SUBDIR += pvm
     SUBDIR += pwhois
+    SUBDIR += pwnat
     SUBDIR += pxe
     SUBDIR += pxe-pdhcp
     SUBDIR += py-DTLSSocket
@@ -1075,6 +1080,7 @@
     SUBDIR += py-python-cinderclient5
     SUBDIR += py-python-designateclient
     SUBDIR += py-python-glanceclient
+    SUBDIR += py-python-glanceclient2
     SUBDIR += py-python-heatclient
     SUBDIR += py-python-keystoneclient
     SUBDIR += py-python-keystoneclient3
