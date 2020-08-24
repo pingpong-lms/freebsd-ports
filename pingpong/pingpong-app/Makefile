@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-app
-PORTVERSION=	0.19
+PORTVERSION=	0.21
 CATEGORIES=	pingpong
 MASTER_SITES=	#
 DISTFILES=	#
