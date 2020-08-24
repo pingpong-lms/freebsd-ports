@@ -93,6 +93,7 @@
     SUBDIR += exercism
     SUBDIR += explosions
     SUBDIR += ezc3d
+    SUBDIR += far2l
     SUBDIR += felis
     SUBDIR += figlet
     SUBDIR += figlet-fonts
@@ -167,7 +168,9 @@
     SUBDIR += hicolor-icon-theme
     SUBDIR += histring
     SUBDIR += hotkeys
+    SUBDIR += hs-hascard
     SUBDIR += hulgalugha
+    SUBDIR += hxtools
     SUBDIR += ignition-fuel-tools
     SUBDIR += iio-oscilloscope
     SUBDIR += imerge
@@ -399,7 +402,6 @@
     SUBDIR += py-scikit-fusion
     SUBDIR += py-serverfiles
     SUBDIR += py-soapy_power
-    SUBDIR += py-socli
     SUBDIR += py-spdx
     SUBDIR += py-spdx-lookup
     SUBDIR += py-spdx-tools
@@ -410,7 +412,6 @@
     SUBDIR += py-tqdm
     SUBDIR += py-tvm
     SUBDIR += py-xgboost
-    SUBDIR += py-yolk
     SUBDIR += pyobd
     SUBDIR += qbrew
     SUBDIR += qlas
@@ -442,6 +443,7 @@
     SUBDIR += rubygem-rabbit
     SUBDIR += rubygem-vpim
     SUBDIR += rump
+    SUBDIR += ruut
     SUBDIR += sdformat
     SUBDIR += seabios
     SUBDIR += sent

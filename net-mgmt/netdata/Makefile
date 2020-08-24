@@ -2,17 +2,15 @@
 # $FreeBSD$
 
 PORTNAME=	netdata
-PORTVERSION=	1.22.1
+PORTVERSION=	1.24.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	net-mgmt
+MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/v${PORTVERSION}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Scalable distributed realtime performance and health monitoring
 
 LICENSE=	GPLv3
-
-BROKEN_SSL=	libressl libressl-devel
 
 LIB_DEPENDS=	libjson-c.so:devel/json-c \
 		libuuid.so:misc/e2fsprogs-libuuid \
@@ -23,9 +21,8 @@ RUN_DEPENDS=	bash:shells/bash \
 		${PYTHON_PKGNAMEPREFIX}yaml>0:devel/py-yaml@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}urllib3>0:net/py-urllib3@${PY_FLAVOR}
 
-USES=		autoreconf cpe pathfix pkgconfig:both python shebangfix ssl
-
-USE_GITHUB=	yes
+USES=		autoreconf cpe gmake pathfix pkgconfig:both python shebangfix \
+		ssl
 
 SHEBANG_GLOB=	*
 
@@ -89,6 +86,10 @@ LTO_USES=		compiler:c11
 BROKEN=		Link-Time Optimization breaks compilation on FreeBSD 11
 .endif
 
+.if ${PORT_OPTIONS:MLTO} && ${ARCH} == powerpc64
+USE_GCC=	yes
+.endif
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%NETDATA_CACHE%%|${NETDATA_CACHE}|g' \
 	    ${PATCH_WRKSRC}/configure.ac
@@ -104,6 +105,7 @@ post-patch:
 post-install:
 	${MKDIR} ${STAGEDIR}${ETCDIR}
 	${INSTALL_DATA} ${WRKDIR}/netdata.conf.sample ${STAGEDIR}${ETCDIR}/netdata.conf.sample
+	${TOUCH} ${STAGEDIR}${ETCDIR}/.opt-out-from-anonymous-statistics
 	${MKDIR} ${STAGEDIR}${NETDATA_CACHE}
 	${MKDIR} ${STAGEDIR}${NETDATA_LOG}
 	${MKDIR} ${STAGEDIR}${NETDATA_PERST}

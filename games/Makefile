@@ -19,6 +19,7 @@
     SUBDIR += OpenTomb
     SUBDIR += abbayedesmorts
     SUBDIR += abe
+    SUBDIR += abstreet
     SUBDIR += abuse_sdl
     SUBDIR += ace-of-penguins
     SUBDIR += acm
@@ -85,6 +86,7 @@
     SUBDIR += biorythm
     SUBDIR += bitefusion
     SUBDIR += black-box
+    SUBDIR += black-hole-solver
     SUBDIR += blackjackclient
     SUBDIR += blackshadeselite
     SUBDIR += blinken
@@ -223,7 +225,6 @@
     SUBDIR += el
     SUBDIR += el-data
     SUBDIR += emptyepsilon
-    SUBDIR += endgame-singularity
     SUBDIR += endgame-singularity-music
     SUBDIR += endless-sky
     SUBDIR += endless-sky-high-dpi
@@ -414,7 +415,6 @@
     SUBDIR += kanagram
     SUBDIR += kapman
     SUBDIR += kartofel
-    SUBDIR += katawa-shoujo
     SUBDIR += katomic
     SUBDIR += kblackbox
     SUBDIR += kblocks
@@ -570,6 +570,7 @@
     SUBDIR += lm-solve
     SUBDIR += lmarbles
     SUBDIR += lmpc
+    SUBDIR += lolcat
     SUBDIR += lordsawar
     SUBDIR += lpairs
     SUBDIR += lskat
@@ -770,9 +771,9 @@
     SUBDIR += py-fife
     SUBDIR += py-mnemosyne
     SUBDIR += py-pychess
+    SUBDIR += py-pysol-cards
     SUBDIR += py-sgflib
     SUBDIR += py-sgfsummary
-    SUBDIR += pyfa
     SUBDIR += pysolfc
     SUBDIR += pyspacewar
     SUBDIR += q2p
@@ -824,7 +825,6 @@
     SUBDIR += regoth
     SUBDIR += reminiscence
     SUBDIR += renpy
-    SUBDIR += renpy6
     SUBDIR += rescue
     SUBDIR += residualvm
     SUBDIR += retroarch
@@ -873,6 +873,7 @@
     SUBDIR += sex
     SUBDIR += sgt-puzzles
     SUBDIR += shaaft
+    SUBDIR += shockolate
     SUBDIR += shootingstar
     SUBDIR += simplevaders
     SUBDIR += simsu
@@ -890,7 +891,6 @@
     SUBDIR += solarconquest
     SUBDIR += solarus
     SUBDIR += solarus-quest-editor
-    SUBDIR += solarwolf
     SUBDIR += sopwith
     SUBDIR += spacejunk
     SUBDIR += spacezero
@@ -935,7 +935,6 @@
     SUBDIR += tetzle
     SUBDIR += textmaze
     SUBDIR += thegrind
-    SUBDIR += thudboard
     SUBDIR += tileworld
     SUBDIR += tkmoo
     SUBDIR += tomatoes

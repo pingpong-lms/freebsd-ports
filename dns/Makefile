@@ -47,6 +47,7 @@
     SUBDIR += dnshistory
     SUBDIR += dnsjava
     SUBDIR += dnsmasq
+    SUBDIR += dnsmasq-devel
     SUBDIR += dnsmax-perl
     SUBDIR += dnsproxy
     SUBDIR += dnsrecon
@@ -180,12 +181,10 @@
     SUBDIR += py-cloudflare
     SUBDIR += py-dns
     SUBDIR += py-dns-lexicon
-    SUBDIR += py-dnschain
     SUBDIR += py-dnspython
     SUBDIR += py-easyzone
     SUBDIR += py-idna
     SUBDIR += py-idna_ssl
-    SUBDIR += py-idnkit2
     SUBDIR += py-ldns
     SUBDIR += py-localzone
     SUBDIR += py-namebench

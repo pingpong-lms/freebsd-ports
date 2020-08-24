@@ -309,7 +309,6 @@
     SUBDIR += py-pyIOSXR
     SUBDIR += py-pyang
     SUBDIR += py-pyeapi
-    SUBDIR += py-pynsca
     SUBDIR += py-pynxos
     SUBDIR += py-pysmi
     SUBDIR += py-pysnmp
@@ -317,7 +316,6 @@
     SUBDIR += py-pyzabbix
     SUBDIR += py-snmp_passpersist
     SUBDIR += py-snmpclitools
-    SUBDIR += py-yapsnmp
     SUBDIR += rackmonkey
     SUBDIR += rancid3
     SUBDIR += rate
@@ -372,6 +370,7 @@
     SUBDIR += unbound_exporter
     SUBDIR += unifi-devel
     SUBDIR += unifi-lts
+    SUBDIR += unifi-poller
     SUBDIR += unifi5
     SUBDIR += virt-viewer
     SUBDIR += wdiag

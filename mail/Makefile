@@ -73,6 +73,7 @@
     SUBDIR += cone
     SUBDIR += coolmail
     SUBDIR += courier
+    SUBDIR += courier-analog
     SUBDIR += courier-authlib-vchkpw
     SUBDIR += courier-imap
     SUBDIR += courier-pythonfilter
@@ -137,6 +138,7 @@
     SUBDIR += geary
     SUBDIR += gensig
     SUBDIR += getmail
+    SUBDIR += getmail6
     SUBDIR += gmime2
     SUBDIR += gmime2-sharp
     SUBDIR += gmime24
@@ -204,7 +206,6 @@
     SUBDIR += mailgraph
     SUBDIR += mailhog
     SUBDIR += mailman
-    SUBDIR += mailpile
     SUBDIR += mailscanner
     SUBDIR += mailsync
     SUBDIR += mailutils
@@ -507,6 +508,7 @@
     SUBDIR += py-managesieve3
     SUBDIR += py-milter
     SUBDIR += py-notmuch
+    SUBDIR += py-notmuch2
     SUBDIR += py-postfix-mta-sts-resolver
     SUBDIR += py-premailer
     SUBDIR += py-pymailq

@@ -65,6 +65,7 @@
     SUBDIR += atitvout
     SUBDIR += atop
     SUBDIR += auto-admin
+    SUBDIR += autojump
     SUBDIR += automount
     SUBDIR += automounter
     SUBDIR += autopsy
@@ -95,6 +96,7 @@
     SUBDIR += bareos18-server
     SUBDIR += bareos18-traymonitor
     SUBDIR += barrier
+    SUBDIR += bashtop
     SUBDIR += bastille
     SUBDIR += batmon
     SUBDIR += battmond
@@ -112,10 +114,12 @@
     SUBDIR += bksh
     SUBDIR += boot-extract
     SUBDIR += boxbackup-devel
+    SUBDIR += bpytop
     SUBDIR += brasero
     SUBDIR += bsd-splash-changer
     SUBDIR += bsdconfig
     SUBDIR += bsdcrashtar
+    SUBDIR += bsdfan
     SUBDIR += bsdhwmon
     SUBDIR += bsdinfo
     SUBDIR += bsdisks
@@ -291,6 +295,7 @@
     SUBDIR += ec2-scripts
     SUBDIR += eclat
     SUBDIR += edid-decode
+    SUBDIR += edk2
     SUBDIR += eject
     SUBDIR += eksctl
     SUBDIR += endian
@@ -390,6 +395,7 @@
     SUBDIR += fusefs-s3backer
     SUBDIR += fusefs-s3fs
     SUBDIR += fusefs-sandboxfs
+    SUBDIR += fusefs-securefs
     SUBDIR += fusefs-simple-mtpfs
     SUBDIR += fusefs-smbnetfs
     SUBDIR += fusefs-sqlfs
@@ -706,6 +712,7 @@
     SUBDIR += msiklm
     SUBDIR += msktutil
     SUBDIR += mstflint
+    SUBDIR += mstflint-lite
     SUBDIR += msyslog
     SUBDIR += mtm
     SUBDIR += mtpfs
@@ -756,7 +763,9 @@
     SUBDIR += openipmi
     SUBDIR += opensbi
     SUBDIR += openseachest
-    SUBDIR += openshift-install
+    SUBDIR += openshift-install-devel
+    SUBDIR += openshift-install45
+    SUBDIR += openshift-install46
     SUBDIR += openupsd
     SUBDIR += openzfs
     SUBDIR += openzfs-kmod
@@ -770,6 +779,8 @@
     SUBDIR += p5-BackupPC-XS
     SUBDIR += p5-Brackup
     SUBDIR += p5-Dir-Purge
+    SUBDIR += p5-File-BackupCopy
+    SUBDIR += p5-File-Cmp
     SUBDIR += p5-File-DirCompare
     SUBDIR += p5-File-Listing
     SUBDIR += p5-File-Log
@@ -805,6 +816,9 @@
     SUBDIR += p5-Probe-Perl
     SUBDIR += p5-Proc-PidUtil
     SUBDIR += p5-Proc-ProcessTable-Colorizer
+    SUBDIR += p5-Proc-ProcessTable-InfoString
+    SUBDIR += p5-Proc-ProcessTable-Match
+    SUBDIR += p5-Proc-ProcessTable-ncps
     SUBDIR += p5-Proclet
     SUBDIR += p5-Quota
     SUBDIR += p5-Rex
@@ -944,7 +958,6 @@
     SUBDIR += pwol
     SUBDIR += pwsafe
     SUBDIR += pxattr
-    SUBDIR += py-analyzemft
     SUBDIR += py-ansible-lint
     SUBDIR += py-ansible-runner
     SUBDIR += py-azure-cli
@@ -954,7 +967,6 @@
     SUBDIR += py-azure-cli-telemetry
     SUBDIR += py-bitrot
     SUBDIR += py-borgmatic
-    SUBDIR += py-cdmi
     SUBDIR += py-cron-descriptor
     SUBDIR += py-croniter
     SUBDIR += py-diffoscope
@@ -964,17 +976,17 @@
     SUBDIR += py-docker
     SUBDIR += py-drmaa
     SUBDIR += py-execnet
-    SUBDIR += py-ezjailremote
     SUBDIR += py-filelike
     SUBDIR += py-filelock
+    SUBDIR += py-focker
     SUBDIR += py-glances
-    SUBDIR += py-gmailfs-fuse
     SUBDIR += py-google-compute-engine
     SUBDIR += py-hared
     SUBDIR += py-hcloud
     SUBDIR += py-honcho
     SUBDIR += py-hpilo
     SUBDIR += py-iowait
+    SUBDIR += py-jailconf
     SUBDIR += py-leviathan
     SUBDIR += py-liquidctl
     SUBDIR += py-mitogen
@@ -983,9 +995,7 @@
     SUBDIR += py-packet-python
     SUBDIR += py-pkginfo
     SUBDIR += py-ploy
-    SUBDIR += py-ploy_ec2
     SUBDIR += py-ploy_ezjail
-    SUBDIR += py-ploy_fabric
     SUBDIR += py-plumbum
     SUBDIR += py-power
     SUBDIR += py-psutil
@@ -1005,10 +1015,8 @@
     SUBDIR += py-salt-2019
     SUBDIR += py-scandir
     SUBDIR += py-scarab
-    SUBDIR += py-scriptine
     SUBDIR += py-shutilwhich
     SUBDIR += py-stdiff
-    SUBDIR += py-superlance
     SUBDIR += py-supervisor
     SUBDIR += py-tarsnapper
     SUBDIR += py-tmuxp
@@ -1019,6 +1027,7 @@
     SUBDIR += py-upt-rubygems
     SUBDIR += py-uptime
     SUBDIR += py-zdaemon
+    SUBDIR += py-zfs-autobackup
     SUBDIR += pydf
     SUBDIR += qchroot
     SUBDIR += qdirstat
@@ -1029,6 +1038,7 @@
     SUBDIR += qt5-qtpaths
     SUBDIR += qt5-qtplugininfo
     SUBDIR += qtpass
+    SUBDIR += quickjail
     SUBDIR += quicksynergy
     SUBDIR += racktables
     SUBDIR += radeontool
@@ -1085,6 +1095,8 @@
     SUBDIR += rubygem-chef-config
     SUBDIR += rubygem-chef-config12
     SUBDIR += rubygem-chef-dk
+    SUBDIR += rubygem-chef-utils
+    SUBDIR += rubygem-chef-vault
     SUBDIR += rubygem-chef-zero
     SUBDIR += rubygem-chef-zero5
     SUBDIR += rubygem-chef12
@@ -1181,6 +1193,7 @@
     SUBDIR += scalpel
     SUBDIR += scan_ffs
     SUBDIR += scanbuttond
+    SUBDIR += scanmem
     SUBDIR += scct
     SUBDIR += schedutils
     SUBDIR += screen
@@ -1190,6 +1203,7 @@
     SUBDIR += scterc
     SUBDIR += sd-agent
     SUBDIR += sdparm
+    SUBDIR += seatd
     SUBDIR += seatools
     SUBDIR += sec
     SUBDIR += sensu-go
@@ -1261,6 +1275,7 @@
     SUBDIR += syslog-ng325
     SUBDIR += syslog-ng326
     SUBDIR += syslog-ng327
+    SUBDIR += syslog-ng328
     SUBDIR += syslogger
     SUBDIR += sysrc
     SUBDIR += system-tools-backends
@@ -1288,6 +1303,7 @@
     SUBDIR += tlsdate
     SUBDIR += tm
     SUBDIR += tmate
+    SUBDIR += tmate-ssh-server
     SUBDIR += tmpreaper
     SUBDIR += tmpwatch
     SUBDIR += tmux
@@ -1350,6 +1366,7 @@
     SUBDIR += u-boot-pinebookpro
     SUBDIR += u-boot-qemu-arm
     SUBDIR += u-boot-qemu-arm64
+    SUBDIR += u-boot-qemu-riscv64
     SUBDIR += u-boot-riotboard
     SUBDIR += u-boot-rock64
     SUBDIR += u-boot-rockpro64

@@ -269,7 +269,6 @@
     SUBDIR += purescript
     SUBDIR += py-hy
     SUBDIR += py-lupa
-    SUBDIR += py-mx-base
     SUBDIR += py-qt5-qml
     SUBDIR += py-textX
     SUBDIR += pypy
@@ -336,6 +335,7 @@
     SUBDIR += spidermonkey24
     SUBDIR += spidermonkey52
     SUBDIR += spidermonkey60
+    SUBDIR += spidermonkey68
     SUBDIR += spl
     SUBDIR += squeak
     SUBDIR += squirrel

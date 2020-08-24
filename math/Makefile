@@ -46,6 +46,7 @@
     SUBDIR += R-cran-coda
     SUBDIR += R-cran-combinat
     SUBDIR += R-cran-conf.design
+    SUBDIR += R-cran-conquer
     SUBDIR += R-cran-ddalpha
     SUBDIR += R-cran-deldir
     SUBDIR += R-cran-dimRed
@@ -76,6 +77,7 @@
     SUBDIR += R-cran-lme4
     SUBDIR += R-cran-lpSolve
     SUBDIR += R-cran-magic
+    SUBDIR += R-cran-matrixStats
     SUBDIR += R-cran-maxLik
     SUBDIR += R-cran-mcmc
     SUBDIR += R-cran-memisc
@@ -229,6 +231,7 @@
     SUBDIR += dune-spgrid
     SUBDIR += dune-typetree
     SUBDIR += dune-uggrid
+    SUBDIR += e-antic
     SUBDIR += eclib
     SUBDIR += ecos
     SUBDIR += edenmath
@@ -397,6 +400,8 @@
     SUBDIR += mfem
     SUBDIR += mingw32-libgmp
     SUBDIR += minisat
+    SUBDIR += minizinc
+    SUBDIR += minizinc-ide
     SUBDIR += miracl
     SUBDIR += mlpack
     SUBDIR += moab
@@ -523,6 +528,7 @@
     SUBDIR += opensolaris-libm
     SUBDIR += openturns
     SUBDIR += optpp
+    SUBDIR += or-tools
     SUBDIR += orpie
     SUBDIR += osi
     SUBDIR += osqp
@@ -577,6 +583,7 @@
     SUBDIR += p5-Math-GMPf
     SUBDIR += p5-Math-GMPq
     SUBDIR += p5-Math-GMPz
+    SUBDIR += p5-Math-GSL
     SUBDIR += p5-Math-Geometry
     SUBDIR += p5-Math-Geometry-Planar
     SUBDIR += p5-Math-Geometry-Planar-GPC
@@ -746,8 +753,7 @@
     SUBDIR += py-ecos
     SUBDIR += py-fastcluster
     SUBDIR += py-fastdtw
-    SUBDIR += py-ffc
-    SUBDIR += py-fiat
+    SUBDIR += py-flax
     SUBDIR += py-fpconst
     SUBDIR += py-fpylll
     SUBDIR += py-gau2grid
@@ -760,8 +766,8 @@
     SUBDIR += py-gym
     SUBDIR += py-hdbscan
     SUBDIR += py-hdmedians
-    SUBDIR += py-igraph
     SUBDIR += py-intspan
+    SUBDIR += py-jax
     SUBDIR += py-keras
     SUBDIR += py-keras-applications
     SUBDIR += py-keras-preprocessing
@@ -771,6 +777,7 @@
     SUBDIR += py-luminol
     SUBDIR += py-matplotlib
     SUBDIR += py-matplotlib-scalebar
+    SUBDIR += py-mip
     SUBDIR += py-mpmath
     SUBDIR += py-munkres
     SUBDIR += py-munkres10
@@ -779,12 +786,15 @@
     SUBDIR += py-nevergrad
     SUBDIR += py-numeric
     SUBDIR += py-numexpr
+    SUBDIR += py-numpoly
     SUBDIR += py-numpy
-    SUBDIR += py-nzmath
+    SUBDIR += py-opt-einsum
+    SUBDIR += py-or-tools
     SUBDIR += py-osqp
     SUBDIR += py-pandas
     SUBDIR += py-pandas-datareader
     SUBDIR += py-patsy
+    SUBDIR += py-pdal
     SUBDIR += py-permutation
     SUBDIR += py-petsc4py
     SUBDIR += py-piranha
@@ -800,7 +810,6 @@
     SUBDIR += py-pygslodeiv2
     SUBDIR += py-pyhull
     SUBDIR += py-pyipopt
-    SUBDIR += py-pymc
     SUBDIR += py-pymc3
     SUBDIR += py-pyneqsys
     SUBDIR += py-pynleq2
@@ -808,10 +817,10 @@
     SUBDIR += py-pyodeint
     SUBDIR += py-pyodesys
     SUBDIR += py-pysmt
-    SUBDIR += py-pysparse
     SUBDIR += py-pystan
     SUBDIR += py-pysym
     SUBDIR += py-python-fcl
+    SUBDIR += py-python-igraph
     SUBDIR += py-python-louvain
     SUBDIR += py-pyvtk
     SUBDIR += py-quadprog
@@ -823,6 +832,7 @@
     SUBDIR += py-scs
     SUBDIR += py-seaborn
     SUBDIR += py-secp256k1
+    SUBDIR += py-seriate
     SUBDIR += py-simhash
     SUBDIR += py-slepc4py
     SUBDIR += py-snuggs
@@ -836,7 +846,6 @@
     SUBDIR += py-sympy
     SUBDIR += py-theano
     SUBDIR += py-triangle
-    SUBDIR += py-ufl
     SUBDIR += py-uncertainties
     SUBDIR += py-vincenty
     SUBDIR += py-yt
@@ -864,6 +873,7 @@
     SUBDIR += rpcalc
     SUBDIR += rubiks
     SUBDIR += rubygem-algebra
+    SUBDIR += rubygem-bigdecimal
     SUBDIR += rubygem-enumerable-statistics
     SUBDIR += rubygem-expression_parser
     SUBDIR += rubygem-fftw3

@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	audacity
-PORTVERSION=	2.4.1
+PORTVERSION=	2.4.2
 DISTVERSIONPREFIX=	Audacity-
 CATEGORIES=	audio
 
@@ -35,18 +35,19 @@ CMAKE_ARGS=	-Daudacity_lib_preference:STRING=system \
 		-Daudacity_use_portsmf:STRING=local \
 		-Daudacity_use_portmixer:STRING=local \
 		-Daudacity_use_portaudio:STRING=system
+CMAKE_OFF=	audacity_use_pch
 
 OPTIONS_DEFINE=		DEBUG DOCS FFMPEG FLAC ID3TAG LADSPA LAME LV2 MAD \
-			MIDI NYQUIST OGG SBSMS SOUNDTOUCH TWOLAME VAMP \
+			MIDI OGG SBSMS SOUNDTOUCH TWOLAME VAMP \
 			VORBIS VST
-OPTIONS_DEFAULT=	FLAC ID3TAG LADSPA MAD MIDI NYQUIST OGG SBSMS \
+OPTIONS_DEFAULT=	FLAC ID3TAG LADSPA MAD MIDI OGG SBSMS \
 			SOUNDTOUCH TWOLAME VAMP VORBIS VST
+OPTIONS_EXCLUDE_i386=	SBSMS
 
 LAME_DESC=		Use lame for import and export support
 LV2_DESC=		Add LV2 plug-in support
 MAD_DESC=		Use libmad for mp2/3 decoding support
 MIDI_DESC=		MIDI support
-NYQUIST_DESC=		Nyquist synthesis and composition support
 SBSMS_DESC=		Use libsbsms for pitch and tempo changing
 SOUNDTOUCH_DESC=	Use libSoundTouch for pitch and tempo changing
 TWOLAME_DESC=		Use libtwolame for MP2 export support
@@ -99,9 +100,6 @@ MIDI_CMAKE_OFF=		-Daudacity_use_midi:STRING=off
 # TODO: fix NLS support properly
 PLIST_SUB+=		NLS=""
 
-NYQUIST_CMAKE_ON=	-Daudacity_use_nyquist:STRING=local
-NYQUIST_CMAKE_OFF=	-Daudacity_use_nyquist:STRING=off
-
 OGG_CMAKE_ON=		-Daudacity_use_ogg:STRING=system
 OGG_CMAKE_OFF=		-Daudacity_use_ogg:STRING=local
 OGG_LIB_DEPENDS=	libogg.so:audio/libogg
@@ -127,6 +125,14 @@ VORBIS_LIB_DEPENDS=	libogg.so:audio/libogg \
 			libvorbis.so:audio/libvorbis
 
 VST_CMAKE_BOOL=		audacity_use_vst
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} != amd64 && ${ARCH} != i386
+CMAKE_ARGS+=	-DHAVE_MMX:BOOL=OFF \
+		-DHAVE_SSE:BOOL=OFF \
+		-DHAVE_SSE2:BOOL=OFF
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,Python2,Python${PYTHON_MAJOR_VER}, ; \

@@ -148,6 +148,7 @@
     SUBDIR += pdf-tools
     SUBDIR += pdf4tcl
     SUBDIR += pdfbox
+    SUBDIR += pdfchain
     SUBDIR += pdflib
     SUBDIR += pdflib-perl
     SUBDIR += pdfstitch
@@ -185,14 +186,11 @@
     SUBDIR += py-psautohint
     SUBDIR += py-pycups
     SUBDIR += py-pycups1
-    SUBDIR += py-pyscript
     SUBDIR += py-python-ly
     SUBDIR += py-qt5-printsupport
     SUBDIR += py-relatorio
     SUBDIR += py-reportlab
     SUBDIR += py-rtf
-    SUBDIR += py-stapler
-    SUBDIR += py-trml2pdf
     SUBDIR += py-ttfautohint-py
     SUBDIR += py-ufolib2
     SUBDIR += py-weasyprint
@@ -258,7 +256,6 @@
     SUBDIR += xfce4-print
     SUBDIR += xmbibtex
     SUBDIR += xpdfopen
-    SUBDIR += xpp
     SUBDIR += xreader
     SUBDIR += xtexsh
     SUBDIR += yatex

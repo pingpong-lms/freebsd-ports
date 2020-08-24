@@ -60,7 +60,6 @@
     SUBDIR += bird2
     SUBDIR += bittwist
     SUBDIR += bmon
-    SUBDIR += bnxt-kmod
     SUBDIR += boinc-client
     SUBDIR += boinc_curses
     SUBDIR += bosh-bootloader
@@ -132,7 +131,6 @@
     SUBDIR += drive
     SUBDIR += dropbox-api-command
     SUBDIR += dropbox-uploader
-    SUBDIR += dshell
     SUBDIR += dtcp
     SUBDIR += dtcpclient
     SUBDIR += dual-dhclient
@@ -174,6 +172,7 @@
     SUBDIR += frr5
     SUBDIR += frr6
     SUBDIR += frr7
+    SUBDIR += frr7-pythontools
     SUBDIR += fspclient
     SUBDIR += fspd
     SUBDIR += fsplib
@@ -235,6 +234,7 @@
     SUBDIR += haproxy17
     SUBDIR += haproxy18
     SUBDIR += haproxy19
+    SUBDIR += haproxy20
     SUBDIR += haproxy21
     SUBDIR += hblock
     SUBDIR += hexinject
@@ -296,14 +296,13 @@
     SUBDIR += kafkacat
     SUBDIR += kalarmcal
     SUBDIR += kamailio
-    SUBDIR += kblog
     SUBDIR += kcalutils
-    SUBDIR += kdav
     SUBDIR += kdenetwork
     SUBDIR += kdenetwork-filesharing
     SUBDIR += kea
     SUBDIR += kf5-kcalendarcore
     SUBDIR += kf5-kcontacts
+    SUBDIR += kf5-kdav
     SUBDIR += kf5-kholidays
     SUBDIR += kf5-kxmlrpcclient
     SUBDIR += kf5-syndication
@@ -1004,7 +1003,6 @@
     SUBDIR += py-amqp
     SUBDIR += py-amqplib
     SUBDIR += py-avahi
-    SUBDIR += py-beanstalkc
     SUBDIR += py-cjdns
     SUBDIR += py-cloudflare-scrape
     SUBDIR += py-cloudflare-scrape-js2py
@@ -1018,7 +1016,6 @@
     SUBDIR += py-flask-xml-rpc
     SUBDIR += py-gntp
     SUBDIR += py-gspread
-    SUBDIR += py-gspreadsheet
     SUBDIR += py-h11
     SUBDIR += py-haproxy-log-analysis
     SUBDIR += py-haproxyctl
@@ -1037,7 +1034,6 @@
     SUBDIR += py-libcloud
     SUBDIR += py-libdnet
     SUBDIR += py-libfte
-    SUBDIR += py-libnet
     SUBDIR += py-magic-wormhole
     SUBDIR += py-matrix-synapse-ldap3
     SUBDIR += py-maxminddb
@@ -1048,7 +1044,6 @@
     SUBDIR += py-netaddr
     SUBDIR += py-netif
     SUBDIR += py-netifaces
-    SUBDIR += py-netlib
     SUBDIR += py-netsnmpagent
     SUBDIR += py-nnpy
     SUBDIR += py-ntplib
@@ -1064,7 +1059,6 @@
     SUBDIR += py-pygeoip
     SUBDIR += py-pyicap
     SUBDIR += py-pynamecheap
-    SUBDIR += py-pynmsg
     SUBDIR += py-pynsq
     SUBDIR += py-pypcap
     SUBDIR += py-pyroute2
@@ -1097,7 +1091,6 @@
     SUBDIR += py-rabbitpy
     SUBDIR += py-radix
     SUBDIR += py-raet
-    SUBDIR += py-rainbowstream
     SUBDIR += py-ripe.atlas.cousteau
     SUBDIR += py-ripe.atlas.sagan
     SUBDIR += py-ripe.atlas.tools
@@ -1105,6 +1098,7 @@
     SUBDIR += py-s3transfer
     SUBDIR += py-sbws
     SUBDIR += py-shodan
+    SUBDIR += py-siosocks
     SUBDIR += py-smart-open
     SUBDIR += py-smbpasswd
     SUBDIR += py-soap2py
@@ -1119,6 +1113,7 @@
     SUBDIR += py-terminado
     SUBDIR += py-tofu
     SUBDIR += py-transip
+    SUBDIR += py-trio
     SUBDIR += py-twitter-tools
     SUBDIR += py-txamqp
     SUBDIR += py-txrestapi
@@ -1127,7 +1122,6 @@
     SUBDIR += py-urlextract
     SUBDIR += py-urllib3
     SUBDIR += py-wmi-query
-    SUBDIR += py-wolframalpha
     SUBDIR += py-wsdd
     SUBDIR += py-wsproto
     SUBDIR += py-zeep
@@ -1141,6 +1135,7 @@
     SUBDIR += qt5-networkauth
     SUBDIR += quagga
     SUBDIR += queso
+    SUBDIR += quiche
     SUBDIR += quiterss
     SUBDIR += quoted
     SUBDIR += rabbiteer
@@ -1159,6 +1154,8 @@
     SUBDIR += rdapper
     SUBDIR += rdesktop
     SUBDIR += rdist6
+    SUBDIR += read_bbrlog
+    SUBDIR += realtek-re-kmod
     SUBDIR += reaver
     SUBDIR += recvnet
     SUBDIR += redir
@@ -1183,6 +1180,7 @@
     SUBDIR += ripe-whois
     SUBDIR += routinator
     SUBDIR += rp-pppoe
+    SUBDIR += rpki-client
     SUBDIR += rsocket-cpp
     SUBDIR += rsplib
     SUBDIR += rsync
@@ -1331,6 +1329,9 @@
     SUBDIR += rubygem-stackdriver-core
     SUBDIR += rubygem-stompserver
     SUBDIR += rubygem-t
+    SUBDIR += rubygem-train
+    SUBDIR += rubygem-train-core
+    SUBDIR += rubygem-train-winrm
     SUBDIR += rubygem-tweetstream
     SUBDIR += rubygem-twitter
     SUBDIR += rubygem-twitter-stream
@@ -1343,6 +1344,7 @@
     SUBDIR += rubygem-xmlrpc
     SUBDIR += rude
     SUBDIR += ryu
+    SUBDIR += sacc
     SUBDIR += samba410
     SUBDIR += samba411
     SUBDIR += samplicator
@@ -1424,6 +1426,7 @@
     SUBDIR += tcpillust
     SUBDIR += tcping
     SUBDIR += tcpkali
+    SUBDIR += tcplog_dumper
     SUBDIR += tcpmssd
     SUBDIR += tcpproxy
     SUBDIR += tcpreen
@@ -1516,6 +1519,7 @@
     SUBDIR += wireshark
     SUBDIR += wireshark-lite
     SUBDIR += wlan2eth
+    SUBDIR += wlvncc
     SUBDIR += wmnd
     SUBDIR += wmnet
     SUBDIR += wmping

@@ -1,3 +1,3 @@
-TIMESTAMP = 1591712670
-SHA256 (KDE/applications/20.04.2/konquest-20.04.2.tar.xz) = 0142d6a57a84268e1de1d20123705858c7fb3823dd2b501676f1fa235f1922b7
-SIZE (KDE/applications/20.04.2/konquest-20.04.2.tar.xz) = 660312
+TIMESTAMP = 1596814145
+SHA256 (KDE/release-service/20.08.0/konquest-20.08.0.tar.xz) = e6938230c2fdd94903d13ed34f8d1e8db8221c9ceb571c5737f429291d4cca04
+SIZE (KDE/release-service/20.08.0/konquest-20.08.0.tar.xz) = 665272

@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	wine
-DISTVERSION=	5.11
+DISTVERSION=	5.15
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/Source \
@@ -45,7 +45,8 @@ CONFIGURE_ARGS+=--verbose \
 		--without-sdl \
 		--without-tiff \
 		--without-udev \
-		--without-unwind
+		--without-unwind \
+		--without-usb
 CONFIGURE_ENV=	CPPBIN="${CPP}" FLEX="${LOCALBASE}/bin/flex"
 WINELIBDIR?=	${PREFIX}/lib
 .if !defined(USE_LDCONFIG32)
@@ -64,7 +65,7 @@ OPTIONS_SUB=	yes
 
 DOSBOX_DESC=	Use DOSBox to run MS-DOS programs
 LIBXSLT_DESC=	Use libxslt (only used by msxml3.dll)
-STAGING_DESC=	Include the Wine Staging patchset
+STAGING_DESC=	Include the Wine Staging patchset (experimental)
 VKD3D_DESC=	Direct3D 12 support via Vulkan
 VULKAN_DESC=	Vulkan API support
 WINEMAKER_DESC=	Fully support winemaker (requires Perl)
@@ -102,8 +103,8 @@ OPENAL_CONFIGURE_WITH=	openal
 OPENAL_USES=		openal
 
 STAGING_MASTER_SITES=	https://github.com/wine-staging/wine-staging/archive/:staging
-COMP_DIST=	v${DISTVERSION}.tar.gz
-STAGING_DISTFILES=	${COMP_DIST}:staging
+STAGING_DIST=		v${DISTVERSION}.tar.gz
+STAGING_DISTFILES=	${STAGING_DIST}:staging
 STAGING_EXTRACT_DEPENDS=	bash:shells/bash \
 				git:devel/git \
 				autoconf>0:devel/autoconf
@@ -161,7 +162,7 @@ PLIST_SUB+=		WINE32="" WINE64="@comment "
 .endif
 
 post-extract-STAGING-on: fix-shebang
-	cd ${WRKSRC} && ${TAR} xf ${DISTDIR}/${COMP_DIST} --strip-components 1
+	cd ${WRKSRC} && ${TAR} xf ${DISTDIR}/${STAGING_DIST} --strip-components 1
 	cd ${WRKSRC} && bash ./patches/patchinstall.sh --backend=patch DESTDIR=${WRKSRC} --all
 
 pre-build:

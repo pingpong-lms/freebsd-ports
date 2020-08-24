@@ -122,7 +122,6 @@
     SUBDIR += protomol
     SUBDIR += psi88
     SUBDIR += py-Genesis-PyAPI
-    SUBDIR += py-biom-format
     SUBDIR += py-biopython
     SUBDIR += py-bx-python
     SUBDIR += py-cutadapt
@@ -148,6 +147,9 @@
     SUBDIR += recombine
     SUBDIR += ruby-bio
     SUBDIR += rubygem-bio
+    SUBDIR += rubygem-bio-executables
+    SUBDIR += rubygem-bio-old-biofetch-emulator
+    SUBDIR += rubygem-bio-shell
     SUBDIR += samtools
     SUBDIR += scrm
     SUBDIR += seaview

@@ -44,6 +44,7 @@
     SUBDIR += acidwarp
     SUBDIR += acidwarp-sdl
     SUBDIR += agg
+    SUBDIR += akira
     SUBDIR += alembic
     SUBDIR += alpng
     SUBDIR += ampasACES-container
@@ -131,7 +132,6 @@
     SUBDIR += ditaa
     SUBDIR += djview4
     SUBDIR += djvulibre
-    SUBDIR += djvusmooth
     SUBDIR += dmtx-utils
     SUBDIR += drawpile
     SUBDIR += drm-current-kmod
@@ -149,6 +149,7 @@
     SUBDIR += egl-wayland
     SUBDIR += eglexternalplatform
     SUBDIR += electricsheep
+    SUBDIR += elementary-photos
     SUBDIR += embree
     SUBDIR += enblend
     SUBDIR += engauge-digitizer
@@ -172,6 +173,7 @@
     SUBDIR += exiftran
     SUBDIR += exiv2
     SUBDIR += exrtools
+    SUBDIR += f3d
     SUBDIR += facedetect
     SUBDIR += farbfeld
     SUBDIR += feh
@@ -379,6 +381,7 @@
     SUBDIR += jslice
     SUBDIR += kamera
     SUBDIR += kamerka
+    SUBDIR += katarakt
     SUBDIR += kcolorchooser
     SUBDIR += kcolorpicker
     SUBDIR += kdegraphics
@@ -810,7 +813,6 @@
     SUBDIR += py-geopandas
     SUBDIR += py-gimp
     SUBDIR += py-gizeh
-    SUBDIR += py-glewpy
     SUBDIR += py-glfw
     SUBDIR += py-glooey
     SUBDIR += py-gphoto2
@@ -834,7 +836,6 @@
     SUBDIR += py-open3d-python
     SUBDIR += py-opencolorio
     SUBDIR += py-opencv
-    SUBDIR += py-openexr
     SUBDIR += py-openimageio
     SUBDIR += py-photocollage
     SUBDIR += py-pillow
@@ -842,7 +843,6 @@
     SUBDIR += py-pivy
     SUBDIR += py-plotly
     SUBDIR += py-png
-    SUBDIR += py-poppler
     SUBDIR += py-pycha
     SUBDIR += py-pycollada
     SUBDIR += py-pydot
@@ -853,7 +853,6 @@
     SUBDIR += py-pygeoapi
     SUBDIR += py-pyglet
     SUBDIR += py-pyglet150
-    SUBDIR += py-pygooglechart
     SUBDIR += py-pygraphviz
     SUBDIR += py-pyinsane2
     SUBDIR += py-pymaging
@@ -871,12 +870,10 @@
     SUBDIR += py-qt5-svg
     SUBDIR += py-rasterio
     SUBDIR += py-rawkit
-    SUBDIR += py-sane
     SUBDIR += py-scikit-image
     SUBDIR += py-seqdiag
     SUBDIR += py-sorl-thumbnail
     SUBDIR += py-spectra
-    SUBDIR += py-stltools
     SUBDIR += py-svg.path
     SUBDIR += py-svgwrite
     SUBDIR += py-termtosvg
@@ -888,6 +885,7 @@
     SUBDIR += py-webcolors
     SUBDIR += py-willow
     SUBDIR += py-yaswfp
+    SUBDIR += py-zbar-py
     SUBDIR += pymorph
     SUBDIR += qcomicbook
     SUBDIR += qcustomplot-qt5
@@ -904,10 +902,12 @@
     SUBDIR += qt5-wayland
     SUBDIR += qtawesome
     SUBDIR += qtpbfimageplugin
+    SUBDIR += qtqr
     SUBDIR += quat
     SUBDIR += quat-gui
     SUBDIR += quesa
     SUBDIR += quesoglc
+    SUBDIR += qvge
     SUBDIR += radiance
     SUBDIR += radius-engine
     SUBDIR += rapid-photo-downloader
@@ -993,7 +993,6 @@
     SUBDIR += silgraphite
     SUBDIR += simage
     SUBDIR += simpleviewer
-    SUBDIR += sk1
     SUBDIR += sk1libs
     SUBDIR += skanlite
     SUBDIR += spectacle
@@ -1022,6 +1021,7 @@
     SUBDIR += tiff
     SUBDIR += tiffgt
     SUBDIR += tifmerge
+    SUBDIR += tikzit
     SUBDIR += tilecache
     SUBDIR += tiled
     SUBDIR += timeless
@@ -1060,7 +1060,9 @@
     SUBDIR += waifu2x-ncnn-vulkan
     SUBDIR += wayland
     SUBDIR += wayland-protocols
+    SUBDIR += wayland-utils
     SUBDIR += waylandpp
+    SUBDIR += wdune
     SUBDIR += webp
     SUBDIR += webp-pixbuf-loader
     SUBDIR += wings

@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	blender
-DISTVERSION=	2.83.0
+DISTVERSION=	2.83.2
+PORTREVISION=	1
 CATEGORIES=	graphics multimedia
 MASTER_SITES=	http://download.blender.org/source/ \
 		http://mirror.cs.umn.edu/blender.org/source/ \

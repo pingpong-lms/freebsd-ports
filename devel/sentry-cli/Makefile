@@ -2,6 +2,7 @@
 
 PORTNAME=	sentry-cli
 DISTVERSION=	1.54.0
+PORTREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	vulcan@wired.sh

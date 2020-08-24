@@ -379,6 +379,8 @@
 %%WWWDIR%%/objects/Sprite.js
 %%WWWDIR%%/polyfills.d.ts
 %%WWWDIR%%/polyfills.js
+%%WWWDIR%%/renderers/WebGL1Renderer.d.ts
+%%WWWDIR%%/renderers/WebGL1Renderer.js
 %%WWWDIR%%/renderers/WebGLCubeRenderTarget.d.ts
 %%WWWDIR%%/renderers/WebGLCubeRenderTarget.js
 %%WWWDIR%%/renderers/WebGLMultisampleRenderTarget.d.ts
@@ -479,6 +481,8 @@
 %%WWWDIR%%/renderers/shaders/ShaderChunk/specularmap_pars_fragment.glsl.js
 %%WWWDIR%%/renderers/shaders/ShaderChunk/tonemapping_fragment.glsl.js
 %%WWWDIR%%/renderers/shaders/ShaderChunk/tonemapping_pars_fragment.glsl.js
+%%WWWDIR%%/renderers/shaders/ShaderChunk/transmissionmap_fragment.glsl.js
+%%WWWDIR%%/renderers/shaders/ShaderChunk/transmissionmap_pars_fragment.glsl.js
 %%WWWDIR%%/renderers/shaders/ShaderChunk/uv2_pars_fragment.glsl.js
 %%WWWDIR%%/renderers/shaders/ShaderChunk/uv2_pars_vertex.glsl.js
 %%WWWDIR%%/renderers/shaders/ShaderChunk/uv2_vertex.glsl.js
@@ -532,6 +536,8 @@
 %%WWWDIR%%/renderers/webgl/WebGLAttributes.js
 %%WWWDIR%%/renderers/webgl/WebGLBackground.d.ts
 %%WWWDIR%%/renderers/webgl/WebGLBackground.js
+%%WWWDIR%%/renderers/webgl/WebGLBindingStates.d.ts
+%%WWWDIR%%/renderers/webgl/WebGLBindingStates.js
 %%WWWDIR%%/renderers/webgl/WebGLBufferRenderer.d.ts
 %%WWWDIR%%/renderers/webgl/WebGLBufferRenderer.js
 %%WWWDIR%%/renderers/webgl/WebGLCapabilities.d.ts
