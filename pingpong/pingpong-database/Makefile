@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-database
-PORTVERSION=	0.5
+PORTVERSION=	0.6
 CATEGORIES=	pingpong databases
 MASTER_SITES=	#
 DISTFILES=	#
@@ -20,8 +20,7 @@ WANT_PGSQL=	server contrib
 
 RUN_DEPENDS=	${LOCALBASE}/share/pingpong-generic/installed.stamp:pingpong/pingpong-generic \
 		${LOCALBASE}/lib/postgresql/powa.so:databases/powa-archivist \
-		pgbadger:databases/pgbadger \
-		pgtune:databases/pgtune
+		pgbadger:databases/pgbadger
 
 do-install: build
 		@${DO_NADA}
