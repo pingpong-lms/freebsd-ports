@@ -3,7 +3,6 @@
 
     COMMENT = X11 window managers
 
-    SUBDIR += aewm
     SUBDIR += afterstep
     SUBDIR += afterstep-stable
     SUBDIR += amiwm
@@ -23,20 +22,11 @@
     SUBDIR += compiz-plugins-main
     SUBDIR += compiz-plugins-unsupported
     SUBDIR += compizconfig-backend-gconf
-    SUBDIR += compizconfig-python
     SUBDIR += compton
     SUBDIR += ctwm
     SUBDIR += cwm
     SUBDIR += devilspie
     SUBDIR += dwm
-    SUBDIR += e-module-alarm
-    SUBDIR += e-module-cpu
-    SUBDIR += e-module-deskshow
-    SUBDIR += e-module-everything-places
-    SUBDIR += e-module-mem
-    SUBDIR += e-module-rmb
-    SUBDIR += e-module-wlan
-    SUBDIR += e-modules
     SUBDIR += e16
     SUBDIR += e16-docs
     SUBDIR += echinus
@@ -49,7 +39,6 @@
     SUBDIR += fluxbox
     SUBDIR += fluxter
     SUBDIR += flwm
-    SUBDIR += fvwm-crystal
     SUBDIR += fvwm2
     SUBDIR += gcompmgr
     SUBDIR += herbstluftwm

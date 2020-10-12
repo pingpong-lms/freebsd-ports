@@ -11,12 +11,12 @@
     SUBDIR += abcde
     SUBDIR += abcselect
     SUBDIR += abgate-lv2
-    SUBDIR += abraca
     SUBDIR += adplay
     SUBDIR += afsp
     SUBDIR += aften
     SUBDIR += alac
     SUBDIR += alienwah
+    SUBDIR += alo-lv2
     SUBDIR += alsa-lib
     SUBDIR += alsa-plugins
     SUBDIR += alsa-sndio
@@ -28,7 +28,7 @@
     SUBDIR += amsynth
     SUBDIR += aqualung
     SUBDIR += ardour
-    SUBDIR += ardour5
+    SUBDIR += ardour6
     SUBDIR += ario
     SUBDIR += arss
     SUBDIR += artyfx-lv2
@@ -90,8 +90,6 @@
     SUBDIR += cmus
     SUBDIR += codec2
     SUBDIR += cpige
-    SUBDIR += cplay
-    SUBDIR += cpp-xmms2
     SUBDIR += crip
     SUBDIR += csound
     SUBDIR += csoundqt
@@ -116,6 +114,7 @@
     SUBDIR += din
     SUBDIR += discid
     SUBDIR += dpf-plugins-lv2
+    SUBDIR += dragonfly-reverb-lv2
     SUBDIR += drumgizmo
     SUBDIR += drumkv1-lv2
     SUBDIR += drumpiler
@@ -537,8 +536,10 @@
     SUBDIR += mpg321
     SUBDIR += mpiosh
     SUBDIR += mps
+    SUBDIR += mpz
     SUBDIR += mumble
     SUBDIR += murmur
+    SUBDIR += murmur-cli
     SUBDIR += muse-sequencer
     SUBDIR += musepack
     SUBDIR += musescore
@@ -550,6 +551,7 @@
     SUBDIR += nas
     SUBDIR += ncmpc
     SUBDIR += ncmpcpp
+    SUBDIR += ncpamixer
     SUBDIR += ncspot
     SUBDIR += nekobi-lv2
     SUBDIR += noise-repellent-lv2
@@ -609,7 +611,6 @@
     SUBDIR += p5-Test-Corpus-Audio-MPD
     SUBDIR += p5-libvorbis
     SUBDIR += p5-tagged
-    SUBDIR += p5-xmms2
     SUBDIR += pacpl
     SUBDIR += padthv1-lv2
     SUBDIR += paman
@@ -803,7 +804,6 @@
     SUBDIR += timidity++-gtk
     SUBDIR += timidity++-motif
     SUBDIR += timidity++-slang
-    SUBDIR += timidity++-tcltk
     SUBDIR += timidity++-xaw
     SUBDIR += timidity++-xskin
     SUBDIR += tkeca
@@ -872,7 +872,6 @@
     SUBDIR += ympd
     SUBDIR += yoshimi
     SUBDIR += zam-plugins-lv2
-    SUBDIR += zinf
     SUBDIR += zita-convolver
     SUBDIR += zita-resampler
     SUBDIR += zrythm

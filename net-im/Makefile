@@ -6,12 +6,11 @@
     SUBDIR += 6cord
     SUBDIR += beebeep
     SUBDIR += centerim
-    SUBDIR += centerim-devel
+    SUBDIR += chatterino2
     SUBDIR += climm
     SUBDIR += coccinella
     SUBDIR += convey
     SUBDIR += cordless
-    SUBDIR += corebird
     SUBDIR += coyim
     SUBDIR += cutegram
     SUBDIR += diligent
@@ -24,7 +23,6 @@
     SUBDIR += folks
     SUBDIR += fractal
     SUBDIR += freetalk
-    SUBDIR += fugu
     SUBDIR += gajim
     SUBDIR += gitterdone
     SUBDIR += gloox
@@ -57,7 +55,6 @@
     SUBDIR += libaccounts-qt5
     SUBDIR += libmesode
     SUBDIR += libnice
-    SUBDIR += libnice-gst010
     SUBDIR += libnice-gst1
     SUBDIR += libpurple
     SUBDIR += libqmatrixclient
@@ -113,7 +110,6 @@
     SUBDIR += profanity
     SUBDIR += prosody
     SUBDIR += prosody-modules
-    SUBDIR += proxy65
     SUBDIR += psi
     SUBDIR += purple-discord
     SUBDIR += purple-facebook
@@ -154,6 +150,7 @@
     SUBDIR += talkatu
     SUBDIR += teamwords
     SUBDIR += telegram
+    SUBDIR += telegram-cli
     SUBDIR += telegram-desktop
     SUBDIR += telegram-purple
     SUBDIR += telegramqml
@@ -182,5 +179,6 @@
     SUBDIR += vqcc-gtk
     SUBDIR += xmpp-client
     SUBDIR += zephyr
+    SUBDIR += zoom
 
 .include <bsd.port.subdir.mk>

@@ -44,9 +44,9 @@
     SUBDIR += bareos16-webui
     SUBDIR += bareos17-webui
     SUBDIR += bareos18-webui
+    SUBDIR += beehive
     SUBDIR += bkmrkconv
     SUBDIR += blastbeat
-    SUBDIR += bluefish
     SUBDIR += bolt
     SUBDIR += bozohttpd
     SUBDIR += browsh
@@ -60,7 +60,6 @@
     SUBDIR += calamaris
     SUBDIR += calamaris-devel
     SUBDIR += caldavzap
-    SUBDIR += calendarserver
     SUBDIR += carbonapi
     SUBDIR += castget
     SUBDIR += cgi-lib
@@ -101,6 +100,7 @@
     SUBDIR += ddgr
     SUBDIR += decss
     SUBDIR += demoroniser
+    SUBDIR += deno
     SUBDIR += devd
     SUBDIR += dfileserver
     SUBDIR += dhttpd
@@ -173,12 +173,12 @@
     SUBDIR += fusionpbx
     SUBDIR += g-cows
     SUBDIR += g-gcl
+    SUBDIR += gallery-dl
     SUBDIR += gallery2
     SUBDIR += gatling
     SUBDIR += gauche-makiki
     SUBDIR += gecko-mediaplayer
     SUBDIR += geckodriver
-    SUBDIR += geeknote
     SUBDIR += geneweb
     SUBDIR += geolizer
     SUBDIR += geronimo
@@ -193,11 +193,9 @@
     SUBDIR += glassfish4
     SUBDIR += glpi
     SUBDIR += gnome-user-share
-    SUBDIR += go-appengine-sdk
     SUBDIR += go-www
     SUBDIR += gobuffalo
     SUBDIR += gohugo
-    SUBDIR += google-appengine
     SUBDIR += googlebook_dl
     SUBDIR += googler
     SUBDIR += goose
@@ -290,7 +288,6 @@
     SUBDIR += libepc
     SUBDIR += libevhtp
     SUBDIR += libgtkhtml
-    SUBDIR += libhpack
     SUBDIR += libhubbub
     SUBDIR += libjwt
     SUBDIR += libmicrohttpd
@@ -331,6 +328,7 @@
     SUBDIR += mediawiki131
     SUBDIR += mediawiki133
     SUBDIR += mediawiki134
+    SUBDIR += mediawiki135
     SUBDIR += mergelog
     SUBDIR += mhonarc
     SUBDIR += micro_httpd
@@ -343,7 +341,6 @@
     SUBDIR += minio-client
     SUBDIR += miniserve
     SUBDIR += mitmproxy
-    SUBDIR += mkapachepw
     SUBDIR += mknmz-wwwoffle
     SUBDIR += mnogosearch
     SUBDIR += mod_amazon_proxy
@@ -385,14 +382,12 @@
     SUBDIR += mod_memcache_block
     SUBDIR += mod_mono
     SUBDIR += mod_mpm_itk
-    SUBDIR += mod_pagespeed
     SUBDIR += mod_perl2
     SUBDIR += mod_php72
     SUBDIR += mod_php73
     SUBDIR += mod_php74
     SUBDIR += mod_proctitle
     SUBDIR += mod_proxy_xml
-    SUBDIR += mod_python35
     SUBDIR += mod_qos
     SUBDIR += mod_realdoc
     SUBDIR += mod_reproxy
@@ -1395,10 +1390,10 @@
     SUBDIR += privatebin
     SUBDIR += privoxy
     SUBDIR += protovis
+    SUBDIR += proxygen
     SUBDIR += pserv
     SUBDIR += publicfile
     SUBDIR += punbb
-    SUBDIR += py-MechanicalSoup
     SUBDIR += py-Tenjin
     SUBDIR += py-WebError
     SUBDIR += py-WebFlash
@@ -1592,7 +1587,9 @@
     SUBDIR += py-flexget
     SUBDIR += py-flup6
     SUBDIR += py-folium
+    SUBDIR += py-forcediphttpsadapter
     SUBDIR += py-formencode
+    SUBDIR += py-fqdn
     SUBDIR += py-freenit
     SUBDIR += py-frozen-flask
     SUBDIR += py-gandi.cli
@@ -1628,6 +1625,7 @@
     SUBDIR += py-httplib2
     SUBDIR += py-httptools
     SUBDIR += py-httpx
+    SUBDIR += py-httpx013
     SUBDIR += py-hyper
     SUBDIR += py-hyperframe
     SUBDIR += py-hyperlink
@@ -1642,6 +1640,7 @@
     SUBDIR += py-lesscpy
     SUBDIR += py-libsass
     SUBDIR += py-livereload
+    SUBDIR += py-mechanicalsoup
     SUBDIR += py-mechanize
     SUBDIR += py-meld3
     SUBDIR += py-multidict
@@ -1662,18 +1661,17 @@
     SUBDIR += py-priority
     SUBDIR += py-puppetboard
     SUBDIR += py-py-restclient
-    SUBDIR += py-pySmartDL
     SUBDIR += py-pyjwt
     SUBDIR += py-pylons
     SUBDIR += py-pyocclient
     SUBDIR += py-pyramid
     SUBDIR += py-pyramid_rpc
+    SUBDIR += py-pysmartdl
     SUBDIR += py-python-digitalocean
     SUBDIR += py-python-dotenv
     SUBDIR += py-python-multipart
     SUBDIR += py-pyweblib
     SUBDIR += py-pywikibot
-    SUBDIR += py-qp
     SUBDIR += py-qpy
     SUBDIR += py-qt5-webchannel
     SUBDIR += py-qt5-webengine
@@ -1724,7 +1722,6 @@
     SUBDIR += py-tvdb_api
     SUBDIR += py-txrequests
     SUBDIR += py-unit
-    SUBDIR += py-url
     SUBDIR += py-urlgrabber
     SUBDIR += py-urlman
     SUBDIR += py-urlobject
@@ -1751,8 +1748,6 @@
     SUBDIR += py-wsaccel
     SUBDIR += py-wsgidav
     SUBDIR += py-yarl
-    SUBDIR += pyblosxom
-    SUBDIR += pyjamas
     SUBDIR += qdecoder
     SUBDIR += qhttpengine
     SUBDIR += qt5-webchannel
@@ -1774,7 +1769,6 @@
     SUBDIR += restbed
     SUBDIR += retawq
     SUBDIR += riot-web
-    SUBDIR += roundup
     SUBDIR += rss-bridge
     SUBDIR += rsskit
     SUBDIR += rssroll
@@ -1811,6 +1805,7 @@
     SUBDIR += rubygem-async-http
     SUBDIR += rubygem-async-pool
     SUBDIR += rubygem-async-rest
+    SUBDIR += rubygem-async-websocket
     SUBDIR += rubygem-async_sinatra
     SUBDIR += rubygem-atlassian-jwt
     SUBDIR += rubygem-best_in_place
@@ -1900,6 +1895,7 @@
     SUBDIR += rubygem-innate
     SUBDIR += rubygem-jekyll
     SUBDIR += rubygem-jekyll-sanity
+    SUBDIR += rubygem-jekyll-seo-tag
     SUBDIR += rubygem-jekyll-watch
     SUBDIR += rubygem-jekyll3
     SUBDIR += rubygem-journey
@@ -1969,6 +1965,7 @@
     SUBDIR += rubygem-protocol-http
     SUBDIR += rubygem-protocol-http1
     SUBDIR += rubygem-protocol-http2
+    SUBDIR += rubygem-protocol-websocket
     SUBDIR += rubygem-puma
     SUBDIR += rubygem-puma_worker_killer
     SUBDIR += rubygem-pusher-client
@@ -2075,6 +2072,7 @@
     SUBDIR += rubygem-unicorn-worker-killer
     SUBDIR += rubygem-url_escape
     SUBDIR += rubygem-url_mount
+    SUBDIR += rubygem-vcr
     SUBDIR += rubygem-vegas
     SUBDIR += rubygem-wasabi
     SUBDIR += rubygem-webdrivers
@@ -2264,7 +2262,6 @@
     SUBDIR += validator
     SUBDIR += varnish-ip2location
     SUBDIR += varnish-ip2proxy
-    SUBDIR += varnish-libvmod-awsrest
     SUBDIR += varnish-libvmod-digest
     SUBDIR += varnish-libvmod-dynamic
     SUBDIR += varnish-libvmod-maxminddb
@@ -2282,11 +2279,8 @@
     SUBDIR += w3m
     SUBDIR += w3m-img
     SUBDIR += w3mir
-    SUBDIR += waccess
-    SUBDIR += wadcomblog
     SUBDIR += webalizer
     SUBDIR += webbrowser
-    SUBDIR += webcheck
     SUBDIR += webcopy
     SUBDIR += webcrawl
     SUBDIR += webfs
@@ -2305,7 +2299,6 @@
     SUBDIR += webtrees
     SUBDIR += wgetpaste
     SUBDIR += wikicalc
-    SUBDIR += woof
     SUBDIR += wordpress
     SUBDIR += wpebackend-fdo
     SUBDIR += wsdlpull

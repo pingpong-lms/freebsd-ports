@@ -27,7 +27,6 @@ include/wine/debug.h
 include/wine/exception.h
 include/wine/itss.h
 include/wine/itss.idl
-include/wine/library.h
 include/wine/svcctl.h
 include/wine/svcctl.idl
 include/wine/msvcrt/assert.h
@@ -243,6 +242,8 @@ include/wine/windows/d3d11sdklayers.idl
 include/wine/windows/d3d11shader.h
 include/wine/windows/d3d12.h
 include/wine/windows/d3d12.idl
+include/wine/windows/d3d12sdklayers.h
+include/wine/windows/d3d12sdklayers.idl
 include/wine/windows/d3d12shader.h
 include/wine/windows/d3d12shader.idl
 include/wine/windows/d3d8.h
@@ -676,6 +677,8 @@ include/wine/windows/objectarray.h
 include/wine/windows/objectarray.idl
 include/wine/windows/objidl.h
 include/wine/windows/objidl.idl
+include/wine/windows/objidlbase.h
+include/wine/windows/objidlbase.idl
 include/wine/windows/objsafe.h
 include/wine/windows/objsafe.idl
 include/wine/windows/objsel.h
@@ -1320,6 +1323,7 @@ lib/wine/avifil32.dll.so
 %%WINE32%%lib/wine/avifile.dll16.so
 lib/wine/avrt.dll.so
 lib/wine/bcrypt.dll.so
+lib/wine/bcrypt.so
 lib/wine/bluetoothapis.dll.so
 lib/wine/browseui.dll.so
 lib/wine/bthprops.cpl.so
@@ -2184,6 +2188,7 @@ lib/wine/fakedlls/netio.sys
 lib/wine/fakedlls/netprofm.dll
 lib/wine/fakedlls/netsh.exe
 lib/wine/fakedlls/netstat.exe
+%%STAGING%%lib/wine/fakedlls/netutils.dll
 lib/wine/fakedlls/newdev.dll
 lib/wine/fakedlls/ngen.exe
 lib/wine/fakedlls/ninput.dll
@@ -2272,7 +2277,6 @@ lib/wine/fakedlls/rsaenh.dll
 lib/wine/fakedlls/rstrtmgr.dll
 lib/wine/fakedlls/rtutils.dll
 lib/wine/fakedlls/rtworkq.dll
-%%STAGING%%lib/wine/fakedlls/runas.exe
 %%WINE32%%lib/wine/fakedlls/rundll.exe16
 lib/wine/fakedlls/rundll32.exe
 lib/wine/fakedlls/samlib.dll
@@ -2317,6 +2321,7 @@ lib/wine/fakedlls/softpub.dll
 lib/wine/fakedlls/spoolss.dll
 lib/wine/fakedlls/spoolsv.exe
 lib/wine/fakedlls/srclient.dll
+%%STAGING%%lib/wine/fakedlls/srvcli.dll
 lib/wine/fakedlls/sspicli.dll
 lib/wine/fakedlls/start.exe
 lib/wine/fakedlls/stdole2.tlb
@@ -2394,6 +2399,7 @@ lib/wine/fakedlls/wdscore.dll
 lib/wine/fakedlls/webservices.dll
 lib/wine/fakedlls/wer.dll
 lib/wine/fakedlls/wevtapi.dll
+lib/wine/fakedlls/wevtsvc.dll
 lib/wine/fakedlls/wevtutil.exe
 lib/wine/fakedlls/where.exe
 lib/wine/fakedlls/whoami.exe
@@ -2404,6 +2410,7 @@ lib/wine/fakedlls/wimgapi.dll
 %%WINE32%%lib/wine/fakedlls/win87em.dll16
 %%WINE32%%lib/wine/fakedlls/winaspi.dll16
 %%WINE32%%lib/wine/fakedlls/windebug.dll16
+%%STAGING%%lib/wine/fakedlls/windows.gaming.input.dll
 lib/wine/fakedlls/windowscodecs.dll
 lib/wine/fakedlls/windowscodecsext.dll
 lib/wine/fakedlls/wineboot.exe
@@ -2484,14 +2491,14 @@ lib/wine/fakedlls/wusa.exe
 %%OPENAL%%lib/wine/fakedlls/x3daudio1_5.dll
 %%OPENAL%%lib/wine/fakedlls/x3daudio1_6.dll
 %%OPENAL%%lib/wine/fakedlls/x3daudio1_7.dll
-%%STAGING%%lib/wine/fakedlls/xactengine3_0.dll
-%%STAGING%%lib/wine/fakedlls/xactengine3_1.dll
-%%STAGING%%lib/wine/fakedlls/xactengine3_2.dll
-%%STAGING%%lib/wine/fakedlls/xactengine3_3.dll
-%%STAGING%%lib/wine/fakedlls/xactengine3_4.dll
-%%STAGING%%lib/wine/fakedlls/xactengine3_5.dll
-%%STAGING%%lib/wine/fakedlls/xactengine3_6.dll
-%%STAGING%%lib/wine/fakedlls/xactengine3_7.dll
+lib/wine/fakedlls/xactengine3_0.dll
+lib/wine/fakedlls/xactengine3_1.dll
+lib/wine/fakedlls/xactengine3_2.dll
+lib/wine/fakedlls/xactengine3_3.dll
+lib/wine/fakedlls/xactengine3_4.dll
+lib/wine/fakedlls/xactengine3_5.dll
+lib/wine/fakedlls/xactengine3_6.dll
+lib/wine/fakedlls/xactengine3_7.dll
 %%OPENAL%%lib/wine/fakedlls/xapofx1_1.dll
 %%OPENAL%%lib/wine/fakedlls/xapofx1_2.dll
 %%OPENAL%%lib/wine/fakedlls/xapofx1_3.dll
@@ -2913,6 +2920,7 @@ lib/wine/netio.sys.so
 lib/wine/netprofm.dll.so
 lib/wine/netsh.exe.so
 lib/wine/netstat.exe.so
+%%STAGING%%lib/wine/netutils.dll.so
 lib/wine/newdev.dll.so
 lib/wine/ngen.exe.so
 lib/wine/ninput.dll.so
@@ -2933,6 +2941,7 @@ lib/wine/ntprint.dll.so
 %%WINE64%%%%STAGING%%lib/wine/nvencodeapi64.dll.so
 lib/wine/objsel.dll.so
 lib/wine/odbc32.dll.so
+lib/wine/odbc32.so
 lib/wine/odbcbcp.dll.so
 lib/wine/odbccp32.dll.so
 lib/wine/odbccu32.dll.so
@@ -3002,7 +3011,6 @@ lib/wine/rsaenh.dll.so
 lib/wine/rstrtmgr.dll.so
 lib/wine/rtutils.dll.so
 lib/wine/rtworkq.dll.so
-%%STAGING%%lib/wine/runas.exe.so
 %%WINE32%%lib/wine/rundll.exe16.so
 lib/wine/rundll32.exe.so
 lib/wine/samlib.dll.so
@@ -3047,6 +3055,7 @@ lib/wine/softpub.dll.so
 lib/wine/spoolss.dll.so
 lib/wine/spoolsv.exe.so
 lib/wine/srclient.dll.so
+%%STAGING%%lib/wine/srvcli.dll.so
 lib/wine/sspicli.dll.so
 lib/wine/start.exe.so
 lib/wine/stdole2.tlb.so
@@ -3089,6 +3098,7 @@ lib/wine/urlmon.dll.so
 lib/wine/usbd.sys.so
 %%WINE32%%lib/wine/user.exe16.so
 lib/wine/user32.dll.so
+lib/wine/user32.so
 lib/wine/userenv.dll.so
 lib/wine/usp10.dll.so
 lib/wine/utildll.dll.so
@@ -3124,6 +3134,7 @@ lib/wine/wdscore.dll.so
 lib/wine/webservices.dll.so
 lib/wine/wer.dll.so
 lib/wine/wevtapi.dll.so
+lib/wine/wevtsvc.dll.so
 lib/wine/wevtutil.exe.so
 lib/wine/where.exe.so
 lib/wine/whoami.exe.so
@@ -3134,6 +3145,7 @@ lib/wine/wimgapi.dll.so
 %%WINE32%%lib/wine/win87em.dll16.so
 %%WINE32%%lib/wine/winaspi.dll16.so
 %%WINE32%%lib/wine/windebug.dll16.so
+%%STAGING%%lib/wine/windows.gaming.input.dll.so
 lib/wine/windowscodecs.dll.so
 lib/wine/windowscodecsext.dll.so
 lib/wine/wineboot.exe.so
@@ -3214,14 +3226,14 @@ lib/wine/wusa.exe.so
 %%OPENAL%%lib/wine/x3daudio1_5.dll.so
 %%OPENAL%%lib/wine/x3daudio1_6.dll.so
 %%OPENAL%%lib/wine/x3daudio1_7.dll.so
-%%STAGING%%lib/wine/xactengine3_0.dll.so
-%%STAGING%%lib/wine/xactengine3_1.dll.so
-%%STAGING%%lib/wine/xactengine3_2.dll.so
-%%STAGING%%lib/wine/xactengine3_3.dll.so
-%%STAGING%%lib/wine/xactengine3_4.dll.so
-%%STAGING%%lib/wine/xactengine3_5.dll.so
-%%STAGING%%lib/wine/xactengine3_6.dll.so
-%%STAGING%%lib/wine/xactengine3_7.dll.so
+lib/wine/xactengine3_0.dll.so
+lib/wine/xactengine3_1.dll.so
+lib/wine/xactengine3_2.dll.so
+lib/wine/xactengine3_3.dll.so
+lib/wine/xactengine3_4.dll.so
+lib/wine/xactengine3_5.dll.so
+lib/wine/xactengine3_6.dll.so
+lib/wine/xactengine3_7.dll.so
 %%OPENAL%%lib/wine/xapofx1_1.dll.so
 %%OPENAL%%lib/wine/xapofx1_2.dll.so
 %%OPENAL%%lib/wine/xapofx1_3.dll.so
@@ -3322,6 +3334,7 @@ share/applications/wine.desktop
 %%DATADIR%%/nls/c_28605.nls
 %%DATADIR%%/nls/c_437.nls
 %%DATADIR%%/nls/c_500.nls
+%%DATADIR%%/nls/c_708.nls
 %%DATADIR%%/nls/c_737.nls
 %%DATADIR%%/nls/c_775.nls
 %%DATADIR%%/nls/c_850.nls

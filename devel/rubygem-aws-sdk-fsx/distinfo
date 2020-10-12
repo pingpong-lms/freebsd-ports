@@ -1,3 +1,3 @@
-TIMESTAMP = 1597570017
-SHA256 (rubygem/aws-sdk-fsx-1.27.0.gem) = dd36ab0c27a97cec3e91096aa222ffc928acabcc9ecc34d9ec9c44f750a4b55f
-SIZE (rubygem/aws-sdk-fsx-1.27.0.gem) = 51200
+TIMESTAMP = 1601554664
+SHA256 (rubygem/aws-sdk-fsx-1.31.0.gem) = 02d6dd6f600de2e27dda685bb5bbda31d93c1e8406a337e3ec1fe6956ba83ae3
+SIZE (rubygem/aws-sdk-fsx-1.31.0.gem) = 51712

@@ -159,7 +159,6 @@
     SUBDIR += blaze
     SUBDIR += blazeiterative
     SUBDIR += blis
-    SUBDIR += blitz++
     SUBDIR += blocksolve95
     SUBDIR += bonmin
     SUBDIR += boolector
@@ -249,6 +248,7 @@
     SUBDIR += eval
     SUBDIR += exprtk
     SUBDIR += facile
+    SUBDIR += faiss
     SUBDIR += fann
     SUBDIR += fcl
     SUBDIR += fcl05
@@ -522,9 +522,7 @@
     SUBDIR += oleo
     SUBDIR += onednn
     SUBDIR += openblas
-    SUBDIR += openfst
     SUBDIR += openlibm
-    SUBDIR += openmesh
     SUBDIR += opensolaris-libm
     SUBDIR += openturns
     SUBDIR += optpp
@@ -754,7 +752,6 @@
     SUBDIR += py-fastcluster
     SUBDIR += py-fastdtw
     SUBDIR += py-flax
-    SUBDIR += py-fpconst
     SUBDIR += py-fpylll
     SUBDIR += py-gau2grid
     SUBDIR += py-gimmik
@@ -777,6 +774,7 @@
     SUBDIR += py-luminol
     SUBDIR += py-matplotlib
     SUBDIR += py-matplotlib-scalebar
+    SUBDIR += py-matplotlib2
     SUBDIR += py-mip
     SUBDIR += py-mpmath
     SUBDIR += py-munkres
@@ -788,6 +786,7 @@
     SUBDIR += py-numexpr
     SUBDIR += py-numpoly
     SUBDIR += py-numpy
+    SUBDIR += py-numpy-stl
     SUBDIR += py-opt-einsum
     SUBDIR += py-or-tools
     SUBDIR += py-osqp
@@ -865,7 +864,6 @@
     SUBDIR += reduce
     SUBDIR += reduce-psl
     SUBDIR += reed-solomon
-    SUBDIR += rehearse
     SUBDIR += rexx-regmath
     SUBDIR += rkward-kde
     SUBDIR += rngstreams
@@ -937,6 +935,7 @@
     SUBDIR += tvmet
     SUBDIR += ump
     SUBDIR += units
+    SUBDIR += universal
     SUBDIR += unuran
     SUBDIR += vampire
     SUBDIR += viennacl

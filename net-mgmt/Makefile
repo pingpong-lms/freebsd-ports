@@ -15,6 +15,7 @@
     SUBDIR += arpscan
     SUBDIR += arpwatch
     SUBDIR += arts++
+    SUBDIR += bandwhich
     SUBDIR += bandwidthd
     SUBDIR += bgpq3
     SUBDIR += bgpq4
@@ -54,7 +55,6 @@
     SUBDIR += coovachilli
     SUBDIR += cowpatty
     SUBDIR += cricket
-    SUBDIR += crmsh
     SUBDIR += darkstat
     SUBDIR += devmon
     SUBDIR += devmon-templates
@@ -118,7 +118,6 @@
     SUBDIR += klg
     SUBDIR += lg
     SUBDIR += librenms
-    SUBDIR += librenms-agent
     SUBDIR += libsmi
     SUBDIR += lldpd
     SUBDIR += mbrowse
@@ -372,6 +371,7 @@
     SUBDIR += unifi-lts
     SUBDIR += unifi-poller
     SUBDIR += unifi5
+    SUBDIR += unifi6
     SUBDIR += virt-viewer
     SUBDIR += wdiag
     SUBDIR += whatmask

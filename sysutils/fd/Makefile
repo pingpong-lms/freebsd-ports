@@ -4,11 +4,11 @@
 PORTNAME=	fd
 DISTVERSIONPREFIX=	v
 DISTVERSION=	8.1.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-find
 
-MAINTAINER=	tobik@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple, fast and user-friendly alternative to find
 
 LICENSE=	APACHE20 MIT
