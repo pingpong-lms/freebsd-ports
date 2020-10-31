@@ -3,8 +3,7 @@
 
 PORTNAME=	qgis
 DISTVERSIONPREFIX=	final-
-DISTVERSION=	3_14_16
-PORTREVISION=	2
+DISTVERSION=	3_16_0
 CATEGORIES=	graphics geography
 
 MAINTAINER=	rhurlin@FreeBSD.org
@@ -14,6 +13,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/doc/LICENSE
 
 BUILD_DEPENDS=	gpsbabel>=1.5.4:astro/gpsbabel \
+		opencl>=0:devel/opencl \
 		${PYTHON_PKGNAMEPREFIX}cycler>=0.10.0:devel/py-cycler@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dateutil>=2.8.1:devel/py-dateutil@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}future>=0.18.2:devel/py-future@${PY_FLAVOR} \
@@ -40,6 +40,7 @@ LIB_DEPENDS=	libexiv2.so:graphics/exiv2 \
 		libgsl.so:math/gsl \
 		libhdf5.so:science/hdf5 \
 		libnetcdf.so:science/netcdf \
+		libOpenCL.so:devel/ocl-icd \
 		libproj.so:graphics/proj \
 		libprotobuf-lite.so:devel/protobuf \
 		libqjson-qt5.so:devel/qjson \
@@ -52,6 +53,7 @@ LIB_DEPENDS=	libexiv2.so:graphics/exiv2 \
 		libxerces-c.so:textproc/xerces-c3 \
 		libzip.so:archivers/libzip
 RUN_DEPENDS=	astyle:devel/astyle \
+		opencl>=0:devel/opencl \
 		${PYTHON_PKGNAMEPREFIX}black>=19.10:devel/py-black@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}cycler>=0.10.0:devel/py-cycler@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dateutil>=2.8.1:devel/py-dateutil@${PY_FLAVOR} \
@@ -119,9 +121,8 @@ CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE:STRING=Release \
 		-DQSCI_SIP_DIR:PATH=${PYQT_SIPDIR}/Qsci \
 		-DQWT_INCLUDE_DIR:PATH=${LOCALBASE}/include/qt5/qwt6 \
 		-DQWT_LIBRARY:FILEPATH=${LOCALBASE}/lib/qt5/libqwt6.so \
-		-DCMAKE_POLICY_DEFAULT_CMP0056:STRING=NEW \
-		-DUSE_OPENCL:BOOL=FALSE
-CMAKE_ON=	BUILD_TESTING ENABLE_TESTS WITH_3D WITH_ASTYLE \
+		-DCMAKE_POLICY_DEFAULT_CMP0056:STRING=NEW
+CMAKE_ON=	BUILD_TESTING ENABLE_TESTS USE_OPENCL WITH_3D WITH_ASTYLE \
 		WITH_BINDINGS WITH_CUSTOM_WIDGETS WITH_INTERNAL_MDAL \
 		WITH_POSTGRESQL
 CMAKE_OFF=	WITH_GLOBE WITH_QWTPOLAR

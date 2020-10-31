@@ -435,7 +435,6 @@
     SUBDIR += glogg
     SUBDIR += glow
     SUBDIR += gnome-control-center
-    SUBDIR += gnome-mount
     SUBDIR += gnome-power-manager
     SUBDIR += gnome-settings-daemon
     SUBDIR += gnome-system-monitor
@@ -909,7 +908,8 @@
     SUBDIR += php73-posix
     SUBDIR += php74-fileinfo
     SUBDIR += php74-posix
-    SUBDIR += phpfpm_exporter
+    SUBDIR += php80-fileinfo
+    SUBDIR += php80-posix
     SUBDIR += phybs
     SUBDIR += pick
     SUBDIR += pidof
@@ -923,10 +923,10 @@
     SUBDIR += plasma5-kmenuedit
     SUBDIR += plasma5-ksysguard
     SUBDIR += plasma5-libksysguard
+    SUBDIR += plasma5-plasma-disks
     SUBDIR += plasma5-polkit-kde-agent-1
     SUBDIR += plasma5-powerdevil
     SUBDIR += plasma5-systemsettings
-    SUBDIR += plasma5-user-manager
     SUBDIR += plconfig
     SUBDIR += pmt
     SUBDIR += pnscan
@@ -1040,6 +1040,7 @@
     SUBDIR += qchroot
     SUBDIR += qdirstat
     SUBDIR += qjail
+    SUBDIR += qjail54
     SUBDIR += qlogtools
     SUBDIR += qsudo
     SUBDIR += qt5-qtdiag
@@ -1276,10 +1277,6 @@
     SUBDIR += sysinfo
     SUBDIR += syslinux
     SUBDIR += syslog-ng
-    SUBDIR += syslog-ng320
-    SUBDIR += syslog-ng321
-    SUBDIR += syslog-ng322
-    SUBDIR += syslog-ng323
     SUBDIR += syslog-ng324
     SUBDIR += syslog-ng325
     SUBDIR += syslog-ng326
@@ -1304,6 +1301,7 @@
     SUBDIR += terraform-docs
     SUBDIR += terraform-provider-gridscale
     SUBDIR += terraform-provider-vultr
+    SUBDIR += terraform-switcher
     SUBDIR += terragrunt
     SUBDIR += testdisk
     SUBDIR += thefish

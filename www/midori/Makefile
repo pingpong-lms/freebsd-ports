@@ -4,7 +4,7 @@
 PORTNAME=	midori
 PORTVERSION=	9.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	www xfce
 
 MAINTAINER=	xfce@FreeBSD.org
@@ -18,9 +18,8 @@ BUILD_DEPENDS=	rsvg-convert:graphics/librsvg2 \
 LIB_DEPENDS=	libnotify.so:devel/libnotify \
 		libjson-glib-1.0.so:devel/json-glib \
 		libsoup-2.4.so:devel/libsoup \
-		libsoup-gnome-2.4.so:devel/libsoup-gnome \
 		libp11-kit.so:security/p11-kit \
-		libgcr-3.so:security/gcr \
+		libgcr-base-3.so:security/gcr \
 		libpeas-1.0.so:devel/libpeas \
 		libwebkit2gtk-4.0.so:www/webkit2-gtk3
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss

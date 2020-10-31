@@ -38,6 +38,7 @@
     SUBDIR += gtk30
     SUBDIR += gtkada
     SUBDIR += gtkada3
+    SUBDIR += gtkd
     SUBDIR += gtkdatabox
     SUBDIR += gtkextra
     SUBDIR += gtkglarea2
@@ -164,7 +165,6 @@
     SUBDIR += py-SquareMap
     SUBDIR += py-easygui
     SUBDIR += py-fltk
-    SUBDIR += py-gtk2
     SUBDIR += py-guietta
     SUBDIR += py-qt5-chart
     SUBDIR += py-qt5-gui
