@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-generic
-PORTVERSION=	0.17
+PORTVERSION=	0.18
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
 DISTFILES=	#
@@ -50,6 +50,7 @@ RUN_DEPENDS= \
 	dig:dns/bind-tools \
 	lynx:www/lynx \
 	gpg2:security/gnupg \
+	sudo:security/doas \
 	sudo:security/sudo \
 	nslcd:net/nss-pam-ldapd-sasl \
 	${LOCALBASE}/lib/pam_mkhomedir.so:security/pam_mkhomedir \
