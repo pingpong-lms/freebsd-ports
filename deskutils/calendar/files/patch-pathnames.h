@@ -1,4 +1,4 @@
---- pathnames.h.orig	2020-10-30 14:47:55 UTC
+--- pathnames.h.orig	2020-10-18 03:01:26 UTC
 +++ pathnames.h
 @@ -35,3 +35,4 @@
  #include <paths.h>

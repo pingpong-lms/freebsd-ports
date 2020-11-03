@@ -47,6 +47,7 @@
     SUBDIR += beehive
     SUBDIR += bkmrkconv
     SUBDIR += blastbeat
+    SUBDIR += bluefish
     SUBDIR += bolt
     SUBDIR += bozohttpd
     SUBDIR += browsh
@@ -1766,7 +1767,6 @@
     SUBDIR += quark
     SUBDIR += qutebrowser
     SUBDIR += radicale
-    SUBDIR += radicale2
     SUBDIR += redmine4
     SUBDIR += rejik
     SUBDIR += reportmagic
