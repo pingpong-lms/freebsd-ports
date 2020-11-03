@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-generic
-PORTVERSION=	0.18
+PORTVERSION=	0.19
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
 DISTFILES=	#
@@ -12,11 +12,9 @@ COMMENT=	The meta-port for generic ppab server deps
 
 NO_BUILD=	yes
 
-USES=		perl5 gmake pgsql python
+USES=		perl5 gmake pgsql python:2.7 python:3.9 autoreconf
 WANT_PGSQL=	client
-USE_AUTOTOOLS=	autoconf aclocal automake
 USE_OPENLDAP=	yes
-WANT_OPENLDAP_SASL=yes
 
 PLIST_FILES=	share/vim/vimrc \
 		etc/periodic/daily/pp_pkg_audit etc/newsyslog.conf.d/pp_pkg_audit.conf
@@ -29,7 +27,6 @@ RUN_DEPENDS= \
 	zsh:shells/zsh \
 	vim:editors/vim \
 	tree:sysutils/tree \
-	python:lang/python \
 	curl:ftp/curl \
 	mosh:net/mosh \
 	lftp:ftp/lftp \
@@ -50,7 +47,7 @@ RUN_DEPENDS= \
 	dig:dns/bind-tools \
 	lynx:www/lynx \
 	gpg2:security/gnupg \
-	sudo:security/doas \
+	doas:security/doas \
 	sudo:security/sudo \
 	nslcd:net/nss-pam-ldapd-sasl \
 	${LOCALBASE}/lib/pam_mkhomedir.so:security/pam_mkhomedir \
