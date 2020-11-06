@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-generic
-PORTVERSION=	0.19
+PORTVERSION=	0.20
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
 DISTFILES=	#
@@ -12,7 +12,7 @@ COMMENT=	The meta-port for generic ppab server deps
 
 NO_BUILD=	yes
 
-USES=		perl5 gmake pgsql python:2.7 python:3.9 autoreconf
+USES=		perl5 gmake pgsql python autoreconf
 WANT_PGSQL=	client
 USE_OPENLDAP=	yes
 
@@ -33,6 +33,8 @@ RUN_DEPENDS= \
 	rsync:net/rsync \
 	unzip:archivers/unzip \
 	svn:devel/subversion \
+	python:lang/python \
+	python2.7:lang/python27 \
 	git:devel/git \
 	p5-DBD-Pg>0:databases/p5-DBD-Pg \
 	p5-Switch>0:lang/p5-Switch \
