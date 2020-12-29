@@ -25,6 +25,7 @@
     SUBDIR += R-cran-ggrepel
     SUBDIR += R-cran-gridBase
     SUBDIR += R-cran-gridExtra
+    SUBDIR += R-cran-jpeg
     SUBDIR += R-cran-munsell
     SUBDIR += R-cran-pROC
     SUBDIR += R-cran-pixmap
@@ -46,6 +47,7 @@
     SUBDIR += agg
     SUBDIR += akira
     SUBDIR += alembic
+    SUBDIR += aloadimage
     SUBDIR += alpng
     SUBDIR += ampasACES-container
     SUBDIR += ampasCTL
@@ -55,6 +57,7 @@
     SUBDIR += apngasm
     SUBDIR += apngdis
     SUBDIR += argyllcms
+    SUBDIR += art
     SUBDIR += asciio
     SUBDIR += aseprite
     SUBDIR += atril
@@ -64,6 +67,7 @@
     SUBDIR += aview
     SUBDIR += avir
     SUBDIR += azpainter
+    SUBDIR += azpainterb
     SUBDIR += barbecue
     SUBDIR += barcode
     SUBDIR += batik
@@ -197,6 +201,7 @@
     SUBDIR += fpc-proj4
     SUBDIR += fpc-rsvg
     SUBDIR += fpc-svgalib
+    SUBDIR += fpc-vcl-compat
     SUBDIR += fracplanet
     SUBDIR += fractgen
     SUBDIR += fraqtive
@@ -221,7 +226,6 @@
     SUBDIR += gdk-pixbuf2
     SUBDIR += gdtclft
     SUBDIR += geeqie
-    SUBDIR += geeqie-devel
     SUBDIR += gegl
     SUBDIR += generic_image_decoder
     SUBDIR += geoapi
@@ -235,6 +239,7 @@
     SUBDIR += giflib
     SUBDIR += gifmerge
     SUBDIR += gifsicle
+    SUBDIR += gifski
     SUBDIR += giftool
     SUBDIR += gimageview
     SUBDIR += gimmage
@@ -259,6 +264,7 @@
     SUBDIR += gliv
     SUBDIR += glosm
     SUBDIR += glpng
+    SUBDIR += glslang
     SUBDIR += gltt
     SUBDIR += glx-utils
     SUBDIR += gmic
@@ -373,8 +379,8 @@
     SUBDIR += jp
     SUBDIR += jp2a
     SUBDIR += jpatch
-    SUBDIR += jpeg
     SUBDIR += jpeg-turbo
+    SUBDIR += jpeg-xl
     SUBDIR += jpeginfo
     SUBDIR += jpegoptim
     SUBDIR += jpgtn
@@ -399,7 +405,9 @@
     SUBDIR += kipi-plugins
     SUBDIR += klatexformula
     SUBDIR += kludge3d
+    SUBDIR += kmscube
     SUBDIR += kolourpaint
+    SUBDIR += kontrast
     SUBDIR += kooka
     SUBDIR += kphotoalbum
     SUBDIR += kqtquickcharts
@@ -587,6 +595,7 @@
     SUBDIR += openimageio
     SUBDIR += openjpeg
     SUBDIR += openjpeg15
+    SUBDIR += openjph
     SUBDIR += openjump
     SUBDIR += opennurbs
     SUBDIR += openorienteering-mapper
@@ -648,6 +657,11 @@
     SUBDIR += p5-GraphViz-Data-Structure
     SUBDIR += p5-GraphViz-Traverse
     SUBDIR += p5-GraphViz2
+    SUBDIR += p5-GraphViz2-DBI
+    SUBDIR += p5-GraphViz2-Data-Grapher
+    SUBDIR += p5-GraphViz2-Parse-ISA
+    SUBDIR += p5-GraphViz2-Parse-RecDescent
+    SUBDIR += p5-GraphViz2-Parse-XML
     SUBDIR += p5-Graphics-Color
     SUBDIR += p5-Graphics-ColorNames
     SUBDIR += p5-Graphics-ColorNames-WWW
@@ -794,6 +808,8 @@
     SUBDIR += py-PyOpenGL
     SUBDIR += py-PyOpenGL-accelerate
     SUBDIR += py-actdiag
+    SUBDIR += py-altair
+    SUBDIR += py-beziers
     SUBDIR += py-blockdiag
     SUBDIR += py-blockdiagcontrib-cisco
     SUBDIR += py-cairo
@@ -832,6 +848,7 @@
     SUBDIR += py-mapclassify
     SUBDIR += py-mcomix
     SUBDIR += py-ming
+    SUBDIR += py-mpl-interactions
     SUBDIR += py-mpl-scatter-density
     SUBDIR += py-nwdiag
     SUBDIR += py-open3d-python
@@ -853,6 +870,7 @@
     SUBDIR += py-pygal
     SUBDIR += py-pyganim
     SUBDIR += py-pygeoapi
+    SUBDIR += py-pygeos
     SUBDIR += py-pyglet
     SUBDIR += py-pyglet150
     SUBDIR += py-pygraphviz
@@ -1002,6 +1020,7 @@
     SUBDIR += sk1libs
     SUBDIR += skanlite
     SUBDIR += spectacle
+    SUBDIR += spirv-tools
     SUBDIR += springgraph
     SUBDIR += squish
     SUBDIR += ssocr
@@ -1012,7 +1031,6 @@
     SUBDIR += svgalib
     SUBDIR += svgbob
     SUBDIR += swappy
-    SUBDIR += swfdec
     SUBDIR += swfmill
     SUBDIR += swftools
     SUBDIR += sxiv
@@ -1059,7 +1077,10 @@
     SUBDIR += vp
     SUBDIR += vpaint
     SUBDIR += vulkan-caps-viewer
+    SUBDIR += vulkan-headers
     SUBDIR += vulkan-loader
+    SUBDIR += vulkan-tools
+    SUBDIR += vulkan-validation-layers
     SUBDIR += vv
     SUBDIR += waffle
     SUBDIR += waifu2x-converter-cpp

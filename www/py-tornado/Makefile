@@ -15,7 +15,7 @@ LICENSE=	APACHE20
 RUN_DEPENDS=	${PY_FUTURES}
 
 USES=		python
-USE_PYTHON=	autoplist distutils
+USE_PYTHON=	autoplist concurrent distutils
 
 CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}tornado4 \
 			${PYTHON_PKGNAMEPREFIX}tornado6
@@ -31,7 +31,7 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}backports_abc>=0.4:devel/py-backports_abc@$
 .endif
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/tornado/speedups.so
+	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/tornado/speedups*.so
 
 do-test:
 	@cd ${WRKSRC} && ${PYTHON_CMD} -m tornado.test.runtests

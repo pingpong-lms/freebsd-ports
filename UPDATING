@@ -5,6 +5,124 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20201228:
+  AFFECTS: www/py-flexget
+  AUTHOR: jbeich@FreeBSD.org
+
+  py-flexget (or py37-flexget) has been renamed to flexget.
+  "pkg upgrade" doesn't track MOVED file unlike portmaster, so
+  provide a hint e.g.,
+
+    $ pkg upgrade -x flexget
+
+  or install again, letting pkg remove the old version
+
+    $ pkg install flexget
+
+20201218:
+  AFFECTS: users of www/qt5-webengine
+  AUTHOR: kai@FreeBSD.org
+
+  Users that upgrade www/qt5-webengine without using pkg/poudriere might
+  experience failures due to conflicts with the installed version of 5.15.2.
+
+  In that case, pkg delete -f the qt5-webengine package before building
+  the updated version.
+
+20201130:
+  AFFECTS: users of graphics/jpeg
+  AUTHOR: rene@FreeBSD.org
+
+  The graphics/jpeg port has been removed in favor of graphics/jpeg-turbo.
+  The former port was vulnerable and used an outdated ABI and API.
+
+  Please check your make configuration for JPEG_PORT and remove it or
+  set it to "jpeg-turbo" if it is currently set to "jpeg".
+
+20201128:
+  AFFECTS: users of databases/cego
+  AUTHOR: pi@FreeBSD.org
+
+  Database updates from 2.45.x to 2.46.x require a xml tableset export
+  and import, since table structure information has been changed.
+
+20201128:
+  AFFECTS: users of lang/ruby26
+  AUTHOR: mfechner@FreeBSD.org
+
+  The default ruby version has been updated from 2.6 to 2.7.
+
+  If you compile your own ports you may keep 2.6 as the default version by
+  adding the following lines to your /etc/make.conf file:
+
+  #
+  # Keep ruby 2.6 as default version
+  #
+  DEFAULT_VERSIONS+=ruby=2.6
+
+  If you wish to update to the new default version, you need to first stop any
+  software that uses ruby. Then, you will need to follow these steps, depending
+  upon how you manage your system.
+
+  If you use pkg, simply upgrade:
+  # pkg upgrade
+
+  If you do not use pkg, please check entry 20190420.
+  The description there should also work for this version.
+
+20201112:
+  AFFECTS: users of net-mgmt/pushgateway
+  AUTHOR: rhurlin@FreeBSD.org
+
+  The v0.10.0 release changes the storage format. v0.10 can read the
+  storage format of v0.5--v0.9. It will then persist the new format so
+  that a downgrade won't be possible anymore [1].
+
+  For later releases >= v1.0.0 only persistence files created by v0.10+
+  are usable. So please, upgrade to v0.10 first to convert existing
+  persistence files.
+
+  It is intended to replace v0.10.0 in about four weeks from now (not
+  before 2020-12-12) by >= v1.3.0.
+
+  [1] https://github.com/prometheus/pushgateway/releases/tag/v0.10.0
+
+20201110:
+  AFFECTS: users of net-mgmt/netbox
+  AUTHOR: kai@FreeBSD.org
+
+  Changes related to the NetBox configuration:
+
+  1. If in use, LDAP authentication must be enabled by setting
+     REMOTE_AUTH_BACKEND to 'netbox.authentication.LDAPBackend'.  (The LDAP
+     configuration parameters in ldap_config.py remain unchanged.)
+
+  2. REMOTE_AUTH_DEFAULT_PERMISSIONS now takes a dictionary rather than a
+     list.  This is a mapping of permission names to a dictionary of
+     constraining attributes, or None.
+
+     For example, ['dcim.add_site', 'dcim.change_site'] would become
+     {'dcim.add_site': None, 'dcim.change_site': None}.
+
+  3. Support for the DEFAULT_TIMEOUT parameter under REDIS database
+     configuration was removed.  Set RQ_DEFAULT_TIMEOUT as a global
+     configuration parameter instead.
+
+  Please also check the pkg-message and the changelogs for further info.
+
+20201106:
+  AFFECTS: users of www/samdruckerserver
+  AUTHOR: dvl@FreeBSD.org
+
+  If upgrading from < 0.2.4, the database schema has changed.
+
+  Run these scripts to update your database:
+
+  * PostgreSQL/updates-2020.08.28.sql
+  * PostgreSQL/procedures.sql
+
+  These scripts are in /usr/local/share/samdrucker/PostgreSQL
+
 20201030:
   AFFECTS: users of security/openvpn
   AUTHOR: mandree@FreeBSD.org
@@ -123,7 +241,7 @@ you update your ports collection, before attempting any port upgrades.
   consistent with the rest of the ports tree. syslog_ng_config and
   syslog_ng_pid will continue to work until syslog-ng331 has been
   released and imported into ports.
-  
+
 20200924:
   AFFECTS: users of net/freeradius3, who need python support
   AUTHOR: zi@FreeBSD.org
@@ -349,7 +467,7 @@ you update your ports collection, before attempting any port upgrades.
   Switching to the fork panda-cclient fixes these issues. Therefore we make the
   usage of Panda cclient the new default. If you want to use the old cclient,
   you need to enable it now!
-  
+
 20200616:
   AFFECTS: users of www/baikal
   AUTHOR: gahr@FreeBSD.org
@@ -835,7 +953,7 @@ you update your ports collection, before attempting any port upgrades.
     pkill -F /usr/local/var/lib/prosody/prosody.pid
 
     # copy the data directory
-    cp -a /usr/local/var/lib/prosody /var/db/prosody
+    cp -a /usr/local/var/lib/prosody /var/db/
     rm -f /var/db/prosody/prosody.pid
 
   Make sure your prosody config has the following option set:
@@ -14991,7 +15109,7 @@ or
   sysutils/cdrtools-cjk port has been removed, as the required functionality is
   now available in cdrtools 3.0.0 in the standard sysutils/cdrtools port.
 
- 20100915:
+20100915:
   AFFECTS: autoconf, automake
   AUTHOR: autotools@FreeBSD.org
 
@@ -15578,7 +15696,7 @@ or
   script failure to start nullmailer-send.
 
   Support for "[-u user]" command-line switch was recently MFC'd to 6-STABLE
- (http://www.freebsd.org/cgi/query-pr.cgi?pr=bin/146266).  FreeBSD 6.X users
+  (http://www.freebsd.org/cgi/query-pr.cgi?pr=bin/146266).  FreeBSD 6.X users
   should patch and install daemon(8) by one of the methods described below.
 
   If /usr/src is not yet populated, csup the 6-STABLE sources and run these

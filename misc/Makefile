@@ -136,6 +136,7 @@
     SUBDIR += ftdi-eeprom
     SUBDIR += fxload
     SUBDIR += gcstar
+    SUBDIR += gedkeeper
     SUBDIR += geekcode
     SUBDIR += getopt
     SUBDIR += gimp-help-en
@@ -396,7 +397,6 @@
     SUBDIR += py-powerline-status
     SUBDIR += py-progressbar
     SUBDIR += py-progressbar2
-    SUBDIR += py-progressbar231
     SUBDIR += py-pyfiglet
     SUBDIR += py-pykml
     SUBDIR += py-pyprind
@@ -480,6 +480,7 @@
     SUBDIR += termatrix
     SUBDIR += teseq
     SUBDIR += thefuck
+    SUBDIR += thrill
     SUBDIR += tkcron
     SUBDIR += tkinfo
     SUBDIR += tkregexp
@@ -523,6 +524,7 @@
     SUBDIR += wmtunlo
     SUBDIR += wmweather+
     SUBDIR += wmwork
+    SUBDIR += xd-rust
     SUBDIR += xdelta
     SUBDIR += xdelta3
     SUBDIR += xfce4-appfinder

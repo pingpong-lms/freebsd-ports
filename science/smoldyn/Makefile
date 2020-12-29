@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	smoldyn
-DISTVERSION=	2.62
+DISTVERSION=	2.63
 CATEGORIES=	science
 MASTER_SITES=	http://www.smoldyn.org/
 
@@ -13,9 +13,11 @@ LICENSE_FILE=	${WRKSRC}/License.txt
 
 LIB_DEPENDS=	libtiff.so:graphics/tiff
 
-USES=		cmake gl tar:tgz xorg
+USES=		cmake compiler:c++11-lang gl tar:tgz xorg
 USE_GL=		gl glu glut
 USE_XORG=	xi xmu
+
+CMAKE_OFF=	OPTION_PYTHON
 
 PLIST_FILES=	bin/${PORTNAME} \
 		include/libsmoldyn.h \
