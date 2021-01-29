@@ -29,6 +29,7 @@
     SUBDIR += R-cran-stringr
     SUBDIR += R-cran-utf8
     SUBDIR += R-cran-xml2
+    SUBDIR += R-cran-xmlparsedata
     SUBDIR += R-cran-xtable
     SUBDIR += R-cran-yaml
     SUBDIR += UCD
@@ -451,6 +452,7 @@
     SUBDIR += ml1
     SUBDIR += mn-aspell
     SUBDIR += modlogan
+    SUBDIR += mp_doccer
     SUBDIR += mr-aspell
     SUBDIR += ms-aspell
     SUBDIR += msort
@@ -523,6 +525,7 @@
     SUBDIR += p5-Geo-Parse-OSM
     SUBDIR += p5-Getopt-Lucid
     SUBDIR += p5-Google-Data-JSON
+    SUBDIR += p5-Grutatxt
     SUBDIR += p5-HTML-Copy
     SUBDIR += p5-HTML-Entities-ImodePictogram
     SUBDIR += p5-HTML-Entities-Interpolate
@@ -1180,16 +1183,6 @@
     SUBDIR += peco
     SUBDIR += perl2html
     SUBDIR += php-mecab
-    SUBDIR += php72-ctype
-    SUBDIR += php72-dom
-    SUBDIR += php72-enchant
-    SUBDIR += php72-pspell
-    SUBDIR += php72-simplexml
-    SUBDIR += php72-wddx
-    SUBDIR += php72-xml
-    SUBDIR += php72-xmlreader
-    SUBDIR += php72-xmlwriter
-    SUBDIR += php72-xsl
     SUBDIR += php73-ctype
     SUBDIR += php73-dom
     SUBDIR += php73-enchant
@@ -1428,6 +1421,7 @@
     SUBDIR += py-sphinxcontrib-serializinghtml
     SUBDIR += py-sphinxcontrib-websupport
     SUBDIR += py-sphinxcontrib-websupport11
+    SUBDIR += py-spylls
     SUBDIR += py-stemming
     SUBDIR += py-tabletext
     SUBDIR += py-tablib
@@ -1460,6 +1454,7 @@
     SUBDIR += py-xlwt
     SUBDIR += py-xml-default-dict
     SUBDIR += py-xmldiff
+    SUBDIR += py-xmlschema
     SUBDIR += py-yapf
     SUBDIR += py-zope.i18nmessageid
     SUBDIR += py-zope.structuredtext
@@ -1510,10 +1505,12 @@
     SUBDIR += ruby-rd-mode.el
     SUBDIR += ruby-rdtool
     SUBDIR += ruby-rttool
+    SUBDIR += rubygem-abbrev
     SUBDIR += rubygem-actionpack-xml_parser-rails5
     SUBDIR += rubygem-actionpack-xml_parser-rails52
     SUBDIR += rubygem-actionpack-xml_parser1-rails4
     SUBDIR += rubygem-actiontext60
+    SUBDIR += rubygem-actiontext61
     SUBDIR += rubygem-albino
     SUBDIR += rubygem-amatch
     SUBDIR += rubygem-asciidoctor
@@ -1612,6 +1609,7 @@
     SUBDIR += rubygem-liquid
     SUBDIR += rubygem-liquid-tag-parser
     SUBDIR += rubygem-liquid-tag-parser1
+    SUBDIR += rubygem-liquid4
     SUBDIR += rubygem-loggability
     SUBDIR += rubygem-loofah
     SUBDIR += rubygem-ltsv
@@ -1639,6 +1637,7 @@
     SUBDIR += rubygem-rails-dom-testing-rails50
     SUBDIR += rubygem-rails-dom-testing-rails52
     SUBDIR += rubygem-rails-dom-testing-rails60
+    SUBDIR += rubygem-rails-dom-testing-rails61
     SUBDIR += rubygem-rails-dom-testing1
     SUBDIR += rubygem-rails-html-sanitizer
     SUBDIR += rubygem-rak
@@ -1680,6 +1679,7 @@
     SUBDIR += rubygem-sass-rails-rails50
     SUBDIR += rubygem-sass-rails-rails52
     SUBDIR += rubygem-sass-rails-rails60
+    SUBDIR += rubygem-sass-rails-rails61
     SUBDIR += rubygem-sass32
     SUBDIR += rubygem-sass34
     SUBDIR += rubygem-sassc
@@ -1688,6 +1688,7 @@
     SUBDIR += rubygem-sassc-rails-rails50
     SUBDIR += rubygem-sassc-rails-rails52
     SUBDIR += rubygem-sassc-rails-rails60
+    SUBDIR += rubygem-sassc-rails-rails61
     SUBDIR += rubygem-sassc22
     SUBDIR += rubygem-sax-machine
     SUBDIR += rubygem-scss_lint

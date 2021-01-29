@@ -136,6 +136,7 @@
     SUBDIR += alt-ergo
     SUBDIR += amath
     SUBDIR += ambit
+    SUBDIR += amgcl
     SUBDIR += analitza
     SUBDIR += ann
     SUBDIR += antic
@@ -192,6 +193,8 @@
     SUBDIR += cloog
     SUBDIR += clp
     SUBDIR += clrng
+    SUBDIR += cm
+    SUBDIR += cmh
     SUBDIR += cminpack
     SUBDIR += cmlib
     SUBDIR += cocoalib
@@ -206,6 +209,7 @@
     SUBDIR += convertall
     SUBDIR += coq
     SUBDIR += couenne
+    SUBDIR += coxeter3
     SUBDIR += cppad
     SUBDIR += crlibm
     SUBDIR += cryptominisat
@@ -223,15 +227,21 @@
     SUBDIR += dsdp
     SUBDIR += dune-alugrid
     SUBDIR += dune-common
+    SUBDIR += dune-curvedgeometry
+    SUBDIR += dune-fem
+    SUBDIR += dune-foamgrid
     SUBDIR += dune-functions
     SUBDIR += dune-geometry
     SUBDIR += dune-grid
     SUBDIR += dune-istl
     SUBDIR += dune-localfunctions
+    SUBDIR += dune-metagrid
     SUBDIR += dune-pdelab
+    SUBDIR += dune-polygongrid
     SUBDIR += dune-spgrid
     SUBDIR += dune-typetree
     SUBDIR += dune-uggrid
+    SUBDIR += dune-vtk
     SUBDIR += e-antic
     SUBDIR += eclib
     SUBDIR += ecos
@@ -414,6 +424,7 @@
     SUBDIR += mpfi
     SUBDIR += mpfr
     SUBDIR += mpfrc++
+    SUBDIR += mpfrcx
     SUBDIR += mpir
     SUBDIR += mppp
     SUBDIR += mprime
@@ -697,9 +708,8 @@
     SUBDIR += pear-Math_Combinatorics
     SUBDIR += pecl-bitset
     SUBDIR += pecl-stats2
+    SUBDIR += permlib
     SUBDIR += petiga
-    SUBDIR += php72-bcmath
-    SUBDIR += php72-gmp
     SUBDIR += php73-bcmath
     SUBDIR += php73-gmp
     SUBDIR += php74-bcmath
@@ -748,6 +758,7 @@
     SUBDIR += py-chaospy
     SUBDIR += py-claripy
     SUBDIR += py-cma
+    SUBDIR += py-cmaes
     SUBDIR += py-colormath
     SUBDIR += py-cryptominisat
     SUBDIR += py-cvxopt
@@ -796,6 +807,7 @@
     SUBDIR += py-numpy
     SUBDIR += py-numpy-stl
     SUBDIR += py-opt-einsum
+    SUBDIR += py-optuna
     SUBDIR += py-or-tools
     SUBDIR += py-osqp
     SUBDIR += py-pandas
@@ -829,7 +841,9 @@
     SUBDIR += py-python-fcl
     SUBDIR += py-python-igraph
     SUBDIR += py-python-louvain
+    SUBDIR += py-python-picard
     SUBDIR += py-pyvtk
+    SUBDIR += py-qdldl
     SUBDIR += py-quadprog
     SUBDIR += py-random2
     SUBDIR += py-roman
@@ -842,7 +856,12 @@
     SUBDIR += py-simhash
     SUBDIR += py-snuggs
     SUBDIR += py-spectral
+    SUBDIR += py-spglm
+    SUBDIR += py-spint
+    SUBDIR += py-splot
     SUBDIR += py-spot
+    SUBDIR += py-spreg
+    SUBDIR += py-spvcm
     SUBDIR += py-ssm
     SUBDIR += py-statsmodels
     SUBDIR += py-statsmodels010
@@ -860,7 +879,6 @@
     SUBDIR += qalculate
     SUBDIR += qd
     SUBDIR += qhull
-    SUBDIR += qhull5
     SUBDIR += qposases
     SUBDIR += qrupdate
     SUBDIR += qtiplot-doc
@@ -889,6 +907,7 @@
     SUBDIR += rubygem-narray_miss
     SUBDIR += rubygem-numru-misc
     SUBDIR += rubygem-numru-units
+    SUBDIR += rubygem-prime
     SUBDIR += rubygem-rb-gsl
     SUBDIR += rumur
     SUBDIR += saga
@@ -926,6 +945,7 @@
     SUBDIR += symengine
     SUBDIR += symmetrica
     SUBDIR += symphony
+    SUBDIR += sympol
     SUBDIR += sympow
     SUBDIR += tablix
     SUBDIR += taucs
@@ -947,6 +967,7 @@
     SUBDIR += unuran
     SUBDIR += vampire
     SUBDIR += viennacl
+    SUBDIR += vinci
     SUBDIR += visualpolylib
     SUBDIR += vowpal_wabbit
     SUBDIR += vtk6

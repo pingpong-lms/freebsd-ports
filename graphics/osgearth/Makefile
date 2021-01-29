@@ -4,7 +4,7 @@
 PORTNAME=	osgearth
 PORTVERSION=	2.10.1
 DISTVERSIONPREFIX=	${PORTNAME}-
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	graphics geography
 
 MAINTAINER=	lbartoletti@FreeBSD.org
@@ -39,7 +39,7 @@ PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == powerpc64
+.if ${ARCH:Mpowerpc64*}
 CXXFLAGS+=	-DNO_WARN_X86_INTRINSICS -maltivec -mvsx
 USES+=		compiler:gcc-c++11-lib
 .else

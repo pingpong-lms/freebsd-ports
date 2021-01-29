@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	nextcloud
-PORTVERSION=	20.0.4
+PORTVERSION=	20.0.5
 PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://download.nextcloud.com/server/releases/
@@ -16,6 +16,7 @@ USES=		cpe gettext-runtime php:flavors,web tar:bzip2
 USE_PHP=	bcmath bz2 ctype curl dom fileinfo filter gd gmp hash iconv \
 		json mbstring pdo posix session simplexml xml xmlreader \
 		xmlwriter xsl zip zlib
+IGNORE_WITH_PHP=80
 
 NEXTCLOUD_USERNAME?=	${WWWOWN}
 NEXTCLOUD_GROUPNAME?=	${WWWGRP}

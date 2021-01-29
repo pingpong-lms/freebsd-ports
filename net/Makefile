@@ -79,11 +79,13 @@
     SUBDIR += cf
     SUBDIR += charm
     SUBDIR += chrony
+    SUBDIR += chrony-lite
     SUBDIR += citrix_ica
     SUBDIR += cjdns
     SUBDIR += clash
     SUBDIR += cloud-init
     SUBDIR += cloudflared
+    SUBDIR += cloudquery
     SUBDIR += clusterit
     SUBDIR += cnd
     SUBDIR += concourse-fly
@@ -296,6 +298,7 @@
     SUBDIR += kdenetwork
     SUBDIR += kdenetwork-filesharing
     SUBDIR += kea
+    SUBDIR += keycloak
     SUBDIR += kf5-kcalendarcore
     SUBDIR += kf5-kcontacts
     SUBDIR += kf5-kdav
@@ -430,7 +433,6 @@
     SUBDIR += mdns-repeater
     SUBDIR += measurement-kit
     SUBDIR += mediastreamer
-    SUBDIR += mediatomb
     SUBDIR += megacmd
     SUBDIR += megatools
     SUBDIR += messagelib
@@ -947,14 +949,9 @@
     SUBDIR += pecl-radius
     SUBDIR += pecl-rdkafka
     SUBDIR += pecl-smbclient
-    SUBDIR += pecl-yaz
     SUBDIR += pecl-zmq
     SUBDIR += pen
     SUBDIR += pfinger
-    SUBDIR += php72-ldap
-    SUBDIR += php72-soap
-    SUBDIR += php72-sockets
-    SUBDIR += php72-xmlrpc
     SUBDIR += php73-ldap
     SUBDIR += php73-soap
     SUBDIR += php73-sockets
@@ -1022,7 +1019,6 @@
     SUBDIR += py-httpstat
     SUBDIR += py-ifaddr
     SUBDIR += py-impacket
-    SUBDIR += py-ipaddress
     SUBDIR += py-iplib
     SUBDIR += py-iptools
     SUBDIR += py-kafka-python
@@ -1181,6 +1177,7 @@
     SUBDIR += rtptools
     SUBDIR += rubygem-activestorage52
     SUBDIR += rubygem-activestorage60
+    SUBDIR += rubygem-activestorage61
     SUBDIR += rubygem-amazon-ec2
     SUBDIR += rubygem-amq-protocol
     SUBDIR += rubygem-amqp
@@ -1275,8 +1272,10 @@
     SUBDIR += rubygem-net-netrc
     SUBDIR += rubygem-net-ntp
     SUBDIR += rubygem-net-ping
+    SUBDIR += rubygem-net-protocol
     SUBDIR += rubygem-netrc
     SUBDIR += rubygem-network_interface
+    SUBDIR += rubygem-nkf
     SUBDIR += rubygem-oauth
     SUBDIR += rubygem-oauth2
     SUBDIR += rubygem-octokit
@@ -1298,6 +1297,7 @@
     SUBDIR += rubygem-omniauth-twitter
     SUBDIR += rubygem-omniauth-ultraauth
     SUBDIR += rubygem-omniauth_openid_connect
+    SUBDIR += rubygem-open-uri
     SUBDIR += rubygem-open-uri-cached
     SUBDIR += rubygem-openid_connect
     SUBDIR += rubygem-opennebula
@@ -1359,6 +1359,7 @@
     SUBDIR += sctplib
     SUBDIR += sdl2_net
     SUBDIR += sdl_net
+    SUBDIR += seaweedfs
     SUBDIR += seda
     SUBDIR += self-service-password
     SUBDIR += sems

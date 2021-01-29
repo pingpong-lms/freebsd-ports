@@ -52,6 +52,7 @@
     SUBDIR += dvd-slideshow
     SUBDIR += dvdauthor
     SUBDIR += dvdid
+    SUBDIR += dvdread
     SUBDIR += dvdrip
     SUBDIR += dvdstyler
     SUBDIR += elementary-videos
@@ -238,6 +239,7 @@
     SUBDIR += linux-c7-libv4l
     SUBDIR += linux-tsmuxer
     SUBDIR += linux_dvbwrapper-kmod
+    SUBDIR += livego
     SUBDIR += lives
     SUBDIR += livestreamer
     SUBDIR += lsdvd
@@ -247,6 +249,7 @@
     SUBDIR += mediainfo
     SUBDIR += mencoder
     SUBDIR += mimms
+    SUBDIR += minisatip
     SUBDIR += minitube
     SUBDIR += mjpegtools
     SUBDIR += mkclean

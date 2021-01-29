@@ -126,7 +126,6 @@
     SUBDIR += guile1
     SUBDIR += guile2
     SUBDIR += halide
-    SUBDIR += harbour
     SUBDIR += haskell-mode.el
     SUBDIR += hermes
     SUBDIR += hla
@@ -143,8 +142,6 @@
     SUBDIR += janet
     SUBDIR += jimtcl
     SUBDIR += jruby
-    SUBDIR += julia
-    SUBDIR += julia10
     SUBDIR += jython
     SUBDIR += kawa
     SUBDIR += kf5-kross
@@ -258,8 +255,6 @@
     SUBDIR += pfe
     SUBDIR += pharo
     SUBDIR += php-mode.el
-    SUBDIR += php72
-    SUBDIR += php72-extensions
     SUBDIR += php73
     SUBDIR += php73-extensions
     SUBDIR += php74
@@ -339,7 +334,6 @@
     SUBDIR += solidity
     SUBDIR += spidermonkey17
     SUBDIR += spidermonkey185
-    SUBDIR += spidermonkey24
     SUBDIR += spidermonkey52
     SUBDIR += spidermonkey60
     SUBDIR += spidermonkey78

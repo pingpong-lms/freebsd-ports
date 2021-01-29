@@ -5,6 +5,88 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20210124:
+  AFFECTS: users of net-mgmt/netbox
+  AUTHOR: kai@FreeBSD.org
+
+  The Django templating language (DTL) is no longer supported for export
+  templates.  Please ensure that all export templates use Jinja2 before
+  upgrading.
+
+  Also the support for embedded graphs was completely removed and several
+  changes to the REST API were made.  Please check the changelogs for
+  further details.
+
+20210114:
+  AFFECTS: users of net-im/matterircd
+  AUTHOR: norrland@nullbyte.se
+
+  Commandline switches
+
+  Switched to viper for cmdline parsing, which does not support "short" flags.
+  You'll need to use --flag instead of -flag. Eg ./matterircd --debug
+  Bridge specific configuration is now only in configuration file. This means
+  the following flags have been removed: -restrict,-mmteam,-mmserver,
+  -mminsecure,-mmskiptlsverify.
+  You can set those in matterircd.toml, see the example file.
+
+  Config changes
+
+  BlacklistUser feature for slack has been renamed to DenyUsers.
+  JoinMpImOnTalk feature has been renamed to JoinDM and is available for
+  slack/mattermost
+  JoinInclude, JoinExclude now support regexp (see matterircd.toml.example)
+
+20210113:
+  AFFECTS: users of databases/redis[-devel]
+  AUTHOR: osa@FreeBSD.org
+
+  The databases/redis port has been updated to the recent stable release.
+  Users wanting to stay on v5.x can replace databases/redis with
+  databases/redis5 with one of the following commands:
+
+  # pkg install databases/redis5
+    or
+  # portmaster -o databases/redis5 databases/redis
+    or
+  # portupgrade -o databases/redis5 databases/redis
+
+20210106:
+  AFFECTS: mail/dovecot
+  AUTHOR: pi@FreeBSD.org
+
+  The VPOPMAIL option was removed, because it was dropped upstream,
+  so please check your config before upgrading.
+
+20210106:
+  AFFECTS: sysutils/graylog
+  AUTHOR: dch@FreeBSD.org
+
+  graylog 4.0 and higher now use a new license, the SSPL. For more
+  details, see https://www.graylog.org/post/graylog-v4-0-licensing-sspl
+
+20210102:
+  AFFECTS: x11/libexo, XFCE4 desktop users
+  AUTHOR: madpilot@FreeBSD.org
+
+  XFCE4 has been updated to version 4.16. Unluckily due to how the
+  update works out it interacts badly with a defect in pkg which can
+  cause files from the libexo package to be absent after upgrade.
+
+  To avoid the issue, before upgrading all packages, please update
+  libexo by itself:
+
+  # pkg upgrade libexo
+  # pkg upgrade
+
+  If you have already upgraded and you notice XFCE issues due to
+  missing libraries you can recover easily by forcing reinstallation
+  of libexo:
+
+  # pkg upgrade -f libexo
+
+  Users upgrading via ports should not be affected.
+
 20201228:
   AFFECTS: www/py-flexget
   AUTHOR: jbeich@FreeBSD.org
@@ -543,7 +625,7 @@ you update your ports collection, before attempting any port upgrades.
   AUTHOR: brnrd@FreeBSD.org
 
   The ports now add sample configuration files to /usr/local/etc/mysql. You
-  must merge your client configation with the conf.d/client.cnf and your
+  must merge your client configuration with the conf.d/client.cnf and your
   server configuration with conf.d/server.cnf.
 
 20200518:
@@ -1012,7 +1094,7 @@ you update your ports collection, before attempting any port upgrades.
   are too limiting and omit the Samba supplimentary libraries, which do
   have Python bindings to the default Python 3.x version. With the update
   of the default Python3 version you also need to rebuild all the
-  supplimentary Samba libraries and samba410 itself.
+  supplementary Samba libraries and samba410 itself.
 
   For portmaster users it would be enough to run:
 

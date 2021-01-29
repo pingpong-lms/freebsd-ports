@@ -4,7 +4,7 @@
 PORTNAME=	ceph
 DISTVERSIONPREFIX=	v
 DISTVERSION=	14.2.11
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net
 PKGNAMESUFFIX=	14
 
@@ -15,14 +15,14 @@ LICENSE=	GPLv2 LGPL3
 LICENSE_COMB=	dual
 
 # even though i386 will build, it is not really advised.
-ONLY_FOR_ARCHS=	amd64 powerpc64
+ONLY_FOR_ARCHS=	amd64 powerpc64 powerpc64le
 
 BUILD_DEPENDS=	\
 	bash:shells/bash \
 	git:devel/git \
 	gperf:devel/gperf \
 	yasm:devel/yasm \
-	${PY_SPHINX} \
+	${PYTHON_PKGNAMEPREFIX}sphinx>=2.1.2,1:textproc/py-sphinx@${PY_FLAVOR} \
 	${LOCALBASE}/lib/libatomic_ops.a:devel/libatomic_ops \
 	${LOCALBASE}/bin/ld:devel/binutils
 LIB_DEPENDS=	\

@@ -28,7 +28,6 @@
     SUBDIR += ample
     SUBDIR += amsynth
     SUBDIR += aqualung
-    SUBDIR += ardour
     SUBDIR += ardour6
     SUBDIR += ario
     SUBDIR += arss
@@ -81,6 +80,7 @@
     SUBDIR += cdplay
     SUBDIR += celt
     SUBDIR += checkmate
+    SUBDIR += cheesecutter
     SUBDIR += chordpack
     SUBDIR += chromaprint
     SUBDIR += clementine-player
@@ -365,6 +365,7 @@
     SUBDIR += kexis
     SUBDIR += kid3-kf5
     SUBDIR += kid3-qt5
+    SUBDIR += klystrack
     SUBDIR += kmix
     SUBDIR += komposter
     SUBDIR += ksmp3play
@@ -494,15 +495,16 @@
     SUBDIR += mda-lv2
     SUBDIR += mhwaveedit
     SUBDIR += midi-matrix-lv2
+    SUBDIR += midifile
     SUBDIR += midiomatic-lv2
     SUBDIR += midipp
     SUBDIR += mikmod
     SUBDIR += milkytracker
+    SUBDIR += minimp3
     SUBDIR += mio2jack
     SUBDIR += mixer.app
     SUBDIR += mixertui
     SUBDIR += mixxx
-    SUBDIR += mixxx21
     SUBDIR += mkcue
     SUBDIR += moc
     SUBDIR += modplug-tools
@@ -560,6 +562,7 @@
     SUBDIR += ncspot
     SUBDIR += nekobi-lv2
     SUBDIR += noise-repellent-lv2
+    SUBDIR += noise-suppression-for-voice-lv2
     SUBDIR += normalize
     SUBDIR += nosefart
     SUBDIR += noson-app
@@ -802,6 +805,7 @@
     SUBDIR += teamspeak3-server
     SUBDIR += tempest_for_eliza
     SUBDIR += thunar-media-tags-plugin
+    SUBDIR += tiatracker
     SUBDIR += timely-lv2
     SUBDIR += timemachine
     SUBDIR += timidity
