@@ -2,7 +2,7 @@
 
 PORTNAME=	yuzu
 PORTVERSION=	s20201218
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	emulators
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -44,7 +44,7 @@ GH_TUPLE=	DarkLordZach:mbedtls:a280e60:mbedtls/externals/mbedtls \
 		citra-emu:ext-soundtouch:060181e:soundtouch/externals/soundtouch \
 		herumi:xbyak:v5.96:xbyak/externals/xbyak \
 		nih-at:libzip:rel-1-5-2-93-g89bd6d63:libzip/externals/libzip/libzip \
-		kinetiknz:cubeb:cubeb-0.2-1291-g5c2cf26:cubeb/externals/cubeb \
+		kinetiknz:cubeb:cubeb-0.2-1298-g8d53747:cubeb/externals/cubeb \
 		benhoyt:inih:r52:inih/externals/inih/inih
 
 USES=		cmake compiler:c++17-lang localbase:ldflags sdl ssl
@@ -93,25 +93,4 @@ post-patch:
 		-e 's/@GIT_DESC@/${GH_TAGNAME}/' \
 		${WRKSRC}/src/common/scm_rev.cpp.in
 
-.include <bsd.port.pre.mk>
-
-# XXX Drop after FreeBSD 12.1 EOL
-.if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} < 100
-. if ${LLVM_DEFAULT:C/[1-5]./&0/:S,-devel,990,} < 100
-LLVM_DEFAULT=	10
-. endif
-BUILD_DEPENDS+=	clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
-CC=		clang${LLVM_DEFAULT}
-CXX=		clang++${LLVM_DEFAULT}
-CPP=		clang-cpp${LLVM_DEFAULT}
-.endif
-
-# XXX Drop after FreeBSD 12.1 EOL
-.if make(makesum) || (!exists(/usr/include/c++/v1/fenv.h) && exists(/usr/lib/libc++.so))
-MASTER_SITES+=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${LLVM_VER}/:libcxx
-DISTFILES+=	libcxx-${LLVM_VER}.src.tar.xz:libcxx
-CXXFLAGS+=	-nostdinc++ -isystem${WRKDIR}/libcxx-${LLVM_VER}.src/include
-LLVM_VER=	10.0.1
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

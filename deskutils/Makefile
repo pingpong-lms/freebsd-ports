@@ -38,6 +38,7 @@
     SUBDIR += clipmenu
     SUBDIR += clipnotify
     SUBDIR += conkyforecast
+    SUBDIR += coolreader
     SUBDIR += copyq
     SUBDIR += countdown
     SUBDIR += dailystrips
@@ -72,6 +73,7 @@
     SUBDIR += gnome-initial-setup
     SUBDIR += gnome-maps
     SUBDIR += gnome-photos
+    SUBDIR += gnome-pomodoro
     SUBDIR += gnome-screenshot
     SUBDIR += gnome-search-tool
     SUBDIR += gnome-shell-extension-audio-output-switcher
@@ -174,7 +176,6 @@
     SUBDIR += noti
     SUBDIR += notification-daemon
     SUBDIR += notify-osd
-    SUBDIR += orage
     SUBDIR += osmo
     SUBDIR += owncloudclient
     SUBDIR += p5-Data-ICal
@@ -253,7 +254,6 @@
     SUBDIR += xfce4-notes-plugin
     SUBDIR += xfce4-notifyd
     SUBDIR += xfce4-tumbler
-    SUBDIR += xfce4-volumed
     SUBDIR += xfce4-volumed-pulse
     SUBDIR += xfce4-xkb-plugin
     SUBDIR += xmdiary

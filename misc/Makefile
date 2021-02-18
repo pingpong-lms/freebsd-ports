@@ -35,7 +35,6 @@
     SUBDIR += bsod
     SUBDIR += buffer
     SUBDIR += cave
-    SUBDIR += cdcollect
     SUBDIR += cheat
     SUBDIR += chef
     SUBDIR += chmlib
@@ -173,6 +172,7 @@
     SUBDIR += hotkeys
     SUBDIR += hs-hascard
     SUBDIR += hulgalugha
+    SUBDIR += hwdata
     SUBDIR += hxtools
     SUBDIR += ignition-fuel-tools
     SUBDIR += iio-oscilloscope
@@ -361,7 +361,6 @@
     SUBDIR += php80-calendar
     SUBDIR += pinfo
     SUBDIR += pipe
-    SUBDIR += pnpids
     SUBDIR += posixtestsuite
     SUBDIR += proxyper
     SUBDIR += pspresent
@@ -428,6 +427,7 @@
     SUBDIR += qt5-l10n
     SUBDIR += qt5ct
     SUBDIR += qtchooser
+    SUBDIR += quantum++
     SUBDIR += raspberrypi-gpioshutdown
     SUBDIR += raspberrypi-userland
     SUBDIR += raspbsd-led

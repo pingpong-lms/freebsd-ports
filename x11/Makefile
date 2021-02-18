@@ -90,6 +90,7 @@
     SUBDIR += grabc
     SUBDIR += grim
     SUBDIR += gromit
+    SUBDIR += gromit-mpx
     SUBDIR += gskrab
     SUBDIR += gstreamer1-plugins-x
     SUBDIR += gstreamer1-plugins-ximagesrc
@@ -299,6 +300,7 @@
     SUBDIR += sakura
     SUBDIR += sbxkb
     SUBDIR += screen-message
+    SUBDIR += screengrab
     SUBDIR += screenkey
     SUBDIR += scripts
     SUBDIR += sddm
@@ -356,6 +358,7 @@
     SUBDIR += wdisplays
     SUBDIR += wdm
     SUBDIR += wev
+    SUBDIR += wezterm
     SUBDIR += wf-shell
     SUBDIR += wl-clipboard
     SUBDIR += wlogout
@@ -436,7 +439,6 @@
     SUBDIR += xfce4-clipman-plugin
     SUBDIR += xfce4-conf
     SUBDIR += xfce4-dashboard
-    SUBDIR += xfce4-embed-plugin
     SUBDIR += xfce4-goodies
     SUBDIR += xfce4-screensaver
     SUBDIR += xfce4-screenshooter-plugin

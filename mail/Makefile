@@ -273,7 +273,6 @@
     SUBDIR += opensmtpd-extras-table-sqlite
     SUBDIR += opensmtpd-filter-rspamd
     SUBDIR += opensmtpd-filter-senderscore
-    SUBDIR += openwebmail
     SUBDIR += osbf-lua
     SUBDIR += ovs
     SUBDIR += p5-CGP-CLI
@@ -498,6 +497,7 @@
     SUBDIR += py-fuglu
     SUBDIR += py-mail-parser
     SUBDIR += py-mailmanclient
+    SUBDIR += py-mailnag
     SUBDIR += py-managesieve3
     SUBDIR += py-milter
     SUBDIR += py-notmuch
@@ -550,6 +550,7 @@
     SUBDIR += rmilter
     SUBDIR += roundcube
     SUBDIR += roundcube-automatic_addressbook
+    SUBDIR += roundcube-calendar-kolab
     SUBDIR += roundcube-carddav
     SUBDIR += roundcube-contextmenu
     SUBDIR += roundcube-html5_notifier

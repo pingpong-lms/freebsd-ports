@@ -22,6 +22,7 @@
     SUBDIR += R-cran-bit
     SUBDIR += R-cran-bit64
     SUBDIR += R-cran-bitops
+    SUBDIR += R-cran-blob
     SUBDIR += R-cran-brio
     SUBDIR += R-cran-broom
     SUBDIR += R-cran-caTools
@@ -105,6 +106,7 @@
     SUBDIR += R-cran-uuid
     SUBDIR += R-cran-vcd
     SUBDIR += R-cran-vctrs
+    SUBDIR += R-cran-whisker
     SUBDIR += R-cran-withr
     SUBDIR += R-cran-zeallot
     SUBDIR += RStudio
@@ -367,6 +369,7 @@
     SUBDIR += codeblocks
     SUBDIR += codequery
     SUBDIR += codesearch-py
+    SUBDIR += codeville
     SUBDIR += codeworker
     SUBDIR += collada-dom
     SUBDIR += color
@@ -533,7 +536,7 @@
     SUBDIR += efl
     SUBDIR += egypt
     SUBDIR += eiffelstudio
-    SUBDIR += electron9
+    SUBDIR += electron11
     SUBDIR += elf
     SUBDIR += elfio
     SUBDIR += elfkickers
@@ -856,7 +859,6 @@
     SUBDIR += gob2
     SUBDIR += gobject-introspection
     SUBDIR += gocheese
-    SUBDIR += godep
     SUBDIR += godot
     SUBDIR += godot-tools
     SUBDIR += godot2
@@ -888,14 +890,10 @@
     SUBDIR += grcov
     SUBDIR += grex
     SUBDIR += grpc
+    SUBDIR += grpc134
     SUBDIR += grv
     SUBDIR += gsettings-desktop-schemas
     SUBDIR += gsoap
-    SUBDIR += gstreamer-plugins-gconf
-    SUBDIR += gstreamer-plugins-gio
-    SUBDIR += gstreamer-plugins-gnomevfs
-    SUBDIR += gstreamer-plugins-sdl
-    SUBDIR += gstreamer-plugins-soup
     SUBDIR += gstreamer1-plugins-soup
     SUBDIR += gtgt
     SUBDIR += gtranslator
@@ -1964,6 +1962,7 @@
     SUBDIR += p5-Config-MVP-Reader-INI
     SUBDIR += p5-Config-Merge
     SUBDIR += p5-Config-Model
+    SUBDIR += p5-Config-Model-Backend-Yaml
     SUBDIR += p5-Config-Model-Tester
     SUBDIR += p5-Config-MySQL
     SUBDIR += p5-Config-Objective
@@ -2011,6 +2010,7 @@
     SUBDIR += p5-Data-Clone
     SUBDIR += p5-Data-Compare
     SUBDIR += p5-Data-Diver
+    SUBDIR += p5-Data-Dmp
     SUBDIR += p5-Data-Domain
     SUBDIR += p5-Data-Dump
     SUBDIR += p5-Data-Dump-Color
@@ -2276,6 +2276,7 @@
     SUBDIR += p5-Devel-StackTrace-AsHTML
     SUBDIR += p5-Devel-StackTrace-WithLexicals
     SUBDIR += p5-Devel-StealthDebug
+    SUBDIR += p5-Devel-StrictMode
     SUBDIR += p5-Devel-Symdump
     SUBDIR += p5-Devel-Timer
     SUBDIR += p5-Devel-Trace
@@ -3116,6 +3117,7 @@
     SUBDIR += p5-Regexp-Pattern-Perl
     SUBDIR += p5-Regexp-RegGrp
     SUBDIR += p5-Regexp-Shellish
+    SUBDIR += p5-Regexp-Stringify
     SUBDIR += p5-Regexp-Subst-Parallel
     SUBDIR += p5-Regexp-Trie
     SUBDIR += p5-Religion
@@ -3694,6 +3696,7 @@
     SUBDIR += pam_wrapper
     SUBDIR += papi
     SUBDIR += papilio-loader
+    SUBDIR += parallel-hashmap
     SUBDIR += pas2dox
     SUBDIR += pasm
     SUBDIR += patch
@@ -4084,6 +4087,7 @@
     SUBDIR += py-atomicwrites
     SUBDIR += py-atpublic
     SUBDIR += py-attrs
+    SUBDIR += py-autocommand
     SUBDIR += py-autoflake
     SUBDIR += py-automaton
     SUBDIR += py-autoprop
@@ -4222,6 +4226,7 @@
     SUBDIR += py-case
     SUBDIR += py-castellan
     SUBDIR += py-castellan1
+    SUBDIR += py-catalogue
     SUBDIR += py-cbor
     SUBDIR += py-cbor2
     SUBDIR += py-cclib
@@ -4334,6 +4339,7 @@
     SUBDIR += py-demjson
     SUBDIR += py-deprecated
     SUBDIR += py-deprecation
+    SUBDIR += py-devtools
     SUBDIR += py-dexml
     SUBDIR += py-diazo
     SUBDIR += py-dill
@@ -4591,6 +4597,7 @@
     SUBDIR += py-libversion
     SUBDIR += py-libvirt
     SUBDIR += py-libzfs
+    SUBDIR += py-linear-tsv
     SUBDIR += py-linecache2
     SUBDIR += py-lineedit
     SUBDIR += py-llfuse
@@ -4752,6 +4759,7 @@
     SUBDIR += py-pastel
     SUBDIR += py-patch
     SUBDIR += py-patch-ng
+    SUBDIR += py-path
     SUBDIR += py-path.py
     SUBDIR += py-pathlib2
     SUBDIR += py-pathspec
@@ -4849,6 +4857,7 @@
     SUBDIR += py-pycparser
     SUBDIR += py-pydantic
     SUBDIR += py-pydash
+    SUBDIR += py-pydecor
     SUBDIR += py-pydenticon
     SUBDIR += py-pydevd
     SUBDIR += py-pydispatcher
@@ -5014,6 +5023,7 @@
     SUBDIR += py-repoze.xmliter
     SUBDIR += py-represent
     SUBDIR += py-requestsexceptions
+    SUBDIR += py-requirementslib
     SUBDIR += py-resolver
     SUBDIR += py-resource
     SUBDIR += py-responses
@@ -5980,10 +5990,12 @@
     SUBDIR += rubygem-cucumber
     SUBDIR += rubygem-cucumber-core
     SUBDIR += rubygem-cucumber-create-meta
+    SUBDIR += rubygem-cucumber-create-meta2
     SUBDIR += rubygem-cucumber-cucumber-expressions
     SUBDIR += rubygem-cucumber-cucumber-expressions10
     SUBDIR += rubygem-cucumber-formatter-dots
     SUBDIR += rubygem-cucumber-messages
+    SUBDIR += rubygem-cucumber-messages13
     SUBDIR += rubygem-cucumber-messages4
     SUBDIR += rubygem-cucumber-rails
     SUBDIR += rubygem-cucumber-tag-expressions
@@ -6813,6 +6825,7 @@
     SUBDIR += t1lib
     SUBDIR += ta-lib
     SUBDIR += tablist
+    SUBDIR += tabulate
     SUBDIR += tailor
     SUBDIR += talloc
     SUBDIR += taskctl

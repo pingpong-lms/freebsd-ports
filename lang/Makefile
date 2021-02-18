@@ -69,6 +69,7 @@
     SUBDIR += expect
     SUBDIR += f2c
     SUBDIR += fasm
+    SUBDIR += fennel
     SUBDIR += ferite
     SUBDIR += ficl
     SUBDIR += fpc
@@ -326,6 +327,7 @@
     SUBDIR += sketchy
     SUBDIR += slib
     SUBDIR += slib-guile
+    SUBDIR += slib-guile1
     SUBDIR += slib-guile2
     SUBDIR += slisp
     SUBDIR += smalltalk

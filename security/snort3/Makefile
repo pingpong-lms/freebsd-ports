@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	snort
-DISTVERSION=	3.1.0.0
+DISTVERSION=	3.1.1.0
 PORTEPOCH=	1
 CATEGORIES=	security
 PKGNAMESUFFIX=	3
@@ -58,7 +58,7 @@ CONFLICTS=	snort-2*
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == powerpc64
+.if ${ARCH:Mpowerpc64*}
 LIB_DEPENDS+=	libluajit-5.1.so:lang/luajit-openresty
 .else
 LIB_DEPENDS+=	libluajit-5.1.so:lang/luajit
