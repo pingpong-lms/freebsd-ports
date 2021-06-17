@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-app
-PORTVERSION=	0.22
+PORTVERSION=	0.24
 CATEGORIES=	pingpong
 MASTER_SITES=	#
 DISTFILES=	#
@@ -19,7 +19,7 @@ PLIST_FILES=	sbin/ppctl \
 		share/ffmpeg/libx264-slow.ffpreset
 
 USE_APACHE_RUN=	24
-USES=		perl5
+USES=		perl5 python:3.7+
 
 RUN_DEPENDS= \
 	jsvc:devel/apache-commons-daemon \
@@ -43,6 +43,8 @@ RUN_DEPENDS= \
 	${LOCALBASE}/share/fonts/webfonts/arial.ttf:x11-fonts/webfonts \
 	wkhtmltopdf:converters/wkhtmltopdf \
 	flask:www/py-flask \
+	${PYTHON_PKGNAMEPREFIX}dateutil>0:devel/py-dateutil@${PY_FLAVOR} \
+	${PYTHON_PKGNAMEPREFIX}requests>=2.20.0:www/py-requests@${PY_FLAVOR} \
 	automake:devel/automake \
 	${LOCALBASE}/share/pingpong-generic/installed.stamp:pingpong/pingpong-generic \
 	${LOCALBASE}/share/pingpong-aspell/installed.stamp:pingpong/pingpong-aspell
