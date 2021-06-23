@@ -1,6 +1,6 @@
 PORTNAME=	saxon
 PORTVERSION=	9.1.0.8
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	textproc java
 MASTER_SITES=	SF/${PORTNAME}/Saxon-B/${PORTVERSION}:binary	\
@@ -30,6 +30,7 @@ JARFILES=	saxon9-sql.jar saxon9.jar saxon9-xpath.jar saxon9-dom.jar \
 PLIST_FILES+=	${JARFILES:S,^,%%JAVAJARDIR%%/,} bin/saxon bin/saxon-xquery
 PORTDOCS=	*
 
+RUN_DEPENDS=	${JAVAJARDIR}/postgresql.jar:databases/postgresql-jdbc
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MJDOM}
