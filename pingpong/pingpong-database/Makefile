@@ -14,7 +14,6 @@ NO_BUILD=	yes
 NO_MTREE=	yes
 
 USES=		pgsql
-USE_PGSQL=	yes
 WANT_PGSQL_VER=	96
 WANT_PGSQL=	server contrib
 
