@@ -28,13 +28,13 @@ BINSRC=		${WRKSRC}/Unified_storcli_all_os/FreeBSD
 
 .include <bsd.port.pre.mk>
 
-.if !exists(${DISTDIR}/${DISTNAME}${EXTRACT_SUFX})
-DOWNLOAD_URL=	https://docs.broadcom.com/docs-and-downloads/raid-controllers/raid-controllers-common-files/${DISTNAME}${EXTRACT_SUFX}
+#.if !exists(${DISTDIR}/${DISTNAME}${EXTRACT_SUFX})
+#DOWNLOAD_URL=	https://docs.broadcom.com/docs-and-downloads/raid-controllers/raid-controllers-common-files/${DISTNAME}${EXTRACT_SUFX}
 
-IGNORE?=	You must manually fetch the distribution file\
+#IGNORE?=	You must manually fetch the distribution file\
 	(${DISTNAME}${EXTRACT_SUFX}) from ${DOWNLOAD_URL},\
 	place it in ${DISTDIR} and then run make again
-.endif
+#.endif
 
 post-extract:
 	@${TAR} xf ${BINSRC}/storcli${ARCH:S/i386//:S/amd64/64/}.tar -C${WRKSRC}
