@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-database
-PORTVERSION=	0.6
+PORTVERSION=	0.7
 CATEGORIES=	pingpong databases
 MASTER_SITES=	#
 DISTFILES=	#
@@ -13,8 +13,7 @@ COMMENT=	The meta-port for PING PONG application packages
 NO_BUILD=	yes
 NO_MTREE=	yes
 
-USES=		pgsql
-WANT_PGSQL_VER=	96
+USES=		pgsql:14
 WANT_PGSQL=	server contrib
 
 RUN_DEPENDS=	${LOCALBASE}/share/pingpong-generic/installed.stamp:pingpong/pingpong-generic \
