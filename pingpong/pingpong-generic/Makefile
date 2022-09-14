@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-generic
-PORTVERSION=	0.21
+PORTVERSION=	0.22
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
 DISTFILES=	#
@@ -44,6 +44,7 @@ RUN_DEPENDS= \
 	nrpe3:net-mgmt/nrpe3 \
 	collectd:net-mgmt/collectd5 \
 	telegraf:net-mgmt/telegraf \
+	ossec-hids-agent-config>=3.7.0:security/ossec-hids-agent-config \
 	snmpd:net-mgmt/net-snmp \
 	lsof:sysutils/lsof \
 	dig:dns/bind-tools \
