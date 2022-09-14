@@ -17,7 +17,7 @@ RUN_DEPENDS=	p5-libwww>=0:www/p5-libwww \
 		paperconf:print/libpaper
 
 NO_BUILD=	yes
-USES=		ghostscript:run magick:7,run perl5
+USES=		ghostscript:run magick:7,run,nox11 perl5
 
 CONFLICTS_INSTALL=	p5-DocSet # bin/html2ps
 
