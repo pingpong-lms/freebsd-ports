@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-generic
-PORTVERSION=	0.22
+PORTVERSION=	0.23
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
 DISTFILES=	#
