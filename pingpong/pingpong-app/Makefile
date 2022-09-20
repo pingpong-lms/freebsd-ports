@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-app
-PORTVERSION=	0.27
+PORTVERSION=	0.28
 CATEGORIES=	pingpong
 MASTER_SITES=	#
 DISTFILES=	#
@@ -37,6 +37,7 @@ RUN_DEPENDS= \
 	webalizer:www/webalizer \
 	shibd:security/shibboleth-sp \
 	saxon:textproc/saxon-devel \
+	jq:textproc/jq \
 	xml:textproc/xmlstarlet \
 	xmlsec1:security/xmlsec1 \
 	${LOCALBASE}/share/fonts/webfonts/arial.ttf:x11-fonts/webfonts \
