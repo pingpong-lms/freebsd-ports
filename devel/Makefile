@@ -1518,6 +1518,7 @@
     SUBDIR += mate-common
     SUBDIR += maven
     SUBDIR += maven-wrapper
+    SUBDIR += maven363
     SUBDIR += mcpp
     SUBDIR += mdb
     SUBDIR += mdds
@@ -5709,6 +5710,7 @@
     SUBDIR += radian
     SUBDIR += ragel
     SUBDIR += raknet
+    SUBDIR += random123
     SUBDIR += rang
     SUBDIR += range-v3
     SUBDIR += rapidcheck

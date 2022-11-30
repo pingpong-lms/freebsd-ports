@@ -120,6 +120,7 @@
     SUBDIR += beadm-devel
     SUBDIR += beats6
     SUBDIR += beats7
+    SUBDIR += beats8
     SUBDIR += bfs
     SUBDIR += bhyve+
     SUBDIR += bhyve-firmware
@@ -462,7 +463,6 @@
     SUBDIR += g15daemon
     SUBDIR += gaffitter
     SUBDIR += ganglia-monitor-core
-    SUBDIR += ganglia-webfrontend
     SUBDIR += gapcmon
     SUBDIR += garcon
     SUBDIR += gather
@@ -513,6 +513,7 @@
     SUBDIR += gstopd
     SUBDIR += gstreamer1-plugins-cdio
     SUBDIR += gtk-imonc
+    SUBDIR += hammer2
     SUBDIR += handlr
     SUBDIR += hardlink
     SUBDIR += hare
@@ -1135,6 +1136,7 @@
     SUBDIR += pydf
     SUBDIR += qchroot
     SUBDIR += qdirstat
+    SUBDIR += qflipper
     SUBDIR += qjail
     SUBDIR += qjail54
     SUBDIR += qlogtools
