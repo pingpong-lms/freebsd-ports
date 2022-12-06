@@ -999,6 +999,7 @@
     SUBDIR += jetbrains-clion
     SUBDIR += jetbrains-goland
     SUBDIR += jetbrains-phpstorm
+    SUBDIR += jetbrains-pty4j
     SUBDIR += jetbrains-webstorm
     SUBDIR += jgoodies-looks
     SUBDIR += jiic
@@ -3972,7 +3973,6 @@
     SUBDIR += pear-pdepend-staticReflection
     SUBDIR += pear-phing
     SUBDIR += pecl-APCu
-    SUBDIR += pecl-APCu_bc
     SUBDIR += pecl-ast
     SUBDIR += pecl-dio
     SUBDIR += pecl-ds
@@ -3983,7 +3983,6 @@
     SUBDIR += pecl-grpc
     SUBDIR += pecl-hrtime
     SUBDIR += pecl-inotify
-    SUBDIR += pecl-jsmin
     SUBDIR += pecl-json_post
     SUBDIR += pecl-msgpack
     SUBDIR += pecl-mustache
@@ -4118,6 +4117,7 @@
     SUBDIR += py-Jinja2
     SUBDIR += py-Jinja2-doc
     SUBDIR += py-Js2Py
+    SUBDIR += py-PYB11Generator
     SUBDIR += py-PeachPy
     SUBDIR += py-Products.ExternalEditor
     SUBDIR += py-Products.PloneLanguageTool
@@ -5442,6 +5442,7 @@
     SUBDIR += py-trimesh
     SUBDIR += py-trove-classifiers
     SUBDIR += py-ttictoc
+    SUBDIR += py-ttkbootstrap
     SUBDIR += py-ttystatus
     SUBDIR += py-twiggy
     SUBDIR += py-twilio
@@ -5715,6 +5716,7 @@
     SUBDIR += rapidfuzz-cpp
     SUBDIR += rapidjson
     SUBDIR += rapidyaml
+    SUBDIR += rationl
     SUBDIR += raylib
     SUBDIR += rbenv
     SUBDIR += rbtools
@@ -7392,6 +7394,7 @@
     SUBDIR += treepy.el
     SUBDIR += trellis
     SUBDIR += trio
+    SUBDIR += trompeloeil
     SUBDIR += truc
     SUBDIR += tup
     SUBDIR += ua_parser-core

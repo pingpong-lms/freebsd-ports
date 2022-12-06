@@ -62,6 +62,7 @@
     SUBDIR += R-cran-forcats
     SUBDIR += R-cran-forecast
     SUBDIR += R-cran-fracdiff
+    SUBDIR += R-cran-gbutils
     SUBDIR += R-cran-geepack
     SUBDIR += R-cran-geometry
     SUBDIR += R-cran-gmp
@@ -266,6 +267,7 @@
     SUBDIR += dbcsr
     SUBDIR += deal.ii
     SUBDIR += dieharder
+    SUBDIR += dihydrogen
     SUBDIR += dionysus
     SUBDIR += disco
     SUBDIR += djbfft
@@ -389,6 +391,7 @@
     SUBDIR += hs-penrose
     SUBDIR += hs-syfco
     SUBDIR += hsl
+    SUBDIR += hydrogen
     SUBDIR += ideep
     SUBDIR += ignition-math
     SUBDIR += igraph
@@ -817,7 +820,6 @@
     SUBDIR += pear-Math_BigInteger
     SUBDIR += pear-Math_Combinatorics
     SUBDIR += pecl-bitset
-    SUBDIR += pecl-stats2
     SUBDIR += permlib
     SUBDIR += petanque
     SUBDIR += petiga
@@ -840,6 +842,7 @@
     SUBDIR += ploticus-nox11
     SUBDIR += plplot
     SUBDIR += poly2tri
+    SUBDIR += polyclipper
     SUBDIR += polylib
     SUBDIR += polymake
     SUBDIR += primecount
@@ -1080,6 +1083,7 @@
     SUBDIR += scalapackfx
     SUBDIR += scilab
     SUBDIR += scilab-toolbox-swt
+    SUBDIR += scorec-core
     SUBDIR += scs
     SUBDIR += sdpa
     SUBDIR += secp256k1
@@ -1090,6 +1094,7 @@
     SUBDIR += slatec
     SUBDIR += sleef
     SUBDIR += slgrace
+    SUBDIR += slicot
     SUBDIR += snns
     SUBDIR += solitaire
     SUBDIR += sound-of-sorting
