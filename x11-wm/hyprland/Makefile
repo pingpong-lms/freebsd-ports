@@ -1,6 +1,6 @@
 PORTNAME=	hyprland
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.18.0beta
+DISTVERSION=	0.20.1beta
 CATEGORIES=	x11-wm wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -21,11 +21,12 @@ LIB_DEPENDS=	libwayland-server.so:graphics/wayland \
 USES=		compiler:c++11-lib gl gnome meson pkgconfig xorg
 USE_GCC=	yes:build
 USE_GITHUB=	yes
-USE_GL=		egl gl
+USE_GL=		egl opengl
 USE_GNOME=	cairo
 USE_XORG=	pixman
 GH_ACCOUNT=	hyprwm
 GH_PROJECT=	Hyprland
+GH_TUPLE=	hyprwm:hyprland-protocols:301733a:hyprland_protocols/subprojects/hyprland-protocols
 LDFLAGS+=	-static-libstdc++ -static-libgcc # avoid libc++ conflict
 
 OPTIONS_DEFINE=	X11
@@ -40,9 +41,17 @@ post-patch:
 		-e "/GIT_COMMIT_HASH/s/run_command.*/'${DISTVERSIONFULL}'/" \
 		-e "/GIT_COMMIT_MESSAGE/s/run_command.*/'<unknown>'/" \
 		-e "/GIT_DIRTY/s/run_command.*/'portbld'/" \
+		-e "/version.*jq/s/run_command.*/'${DISTVERSIONFULL}',/" \
 		${WRKSRC}/meson.build
 # Respect PREFIX for wallpapers
 	@${REINPLACE_CMD} 's,/usr/share,${DATADIR:H},' \
 		${WRKSRC}/src/render/OpenGL.cpp
+
+.ifdef GH_TUPLE
+post-install:
+# XXX USES=meson invokes ninja directly, so doesn't support --skip-subprojects
+	@${RM} -r ${STAGEDIR}${PREFIX}/share/pkgconfig
+	@${RM} -r ${STAGEDIR}${PREFIX}/share/protocols
+.endif
 
 .include <bsd.port.mk>

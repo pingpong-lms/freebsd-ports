@@ -1,0 +1,230 @@
+  <vuln vid="3a023570-91ab-11ed-8950-001b217b3468">
+    <topic>Gitlab -- Multiple Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<range><ge>15.7.0</ge><lt>15.7.2</lt></range>
+	<range><ge>15.6.0</ge><lt>15.6.4</lt></range>
+	<range><ge>6.6.0</ge><lt>15.5.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2023/01/09/security-release-gitlab-15-7-2-released/">
+	  <p>Race condition on gitlab.com enables verified email forgery and third-party account hijacking</p>
+	  <p>DOS and high resource consumption of Prometheus server through abuse of Grafana integration proxy endpoint</p>
+	  <p>Maintainer can leak sentry token by changing the configured URL</p>
+	  <p>Maintainer can leak masked webhook secrets by changing target URL of the webhook</p>
+	  <p>Cross-site scripting in wiki changes page affecting self-hosted instances running without strict CSP</p>
+	  <p>Group access tokens continue to work after owner loses ability to revoke them</p>
+	  <p>Users' avatar disclosure by user ID in private GitLab instances</p>
+	  <p>Arbitrary Protocol Redirection in GitLab Pages</p>
+	  <p>Regex DoS due to device-detector parsing user agents</p>
+	  <p>Regex DoS in the Submodule Url Parser</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-4037</cvename>
+      <cvename>CVE-2022-3613</cvename>
+      <cvename>CVE-2022-4365</cvename>
+      <cvename>CVE-2022-4342</cvename>
+      <cvename>CVE-2022-3573</cvename>
+      <cvename>CVE-2022-4167</cvename>
+      <cvename>CVE-2022-3870</cvename>
+      <cvename>CVE-2023-0042</cvename>
+      <cvename>CVE-2022-4131</cvename>
+      <cvename>CVE-2022-3514</cvename>
+      <url>https://about.gitlab.com/releases/2023/01/09/security-release-gitlab-15-7-2-released/</url>
+    </references>
+    <dates>
+      <discovery>2023-01-09</discovery>
+      <entry>2023-01-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7b929503-911d-11ed-a925-3065ec8fd3ec">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>109.0.5414.74</lt></range>
+      </package>
+      <package>
+	<name>ungoogled-chromium</name>
+	<range><lt>109.0.5414.74</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2023/01/stable-channel-update-for-desktop.html">
+	  <p>This release contains 17 security fixes, including:</p>
+	  <ul>
+	    <li>[1353208] High CVE-2023-0128: Use after free in Overview Mode. Reported by Khalil Zhani on 2022-08-16</li>
+	    <li>[1382033] High CVE-2023-0129: Heap buffer overflow in Network Service. Reported by asnine on 2022-11-07</li>
+	    <li>[1370028] Medium CVE-2023-0130: Inappropriate implementation in Fullscreen API. Reported by Hafiizh on 2022-09-30</li>
+	    <li>[1357366] Medium CVE-2023-0131: Inappropriate implementation in iframe Sandbox. Reported by NDevTK on 2022-08-28</li>
+	    <li>[1371215] Medium CVE-2023-0132: Inappropriate implementation in Permission prompts. Reported by Jasper Rebane (popstonia) on 2022-10-05</li>
+	    <li>[1375132] Medium CVE-2023-0133: Inappropriate implementation in Permission prompts. Reported by Alesandro Ortiz on 2022-10-17</li>
+	    <li>[1385709] Medium CVE-2023-0134: Use after free in Cart. Reported by Chaoyuan Peng (@ret2happy) on 2022-11-17</li>
+	    <li>[1385831] Medium CVE-2023-0135: Use after free in Cart. Reported by Chaoyuan Peng (@ret2happy) on 2022-11-18</li>
+	    <li>[1356987] Medium CVE-2023-0136: Inappropriate implementation in Fullscreen API. Reported by Axel Chong on 2022-08-26</li>
+	    <li>[1399904] Medium CVE-2023-0137: Heap buffer overflow in Platform Apps. Reported by avaue and Buff3tts at S.S.L. on 2022-12-10</li>
+	    <li>[1346675] Low CVE-2023-0138: Heap buffer overflow in libphonenumber. Reported by Michael Dau on 2022-07-23</li>
+	    <li>[1367632] Low CVE-2023-0139: Insufficient validation of untrusted input in Downloads. Reported by Axel Chong on 2022-09-24</li>
+	    <li>[1326788] Low CVE-2023-0140: Inappropriate implementation in File System API. Reported by harrison.mitchell, cybercx.com.au on 2022-05-18</li>
+	    <li>[1362331] Low CVE-2023-0141: Insufficient policy enforcement in CORS. Reported by scarlet on 2022-09-12</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-0128</cvename>
+      <cvename>CVE-2023-0129</cvename>
+      <cvename>CVE-2023-0130</cvename>
+      <cvename>CVE-2023-0131</cvename>
+      <cvename>CVE-2023-0132</cvename>
+      <cvename>CVE-2023-0133</cvename>
+      <cvename>CVE-2023-0134</cvename>
+      <cvename>CVE-2023-0135</cvename>
+      <cvename>CVE-2023-0136</cvename>
+      <cvename>CVE-2023-0137</cvename>
+      <cvename>CVE-2023-0138</cvename>
+      <cvename>CVE-2023-0139</cvename>
+      <cvename>CVE-2023-0140</cvename>
+      <cvename>CVE-2023-0141</cvename>
+      <url>https://chromereleases.googleblog.com/2023/01/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2023-01-10</discovery>
+      <entry>2023-01-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="59c284f4-8d2e-11ed-9ce0-b42e991fc52e">
+    <topic>net-mgmt/cacti is vulnerable to remote command injection</topic>
+    <affects>
+      <package>
+	<name>cacti</name>
+	<range><lt>1.2.23</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>cacti team reports:</p>
+	<blockquote cite="https://github.com/Cacti/cacti/security/advisories/GHSA-6p93-p743-35gf">
+	<p>
+	    A command injection vulnerability allows an
+	    unauthenticated user to execute arbitrary code on a server
+	    running Cacti, if a specific data source was selected for
+	    any monitored device.
+	</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-46169</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2022-46169</url>
+    </references>
+    <dates>
+      <discovery>2022-12-05</discovery>
+      <entry>2023-01-05</entry>
+      <modified>2023-01-09</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="541696ed-8d12-11ed-af80-ecf4bbc0bda0">
+    <topic>devel/viewvc-devel is vulnerable to cross-site scripting</topic>
+    <affects>
+      <package>
+	<name>py37-viewvc-devel</name>
+	<name>py38-viewvc-devel</name>
+	<name>py39-viewvc-devel</name>
+	<range><lt>1.3.0-20230104</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>C. Michael Pilato reports:</p>
+	<blockquote cite="https://github.com/viewvc/viewvc/releases/tag/1.1.30">
+	  <p>security fix: escape revision view copy paths (#311) [CVE-2023-22464]</p>
+	</blockquote>
+	<blockquote cite="https://github.com/viewvc/viewvc/releases/tag/1.1.29">
+	  <p>security fix: escape revision view changed paths (#311) [CVE-2023-22456]</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-22464</cvename>
+      <cvename>CVE-2023-22456</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-22464</url>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-22456</url>
+    </references>
+    <dates>
+      <discovery>2023-01-04</discovery>
+      <entry>2023-01-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5b2eac07-8b4d-11ed-8b23-a0f3c100ae18">
+    <topic>rxvt-unicode is vulnerable to a remote code execution</topic>
+    <affects>
+      <package>
+	<name>rxvt-unicode</name>
+	<range><lt>9.31</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Marc Lehmann reports:</p>
+	<blockquote cite="http://lists.schmorp.de/pipermail/rxvt-unicode/2023q1/002638.html">
+	  <p>The biggest issue is resolving CVE-2022-4170, which allows command
+	     execution inside urxvt from within the terminal (that means anything that
+	     can output text in the terminal can start commands in the context of the
+	     urxvt process, even remotely).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-4170</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2022-4170</url>
+    </references>
+    <dates>
+      <discovery>2022-12-05</discovery>
+      <entry>2023-01-03</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="86c330fe-bbae-4ca7-85f7-5321e627a4eb">
+    <topic>gitea -- multiple issues</topic>
+    <affects>
+      <package>
+	<name>gitea</name>
+	<range><lt>1.18.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Gitea team reports:</p>
+	<blockquote cite="https://github.com/go-gitea/gitea/pull/22219">
+	  <p>Remove ReverseProxy authentication from the API</p>
+	</blockquote>
+	<blockquote cite="https://github.com/go-gitea/gitea/pull/21139">
+	  <p>Support Go Vulnerability Management</p>
+	</blockquote>
+	<blockquote cite="https://github.com/go-gitea/gitea/pull/20935">
+	  <p>Forbid HTML string tooltips</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://blog.gitea.io/2022/12/gitea-1.18.0-is-released/</url>
+      <url>https://github.com/go-gitea/gitea/releases/tag/v1.18.0</url>
+    </references>
+    <dates>
+      <discovery>2022-08-23</discovery>
+      <entry>2023-01-02</entry>
+    </dates>
+  </vuln>

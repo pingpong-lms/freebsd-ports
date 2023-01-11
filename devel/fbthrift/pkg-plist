@@ -241,6 +241,7 @@ include/thrift/lib/cpp2/async/RetryingRequestChannel.h
 include/thrift/lib/cpp2/async/RocketClientChannel.h
 include/thrift/lib/cpp2/async/RpcOptions.h
 include/thrift/lib/cpp2/async/RpcTypes.h
+include/thrift/lib/cpp2/async/SchemaV1.h
 include/thrift/lib/cpp2/async/ServerChannel.h
 include/thrift/lib/cpp2/async/ServerGeneratorStream-inl.h
 include/thrift/lib/cpp2/async/ServerGeneratorStream.h
@@ -527,7 +528,6 @@ include/thrift/lib/cpp2/type/Any.h
 include/thrift/lib/cpp2/type/AnyValue.h
 include/thrift/lib/cpp2/type/BaseType.h
 include/thrift/lib/cpp2/type/Id.h
-include/thrift/lib/cpp2/type/Json.h
 include/thrift/lib/cpp2/type/Name.h
 include/thrift/lib/cpp2/type/NativeType.h
 include/thrift/lib/cpp2/type/Protocol.h
@@ -542,7 +542,6 @@ include/thrift/lib/cpp2/type/UniversalHashAlgorithm.h
 include/thrift/lib/cpp2/type/UniversalName.h
 include/thrift/lib/cpp2/type/detail/AnyType.h
 include/thrift/lib/cpp2/type/detail/AnyValue.h
-include/thrift/lib/cpp2/type/detail/Json.h
 include/thrift/lib/cpp2/type/detail/Name.h
 include/thrift/lib/cpp2/type/detail/NativeType.h
 include/thrift/lib/cpp2/type/detail/Runtime.h

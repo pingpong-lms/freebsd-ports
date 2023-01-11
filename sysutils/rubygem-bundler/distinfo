@@ -1,3 +1,4 @@
-TIMESTAMP = 1665330718
-SHA256 (rubygem/bundler-2.3.23.gem) = c58ad486dccd7cddd7f6bf06a868fd77569e66470fa3316b93fd9cf685642b1f
-SIZE (rubygem/bundler-2.3.23.gem) = 411648
+TIMESTAMP = 1671919144
+SHA256 (rubygem/bundler-2.4.1.gem) = a6eb7847f55ad87e288eec3660870bef82ffb8a5c5f1b59dee5598f03bafb827
+SIZE (rubygem/bundler-2.4.1.gem) = 408576
+

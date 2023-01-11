@@ -132,32 +132,28 @@ RUBY?=			${LOCALBASE}/bin/ruby${RUBY_SUFFIX}
 #
 # Ruby 2.7
 #
-RUBY_DISTVERSION=	2.7.6
-RUBY_PORTREVISION=	3
-RUBY_PORTEPOCH=		1
+RUBY_DISTVERSION=	2.7.7
+RUBY_PORTREVISION=	0
 
 .      elif ${RUBY_VER} == 3.0
 #
 # Ruby 3.0
 #
-RUBY_DISTVERSION=	3.0.4
-RUBY_PORTREVISION=	3
-RUBY_PORTEPOCH=		1
+RUBY_DISTVERSION=	3.0.5
+RUBY_PORTREVISION=	0
 .      elif ${RUBY_VER} == 3.1
 #
 # Ruby 3.1
 #
-RUBY_DISTVERSION=	3.1.2
-RUBY_PORTREVISION=	2
-RUBY_PORTEPOCH=		1
+RUBY_DISTVERSION=	3.1.3
+RUBY_PORTREVISION=	0
 
 .      elif ${RUBY_VER} == 3.2
 #
 # Ruby 3.2
 #
-RUBY_DISTVERSION=	3.2.0-preview2
-RUBY_PORTREVISION=	1
-RUBY_PORTEPOCH=		1
+RUBY_DISTVERSION=	3.2.0
+RUBY_PORTREVISION=	0
 
 # When adding a version, please keep the comment in
 # Mk/bsd.default-versions.mk in sync.
@@ -168,6 +164,7 @@ RUBY_PORTEPOCH=		1
 IGNORE=	Only ruby 2.7, 3.0, 3.1 and 3.2 are supported
 _INVALID_RUBY_VER=	1
 .      endif
+RUBY_PORTEPOCH=		1
 RUBY_VERSION=	${RUBY_DISTVERSION:C/^([0-9]+\.[0-9]+\.[0-9]+).*/\1/}
 .    endif # defined(RUBY_VER)
 

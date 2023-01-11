@@ -36,6 +36,7 @@
     SUBDIR += enscript-a4
     SUBDIR += enscript-letter
     SUBDIR += enscript-letterdj
+    SUBDIR += epson-inkjet-printer-201207w
     SUBDIR += epson-inkjet-printer-201401w
     SUBDIR += epson-inkjet-printer-201601w
     SUBDIR += epson-inkjet-printer-escpr
@@ -151,7 +152,6 @@
     SUBDIR += pdfstitch
     SUBDIR += pdftk
     SUBDIR += pear-File_PDF
-    SUBDIR += pecl-pdflib
     SUBDIR += pfbtopfa
     SUBDIR += photoprint
     SUBDIR += pic2fig
@@ -179,6 +179,7 @@
     SUBDIR += py-fontpens
     SUBDIR += py-fonttools
     SUBDIR += py-fpdf
+    SUBDIR += py-freetype-py
     SUBDIR += py-frescobaldi
     SUBDIR += py-glyphsets
     SUBDIR += py-glyphtools

@@ -35,7 +35,6 @@
     SUBDIR += dsd
     SUBDIR += dump1090
     SUBDIR += ebook2cw
-    SUBDIR += ebook2cwgui
     SUBDIR += ebusd
     SUBDIR += echolinux
     SUBDIR += ems-flasher
@@ -64,7 +63,6 @@
     SUBDIR += hamlib
     SUBDIR += hcidump
     SUBDIR += hidapi
-    SUBDIR += hylafax
     SUBDIR += ibp
     SUBDIR += iceoryx
     SUBDIR += inspectrum
@@ -155,6 +153,7 @@
     SUBDIR += qt6-serialbus
     SUBDIR += qt6-serialport
     SUBDIR += qtel
+    SUBDIR += quisk
     SUBDIR += redsea
     SUBDIR += remserial
     SUBDIR += rtl-433
@@ -169,6 +168,8 @@
     SUBDIR += sdr-wspr
     SUBDIR += ser2net
     SUBDIR += serialoverip
+    SUBDIR += sigdigger
+    SUBDIR += sigutils
     SUBDIR += sms_client
     SUBDIR += smstools3
     SUBDIR += snap7
@@ -184,6 +185,8 @@
     SUBDIR += splat
     SUBDIR += sredird
     SUBDIR += sunxi-tools
+    SUBDIR += suscan
+    SUBDIR += suwidgets
     SUBDIR += svxlink
     SUBDIR += syncterm
     SUBDIR += tcpser
@@ -192,7 +195,6 @@
     SUBDIR += tilp2
     SUBDIR += tio
     SUBDIR += tits
-    SUBDIR += tkhylafax
     SUBDIR += tkscanfax
     SUBDIR += tlf
     SUBDIR += trustedqsl

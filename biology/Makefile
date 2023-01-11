@@ -41,6 +41,7 @@
     SUBDIR += emboss
     SUBDIR += erminej
     SUBDIR += exonerate
+    SUBDIR += fasda
     SUBDIR += fasta
     SUBDIR += fasta3
     SUBDIR += fastahack
@@ -150,6 +151,7 @@
     SUBDIR += py-bcbio-gff
     SUBDIR += py-biom-format
     SUBDIR += py-biopython
+    SUBDIR += py-biosig
     SUBDIR += py-bx-python
     SUBDIR += py-crossmap
     SUBDIR += py-cutadapt
@@ -189,6 +191,7 @@
     SUBDIR += rampler
     SUBDIR += readseq
     SUBDIR += recombine
+    SUBDIR += rna-seq
     SUBDIR += ruby-bio
     SUBDIR += rubygem-bio
     SUBDIR += rubygem-bio-executables

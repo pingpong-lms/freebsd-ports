@@ -38,6 +38,8 @@
     SUBDIR += bddsolve
     SUBDIR += berkeleygw
     SUBDIR += bodr
+    SUBDIR += bout++
+    SUBDIR += bout++-merging-filaments
     SUBDIR += buddy
     SUBDIR += cantera
     SUBDIR += cardioid
@@ -72,6 +74,7 @@
     SUBDIR += dd_package
     SUBDIR += devisor
     SUBDIR += dftbplus
+    SUBDIR += dftd3
     SUBDIR += dftd4
     SUBDIR += dimod
     SUBDIR += dirac
@@ -105,6 +108,7 @@
     SUBDIR += gbtolib
     SUBDIR += gchemutils
     SUBDIR += gdma
+    SUBDIR += geant4
     SUBDIR += gemmi
     SUBDIR += getdp
     SUBDIR += ghemical
@@ -170,6 +174,7 @@
     SUBDIR += liggghts
     SUBDIR += linux-zotero
     SUBDIR += luscus
+    SUBDIR += m-aneos
     SUBDIR += madness
     SUBDIR += maeparser
     SUBDIR += massxpert
@@ -192,6 +197,7 @@
     SUBDIR += molscript
     SUBDIR += molsketch
     SUBDIR += mopac
+    SUBDIR += mp2d
     SUBDIR += mpb
     SUBDIR += mpqc
     SUBDIR += mrchem
@@ -215,6 +221,7 @@
     SUBDIR += openems
     SUBDIR += openkim-models
     SUBDIR += openmc
+    SUBDIR += openmodelica
     SUBDIR += openmolcas
     SUBDIR += openmx
     SUBDIR += opensim-core
@@ -252,6 +259,7 @@
     SUBDIR += p5-Geo-Calc
     SUBDIR += p5-Geo-Coordinates-Converter
     SUBDIR += p5-Geo-Coordinates-Converter-iArea
+    SUBDIR += p5-Geo-Coordinates-Transform
     SUBDIR += p5-Geo-WebService-Elevation-USGS
     SUBDIR += p5-Mcstas-Tools
     SUBDIR += p5-PerlMol
@@ -285,6 +293,7 @@
     SUBDIR += py-abipy
     SUBDIR += py-access
     SUBDIR += py-arbor
+    SUBDIR += py-arch
     SUBDIR += py-asap3
     SUBDIR += py-asdf
     SUBDIR += py-asdf-standard
@@ -292,6 +301,8 @@
     SUBDIR += py-ase
     SUBDIR += py-atomium
     SUBDIR += py-avogadrolibs
+    SUBDIR += py-boutdata
+    SUBDIR += py-boututils
     SUBDIR += py-cdo
     SUBDIR += py-chainer
     SUBDIR += py-chainer-chemistry
@@ -334,6 +345,7 @@
     SUBDIR += py-hiphive
     SUBDIR += py-hoomd-blue
     SUBDIR += py-inequality
+    SUBDIR += py-ipygany
     SUBDIR += py-jupyter_jsmol
     SUBDIR += py-kim-query
     SUBDIR += py-kimpy
@@ -359,6 +371,7 @@
     SUBDIR += py-oddt
     SUBDIR += py-openbabel
     SUBDIR += py-openpiv
+    SUBDIR += py-optking
     SUBDIR += py-paida
     SUBDIR += py-paramz
     SUBDIR += py-penaltymodel
@@ -420,6 +433,7 @@
     SUBDIR += py-trainstation
     SUBDIR += py-tweedledum
     SUBDIR += py-veusz
+    SUBDIR += py-xbout
     SUBDIR += pybrain
     SUBDIR += pynn
     SUBDIR += q
@@ -463,6 +477,7 @@
     SUBDIR += smoldyn
     SUBDIR += sparta
     SUBDIR += spglib
+    SUBDIR += spheral
     SUBDIR += step
     SUBDIR += svmlight
     SUBDIR += tblite

@@ -32,7 +32,7 @@ share/applications/webstorm.desktop
 %%DATADIR%%/lib/async-profiler-windows.jar
 %%DATADIR%%/lib/async-profiler.jar
 %%DATADIR%%/lib/branding.jar
-%%DATADIR%%/lib/build-marker-WS-223.7571.168
+%%DATADIR%%/lib/build-marker-WS-223.8214.51
 %%DATADIR%%/lib/byte-buddy-agent.jar
 %%DATADIR%%/lib/cds/classesLogAgent.jar
 %%DATADIR%%/lib/error-prone-annotations.jar
@@ -43,11 +43,13 @@ share/applications/webstorm.desktop
 %%DATADIR%%/lib/intellij-coverage-agent-1.0.682.jar
 %%DATADIR%%/lib/intellij-test-discovery.jar
 %%DATADIR%%/lib/jetbrains-annotations.jar
+%%DATADIR%%/lib/jna/amd64/libjnidispatch.so
 %%DATADIR%%/lib/jps-model.jar
 %%DATADIR%%/lib/jsch-agent.jar
 %%DATADIR%%/lib/platform-objectSerializer-annotations.jar
 %%DATADIR%%/lib/platform-statistics-devkit.jar
 %%DATADIR%%/lib/protobuf.jar
+%%DATADIR%%/lib/pty4j
 %%DATADIR%%/lib/rd.jar
 %%DATADIR%%/lib/stats.jar
 %%DATADIR%%/lib/util.jar
@@ -100,12 +102,6 @@ share/applications/webstorm.desktop
 %%DATADIR%%/plugins/gateway-plugin/lib/gateway-plugin.jar
 %%DATADIR%%/plugins/gateway-plugin/lib/gateway-standalone/gateway.core.jar
 %%DATADIR%%/plugins/gateway-plugin/lib/gateway-standalone/gateway.jar
-%%DATADIR%%/plugins/gateway-plugin/lib/remote-dev-workers/remote-dev-worker-darwin-amd64
-%%DATADIR%%/plugins/gateway-plugin/lib/remote-dev-workers/remote-dev-worker-darwin-arm64
-%%DATADIR%%/plugins/gateway-plugin/lib/remote-dev-workers/remote-dev-worker-linux-amd64
-%%DATADIR%%/plugins/gateway-plugin/lib/remote-dev-workers/remote-dev-worker-linux-arm64
-%%DATADIR%%/plugins/gateway-plugin/lib/remote-dev-workers/remote-dev-worker-windows-amd64.exe
-%%DATADIR%%/plugins/gateway-plugin/lib/remote-dev-workers/remote-dev-worker-windows-arm64.exe
 %%DATADIR%%/plugins/gateway-plugin/resources/gateway.vmoptions
 %%DATADIR%%/plugins/gateway-terminal/lib/gateway-terminal.jar
 %%DATADIR%%/plugins/gherkin/lib/gherkin.jar
@@ -167,8 +163,8 @@ share/applications/webstorm.desktop
 %%DATADIR%%/plugins/javascript-impl/helpers/vitest-intellij/node_modules/vitest-intellij-reporter-safe.js
 %%DATADIR%%/plugins/javascript-impl/helpers/vitest-intellij/vitest-intellij-reporter.js
 %%DATADIR%%/plugins/javascript-impl/helpers/vitest-intellij/vitest-intellij-util.js
-%%DATADIR%%/plugins/javascript-impl/js/js-predefined-ffdd448c697d-9b322a0dfcec.ijx
-%%DATADIR%%/plugins/javascript-impl/js/js-predefined-ffdd448c697d-9b322a0dfcec.txt
+%%DATADIR%%/plugins/javascript-impl/js/js-predefined-ffdd448c697d-4c0166cd7e21.ijx
+%%DATADIR%%/plugins/javascript-impl/js/js-predefined-ffdd448c697d-4c0166cd7e21.txt
 %%DATADIR%%/plugins/javascript-impl/jsLanguageServicesImpl/external/browser.d.ts
 %%DATADIR%%/plugins/javascript-impl/jsLanguageServicesImpl/external/cancellationToken.js
 %%DATADIR%%/plugins/javascript-impl/jsLanguageServicesImpl/external/es2019decorators.d.ts
@@ -231,6 +227,7 @@ share/applications/webstorm.desktop
 %%DATADIR%%/plugins/javascript-impl/jsLanguageServicesImpl/external/lib.es2022.full.d.ts
 %%DATADIR%%/plugins/javascript-impl/jsLanguageServicesImpl/external/lib.es2022.intl.d.ts
 %%DATADIR%%/plugins/javascript-impl/jsLanguageServicesImpl/external/lib.es2022.object.d.ts
+%%DATADIR%%/plugins/javascript-impl/jsLanguageServicesImpl/external/lib.es2022.sharedmemory.d.ts
 %%DATADIR%%/plugins/javascript-impl/jsLanguageServicesImpl/external/lib.es2022.string.d.ts
 %%DATADIR%%/plugins/javascript-impl/jsLanguageServicesImpl/external/lib.es5.d.ts
 %%DATADIR%%/plugins/javascript-impl/jsLanguageServicesImpl/external/lib.es6.d.ts
@@ -346,6 +343,7 @@ share/applications/webstorm.desktop
 %%DATADIR%%/plugins/prettierJS/prettierLanguageService/convert-prettier-config.js
 %%DATADIR%%/plugins/prettierJS/prettierLanguageService/prettier-plugin-provider.js
 %%DATADIR%%/plugins/prettierJS/prettierLanguageService/prettier-plugin.js
+%%DATADIR%%/plugins/qodana/lib/qodana.jar
 %%DATADIR%%/plugins/remoteRun/lib/remoteRun.jar
 %%DATADIR%%/plugins/restClient/lib/restClient.jar
 %%DATADIR%%/plugins/sass/lib/sass.jar
@@ -810,5 +808,3 @@ share/applications/webstorm.desktop
 %%DATADIR%%/plugins/xml-refactoring/lib/xml-refactoring.jar
 %%DATADIR%%/plugins/yaml/lib/yaml.jar
 %%DATADIR%%/product-info.json
-@dir %%DATADIR%%/lib/jna/amd64
-@dir %%DATADIR%%/lib/pty4j/linux/x86-64
