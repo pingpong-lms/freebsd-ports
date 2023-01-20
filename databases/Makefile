@@ -54,6 +54,7 @@
     SUBDIR += dbow
     SUBDIR += dbtool
     SUBDIR += dbview
+    SUBDIR += diesel
     SUBDIR += duckdb
     SUBDIR += ejdb
     SUBDIR += emacsql
@@ -227,6 +228,7 @@
     SUBDIR += nagios-check_postgres_replication
     SUBDIR += nagios-check_redis
     SUBDIR += namazu2
+    SUBDIR += nanodbc
     SUBDIR += neo4j
     SUBDIR += ocaml-dbm
     SUBDIR += ocaml-mysql

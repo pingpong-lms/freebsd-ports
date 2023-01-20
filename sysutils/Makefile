@@ -32,6 +32,7 @@
     SUBDIR += alfio
     SUBDIR += am-utils
     SUBDIR += amazon-ssm-agent
+    SUBDIR += amazon-ssm-plugin
     SUBDIR += amdmsrtweaker
     SUBDIR += amrstat
     SUBDIR += amtc
@@ -568,6 +569,7 @@
     SUBDIR += iograph
     SUBDIR += iohyve
     SUBDIR += ioping
+    SUBDIR += ior
     SUBDIR += ipa
     SUBDIR += ipad_charge
     SUBDIR += ipdbtools
@@ -968,6 +970,7 @@
     SUBDIR += pc-networkmanager
     SUBDIR += pcapfix
     SUBDIR += pciutils
+    SUBDIR += pcns
     SUBDIR += pcpustat
     SUBDIR += pdixtract
     SUBDIR += pdsh
@@ -1428,6 +1431,7 @@
     SUBDIR += topless
     SUBDIR += torque
     SUBDIR += toshctl
+    SUBDIR += touchegg
     SUBDIR += toybox
     SUBDIR += tracker
     SUBDIR += tracker-miners

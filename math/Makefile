@@ -167,6 +167,7 @@
     SUBDIR += amgcl
     SUBDIR += analitza
     SUBDIR += ann
+    SUBDIR += annoy
     SUBDIR += antic
     SUBDIR += apache-commons-math
     SUBDIR += apc
@@ -181,6 +182,7 @@
     SUBDIR += asl
     SUBDIR += asymptote
     SUBDIR += atlas
+    SUBDIR += audi
     SUBDIR += barvinok
     SUBDIR += basic-stats
     SUBDIR += bcal
@@ -866,6 +868,7 @@
     SUBDIR += py-amply
     SUBDIR += py-animatplot
     SUBDIR += py-animatplot-ng
+    SUBDIR += py-annoy
     SUBDIR += py-apgl
     SUBDIR += py-arviz
     SUBDIR += py-arybo
@@ -974,6 +977,7 @@
     SUBDIR += py-primecountpy
     SUBDIR += py-primme
     SUBDIR += py-pyFFTW
+    SUBDIR += py-pyaudi
     SUBDIR += py-pybloom
     SUBDIR += py-pyclipper
     SUBDIR += py-pycosat
@@ -1150,6 +1154,7 @@
     SUBDIR += testu01
     SUBDIR += tetgen
     SUBDIR += teyjus
+    SUBDIR += the-algorithms-c++
     SUBDIR += timbl
     SUBDIR += tiny-bignum-c
     SUBDIR += tlapack

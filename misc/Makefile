@@ -195,6 +195,7 @@
     SUBDIR += jargon
     SUBDIR += jbidwatcher
     SUBDIR += jojodiff
+    SUBDIR += json-tui
     SUBDIR += kbdscan
     SUBDIR += kcd
     SUBDIR += kde-thumbnailer-chm
@@ -236,6 +237,7 @@
     SUBDIR += libutf
     SUBDIR += libxdf
     SUBDIR += lifelines
+    SUBDIR += lightgbm
     SUBDIR += lingoteach
     SUBDIR += locale-en_DK
     SUBDIR += localedata
@@ -396,6 +398,7 @@
     SUBDIR += py-detecta
     SUBDIR += py-dictdiffer
     SUBDIR += py-eemeter
+    SUBDIR += py-einops
     SUBDIR += py-emoji
     SUBDIR += py-ezc3d
     SUBDIR += py-fast-histogram
@@ -409,6 +412,7 @@
     SUBDIR += py-huepy
     SUBDIR += py-ipyfastscape
     SUBDIR += py-kartograph
+    SUBDIR += py-lightgbm
     SUBDIR += py-log_symbols
     SUBDIR += py-mffpy
     SUBDIR += py-molequeue
