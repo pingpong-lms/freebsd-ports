@@ -22,7 +22,6 @@ USE_APACHE_RUN=	24
 USES=		perl5 python:3.7+
 
 RUN_DEPENDS= \
-	${LOCALBASE}/openjdk11/bin/java:java/openjdk11 \
 	jsvc:devel/apache-commons-daemon \
 	convert:graphics/ImageMagick7-nox11 \
 	p5-Pg>0:databases/p5-Pg \
