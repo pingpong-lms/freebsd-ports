@@ -117,6 +117,7 @@
     SUBDIR += dolibarr13
     SUBDIR += dolibarr14
     SUBDIR += dolibarr15
+    SUBDIR += dolibarr16
     SUBDIR += domoticz
     SUBDIR += dooble
     SUBDIR += dot-http
@@ -297,6 +298,7 @@
     SUBDIR += libnghttp3
     SUBDIR += libresonic-standalone
     SUBDIR += librespeed
+    SUBDIR += librewolf
     SUBDIR += librtcdcpp
     SUBDIR += libwpe
     SUBDIR += libwww
@@ -333,7 +335,6 @@
     SUBDIR += mattermost-server
     SUBDIR += mattermost-webapp
     SUBDIR += mediawiki135
-    SUBDIR += mediawiki137
     SUBDIR += mediawiki138
     SUBDIR += mediawiki139
     SUBDIR += mergelog
@@ -456,6 +457,8 @@
     SUBDIR += node
     SUBDIR += node14
     SUBDIR += node16
+    SUBDIR += node18
+    SUBDIR += node19
     SUBDIR += nostromo
     SUBDIR += novnc
     SUBDIR += novnc-websockify
@@ -465,6 +468,7 @@
     SUBDIR += npm-node14
     SUBDIR += npm-node16
     SUBDIR += npm-node18
+    SUBDIR += npm-node19
     SUBDIR += oauth2-proxy
     SUBDIR += obhttpd
     SUBDIR += oneshot
@@ -1473,6 +1477,21 @@
     SUBDIR += py-dj40-django-timezone-field
     SUBDIR += py-dj40-djangorestframework
     SUBDIR += py-dj40-drf-yasg
+    SUBDIR += py-dj41-django-auth-ldap
+    SUBDIR += py-dj41-django-cors-headers
+    SUBDIR += py-dj41-django-debug-toolbar
+    SUBDIR += py-dj41-django-filter
+    SUBDIR += py-dj41-django-graphiql-debug-toolbar
+    SUBDIR += py-dj41-django-js-asset
+    SUBDIR += py-dj41-django-mptt
+    SUBDIR += py-dj41-django-prometheus
+    SUBDIR += py-dj41-django-redis
+    SUBDIR += py-dj41-django-rich
+    SUBDIR += py-dj41-django-tables2
+    SUBDIR += py-dj41-django-taggit
+    SUBDIR += py-dj41-django-timezone-field
+    SUBDIR += py-dj41-djangorestframework
+    SUBDIR += py-dj41-drf-yasg
     SUBDIR += py-django-admin-rangefilter
     SUBDIR += py-django-advanced-filters
     SUBDIR += py-django-allauth
@@ -1687,6 +1706,7 @@
     SUBDIR += py-internetarchive
     SUBDIR += py-jonpy
     SUBDIR += py-jsonfield
+    SUBDIR += py-kiss-headers
     SUBDIR += py-lektor
     SUBDIR += py-lesscpy
     SUBDIR += py-libsass
@@ -1791,6 +1811,12 @@
     SUBDIR += py-uvicorn
     SUBDIR += py-w3lib
     SUBDIR += py-wagtail
+    SUBDIR += py-wagtail-2fa
+    SUBDIR += py-wagtail-airtable
+    SUBDIR += py-wagtail-bakery
+    SUBDIR += py-wagtail-factories
+    SUBDIR += py-wagtail-localize
+    SUBDIR += py-wagtail-transfer
     SUBDIR += py-waitress
     SUBDIR += py-webargs
     SUBDIR += py-webassets
@@ -1806,6 +1832,7 @@
     SUBDIR += py-woob-qt
     SUBDIR += py-wsaccel
     SUBDIR += py-wsgidav
+    SUBDIR += py-xandikos
     SUBDIR += py-yarl
     SUBDIR += pydio-cells
     SUBDIR += qdecoder
@@ -1999,6 +2026,7 @@
     SUBDIR += rubygem-json-jwt
     SUBDIR += rubygem-json-jwt115
     SUBDIR += rubygem-jwt
+    SUBDIR += rubygem-jwt25
     SUBDIR += rubygem-kaminari
     SUBDIR += rubygem-kaminari-actionview
     SUBDIR += rubygem-kaminari-actionview-rails5
@@ -2082,6 +2110,7 @@
     SUBDIR += rubygem-rack-protection1
     SUBDIR += rubygem-rack-protection2
     SUBDIR += rubygem-rack-proxy
+    SUBDIR += rubygem-rack-session
     SUBDIR += rubygem-rack-ssl
     SUBDIR += rubygem-rack-test
     SUBDIR += rubygem-rack-timeout
@@ -2191,6 +2220,7 @@
     SUBDIR += rubygem-webdrivers
     SUBDIR += rubygem-webmock
     SUBDIR += rubygem-webrick
+    SUBDIR += rubygem-webrick17
     SUBDIR += rubygem-webrobots
     SUBDIR += rubygem-websocket
     SUBDIR += rubygem-websocket-client-simple
@@ -2236,6 +2266,7 @@
     SUBDIR += sqstat
     SUBDIR += squid
     SUBDIR += squid-devel
+    SUBDIR += squid-langpack
     SUBDIR += squid_radius_auth
     SUBDIR += squidanalyzer
     SUBDIR += squidclamav
@@ -2336,6 +2367,7 @@
     SUBDIR += unit-php
     SUBDIR += unit-python
     SUBDIR += unit-ruby
+    SUBDIR += unitc
     SUBDIR += uwebsockets
     SUBDIR += uwsgi
     SUBDIR += uwsgitop
@@ -2386,7 +2418,6 @@
     SUBDIR += websocketd
     SUBDIR += webstone
     SUBDIR += webstone-ssl
-    SUBDIR += webtrees
     SUBDIR += webtrees20
     SUBDIR += webtrees21
     SUBDIR += wget2
@@ -2417,6 +2448,7 @@
     SUBDIR += yarn-node14
     SUBDIR += yarn-node16
     SUBDIR += yarn-node18
+    SUBDIR += yarn-node19
     SUBDIR += yarr
     SUBDIR += yaws
     SUBDIR += you-get

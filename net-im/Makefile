@@ -177,6 +177,7 @@
     SUBDIR += tg_owt
     SUBDIR += tkabber
     SUBDIR += tkabber-plugins
+    SUBDIR += tokodon
     SUBDIR += toot
     SUBDIR += tox
     SUBDIR += tox_extension_messages
@@ -188,6 +189,7 @@
     SUBDIR += twirssi
     SUBDIR += uTox
     SUBDIR += vqcc-gtk
+    SUBDIR += webinar
     SUBDIR += xmpp-client
     SUBDIR += yume
     SUBDIR += zkgroup

@@ -44,6 +44,7 @@
     SUBDIR += aaphoto
     SUBDIR += acidwarp
     SUBDIR += acidwarp-sdl
+    SUBDIR += aeskulap
     SUBDIR += agg
     SUBDIR += airsaned
     SUBDIR += akira
@@ -121,7 +122,6 @@
     SUBDIR += cuttlefish
     SUBDIR += cxxplot
     SUBDIR += darktable
-    SUBDIR += darktable42
     SUBDIR += dataplot
     SUBDIR += dbow2
     SUBDIR += dc20pack
@@ -146,6 +146,7 @@
     SUBDIR += drawing
     SUBDIR += drawpile
     SUBDIR += drm-510-kmod
+    SUBDIR += drm-515-kmod
     SUBDIR += drm-fbsd12.0-kmod
     SUBDIR += drm-kmod
     SUBDIR += drm_info
@@ -236,6 +237,7 @@
     SUBDIR += gcolor3
     SUBDIR += gd
     SUBDIR += gdal
+    SUBDIR += gdal-grass
     SUBDIR += gdchart
     SUBDIR += gdk-pixbuf2
     SUBDIR += gdk-pixbuf2-xlib
@@ -259,7 +261,6 @@
     SUBDIR += gimp-app
     SUBDIR += gimp-beautify-plugin
     SUBDIR += gimp-data-extras
-    SUBDIR += gimp-gmic-plugin
     SUBDIR += gimp-jxl-plugin
     SUBDIR += gimp-lensfun-plugin
     SUBDIR += gimp-lqr-plugin
@@ -715,7 +716,6 @@
     SUBDIR += p5-Image-MetaData-GQview
     SUBDIR += p5-Image-MetaData-JPEG
     SUBDIR += p5-Image-OCR-Tesseract
-    SUBDIR += p5-Image-ObjectDetect
     SUBDIR += p5-Image-PBMlib
     SUBDIR += p5-Image-PNG-Libpng
     SUBDIR += p5-Image-PNG-QRCode
@@ -833,6 +833,7 @@
     SUBDIR += proj-data
     SUBDIR += pstoedit
     SUBDIR += ptex
+    SUBDIR += py-ManimPango
     SUBDIR += py-OWSLib
     SUBDIR += py-PyOpenGL
     SUBDIR += py-PyOpenGL-accelerate
@@ -864,6 +865,7 @@
     SUBDIR += py-geopandas
     SUBDIR += py-giddy
     SUBDIR += py-gizeh
+    SUBDIR += py-glcontext
     SUBDIR += py-glfw
     SUBDIR += py-glooey
     SUBDIR += py-gphoto2
@@ -885,11 +887,12 @@
     SUBDIR += py-mcomix
     SUBDIR += py-mgwr
     SUBDIR += py-ming
+    SUBDIR += py-moderngl
+    SUBDIR += py-moderngl-window
     SUBDIR += py-momepy
     SUBDIR += py-mpl-interactions
     SUBDIR += py-mpl-scatter-density
     SUBDIR += py-nwdiag
-    SUBDIR += py-open3d-python
     SUBDIR += py-opencolorio
     SUBDIR += py-openimageio
     SUBDIR += py-openshadinglanguage
@@ -1036,7 +1039,6 @@
     SUBDIR += rubygem-invisible_captcha
     SUBDIR += rubygem-mini_magick
     SUBDIR += rubygem-mini_magick410
-    SUBDIR += rubygem-objectdetect
     SUBDIR += rubygem-opengl
     SUBDIR += rubygem-pdfkit
     SUBDIR += rubygem-png

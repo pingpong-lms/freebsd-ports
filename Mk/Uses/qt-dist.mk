@@ -23,10 +23,10 @@ qmake_ARGS?=	# empty
 # Supported distribution arguments
 _COMMON_DISTS=		3d base charts datavis3d declarative imageformats multimedia \
 			networkauth quick3d quicktimeline remoteobjects scxml sensors \
-			serialbus serialport svg tools translations virtualkeyboard \
+			serialbus serialport speech svg tools translations virtualkeyboard \
 			wayland webchannel webengine websockets
 _QT5_DISTS=		connectivity gamepad graphicaleffects location quickcontrols \
-			quickcontrols2 script speech webglplugin webview \
+			quickcontrols2 script webglplugin webview \
 			x11extras xmlpatterns
 _QT6_DISTS=		5compat doc languageserver lottie positioning shadertools
 
@@ -85,7 +85,11 @@ _QT6_MASTER_SITES=		${MASTER_SITE_QT}
 _QT6_MASTER_SITE_SUBDIR=	official_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules \
 				official_releases/additional_libraries/${_QT_VERSION:R}/${_QT_VERSION}/
 # Qt5 specific distnames
+.  if ${_QT_DIST} == webengine
+_QT5_DISTNAME=			${_QT_DIST:S,^,qt,:S,$,-everywhere-opensource-src-${DISTVERSION},}
+.  else
 _QT5_DISTNAME=			${_QT_DIST:S,^,qt,:S,$,-everywhere-src-${DISTVERSION},}
+.  endif
 _QT5_DISTNAME_kde=		${_QT_DIST:S,^,kde-qt,:S,$,-${DISTVERSION},}
 # Qt6 specific distnames
 _QT6_DISTNAME=			${_QT_DIST:S,^,qt,:S,$,-everywhere-src-${DISTVERSION},}

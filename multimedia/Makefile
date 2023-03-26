@@ -60,6 +60,7 @@
     SUBDIR += ffaudioconverter
     SUBDIR += ffdec
     SUBDIR += ffmpeg
+    SUBDIR += ffmpeg4
     SUBDIR += ffmpegthumbnailer
     SUBDIR += ffms2
     SUBDIR += ffnvcodec-headers
@@ -133,6 +134,7 @@
     SUBDIR += hypnotix
     SUBDIR += intel-media-sdk
     SUBDIR += iso2mkv
+    SUBDIR += jellyfin
     SUBDIR += jmref
     SUBDIR += kaffeine
     SUBDIR += kamoso
@@ -182,8 +184,6 @@
     SUBDIR += libmtp
     SUBDIR += libndi
     SUBDIR += libopenshot
-    SUBDIR += libquicktime
-    SUBDIR += libquicktime-lame
     SUBDIR += librav1e
     SUBDIR += librespot
     SUBDIR += librist
@@ -294,6 +294,8 @@
     SUBDIR += pipe-viewer
     SUBDIR += pipewire
     SUBDIR += pitivi
+    SUBDIR += plasma5-plank-player
+    SUBDIR += plasmatube
     SUBDIR += playerctl
     SUBDIR += plexmediaserver
     SUBDIR += plexmediaserver-plexpass
@@ -420,6 +422,7 @@
     SUBDIR += vmaf
     SUBDIR += vtkmpeg2encode
     SUBDIR += vvdec
+    SUBDIR += vvenc
     SUBDIR += w_scan2
     SUBDIR += webcamd
     SUBDIR += webcamoid

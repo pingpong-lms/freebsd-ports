@@ -15,6 +15,7 @@
     SUBDIR += akonadi-mime
     SUBDIR += akonadi-notes
     SUBDIR += akonadi-search
+    SUBDIR += alligator
     SUBDIR += aluminum
     SUBDIR += aoe
     SUBDIR += apache-commons-net
@@ -44,6 +45,7 @@
     SUBDIR += avahi-libdns
     SUBDIR += avahi-qt5
     SUBDIR += avahi-sharp
+    SUBDIR += aws-ec2-imdsv2-get
     SUBDIR += axa
     SUBDIR += babeld
     SUBDIR += balance
@@ -181,6 +183,7 @@
     SUBDIR += gemserv
     SUBDIR += geoclue
     SUBDIR += geocode-glib
+    SUBDIR += geocode-glib2
     SUBDIR += geoipupdate
     SUBDIR += gerbera
     SUBDIR += gfbgraph
@@ -243,9 +246,9 @@
     SUBDIR += haproxy18
     SUBDIR += haproxy20
     SUBDIR += haproxy22
-    SUBDIR += haproxy23
     SUBDIR += haproxy24
     SUBDIR += haproxy25
+    SUBDIR += haproxy26
     SUBDIR += hblock
     SUBDIR += hexinject
     SUBDIR += hlmaster
@@ -339,6 +342,7 @@
     SUBDIR += krill
     SUBDIR += ksmtp
     SUBDIR += ktnef
+    SUBDIR += kube-apiserver
     SUBDIR += kube-controller-manager
     SUBDIR += kube-scheduler
     SUBDIR += l2tpd
@@ -385,6 +389,7 @@
     SUBDIR += libmdf
     SUBDIR += libmediawiki
     SUBDIR += libnatpmp
+    SUBDIR += libndp
     SUBDIR += libnet
     SUBDIR += libnfs
     SUBDIR += libngtcp2
@@ -411,6 +416,7 @@
     SUBDIR += librdkafka
     SUBDIR += librespeed-cli
     SUBDIR += librespeed-go
+    SUBDIR += librest1
     SUBDIR += librsync
     SUBDIR += libsignal-protocol-c
     SUBDIR += libslirp
@@ -515,7 +521,6 @@
     SUBDIR += netselect
     SUBDIR += netstrain
     SUBDIR += netwib
-    SUBDIR += nfs-ganesha-kmod
     SUBDIR += nfsshell
     SUBDIR += nfstrace
     SUBDIR += ng_mikrotik_eoip
@@ -575,7 +580,6 @@
     SUBDIR += openrsync
     SUBDIR += opensips31
     SUBDIR += openslp
-    SUBDIR += opentracker
     SUBDIR += openvswitch
     SUBDIR += ortp
     SUBDIR += osrtspproxy
@@ -1151,6 +1155,7 @@
     SUBDIR += py-twitter-tools
     SUBDIR += py-txamqp
     SUBDIR += py-txrestapi
+    SUBDIR += py-uri-template
     SUBDIR += py-uritemplate
     SUBDIR += py-uritools
     SUBDIR += py-url-normalize
@@ -1166,6 +1171,7 @@
     SUBDIR += pyrad
     SUBDIR += qadsl
     SUBDIR += qoauth-qt5
+    SUBDIR += qrcp
     SUBDIR += qt5-network
     SUBDIR += qt5-networkauth
     SUBDIR += qt6-networkauth
@@ -1208,7 +1214,6 @@
     SUBDIR += rp-pppoe
     SUBDIR += rpki-client
     SUBDIR += rscsi
-    SUBDIR += rsocket-cpp
     SUBDIR += rsplib
     SUBDIR += rssguard
     SUBDIR += rsync
@@ -1225,6 +1230,7 @@
     SUBDIR += rubygem-amqp
     SUBDIR += rubygem-amqp-utils
     SUBDIR += rubygem-apollo_upload_server
+    SUBDIR += rubygem-app_store_connect
     SUBDIR += rubygem-asset_sync
     SUBDIR += rubygem-aws-s3
     SUBDIR += rubygem-aws-ses
@@ -1291,6 +1297,7 @@
     SUBDIR += rubygem-google-cloud-logging-v2
     SUBDIR += rubygem-google-cloud-pubsub
     SUBDIR += rubygem-google-cloud-pubsub-v1
+    SUBDIR += rubygem-google-cloud-resource_manager
     SUBDIR += rubygem-google-cloud-spanner
     SUBDIR += rubygem-google-cloud-spanner-admin-database-v1
     SUBDIR += rubygem-google-cloud-spanner-admin-instance-v1
@@ -1355,6 +1362,7 @@
     SUBDIR += rubygem-qiniu
     SUBDIR += rubygem-rabbiter
     SUBDIR += rubygem-rbvmomi
+    SUBDIR += rubygem-rbvmomi2
     SUBDIR += rubygem-right_aws
     SUBDIR += rubygem-right_flexiscale
     SUBDIR += rubygem-right_gogrid
@@ -1427,6 +1435,7 @@
     SUBDIR += skstream
     SUBDIR += sl2tps
     SUBDIR += slackcat
+    SUBDIR += slurm
     SUBDIR += smb4k
     SUBDIR += smbldap-tools
     SUBDIR += smcroute
@@ -1503,6 +1512,7 @@
     SUBDIR += throttled
     SUBDIR += tigervnc-server
     SUBDIR += tigervnc-viewer
+    SUBDIR += tigervnc-viewer-java
     SUBDIR += tightvnc
     SUBDIR += timed
     SUBDIR += tintin++
@@ -1520,8 +1530,6 @@
     SUBDIR += trickle
     SUBDIR += tsclient
     SUBDIR += tsctp
-    SUBDIR += tshark
-    SUBDIR += tshark-lite
     SUBDIR += tsocks
     SUBDIR += tunneller
     SUBDIR += turnserver
@@ -1576,7 +1584,6 @@
     SUBDIR += wireguard-tools
     SUBDIR += wireproxy
     SUBDIR += wireshark
-    SUBDIR += wireshark-lite
     SUBDIR += wlan2eth
     SUBDIR += wlvncc
     SUBDIR += wmnd
@@ -1591,6 +1598,7 @@
     SUBDIR += x11vnc
     SUBDIR += x2goclient
     SUBDIR += x2goclient-cli
+    SUBDIR += xapsd
     SUBDIR += xisp
     SUBDIR += xmlrpc-c
     SUBDIR += xmlrpc-epi

@@ -1,5 +1,5 @@
 PORTNAME=	nghttp2
-DISTVERSION=	1.51.0
+DISTVERSION=	1.52.0
 CATEGORIES=	www net
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/v${DISTVERSION}/
 PKGNAMEPREFIX=	lib
@@ -11,13 +11,11 @@ WWW=		https://nghttp2.org/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		cmake compiler:c++14-lang pathfix pkgconfig tar:xz
-
+USES=		cmake compiler:c++14-lang cpe libtool pathfix pkgconfig tar:xz
 USE_LDCONFIG=	yes
 
 CMAKE_OFF=	ENABLE_DOC \
-		ENABLE_HTTP3 \
-		ENABLE_PYTHON_BINDINGS
+		ENABLE_HTTP3
 CMAKE_ON=	ENABLE_LIB_ONLY \
 		ENABLE_STATIC_LIB
 

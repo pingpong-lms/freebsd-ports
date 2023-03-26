@@ -52,6 +52,7 @@
     SUBDIR += apcctrl
     SUBDIR += apcpwr
     SUBDIR += apcupsd
+    SUBDIR += appjail
     SUBDIR += apt-mirror-devel
     SUBDIR += aptly
     SUBDIR += arc_summary
@@ -150,6 +151,7 @@
     SUBDIR += bstack
     SUBDIR += btop
     SUBDIR += btsixad
+    SUBDIR += budgie-control-center
     SUBDIR += buildah
     SUBDIR += bulk_extractor
     SUBDIR += bupstash
@@ -181,9 +183,11 @@
     SUBDIR += cfengine-masterfiles318
     SUBDIR += cfengine-masterfiles319
     SUBDIR += cfengine-masterfiles320
+    SUBDIR += cfengine-masterfiles321
     SUBDIR += cfengine318
     SUBDIR += cfengine319
     SUBDIR += cfengine320
+    SUBDIR += cfengine321
     SUBDIR += chaoskube
     SUBDIR += checkrestart
     SUBDIR += chezmoi
@@ -352,7 +356,6 @@
     SUBDIR += equinix-metal-cli
     SUBDIR += etc_os-release
     SUBDIR += etcmerge
-    SUBDIR += etcupdate
     SUBDIR += ethname
     SUBDIR += evhz
     SUBDIR += evisum
@@ -475,7 +478,6 @@
     SUBDIR += gdu
     SUBDIR += genimage
     SUBDIR += genisoimage
-    SUBDIR += geomWatch
     SUBDIR += getdelta
     SUBDIR += geteltorito
     SUBDIR += getssl
@@ -562,14 +564,12 @@
     SUBDIR += intel-pcm
     SUBDIR += intel-undervolt
     SUBDIR += inxi
-    SUBDIR += ioc
     SUBDIR += iocage
     SUBDIR += iocage-devel
     SUBDIR += iocell
     SUBDIR += iograph
     SUBDIR += iohyve
     SUBDIR += ioping
-    SUBDIR += ior
     SUBDIR += ipa
     SUBDIR += ipad_charge
     SUBDIR += ipdbtools
@@ -596,7 +596,6 @@
     SUBDIR += jdupes
     SUBDIR += jest
     SUBDIR += jkill
-    SUBDIR += jobd
     SUBDIR += jps
     SUBDIR += jruls
     SUBDIR += jstest-gtk
@@ -607,6 +606,7 @@
     SUBDIR += k4dirstat
     SUBDIR += k8temp
     SUBDIR += k9s
+    SUBDIR += kapp
     SUBDIR += kbackup
     SUBDIR += kcron
     SUBDIR += kdeadmin
@@ -644,6 +644,7 @@
     SUBDIR += libcdio-paranoia
     SUBDIR += libchk
     SUBDIR += libcpuid
+    SUBDIR += libdisplay-info
     SUBDIR += libdnf
     SUBDIR += libfvde
     SUBDIR += libg15
@@ -1293,6 +1294,7 @@
     SUBDIR += runj
     SUBDIR += runwhen
     SUBDIR += rush
+    SUBDIR += rust-coreutils
     SUBDIR += rw
     SUBDIR += s-tui
     SUBDIR += s6
@@ -1317,7 +1319,6 @@
     SUBDIR += schilyutils
     SUBDIR += screen
     SUBDIR += screenfetch
-    SUBDIR += screenfetch-nox11
     SUBDIR += screenie
     SUBDIR += scterc
     SUBDIR += sd-agent
@@ -1351,6 +1352,7 @@
     SUBDIR += smug
     SUBDIR += snap
     SUBDIR += snapraid
+    SUBDIR += sndy
     SUBDIR += snmp_exporter
     SUBDIR += snooze
     SUBDIR += sockaddr
@@ -1426,6 +1428,7 @@
     SUBDIR += tmpwatch
     SUBDIR += tmux
     SUBDIR += tmux-mem-cpu-load
+    SUBDIR += tmux-xpanes
     SUBDIR += tmux23
     SUBDIR += topgrade
     SUBDIR += topless

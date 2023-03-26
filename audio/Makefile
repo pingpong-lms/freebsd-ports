@@ -288,6 +288,7 @@
     SUBDIR += gtkguitune
     SUBDIR += gtkpod
     SUBDIR += gtmixer
+    SUBDIR += gtultra
     SUBDIR += guidoar
     SUBDIR += guidolib
     SUBDIR += guitarix-lv2
@@ -376,7 +377,6 @@
     SUBDIR += libgig
     SUBDIR += libgme
     SUBDIR += libgpod
-    SUBDIR += libgpod-sharp
     SUBDIR += libgroove
     SUBDIR += libid3tag
     SUBDIR += libinstpatch
@@ -560,6 +560,7 @@
     SUBDIR += osd-lyrics
     SUBDIR += osdmixer
     SUBDIR += oss
+    SUBDIR += owntone
     SUBDIR += p5-Audio-CD
     SUBDIR += p5-Audio-Ecasound
     SUBDIR += p5-Audio-FLAC-Header
@@ -615,6 +616,7 @@
     SUBDIR += picard
     SUBDIR += picard-plugins
     SUBDIR += pithos
+    SUBDIR += plasma5-kpipewire
     SUBDIR += plasma5-plasma-pa
     SUBDIR += play
     SUBDIR += playgsf
@@ -660,6 +662,7 @@
     SUBDIR += py-pulsectl
     SUBDIR += py-pyacoustid
     SUBDIR += py-pyaudio
+    SUBDIR += py-pydub
     SUBDIR += py-pyjacklib
     SUBDIR += py-pylast
     SUBDIR += py-pyliblo
@@ -669,9 +672,11 @@
     SUBDIR += py-pysndfile
     SUBDIR += py-python-mpd2
     SUBDIR += py-resampy
+    SUBDIR += py-simpleaudio
     SUBDIR += py-soundcloud
     SUBDIR += py-sounddevice
     SUBDIR += py-soundscrape
+    SUBDIR += py-soxr
     SUBDIR += py-speechrecognition
     SUBDIR += py-spotipy
     SUBDIR += py-tagpy
@@ -737,6 +742,7 @@
     SUBDIR += sherlock-lv2
     SUBDIR += shntool
     SUBDIR += shortwave
+    SUBDIR += shuriken
     SUBDIR += sidplay
     SUBDIR += sidplay2
     SUBDIR += sidplayer
@@ -883,7 +889,6 @@
     SUBDIR += xfce4-mpc-plugin
     SUBDIR += xfce4-pulseaudio-plugin
     SUBDIR += xfmpc
-    SUBDIR += ximp3
     SUBDIR += xmcd
     SUBDIR += xmix
     SUBDIR += xmixer

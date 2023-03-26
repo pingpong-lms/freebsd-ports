@@ -28,6 +28,9 @@
     SUBDIR += bitmap
     SUBDIR += bmpanel2
     SUBDIR += brisk-menu
+    SUBDIR += budgie
+    SUBDIR += budgie-desktop
+    SUBDIR += budgie-screensaver
     SUBDIR += cde
     SUBDIR += cde-24
     SUBDIR += cde-25
@@ -294,10 +297,10 @@
     SUBDIR += plasma5-kgamma5
     SUBDIR += plasma5-kscreen
     SUBDIR += plasma5-kwayland-integration
-    SUBDIR += plasma5-kwayland-server
     SUBDIR += plasma5-layer-shell-qt
     SUBDIR += plasma5-libkscreen
     SUBDIR += plasma5-plasma
+    SUBDIR += plasma5-plasma-bigscreen
     SUBDIR += plasma5-plasma-desktop
     SUBDIR += plasma5-plasma-integration
     SUBDIR += plasma5-plasma-workspace
@@ -308,9 +311,11 @@
     SUBDIR += py-caffeine-ng
     SUBDIR += py-i3-quickterm
     SUBDIR += py-i3ipc
+    SUBDIR += py-pynput
     SUBDIR += py-pyscreenshot
     SUBDIR += py-python-xapp
     SUBDIR += py-pyvirtualdisplay
+    SUBDIR += py-screeninfo
     SUBDIR += py-xcffib
     SUBDIR += py-xdot
     SUBDIR += qimageblitz
@@ -405,6 +410,7 @@
     SUBDIR += way-displays
     SUBDIR += waybar
     SUBDIR += wayland-logout
+    SUBDIR += waylock
     SUBDIR += wayout
     SUBDIR += wbar
     SUBDIR += wcm

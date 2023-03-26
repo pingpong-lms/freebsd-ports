@@ -292,6 +292,7 @@
     SUBDIR += libnitrokey
     SUBDIR += libntlm
     SUBDIR += libomemo
+    SUBDIR += libomemo-c
     SUBDIR += liboqs
     SUBDIR += libotr
     SUBDIR += libotr3
@@ -321,6 +322,7 @@
     SUBDIR += libzrtpcppcore
     SUBDIR += lime
     SUBDIR += linux-bitwarden-cli
+    SUBDIR += linux-c7-ca-certificates
     SUBDIR += linux-c7-cyrus-sasl2
     SUBDIR += linux-c7-gnutls
     SUBDIR += linux-c7-libgcrypt
@@ -408,9 +410,11 @@
     SUBDIR += openssh-askpass
     SUBDIR += openssh-portable
     SUBDIR += openssl
-    SUBDIR += openssl-devel
+    SUBDIR += openssl-agent
     SUBDIR += openssl-quictls
     SUBDIR += openssl-unsafe
+    SUBDIR += openssl30
+    SUBDIR += openssl31
     SUBDIR += openssl_tpm_engine
     SUBDIR += openvas
     SUBDIR += openvpn
@@ -419,8 +423,9 @@
     SUBDIR += openvpn-auth-radius
     SUBDIR += openvpn-auth-script
     SUBDIR += openvpn-devel
-    SUBDIR += opie
+    SUBDIR += openvpn25
     SUBDIR += ophcrack
+    SUBDIR += opie
     SUBDIR += ossec-hids
     SUBDIR += ossec-hids-agent
     SUBDIR += ossec-hids-agent-config
@@ -713,6 +718,7 @@
     SUBDIR += pam-modules
     SUBDIR += pam-mysql
     SUBDIR += pam-pgsql
+    SUBDIR += pam_fprint
     SUBDIR += pam_google_authenticator
     SUBDIR += pam_helper
     SUBDIR += pam_jail
@@ -726,9 +732,11 @@
     SUBDIR += pam_pkcs11
     SUBDIR += pam_pwdfile
     SUBDIR += pam_require
+    SUBDIR += pam_rssh
     SUBDIR += pam_script
     SUBDIR += pam_search_list
     SUBDIR += pam_ssh_agent_auth
+    SUBDIR += pam_u2f
     SUBDIR += pam_yubico
     SUBDIR += pamtester
     SUBDIR += paperkey
@@ -934,6 +942,7 @@
     SUBDIR += py-pass-git-helper
     SUBDIR += py-passlib
     SUBDIR += py-pbkdf2
+    SUBDIR += py-pem
     SUBDIR += py-pgpdump
     SUBDIR += py-pgpy
     SUBDIR += py-plaso
@@ -1126,6 +1135,7 @@
     SUBDIR += rubygem-pundit61
     SUBDIR += rubygem-pyu-ruby-sasl
     SUBDIR += rubygem-rack-oauth2
+    SUBDIR += rubygem-rack-oauth21
     SUBDIR += rubygem-razorback-scriptNugget
     SUBDIR += rubygem-rbnacl
     SUBDIR += rubygem-rbnacl-libsodium
@@ -1226,6 +1236,7 @@
     SUBDIR += srm
     SUBDIR += ssb
     SUBDIR += ssdeep
+    SUBDIR += ssh-import-id
     SUBDIR += ssh-multiadd
     SUBDIR += ssh-tools
     SUBDIR += ssh-vault

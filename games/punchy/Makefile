@@ -1,12 +1,12 @@
 PORTNAME=	punchy
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.2.1
-PORTREVISION=	1
+DISTVERSION=	0.3.0
+PORTREVISION=	2
 CATEGORIES=	games wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	2.5D side-scroller beatemup, made in Bevy
-WWW=		https://fishfight.org/
+WWW=		https://fishfolk.org/games/punchy/
 
 LICENSE=	CC-BY-NC-4.0 MIT
 LICENSE_COMB=	multi
@@ -33,7 +33,7 @@ post-patch:
 # Search assets under PREFIX instead of current directory
 	@${REINPLACE_CMD} 's,assets",../${DATADIR_REL}/&,' \
 		${WRKSRC}/cargo-crates/bevy_asset-*/src/lib.rs
-# XXX Drop after FreeBSD 12.3 EOL around 2023-03-01
+# XXX Drop after FreeBSD 12.3 EOL around 2023-03-31
 # https://cgit.freebsd.org/src/commit/?id=98a049f22ef3
 .if !exists(/usr/bin/llvm-readelf)
 	@${REINPLACE_CMD} '/readelf/s/llvm-//' \

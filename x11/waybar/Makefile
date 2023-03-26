@@ -1,5 +1,6 @@
 PORTNAME=	waybar
 DISTVERSION=	0.9.17
+PORTREVISION=	1
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -28,7 +29,7 @@ USE_GITHUB=	yes
 USE_GNOME=	gtkmm30
 GH_ACCOUNT=	Alexays
 GH_PROJECT=	Waybar
-MESON_ARGS=	-Dtests=disabled
+MESON_ARGS=	${libnl systemd wireplumber tests:L:C/.*/-D&=disabled/}
 PLIST_FILES=	bin/${PORTNAME} \
 		etc/xdg/${PORTNAME}/config \
 		etc/xdg/${PORTNAME}/style.css

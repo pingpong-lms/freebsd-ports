@@ -389,7 +389,6 @@
     SUBDIR += hpipm
     SUBDIR += hptt
     SUBDIR += hs-Agda
-    SUBDIR += hs-penrose
     SUBDIR += hs-syfco
     SUBDIR += hsl
     SUBDIR += hydrogen
@@ -411,12 +410,14 @@
     SUBDIR += jts
     SUBDIR += kahip
     SUBDIR += kalgebra
+    SUBDIR += kalk
     SUBDIR += kalker
     SUBDIR += kamis
     SUBDIR += kbruch
     SUBDIR += kcalc
     SUBDIR += kfr
     SUBDIR += kig
+    SUBDIR += kissat
     SUBDIR += kktdirect
     SUBDIR += kmplot
     SUBDIR += labplot
@@ -437,9 +438,11 @@
     SUBDIR += libRmath
     SUBDIR += libbraiding
     SUBDIR += libccd
+    SUBDIR += libcerf
     SUBDIR += libdivide
     SUBDIR += libfixmath
     SUBDIR += libflame
+    SUBDIR += libformfactor
     SUBDIR += libhomfly
     SUBDIR += libmesh
     SUBDIR += libmissing
@@ -463,6 +466,7 @@
     SUBDIR += linpack
     SUBDIR += lis
     SUBDIR += lll_spect
+    SUBDIR += lmfit
     SUBDIR += lp_solve
     SUBDIR += lrcalc
     SUBDIR += lrng
@@ -644,6 +648,7 @@
     SUBDIR += oink
     SUBDIR += oleo
     SUBDIR += onednn
+    SUBDIR += onednn252
     SUBDIR += openblas
     SUBDIR += openfst
     SUBDIR += openlibm
@@ -888,6 +893,7 @@
     SUBDIR += py-cmaes
     SUBDIR += py-cmyt
     SUBDIR += py-colormath
+    SUBDIR += py-contourpy
     SUBDIR += py-cryptominisat
     SUBDIR += py-cvxopt
     SUBDIR += py-cvxpy
@@ -895,6 +901,7 @@
     SUBDIR += py-cypari2
     SUBDIR += py-deap
     SUBDIR += py-dionysus
+    SUBDIR += py-disjoint-set
     SUBDIR += py-docplex
     SUBDIR += py-ducc0
     SUBDIR += py-ecos
@@ -925,6 +932,7 @@
     SUBDIR += py-intspan
     SUBDIR += py-iohexperimenter
     SUBDIR += py-ipyopt
+    SUBDIR += py-isosurfaces
     SUBDIR += py-jax
     SUBDIR += py-kahip
     SUBDIR += py-keras
@@ -936,6 +944,7 @@
     SUBDIR += py-linearmodels
     SUBDIR += py-lmfit
     SUBDIR += py-luminol
+    SUBDIR += py-mapbox-earcut
     SUBDIR += py-mathics
     SUBDIR += py-mathics-scanner
     SUBDIR += py-matplotlib
@@ -976,6 +985,7 @@
     SUBDIR += py-pplpy
     SUBDIR += py-primecountpy
     SUBDIR += py-primme
+    SUBDIR += py-py-find-1st
     SUBDIR += py-pyFFTW
     SUBDIR += py-pyaudi
     SUBDIR += py-pybloom
@@ -993,6 +1003,7 @@
     SUBDIR += py-pyodeint
     SUBDIR += py-pyodesys
     SUBDIR += py-pyreadr
+    SUBDIR += py-pyrr
     SUBDIR += py-pysmt
     SUBDIR += py-pystan
     SUBDIR += py-pysym

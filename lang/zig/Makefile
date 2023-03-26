@@ -1,5 +1,5 @@
 PORTNAME=	zig
-DISTVERSION=	0.10.0
+DISTVERSION=	0.10.1
 PORTREVISION?=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://ziglang.org/download/${DISTVERSION}/ \
@@ -9,9 +9,6 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		zig-freebsd-x86_64-${DISTVERSION}${EXTRACT_SUFX}
 
 PATCH_SITES=	https://github.com/ziglang/${PORTNAME}/commit/
-PATCHFILES+=	64b3ffd8ffb9.patch:-p1 # https://github.com/ziglang/zig/pull/13418
-PATCHFILES+=	7f1f2e653d6f.patch:-p1 # https://github.com/ziglang/zig/pull/13418
-PATCHFILES+=	a68b27c25266.patch:-p1 # https://github.com/ziglang/zig/pull/13418
 
 MAINTAINER=	dch@FreeBSD.org
 COMMENT=	Language designed for robustness, optimality, and maintainability
@@ -31,6 +28,7 @@ LIB_DEPENDS=	liblzma.so:archivers/lzma \
 
 USES=		cmake compiler:c++11-lang localbase:ldflags tar:xz
 CMAKE_ON=	THREADS_PREFER_PTHREAD_FLAG
+CMAKE_ARGS+=	-DZIG_TARGET_MCPU=baseline # ensure we run everywhere
 
 OPTIONS_DEFINE=		DOCS STATIC
 OPTIONS_DEFAULT=	DOCS

@@ -133,7 +133,6 @@
     SUBDIR += libgda5
     SUBDIR += libgda5-jdbc
     SUBDIR += libgda5-ldap
-    SUBDIR += libgda5-mdb
     SUBDIR += libgda5-mysql
     SUBDIR += libgda5-postgresql
     SUBDIR += libgda5-ui
@@ -143,6 +142,7 @@
     SUBDIR += libmemcache
     SUBDIR += libmemcached
     SUBDIR += libmongo-client
+    SUBDIR += libmongocrypt
     SUBDIR += libmswstr
     SUBDIR += libnvpair
     SUBDIR += libodbc++
@@ -204,7 +204,7 @@
     SUBDIR += mysql-connector-c++
     SUBDIR += mysql-connector-java
     SUBDIR += mysql-connector-java51
-    SUBDIR += mysql-connector-odbc
+    SUBDIR += mysql-connector-odbc-80
     SUBDIR += mysql-q4m
     SUBDIR += mysql-udf
     SUBDIR += mysql2pgsql
@@ -666,14 +666,6 @@
     SUBDIR += postgresql-semver
     SUBDIR += postgresql-tds_fdw
     SUBDIR += postgresql-zhparser
-    SUBDIR += postgresql10-client
-    SUBDIR += postgresql10-contrib
-    SUBDIR += postgresql10-docs
-    SUBDIR += postgresql10-pgtcl
-    SUBDIR += postgresql10-plperl
-    SUBDIR += postgresql10-plpython
-    SUBDIR += postgresql10-pltcl
-    SUBDIR += postgresql10-server
     SUBDIR += postgresql11-client
     SUBDIR += postgresql11-contrib
     SUBDIR += postgresql11-docs
@@ -829,6 +821,7 @@
     SUBDIR += py-sqlalchemy12
     SUBDIR += py-sqlalchemy13
     SUBDIR += py-sqlalchemy14
+    SUBDIR += py-sqlalchemy20
     SUBDIR += py-sqlglot
     SUBDIR += py-sqlite-fts4
     SUBDIR += py-sqlite-utils
@@ -997,6 +990,7 @@
     SUBDIR += rubygem-redis-clustering
     SUBDIR += rubygem-redis-namespace
     SUBDIR += rubygem-redis-namespace18
+    SUBDIR += rubygem-redis-namespace19
     SUBDIR += rubygem-redis4
     SUBDIR += rubygem-scenic61
     SUBDIR += rubygem-sdbm

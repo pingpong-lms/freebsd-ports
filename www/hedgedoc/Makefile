@@ -1,12 +1,13 @@
 PORTNAME=	hedgedoc
 DISTVERSION=	1.9.6
+PORTREVISION=	1
 CATEGORIES=	www editors
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/${DISTVERSION}/ \
-		https://nodejs.org/download/release/v${NODEJS_VERSION}/:node \
+		https://nodejs.org/download/release/v${NODEJS_HEADERS}/:node \
 		LOCAL/dch:yarn
 DISTFILES+=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX} \
 		${_YARN_TARBALL}:yarn \
-		node-v${NODEJS_VERSION}-headers.tar.gz:node
+		node-v${NODEJS_HEADERS}-headers.tar.gz:node
 
 MAINTAINER=	dch@FreeBSD.org
 COMMENT=	Web-based online collaborative editor using your preferred SQL DB
@@ -14,6 +15,8 @@ WWW=		https://hedgedoc.org/
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_i386=	fails to build: no i386 sqlite3.node file found
 
 BUILD_DEPENDS=	git:devel/git \
 		npm:www/npm-node16 \
@@ -34,7 +37,7 @@ PLIST_SUB+=	ARCH=${ARCH:S/aarch64/arm64/:S/amd64/x64/}
 OPTIONS_DEFINE=	DOCS
 OPTIONS_SUB=	yes
 
-NODEJS_VERSION=	16.19.0
+NODEJS_HEADERS=	16.19.0
 
 _YARNRC=	${_YARN_HOME}/yarnrc
 _YARN_BIN=	${LOCALBASE}/bin/yarn
@@ -42,7 +45,7 @@ _YARN_CACHE=	${_YARN_HOME}/.cache
 _YARN_CMD=	${SETENV} ${_YARN_ENV} ${_YARN_BIN} ${_YARN_FLAGS}
 _YARN_CWD=	${WRKSRC}
 _YARN_ENV=	HOME=${_YARN_HOME} NODE_ENV=production \
-		NPM_CONFIG_TARBALL=${DISTDIR}/node-v${NODEJS_VERSION}-headers.tar.gz \
+		NPM_CONFIG_TARBALL=${DISTDIR}/node-v${NODEJS_HEADERS}-headers.tar.gz \
 		PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true PYTHON=${PYTHON_CMD}
 _YARN_FLAGS=	--skip-integrity-check --noninteractive --no-node-version-check \
 		--no-default-rc --cwd ${_YARN_CWD} --cache-folder \
@@ -98,7 +101,8 @@ do-build:
 		-print -delete
 	${FIND} ${WRKSRC}/node_modules -name '*.node' -print -exec ${STRIP_CMD} \
 		{} +
-	${MV} ${WRKSRC}/docs ${WRKDIR}/docs
+	${MV} ${WRKSRC}/docs \
+		${WRKDIR}/docs
 
 do-install:
 	${MKDIR} ${STAGEDIR}${ETCDIR} \

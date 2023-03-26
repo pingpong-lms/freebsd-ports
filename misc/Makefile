@@ -24,6 +24,7 @@
     SUBDIR += biblesync
     SUBDIR += bibletime
     SUBDIR += biblical-curse
+    SUBDIR += binbloom
     SUBDIR += binclock
     SUBDIR += binocle
     SUBDIR += biosfont-demos
@@ -70,7 +71,6 @@
     SUBDIR += ctm
     SUBDIR += cuttlefish
     SUBDIR += dahdi
-    SUBDIR += dahdi-kmod
     SUBDIR += dahdi-kmod26
     SUBDIR += darknet
     SUBDIR += dartsim
@@ -106,6 +106,7 @@
     SUBDIR += findutils
     SUBDIR += firestring
     SUBDIR += flag
+    SUBDIR += flashlight
     SUBDIR += fortune-mod-bible
     SUBDIR += fortune-mod-bofh
     SUBDIR += fortune-mod-epictetus
@@ -154,7 +155,6 @@
     SUBDIR += gkrellshoot2
     SUBDIR += gkx86info2
     SUBDIR += global-tz
-    SUBDIR += glow
     SUBDIR += gnome-devel-docs
     SUBDIR += gnome-getting-started-docs
     SUBDIR += gnome-icon-theme
@@ -353,6 +353,7 @@
     SUBDIR += p5-Locale-US
     SUBDIR += p5-Net-vCard
     SUBDIR += p5-OSSP-uuid
+    SUBDIR += p5-OpenAI-API
     SUBDIR += p5-Software-License
     SUBDIR += p5-Software-License-CCpack
     SUBDIR += p5-Test-Dir
@@ -383,6 +384,7 @@
     SUBDIR += ptsort
     SUBDIR += pubs
     SUBDIR += py-PyUserInput
+    SUBDIR += py-PyWavefront
     SUBDIR += py-QSpectrumAnalyzer
     SUBDIR += py-SimpleSoapy
     SUBDIR += py-SoapySDR
@@ -420,6 +422,7 @@
     SUBDIR += py-numcodecs
     SUBDIR += py-onnx
     SUBDIR += py-onnx-tf
+    SUBDIR += py-openai
     SUBDIR += py-openpaperwork-core
     SUBDIR += py-openpaperwork-gtk
     SUBDIR += py-openvdb
@@ -431,6 +434,7 @@
     SUBDIR += py-palettable
     SUBDIR += py-papermill
     SUBDIR += py-pexpect
+    SUBDIR += py-placekey
     SUBDIR += py-powerline-status
     SUBDIR += py-progressbar
     SUBDIR += py-progressbar2
@@ -459,6 +463,7 @@
     SUBDIR += py-tqdm
     SUBDIR += py-tvm
     SUBDIR += py-uhi
+    SUBDIR += py-wandb
     SUBDIR += py-wurlitzer
     SUBDIR += py-xgboost
     SUBDIR += pyobd
@@ -470,6 +475,8 @@
     SUBDIR += qt5-l10n
     SUBDIR += qt5ct
     SUBDIR += qt6-doc
+    SUBDIR += qt6-examples
+    SUBDIR += qt6ct
     SUBDIR += quantum++
     SUBDIR += raspberrypi-gpioshutdown
     SUBDIR += raspberrypi-userland
@@ -585,6 +592,7 @@
     SUBDIR += wmtunlo
     SUBDIR += wmweather+
     SUBDIR += wmwork
+    SUBDIR += wthrr
     SUBDIR += xd-rust
     SUBDIR += xdelta
     SUBDIR += xdelta3

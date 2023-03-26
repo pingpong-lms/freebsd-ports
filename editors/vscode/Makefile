@@ -1,20 +1,12 @@
 PORTNAME=	vscode
-DISTVERSION=	1.70.2
-PORTREVISION=	4
+DISTVERSION=	1.76.2
 CATEGORIES=	editors
-MASTER_SITES=	https://registry.npmjs.org/esbuild-freebsd-64/-/:esbuild_binary \
-		https://nodejs.org/dist/v${NODE_VER}/:node_headers \
+MASTER_SITES=	https://nodejs.org/dist/v${NODE_VER}/:node_headers \
 		https://github.com/tagattie/FreeBSD-VSCode/releases/download/${DISTVERSION}/:yarn_cache
-DISTFILES=	esbuild-freebsd-64-${ESBUILD_VER_BUILD}.tgz:esbuild_binary \
-		esbuild-freebsd-64-${ESBUILD_VER_EXTENSIONS}.tgz:esbuild_binary \
-		node-v${NODE_VER}-headers${EXTRACT_SUFX}:node_headers \
+DISTFILES=	node-v${NODE_VER}-headers${EXTRACT_SUFX}:node_headers \
 		yarn-offline-cache-${DISTVERSION}${EXTRACT_SUFX}:yarn_cache \
 		vscode-marketplace-exts-${DISTVERSION}${EXTRACT_SUFX}:yarn_cache
 DIST_SUBDIR=	${PORTNAME}
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX} \
-		node-v${NODE_VER}-headers${EXTRACT_SUFX} \
-		yarn-offline-cache-${DISTVERSION}${EXTRACT_SUFX} \
-		vscode-marketplace-exts-${DISTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	tagattie@FreeBSD.org
 COMMENT=	Visual Studio Code - Open Source ("Code - OSS")
@@ -30,13 +22,14 @@ BUILD_DEPENDS=	zip:archivers/zip \
 		rg:textproc/ripgrep \
 		npm-node${NODE_VER_MAJOR}>0:www/npm-node${NODE_VER_MAJOR} \
 		yarn-node${NODE_VER_MAJOR}>0:www/yarn-node${NODE_VER_MAJOR}
-LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-atk \
+LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-core \
 		libatspi.so:accessibility/at-spi2-core \
 		libsnappy.so:archivers/snappy \
 		libasound.so:audio/alsa-lib \
 		libFLAC.so:audio/flac \
 		libopus.so:audio/opus \
 		libdbus-1.so:devel/dbus \
+		libevent.so:devel/libevent \
 		libinotify.so:devel/libinotify \
 		libnotify.so:devel/libnotify \
 		libpci.so:devel/libpci \
@@ -71,7 +64,7 @@ USES=		desktop-file-utils gl gmake gnome iconv jpeg pkgconfig \
 USE_GITHUB=	yes
 GH_ACCOUNT=	microsoft
 
-SOURCE_COMMIT_HASH=	e4503b30fc78200f846c62cf8091b76ff5547662
+SOURCE_COMMIT_HASH=	ee2b180d582a7f601fa6ecfdad8d9fd269ab1884
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
 
@@ -83,12 +76,12 @@ USE_GNOME=	atk cairo pango gdkpixbuf2 gtk30 libxml2 libxslt
 USE_LDCONFIG=	${DATADIR}
 
 # See ${WRKSRC}/remote/.yarnrc for NODE_VER
-NODE_VER=	16.13.2
+NODE_VER=	16.14.2
 NODE_VER_MAJOR=	${NODE_VER:C/\..*$//}
 # See ${WRKSRC}/build/package.json for ESBUILD_VER_BUILD
-ESBUILD_VER_BUILD=	0.14.2
+ESBUILD_VER_BUILD=	0.15.5
 # See ${WRKSRC}/extensions/package.json for ESBUILD_VER_EXTENSIONS
-ESBUILD_VER_EXTENSIONS=	0.11.23
+ESBUILD_VER_EXTENSIONS=	0.15.14
 
 SHEBANG_REGEX=	./(extensions|resources|scripts|src)/.*\.sh$$
 PATHFIX_FILES=	src/vs/workbench/contrib/debug/node/terminals.ts
@@ -106,7 +99,7 @@ MAKE_ENV+=	PLAYWRIGHT_BROWSERS_PATH=${WRKDIR}/pw-browsers \
 # This is a workaround to avoid filesystem violations during poudriere build
 MAKE_ENV+=	PYTHONDONTWRITEBYTECODE=1
 
-ELECTRON_DIR=	${.CURDIR}/../../devel/electron18
+ELECTRON_DIR=	${.CURDIR}/../../devel/electron19
 .include	"${ELECTRON_DIR}/Makefile.version"
 
 ELECTRON_DOWNLOAD_URL=	https://github.com/electron/electron/releases/download/v${ELECTRON_VER}
@@ -120,20 +113,6 @@ pre-everything::
 	@${ECHO_MSG} "line to poudriere.conf:"
 	@${ECHO_MSG} "MAX_FILES_${PORTNAME}=4096"
 	@${ECHO_MSG} ""
-
-post-extract:
-	# setup download cache for esbuild binary
-	${MKDIR} ${WRKDIR}/.cache/esbuild/bin
-	${MKDIR} ${WRKDIR}/esbuild-freebsd-64-${ESBUILD_VER_BUILD}
-	${TAR} -xzf ${DISTDIR}/${DIST_SUBDIR}/esbuild-freebsd-64-${ESBUILD_VER_BUILD}.tgz \
-		-C ${WRKDIR}/esbuild-freebsd-64-${ESBUILD_VER_BUILD}
-	${MV} ${WRKDIR}/esbuild-freebsd-64-${ESBUILD_VER_BUILD}/package/bin/esbuild \
-		${WRKDIR}/.cache/esbuild/bin/esbuild-freebsd-64@${ESBUILD_VER_BUILD}
-	${MKDIR} ${WRKDIR}/esbuild-freebsd-64-${ESBUILD_VER_EXTENSIONS}
-	${TAR} -xzf ${DISTDIR}/${DIST_SUBDIR}/esbuild-freebsd-64-${ESBUILD_VER_EXTENSIONS}.tgz \
-		-C ${WRKDIR}/esbuild-freebsd-64-${ESBUILD_VER_EXTENSIONS}
-	${MV} ${WRKDIR}/esbuild-freebsd-64-${ESBUILD_VER_EXTENSIONS}/package/bin/esbuild \
-		${WRKDIR}/.cache/esbuild/bin/esbuild-freebsd-64@${ESBUILD_VER_EXTENSIONS}
 
 post-patch:
 	# force use of electron version matching port one
@@ -189,8 +168,6 @@ pre-build:
 	# copy rg binary files to vscode-ripgrep module directory
 	${MKDIR} ${WRKSRC}/node_modules/@vscode/ripgrep/bin
 	${CP} ${LOCALBASE}/bin/rg ${WRKSRC}/node_modules/@vscode/ripgrep/bin
-	${MKDIR} ${WRKSRC}/node_modules/vscode-ripgrep/bin
-	${CP} ${LOCALBASE}/bin/rg ${WRKSRC}/node_modules/vscode-ripgrep/bin
 	${MKDIR} ${WRKSRC}/remote/node_modules/@vscode/ripgrep/bin
 	${CP} ${LOCALBASE}/bin/rg ${WRKSRC}/remote/node_modules/@vscode/ripgrep/bin
 
@@ -233,6 +210,7 @@ do-install:
 		${TAR} -cf - . | ${TAR} -xf - -C ${STAGEDIR}${DATADIR}
 	cd ${STAGEDIR}${DATADIR}/resources/app/node_modules.asar.unpacked && \
 		${FIND} . -type f -name '*.node' -exec ${STRIP_CMD} {} ';'
+	${STRIP_CMD} ${STAGEDIR}${DATADIR}/resources/app/node_modules.asar.unpacked/node-pty/build/Release/spawn-helper
 .for f in chromedriver mksnapshot v8_context_snapshot_generator
 	${RM} ${STAGEDIR}${DATADIR}/${f}
 .endfor

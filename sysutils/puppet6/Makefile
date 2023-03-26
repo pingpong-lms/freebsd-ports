@@ -1,6 +1,6 @@
 PORTNAME=	puppet
 PORTVERSION=	6.28.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=   https://forge.puppet.com/v3/files/:forge
 PKGNAMESUFFIX=	6
@@ -12,6 +12,8 @@ WWW=		https://puppet.com/docs/puppet/latest/puppet_index.html
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+DEPRECATED=	Puppet 6 has reached EOL
+EXPIRATION_DATE=2023-06-01
 BROKEN_RUBY30=	yes
 BROKEN_RUBY31=	yes
 

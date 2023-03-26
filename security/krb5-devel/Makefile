@@ -4,8 +4,8 @@ CATEGORIES=		security
 .if !defined(MASTERDIR)
 PKGNAMESUFFIX=		-devel
 .endif
-HASH=			e48e2e56a
-MIT_COMMIT_DATE=	2023.01.13
+HASH=			d56467aa2
+MIT_COMMIT_DATE=	2023.03.13
 
 PATCH_SITES=		http://web.mit.edu/kerberos/advisories/
 PATCH_DIST_STRIP=	-p2
@@ -45,7 +45,7 @@ CMD_LINE_EDITING_DESC=	Command line editing for kadmin and ktutil
 DNS_FOR_REALM_DESC=	Enable DNS lookups for Kerberos realm names
 DNS_FOR_REALM_CONFIGURE_ENABLE=	dns-for-realm
 LDAP=			Enable LDAP support
-LDAP_USE=		OPENLDAP=yes
+LDAP_USES=		ldap
 LDAP_CONFIGURE_WITH=	ldap
 LMDB_DESC=		OpenLDAP Lightning Memory-Mapped Database support
 LMDB_CONFIGURE_WITH=	lmdb

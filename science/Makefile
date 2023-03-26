@@ -5,7 +5,6 @@
     SUBDIR += ChipmunkPhysics
     SUBDIR += InsightToolkit
     SUBDIR += InsightToolkit501
-    SUBDIR += InsightToolkit521
     SUBDIR += PETSc
     SUBDIR += R-cran-DCluster
     SUBDIR += R-cran-Epi
@@ -70,7 +69,6 @@
     SUBDIR += csvtk
     SUBDIR += dakota
     SUBDIR += dalton
-    SUBDIR += dcl
     SUBDIR += dd_package
     SUBDIR += devisor
     SUBDIR += dftbplus
@@ -97,7 +95,6 @@
     SUBDIR += fasthenry
     SUBDIR += fastjet
     SUBDIR += feff10
-    SUBDIR += fisicalab
     SUBDIR += fleur
     SUBDIR += frontistr
     SUBDIR += fsom
@@ -298,12 +295,14 @@
     SUBDIR += py-asdf
     SUBDIR += py-asdf-standard
     SUBDIR += py-asdf-transform-schemas
+    SUBDIR += py-asdf-unit-schemas
     SUBDIR += py-ase
     SUBDIR += py-atomium
     SUBDIR += py-avogadrolibs
     SUBDIR += py-boutdata
     SUBDIR += py-boututils
     SUBDIR += py-cdo
+    SUBDIR += py-cfgrib
     SUBDIR += py-chainer
     SUBDIR += py-chainer-chemistry
     SUBDIR += py-chempy

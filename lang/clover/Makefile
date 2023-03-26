@@ -1,6 +1,5 @@
 PORTNAME=	clover
 PORTVERSION=	${MESAVERSION}
-PORTREVISION=	1
 CATEGORIES=	lang
 
 COMMENT=	Mesa OpenCL implementation for AMD GPUs
@@ -34,6 +33,7 @@ MESON_ARGS+=	-Ddri-drivers="" \
 		-Dgallium-xa=disabled \
 		-Dgles1=disabled \
 		-Dgles2=disabled \
+		-Dmicrosoft-clc=disabled \
 		-Dopengl=false \
 		-Dglx=disabled \
 		-Degl=disabled \

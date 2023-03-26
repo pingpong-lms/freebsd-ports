@@ -1,6 +1,7 @@
 PORTNAME=	pyaudi
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.9.2-1
+PORTREVISION=	1
 DISTVERSIONSUFFIX=	-g899eb78
 CATEGORIES=	math
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,6 +12,8 @@ WWW=		http://darioizzo.github.io/audi/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/../LICENSE
+
+BROKEN_i386=	fails to compile, see https://github.com/darioizzo/audi/issues/62
 
 BUILD_DEPENDS=	audi>0:math/audi \
 		pybind11>0:devel/pybind11
@@ -26,7 +29,6 @@ LIB_DEPENDS=	libabsl_base.so:devel/abseil \
 
 USES=		cmake:testing compiler:c++20-lang python
 USE_PYTHON=	flavors
-USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	darioizzo

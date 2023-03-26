@@ -1,8 +1,12 @@
 PORTNAME=	mongodb
 DISTVERSIONPREFIX=	r
-DISTVERSION=	6.0.3
+DISTVERSION=	6.0.4
+PORTREVISION=	1
 CATEGORIES=	databases net
 PKGNAMESUFFIX=	${DISTVERSION:R:S/.//}
+
+PATCH_SITES=	https://github.com/mongodb/mongo/commit/
+PATCHFILES=	c419698b577f7924d2d6fc6bd3f7bd922f1d0dd7.patch:-p1
 
 MAINTAINER=	ronald@FreeBSD.org
 COMMENT=	Distributed document-oriented "NoSQL" database (6.0.x Branch)
@@ -14,7 +18,6 @@ LICENSE_NAME_SSPLv1=	Server Side Public License Version 1
 LICENSE_FILE_SSPLv1=	${WRKSRC}/LICENSE-Community.txt
 LICENSE_PERMS_SSPLv1=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-IGNORE=		segmentation fault at runtime: https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=267668
 ONLY_FOR_ARCHS=	aarch64 amd64 powerpc64le
 ONLY_FOR_ARCHS_REASON=	only ported to amd64, aarch64, and powerpc64le on FreeBSD; upstream supports arm64, ppc64le, s390x, and x86-64
 
@@ -26,8 +29,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cheetah3>0:devel/py-cheetah3@${PY_FLAVOR} 
 # build depends used while running ${WRKSRC}/src/third_party/mozjs/gen-config.sh
 BUILD_DEPENDS+=	autoconf2.13:devel/autoconf2.13 \
 		gsed:textproc/gsed
-LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
-		libcurl.so:ftp/curl \
+LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libicuuc.so:devel/icu \
 		libpcre.so:devel/pcre \
 		libsnappy.so:archivers/snappy \
@@ -56,7 +58,6 @@ MAKE_ARGS=	--cxx-std=17 \
 		--disable-warnings-as-errors \
 		--libc++ \
 		--runtime-hardening=on \
-		--use-system-boost \
 		--use-system-icu \
 		--use-system-libunwind \
 		--use-system-pcre \
@@ -113,7 +114,6 @@ MOZJS_ARCH=	${ARCH}
 .endif
 
 post-patch:
-	${RM} -rf ${WRKSRC}/src/third_party/boost
 	${RM} -rf ${WRKSRC}/src/third_party/icu4c-*
 	${RM} -rf ${WRKSRC}/src/third_party/pcre-*
 	${RM} -rf ${WRKSRC}/src/third_party/snappy-*

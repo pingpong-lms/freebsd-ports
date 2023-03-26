@@ -1,7 +1,7 @@
 PORTNAME=	ceph
 DISTVERSIONPREFIX=	v
 DISTVERSION=	14.2.22
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	net
 PKGNAMESUFFIX=	14
 
@@ -11,8 +11,6 @@ WWW=		https://ceph.com/
 
 LICENSE=	GPLv2 LGPL3
 LICENSE_COMB=	dual
-
-BROKEN=		Not compatible with Boost-1.81
 
 # even though i386 will build, it is not really advised.
 ONLY_FOR_ARCHS=	amd64 powerpc64 powerpc64le
@@ -62,11 +60,10 @@ RUN_DEPENDS=	\
 	${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR} \
 	${PYTHON_PKGNAMEPREFIX}routes>=0:www/py-routes@${PY_FLAVOR}
 
-USES=		cmake:noninja compiler:c++17-lang cpe dos2unix fuse gettext-runtime gmake ncurses \
+USES=		cmake:noninja compiler:c++17-lang cpe dos2unix fuse gettext-runtime gmake ldap ncurses \
 		pkgconfig python:3.8-3.9 readline shebangfix ssl
 CPE_VENDOR=	linuxfoundation
 USE_PYTHON=	cython py3kplist
-USE_OPENLDAP=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	ceph:DEFAULT
 DOS2UNIX_FILES=	src/pybind/mgr/diskprediction_cloud/common/__init__.py
