@@ -195,6 +195,7 @@ include/thrift/lib/cpp/util/VarintUtils-inl.h
 include/thrift/lib/cpp/util/VarintUtils.h
 include/thrift/lib/cpp/util/test/VarintUtilsTestUtil.h
 include/thrift/lib/cpp2/Adapt.h
+include/thrift/lib/cpp2/Adapter.h
 include/thrift/lib/cpp2/BadFieldAccess.h
 include/thrift/lib/cpp2/BoxedValuePtr.h
 include/thrift/lib/cpp2/CloneableIOBuf.h
@@ -246,6 +247,7 @@ include/thrift/lib/cpp2/async/ServerChannel.h
 include/thrift/lib/cpp2/async/ServerGeneratorStream-inl.h
 include/thrift/lib/cpp2/async/ServerGeneratorStream.h
 include/thrift/lib/cpp2/async/ServerPublisherStream.h
+include/thrift/lib/cpp2/async/ServerRequestData.h
 include/thrift/lib/cpp2/async/ServerSinkBridge.h
 include/thrift/lib/cpp2/async/ServerStream-inl.h
 include/thrift/lib/cpp2/async/ServerStream.h
@@ -314,6 +316,7 @@ include/thrift/lib/cpp2/op/Sha256Hasher.h
 include/thrift/lib/cpp2/op/StdHasher.h
 include/thrift/lib/cpp2/op/StdSerializer.h
 include/thrift/lib/cpp2/op/Testing.h
+include/thrift/lib/cpp2/op/Xxh64Hasher.h
 include/thrift/lib/cpp2/op/detail/AnyOp.h
 include/thrift/lib/cpp2/op/detail/BaseOp.h
 include/thrift/lib/cpp2/op/detail/BasePatch.h
@@ -342,6 +345,7 @@ include/thrift/lib/cpp2/protocol/Cpp2Ops-inl.h
 include/thrift/lib/cpp2/protocol/Cpp2Ops.h
 include/thrift/lib/cpp2/protocol/DebugProtocol.h
 include/thrift/lib/cpp2/protocol/FieldMask.h
+include/thrift/lib/cpp2/protocol/FieldMaskRef.h
 include/thrift/lib/cpp2/protocol/FieldPath.h
 include/thrift/lib/cpp2/protocol/GetStandardProtocol.h
 include/thrift/lib/cpp2/protocol/JSONProtocol-inl.h
@@ -364,6 +368,7 @@ include/thrift/lib/cpp2/protocol/TableBasedSerializerImpl.h
 include/thrift/lib/cpp2/protocol/Traits.h
 include/thrift/lib/cpp2/protocol/VirtualProtocol.h
 include/thrift/lib/cpp2/protocol/detail/FieldMask.h
+include/thrift/lib/cpp2/protocol/detail/FieldMaskUtil.h
 include/thrift/lib/cpp2/protocol/detail/Object.h
 include/thrift/lib/cpp2/protocol/detail/ReservedId.h
 include/thrift/lib/cpp2/protocol/detail/index.h
@@ -546,6 +551,7 @@ include/thrift/lib/cpp2/type/detail/Name.h
 include/thrift/lib/cpp2/type/detail/NativeType.h
 include/thrift/lib/cpp2/type/detail/Runtime.h
 include/thrift/lib/cpp2/type/detail/Traits.h
+include/thrift/lib/cpp2/type/detail/TypeClassFromTypeTag.h
 include/thrift/lib/cpp2/type/detail/TypeInfo.h
 include/thrift/lib/cpp2/type/detail/TypeRegistry.h
 include/thrift/lib/cpp2/type/detail/Wrap.h
@@ -562,6 +568,7 @@ include/thrift/lib/cpp2/util/MethodMetadata.h
 include/thrift/lib/cpp2/util/ScopedServerInterfaceThread-inl.h
 include/thrift/lib/cpp2/util/ScopedServerInterfaceThread.h
 include/thrift/lib/cpp2/util/ScopedServerThread.h
+include/thrift/lib/cpp2/util/TypeErasedStorage.h
 include/thrift/lib/cpp2/util/gtest/Matcher-inl.h
 include/thrift/lib/cpp2/util/gtest/Matcher.h
 include/thrift/lib/cpp2/util/gtest/Printer.h

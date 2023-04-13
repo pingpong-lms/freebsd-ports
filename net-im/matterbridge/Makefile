@@ -1,10 +1,10 @@
 PORTNAME=	matterbridge
 PORTVERSION=	1.22.3
 DISTVERSIONPREFIX=	v
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	net-im
 
-MAINTAINER=	swills@FreeBSD.org
+MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Chat network bridge
 WWW=		https://github.com/42wim/matterbridge
 

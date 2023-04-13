@@ -1,10 +1,10 @@
 PORTNAME=	exercism
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.0.13
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	misc
 
-MAINTAINER=	swills@FreeBSD.org
+MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	CLI client for exercism.io
 WWW=		https://exercism.io/
 

@@ -5,6 +5,7 @@
     SUBDIR += aclgen
     SUBDIR += actiona
     SUBDIR += adios2
+    SUBDIR += aichat
     SUBDIR += amanda-client
     SUBDIR += amanda-perl-wrapper
     SUBDIR += amanda-server
@@ -82,6 +83,7 @@
     SUBDIR += digitemp
     SUBDIR += dijo
     SUBDIR += dive
+    SUBDIR += dlib-models
     SUBDIR += dnetc
     SUBDIR += dotenv-linter
     SUBDIR += dtach
@@ -451,6 +453,7 @@
     SUBDIR += py-scikit-fusion
     SUBDIR += py-serverfiles
     SUBDIR += py-shap2
+    SUBDIR += py-shell-gpt
     SUBDIR += py-soapy_power
     SUBDIR += py-spdx
     SUBDIR += py-spdx-lookup

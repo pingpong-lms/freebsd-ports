@@ -51,7 +51,6 @@
     SUBDIR += dvdauthor
     SUBDIR += dvdid
     SUBDIR += dvdread
-    SUBDIR += dvdrip
     SUBDIR += dvdstyler
     SUBDIR += elementary-videos
     SUBDIR += emby-server
@@ -226,7 +225,6 @@
     SUBDIR += mkclean
     SUBDIR += mkvalidator
     SUBDIR += mkvtoolnix
-    SUBDIR += mkxvcd
     SUBDIR += mlt6
     SUBDIR += mlt6-qt5
     SUBDIR += mlt7
@@ -250,7 +248,6 @@
     SUBDIR += musique
     SUBDIR += mxflib
     SUBDIR += mythtv
-    SUBDIR += mythtv-frontend
     SUBDIR += naludump
     SUBDIR += navidrome
     SUBDIR += neolink
@@ -284,7 +281,6 @@
     SUBDIR += p5-MP4-Info
     SUBDIR += p5-Net-UPnP
     SUBDIR += p5-Subtitles
-    SUBDIR += pHash
     SUBDIR += peek
     SUBDIR += phonon
     SUBDIR += phonon-designerplugin
@@ -365,7 +361,6 @@
     SUBDIR += subsync
     SUBDIR += subtitlecomposer
     SUBDIR += subtitleoffsetmodifier
-    SUBDIR += subtitleripper
     SUBDIR += subtools
     SUBDIR += svt-av1
     SUBDIR += svt-hevc
@@ -379,7 +374,6 @@
     SUBDIR += tivodecode
     SUBDIR += totem
     SUBDIR += totem-pl-parser
-    SUBDIR += transcode
     SUBDIR += tvheadend
     SUBDIR += ustreamer
     SUBDIR += uvg266
@@ -427,7 +421,6 @@
     SUBDIR += webcamd
     SUBDIR += webcamoid
     SUBDIR += wf-recorder
-    SUBDIR += win32-codecs
     SUBDIR += winff
     SUBDIR += wlrobs
     SUBDIR += x264

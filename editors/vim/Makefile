@@ -1,5 +1,5 @@
 PORTNAME=	vim
-PORTVERSION=	9.0.1366
+PORTVERSION=	9.0.1441
 DISTVERSIONPREFIX=	v
 CATEGORIES=	editors
 
@@ -43,6 +43,10 @@ CONFLICTS_INSTALL=	${FLAVORS:N${FLAVOR}:S/^/vim-/}
 
 .for f in ${FLAVORS:Nconsole}
 ${f}_PKGNAMESUFFIX=	-${f}
+.endfor
+
+.for f in ${FLAVORS:Ntiny}
+${f}_CONFLICTS_INSTALL=	xxd
 .endfor
 
 # GUI flavors

@@ -1,7 +1,7 @@
 PORTNAME=	mongodb
 DISTVERSIONPREFIX=	r
 DISTVERSION=	6.0.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	databases net
 PKGNAMESUFFIX=	${DISTVERSION:R:S/.//}
 
@@ -92,10 +92,6 @@ SSL_USES=	ssl
 SSL_MAKE_ARGS=	--ssl
 
 .include <bsd.port.pre.mk>
-
-.if ${OSREL} == "12.3"
-IGNORE=		does not compile on 12.3, libc++ too old
-.endif
 
 ALL_TARGET=	install-core
 

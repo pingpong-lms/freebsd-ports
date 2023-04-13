@@ -1,6 +1,5 @@
 PORTNAME?=	nginx
-PORTVERSION=	1.23.3
-PORTREVISION=	10
+PORTVERSION=	1.24.0
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/ \
 		LOCAL/osa
@@ -16,7 +15,7 @@ LICENSE_FILE?=	${WRKSRC}/LICENSE
 
 CONFLICTS_INSTALL=	nginx
 
-PORTSCOUT=	limit:^1\.23\.[0-9]*
+PORTSCOUT=	limit:^1\.24\.[0-9]*
 
 USES=		cpe
 
@@ -230,17 +229,8 @@ CFLAGS+=	-DNDEBUG
 CFLAGS+=	-Wno-compound-token-split-by-macro
 .endif
 
-.if ${PORT_OPTIONS:MHTTPV3} && \
-    (empty(PORT_OPTIONS:MHTTPV3_BORING) && \
-     empty(PORT_OPTIONS:MHTTPV3_LSSL) && \
-     empty(PORT_OPTIONS:MHTTPV3_QTLS))
-IGNORE=		required HTTPV3_BORING or HTTPV3_LSSL or HTTPV3_QTLS \
-		to be defined. Please do 'make config' again
-.endif
-
-.if empty(PORT_OPTIONS:MDYNAMIC_HC) && empty(PORT_OPTIONS:MLUA) && \
-    empty(PORT_OPTIONS:MMODSECURITY3) && empty(PORT_OPTIONS:MPASSENGER) && \
-    empty(PORT_OPTIONS:MSMALL_LIGHT)
+.if empty(PORT_OPTIONS:MLUA) && empty(PORT_OPTIONS:MMODSECURITY3) && \
+    empty(PORT_OPTIONS:MPASSENGER)
 CONFIGURE_ARGS+=	--with-ld-opt="-L ${LOCALBASE}/lib"
 .else
 CONFIGURE_ARGS+=	--with-ld-opt="-L ${LOCALBASE}/lib -lpcre"
