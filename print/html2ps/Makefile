@@ -12,7 +12,6 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 RUN_DEPENDS=	p5-libwww>=0:www/p5-libwww \
-		p5-libwww>=0:www/p5-libwww \
 		weblint++:www/weblint++ \
 		paperconf:print/libpaper
 
