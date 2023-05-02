@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-app
-PORTVERSION=	1.2
+PORTVERSION=	1.3
 CATEGORIES=	pingpong
 MASTER_SITES=	#
 DISTFILES=	#
@@ -17,12 +17,10 @@ JAVA_VERSION=	8
 PLIST_FILES=	sbin/ppctl \
 		share/ffmpeg/libx264-slow.ffpreset
 
-USE_APACHE_RUN=	24
-USES=		perl5 python:3.7+ ruby:run
+USES=		perl5 python:3.7+ ruby:run magick:7,nox11,run apache:2.4,run
 
 RUN_DEPENDS= \
 	jsvc:devel/apache-commons-daemon \
-	convert:graphics/ImageMagick7-nox11 \
 	p5-Pg>0:databases/p5-Pg \
 	p5-XML-Writer>0:textproc/p5-XML-Writer \
 	${LOCALBASE}/${APACHEMODDIR}/mod_jk.so:www/mod_jk \
