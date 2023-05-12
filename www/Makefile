@@ -245,6 +245,7 @@
     SUBDIR += httrack
     SUBDIR += hurl
     SUBDIR += hypermail
+    SUBDIR += icapeg
     SUBDIR += igal2
     SUBDIR += ikiwiki
     SUBDIR += ilias
@@ -1604,6 +1605,8 @@
     SUBDIR += py-djangorestframework-filters
     SUBDIR += py-djangorestframework-xml
     SUBDIR += py-draftjs-exporter
+    SUBDIR += py-drf-spectacular
+    SUBDIR += py-drf-spectacular-sidecar
     SUBDIR += py-drf-yasg
     SUBDIR += py-dropbox
     SUBDIR += py-dtflickr
@@ -1835,6 +1838,7 @@
     SUBDIR += py-wsaccel
     SUBDIR += py-wsgidav
     SUBDIR += py-xandikos
+    SUBDIR += py-xyzservices
     SUBDIR += py-yarl
     SUBDIR += pydio-cells
     SUBDIR += qdecoder
@@ -1861,7 +1865,6 @@
     SUBDIR += reportmagic
     SUBDIR += repos-style
     SUBDIR += reproxy
-    SUBDIR += resin3
     SUBDIR += restbed
     SUBDIR += restinio
     SUBDIR += retawq

@@ -31,6 +31,7 @@
     SUBDIR += R-cran-cliapp
     SUBDIR += R-cran-clipr
     SUBDIR += R-cran-clisymbols
+    SUBDIR += R-cran-clock
     SUBDIR += R-cran-collapse
     SUBDIR += R-cran-covr
     SUBDIR += R-cran-cpp11
@@ -125,6 +126,7 @@
     SUBDIR += R-cran-tibble
     SUBDIR += R-cran-tidyr
     SUBDIR += R-cran-tidyselect
+    SUBDIR += R-cran-timechange
     SUBDIR += R-cran-tinytest
     SUBDIR += R-cran-tzdb
     SUBDIR += R-cran-usethis
@@ -599,6 +601,7 @@
     SUBDIR += electron21
     SUBDIR += electron22
     SUBDIR += electron23
+    SUBDIR += electron24
     SUBDIR += elf
     SUBDIR += elf-dissector
     SUBDIR += elfcat
@@ -4399,6 +4402,7 @@
     SUBDIR += py-cdg
     SUBDIR += py-celery
     SUBDIR += py-celery-progress
+    SUBDIR += py-celery-singleton
     SUBDIR += py-cerberus
     SUBDIR += py-certsrv
     SUBDIR += py-cffi
@@ -5185,6 +5189,7 @@
     SUBDIR += py-pycomplete
     SUBDIR += py-pycparser
     SUBDIR += py-pydantic
+    SUBDIR += py-pydantic-core
     SUBDIR += py-pydash
     SUBDIR += py-pydecor
     SUBDIR += py-pydenticon
@@ -5432,6 +5437,7 @@
     SUBDIR += py-rfc3339
     SUBDIR += py-rfc3339-validator
     SUBDIR += py-rfc3986-validator
+    SUBDIR += py-rich-click
     SUBDIR += py-robotframework
     SUBDIR += py-robotframework-databaselibrary
     SUBDIR += py-robotframework-pabot
@@ -5617,6 +5623,7 @@
     SUBDIR += py-types-cryptography
     SUBDIR += py-types-docutils
     SUBDIR += py-types-futures
+    SUBDIR += py-types-jsonschema
     SUBDIR += py-types-mock
     SUBDIR += py-types-protobuf
     SUBDIR += py-types-psutil
@@ -7158,6 +7165,7 @@
     SUBDIR += rubygem-rubocop
     SUBDIR += rubygem-rubocop-ast
     SUBDIR += rubygem-rubocop-capybara
+    SUBDIR += rubygem-rubocop-factory_bot
     SUBDIR += rubygem-rubocop-performance
     SUBDIR += rubygem-rubocop-rake
     SUBDIR += rubygem-rubocop-rspec
