@@ -5,6 +5,65 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20230602:
+  AFFECTS: users of net-mgmt/netbox
+  AUTHOR: kai@FreeBSD.org
+
+  1. If the plugin security/py-netbox-secretstore is used, which is no
+     longer maintained by upstream, the following steps must be done before
+     upgrading to NetBox 3.5:
+
+     * Migrate from security/py-netbox-secretstore (= 1.4.2_2) to
+       security/py-netbox-secrets (= 1.7.6) with a NetBox 3.4.x instance.
+
+       It is very important that the versions of py-netbox-secretstore and
+       py-netbox-secrets match as specified otherwise the migration will not
+       be successful.
+
+       The reason for this is that py-netbox-secrets 1.8.x is not backwards
+       compatible with Netbox 3.4.  For further details please see the
+       updating instructions of py-netbox-secretstore or the UPDATING entry
+       of 2023-05-11.
+
+  2. Please also check the pkg-message and the changelogs for further info.
+
+20230531:
+  AFFECTS: users of net-mgmt/netdisco
+  AUTHOR: dgeo@centrale-marseille.fr
+
+  The netdisco user now needs a HOME and a shell.
+  For existing installs you will need to set
+  HOME to /usr/local/etc/netdisco and shell to /bin/sh.
+
+  For example in one shell line:
+  pw user mod netdisco -d /usr/local/etc/netdisco -s /bin/sh
+
+20230526:
+  AFFECTS: users of mail/exim
+  AUTHOR: pi@FreeBSD.org
+
+  The port changes from USE_DB to USE_NDBM. Any existing configuration like
+  ${lookup{$needle}dbm{haystack.db}}
+  will need to change to
+  ${lookup{$needle}dbm{haystack}}.
+
+  Please also rename your old DBM files while the exim daemon is stopped:
+  find /var/spool/exim/db/* -not -name \*.lockfile -exec mv -i {} {}.db \;
+
+20230513:
+  AFFECTS: users of www/tt-rss
+  AUTHOR: dereks@lifeofadishwasher.com
+
+  www/tt-rss now expects the user to install the database drivers by hand
+  allowing the port to be database independent however it would be best if you
+  mark the php driver packages as a non-automatic package such that
+  pkg-autoremove doesn't uninstall them.
+
+  Change 80 to your corresponding php version (80, 81, 82)
+
+  mysql: pkg set -yA 0 php80-mysqli php80-pdo_mysql;
+  pgsql: pkg set -yA 0 php80-pgsql php80-pdo_pgsql;
+
 20230511:
   AFFECTS: users of net-mgmt/py-netbox-secretstore
   AUTHOR: kai@FreeBSD.org
@@ -2834,7 +2893,7 @@ reinstall the new ones without using the pkg upgrade facility.
   The default Perl version has been switched to Perl 5.32.  If you are using
   binary packages to upgrade your system, you do not have anything to do, pkg
   upgrade will do the right thing.  For the other people, follow the
-  instructions in entry 20161103, it should still be the same.
+  instructions in entry 20181213, it should still be the same.
 
 20200726:
   AFFECTS: users of net-mgmt/librenms
@@ -3939,7 +3998,7 @@ leave you without networking.
   The default Perl version has been switched to Perl 5.30.  If you are using
   binary packages to upgrade your system, you do not have anything to do, pkg
   upgrade will do the right thing.  For the other people, follow the
-  instructions in entry 20161103, it should still be the same.
+  instructions in entry 20181213, it should still be the same.
 
 20190801:
   AFFECTS: users of www/ot-recorder
@@ -4744,8 +4803,44 @@ leave you without networking.
 
   The default Perl version has been switched to Perl 5.28.  If you are using
   binary packages to upgrade your system, you do not have anything to do, pkg
-  upgrade will do the right thing.  For the other people, follow the
-  instructions in entry 20161103, it should still be the same.
+  upgrade will do the right thing.  For the other people, assuming you are
+  migrating from 5.26 to 5.28, do:
+
+  First, add to /etc/make.conf:
+
+  DEFAULT_VERSIONS+=  perl5=5.28
+
+  Portupgrade users:
+	portupgrade -o lang/perl5.28 -f lang/perl5.26
+
+	  You can now remove the DEFAULT_VERSIONS line added earlier
+	  from /etc/make.conf
+
+	  Then you will need to rebuild everything that uses libperl.so, you
+	  can do so with:
+
+	portupgrade -f `pkg shlib -qR libperl.so.5.26`
+
+	  If, for some reason, this command fails at one point, it is safe to
+	  run it again, it will not rebuild what it already rebuilt, as the
+	  ports that have been rebuilt no longer depend on libperl.so.5.26 but
+	  on libperl.so.5.28.
+
+  Portmaster users:
+	portmaster -o lang/perl5.28 lang/perl5.26
+
+	  You can now remove the DEFAULT_VERSIONS line added earlier
+	  from /etc/make.conf
+
+	  Then you will need to rebuild everything that uses libperl.so, you
+	  can do so with:
+
+	portmaster -f `pkg shlib -qR libperl.so.5.26`
+
+	  If, for some reason, this command fails at one point, it is safe to
+	  run it again, it will not rebuild what it already rebuilt, as the
+	  ports that have been rebuilt no longer depend on libperl.so.5.26 but
+	  on libperl.so.5.28.
 
 20181212:
   AFFECTS: users of net-im/ejabberd
