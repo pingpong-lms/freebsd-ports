@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-generic
-PORTVERSION=	0.23
+PORTVERSION=	1.0
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
 DISTFILES=	#
@@ -41,7 +41,7 @@ RUN_DEPENDS= \
 	p5-Proc-ProcessTable>0:devel/p5-Proc-ProcessTable \
 	p5-Crypt-SSLeay>0:security/p5-Crypt-SSLeay \
 	p5-Net-DNS>0:dns/p5-Net-DNS \
-	nrpe3:net-mgmt/nrpe3 \
+	nrpe:net-mgmt/nrpe \
 	collectd:net-mgmt/collectd5 \
 	telegraf:net-mgmt/telegraf \
 	ossec-hids-agent-config>=3.7.0:security/ossec-hids-agent-config \
