@@ -250,6 +250,7 @@
     SUBDIR += haproxy24
     SUBDIR += haproxy25
     SUBDIR += haproxy26
+    SUBDIR += haproxy27
     SUBDIR += hblock
     SUBDIR += hexinject
     SUBDIR += hlmaster
@@ -276,8 +277,10 @@
     SUBDIR += imapproxy
     SUBDIR += incidenceeditor
     SUBDIR += intel-em-kmod
+    SUBDIR += intel-iavf-kmod
     SUBDIR += intel-ice-kmod
     SUBDIR += intel-igb-kmod
+    SUBDIR += intel-irdma-kmod
     SUBDIR += intel-ix-kmod
     SUBDIR += intel-ixl-kmod
     SUBDIR += intel-ixv-kmod
@@ -461,6 +464,7 @@
     SUBDIR += mediastreamer
     SUBDIR += megacmd
     SUBDIR += megatools
+    SUBDIR += mercury
     SUBDIR += messagelib
     SUBDIR += mgen
     SUBDIR += micro_inetd
@@ -549,7 +553,6 @@
     SUBDIR += ntpsec
     SUBDIR += ntraceroute
     SUBDIR += nusoap
-    SUBDIR += nuster
     SUBDIR += nxproxy
     SUBDIR += nyancat
     SUBDIR += nylon
@@ -563,7 +566,6 @@
     SUBDIR += onionprobe
     SUBDIR += ooni-mini
     SUBDIR += ooni-probe-cli
-    SUBDIR += opal
     SUBDIR += open-isns
     SUBDIR += openbgpd
     SUBDIR += openbgpd6
@@ -1036,6 +1038,7 @@
     SUBDIR += py-aiohttp-socks
     SUBDIR += py-amqp
     SUBDIR += py-amqplib
+    SUBDIR += py-anonfile
     SUBDIR += py-avahi
     SUBDIR += py-bonsai
     SUBDIR += py-cepa
@@ -1049,6 +1052,7 @@
     SUBDIR += py-duet
     SUBDIR += py-dugong
     SUBDIR += py-ec2-cli-tools
+    SUBDIR += py-ephemeral-port-reserve
     SUBDIR += py-errbot
     SUBDIR += py-eventlet
     SUBDIR += py-gdown
@@ -1076,6 +1080,7 @@
     SUBDIR += py-maxminddb
     SUBDIR += py-miniupnpc
     SUBDIR += py-mpi4py
+    SUBDIR += py-mpi4py-mpich
     SUBDIR += py-msrplib
     SUBDIR += py-ndg-httpsclient
     SUBDIR += py-netaddr
@@ -1328,7 +1333,6 @@
     SUBDIR += rubygem-mqtt
     SUBDIR += rubygem-nats-pure
     SUBDIR += rubygem-net-ldap
-    SUBDIR += rubygem-net-ldap017
     SUBDIR += rubygem-net-netrc
     SUBDIR += rubygem-net-ntp
     SUBDIR += rubygem-net-ping
@@ -1468,6 +1472,7 @@
     SUBDIR += socketpipe
     SUBDIR += socketw
     SUBDIR += sofia-sip
+    SUBDIR += speedtest
     SUBDIR += speedtest-go
     SUBDIR += spiritvnc
     SUBDIR += spoofer
@@ -1612,6 +1617,7 @@
     SUBDIR += wlvncc
     SUBDIR += wmnd
     SUBDIR += wmnet
+    SUBDIR += wmnetload
     SUBDIR += wmping
     SUBDIR += wmwave
     SUBDIR += wmwifi

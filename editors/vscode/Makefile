@@ -1,5 +1,6 @@
 PORTNAME=	vscode
-DISTVERSION=	1.79.0
+DISTVERSION=	1.80.2
+PORTREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	https://github.com/tagattie/FreeBSD-VSCode/releases/download/${DISTVERSION}/:yarn_cache
 DISTFILES=	yarn-offline-cache-${DISTVERSION}${EXTRACT_SUFX}:yarn_cache \
@@ -51,8 +52,7 @@ LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-core \
 		libxkbcommon.so:x11/libxkbcommon \
 		libxshmfence.so:x11/libxshmfence \
 		libfontconfig.so:x11-fonts/fontconfig
-RUN_DEPENDS=	${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:audio/alsa-plugins \
-		xdg-open:devel/xdg-utils \
+RUN_DEPENDS=	xdg-open:devel/xdg-utils \
 		bash:shells/bash
 TEST_DEPENDS=	electron${ELECTRON_VER_MAJOR}:devel/electron${ELECTRON_VER_MAJOR} \
 		bash:shells/bash
@@ -63,7 +63,7 @@ USES=		desktop-file-utils gl gmake gnome iconv:wchar_t jpeg \
 USE_GITHUB=	yes
 GH_ACCOUNT=	microsoft
 
-SOURCE_COMMIT_HASH=	b380da4ef1ee00e224a15c1d4d9793e27c2b6302
+SOURCE_COMMIT_HASH=	2ccd690cbff1569e4a83d7c43d45101f817401dc
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
 
@@ -75,7 +75,7 @@ USE_GNOME=	atk cairo pango gdkpixbuf2 gtk30 libxml2 libxslt
 USE_LDCONFIG=	${DATADIR}
 
 # Keep NODE_VER in sync with www/node16 DISTVERSION
-NODE_VER=	16.20.0
+NODE_VER=	16.20.1
 NODE_VER_MAJOR=	${NODE_VER:C/\..*$//}
 
 SHEBANG_REGEX=	./(extensions|resources|scripts|src)/.*\.sh$$
@@ -112,6 +112,10 @@ pre-everything::
 	@${ECHO_MSG} "line to poudriere.conf:"
 	@${ECHO_MSG} "MAX_FILES_${PORTNAME}=4096"
 	@${ECHO_MSG} ""
+
+post-extract:
+	${CP} ${WRKSRC}/build/.moduleignore.linux \
+		${WRKSRC}/build/.moduleignore.freebsd
 
 post-patch:
 	# force use of electron version matching port one
@@ -207,6 +211,9 @@ do-build:
 	cd ${WRKDIR}/.cache/electron/${ELECTRON_DOWNLOAD_URL_HASH} && \
 		${SHA256} -r *-v${ELECTRON_VER}-linux-*.zip | \
 		${SED} -e 's/ / */' > SHASUMS256.txt
+	cd ${WRKDIR}/.cache/electron/${ELECTRON_DOWNLOAD_URL_HASH} && \
+		${SHA256} -r *-v${ELECTRON_VER}-linux-*.zip | \
+		${SED} -e 's/ / */' >> ${WRKSRC}/build/checksums/electron.txt
 	# build and package vscode
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} yarn run tsc -p build/tsconfig.build.json
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} yarn gulp vscode-linux-x64-min

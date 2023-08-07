@@ -10,7 +10,6 @@
 
 PORTNAME=	ksh
 PORTVERSION=	${AST_COMMIT_DATE}
-PORTREVISION=	1
 CATEGORIES=	shells
 PKGNAMESUFFIX=	-devel
 
@@ -22,8 +21,8 @@ LICENSE=	EPL
 
 BROKEN_FreeBSD_12=	exit code 139 making lib/libcmd
 
-HASH=		c6ee0aa6
-AST_COMMIT_DATE=	2023.06.09
+HASH=		3c2b0dcf
+AST_COMMIT_DATE=	2023.06.14
 
 USES=		compiler:c11
 

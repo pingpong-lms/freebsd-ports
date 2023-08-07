@@ -15,6 +15,7 @@
     SUBDIR += bcftools
     SUBDIR += bedtools
     SUBDIR += bfc
+    SUBDIR += bifrost
     SUBDIR += bio-mocha
     SUBDIR += bioawk
     SUBDIR += biococoa
@@ -27,11 +28,13 @@
     SUBDIR += bolt-lmm
     SUBDIR += bowtie
     SUBDIR += bowtie2
+    SUBDIR += btllib
     SUBDIR += bwa
     SUBDIR += canu
     SUBDIR += cd-hit
     SUBDIR += cdbfasta
     SUBDIR += checkm
+    SUBDIR += chip-seq
     SUBDIR += clustal-omega
     SUBDIR += clustalw
     SUBDIR += cufflinks
@@ -93,8 +96,10 @@
     SUBDIR += libsbml
     SUBDIR += libsedml
     SUBDIR += linux-foldingathome
+    SUBDIR += locarna
     SUBDIR += mafft
     SUBDIR += mapm3
+    SUBDIR += mashmap
     SUBDIR += megahit
     SUBDIR += metaeuk
     SUBDIR += migrate
@@ -166,6 +171,7 @@
     SUBDIR += py-goatools
     SUBDIR += py-gtfparse
     SUBDIR += py-hits
+    SUBDIR += py-htseq
     SUBDIR += py-libnuml
     SUBDIR += py-libsedml
     SUBDIR += py-loompy
@@ -199,6 +205,7 @@
     SUBDIR += rubygem-bio-executables
     SUBDIR += rubygem-bio-old-biofetch-emulator
     SUBDIR += rubygem-bio-shell
+    SUBDIR += salmon
     SUBDIR += sam2pairwise
     SUBDIR += samtools
     SUBDIR += scrm
@@ -210,6 +217,7 @@
     SUBDIR += seqio
     SUBDIR += seqkit
     SUBDIR += seqtk
+    SUBDIR += seqwish
     SUBDIR += sigviewer
     SUBDIR += sim4
     SUBDIR += slclust
