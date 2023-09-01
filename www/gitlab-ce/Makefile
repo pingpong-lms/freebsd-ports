@@ -1,7 +1,6 @@
 PORTNAME=	gitlab-ce
-PORTVERSION=	16.1.3
+PORTVERSION=	16.1.5
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	www devel
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -121,7 +120,7 @@ MY_DEPENDS=	git>=2.39.2:devel/git \
 	rubygem-elasticsearch-model713>=7.2<8:textproc/rubygem-elasticsearch-model713 \
 	rubygem-elasticsearch-rails>=7.2<8:textproc/rubygem-elasticsearch-rails \
 	rubygem-elasticsearch-api713>=7.13.3<7.13.4:textproc/rubygem-elasticsearch-api713 \
-	rubygem-aws-sdk-core>=3.175.0<4.176:devel/rubygem-aws-sdk-core \
+	rubygem-aws-sdk-core3175>=3.175.0<3.176:devel/rubygem-aws-sdk-core3175 \
 	rubygem-aws-sdk-cloudformation>=1<2:devel/rubygem-aws-sdk-cloudformation \
 	rubygem-aws-sdk-s31126>=1.126.0<1.127:devel/rubygem-aws-sdk-s31126 \
 	rubygem-faraday_middleware-aws-sigv403>=0.3.0<0.4:devel/rubygem-faraday_middleware-aws-sigv403 \
@@ -129,7 +128,7 @@ MY_DEPENDS=	git>=2.39.2:devel/git \
 	rubygem-html-pipeline>=2.14.3<2.15:textproc/rubygem-html-pipeline \
 	rubygem-deckar01-task_list>=2.3.2<2.4:www/rubygem-deckar01-task_list \
 	rubygem-gitlab-markup>=1.9.0<1.10.0:textproc/rubygem-gitlab-markup \
-	rubygem-commonmarker>=0.23.9<0.24:textproc/rubygem-commonmarker \
+	rubygem-commonmarker>=0.23.10<0.24:textproc/rubygem-commonmarker \
 	rubygem-kramdown23>=2.3.1<2.4:textproc/rubygem-kramdown23 \
 	rubygem-redcloth>=4.3.2<4.4.0:www/rubygem-redcloth \
 	rubygem-rdoc63>=6.3.2<7:devel/rubygem-rdoc63 \

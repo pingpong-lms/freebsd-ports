@@ -57,7 +57,6 @@
     SUBDIR += badwolf
     SUBDIR += baikal
     SUBDIR += bareos-webui
-    SUBDIR += bareos18-webui
     SUBDIR += bareos19-webui
     SUBDIR += bareos20-webui
     SUBDIR += bareos21-webui
@@ -184,6 +183,7 @@
     SUBDIR += fusionpbx
     SUBDIR += g-cows
     SUBDIR += g-gcl
+    SUBDIR += galene
     SUBDIR += gallery-dl
     SUBDIR += gallery2
     SUBDIR += garage
@@ -274,7 +274,6 @@
     SUBDIR += jira-cli
     SUBDIR += jitsi-meet
     SUBDIR += jmeter
-    SUBDIR += joomla3
     SUBDIR += joomla4
     SUBDIR += jwt-cli
     SUBDIR += kanboard
@@ -380,6 +379,7 @@
     SUBDIR += mod_auth_xradius
     SUBDIR += mod_authn_dovecot
     SUBDIR += mod_authnz_external24
+    SUBDIR += mod_authz_unixgroup24
     SUBDIR += mod_cfg_ldap
     SUBDIR += mod_cloudflare
     SUBDIR += mod_dav_svn
@@ -1327,6 +1327,7 @@
     SUBDIR += p5-pQuery
     SUBDIR += p5-webservice-validator-css-w3c
     SUBDIR += p5-webservice-validator-html-w3c
+    SUBDIR += pacparser
     SUBDIR += payara
     SUBDIR += pear-HTML_AJAX
     SUBDIR += pear-HTML_TagCloud
@@ -1663,11 +1664,13 @@
     SUBDIR += py-google-api-python-client
     SUBDIR += py-google-cloud-appengine-logging
     SUBDIR += py-google-cloud-audit-log
+    SUBDIR += py-google-cloud-bigquery
     SUBDIR += py-google-cloud-bigtable
     SUBDIR += py-google-cloud-core
     SUBDIR += py-google-cloud-datastore
     SUBDIR += py-google-cloud-dlp
     SUBDIR += py-google-cloud-logging
+    SUBDIR += py-google-cloud-resource-manager
     SUBDIR += py-google-cloud-speech
     SUBDIR += py-google-cloud-storage
     SUBDIR += py-google-cloud-translate
@@ -1857,6 +1860,7 @@
     SUBDIR += qt6-webchannel
     SUBDIR += qt6-webengine
     SUBDIR += qt6-websockets
+    SUBDIR += qt6-webview
     SUBDIR += quark
     SUBDIR += qutebrowser
     SUBDIR += radicale
@@ -1984,6 +1988,7 @@
     SUBDIR += rubygem-gon-rails50
     SUBDIR += rubygem-gon-rails60
     SUBDIR += rubygem-gon-rails61
+    SUBDIR += rubygem-gon-rails70
     SUBDIR += rubygem-hackpad-cli
     SUBDIR += rubygem-haml
     SUBDIR += rubygem-haml-coderay
@@ -2033,6 +2038,7 @@
     SUBDIR += rubygem-jsobfu
     SUBDIR += rubygem-json-jwt
     SUBDIR += rubygem-json-jwt115
+    SUBDIR += rubygem-jsonb_accessor
     SUBDIR += rubygem-jwt
     SUBDIR += rubygem-kaminari
     SUBDIR += rubygem-kaminari-actionview
@@ -2041,12 +2047,14 @@
     SUBDIR += rubygem-kaminari-actionview-rails52
     SUBDIR += rubygem-kaminari-actionview-rails60
     SUBDIR += rubygem-kaminari-actionview-rails61
+    SUBDIR += rubygem-kaminari-actionview-rails70
     SUBDIR += rubygem-kaminari-activerecord
     SUBDIR += rubygem-kaminari-activerecord-rails5
     SUBDIR += rubygem-kaminari-activerecord-rails50
     SUBDIR += rubygem-kaminari-activerecord-rails52
     SUBDIR += rubygem-kaminari-activerecord-rails60
     SUBDIR += rubygem-kaminari-activerecord-rails61
+    SUBDIR += rubygem-kaminari-activerecord-rails70
     SUBDIR += rubygem-kaminari-core
     SUBDIR += rubygem-kaminari-rails4
     SUBDIR += rubygem-kaminari-rails5
@@ -2054,6 +2062,7 @@
     SUBDIR += rubygem-kaminari-rails52
     SUBDIR += rubygem-kaminari-rails60
     SUBDIR += rubygem-kaminari-rails61
+    SUBDIR += rubygem-kaminari-rails70
     SUBDIR += rubygem-kubeclient
     SUBDIR += rubygem-layout_yullio_generator
     SUBDIR += rubygem-less
@@ -2065,6 +2074,7 @@
     SUBDIR += rubygem-lograge-rails52
     SUBDIR += rubygem-lograge-rails60
     SUBDIR += rubygem-lograge-rails61
+    SUBDIR += rubygem-lograge-rails70
     SUBDIR += rubygem-maruku
     SUBDIR += rubygem-mechanize
     SUBDIR += rubygem-merb-assets
@@ -2255,6 +2265,7 @@
     SUBDIR += sfeed
     SUBDIR += sfnt2woff
     SUBDIR += shellinabox
+    SUBDIR += shiori
     SUBDIR += silicon
     SUBDIR += simple-web-server
     SUBDIR += sitecopy
@@ -2325,6 +2336,7 @@
     SUBDIR += trafficserver
     SUBDIR += transmission-web
     SUBDIR += transproxy
+    SUBDIR += trunk
     SUBDIR += tt-rss
     SUBDIR += tuifeed
     SUBDIR += tusc
@@ -2375,6 +2387,7 @@
     SUBDIR += unit-php
     SUBDIR += unit-python
     SUBDIR += unit-ruby
+    SUBDIR += unit-wasm
     SUBDIR += unitc
     SUBDIR += uwebsockets
     SUBDIR += uwsgi
@@ -2398,6 +2411,7 @@
     SUBDIR += vdradmin-am
     SUBDIR += vertx
     SUBDIR += vger
+    SUBDIR += vigil
     SUBDIR += vimb
     SUBDIR += visitors
     SUBDIR += volta

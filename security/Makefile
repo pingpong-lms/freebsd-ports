@@ -933,6 +933,7 @@
     SUBDIR += py-iris-webhooks-module
     SUBDIR += py-itsdangerous
     SUBDIR += py-josepy
+    SUBDIR += py-jwcrypto
     SUBDIR += py-keepkey
     SUBDIR += py-kerberos
     SUBDIR += py-keyring
@@ -948,7 +949,6 @@
     SUBDIR += py-muacrypt
     SUBDIR += py-nassl
     SUBDIR += py-netbox-secrets
-    SUBDIR += py-netbox-secretstore
     SUBDIR += py-netmiko
     SUBDIR += py-noiseprotocol
     SUBDIR += py-notus-scanner
@@ -1018,6 +1018,7 @@
     SUBDIR += py-scrypt
     SUBDIR += py-secure
     SUBDIR += py-securesystemslib
+    SUBDIR += py-service-identity
     SUBDIR += py-service_identity
     SUBDIR += py-signedjson
     SUBDIR += py-social-auth-core
@@ -1036,6 +1037,7 @@
     SUBDIR += py-tlslite-ng
     SUBDIR += py-trezor
     SUBDIR += py-trustme
+    SUBDIR += py-truststore
     SUBDIR += py-tuf
     SUBDIR += py-txtorcon
     SUBDIR += py-uhashring
@@ -1148,7 +1150,6 @@
     SUBDIR += rubygem-openssl-ccm
     SUBDIR += rubygem-openssl-cmac
     SUBDIR += rubygem-openssl-signature_algorithm
-    SUBDIR += rubygem-openssl2
     SUBDIR += rubygem-openvas-omp
     SUBDIR += rubygem-origami
     SUBDIR += rubygem-pbkdf2-ruby

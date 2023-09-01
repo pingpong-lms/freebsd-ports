@@ -1,5 +1,5 @@
 PORTNAME=	veloren
-PORTVERSION=	s20230809
+PORTVERSION=	s20230830
 CATEGORIES=	games wayland
 PKGNAMESUFFIX=	-weekly
 
@@ -24,7 +24,7 @@ RUN_DEPENDS=	${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:audio/alsa-pl
 USES=		cargo xorg
 USE_XORG=	xcb
 USE_GITLAB=	yes
-GL_TAGNAME=	02e67a0f4aeb6a766410a8643dc2992423096d65
+GL_TAGNAME=	78b2443edc4bf09ff3dc6e8cad7b7a3887ef584e
 CARGO_ENV=	VELOREN_USERDATA_STRATEGY=system SHADERC_LIB_DIR="${LOCALBASE}/lib"
 PLIST_FILES=	bin/${PORTNAME}-server-cli \
 		bin/${PORTNAME}-voxygen \
@@ -36,7 +36,7 @@ PORTDATA=	*
 CONFLICTS_INSTALL=	${PORTNAME}
 
 .if ${MACHINE_ARCH} == i386
-# Fixes error "Rust cannot catch foreign exceptions"
+# https://github.com/rust-lang/rust/issues/85598
 CARGO_ENV+=	CARGO_PROFILE_RELEASE_LTO=false
 .endif
 # Fixes error "Instruction does not dominate all uses!"

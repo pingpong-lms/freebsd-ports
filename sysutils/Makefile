@@ -91,6 +91,7 @@
     SUBDIR += bacula11-client
     SUBDIR += bacula11-client-static
     SUBDIR += bacula11-docs
+    SUBDIR += bacula11-libs3
     SUBDIR += bacula11-server
     SUBDIR += bacula13-client
     SUBDIR += bacula13-client-static
@@ -135,6 +136,9 @@
     SUBDIR += bksh
     SUBDIR += bkt
     SUBDIR += blisp
+    SUBDIR += bmd
+    SUBDIR += bmd-plugin-avahi
+    SUBDIR += bmd-plugin-hookcmd
     SUBDIR += boot-extract
     SUBDIR += bottom
     SUBDIR += bpytop
@@ -234,6 +238,10 @@
     SUBDIR += coreos-ct
     SUBDIR += coreutils
     SUBDIR += cpdup
+    SUBDIR += cpu-microcode
+    SUBDIR += cpu-microcode-amd
+    SUBDIR += cpu-microcode-intel
+    SUBDIR += cpu-microcode-rc
     SUBDIR += cpu-x
     SUBDIR += cpuburn
     SUBDIR += cpufetch
@@ -275,9 +283,6 @@
     SUBDIR += deltup
     SUBDIR += desktop-installer
     SUBDIR += detox
-    SUBDIR += devcpu-data
-    SUBDIR += devcpu-data-amd
-    SUBDIR += devcpu-data-intel
     SUBDIR += devctl-jail-kmod
     SUBDIR += devd-mount
     SUBDIR += devedeng
@@ -683,7 +688,6 @@
     SUBDIR += linux-rkbin
     SUBDIR += linuxfdisk
     SUBDIR += lizardfs
-    SUBDIR += llama
     SUBDIR += lmmon
     SUBDIR += lmon
     SUBDIR += lnav
@@ -801,7 +805,6 @@
     SUBDIR += munin-contrib
     SUBDIR += munin-master
     SUBDIR += munin-node
-    SUBDIR += muse
     SUBDIR += mxkill
     SUBDIR += mybashburn
     SUBDIR += myrescue
@@ -1427,6 +1430,7 @@
     SUBDIR += testdisk
     SUBDIR += tflint
     SUBDIR += thefish
+    SUBDIR += tiempo
     SUBDIR += timelimit
     SUBDIR += timemon
     SUBDIR += tiramisu
@@ -1580,6 +1584,7 @@
     SUBDIR += vttest
     SUBDIR += vzvol
     SUBDIR += wait_on
+    SUBDIR += walk
     SUBDIR += watchfolder
     SUBDIR += watchman
     SUBDIR += watchmen
@@ -1609,6 +1614,7 @@
     SUBDIR += xbatt
     SUBDIR += xbattbar
     SUBDIR += xcdroast
+    SUBDIR += xcp
     SUBDIR += xcpustate
     SUBDIR += xdu
     SUBDIR += xe
