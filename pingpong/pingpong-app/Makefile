@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-app
-PORTVERSION=	1.5
+PORTVERSION=	1.6
 CATEGORIES=	pingpong
 MASTER_SITES=	#
 DISTFILES=	#
@@ -12,7 +12,7 @@ COMMENT=	The meta-port for PING PONG application packages
 
 NO_BUILD=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	11
+JAVA_VERSION=	17
 
 PLIST_FILES=	sbin/ppctl \
 		share/ffmpeg/libx264-slow.ffpreset
