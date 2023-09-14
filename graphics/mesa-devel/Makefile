@@ -1,11 +1,12 @@
 PORTNAME=	mesa
-DISTVERSION=	23.2.0-branchpoint-3026
-DISTVERSIONSUFFIX=	-g9b488f36fb8
+DISTVERSION=	23.2.0-branchpoint-3550
+DISTVERSIONSUFFIX=	-g9e37631aa5e
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	700efacda59c.patch:-p1
+PATCH_SITES=	https://github.com/mesa3d/${GL_PROJECT}/commit/:github
+PATCHFILES+=	700efacda59c.patch:-p1:github
+PATCH_SITES+=	${GL_SITE}/${GL_ACCOUNT}/${GL_PROJECT}/-/commit/
 PATCHFILES+=	3043f16d66bf.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6881
 PATCHFILES+=	2930dcbb3329.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/22246
 
@@ -31,9 +32,9 @@ LIB_DEPENDS+=	libelf.so:devel/libelf
 
 USES=		bison cpe compiler:c++11-lib meson pkgconfig python:build shebangfix
 CPE_VENDOR=	mesa3d
-USE_GITHUB=	yes
-GH_ACCOUNT=	mesa3d
+USE_GITLAB=	yes
 USE_LDCONFIG=	yes
+GL_SITE=	https://gitlab.freedesktop.org
 BINARY_ALIAS=	python=${PYTHON_CMD}
 SHEBANG_FILES=	src/vulkan/overlay-layer/${PORTNAME}-overlay-control.py
 MESON_ARGS=	-Dgallium-omx=disabled \
@@ -98,7 +99,7 @@ LIBUNWIND_LIB_DEPENDS=	libunwind.so:devel/libunwind
 LIBUNWIND_MESON_ENABLED=	libunwind
 
 LLVM_DESC=		Build with LLVM support (see implies)
-LLVM_USES=		llvm:min=15,lib
+LLVM_USES=		llvm:min=15,lib,noexport
 LLVM_CONFIGURE_ENV=	LLVM_CONFIG=${LLVM_CONFIG}
 LLVM_MESON_ENABLED=	llvm
 .for i in r600 radeonsi radv
@@ -119,7 +120,7 @@ OPENCL_MESON_FALSE=	b_lundef # environ
 OPENCL_MESON_TRUE=	gallium-rusticl
 OPENCL_MESON_ON=	-Dgallium-opencl=icd
 OPENCL_MESON_OFF=	-Dgallium-opencl=disabled
-OPENCL_VARS=		LLVM_USES=llvm:15,lib # chase libclc + rust (LTO)
+OPENCL_VARS=		LLVM_USES=llvm:15,lib,noexport # chase libclc + rust (LTO)
 .if ${MACHINE_ARCH} != aarch64 # XXX missing in ONLY_FOR_ARCHS
 OPENCL_VARS+=		COINST_RUN_DEPENDS+=clover>0:lang/clover # ICD
 .endif

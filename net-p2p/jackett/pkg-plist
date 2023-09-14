@@ -100,7 +100,6 @@
 %%DATADIR%%/Definitions/beyond-hd.yml
 %%DATADIR%%/Definitions/bibliotik.yml
 %%DATADIR%%/Definitions/bigfangroup.yml
-%%DATADIR%%/Definitions/biho.yml
 %%DATADIR%%/Definitions/bitbazis.yml
 %%DATADIR%%/Definitions/bitded.yml
 %%DATADIR%%/Definitions/bithorlo.yml
@@ -140,7 +139,6 @@
 %%DATADIR%%/Definitions/chdbits.yml
 %%DATADIR%%/Definitions/cheggit.yml
 %%DATADIR%%/Definitions/chilebt.yml
-%%DATADIR%%/Definitions/cinefilhd.yml
 %%DATADIR%%/Definitions/cinemageddon.yml
 %%DATADIR%%/Definitions/cinemamovies.yml
 %%DATADIR%%/Definitions/cinematik.yml
@@ -158,10 +156,8 @@
 %%DATADIR%%/Definitions/crt2fa.yml
 %%DATADIR%%/Definitions/dajiao.yml
 %%DATADIR%%/Definitions/danishbytes-api.yml
-%%DATADIR%%/Definitions/dariustracker.yml
 %%DATADIR%%/Definitions/dark-shadow.yml
 %%DATADIR%%/Definitions/datascene-api.yml
-%%DATADIR%%/Definitions/datatalli.yml
 %%DATADIR%%/Definitions/deildu.yml
 %%DATADIR%%/Definitions/demonoid.yml
 %%DATADIR%%/Definitions/desitorrents-api.yml
@@ -203,7 +199,6 @@
 %%DATADIR%%/Definitions/filelisting.yml
 %%DATADIR%%/Definitions/finelite.yml
 %%DATADIR%%/Definitions/finvip.yml
-%%DATADIR%%/Definitions/firebit.yml
 %%DATADIR%%/Definitions/fluxzone.yml
 %%DATADIR%%/Definitions/freefarm.yml
 %%DATADIR%%/Definitions/frozenlayer.yml
@@ -333,7 +328,6 @@
 %%DATADIR%%/Definitions/monikadesign-api.yml
 %%DATADIR%%/Definitions/mousebits.yml
 %%DATADIR%%/Definitions/moviesdvdr.yml
-%%DATADIR%%/Definitions/moviesite.yml
 %%DATADIR%%/Definitions/movietorrent.yml
 %%DATADIR%%/Definitions/movietorrentz.yml
 %%DATADIR%%/Definitions/movieworld.yml
@@ -410,6 +404,7 @@
 %%DATADIR%%/Definitions/rapidzona.yml
 %%DATADIR%%/Definitions/rareshare2.yml
 %%DATADIR%%/Definitions/redbits-api.yml
+%%DATADIR%%/Definitions/redleaves.yml
 %%DATADIR%%/Definitions/redstartorrent.yml
 %%DATADIR%%/Definitions/reelflix-api.yml
 %%DATADIR%%/Definitions/resurrectthenet.yml
@@ -462,7 +457,6 @@
 %%DATADIR%%/Definitions/teamhd.yml
 %%DATADIR%%/Definitions/teamos.yml
 %%DATADIR%%/Definitions/tekno3d.yml
-%%DATADIR%%/Definitions/tellytorrent-api.yml
 %%DATADIR%%/Definitions/teracod.yml
 %%DATADIR%%/Definitions/the-crazy-ones.yml
 %%DATADIR%%/Definitions/theempire.yml
@@ -545,7 +539,6 @@
 %%DATADIR%%/Definitions/uniongang.yml
 %%DATADIR%%/Definitions/unleashthecartoons.yml
 %%DATADIR%%/Definitions/unlimitz.yml
-%%DATADIR%%/Definitions/uploads.yml
 %%DATADIR%%/Definitions/utopia.yml
 %%DATADIR%%/Definitions/vsthouse.yml
 %%DATADIR%%/Definitions/vstorrent.yml
