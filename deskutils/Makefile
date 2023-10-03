@@ -20,7 +20,6 @@
     SUBDIR += birdtray
     SUBDIR += bookworm
     SUBDIR += budgie-desktop-view
-    SUBDIR += budgie-trash-applet
     SUBDIR += cairo-dock
     SUBDIR += cairo-dock-plugins
     SUBDIR += caja-extensions
@@ -186,6 +185,7 @@
     SUBDIR += moregroupware
     SUBDIR += mozo
     SUBDIR += mytetra
+    SUBDIR += nanonote
     SUBDIR += nautilus-sendto
     SUBDIR += nextcloudclient
     SUBDIR += note

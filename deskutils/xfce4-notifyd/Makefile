@@ -4,8 +4,8 @@
 # Support of GTK is checked at compile time and themes directories too.
 
 PORTNAME=	xfce4-notifyd
-PORTVERSION=	0.8.2
-PORTREVISION=	2
+PORTVERSION=	0.9.2
+PORTREVISION=	1
 CATEGORIES=	deskutils xfce
 MASTER_SITES=	XFCE/apps
 DIST_SUBDIR=	xfce4
@@ -23,20 +23,21 @@ LIB_DEPENDS=	libharfbuzz.so:print/harfbuzz \
 USES=		compiler:c11 gettext-tools gmake gnome libtool pkgconfig \
 		sqlite tar:bzip2 xfce xorg
 USE_GNOME=	cairo gdkpixbuf2 glib20 gtk30 intltool
-USE_XFCE=	libutil panel
+USE_XFCE=	libmenu panel xfconf
 USE_XORG=	ice sm x11
 
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--disable-systemd
 INSTALL_TARGET=	install-strip
 
-OPTIONS_DEFINE=	CANBERRA NLS
+OPTIONS_DEFINE=	NLS SOUND
 OPTIONS_SUB=	yes
 
-CANBERRA_DESC=	Sound (audio) support via canberra
+SOUND_DESC=	Sound (audio) support via canberra
 
-CANBERRA_LIB_DEPENDS=		libcanberra.so:audio/libcanberra \
-				libcanberra-gtk3.so:audio/libcanberra-gtk3
-CANBERRA_CONFIGURE_ENABLE=	canberra
+SOUND_LIB_DEPENDS=	libcanberra.so:audio/libcanberra \
+			libcanberra-gtk3.so:audio/libcanberra-gtk3
+SOUND_CONFIGURE_ENABLE=	sound
 
 NLS_USES=		gettext-runtime
 NLS_CONFIGURE_ENABLE=	nls
