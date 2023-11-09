@@ -143,6 +143,7 @@
     SUBDIR += djvulibre
     SUBDIR += dmtx-utils
     SUBDIR += drawing
+    SUBDIR += drawio
     SUBDIR += drawpile
     SUBDIR += drm-510-kmod
     SUBDIR += drm-515-kmod
@@ -894,6 +895,7 @@
     SUBDIR += py-imageio-ffmpeg
     SUBDIR += py-imagesize
     SUBDIR += py-img2pdf
+    SUBDIR += py-imutils
     SUBDIR += py-leather
     SUBDIR += py-lerc
     SUBDIR += py-mapclassify
