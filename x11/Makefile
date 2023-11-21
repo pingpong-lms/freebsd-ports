@@ -79,7 +79,6 @@
     SUBDIR += flruler
     SUBDIR += fnott
     SUBDIR += foot
-    SUBDIR += fpc-x11
     SUBDIR += fstobdf
     SUBDIR += fuzzel
     SUBDIR += gdm
@@ -119,6 +118,7 @@
     SUBDIR += hyprland-share-picker
     SUBDIR += hyprpaper
     SUBDIR += hyprpicker
+    SUBDIR += i3bar-river
     SUBDIR += i3blocks
     SUBDIR += i3lock-color
     SUBDIR += iceauth
@@ -432,6 +432,7 @@
     SUBDIR += wl-clipboard
     SUBDIR += wl-mirror
     SUBDIR += wlogout
+    SUBDIR += wlopm
     SUBDIR += wlr-randr
     SUBDIR += wlr-which-key
     SUBDIR += wlrctl
@@ -617,6 +618,7 @@
     SUBDIR += xvmcinfo
     SUBDIR += xvt
     SUBDIR += xwatchwin
+    SUBDIR += xwaylandvideobridge
     SUBDIR += xwd
     SUBDIR += xwininfo
     SUBDIR += xwinwrap

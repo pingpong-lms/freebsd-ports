@@ -9,6 +9,10 @@ MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Dictionaries from Quick for StarDict
 WWW=		https://stardict.sourceforge.net/
 
+BROKEN=		unfetchable
+DEPRECATED=	unfetchable
+EXPIRATION_DATE=	2023-12-12
+
 NO_BUILD=	yes
 NO_ARCH=	yes
 USES=		tar:bzip2
@@ -43,6 +47,8 @@ OPTIONS_DEFINE+=	${dict:tu:S|-|_|g}
 ${dict:tu:S|-|_|g}_DESC=	${dict} dictionary
 ${dict}_DISTNAME=	${PORTNAME}_${dict}-${PORTVERSION}
 .endfor
+
+PORTSCOUT=	ignore:1 # Heavily affects the cluster portscout instance
 
 .include <bsd.port.options.mk>
 
