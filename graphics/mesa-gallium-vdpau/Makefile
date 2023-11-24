@@ -1,5 +1,6 @@
 PORTNAME=	mesa-gallium-vdpau
 PORTVERSION=	${MESAVERSION}
+PORTREVISION=	1
 CATEGORIES=	graphics
 
 COMMENT=	Mesa Gallium VDPAU drivers
@@ -11,9 +12,10 @@ LICENSE_FILE=	${WRKSRC}/docs/license.rst
 ONLY_FOR_ARCHS=		aarch64 amd64 i386 powerpc64 powerpc64le
 ONLY_FOR_ARCHS_REASON=	used only by AMD/Radeon hardware
 
-LIB_DEPENDS=	libzstd.so:archivers/zstd
+LIB_DEPENDS=	libvdpau.so:multimedia/libvdpau \
+		libzstd.so:archivers/zstd
 
-USES=		llvm:lib,noexport
+USES=		llvm:lib
 
 OPTIONS_DEFINE=		X11
 OPTIONS_DEFAULT=	X11
@@ -52,7 +54,8 @@ MESON_ARGS+=	-Dplatforms="x11"
 MESON_ARGS+=	-Dglx=disabled \
 		-Degl=disabled \
 		-Dopengl=false \
-		-Dshared-glapi=disabled
+		-Dshared-glapi=disabled \
+		-Dplatforms=""
 .endif
 
 .include "${MASTERDIR}/Makefile.targets"
