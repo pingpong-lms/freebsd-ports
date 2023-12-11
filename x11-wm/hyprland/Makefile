@@ -1,7 +1,6 @@
 PORTNAME=	hyprland
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.32.3
-PORTREVISION=	3
+DISTVERSION=	0.33.1
 CATEGORIES=	x11-wm wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -17,7 +16,8 @@ BUILD_DEPENDS=	cmake:devel/cmake-core \
 		evdev-proto>0:devel/evdev-proto \
 		wayland-protocols>=1.25:graphics/wayland-protocols \
 		wlroots>=0.17.0<0.18.0:x11-toolkits/wlroots
-LIB_DEPENDS=	libwayland-server.so:graphics/wayland \
+LIB_DEPENDS=	libdrm.so:graphics/libdrm \
+		libwayland-server.so:graphics/wayland \
 		libwlroots.so:x11-toolkits/wlroots \
 		libinput.so:x11/libinput \
 		libxkbcommon.so:x11/libxkbcommon
