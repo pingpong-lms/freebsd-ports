@@ -1,6 +1,6 @@
 PORTNAME=	tvtwm
 PORTVERSION=	pl11
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-wm
 MASTER_SITES=	XCONTRIB/window_managers
 DISTNAME=	${PORTNAME}.${PORTVERSION}
@@ -10,16 +10,21 @@ COMMENT=	Twm with a virtual desktop
 
 LICENSE=	MIT
 
-WRKSRC=		${WRKDIR}/tvtwm
+DEPRECATED=	Upstream last release was in 2001 reconsider using vtwm
+EXPIRATION_DATE=	2024-01-17
+
 USES=		imake xorg
 USE_XORG=	xbitmaps xpm xmu
-PLIST_FILES=	bin/tvtwm \
-		man/man1/tvtwm.1.gz
 
 CFLAGS+=	-Wno-return-type
 
+WRKSRC=		${WRKDIR}/tvtwm
+
+PLIST_FILES=	bin/tvtwm \
+		share/man/man1/tvtwm.1.gz
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tvtwm ${STAGEDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/tvtwm.man ${STAGEDIR}${MANPREFIX}/man/man1/tvtwm.1
+	${INSTALL_MAN} ${WRKSRC}/tvtwm.man ${STAGEDIR}${PREFIX}/share/man/man1/tvtwm.1
 
 .include <bsd.port.mk>

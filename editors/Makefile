@@ -87,6 +87,7 @@
     SUBDIR += lazarus-devel
     SUBDIR += lazarus-qt5
     SUBDIR += lazarus-qt5-devel
+    SUBDIR += lazarus-qt6
     SUBDIR += lazarus-qt6-devel
     SUBDIR += le
     SUBDIR += leafpad
@@ -232,7 +233,6 @@
     SUBDIR += p5-Vimana
     SUBDIR += paredit-mode.el
     SUBDIR += parinfer-rust
-    SUBDIR += pdfedit
     SUBDIR += pico-alpine
     SUBDIR += picpas
     SUBDIR += pluma
@@ -284,6 +284,7 @@
     SUBDIR += vile
     SUBDIR += vim
     SUBDIR += vim-colorschemes-legacy
+    SUBDIR += vim-lsp
     SUBDIR += vis
     SUBDIR += vscode
     SUBDIR += web-mode
@@ -293,8 +294,6 @@
     SUBDIR += wxhexeditor
     SUBDIR += xcoral
     SUBDIR += xed
-    SUBDIR += xi-core
-    SUBDIR += xi-term
     SUBDIR += xmlcopyeditor
     SUBDIR += xvile
     SUBDIR += yudit

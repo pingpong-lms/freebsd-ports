@@ -1,5 +1,8 @@
     COMMENT = Biology
 
+    SUBDIR += R-cran-Biobase
+    SUBDIR += R-cran-BiocGenerics
+    SUBDIR += R-cran-BiocManager
     SUBDIR += abyss
     SUBDIR += ad2vcf
     SUBDIR += artemis
@@ -176,6 +179,7 @@
     SUBDIR += py-libsedml
     SUBDIR += py-loompy
     SUBDIR += py-macs2
+    SUBDIR += py-macs3
     SUBDIR += py-mrcfile
     SUBDIR += py-multiqc
     SUBDIR += py-ont-fast5-api

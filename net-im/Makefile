@@ -21,7 +21,6 @@
     SUBDIR += fractal
     SUBDIR += freetalk
     SUBDIR += gajim
-    SUBDIR += gitterdone
     SUBDIR += gloox
     SUBDIR += gomuks
     SUBDIR += gotktrix
@@ -43,7 +42,7 @@
     SUBDIR += kaidan
     SUBDIR += kopete
     SUBDIR += libaccounts-glib
-    SUBDIR += libaccounts-qt5
+    SUBDIR += libaccounts-qt
     SUBDIR += libmesode
     SUBDIR += libnice
     SUBDIR += libnice-gst1
@@ -142,7 +141,7 @@
     SUBDIR += sshout
     SUBDIR += talkatu
     SUBDIR += tdlib
-    SUBDIR += teamwords
+    SUBDIR += tdlib-purple
     SUBDIR += telegram-cli
     SUBDIR += telegram-desktop
     SUBDIR += telegram-purple

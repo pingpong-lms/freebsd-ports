@@ -1,14 +1,13 @@
 PORTNAME=	mesa
-DISTVERSION=	23.3-branchpoint-2122
-DISTVERSIONSUFFIX=	-gd157cd7442a
-PORTREVISION=	1
+DISTVERSION=	24.0-branchpoint-207
+DISTVERSIONSUFFIX=	-g7ed27bff0be
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
 PATCH_SITES=	https://github.com/mesa3d/${GL_PROJECT}/commit/:github
 PATCHFILES+=	700efacda59c.patch:-p1:github
 PATCH_SITES+=	${GL_SITE}/${GL_ACCOUNT}/${GL_PROJECT}/-/commit/
-PATCHFILES+=	3043f16d66bf.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6881
+PATCHFILES+=	58b505331612.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6881
 PATCHFILES+=	2930dcbb3329.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/22246
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -26,10 +25,6 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mako>0:textproc/py-mako@${PY_FLAVOR}
 LIB_DEPENDS=	libdrm.so:graphics/libdrm \
 		libOpenGL.so:graphics/libglvnd \
 		libexpat.so:textproc/expat2
-.if !exists(/usr/lib/libelf.so)
-# DragonFly doesn't install it yet
-LIB_DEPENDS+=	libelf.so:devel/libelf
-.endif
 
 USES=		bison cpe compiler:c++11-lib meson pkgconfig python:build shebangfix
 CPE_VENDOR=	mesa3d
@@ -56,7 +51,6 @@ OPTIONS_DEFAULT=	LIBUNWIND LLVM LTO OPENCL VAAPI VDPAU VKLAYERS WAYLAND X11 ZSTD
 OPTIONS_GROUP=		GALLIUM VULKAN
 OPTIONS_GROUP_GALLIUM=	crocus iris panfrost r600 radeonsi
 OPTIONS_GROUP_VULKAN=	anv hasvk radv
-OPTIONS_EXCLUDE_DragonFly=	LIBUNWIND anv hasvk
 OPTIONS_EXCLUDE_i386=	LTO # anv: vkcube fails on vkCreateSwapchainKHR
 OPTIONS_EXCLUDE+=	${ARCH:Naarch64:C/.+/panfrost/}
 OPTIONS_EXCLUDE+=	${ARCH:Namd64:Ni386:Nx86_64:C/.+/crocus hasvk/}

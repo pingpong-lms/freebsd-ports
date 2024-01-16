@@ -1,6 +1,7 @@
 PORTNAME=	xxd
 DISTVERSIONPREFIX=	v
 DISTVERSION=	${VIM_DISTVERSION}
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	gmarco@giovannelli.it
@@ -12,17 +13,22 @@ LICENSE_NAME=	VIM License
 LICENSE_FILE=	${WRKSRC}/../../runtime/doc/uganda.txt
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-DISTINFO_FILE=	${VIM_PORT}/distinfo
-ALL_TARGET=	${PORTNAME}
-PORTSCOUT=	ignore:1
-EXTRACT_AFTER_ARGS=	--include='*/src/xxd*' --include='*/runtime/doc/uganda.txt'
-WRKSRC_SUBDIR=	src/xxd
-
-PLIST_FILES=	bin/xxd
-
 USE_GITHUB=	yes
 GH_ACCOUNT=	vim
 GH_PROJECT=	vim
+
+ALL_TARGET=	${PORTNAME}
+EXTRACT_AFTER_ARGS=	--include='*/src/xxd*' \
+			--include='*/runtime/doc/uganda.txt' \
+			--include='*/runtime/doc/xxd.1'
+PORTSCOUT=	ignore:1
+
+WRKSRC_SUBDIR=	src/xxd
+WRKDOCS=	${WRKSRC}/../../runtime/doc
+
+DISTINFO_FILE=	${VIM_PORT}/distinfo
+PLIST_FILES=	bin/xxd \
+		share/man/man1/xxd.1.gz
 
 .include <bsd.port.pre.mk>
 
@@ -31,5 +37,6 @@ VIM_DISTVERSION!=	${BSDMAKE} -f ${VIM_PORT}/Makefile -V DISTVERSION
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xxd ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKDOCS}/xxd.1 ${STAGEDIR}${PREFIX}/share/man/man1
 
 .include <bsd.port.post.mk>

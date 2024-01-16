@@ -7,6 +7,9 @@ DISTNAME=	${PORTNAME}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Vi/ex clone that speaks Chinese
 
+DEPRECATED=	Last upstream release was in 2001
+EXPIRATION_DATE=	2024-01-16
+
 USES=		ncurses
 
 MAKE_ARGS=	LIBS="${LDFLAGS} -lncurses"
@@ -23,6 +26,6 @@ do-install:
 	@# install target in celvis Makefile is not too good -- this is easier
 	${INSTALL_PROGRAM} ${WRKSRC}/celvis ${WRKSRC}/virec ${STAGEDIR}${PREFIX}/bin
 	${LN} -s celvis ${STAGEDIR}${PREFIX}/bin/cvi
-	${INSTALL_MAN} ${FILESDIR}/celvis.1 ${STAGEDIR}${MANPREFIX}/man/man1
+	${INSTALL_MAN} ${FILESDIR}/celvis.1 ${STAGEDIR}${PREFIX}/share/man/man1
 
 .include <bsd.port.mk>

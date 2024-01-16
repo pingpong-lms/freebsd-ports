@@ -1,5 +1,5 @@
 PORTNAME=	aws-sdk-resources
-PORTVERSION=	3.181.0
+PORTVERSION=	3.184.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -233,8 +233,10 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-managedblockchain>=1<2:devel/rubygem-aws-sdk-managedblockchain \
 		rubygem-aws-sdk-managedblockchainquery>=1<2:devel/rubygem-aws-sdk-managedblockchainquery \
 		rubygem-aws-sdk-managedgrafana>=1<2:devel/rubygem-aws-sdk-managedgrafana \
+		rubygem-aws-sdk-marketplaceagreement>=1<2:devel/rubygem-aws-sdk-marketplaceagreement \
 		rubygem-aws-sdk-marketplacecatalog>=1<2:devel/rubygem-aws-sdk-marketplacecatalog \
 		rubygem-aws-sdk-marketplacecommerceanalytics>=1<2:devel/rubygem-aws-sdk-marketplacecommerceanalytics \
+		rubygem-aws-sdk-marketplacedeployment>=1<2:devel/rubygem-aws-sdk-marketplacedeployment \
 		rubygem-aws-sdk-marketplaceentitlementservice>=1<2:devel/rubygem-aws-sdk-marketplaceentitlementservice \
 		rubygem-aws-sdk-marketplacemetering>=1<2:devel/rubygem-aws-sdk-marketplacemetering \
 		rubygem-aws-sdk-mediaconnect>=1<2:devel/rubygem-aws-sdk-mediaconnect \
@@ -260,8 +262,10 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-mwaa>=1<2:devel/rubygem-aws-sdk-mwaa \
 		rubygem-aws-sdk-neptune>=1<2:devel/rubygem-aws-sdk-neptune \
 		rubygem-aws-sdk-neptunedata>=1<2:devel/rubygem-aws-sdk-neptunedata \
+		rubygem-aws-sdk-neptunegraph>=1<2:devel/rubygem-aws-sdk-neptunegraph \
 		rubygem-aws-sdk-networkfirewall>=1<2:devel/rubygem-aws-sdk-networkfirewall \
 		rubygem-aws-sdk-networkmanager>=1<2:devel/rubygem-aws-sdk-networkmanager \
+		rubygem-aws-sdk-networkmonitor>=1<2:devel/rubygem-aws-sdk-networkmonitor \
 		rubygem-aws-sdk-nimblestudio>=1<2:devel/rubygem-aws-sdk-nimblestudio \
 		rubygem-aws-sdk-oam>=1<2:devel/rubygem-aws-sdk-oam \
 		rubygem-aws-sdk-omics>=1<2:devel/rubygem-aws-sdk-omics \

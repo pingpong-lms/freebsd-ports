@@ -1,13 +1,15 @@
 PORTNAME=	vobcopy
 PORTVERSION=	1.2.0
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	sysutils
 MASTER_SITES=	http://vobcopy.org/download/ \
 		LOCAL/ehaupt
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Decrypts and copies DVD .vob files
 WWW=		http://vobcopy.org/projects/c/c.shtml
+
+LICENSE=	GPLv2+
 
 LIB_DEPENDS=	libdvdread.so:multimedia/libdvdread
 
@@ -17,7 +19,7 @@ CONFIGURE_ARGS=	--with-lfs --with-dvdread-libs=${LOCALBASE}
 
 ALL_TARGET=	${PORTNAME}
 
-PLIST_FILES=	bin/vobcopy man/man1/vobcopy.1.gz
+PLIST_FILES=	bin/vobcopy share/man/man1/vobcopy.1.gz
 PORTDOCS=	COPYING Changelog README TODO \
 		alternative_programs.txt
 OPTIONS_DEFINE=	DOCS
@@ -51,7 +53,7 @@ post-configure:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vobcopy ${STAGEDIR}${PREFIX}/bin/vobcopy
 	${INSTALL_MAN} ${WRKSRC}/vobcopy.1${MAN1_SUFX} \
-		${STAGEDIR}${MANPREFIX}/man/man1/vobcopy.1
+		${STAGEDIR}${PREFIX}/share/man/man1/vobcopy.1
 
 do-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}

@@ -1,6 +1,6 @@
 PORTNAME=	pokerth
 PORTVERSION=	1.1.2
-PORTREVISION=	17
+PORTREVISION=	19
 CATEGORIES=	games
 MASTER_SITES=	SF
 
@@ -26,12 +26,16 @@ LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 BUILD_DEPENDS=	${LOCALBASE}/include/websocketpp/client.hpp:devel/websocketpp \
 		protoc:devel/protobuf
 
-USES=		compiler:c++11-lang gl gmake iconv qmake qt:5 sdl sqlite ssl
+USES=		compiler:c++17-lang gl gmake iconv localbase:ldflags qmake qt:5 sdl sqlite ssl
 USE_GL=		gl
-USE_CXXSTD=	c++11
+USE_CXXSTD=	c++17
 USE_QT=		buildtools:build core gui network sql sql-sqlite3 widgets
 USE_SDL=	mixer
 
+CXXFLAGS+=	-D_LIBCPP_ENABLE_CXX17_REMOVED_UNARY_BINARY_FUNCTION
+LDFLAGS+=	-labsl_log_internal_check_op \
+		-labsl_log_internal_message \
+		-lprotobuf
 QMAKE_SOURCE_PATH=	pokerth.pro
 QMAKE_ARGS+=	CONFIG+="client"
 WRKSRC=		${WRKDIR}/${DISTNAME}-rc
@@ -61,7 +65,7 @@ pre-build:
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/pokerth
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/pokerth_server ${STAGEDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/docs/pokerth.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/docs/pokerth.1 ${STAGEDIR}${PREFIX}/share/man/man1
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/server_setup_howto.txt ${STAGEDIR}${DOCSDIR}
 

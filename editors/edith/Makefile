@@ -1,6 +1,6 @@
 PORTNAME=	edith
 PORTVERSION=	1.58
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	editors linux
 MASTER_SITES=	http://www.groenink.com/pub/edith/
 DISTFILES=	edith1.55.common.tar.gz \
@@ -15,13 +15,17 @@ LICENSE_NAME=	edith
 LICENSE_TEXT=	Redistribution not allowed
 LICENSE_PERMS=	auto-accept
 
-ONLY_FOR_ARCHS=	i386 amd64
+DEPRECATED=	Upstream last release was in 2000
+EXPIRATION_DATE=	2024-01-16
+ONLY_FOR_ARCHS=	amd64 i386
+
 USES=		linux
 USE_LINUX=	xorglibs
 
 NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/edith
+
 EDITHDIR=	${PREFIX}/lib/edith
 
 do-install:
@@ -32,6 +36,6 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${EDITHDIR}/${i}
 	${INSTALL_DATA} ${WRKSRC}/${i}/* ${STAGEDIR}${EDITHDIR}/${i}
 .endfor
-	${INSTALL_MAN} ${WRKSRC}/edith.1 ${STAGEDIR}${MANPREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/edith.1 ${STAGEDIR}${PREFIX}/share/man/man1
 
 .include <bsd.port.mk>
