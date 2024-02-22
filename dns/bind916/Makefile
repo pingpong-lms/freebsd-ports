@@ -1,8 +1,7 @@
 # pkg-help formatted with fmt 59 63
 
 PORTNAME=	bind
-DISTVERSION=	9.16.45
-PORTREVISION=	1
+DISTVERSION=	9.16.48
 CATEGORIES=	dns net
 MASTER_SITES=	ISC/bind9/${DISTVERSION}
 PKGNAMESUFFIX=	916
@@ -32,6 +31,7 @@ CPE_UPDATE=	${DISTVERSION:C/.*-//:tl}
 .endif
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CONFIGURE_ARGS=	--disable-linux-caps \
 		--localstatedir=/var \
 		--sysconfdir=${ETCDIR} \

@@ -113,6 +113,9 @@
     SUBDIR += bareos21-client
     SUBDIR += bareos21-server
     SUBDIR += bareos21-traymonitor
+    SUBDIR += bareos22-client
+    SUBDIR += bareos22-server
+    SUBDIR += bareos22-traymonitor
     SUBDIR += barrier
     SUBDIR += bashtop
     SUBDIR += bastille
@@ -421,6 +424,8 @@
     SUBDIR += fortunelock
     SUBDIR += fpart
     SUBDIR += frand
+    SUBDIR += freebsd-bsdlabel
+    SUBDIR += freebsd-fdisk
     SUBDIR += freebsd-snapshot
     SUBDIR += freecolor
     SUBDIR += freedt
@@ -819,6 +824,7 @@
     SUBDIR += nfcutils
     SUBDIR += nitrogen
     SUBDIR += nix
+    SUBDIR += nmdaemon
     SUBDIR += nmrpflash
     SUBDIR += no-login
     SUBDIR += node_exporter
@@ -860,6 +866,7 @@
     SUBDIR += openupsd
     SUBDIR += openzfs
     SUBDIR += openzfs-kmod
+    SUBDIR += orch
     SUBDIR += osinfo-db-tools
     SUBDIR += p5-App-Regather
     SUBDIR += p5-App-RunCron
@@ -1085,6 +1092,7 @@
     SUBDIR += py-azure-cli-core
     SUBDIR += py-azure-cli-telemetry
     SUBDIR += py-bitrot
+    SUBDIR += py-blinkstick
     SUBDIR += py-borgmatic
     SUBDIR += py-concurrent-log-handler
     SUBDIR += py-cron-descriptor
@@ -1227,6 +1235,7 @@
     SUBDIR += rubygem-chef-bin
     SUBDIR += rubygem-chef-cleanroom
     SUBDIR += rubygem-chef-config
+    SUBDIR += rubygem-chef-licensing
     SUBDIR += rubygem-chef-telemetry
     SUBDIR += rubygem-chef-utils
     SUBDIR += rubygem-chef-vault
@@ -1533,6 +1542,7 @@
     SUBDIR += u-boot-sinovoip-bpi-m3
     SUBDIR += u-boot-sopine
     SUBDIR += u-boot-sopine-spi
+    SUBDIR += u-boot-starfive-visionfive2
     SUBDIR += u-boot-tools
     SUBDIR += u-boot-wandboard
     SUBDIR += ua
@@ -1584,6 +1594,7 @@
     SUBDIR += vm-bhyve
     SUBDIR += vm-bhyve-devel
     SUBDIR += vmdktool
+    SUBDIR += vmstated
     SUBDIR += vmtouch
     SUBDIR += vobcopy
     SUBDIR += volman
@@ -1658,6 +1669,7 @@
     SUBDIR += yadf
     SUBDIR += yadm
     SUBDIR += yank
+    SUBDIR += yazi
     SUBDIR += z
     SUBDIR += zap
     SUBDIR += zbackup

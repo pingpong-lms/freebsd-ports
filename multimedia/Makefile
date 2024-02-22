@@ -3,7 +3,6 @@
     SUBDIR += Bento4
     SUBDIR += ab-av1
     SUBDIR += ab25
-    SUBDIR += acidrip
     SUBDIR += aegisub
     SUBDIR += alass
     SUBDIR += aom
@@ -138,6 +137,7 @@
     SUBDIR += kdemultimedia
     SUBDIR += kdemultimedia-ffmpegthumbs
     SUBDIR += kdenlive
+    SUBDIR += kew
     SUBDIR += kf5-kmediaplayer
     SUBDIR += kmplayer
     SUBDIR += kodi
@@ -190,7 +190,6 @@
     SUBDIR += libuvc
     SUBDIR += libv4l
     SUBDIR += libva
-    SUBDIR += libva-glx
     SUBDIR += libva-intel-driver
     SUBDIR += libva-intel-hybrid-driver
     SUBDIR += libva-intel-media-driver
@@ -201,6 +200,7 @@
     SUBDIR += libvdpau-va-gl
     SUBDIR += libvlcpp
     SUBDIR += libvpx
+    SUBDIR += libwebm
     SUBDIR += libx264
     SUBDIR += libxine
     SUBDIR += libxspf
@@ -215,6 +215,7 @@
     SUBDIR += lsdvd
     SUBDIR += m2vrequantiser
     SUBDIR += makemkv
+    SUBDIR += mediaelch
     SUBDIR += mediainfo
     SUBDIR += mencoder
     SUBDIR += minisatip

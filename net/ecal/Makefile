@@ -1,7 +1,7 @@
 PORTNAME=	ecal
 DISTVERSIONPREFIX=	v
 DISTVERSION=	5.12.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	net devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,6 +10,9 @@ WWW=		https://eclipse-ecal.github.io/ecal/index.html
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
+
+BROKEN_armv7=	link fails: undefined reference due to --no-allow-shlib-undefined: absl::lts_20230125::hash_internal::CityHash32(char const*, unsigned int)
+BROKEN_i386=	link fails: undefined reference due to --no-allow-shlib-undefined: absl::lts_20230125::hash_internal::CityHash32(char const*, unsigned int)
 
 BUILD_DEPENDS=	asio>0:net/asio \
 		termcolor>0:devel/termcolor
@@ -50,7 +53,7 @@ CMAKE_ARGS=	-DGIT_REVISION_MAJOR=${DISTVERSION:R:R} \
 		-Dqwt_LIBRARY=${LOCALBASE}/lib/qt5/libqwt6.so
 
 CXXFLAGS+=	-pthread # see https://github.com/eclipse-ecal/ecal/issues/933
-LDFLAGS+=	-labsl_hash -labsl_log_internal_message -labsl_log_internal_nullguard -labsl_spinlock_wait
+LDFLAGS+=	-labsl_hash -labsl_log_internal_message -labsl_log_internal_nullguard -labsl_spinlock_wait -ltinyxml2
 USE_CXXSTD=	c++17
 
 PLIST_SUB=	VERSION=${DISTVERSION}

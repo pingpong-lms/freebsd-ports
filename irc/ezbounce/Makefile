@@ -1,10 +1,10 @@
 PORTNAME=	ezbounce
 PORTVERSION=	1.99.15
-PORTREVISION=	25
+PORTREVISION=	26
 CATEGORIES=	irc
 MASTER_SITES=	https://BSDforge.com/projects/source/irc/ezbounce/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Highly configurable IRC Proxy
 WWW=		https://sourceforge.net/projects/ezbounce/
 

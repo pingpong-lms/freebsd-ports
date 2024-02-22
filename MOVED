@@ -1870,7 +1870,6 @@ devel/f18||2023-01-15|Depends on removed old llvm ports
 devel/xtoolchain-llvm80||2023-01-15|Depends on removed old llvm ports
 devel/xtoolchain-llvm90||2023-01-15|Depends on removed old llvm ports
 net-p2p/tootle|net-p2p/tooth|2023-01-16|Upstream archived, forked
-lang/zig-devel|lang/zig|2023-01-19|Development version no longer necessary
 irc/cwirc||2023-01-19|Has expired: No upstream, no apparent use seen online
 sysutils/ior|benchmarks/ior|2023-01-20|Moved to a better fit category
 emulators/qemu-guest-agent|emulators/qemu@guestagent|2023-01-20|Seperate port merged with main port as a flavor
@@ -2733,7 +2732,6 @@ net/py-anonfile||2023-12-07|Has expired: anonfile.com has shut down
 www/thundersnarf||2023-12-12|Has expired: Depends on deprecated php80
 textproc/stardict-quick||2023-12-12|Has expired: unfetchable
 devel/rubygem-view_component-rails61|devel/rubygem-view_component-rails70|2023-12-14|Obsolete, use devel/rubygem-view_component-rails70 instead
-devel/rubygem-cucumber-messages23|devel/rubygem-cucumber-messages|2023-12-14|Remove obsoleted port. Use devel/rubygem-cucumber-messages instead
 devel/py-astroid253|devel/py-astroid|2023-12-14|Remove obsoleted port. Use devel/py-astroid instead
 mail/imap-uw|mail/panda-imap|2023-12-16|Has expired: Last upstream release was in 2007 so use the fork mail/panda-imap
 mail/mailsync||2023-12-16|Has expired: Depends on outdated mail/cclient
@@ -2825,7 +2823,7 @@ net/p5-MaxMind-DB-Writer||2023-12-31|Has expired: This is the final release. Thi
 www/py-dj41-django-graphiql-debug-toolbar|www/py-dj42-django-graphiql-debug-toolbar|2023-12-31|Has expired: Extended support of Django 4.1 ends December 2023, upgrade to the Django 4.2+ version of this port. See https://www.djangoproject.com/download/
 www/py-dj41-drf-spectacular|www/py-dj42-drf-spectacular|2023-12-31|Has expired: Extended support of Django 4.1 ends December 2023, upgrade to the Django 4.2+ version of this port. See https://www.djangoproject.com/download/
 www/py-dj41-django-tables2|www/py-dj42-django-tables2|2023-12-31|Has expired: Extended support of Django 4.1 ends December 2023, upgrade to the Django 4.2+ version of this port. See https://www.djangoproject.com/download/
-www/py-httpx013||2023-12-31|Has expired: Old repo-copy needed for deprecated textproc/py-googletrans
+www/py-httpx013|www/py-httpx|2023-12-31|Has expired: Old repo-copy needed for deprecated textproc/py-googletrans
 graphics/drm-fbsd12.0-kmod||2023-12-31|Has expired: Requires soon to reach EOL FreeBSD 12
 www/py-dj41-django-taggit|www/py-dj42-django-taggit|2023-12-31|Has expired: Extended support of Django 4.1 ends December 2023, upgrade to the Django 4.2+ version of this port. See https://www.djangoproject.com/download/
 sysutils/etc_os-release||2023-12-31|Has expired: No longer required after the EOL of 12
@@ -2937,5 +2935,60 @@ misc/mc-nox11|misc/mc|2024-01-15|No longer useful (misc/mc does not require Xlib
 www/mongrel2||2024-01-15|Has expired: BROKEN for more than 2 years on all platforms after the EOL of 12
 net/unison232|net/unison240|2024-01-15|Has expired: More recent versions are in the tree consider using net/unison240
 science/libtensorflow1||2024-01-15|Has expired: Broken for more than a year
-devel/appstream-compose||2024-01-15|Became a subpackage of devel/appstream
-devel/appstream-qt|devel/appstream-qt5|2024-01-15|The Qt6 flavor became a subpackage of devel/appstream
+japanese/jed||2024-01-17|Has expired: Upstream site vaporized and returns NXDOMAIN consider using editors/jed
+editors/fte||2024-01-17|Has expired: Upstream last release was in 2001
+chinese/celvis||2024-01-17|Has expired: Last upstream release was in 2001
+x11-clocks/intclock||2024-01-17|Has expired: Upstream website vaporized
+hebrew/he2||2024-01-17|Has expired: Upstream last release was in 2001
+multimedia/acidrip||2024-01-17|Has expired: Last upstream release was in 2004
+editors/edith||2024-01-17|Has expired: Upstream last release was in 2000
+x11-toolkits/p5-Gtk2-GladeXML||2024-01-17|Has expired: Upstream marked this module as Deprecated
+x11-toolkits/p5-Gtk2-TrayIcon||2024-01-17|Has expired: Upstream marked this module as Deprecated
+editors/led||2024-01-17|Has expired: Last upstream release was in 2002 reconsider using editors/nano
+editors/jove||2024-01-18|Has expired: No upstream update in last 23 years
+editors/impress||2024-01-18|Has expired: Upstream last release was in 2000
+biology/sim4||2024-01-18|Has expired: Upstream last update was in 2005
+x11-wm/w9wm||2024-01-18|Has expired: Last upstream release was in 2002
+biology/seqio||2024-01-18|Has expired: Upstream last release was in 2000
+x11-wm/tvtwm||2024-01-18|Has expired: Upstream last release was in 2001 reconsider using vtwm
+x11-wm/treewm||2024-01-18|Has expired: Last upstream release was in 2003
+biology/recombine|biology/lamarc|2024-01-18|Has expired: Upstream advises to use biology/lamarc
+x11-wm/phluid||2024-01-18|Has expired: Last upstream release was in 2000
+x11-wm/lwm||2024-01-18|Has expired: Last upstream release was in 2016
+x11-wm/ratmen||2024-01-18|Has expired: Last upstream release was in 2008
+x11-wm/larswm||2024-01-18|Has expired: Last upstream release was in 2010
+x11-wm/flwm||2024-01-19|Has expired: Last upstream release and activity was in 2015
+x11-wm/jewel||2024-01-19|Has expired: Last upstream release was in 2004
+x11-wm/antiwm||2024-01-20|Has expired: Last upstream release was in 2009
+databases/qt5-sqldrivers-ibase||2024-01-21|Has expired: No fix with the oldest Firebird and BROKEN around 1 year
+multimedia/libva-glx|multimedia/libva|2024-01-21|Merged into main port
+net/gq||2024-01-25|Has expired: Upstream last release was in 2008
+databases/isql-viewer||2024-01-25|Has expired: Requires old mysql versions and last upstream release was in 2004
+audio/sphinx3||2024-01-25|Has expired: Upstream advises on using audio/pocketsphinx
+audio/sphinx||2024-01-25|Has expired: Upstream advises to use audio/pocketsphinx
+games/linux-quake3-demo||2024-01-25|Has expired: Cannot be fetched from GENTOO sites
+games/linux-ut2003-demo||2024-01-25|Has expired: Cannot be fetched anymore from GENTOO Master Sites
+x11-themes/kde-icons-nuvola||2024-01-25|Has expired: Unfetchable and upstream WWW returns Not Found
+x11-themes/kde-icons-gartoon-blue-svg||2024-01-25|Has expired
+x11-themes/kde-icons-gartoon-svg||2024-01-25|Has expired: Upstream WWW returns NOT FOUND
+x11-themes/kde-icons-graphite-rade8||2024-01-25|Has expired: Upstream WWW returns Not Found
+x11-themes/kde-icons-lime-rade8||2024-01-25|Has expired: Upstream WWW returns Not Found
+x11-themes/kde-icons-lush||2024-01-25|Has expired: Upstream WWW returns Not Found
+audio/sphinxbase||2024-01-25|Has expired: Upstream last release was in 2012
+devel/libasyncplusplus|devel/asyncplusplus|2024-01-27|Remove duplicated port
+security/rust-rage|security/rage-encryption|2024-01-27|Renamed as per the preferred fallback name suggested by upstream
+emulators/wine7|emulators/wine|2024-01-30|Has expired: emulators/wine itself now again provides 32-bit support as well as WoW64
+security/py-service_identity|security/py-service-identity|2024-01-31|Has expired: Use security/py-service-identity
+www/lighttpd-mod_h264_streaming||2024-01-31|Has expired: Does not build with new lighttpd
+audio/stmp||2024-02-01|Has expired: Broken for more than a year
+audio/baudline||2024-02-01|Has expired: upstream has gone to subscription model and no longer distributes this version. Try comms/Inspectrum or audio/xanalyser instead
+x11-themes/kde-icons-noia||2024-02-06|Has expired: Unfetchable and upstream WWW not found
+databases/pg_vector|databases/pgvector|2024-02-06|Renamed to match upstream
+graphics/rayshade||2024-02-10|Has expired: Defunct upstream with last release in 1992
+graphics/urt||2024-02-11|Has expired: Defunct upstream
+security/sssd-devel|security/sssd2|2024-02-12|Port is stable
+audio/taglib-extras||2024-02-17|Incompatible with taglib 2.x and unmaintained upstream since 2015
+security/py-pysha3||2024-02-17|Merged into python standard library since version 3.6
+graphics/qcustomplot-qt5|graphics/qcustomplot|2024-02-19|Renamed to support flavors
+audio/play||2024-02-20|Has expired: Upstream vaporized and last release was in 2000
+graphics/fotoxx|graphics/fotocx|2024-02-21|Project was renamed upstream

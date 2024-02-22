@@ -55,6 +55,7 @@
     SUBDIR += bfbtester
     SUBDIR += binwalk
     SUBDIR += bitwarden-cli
+    SUBDIR += blst
     SUBDIR += boringssl
     SUBDIR += botan2
     SUBDIR += botan3
@@ -67,12 +68,14 @@
     SUBDIR += caesarcipher
     SUBDIR += caldera
     SUBDIR += caldera-ot
+    SUBDIR += caldera4
     SUBDIR += calife
     SUBDIR += cardpeek
     SUBDIR += cargo-audit
     SUBDIR += ccrypt
     SUBDIR += ccsrch
     SUBDIR += certmgr
+    SUBDIR += certspotter
     SUBDIR += cfs
     SUBDIR += cfssl
     SUBDIR += cfv
@@ -283,6 +286,7 @@
     SUBDIR += lego
     SUBDIR += libargon2
     SUBDIR += libassuan
+    SUBDIR += libcaes
     SUBDIR += libcryptui
     SUBDIR += libdecaf
     SUBDIR += libecc
@@ -1003,7 +1007,6 @@
     SUBDIR += py-pysaml24
     SUBDIR += py-pysaml26
     SUBDIR += py-pyscard
-    SUBDIR += py-pysha3
     SUBDIR += py-pysodium
     SUBDIR += py-pyspnego
     SUBDIR += py-python-axolotl
@@ -1033,7 +1036,6 @@
     SUBDIR += py-secure
     SUBDIR += py-securesystemslib
     SUBDIR += py-service-identity
-    SUBDIR += py-service_identity
     SUBDIR += py-signedjson
     SUBDIR += py-social-auth-core
     SUBDIR += py-spake2
@@ -1073,6 +1075,7 @@
     SUBDIR += qtkeychain
     SUBDIR += quantis-kmod
     SUBDIR += racoon2
+    SUBDIR += rage-encryption
     SUBDIR += ratproxy
     SUBDIR += rats
     SUBDIR += rcracki_mt
@@ -1290,7 +1293,7 @@
     SUBDIR += sslscan
     SUBDIR += sslsplit
     SUBDIR += sssd
-    SUBDIR += sssd-devel
+    SUBDIR += sssd2
     SUBDIR += ssss
     SUBDIR += sst
     SUBDIR += starttls

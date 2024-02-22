@@ -104,7 +104,7 @@ KDE_PLASMA6_VERSION?=		5.92.0
 KDE_PLASMA6_BRANCH?=		unstable
 
 # Current KDE frameworks.
-KDE_FRAMEWORKS5_VERSION?=	5.113.0
+KDE_FRAMEWORKS5_VERSION?=	5.115.0
 KDE_FRAMEWORKS5_BRANCH?=	stable
 
 # Next KDE Frameworks (Qt6 based)
@@ -112,17 +112,17 @@ KDE_FRAMEWORKS6_VERSION?=	5.248.0
 KDE_FRAMEWORKS6_BRANCH?=	unstable
 
 # Current KDE applications.
-KDE_APPLICATIONS5_VERSION?=	23.08.4
-KDE_APPLICATIONS5_SHLIB_VER?=	5.24.4
+KDE_APPLICATIONS5_VERSION?=	23.08.5
+KDE_APPLICATIONS5_SHLIB_VER?=	5.24.5
 # G as in KDE Gear, and as in "don't make the variable name longer than required"
-KDE_APPLICATIONS5_SHLIB_G_VER?=	23.8.4
+KDE_APPLICATIONS5_SHLIB_G_VER?=	23.8.5
 KDE_APPLICATIONS5_BRANCH?=	stable
 
 # Next KDE applications.
-KDE_APPLICATIONS6_VERSION?=	24.01.85
+KDE_APPLICATIONS6_VERSION?=	24.01.90
 KDE_APPLICATIONS6_SHLIB_VER?=	5.24.3
 # G as in KDE Gear, and as in "don't make the variable name longer than required"
-KDE_APPLICATIONS6_SHLIB_G_VER?=	24.01.85
+KDE_APPLICATIONS6_SHLIB_G_VER?=	24.01.90
 KDE_APPLICATIONS6_BRANCH?=	unstable
 
 # Extended KDE universe applications.
@@ -248,11 +248,7 @@ CMAKE_ARGS+=	-DCMAKE_MODULE_PATH="${LOCALBASE};${KDE_PREFIX}" \
 		-DCMAKE_INSTALL_PREFIX="${KDE_PREFIX}" \
 		-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=true
 
-# Set man-page installation prefix.
-# TODO: Remove the KDE_MAN_PREFIX knob once all kde ports are switched to use share/man
-KDE_MAN_PREFIX?=	${KDE_PREFIX}/man
-CMAKE_ARGS+=	-DKDE_INSTALL_MANDIR:PATH="${KDE_MAN_PREFIX}" \
-		-DMAN_INSTALL_DIR:PATH="${KDE_MAN_PREFIX}"
+KDE_MAN_PREFIX?=	${KDE_PREFIX}/share/man
 
 # Disable autotests unless TEST_TARGET is defined.
 .    if !defined(TEST_TARGET)

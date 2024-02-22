@@ -44,6 +44,7 @@
     SUBDIR += cython3
     SUBDIR += dhall
     SUBDIR += dlang-tools
+    SUBDIR += dotnet
     SUBDIR += duktape
     SUBDIR += duktape-lib
     SUBDIR += ecl
@@ -119,6 +120,7 @@
     SUBDIR += go119
     SUBDIR += go120
     SUBDIR += go121
+    SUBDIR += go122
     SUBDIR += gomacro
     SUBDIR += gprolog
     SUBDIR += gravity
@@ -364,6 +366,7 @@
     SUBDIR += tcl85
     SUBDIR += tcl86
     SUBDIR += tcl87
+    SUBDIR += tcl9
     SUBDIR += tclX
     SUBDIR += tolua
     SUBDIR += tolua++
@@ -383,6 +386,7 @@
     SUBDIR += ypsilon
     SUBDIR += zephir
     SUBDIR += zig
+    SUBDIR += zig-devel
     SUBDIR += zig010
 
 .include <bsd.port.subdir.mk>
