@@ -655,6 +655,12 @@
         man
             cat1
             ..
+            cat2
+            ..
+            cat3
+            ..
+            cat4
+            ..
             cat5
             ..
             cat7
@@ -664,6 +670,8 @@
             es              uname=root
 /set uname=root
                 man7
+                ..
+                man8
                 ..
             ..
             ja              uname=root
@@ -693,6 +701,9 @@
             ..
             mann
             ..
+            ru.KOI8-R
+                man1
+                ..
         ..
         misc
         ..
