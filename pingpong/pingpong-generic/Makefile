@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-generic
-PORTVERSION=	1.1
+PORTVERSION=	1.2
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
 DISTFILES=	#
@@ -48,6 +48,7 @@ RUN_DEPENDS= \
 	lsof:sysutils/lsof \
 	dig:dns/bind-tools \
 	lynx:www/lynx \
+	vuls:security/vuls \
 	gpg2:security/gnupg \
 	doas:security/doas \
 	sudo:security/sudo \
