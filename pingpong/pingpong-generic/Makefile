@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-generic
-PORTVERSION=	1.2
+PORTVERSION=	1.3
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
 DISTFILES=	#
@@ -24,6 +24,7 @@ RUN_DEPENDS= \
 	${BUILD_DEPENDS} \
 	bash:shells/bash \
 	${LOCALBASE}/share/bash-completion/bash_completion:shells/bash-completion \
+	${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss \
 	zsh:shells/zsh \
 	vim:editors/vim \
 	tree:sysutils/tree \
@@ -48,6 +49,7 @@ RUN_DEPENDS= \
 	lsof:sysutils/lsof \
 	dig:dns/bind-tools \
 	lynx:www/lynx \
+	${LOCALBASE}/etc/rc.d/wazuh-agent:security/wazuh-agent \
 	vuls:security/vuls \
 	gpg2:security/gnupg \
 	doas:security/doas \
