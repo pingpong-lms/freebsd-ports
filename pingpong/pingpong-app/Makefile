@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-app
-PORTVERSION=	1.6
+PORTVERSION=	1.7
 CATEGORIES=	pingpong
 MASTER_SITES=	#
 DISTFILES=	#
@@ -29,7 +29,7 @@ RUN_DEPENDS= \
 	latex2html:textproc/latex2html \
 	html2ps:print/html2ps \
 	ant:devel/apache-ant \
-	npm-node16>=0:www/npm-node16 \
+	npm-node18>=0:www/npm-node18 \
 	clamd:security/clamav \
 	ffmpeg:multimedia/ffmpeg \
 	webalizer:www/webalizer \
