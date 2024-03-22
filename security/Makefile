@@ -430,6 +430,7 @@
     SUBDIR += openssl31
     SUBDIR += openssl31-quictls
     SUBDIR += openssl32
+    SUBDIR += openssl33
     SUBDIR += openvas
     SUBDIR += openvpn
     SUBDIR += openvpn-admin
@@ -1072,6 +1073,7 @@
     SUBDIR += quantis-kmod
     SUBDIR += racoon2
     SUBDIR += rage-encryption
+    SUBDIR += ratify
     SUBDIR += ratproxy
     SUBDIR += rats
     SUBDIR += rcracki_mt
