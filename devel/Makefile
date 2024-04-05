@@ -227,6 +227,7 @@
     SUBDIR += asyncplusplus
     SUBDIR += atf
     SUBDIR += athens
+    SUBDIR += atl
     SUBDIR += atlantis
     SUBDIR += autobook
     SUBDIR += autoconf
@@ -557,6 +558,7 @@
     SUBDIR += dfuife-curses
     SUBDIR += dia2code
     SUBDIR += dia2code+
+    SUBDIR += dill
     SUBDIR += ding-libs
     SUBDIR += dispy
     SUBDIR += distcc
@@ -655,6 +657,7 @@
     SUBDIR += fc++
     SUBDIR += fccf
     SUBDIR += fcppt
+    SUBDIR += ffs
     SUBDIR += fhist
     SUBDIR += fifechan
     SUBDIR += fire-hpp
@@ -761,7 +764,6 @@
     SUBDIR += geany-plugins
     SUBDIR += geany-plugins-l10n
     SUBDIR += geany-themes
-    SUBDIR += gearmand
     SUBDIR += generate
     SUBDIR += gengetopt
     SUBDIR += genht
@@ -2596,7 +2598,6 @@
     SUBDIR += p5-Gearman
     SUBDIR += p5-Gearman-Client-Async
     SUBDIR += p5-Gearman-Server
-    SUBDIR += p5-Gearman-XS
     SUBDIR += p5-Geo-JSON
     SUBDIR += p5-Geo-ShapeFile
     SUBDIR += p5-Getargs-Long
@@ -4640,6 +4641,7 @@
     SUBDIR += py-dodgy
     SUBDIR += py-dogpile.cache
     SUBDIR += py-doit
+    SUBDIR += py-domdf-python-tools
     SUBDIR += py-donut-shellcode
     SUBDIR += py-dotted
     SUBDIR += py-dotty-dict
@@ -4787,6 +4789,7 @@
     SUBDIR += py-google-pasta
     SUBDIR += py-google-re2
     SUBDIR += py-googleapis-common-protos
+    SUBDIR += py-gptscript
     SUBDIR += py-gpxpy
     SUBDIR += py-grab
     SUBDIR += py-graphene
@@ -4893,6 +4896,7 @@
     SUBDIR += py-jaraco.functools
     SUBDIR += py-jaraco.itertools
     SUBDIR += py-jaraco.logging
+    SUBDIR += py-jaraco.packaging
     SUBDIR += py-jaraco.stream
     SUBDIR += py-jaraco.text
     SUBDIR += py-jaraco.timing
@@ -5058,6 +5062,7 @@
     SUBDIR += py-msal
     SUBDIR += py-msal-extensions
     SUBDIR += py-msgpack
+    SUBDIR += py-msgspec
     SUBDIR += py-mulpyplexer
     SUBDIR += py-multi_key_dict
     SUBDIR += py-multipart
@@ -5425,6 +5430,7 @@
     SUBDIR += py-pytest-cpp
     SUBDIR += py-pytest-datadir
     SUBDIR += py-pytest-django
+    SUBDIR += py-pytest-doctestplus
     SUBDIR += py-pytest-drop-dup-tests
     SUBDIR += py-pytest-enabler
     SUBDIR += py-pytest-env
@@ -5465,6 +5471,7 @@
     SUBDIR += py-pytest-regressions
     SUBDIR += py-pytest-regtest
     SUBDIR += py-pytest-relaxed
+    SUBDIR += py-pytest-remotedata
     SUBDIR += py-pytest-rerunfailures
     SUBDIR += py-pytest-runner
     SUBDIR += py-pytest-services
@@ -6284,6 +6291,7 @@
     SUBDIR += rubygem-aws-sdk-datasync
     SUBDIR += rubygem-aws-sdk-datazone
     SUBDIR += rubygem-aws-sdk-dax
+    SUBDIR += rubygem-aws-sdk-deadline
     SUBDIR += rubygem-aws-sdk-detective
     SUBDIR += rubygem-aws-sdk-devicefarm
     SUBDIR += rubygem-aws-sdk-devopsguru
