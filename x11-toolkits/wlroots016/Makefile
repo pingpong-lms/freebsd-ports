@@ -1,11 +1,9 @@
 PORTNAME=	wlroots
 DISTVERSION=	0.16.2
+PORTREVISION=	2
 CATEGORIES=	x11-toolkits
 PKGNAMESUFFIX=	016
 
-PATCH_SITES+=	https://github.com/swaywm/${GL_PROJECT}/commit/:github
-PATCHFILES+=	fc0854d5f256.patch:-p1:github # https://gitlab.freedesktop.org/wlroots/wlroots/-/merge_requests/2064
-PATCHFILES+=	29cb694655db.patch:-p1:github # https://gitlab.freedesktop.org/wlroots/wlroots/-/merge_requests/2064
 PATCH_SITES+=	${GL_SITE}/${GL_ACCOUNT}/${GL_PROJECT}/-/commit/
 PATCHFILES+=	f3ba14e49133.patch:-p1 # https://gitlab.freedesktop.org/wlroots/wlroots/-/merge_requests/3850
 
@@ -61,8 +59,8 @@ X11_LIB_DEPENDS=	libxcb-errors.so:x11/xcb-util-errors \
 			libxcb-render-util.so:x11/xcb-util-renderutil \
 			libxcb-icccm.so:x11/xcb-util-wm
 X11_BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
-			xwayland-devel>0:x11-servers/xwayland-devel
-X11_RUN_DEPENDS=	xwayland-devel>0:x11-servers/xwayland-devel
+			Xwayland:x11-servers/xwayland
+X11_RUN_DEPENDS=	Xwayland:x11-servers/xwayland
 X11_USE=		XORG=xcb
 X11_MESON_ENABLED=	xwayland
 X11_VARS=		BACKENDS+=x11

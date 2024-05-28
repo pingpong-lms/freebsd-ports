@@ -1,7 +1,6 @@
 PORTNAME=	libzen
-PORTVERSION=	0.4.41.20240118
-PORTREVISION=	1
-PORTEPOCH=	2
+PORTVERSION=	0.4.41.${MEDIAINFO_VERSION}
+PORTEPOCH=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	https://mediaarea.net/download/binary/mediainfo/${MEDIAINFO_VERSION}/ \
 		LOCAL/sunpoet
@@ -24,6 +23,6 @@ USE_LDCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/MediaInfo_CLI_GNU_FromSource/ZenLib/Project/GNU/Library
 
-MEDIAINFO_VERSION=	24.03
+MEDIAINFO_VERSION=	24.04
 
 .include <bsd.port.mk>

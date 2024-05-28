@@ -37,6 +37,7 @@
     SUBDIR += deforaos-player
     SUBDIR += dirac
     SUBDIR += dragon
+    SUBDIR += droidcam
     SUBDIR += dtv-scan-tables
     SUBDIR += dumpmpeg
     SUBDIR += dv2sub
@@ -62,7 +63,6 @@
     SUBDIR += ffsubsync
     SUBDIR += filebot
     SUBDIR += flvmeta
-    SUBDIR += flvtool++
     SUBDIR += fswebcam
     SUBDIR += gaupol
     SUBDIR += gavl
@@ -145,6 +145,7 @@
     SUBDIR += kodi-addon-screensaver.matrixtrails
     SUBDIR += kodi-addon-screensaver.stars
     SUBDIR += kodi-addon-visualization.fishbmc
+    SUBDIR += kodi-addon-visualization.projectm
     SUBDIR += kodi-addon-visualization.shadertoy
     SUBDIR += kodi-addon-visualization.spectrum
     SUBDIR += kooha
@@ -180,9 +181,9 @@
     SUBDIR += librav1e
     SUBDIR += librespot
     SUBDIR += librist
-    SUBDIR += librtmp
     SUBDIR += libtheora
     SUBDIR += libtuner
+    SUBDIR += libudfread
     SUBDIR += libuvc
     SUBDIR += libv4l
     SUBDIR += libva
@@ -203,6 +204,14 @@
     SUBDIR += libzen
     SUBDIR += linux-c7-libtheora
     SUBDIR += linux-c7-libv4l
+    SUBDIR += linux-rl9-ffmpeg
+    SUBDIR += linux-rl9-gstreamer1
+    SUBDIR += linux-rl9-gstreamer1-libav
+    SUBDIR += linux-rl9-libtheora
+    SUBDIR += linux-rl9-libv4l
+    SUBDIR += linux-rl9-libva
+    SUBDIR += linux-rl9-libvdpau
+    SUBDIR += linux-rl9-libvpx
     SUBDIR += linux-tsmuxer
     SUBDIR += linux_dvbwrapper-kmod
     SUBDIR += livego
@@ -217,7 +226,6 @@
     SUBDIR += minisatip
     SUBDIR += minitube
     SUBDIR += mjpegtools
-    SUBDIR += mjpg-streamer
     SUBDIR += mkclean
     SUBDIR += mkvalidator
     SUBDIR += mkvtoolnix
@@ -299,7 +307,6 @@
     SUBDIR += py-ffmpeg-python
     SUBDIR += py-gstreamer1
     SUBDIR += py-guessit
-    SUBDIR += py-librtmp
     SUBDIR += py-mat2
     SUBDIR += py-metadata-cleaner
     SUBDIR += py-mido
@@ -330,13 +337,10 @@
     SUBDIR += recordmydesktop
     SUBDIR += replex
     SUBDIR += ringrtc
-    SUBDIR += rtmpdump
     SUBDIR += rubygem-av
     SUBDIR += rubygem-clutter-gstreamer
     SUBDIR += rubygem-flvtool2
     SUBDIR += rubygem-gstreamer
-    SUBDIR += rubygem-paperclip-av-transcoder
-    SUBDIR += rubygem-paperclip-av-transcoder-rails50
     SUBDIR += rubygem-streamio-ffmpeg
     SUBDIR += scte35dump
     SUBDIR += shotcut
@@ -353,6 +357,7 @@
     SUBDIR += subtitleoffsetmodifier
     SUBDIR += subtools
     SUBDIR += svt-av1
+    SUBDIR += svt-av1-psy
     SUBDIR += svt-hevc
     SUBDIR += svt-vp9
     SUBDIR += syncplay

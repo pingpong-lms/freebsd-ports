@@ -1,7 +1,6 @@
 PORTNAME=	ruff
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.3.3
-PORTREVISION=	1
+DISTVERSION=	0.4.5
 CATEGORIES=	devel python
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -25,8 +24,7 @@ CARGO_INSTALL_PATH=	crates/ruff_cli
 
 PROGS=		ruff \
 		ruff_dev \
-		ruff_python_formatter \
-		ruff_shrinking
+		ruff_python_formatter
 
 PLIST_FILES=	${PROGS:S/^/bin\//}
 

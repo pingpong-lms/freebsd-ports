@@ -1,6 +1,5 @@
 PORTNAME=	cbsd
-DISTVERSION=	14.0.6
-PORTREVISION=	1
+DISTVERSION=	14.0.8
 CATEGORIES=	sysutils
 
 MAINTAINER=	olevole@olevole.ru
@@ -16,6 +15,7 @@ LIB_DEPENDS=	libsqlite3.so:databases/sqlite3 \
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss \
 		curl:ftp/curl \
 		rsync:net/rsync \
+		jq:textproc/jq \
 		sqlite3:databases/sqlite3 \
 		sudo:security/sudo
 

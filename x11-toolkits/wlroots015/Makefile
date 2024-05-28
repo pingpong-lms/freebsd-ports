@@ -1,12 +1,9 @@
 PORTNAME=	wlroots
 DISTVERSION=	0.15.1
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	x11-toolkits
 PKGNAMESUFFIX=	015
 
-PATCH_SITES+=	https://github.com/swaywm/${GL_PROJECT}/commit/:github
-PATCHFILES+=	7c0e2a271a4c.patch:-p1:github # https://gitlab.freedesktop.org/wlroots/wlroots/-/merge_requests/2064
-PATCHFILES+=	55a8d225cf8c.patch:-p1:github # https://gitlab.freedesktop.org/wlroots/wlroots/-/merge_requests/2064
 PATCH_SITES+=	https://source.puri.sm/Librem5/${PORTNAME}/-/commit/:purism
 PATCHFILES+=	21bc0ec09200.patch:-p1:purism # https://gitlab.freedesktop.org/wlroots/wlroots/-/merge_requests/3475
 PATCH_SITES+=	${GL_SITE}/${GL_ACCOUNT}/${GL_PROJECT}/-/commit/
@@ -74,8 +71,8 @@ X11_LIB_DEPENDS=	libxcb-errors.so:x11/xcb-util-errors \
 			libxcb-render-util.so:x11/xcb-util-renderutil \
 			libxcb-icccm.so:x11/xcb-util-wm
 X11_BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
-			xwayland-devel>0:x11-servers/xwayland-devel
-X11_RUN_DEPENDS=	xwayland-devel>0:x11-servers/xwayland-devel
+			Xwayland:x11-servers/xwayland
+X11_RUN_DEPENDS=	Xwayland:x11-servers/xwayland
 X11_USE=		XORG=xcb
 X11_MESON_ENABLED=	xwayland
 X11_VARS=		BACKENDS+=x11

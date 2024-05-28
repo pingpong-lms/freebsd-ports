@@ -1,6 +1,6 @@
 PORTNAME=	lms
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.51.1
+DISTVERSION=	3.53.1
 CATEGORIES=	multimedia
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -9,6 +9,8 @@ WWW=		https://github.com/epoupon/lms
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+BROKEN_FreeBSD_13=	compilation fails: error: object of type 'const LiteralString' cannot be compared because its 'operator<=>' is implicitly deleted
 
 BUILD_DEPENDS=	googletest>0:devel/googletest
 LIB_DEPENDS=	libavformat.so:multimedia/ffmpeg \
@@ -36,11 +38,11 @@ OPTIONS_DEFAULT=		STB # STB is prefered by the upstream
 
 STB_DESC=			Use STB as image library (uses less memory)
 STB_BUILD_DEPENDS=		${LOCALBASE}/include/stb/stb_image.h:devel/stb
-STB_CMAKE_BOOL=			FREEBSD_USE_STB
+STB_CMAKE_CMAKE_ON=		-DLMS_IMAGE_BACKEND:STRING=stb
 
 MAGICK_DESC=			Use GraphicsMagick++ as image library
 MAGICK_LIB_DEPENDS=		libGraphicsMagick.so:graphics/GraphicsMagick
-MAGICK_CMAKE_BOOL=		FREEBSD_USE_MAGICK
+MAGICK_CMAKE_ON=		-DLMS_IMAGE_BACKEND:STRING=graphicsmagick
 
 .include <bsd.port.options.mk>
 .if ${OPSYS} == FreeBSD && ${OSVERSION} < 1400000

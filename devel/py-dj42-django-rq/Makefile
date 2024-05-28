@@ -1,5 +1,5 @@
 PORTNAME=	django-rq
-PORTVERSION=	2.10.1
+PORTVERSION=	2.10.2
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}dj42-
@@ -10,6 +10,9 @@ WWW=		https://github.com/rq/django-rq
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
+
+DEPRECATED=	Obsolete, please use devel/py-django-rq instead
+EXPIRATION_DATE=2024-06-15
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django42>=3.2:www/py-django42@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}redis>=3:databases/py-redis@${PY_FLAVOR} \

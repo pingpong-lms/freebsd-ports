@@ -689,6 +689,7 @@ sysutils/bareos17-client-static||2021-12-05|Has expired: Deprecated, no new rele
 sysutils/bareos17-server|sysutils/bareos18-server|2021-12-05|Has expired: Deprecated, no new release since 2020
 www/bareos17-webui|www/bareos18-webui|2021-12-05|Has expired: Deprecated, no new release since 2020
 math/eigen2||2021-12-07|Has expired: No longer available upstream, no consumers in ports
+misc/opensubdiv|graphics/opensubdiv|2021-12-07|remove duplicate
 emulators/qemu41||2021-12-10|Has expired: Use emulators/qemu or emulators/qemu-devel
 security/putty-gtk2||2021-12-15|Has expired: putty-gtk2 is being phased out
 games/xnethack-nox11|games/xnethack@nox11|2021-12-16|Turned into flavor
@@ -1216,7 +1217,6 @@ lang/gcc10-devel||2022-04-17|Has expired: Not serving its purpose any longer due
 devel/py-installer03|devel/py-installer|2022-04-17|Remove obsoleted port. Use devel/py-installer instead
 games/cultivation||2022-04-18|Has expired: Abandonware with last release in 2010, non-portable build system
 devel/ros-rosinstall||2022-04-20|Has expired: Upstream has archived the project and is no longer being used in the ROS project
-devel/py-aiorpcX-legacy|devel/py-aiorpcX|2022-04-20|Has expired: Legacy port is no longer required, please use devel/py-aiorpcX instead
 net/kalarmcal|deskutils/kalarm|2022-04-21|Packages were merged
 math/py-gmpy2-devel|math/py-gmpy2|2022-04-22|No more need for the -devel port, py-gmpy2 is at latest
 net/google-cloud-sdk-app-engine-go||2022-04-27|Obsolete, not supported by the current GCP SDK
@@ -2169,6 +2169,7 @@ www/py-WebTest|www/py-webtest|2023-06-08|Use lowercase PORTNAME and path
 security/py-sequoia||2023-06-09|Deprecated upstream, broken as based on older dependency
 audio/hvl2wav|audio/ocp|2023-06-10|Has expired: Abandoned upstream, use audio/ocp instead
 x11/thinglaunch|x11/thingylaunch|2023-06-10|Has expired: Abandonware, please use x11/thingylaunch instead
+devel/kiwix-lib|devel/libkiwix|2023-06-12|Renamed to match upstream naming
 sysutils/intel-nvmupdate|sysutils/intel-nvmupdate-40g|2023-06-14|Moved to sysutils/intel-nvmupdate-40g, which is 40G-generation specific port to make space for 10G and 100G generations
 sysutils/intel-qcu|sysutils/intel-epct|2023-06-14|Moved to sysutils/intel-epct
 multimedia/obs-qtwebkit||2023-06-16|Has expired: OBS ships with their own browser plugin from version 25 onwards
@@ -2290,7 +2291,6 @@ www/kristall||2023-07-02|Has expired: Requires older openssl
 sysutils/cfengine-masterfiles318||2023-07-02|Has expired: Expire one year after cfengine-masterfiles 3.19.0 released
 sysutils/cfengine318||2023-07-02|Has expired: Expire one year after cfengine 3.19.0 released
 devel/linux-c7-dbus-glib||2023-07-02|Merged into devel/linux-c7-dbus-libs
-devel/ocaml-sexplib|devel/ocaml-sexplib0|2023-07-05|Project renamed
 net/nuster||2023-07-08|Has expired: Does not support OpenSSL 3 and upstream last release was in 2020
 devel/godot2-tools|devel/godot-tools|2023-07-08|Has expired: Requires legacy OpenSSL 1.1.1 so use devel/godot
 devel/rubygem-aws-sdk-core3172|devel/rubygem-aws-sdk-core|2023-07-09|Remove obsoleted port. Use devel/rubygem-aws-sdk-core instead
@@ -2304,6 +2304,7 @@ games/naev-data||2023-07-15|Remove obsoleted port. Now games/naev installs data 
 graphics/pecl-imagick-im7|graphics/pecl-imagick|2023-07-19|Merged into master port
 x11-toolkits/fox14||2023-07-27|Has expired: Obsolete leaf port, use x11-toolkits/fox(16,17) instead
 x11-wm/cage-devel|x11-wm/cage|2023-07-27|Out of date: use x11-wm/cage for now
+misc/py-anndata|devel/py-anndata|2023-07-30|Removed duplicate
 games/cockatrice||2023-07-31|Has expired: Upstream releases haven't occured for multiple years and will require a new portbuild
 graphics/blender-lts29||2023-07-31|Has expired: Deprecated upstream
 x11-fm/wcmcommander||2023-07-31|Has expired: Abandoned upstream
@@ -3144,3 +3145,113 @@ devel/p5-Gearman-XS||2024-04-04|Depends on removed devel/gearmand and last updat
 emulators/tuxnes||2024-04-04|Has expired: BROKEN for more than 4 months
 sysutils/vordog||2024-04-04|Has expired: BROKEN for more than 4 months
 science/py-qiskit-terra||2024-04-04|Removed: the upstream gutted the old project and re-imported some other repo; it should be re-ported as a totally new project
+misc/py-qiskit-machine-learning||2024-04-05|Removed
+science/py-qiskit||2024-04-05|Removed
+science/py-qiskit-aer||2024-04-05|Removed
+science/py-qiskit-dynamics||2024-04-05|Removed
+science/py-qiskit-experiments||2024-04-05|Removed
+science/py-qiskit-finance||2024-04-05|Removed
+science/py-qiskit-ibm-experiment||2024-04-05|Removed
+science/py-qiskit-ibm-provider||2024-04-05|Removed
+science/py-qiskit-ibmq-provider||2024-04-05|Removed
+science/py-qiskit-nature||2024-04-05|Removed
+science/py-qiskit-optimization||2024-04-05|Removed
+games/spider||2024-04-06|Has expired: SUNSITE is no longer maintained
+graphics/liblug||2024-04-06|Has expired: SUNSITE is no longer maintained
+misc/xgas||2024-04-06|Has expired: SUNSITE is no longer maintained
+devel/dmucs||2024-04-06|Has expired: Unmaintained, upstream last release was in 2006
+multimedia/mjpg-streamer||2024-04-06|Has expired: Unmaintained for a long time and does not work
+irc/tircproxy||2024-04-06|Has expired: Unmaintained, dead upstream, vaporized from the net
+devel/ds2||2024-04-06|Has expired: Upstream deprecated and archived
+devel/bazel029||2024-04-08|Removed
+math/lean4-std||2024-04-08|Removed: Lean4 doesn't yet support seperate library packages, although it should
+misc/urbit||2024-04-08|Deprecated: Can't be built with a reasonable effort
+lang/tcl85||2024-04-09|EOL
+x11-toolkits/tk85||2024-04-09|EOL
+audio/fasttracker2|audio/ft2-clone|2024-04-10|Renamed to match upstream
+lang/ocaml-nox11|lang/ocaml|2024-04-10|X11 support removed upstream
+lang/qscheme||2024-04-10|Has expired: Unmaintained and there are more modern alternatives
+x11/nvidia-hybrid-graphics||2024-04-11|Has expired: Not maintained and obsoleted by glvnd and nvidia-drm-kmod
+lang/cython-devel|lang/cython3|2024-04-11|Has expired: use lang/cython3
+x11-wm/kwinft|x11-wm/theseus-ship|2024-04-13|Project renamed
+textproc/spiff||2024-04-13|Has expired: Active development of this port has been ceased
+www/p5-libservlet||2024-04-13|Has expired: Upstream unmaintained and last release was in 2001
+textproc/libparsifal||2024-04-13|Has expired: Upsrteam no longer available including WWW and distfile
+www/p5-Catalyst-Plugin-FormBuilder||2024-04-13|Has expired: Deprecated by upstream
+security/sancp||2024-04-13|Has expired: Upstream unmaintained and last release in 2007
+x11-toolkits/p5-Glade2||2024-04-13|Has expired: Deprecated by upstream
+sysutils/msyslog||2024-04-13|Has expired: Unmaintained and last upstream release in 2003
+x11/xdtm||2024-04-13|Has expired: Unmaintained, last upstream release was in 2000 or earlier
+x11/multi-aterm||2024-04-13|Has expired: Unmaintained, last upstream release in 2004
+devel/py-dateutil|devel/py-python-dateutil|2024-04-13|Move devel/py-dateutil to devel/py-python-dateutil
+science/p5-Algorithm-SVMLight||2024-04-16|Has expired: Depends on DEPRECATED science/svmlight
+science/svmlight||2024-04-16|Has expired: Unmaintained, last upstream release in 2008 and there are more modern alternatives
+security/krb5-119||2024-04-16|Has expired: Desupported by MIT following 1.21
+audio/gnuitar||2024-04-18|Has expired: Unmaintained, last upstream release in 2005
+emulators/hugo||2024-04-18|Has expired: Unmaintained, last release in 2005 and uses deprecated gtk2 library
+net-p2p/gtorrentviewer||2024-04-18|Has expired: Unmaintained, last release in 2004 and uses deprecated gtk2
+net-im/tut||2024-04-18|Has expired: Requires deprecated lang/go119
+net/gost||2024-04-18|Has expired: Requires deprecated lang/go119
+lang/go119||2024-04-18|Has expired: Upsrteam EOL reached on 2023-09-06
+www/gitlab-ce|www/gitlab@ce|2024-04-21|Move www/gitlab-ce to www/gitlab and added flavor ce and ee
+multimedia/flvtool++||2024-04-21|Has expired: Abandonware, consider using multimedia/flvmeta
+www/mod_tidy||2024-04-24|Has expired: Last upstream release was in 2005
+net-p2p/go-prysm||2024-04-24|Has expired: Broken for more than 6 months
+x11-toolkits/p5-Gtk2-Ex-Dialogs||2024-04-24|Has expired: No longer works with modern Gtk2
+math/mathlibtools||2024-04-28|Project is obsolete and archived on GitHub since Aug 2023, not compatible with math/lean4
+emulators/qemu7@tools|emulators/qemu@tools|2024-04-29|Use emulators/qemu@tools instead
+lang/tcl9|lang/tcl90|2024-04-30|Renamed for consistency with the 8.x series ports
+deskutils/aspostit||2024-04-30|Has expired: Unmaintained, last upstream release in 2001
+x11-toolkits/p5-Tk-FileDialog||2024-04-30|Has expired: Does not work with recent Tk versions
+www/py-django-dpaste||2024-04-30|Has expired
+dns/bind916|dns/bind918|2024-04-30|Has expired: End of life, please migrate to a newer version of BIND9
+devel/rubygem-ruby_dep||2024-04-30|Has expired: Upstream official support to Ruby 2.x only and is inactive for 7.5 years. And there is no dependent ports
+databases/pgsphere||2024-04-30|Has expired: The repository has been archived by the owner on 2023-08-09 and is inactive for almost 4.5 years
+games/residualvm||2024-04-30|Has expired: Obsolete, merged with ScummVM Oct 9, 2020
+misc/firestring||2024-04-30|Has expired: Upstream is gone and last release in 2004
+dns/firedns||2024-04-30|Has expired: Abandonware, upstream is gone and last release in 2004 and it also depends on unfetchable misc/firestring. Consider dns/c-ares
+sysutils/libretto-config||2024-04-30|Has expired: Utility for obsolete hardware released 20 years ago
+sysutils/dolly||2024-04-30|Has expired: Abandonware, upstream is gone
+sysutils/atitvout||2024-04-30|Has expired: Obsolete, utility for hardware released over 20 years ago
+multimedia/py-librtmp||2024-04-30|Has expired: Depends on deprecated library librtmp
+multimedia/librtmp||2024-04-30|Has expired: Depends on legacy functionality of OpenSSL and superseded by multimedia/ffmpeg
+multimedia/rtmpdump||2024-04-30|Has expired: Depends on deprecated library librtmp, consider migrating to multimedia/ffmpeg
+multimedia/rubygem-paperclip-av-transcoder||2024-04-30|Has expired: Depends on deprecated port devel/rubygem-paperclip-rails5
+benchmarks/iozone21||2024-04-30|Has expired: Abandoned and obsolete version, superseded by benchmarks/iozone (3.x). Consider also migrating to benchmarks/fio
+devel/tla||2024-04-30|Has expired: Deprecated and obsolete revision control system, consider migrating to devel/git or devel/mercurial
+devel/configkit||2024-04-30|Has expired: Depends on deprecated port devel/libphk
+devel/libphk||2024-04-30|Has expired: Superseded by various other projects
+games/2048-qt||2024-04-30|Has expired: Unmaintained, last upstream release in 2016
+devel/cdash||2024-04-30|Has expired: Very outdated version that's unsupported upstream
+sysutils/dim||2024-04-30|Has expired: Abandonware, upstream stopped development in 2005
+net-im/jabberd||2024-04-30|Has expired: No longer developed as of 2019, consider using net-im/ejabberd
+irc/miau||2024-04-30|Has expired: Abandoned upstream, last release in 2010 and no activity since 2014. Consider migrating to irc/soju or irc/znc
+sysutils/no-login||2024-04-30|Has expired: Obsolete, use nologin in base
+lang/gcc48||2024-05-01|Has expired: Unsupported by upstream since 2015. Use GCC 10 or newer instead
+multimedia/rubygem-paperclip-av-transcoder-rails50||2024-05-04|Has expired: Depends on deprecated port devel/rubygem-paperclip-rails50
+devel/rubygem-paperclip-rails50||2024-05-04|Has expired: Upstream repo archived Jul 13, 2023. Upstream recommends using Rails' own ActiveStorage
+devel/rubygem-paperclip-rails5||2024-05-04|Has expired: Upstream repo archived Jul 13, 2023. Upstream recommends using Rails' own ActiveStorage
+biology/pbseqan|biology/seqan|2024-05-05|Has expired: Upstream merged into SeqAn project: Use biology/seqan
+archivers/xpk||2024-05-07|Has expired: Unmaintained, upstream last release in 2002
+www/py-dj42-channels-redis|www/py-channels-redis|2024-05-12|Renamed after all Django consumers were switched from Django 3.2 to Django 4.2 to have a consistent naming scheme
+www/py-dj42-django-auditlog|www/py-django-auditlog|2024-05-12|Renamed after all Django consumers were switched from Django 3.2 to Django 4.2 to have a consistent naming scheme
+www/py-dj42-django-celery-results|www/py-django-celery-results|2024-05-12|Renamed after all Django consumers were switched from Django 3.2 to Django 4.2 to have a consistent naming scheme
+www/py-dj42-django-compression-middleware|www/py-django-compression-middleware|2024-05-12|Renamed after all Django consumers were switched from Django 3.2 to Django 4.2 to have a consistent naming scheme
+www/py-dj42-django-multiselectfield|www/py-django-multiselectfield|2024-05-12|Renamed after all Django consumers were switched from Django 3.2 to Django 4.2 to have a consistent naming scheme
+www/py-dj42-djangorestframework-guardian|www/py-djangorestframework-guardian|2024-05-12|Renamed after all Django consumers were switched from Django 3.2 to Django 4.2 to have a consistent naming scheme
+www/py-dj42-drf-writable-nested|www/py-drf-writable-nested|2024-05-12|Renamed after all Django consumers were switched from Django 3.2 to Django 4.2 to have a consistent naming scheme
+textproc/py-rss2gen|textproc/py-pyrss2gen|2024-05-13|Move textproc/py-rss2gen to textproc/py-pyrss2gen
+x11-fonts/noto-sans-basic|x11-fonts/noto-sans|2024-05-13|Remove obsoleted port. Use x11-fonts/noto-sans instead
+x11-fonts/noto-sans-extra|x11-fonts/noto-sans|2024-05-13|Remove obsoleted port. Use x11-fonts/noto-sans instead
+x11-fonts/noto-sans-mono-basic|x11-fonts/noto-sans-mono|2024-05-13|Remove obsoleted port. Use x11-fonts/noto-sans-mono instead
+x11-fonts/noto-sans-mono-extra|x11-fonts/noto-sans-mono|2024-05-13|Remove obsoleted port. Use x11-fonts/noto-sans-mono instead
+x11-fonts/noto-sans-symbols-basic|x11-fonts/noto-sans-symbols|2024-05-13|Remove obsoleted port. Use x11-fonts/noto-sans-symbols instead
+x11-fonts/noto-sans-symbols-extra|x11-fonts/noto-sans-symbols|2024-05-13|Remove obsoleted port. Use x11-fonts/noto-sans-symbols instead
+x11-fonts/noto-serif-basic|x11-fonts/noto-serif|2024-05-13|Remove obsoleted port. Use x11-fonts/noto-serif instead
+x11-fonts/noto-serif-extra|x11-fonts/noto-serif|2024-05-13|Remove obsoleted port. Use x11-fonts/noto-serif instead
+sysutils/vector||2024-05-15|Has expired: Unmaintained in tree and broken for months
+irc/sic||2024-05-15|Has expired: Last upstream release was in 2001 and no upstream WWW
+devel/tarpaulin|devel/cargo-tarpaulin|2024-05-19|Rename port and package to reflect that this is a Cargo plugin
+sysutils/uutils-coreutils|sysutils/rust-coreutils|2024-05-21|Remove duplicate
+databases/foundationdb|databases/foundationdb71-server|2024-05-23|Reintegrated into databases/foundationdb71-server
+devel/py-dj42-graphene-django|devel/py-graphene-django300|2024-05-26|Renamed to py-graphene-django300 for backwards compatibility with net-mgmt/netbox

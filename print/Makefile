@@ -1,6 +1,7 @@
     COMMENT = Desktop publishing
 
     SUBDIR += R-cran-knitr
+    SUBDIR += R-cran-textshaping
     SUBDIR += R-cran-tinytex
     SUBDIR += a2pdf
     SUBDIR += a2ps
@@ -97,6 +98,9 @@
     SUBDIR += linux-c7-freetype
     SUBDIR += linux-c7-harfbuzz
     SUBDIR += linux-jabref
+    SUBDIR += linux-rl9-cups-libs
+    SUBDIR += linux-rl9-freetype
+    SUBDIR += linux-rl9-harfbuzz
     SUBDIR += lout
     SUBDIR += lprps
     SUBDIR += lyx

@@ -9,7 +9,6 @@
     SUBDIR += anydesk
     SUBDIR += appwrapper
     SUBDIR += arttime
-    SUBDIR += aspostit
     SUBDIR += ausweisapp2
     SUBDIR += autocutsel
     SUBDIR += baobab
@@ -251,6 +250,7 @@
     SUBDIR += rolo
     SUBDIR += rubygem-shellplay
     SUBDIR += rubygem-taskjuggler
+    SUBDIR += rwpspread
     SUBDIR += semantik
     SUBDIR += showdown
     SUBDIR += sigi

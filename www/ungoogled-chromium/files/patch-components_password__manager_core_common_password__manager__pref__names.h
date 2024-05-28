@@ -1,6 +1,6 @@
---- components/password_manager/core/common/password_manager_pref_names.h.orig	2024-03-22 14:16:19 UTC
+--- components/password_manager/core/common/password_manager_pref_names.h.orig	2024-05-23 20:04:36 UTC
 +++ components/password_manager/core/common/password_manager_pref_names.h
-@@ -328,7 +328,7 @@ inline constexpr char kPasswordManagerPromoCardsList[]
+@@ -320,7 +320,7 @@ inline constexpr char kPasswordManagerPromoCardsList[]
  inline constexpr char kPasswordSharingEnabled[] =
      "password_manager.password_sharing_enabled";
  

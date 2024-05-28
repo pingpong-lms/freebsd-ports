@@ -1,5 +1,5 @@
 PORTNAME=	django-auth-ldap
-PORTVERSION=	4.7.0
+PORTVERSION=	4.8.0
 CATEGORIES=	www security python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}dj42-
@@ -10,6 +10,9 @@ WWW=		https://github.com/django-auth-ldap/django-auth-ldap
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=	Obsolete, please use www/py-django-auth-ldap instead
+EXPIRATION_DATE=2024-06-15
 
 BUILD_DEPENDS=	${PY_SETUPTOOLS} \
 		${PYTHON_PKGNAMEPREFIX}setuptools-scm>=3.4:devel/py-setuptools-scm@${PY_FLAVOR} \

@@ -1,6 +1,6 @@
 PORTNAME=	cyrus-imapd
 PORTVERSION=	2.5.17
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	mail
 MASTER_SITES=	https://github.com/cyrusimap/cyrus-imapd/releases/download/${PORTNAME}-${PORTVERSION}/
 PKGNAMESUFFIX=	25
@@ -25,7 +25,6 @@ USES=		cpe libtool perl5 ssl
 USE_RC_SUBR=	imapd
 CYRUS_PREFIX=	${PREFIX}/cyrus
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc \
 		--with-cyrus-prefix=${CYRUS_PREFIX} \
 		--with-cyrus-user=${CYRUS_USER} \
@@ -49,7 +48,7 @@ OPTIONS_DEFAULT=	BDB IDLED
 OPTIONS_SUB=		yes
 AUTOCREATE_DESC=	Enable autocreate support
 AUTOCREATE_CONFIGURE_ENABLE=	autocreate
-BDB_USES=		bdb
+BDB_USES=		bdb:18
 BDB_CONFIGURE_ON=	--with-bdb-incdir=${BDB_INCLUDE_DIR} \
 			--with-bdb-libdir=${LOCALBASE}/lib
 CLAMAV_DESC=		Use ClamAV

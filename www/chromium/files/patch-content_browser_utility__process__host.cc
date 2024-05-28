@@ -1,4 +1,4 @@
---- content/browser/utility_process_host.cc.orig	2024-03-22 08:19:40 UTC
+--- content/browser/utility_process_host.cc.orig	2024-05-21 18:07:39 UTC
 +++ content/browser/utility_process_host.cc
 @@ -61,7 +61,7 @@
  #include "content/browser/v8_snapshot_files.h"
@@ -33,10 +33,29 @@
        file_data_(std::make_unique<ChildProcessLauncherFileData>()),
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
+       allowed_gpu_(false),
        gpu_client_(nullptr, base::OnTaskRunnerDeleter(nullptr)),
  #endif
-       client_(std::move(client)) {
-@@ -431,7 +431,7 @@ bool UtilityProcessHost::StartProcess() {
+@@ -209,7 +209,7 @@ void UtilityProcessHost::SetPreloadLibraries(
+ #endif  // BUILDFLAG(IS_WIN)
+ 
+ void UtilityProcessHost::SetAllowGpuClient() {
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
+   allowed_gpu_ = true;
+ #endif
+ }
+@@ -349,6 +349,9 @@ bool UtilityProcessHost::StartProcess() {
+       switches::kFailAudioStreamCreation,
+       switches::kMuteAudio,
+       switches::kUseFileForFakeAudioCapture,
++#if BUILDFLAG(IS_BSD)
++      switches::kAudioBackend,
++#endif
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FREEBSD) || \
+     BUILDFLAG(IS_SOLARIS)
+       switches::kAlsaInputDevice,
+@@ -409,7 +412,7 @@ bool UtilityProcessHost::StartProcess() {
      file_data_->files_to_preload.merge(GetV8SnapshotFilesToPreload());
  #endif  // BUILDFLAG(IS_POSIX)
  
@@ -45,7 +64,7 @@
      // The network service should have access to the parent directories
      // necessary for its usage.
      if (sandbox_type_ == sandbox::mojom::Sandbox::kNetwork) {
-@@ -442,13 +442,13 @@ bool UtilityProcessHost::StartProcess() {
+@@ -420,13 +423,13 @@ bool UtilityProcessHost::StartProcess() {
      }
  #endif  // BUILDFLAG(IS_LINUX)
  

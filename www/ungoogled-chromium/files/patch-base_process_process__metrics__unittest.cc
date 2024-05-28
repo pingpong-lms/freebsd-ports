@@ -1,6 +1,6 @@
---- base/process/process_metrics_unittest.cc.orig	2024-02-25 20:22:18 UTC
+--- base/process/process_metrics_unittest.cc.orig	2024-05-23 20:04:36 UTC
 +++ base/process/process_metrics_unittest.cc
-@@ -54,7 +54,8 @@
+@@ -57,7 +57,8 @@
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) ||      \
      BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_WIN) || \

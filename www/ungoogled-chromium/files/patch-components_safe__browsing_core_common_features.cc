@@ -1,11 +1,11 @@
---- components/safe_browsing/core/common/features.cc.orig	2024-03-22 14:16:19 UTC
+--- components/safe_browsing/core/common/features.cc.orig	2024-05-23 20:04:36 UTC
 +++ components/safe_browsing/core/common/features.cc
-@@ -240,7 +240,7 @@ BASE_FEATURE(kSafeBrowsingSkipSubresources,
- BASE_FEATURE(kSafeBrowsingSkipSubresources2,
-              "SafeBrowsingSkipSubResources2",
+@@ -133,7 +133,7 @@ BASE_FEATURE(kFriendlierSafeBrowsingSettingsStandardPr
+ BASE_FEATURE(kHashPrefixRealTimeLookups,
+              "SafeBrowsingHashPrefixRealTimeLookups",
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_ANDROID)
-+    BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT

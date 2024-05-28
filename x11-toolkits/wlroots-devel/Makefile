@@ -1,13 +1,15 @@
 PORTNAME=	wlroots
-DISTVERSION=	0.17.0-255
-DISTVERSIONSUFFIX=	-g50eae512d9
+DISTVERSION=	0.17.0-312
+DISTVERSIONSUFFIX=	-gb1b34cd665
+PORTREVISION=	2
 CATEGORIES=	x11-toolkits
 PKGNAMESUFFIX=	-devel
 
-PATCH_SITES+=	https://github.com/swaywm/${GL_PROJECT}/commit/:github
-PATCHFILES+=	10f80a8f1bb2.patch:-p1:github # https://gitlab.freedesktop.org/wlroots/wlroots/-/merge_requests/2064
-PATCHFILES+=	3196c73d487f.patch:-p1:github # https://gitlab.freedesktop.org/wlroots/wlroots/-/merge_requests/2064
+PATCH_SITES+=	https://github.com/hyprwm/wlroots-hyprland/raw/5c1d51c5a279/patches/:hyprland
+PATCHFILES+=	surface-nondivisible-by-scale.patch:-p1:hyprland
+PATCHFILES+=	nvidia-hardware-cursors.patch:-p1:hyprland
 PATCH_SITES+=	${GL_SITE}/${GL_ACCOUNT}/${GL_PROJECT}/-/commit/
+PATCHFILES+=	cc6a7a04418f.patch:-p1 # https://gitlab.freedesktop.org/wlroots/wlroots/-/merge_requests/4697
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Modular Wayland compositor library (development snapshot)
@@ -40,7 +42,8 @@ OPTIONS_DEFAULT=DRM OPENGL VULKAN X11
 OPTIONS_SUB=	yes
 
 DRM_DESC=		KMS console support
-DRM_BUILD_DEPENDS=	hwdata>0:misc/hwdata
+DRM_BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
+			hwdata>0:misc/hwdata
 DRM_LIB_DEPENDS=	libudev.so:devel/libudev-devd \
 			libliftoff.so:graphics/libliftoff \
 			libdisplay-info.so:sysutils/libdisplay-info \
@@ -64,8 +67,8 @@ X11_LIB_DEPENDS=	libxcb-errors.so:x11/xcb-util-errors \
 			libxcb-render-util.so:x11/xcb-util-renderutil \
 			libxcb-icccm.so:x11/xcb-util-wm
 X11_BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
-			xwayland-devel>0:x11-servers/xwayland-devel
-X11_RUN_DEPENDS=	xwayland-devel>0:x11-servers/xwayland-devel
+			Xwayland:x11-servers/xwayland
+X11_RUN_DEPENDS=	Xwayland:x11-servers/xwayland
 X11_USE=		XORG=xcb
 X11_MESON_ENABLED=	xwayland
 X11_VARS=		BACKENDS+=x11

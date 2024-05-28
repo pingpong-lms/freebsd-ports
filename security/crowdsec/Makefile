@@ -1,6 +1,6 @@
 PORTNAME=	crowdsec
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.6.0
+DISTVERSION=	1.6.1
 PORTREVISION=	2
 CATEGORIES=	security
 
@@ -15,7 +15,7 @@ LIB_DEPENDS=	libabsl_base.so:devel/abseil \
 		libre2.so:devel/re2
 
 USES=		go:1.21,modules pkgconfig
-_COMMIT=	4b8e6cd7
+_COMMIT=	0746e0c0
 _BUILD_DATE=	$$(date -u "+%F_%T")
 USE_RC_SUBR=	crowdsec
 
