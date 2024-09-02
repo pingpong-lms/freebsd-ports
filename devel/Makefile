@@ -107,6 +107,7 @@
     SUBDIR += R-cran-praise
     SUBDIR += R-cran-prettycode
     SUBDIR += R-cran-prettyunits
+    SUBDIR += R-cran-profvis
     SUBDIR += R-cran-progress
     SUBDIR += R-cran-progressr
     SUBDIR += R-cran-promises
@@ -143,6 +144,7 @@
     SUBDIR += R-cran-timechange
     SUBDIR += R-cran-tinytest
     SUBDIR += R-cran-tzdb
+    SUBDIR += R-cran-urlchecker
     SUBDIR += R-cran-usethis
     SUBDIR += R-cran-uuid
     SUBDIR += R-cran-vcd
@@ -628,7 +630,6 @@
     SUBDIR += egypt
     SUBDIR += eiffelstudio
     SUBDIR += electron27
-    SUBDIR += electron28
     SUBDIR += electron29
     SUBDIR += electron30
     SUBDIR += electron31
@@ -1084,6 +1085,7 @@
     SUBDIR += kdev-python
     SUBDIR += kdevelop
     SUBDIR += kdevelop-pg-qt
+    SUBDIR += kdsingleapplication
     SUBDIR += kerl
     SUBDIR += kf5-extra-cmake-modules
     SUBDIR += kf5-kapidox
@@ -1371,7 +1373,6 @@
     SUBDIR += libolecf
     SUBDIR += libopenbsd
     SUBDIR += libopencm3
-    SUBDIR += libopentracing
     SUBDIR += liborcus
     SUBDIR += libosinfo
     SUBDIR += libowfat
@@ -1398,6 +1399,7 @@
     SUBDIR += libqt6xdg
     SUBDIR += libqtxdg
     SUBDIR += libr3
+    SUBDIR += librashader
     SUBDIR += librcc
     SUBDIR += librcd
     SUBDIR += libreadline-java
@@ -1530,6 +1532,7 @@
     SUBDIR += linux-rl9-elfutils-libelf
     SUBDIR += linux-rl9-elfutils-libs
     SUBDIR += linux-rl9-icu
+    SUBDIR += linux-rl9-libatomic
     SUBDIR += linux-rl9-libevent
     SUBDIR += linux-rl9-libgfortran
     SUBDIR += linux-rl9-libpciaccess
@@ -1788,6 +1791,7 @@
     SUBDIR += ode
     SUBDIR += ois
     SUBDIR += okteta
+    SUBDIR += ollama-hpp
     SUBDIR += omake
     SUBDIR += omniORB
     SUBDIR += omnilinter
@@ -3741,7 +3745,6 @@
     SUBDIR += p5-Test2-Plugin-MemUsage
     SUBDIR += p5-Test2-Plugin-NoWarnings
     SUBDIR += p5-Test2-Plugin-UUID
-    SUBDIR += p5-Test2-Suite
     SUBDIR += p5-Test2-Tools-Explain
     SUBDIR += p5-Test2-Tools-FFI
     SUBDIR += p5-Test2-Tools-LoadModule
@@ -4238,6 +4241,7 @@
     SUBDIR += picprog
     SUBDIR += pijul
     SUBDIR += pika
+    SUBDIR += pipelight
     SUBDIR += pipestatus
     SUBDIR += pire
     SUBDIR += pit
@@ -4352,6 +4356,7 @@
     SUBDIR += py-argcomplete
     SUBDIR += py-argh
     SUBDIR += py-argparse
+    SUBDIR += py-argparse_addons
     SUBDIR += py-args
     SUBDIR += py-ariadne
     SUBDIR += py-arpeggio
@@ -4581,6 +4586,8 @@
     SUBDIR += py-cli-helpers
     SUBDIR += py-cliapp
     SUBDIR += py-click
+    SUBDIR += py-click-aliases
+    SUBDIR += py-click-command-tree
     SUBDIR += py-click-completion
     SUBDIR += py-click-creds
     SUBDIR += py-click-default-group
@@ -4616,6 +4623,7 @@
     SUBDIR += py-columnize
     SUBDIR += py-comm
     SUBDIR += py-commandlines
+    SUBDIR += py-commentjson
     SUBDIR += py-conditional
     SUBDIR += py-confection
     SUBDIR += py-configargparse
@@ -4994,7 +5002,6 @@
     SUBDIR += py-jaraco.packaging
     SUBDIR += py-jaraco.stream
     SUBDIR += py-jaraco.text
-    SUBDIR += py-jaraco.timing
     SUBDIR += py-jaraco.util
     SUBDIR += py-javaproperties
     SUBDIR += py-jdcal
@@ -5016,6 +5023,7 @@
     SUBDIR += py-jsmin
     SUBDIR += py-json5
     SUBDIR += py-json_tricks
+    SUBDIR += py-jsonargparse
     SUBDIR += py-jsondiff
     SUBDIR += py-jsonform
     SUBDIR += py-jsonlines
@@ -5034,6 +5042,7 @@
     SUBDIR += py-jsonschema3
     SUBDIR += py-jsonsir
     SUBDIR += py-junitparser
+    SUBDIR += py-jupyter
     SUBDIR += py-jupyter-client
     SUBDIR += py-jupyter-collaboration
     SUBDIR += py-jupyter-core
@@ -5079,6 +5088,7 @@
     SUBDIR += py-libplist
     SUBDIR += py-libtaxii
     SUBDIR += py-libtmux
+    SUBDIR += py-libusb-package
     SUBDIR += py-libusb1
     SUBDIR += py-libversion
     SUBDIR += py-libvirt
@@ -5493,6 +5503,7 @@
     SUBDIR += py-pyopencl
     SUBDIR += py-pyparsing
     SUBDIR += py-pyparsing2
+    SUBDIR += py-pypemicro
     SUBDIR += py-pyperclip
     SUBDIR += py-pyperf
     SUBDIR += py-pyperscan
@@ -5539,6 +5550,7 @@
     SUBDIR += py-pytest-cov
     SUBDIR += py-pytest-cpp
     SUBDIR += py-pytest-datadir
+    SUBDIR += py-pytest-dependency
     SUBDIR += py-pytest-django
     SUBDIR += py-pytest-doctestplus
     SUBDIR += py-pytest-drop-dup-tests
@@ -6093,6 +6105,8 @@
     SUBDIR += py3c
     SUBDIR += pybind11
     SUBDIR += pybind11-json
+    SUBDIR += pybind11_abseil
+    SUBDIR += pybind11_protobuf
     SUBDIR += pybugz
     SUBDIR += pycanberra
     SUBDIR += pycdc
@@ -7307,6 +7321,7 @@
     SUBDIR += rubygem-locale
     SUBDIR += rubygem-lockfile
     SUBDIR += rubygem-logger
+    SUBDIR += rubygem-logger15
     SUBDIR += rubygem-logging
     SUBDIR += rubygem-logster
     SUBDIR += rubygem-loquacious
@@ -8083,6 +8098,7 @@
     SUBDIR += tomlplusplus
     SUBDIR += tortoisehg
     SUBDIR += tpasm
+    SUBDIR += tracy
     SUBDIR += tradcpp
     SUBDIR += transient
     SUBDIR += transient-devel

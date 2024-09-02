@@ -286,7 +286,7 @@ openfire:*:342:
 gunicorn:*:343:
 snmpd:*:344:
 _metronome:*:345:
-# free: 346
+ngircd:*:346:
 eturnal:*:347:
 # free: 348
 # free: 349
@@ -481,7 +481,7 @@ valkey:*:537:
 # free: 538
 # free: 539
 # free: 540
-# free: 541
+ipfixcol2:*:541:
 _flowd:*:542:
 ejabberd:*:543:
 # free: 544

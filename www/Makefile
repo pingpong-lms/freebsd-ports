@@ -9,7 +9,10 @@
     SUBDIR += R-cran-htmlwidgets
     SUBDIR += R-cran-httpuv
     SUBDIR += R-cran-httr
+    SUBDIR += R-cran-httr2
     SUBDIR += R-cran-jquerylib
+    SUBDIR += R-cran-miniUI
+    SUBDIR += R-cran-pkgdown
     SUBDIR += R-cran-rvest
     SUBDIR += R-cran-scrapeR
     SUBDIR += R-cran-selectr
@@ -128,6 +131,7 @@
     SUBDIR += ddgr
     SUBDIR += deforaos-surfer
     SUBDIR += deno
+    SUBDIR += deno-dom
     SUBDIR += devd
     SUBDIR += dezoomify-rs
     SUBDIR += dillo2
@@ -139,6 +143,7 @@
     SUBDIR += dolibarr17
     SUBDIR += dolibarr18
     SUBDIR += domoticz
+    SUBDIR += domoticz-devel
     SUBDIR += dooble
     SUBDIR += dot-http
     SUBDIR += dpp
@@ -315,7 +320,9 @@
     SUBDIR += links1
     SUBDIR += linux-c7-qtwebkit
     SUBDIR += linux-chrome
+    SUBDIR += linux-freetube
     SUBDIR += linux-rl9-libnghttp2
+    SUBDIR += linux-vieb
     SUBDIR += linux-widevine-cdm
     SUBDIR += litmus
     SUBDIR += ljdeps
@@ -1721,7 +1728,6 @@
     SUBDIR += py-httpretty
     SUBDIR += py-httptools
     SUBDIR += py-httpx
-    SUBDIR += py-httpx-cache
     SUBDIR += py-httpx-gssapi
     SUBDIR += py-httpx-oauth
     SUBDIR += py-httpx-socks
@@ -1810,6 +1816,7 @@
     SUBDIR += py-scrapy
     SUBDIR += py-seafdav
     SUBDIR += py-seafobj
+    SUBDIR += py-searxng-devel
     SUBDIR += py-secure-cookie
     SUBDIR += py-selector
     SUBDIR += py-selenium
