@@ -178,6 +178,7 @@
     SUBDIR += py-python-xlib
     SUBDIR += py-qt5-chart
     SUBDIR += py-qt6-chart
+    SUBDIR += py-qt5-datavis3d
     SUBDIR += py-qt6-datavis3d
     SUBDIR += py-superqt
     SUBDIR += py-tkinter
@@ -242,6 +243,7 @@
     SUBDIR += tk-wrapper
     SUBDIR += tk86
     SUBDIR += tk87
+    SUBDIR += tk90
     SUBDIR += tkdnd
     SUBDIR += tkshape
     SUBDIR += tktable
@@ -253,7 +255,6 @@
     SUBDIR += vte3
     SUBDIR += wlroots
     SUBDIR += wlroots015
-    SUBDIR += wlroots016
     SUBDIR += wlroots017
     SUBDIR += wmapp
     SUBDIR += wxgtk30
