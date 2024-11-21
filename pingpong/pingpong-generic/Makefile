@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-generic
-PORTVERSION=	1.3
+PORTVERSION=	1.4
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
 DISTFILES=	#
@@ -27,6 +27,7 @@ RUN_DEPENDS= \
 	${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss \
 	zsh:shells/zsh \
 	vim:editors/vim \
+	bat:textproc/bat \
 	tree:sysutils/tree \
 	curl:ftp/curl \
 	mosh:net/mosh \
