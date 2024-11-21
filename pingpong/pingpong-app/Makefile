@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-app
-PORTVERSION=	1.8
+PORTVERSION=	1.9
 CATEGORIES=	pingpong
 MASTER_SITES=	#
 DISTFILES=	#
@@ -42,6 +42,7 @@ RUN_DEPENDS= \
 	wkhtmltopdf:converters/wkhtmltopdf \
 	certbot:security/py-certbot \
 	flask:www/py-flask \
+	filebeat:sysutils/beats8 \
 	${PYTHON_PKGNAMEPREFIX}python-dateutil>0:devel/py-python-dateutil@${PY_FLAVOR} \
 	${PYTHON_PKGNAMEPREFIX}requests>=2.20.0:www/py-requests@${PY_FLAVOR} \
 	automake:devel/automake \
