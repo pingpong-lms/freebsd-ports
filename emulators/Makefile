@@ -33,8 +33,10 @@
     SUBDIR += emu64
     SUBDIR += emulationstation
     SUBDIR += es-de
+    SUBDIR += fbneo
     SUBDIR += fceux
     SUBDIR += flexemu
+    SUBDIR += flycast
     SUBDIR += fmsx
     SUBDIR += frodo
     SUBDIR += fs-uae
@@ -78,7 +80,6 @@
     SUBDIR += mednafen
     SUBDIR += mesen
     SUBDIR += mgba
-    SUBDIR += mtools
     SUBDIR += mupen64plus
     SUBDIR += mupen64plus-audio-sdl
     SUBDIR += mupen64plus-core
