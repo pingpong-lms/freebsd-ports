@@ -829,8 +829,8 @@
     SUBDIR += git-extras
     SUBDIR += git-filter-repo
     SUBDIR += git-filter-repo-devel
-    SUBDIR += git-gui
     SUBDIR += git-graph
+    SUBDIR += git-gui
     SUBDIR += git-lab
     SUBDIR += git-lfs
     SUBDIR += git-merge-changelog
@@ -8198,6 +8198,7 @@
     SUBDIR += termbox
     SUBDIR += termcolor
     SUBDIR += terminality
+    SUBDIR += terraform-ls
     SUBDIR += test-drive
     SUBDIR += tevent
     SUBDIR += tex-kpathsea
