@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-app
-PORTVERSION=	1.9
+PORTVERSION=	1.10
 CATEGORIES=	pingpong
 MASTER_SITES=	#
 DISTFILES=	#
@@ -11,13 +11,12 @@ MAINTAINER=	girgen@pingpong.net
 COMMENT=	The meta-port for PING PONG application packages
 
 NO_BUILD=	yes
-USE_JAVA=	yes
 JAVA_VERSION=	17
 
 PLIST_FILES=	sbin/ppctl \
 		share/ffmpeg/libx264-slow.ffpreset
 
-USES=		perl5 python:3.7+ ruby:run magick:7,nox11,run apache:2.4,run
+USES=		perl5 python:3.7+ ruby:run magick:7,nox11,run apache:2.4,run java
 
 RUN_DEPENDS= \
 	${LOCALBASE}/openjdk8/bin/java:java/openjdk8 \
