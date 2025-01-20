@@ -148,6 +148,7 @@
     SUBDIR += bsdhwmon
     SUBDIR += bsdinfo
     SUBDIR += bsdisks
+    SUBDIR += bsdsensors
     SUBDIR += bsdstats
     SUBDIR += bstack
     SUBDIR += btop
@@ -190,10 +191,12 @@
     SUBDIR += cfengine-masterfiles322
     SUBDIR += cfengine-masterfiles323
     SUBDIR += cfengine-masterfiles324
+    SUBDIR += cfengine-masterfiles325
     SUBDIR += cfengine321
     SUBDIR += cfengine322
     SUBDIR += cfengine323
     SUBDIR += cfengine324
+    SUBDIR += cfengine325
     SUBDIR += chaoskube
     SUBDIR += checkrestart
     SUBDIR += chezmoi
@@ -1091,7 +1094,6 @@
     SUBDIR += py-upt-pypi
     SUBDIR += py-upt-rubygems
     SUBDIR += py-uptime
-    SUBDIR += py-zdaemon
     SUBDIR += qchroot
     SUBDIR += qdirstat
     SUBDIR += qflipper
