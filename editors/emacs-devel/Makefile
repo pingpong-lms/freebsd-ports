@@ -1,5 +1,5 @@
 PORTNAME=	emacs
-DISTVERSION=	31.0.50.20250115
+DISTVERSION=	31.0.50.20250201
 PORTEPOCH=	3
 CATEGORIES=	editors
 PKGNAMESUFFIX=	-devel
@@ -24,7 +24,7 @@ USES=		autoreconf:build cpe gmake localbase:ldflags makeinfo ncurses \
 CPE_VENDOR=	gnu
 USE_GITHUB=	yes
 GH_ACCOUNT=	emacs-mirror
-GH_TAGNAME=	16c89c5ae5e
+GH_TAGNAME=	a001202b993
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--disable-build-details \
@@ -220,7 +220,7 @@ XPM_USE=			XORG=xpm
 XPM_CONFIGURE_WITH=		xpm
 XWIDGETS_IMPLIES=		GTK3
 XWIDGETS_LIB_DEPENDS=		libsoup-2.4.so:devel/libsoup \
-				libwebkit2gtk-4.0.so:www/webkit2-gtk3
+				libwebkit2gtk-4.0.so:www/webkit2-gtk@40
 XWIDGETS_USE=			XORG=xcomposite
 XWIDGETS_CONFIGURE_WITH=	xwidgets
 

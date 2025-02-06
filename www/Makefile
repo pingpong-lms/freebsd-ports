@@ -10,6 +10,7 @@
     SUBDIR += R-cran-httpuv
     SUBDIR += R-cran-httr
     SUBDIR += R-cran-httr2
+    SUBDIR += R-cran-jose
     SUBDIR += R-cran-jquerylib
     SUBDIR += R-cran-miniUI
     SUBDIR += R-cran-pkgdown
@@ -71,8 +72,6 @@
     SUBDIR += badwolf
     SUBDIR += baikal
     SUBDIR += bareos-webui
-    SUBDIR += bareos20-webui
-    SUBDIR += bareos21-webui
     SUBDIR += bareos22-webui
     SUBDIR += bareos23-webui
     SUBDIR += beehive
@@ -295,6 +294,7 @@
     SUBDIR += katana
     SUBDIR += kcgi
     SUBDIR += kdsoap
+    SUBDIR += kdsoap-ws-discovery-client
     SUBDIR += kf5-khtml
     SUBDIR += kf5-kjs
     SUBDIR += kf5-kjsembed
@@ -355,6 +355,7 @@
     SUBDIR += lzr
     SUBDIR += man2web
     SUBDIR += manpageblog
+    SUBDIR += marmite
     SUBDIR += mathjax
     SUBDIR += mathjax3
     SUBDIR += mathopd
@@ -362,7 +363,6 @@
     SUBDIR += mattermost-server
     SUBDIR += mattermost-webapp
     SUBDIR += mediawiki139
-    SUBDIR += mediawiki141
     SUBDIR += mediawiki142
     SUBDIR += mediawiki143
     SUBDIR += mergelog
@@ -430,6 +430,7 @@
     SUBDIR += mod_scgi
     SUBDIR += mod_security
     SUBDIR += mod_setenvifplus
+    SUBDIR += mod_tls
     SUBDIR += mod_umask
     SUBDIR += mod_webauth
     SUBDIR += mod_webkit
@@ -494,6 +495,7 @@
     SUBDIR += npm-node20
     SUBDIR += npm-node22
     SUBDIR += npm-node23
+    SUBDIR += nyxt
     SUBDIR += oauth2-proxy
     SUBDIR += obhttpd
     SUBDIR += offpunk
@@ -580,7 +582,6 @@
     SUBDIR += p5-CGI-Application-Plugin-Forward
     SUBDIR += p5-CGI-Application-Plugin-HTDot
     SUBDIR += p5-CGI-Application-Plugin-HTMLPrototype
-    SUBDIR += p5-CGI-Application-Plugin-HtmlTidy
     SUBDIR += p5-CGI-Application-Plugin-JSON
     SUBDIR += p5-CGI-Application-Plugin-LinkIntegrity
     SUBDIR += p5-CGI-Application-Plugin-LogDispatch
@@ -1437,7 +1438,6 @@
     SUBDIR += phpvirtualbox
     SUBDIR += phpvirtualbox-legacy
     SUBDIR += piwigo
-    SUBDIR += plasma5-plasma-browser-integration
     SUBDIR += plasma6-plasma-browser-integration
     SUBDIR += pmwiki
     SUBDIR += pnews
@@ -1777,6 +1777,7 @@
     SUBDIR += py-jsonfield
     SUBDIR += py-kiss-headers
     SUBDIR += py-laces
+    SUBDIR += py-legacy-cgi
     SUBDIR += py-lektor
     SUBDIR += py-lesscpy
     SUBDIR += py-libsass
@@ -1950,6 +1951,7 @@
     SUBDIR += reddsaver
     SUBDIR += redmine50
     SUBDIR += redmine51
+    SUBDIR += redmine60
     SUBDIR += rejik
     SUBDIR += remark42
     SUBDIR += reportmagic
@@ -2093,7 +2095,6 @@
     SUBDIR += rubygem-goldfinger
     SUBDIR += rubygem-gollum
     SUBDIR += rubygem-gollum-grit_adapter
-    SUBDIR += rubygem-gollum-grit_adapter10
     SUBDIR += rubygem-gollum-lib
     SUBDIR += rubygem-gollum-rugged_adapter
     SUBDIR += rubygem-gon-rails5
@@ -2397,7 +2398,6 @@
     SUBDIR += scloader
     SUBDIR += script4rss
     SUBDIR += seahub
-    SUBDIR += searx
     SUBDIR += selenium
     SUBDIR += serendipity
     SUBDIR += serf
@@ -2569,8 +2569,7 @@
     SUBDIR += webgrind
     SUBDIR += webhook
     SUBDIR += webinject
-    SUBDIR += webkit2-gtk3
-    SUBDIR += webkit2-gtk4
+    SUBDIR += webkit2-gtk
     SUBDIR += weblint++
     SUBDIR += webpy
     SUBDIR += webresolve
