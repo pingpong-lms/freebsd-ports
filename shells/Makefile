@@ -55,6 +55,7 @@
     SUBDIR += rubygem-shellwords
     SUBDIR += rush
     SUBDIR += sash
+    SUBDIR += schemesh
     SUBDIR += scponly
     SUBDIR += sheldon
     SUBDIR += shell-hist
@@ -75,5 +76,6 @@
     SUBDIR += zsh-fast-syntax-highlighting
     SUBDIR += zsh-navigation-tools
     SUBDIR += zsh-syntax-highlighting
+    SUBDIR += zsh-you-should-use
 
 .include <bsd.port.subdir.mk>

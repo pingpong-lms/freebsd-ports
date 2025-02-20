@@ -319,6 +319,7 @@
     SUBDIR += kdenetwork
     SUBDIR += kdenetwork-filesharing
     SUBDIR += kea
+    SUBDIR += kea-devel
     SUBDIR += keama
     SUBDIR += keycloak
     SUBDIR += kf5-kcalendarcore
@@ -449,6 +450,8 @@
     SUBDIR += linux-rl9-avahi-libs
     SUBDIR += linux-rl9-libproxy
     SUBDIR += linux-rl9-openldap
+    SUBDIR += linux-rl9-sdl2_net
+    SUBDIR += linux-rl9-sdl_net
     SUBDIR += linux-rl9-tcp_wrappers-libs
     SUBDIR += liveMedia
     SUBDIR += lla
@@ -1367,6 +1370,7 @@
     SUBDIR += rubygem-google-cloud-trace-v2
     SUBDIR += rubygem-grpc
     SUBDIR += rubygem-grpc-tools
+    SUBDIR += rubygem-grpc_reflection
     SUBDIR += rubygem-hangouts-chat
     SUBDIR += rubygem-http-parser
     SUBDIR += rubygem-http_parser.rb

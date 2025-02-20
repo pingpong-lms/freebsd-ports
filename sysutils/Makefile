@@ -586,6 +586,8 @@
     SUBDIR += kiconvtool
     SUBDIR += kldfind
     SUBDIR += kldpatch
+    SUBDIR += kleene-cli
+    SUBDIR += kleene-daemon
     SUBDIR += kopia
     SUBDIR += kops
     SUBDIR += kpmcore
@@ -1282,6 +1284,7 @@
     SUBDIR += signon-plugin-oauth2
     SUBDIR += signon-ui
     SUBDIR += signond
+    SUBDIR += simplesnap
     SUBDIR += sispmctl
     SUBDIR += skopeo
     SUBDIR += slack

@@ -419,6 +419,8 @@
     SUBDIR += linux-rl9-opus
     SUBDIR += linux-rl9-pulseaudio-libs
     SUBDIR += linux-rl9-pulseaudio-utils
+    SUBDIR += linux-rl9-sdl2_mixer
+    SUBDIR += linux-rl9-sdl_sound
     SUBDIR += linuxsampler
     SUBDIR += linuxwave
     SUBDIR += liquidsfz
@@ -738,6 +740,7 @@
     SUBDIR += sonata
     SUBDIR += songrec
     SUBDIR += sonic-visualiser
+    SUBDIR += sonicradio
     SUBDIR += sonivox
     SUBDIR += sonivox-eas
     SUBDIR += sorcer-lv2
