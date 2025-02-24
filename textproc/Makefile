@@ -1591,6 +1591,7 @@
     SUBDIR += py-rich-cli
     SUBDIR += py-rich-rst
     SUBDIR += py-rnc2rng
+    SUBDIR += py-roman-numerals-py
     SUBDIR += py-rst2ansi
     SUBDIR += py-rst2html5
     SUBDIR += py-scour
@@ -2131,10 +2132,11 @@
     SUBDIR += ugrep
     SUBDIR += uim
     SUBDIR += uim-el
-    SUBDIR += uim-gtk
+    SUBDIR += uim-gtk2
     SUBDIR += uim-gtk3
     SUBDIR += uim-m17nlib
     SUBDIR += uim-qt5
+    SUBDIR += uim-qt6
     SUBDIR += uml2svg
     SUBDIR += uncle
     SUBDIR += uncrustify
