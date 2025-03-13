@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-generic
-PORTVERSION=	1.5
+PORTVERSION=	1.6
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
 DISTFILES=	#
@@ -36,7 +36,6 @@ RUN_DEPENDS= \
 	unzip:archivers/unzip \
 	svn:devel/subversion \
 	python:lang/python \
-	python2.7:lang/python27 \
 	git:devel/git \
 	p5-DBD-Pg>0:databases/p5-DBD-Pg \
 	p5-Switch>0:lang/p5-Switch \
