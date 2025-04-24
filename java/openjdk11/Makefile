@@ -29,6 +29,7 @@ RUN_DEPENDS=	javavm:java/javavmwrapper \
 
 USES=		compiler:features cpe gmake iconv jpeg pkgconfig xorg
 USE_XORG=	x11 xext xi xrandr xrender xt xtst
+USE_LDCONFIG=	${INSTALLDIR}/lib/server
 
 CPE_VENDOR=	oracle
 
@@ -62,8 +63,8 @@ NOPRECIOUSMAKEVARS=	yes
 
 JDK_MAJOR_VERSION=	11
 JDK_MINOR_VERSION=	0
-JDK_PATCH_VERSION=	26
-JDK_BUILD_NUMBER=	4
+JDK_PATCH_VERSION=	27
+JDK_BUILD_NUMBER=	6
 BSD_JDK_VERSION=	1
 
 JDK_BUG_URL=	https://bugs.freebsd.org/bugzilla/enter_bug.cgi?product=Ports%20%26%20Packages&component=Individual%20Port(s)&short_desc=java/${PORTNAME}${JDK_MAJOR_VERSION}%3A%20

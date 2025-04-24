@@ -1,18 +1,17 @@
 PORTNAME=	curl
-DISTVERSION=	6.2.1
+DISTVERSION=	6.2.2
 CATEGORIES=	ftp
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	uzsolt@FreeBSD.org
 COMMENT=	Modern and Flexible Web Client for R
-WWW=		https://cran.r-project.org/web/packages/curl/
+WWW=		https://cran.r-project.org/package=curl
 
 LICENSE=	MIT
 
 BUILD_DEPENDS=	${LOCALBASE}/include/curl/curl.h:ftp/curl
 LIB_DEPENDS=	libcurl.so:ftp/curl
-TEST_DEPENDS=	pdflatex:print/tex-formats \
-		R-cran-httpuv>=1.4.4:www/R-cran-httpuv \
+TEST_DEPENDS=	R-cran-httpuv>=1.4.4:www/R-cran-httpuv \
 		R-cran-jsonlite>0:converters/R-cran-jsonlite \
 		R-cran-knitr>0:print/R-cran-knitr \
 		R-cran-later>0:devel/R-cran-later \
@@ -23,6 +22,9 @@ TEST_DEPENDS=	pdflatex:print/tex-formats \
 
 USES=		cran:auto-plist,compiles
 
-R_POSTCMD_CHECK_OPTIONS=	--no-timings --no-manual
+do-test:
+	@${FIND} ${WRKSRC} \( -name '*.o' -o -name '*.so' \) -delete
+	@cd ${WRKDIR} ; ${SETENV} ${MAKE_ENV} _R_CHECK_FORCE_SUGGESTS_=FALSE \
+	${LOCALBASE}/bin/R CMD check --no-manual ${PORTNAME}
 
 .include <bsd.port.mk>

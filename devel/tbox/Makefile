@@ -1,6 +1,6 @@
 PORTNAME=	tbox
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.7.6
+DISTVERSION=	1.7.7
 CATEGORIES=	devel
 
 MAINTAINER=	fuz@FreeBSD.org
@@ -16,12 +16,19 @@ GH_ACCOUNT=	tboox
 USE_LDCONFIG=	yes
 
 HAS_CONFIGURE=	yes
-CONFIGURE_ARGS=	--demo=no \
+CONFIGURE_ARGS=	--charset=y \
+		--demo=no \
+		--float=y \
+		--force_utf8=y \
 		--generator=gmake \
+		--hash=y \
 		--kind=shared \
 		--make=${MAKE_CMD} \
 		--small=no \
 		--toolchain=${CHOSEN_COMPILER_TYPE}
+
 MAKEFILE=	makefile
+
+PLIST_SUB=	DISTVERSION=${DISTVERSION}
 
 .include <bsd.port.mk>

@@ -1,6 +1,6 @@
 PORTNAME=	paraview
 DISTVERSION=	${PARAVIEW_VER}.1
-PORTREVISION=	18
+PORTREVISION=	20
 CATEGORIES=	science graphics
 MASTER_SITES=	http://www.paraview.org/files/v${PARAVIEW_VER}/
 DISTNAME=	ParaView-v${PORTVERSION}
@@ -12,7 +12,8 @@ WWW=		https://www.paraview.org/
 # See https://www.paraview.org/license/
 LICENSE=	BSD3CLAUSE
 
-BROKEN_i386=	no matching member function for call to 'getArrayType'
+BROKEN=		error: non-virtual member function marked 'override' hides virtual member function
+#BROKEN_i386=	no matching member function for call to 'getArrayType'
 
 BUILD_DEPENDS=	${PYNUMPY}	\
 		cli11>0:devel/cli11	\

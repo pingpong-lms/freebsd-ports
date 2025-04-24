@@ -279,6 +279,7 @@
     SUBDIR += debootstrap
     SUBDIR += deltarpm
     SUBDIR += deltup
+    SUBDIR += deskflow
     SUBDIR += desktop-installer
     SUBDIR += detox
     SUBDIR += devctl-jail-kmod
@@ -692,7 +693,6 @@
     SUBDIR += mcelog
     SUBDIR += mcfly
     SUBDIR += mcron
-    SUBDIR += mcweject
     SUBDIR += mdcat
     SUBDIR += mdf2iso
     SUBDIR += megacli
@@ -964,6 +964,7 @@
     SUBDIR += polkit
     SUBDIR += polkit-gnome
     SUBDIR += polkit-qt-1
+    SUBDIR += pollinfo
     SUBDIR += popeye
     SUBDIR += porch
     SUBDIR += pot
@@ -973,7 +974,6 @@
     SUBDIR += powerman
     SUBDIR += powermon
     SUBDIR += pp
-    SUBDIR += pprotectd
     SUBDIR += prips
     SUBDIR += procenv
     SUBDIR += process-viewer
@@ -1028,7 +1028,6 @@
     SUBDIR += py-filelock
     SUBDIR += py-focker
     SUBDIR += py-glances
-    SUBDIR += py-google-compute-engine
     SUBDIR += py-hared
     SUBDIR += py-hcloud
     SUBDIR += py-honcho
@@ -1301,6 +1300,7 @@
     SUBDIR += snapraid
     SUBDIR += sndy
     SUBDIR += snmp_exporter
+    SUBDIR += snmp_exporter20
     SUBDIR += snooze
     SUBDIR += sockaddr
     SUBDIR += socklog
@@ -1386,6 +1386,7 @@
     SUBDIR += touchegg
     SUBDIR += toybox
     SUBDIR += tree
+    SUBDIR += treetop
     SUBDIR += triton
     SUBDIR += trueos-libqt5
     SUBDIR += ts
@@ -1395,6 +1396,7 @@
     SUBDIR += tuckr
     SUBDIR += tuptime
     SUBDIR += turbostat
+    SUBDIR += tvterm
     SUBDIR += tw_cli
     SUBDIR += twa-kmod
     SUBDIR += twmn
@@ -1422,6 +1424,7 @@
     SUBDIR += u-boot-nanopi-r2s
     SUBDIR += u-boot-nanopi-r4s
     SUBDIR += u-boot-nanopi-r5s
+    SUBDIR += u-boot-nanopi-r6s
     SUBDIR += u-boot-olimex-a20-som-evb
     SUBDIR += u-boot-olinuxino-lime
     SUBDIR += u-boot-olinuxino-lime2
@@ -1434,7 +1437,6 @@
     SUBDIR += u-boot-orangepi-r1
     SUBDIR += u-boot-orangepi-zero
     SUBDIR += u-boot-orangepi-zero-plus
-    SUBDIR += u-boot-pandaboard
     SUBDIR += u-boot-pcduino3
     SUBDIR += u-boot-pine-h64
     SUBDIR += u-boot-pine64
@@ -1447,6 +1449,7 @@
     SUBDIR += u-boot-quartz64-a
     SUBDIR += u-boot-quartz64-b
     SUBDIR += u-boot-riotboard
+    SUBDIR += u-boot-radxa-zero3
     SUBDIR += u-boot-rock-pi-4
     SUBDIR += u-boot-rock64
     SUBDIR += u-boot-rockpro64
@@ -1518,6 +1521,7 @@
     SUBDIR += vobcopy
     SUBDIR += volman
     SUBDIR += vpnc-scripts
+    SUBDIR += vtm
     SUBDIR += vttest
     SUBDIR += wait_on
     SUBDIR += walk

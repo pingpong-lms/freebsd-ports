@@ -50717,6 +50717,7 @@ share/Geant4/examples/extended/biasing/GB01/src/GB01BOptrChangeCrossSection.cc
 share/Geant4/examples/extended/biasing/GB01/src/GB01BOptrMultiParticleChangeCrossSection.cc
 share/Geant4/examples/extended/biasing/GB01/src/GB01DetectorConstruction.cc
 share/Geant4/examples/extended/biasing/GB01/src/GB01PrimaryGeneratorAction.cc
+share/Geant4/examples/extended/biasing/GB01/vis.mac
 share/Geant4/examples/extended/biasing/GB02/.README.txt
 share/Geant4/examples/extended/biasing/GB02/CMakeLists.txt
 share/Geant4/examples/extended/biasing/GB02/exampleGB02.cc
@@ -50733,6 +50734,7 @@ share/Geant4/examples/extended/biasing/GB02/src/GB02ActionInitialization.cc
 share/Geant4/examples/extended/biasing/GB02/src/GB02BOptrMultiParticleForceCollision.cc
 share/Geant4/examples/extended/biasing/GB02/src/GB02DetectorConstruction.cc
 share/Geant4/examples/extended/biasing/GB02/src/GB02PrimaryGeneratorAction.cc
+share/Geant4/examples/extended/biasing/GB02/vis.mac
 share/Geant4/examples/extended/biasing/GB03/.README.txt
 share/Geant4/examples/extended/biasing/GB03/CMakeLists.txt
 share/Geant4/examples/extended/biasing/GB03/exampleGB03.cc
@@ -50772,6 +50774,7 @@ share/Geant4/examples/extended/biasing/GB04/src/GB04BOptnBremSplitting.cc
 share/Geant4/examples/extended/biasing/GB04/src/GB04BOptrBremSplitting.cc
 share/Geant4/examples/extended/biasing/GB04/src/GB04DetectorConstruction.cc
 share/Geant4/examples/extended/biasing/GB04/src/GB04PrimaryGeneratorAction.cc
+share/Geant4/examples/extended/biasing/GB04/vis.mac
 share/Geant4/examples/extended/biasing/GB05/.README.txt
 share/Geant4/examples/extended/biasing/GB05/CMakeLists.txt
 share/Geant4/examples/extended/biasing/GB05/exampleGB05.cc
