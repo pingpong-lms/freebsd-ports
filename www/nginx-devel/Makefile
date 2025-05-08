@@ -1,5 +1,6 @@
 PORTNAME?=	nginx
 PORTVERSION=	1.28.0
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/ \
 		LOCAL/osa
@@ -15,7 +16,7 @@ LICENSE_FILE?=	${WRKSRC}/LICENSE
 
 CONFLICTS_INSTALL=	nginx
 
-PORTSCOUT=	limit:^1\.2[7-8]\.[0-9]*
+PORTSCOUT=	limit:^1\.2[8-9]\.[0-9]*
 
 USES=		cpe
 
@@ -235,6 +236,10 @@ IGNORE=		required at least GSSAPI_HEIMDAL or \
 		'make config' again
 .endif
 
+.if ${OPSYS} == FreeBSD && (${OSVERSION} >= 1305000 && ${OSVERSION} < 1400000)
+CFLAGS+=	-Wno-cast-function-type-mismatch
+.endif
+
 .if ${PORT_OPTIONS:MPASSENGER} && empty(PORT_OPTIONS:MDEBUG)
 CONFIGURE_ENV+=	OPTIMIZE="yes"
 CFLAGS+=	-DNDEBUG
@@ -250,7 +255,7 @@ LIB_DEPENDS+=		libpcre.so:devel/pcre
 .endif
 
 .if ${PORT_OPTIONS:MNJS}
-NJS_CONFIGURE_ARGS=	--cc-opt="-I${LOCALBASE}/include/quickjs" \
+NJS_CONFIGURE_ARGS=	--cc-opt="${CFLAGS} -I${LOCALBASE}/include/quickjs" \
 			--ld-opt="-L${LOCALBASE}/lib" \
 			--with-quickjs
 .endif

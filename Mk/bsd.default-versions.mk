@@ -56,7 +56,7 @@ FPC_DEFAULT?=		3.3.1
 .  else
 FPC_DEFAULT?=		3.2.3
 .  endif
-# Possible values: 11, 12, 13, 14, 15
+# Possible values: 11, 12, 13, 14, 15, 16
 # (Any other version is completely unsupported and not meant for general use.)
 GCC_DEFAULT?=		13
 # Possible values: 10
@@ -131,7 +131,7 @@ _EXPORTED_VARS+=	_PERL5_FROM_BIN
 PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 .  endif
 # Possible values: 13, 14, 15, 16, 17
-PGSQL_DEFAULT?=		16
+PGSQL_DEFAULT?=		17
 # Possible values: 8.1, 8.2, 8.3, 8.4
 PHP_DEFAULT?=		8.3
 # Possible values: rust, legacy
