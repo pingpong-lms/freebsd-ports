@@ -5,6 +5,39 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20250511:
+  AFFECTS: users of www/tt-rss
+  AUTHOR: dereks@lifeofadishwasher.com
+
+  tt-rss has dropped support for mysql/mariadb starting with commit
+  4cb8a84df46d46b.  The next update (mid-June) to www/tt-rss will include this
+  update.
+
+  https://community.tt-rss.org/t/support-for-mysql-is-no-more/6897
+
+  You should migrate your data to databases/postgresqlXY-server.
+
+20250510:
+  AFFECTS: users of net-p2p/bitcoin and/or net-p2p/bitcoin-daemon
+  AUTHOR: kbowling@FreeBSD.org
+
+  29.x is the last release series that will support the legacy BDB wallet
+  format.  We are already doing this awkwardly since the format is BDB 4.8
+  and we are building with BDB 5.  This will be removed in 30.0 later this
+  year.
+
+  You should upgrade your wallet now if you are still using a legacy wallet.
+
+  Instructions:
+  https://github.com/bitcoin/bitcoin/blob/29.x/doc/managing-wallets.md#migrating-legacy-wallets-to-descriptor-wallets
+
+  This release switches to CMake which results in a major refacoring of
+  the port and underlying build.  The result seems good, but please
+  provide feedback if there are any unexpected changes or problems.
+
+  This release dropped UPnP support due to security concerns.  NAT-PMP is
+  implemented as an alternative.
+
 20250506:
   AFFECTS: users of databases/postgresql* and other software using PostgreSQL to run
   AUTHOR: kbowling@FreeBSD.org

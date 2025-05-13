@@ -62660,6 +62660,7 @@ share/Geant4/examples/extended/hadronic/FlukaCern/FlukaInterface/source/fluka4_w
 share/Geant4/examples/extended/hadronic/FlukaCern/FlukaInterface/source/fluka4_wrapper/cpp/procedures/flabrt.h
 share/Geant4/examples/extended/hadronic/FlukaCern/FlukaInterface/source/fluka4_wrapper/cpp/procedures/oauxf.cc
 share/Geant4/examples/extended/hadronic/FlukaCern/FlukaInterface/source/fluka4_wrapper/cpp/procedures/oauxf.h
+share/Geant4/examples/extended/hadronic/FlukaCern/FlukaInterface/source/fluka4_wrapper/fortran/procedures/declare_commons.f
 share/Geant4/examples/extended/hadronic/FlukaCern/FlukaInterface/source/fluka4_wrapper/fortran/procedures/flabrw.f
 share/Geant4/examples/extended/hadronic/FlukaCern/FlukaInterface/source/fluka4_wrapper/fortran/procedures/oauxfw.f
 share/Geant4/examples/extended/hadronic/FlukaCern/FlukaInterface/source/fluka5/hadronic_interactions/interface_to_G4/cmcyl.hh

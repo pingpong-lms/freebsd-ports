@@ -1,6 +1,5 @@
 PORTNAME=	saxon-he
-DISTVERSION=	12-5
-PORTREVISION=	1
+DISTVERSION=	12-6
 CATEGORIES=	textproc java
 MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/releases/download/SaxonHE${DISTVERSION}/
 DISTNAME=	SaxonHE${DISTVERSION}J
@@ -27,8 +26,8 @@ JARFILES1=	saxon-he-${PORTVERSION}.jar \
 		saxon-he-test-${PORTVERSION}.jar \
 		saxon-he-xqj-${PORTVERSION}.jar
 JARFILES2=	jline-2.14.6.jar \
-		xmlresolver-5.2.2.jar \
-		xmlresolver-5.2.2-data.jar
+		xmlresolver-5.3.1.jar \
+		xmlresolver-5.3.1-data.jar
 PLIST_FILES=	${JARFILES:S,^,%%JAVAJARDIR%%/,} ${SCRIPTFILES}
 
 SUB_FILES=	saxon.sh
