@@ -1,6 +1,6 @@
 PORTNAME=	screen
 PORTVERSION=	4.9.1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	sysutils
 MASTER_SITES=	GNU \
 		ftp://ftp.gnu.org/gnu/screen/ \
@@ -21,9 +21,8 @@ WWW=		https://www.gnu.org/software/screen/
 
 CONFLICTS+=	screen-devel*
 
-FORBIDDEN=	Contains multiple CVEs
-DEPRECATED=	Contains multiple CVEs, use screen50 instead
-EXPIRATION_DATE=2025-06-31
+DEPRECATED=	Multiple CVEs
+EXPIRATION_DATE=2025-05-31
 
 LICENSE=	GPLv3
 
