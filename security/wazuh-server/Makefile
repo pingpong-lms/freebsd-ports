@@ -38,7 +38,7 @@ FILEBEAT_DESC=		Install filebeat component
 LOGSTASH_DESC=		Install logstash component
 WAZUH-MANAGER_DESC=	Install wazuh manager component
 
-FILEBEAT_RUN_DEPENDS=		filebeat:sysutils/beats7
+FILEBEAT_RUN_DEPENDS=		filebeat:sysutils/beats8
 LOGSTASH_RUN_DEPENDS=		${LOCALBASE}/logstash/bin/logstash:sysutils/logstash8
 WAZUH-MANAGER_RUN_DEPENDS=	${WAZUH_LOCALBASE}/bin/wazuh-control:security/wazuh-manager
 
