@@ -185,6 +185,7 @@
     SUBDIR += unix2dos
     SUBDIR += uudeview
     SUBDIR += uulib
+    SUBDIR += wkhtmltopdf
     SUBDIR += xdeview
     SUBDIR += xml2c
     SUBDIR += yj
