@@ -13,13 +13,11 @@
     SUBDIR += ajaxzip2-data
     SUBDIR += alias-fonts
     SUBDIR += another-htmllint
-    SUBDIR += anthy
     SUBDIR += anthy-unicode
     SUBDIR += aobook
     SUBDIR += bible_names-fpw
     SUBDIR += boiled-mozc
     SUBDIR += bookview
-    SUBDIR += bugzilla44
     SUBDIR += bugzilla50
     SUBDIR += canna-lib
     SUBDIR += canna-server
@@ -143,7 +141,6 @@
     SUBDIR += jls
     SUBDIR += jvim3
     SUBDIR += kakasi
-    SUBDIR += kasumi
     SUBDIR += kasumi-unicode
     SUBDIR += kbanner
     SUBDIR += kcc
@@ -234,6 +231,7 @@
     SUBDIR += qkc
     SUBDIR += qolibri
     SUBDIR += quit
+    SUBDIR += radish-play
     SUBDIR += roget-fpw
     SUBDIR += rogue_s
     SUBDIR += ruby-romkan
@@ -280,7 +278,6 @@
     SUBDIR += timidity++-slang
     SUBDIR += today
     SUBDIR += tomoe
-    SUBDIR += uim-anthy
     SUBDIR += uim-anthy-unicode
     SUBDIR += uim-mozc
     SUBDIR += uim-tomoe-gtk

@@ -76,6 +76,7 @@
     SUBDIR += ccsrch
     SUBDIR += certificate_maker
     SUBDIR += certmgr
+    SUBDIR += certmonger
     SUBDIR += certspotter
     SUBDIR += cfssl
     SUBDIR += cfv
@@ -197,13 +198,13 @@
     SUBDIR += gosec
     SUBDIR += gost-engine
     SUBDIR += gostsum
+    SUBDIR += govulncheck
     SUBDIR += gpa
     SUBDIR += gpg-gui
     SUBDIR += gpg-tui
     SUBDIR += gpgdir
     SUBDIR += gpgme
-    SUBDIR += gpgme-cpp
-    SUBDIR += gpgme-qt
+    SUBDIR += gpgmepp
     SUBDIR += gsa
     SUBDIR += gsad
     SUBDIR += gsasl
@@ -247,12 +248,14 @@
     SUBDIR += ismtp
     SUBDIR += isnprober
     SUBDIR += john
+    SUBDIR += kanidm
     SUBDIR += kbfsd
     SUBDIR += kc
     SUBDIR += kdbxviewer
     SUBDIR += keepass
     SUBDIR += keepass-plugin-keepassrpc
     SUBDIR += keepassxc
+    SUBDIR += keepassxc276
     SUBDIR += keybase
     SUBDIR += keychain
     SUBDIR += keyprint
@@ -280,11 +283,11 @@
     SUBDIR += lasso
     SUBDIR += lastpass-cli
     SUBDIR += lego
+    SUBDIR += lfacme
     SUBDIR += libaegis
     SUBDIR += libargon2
     SUBDIR += libassuan
     SUBDIR += libcaes
-    SUBDIR += libcryptui
     SUBDIR += libdecaf
     SUBDIR += libecc
     SUBDIR += libfcrypto
@@ -321,7 +324,6 @@
     SUBDIR += libscep
     SUBDIR += libscrypt
     SUBDIR += libsecret
-    SUBDIR += libsectok
     SUBDIR += libsodium
     SUBDIR += libssh
     SUBDIR += libssh2
@@ -379,7 +381,6 @@
     SUBDIR += maltrail
     SUBDIR += masscan
     SUBDIR += mate-pam-helper
-    SUBDIR += mbedtls2
     SUBDIR += mbedtls3
     SUBDIR += mcrypt
     SUBDIR += md5deep
@@ -441,7 +442,6 @@
     SUBDIR += openfhe
     SUBDIR += openfortivpn
     SUBDIR += openiked
-    SUBDIR += openiked-portable
     SUBDIR += opensaml
     SUBDIR += opensc
     SUBDIR += openssh-askpass
@@ -452,10 +452,9 @@
     SUBDIR += openssl-quictls
     SUBDIR += openssl-unsafe
     SUBDIR += openssl111
-    SUBDIR += openssl31
-    SUBDIR += openssl31-quictls
     SUBDIR += openssl32
     SUBDIR += openssl33
+    SUBDIR += openssl33-quictls
     SUBDIR += openssl34
     SUBDIR += openssl35
     SUBDIR += openvas
@@ -784,6 +783,7 @@
     SUBDIR += passivedns
     SUBDIR += pcsc-tools
     SUBDIR += pdfcrack
+    SUBDIR += pdfrip
     SUBDIR += pear-Auth
     SUBDIR += pear-Auth_HTTP
     SUBDIR += pear-Auth_PrefManager
@@ -838,6 +838,8 @@
     SUBDIR += php83-sodium
     SUBDIR += php84-filter
     SUBDIR += php84-sodium
+    SUBDIR += php85-filter
+    SUBDIR += php85-sodium
     SUBDIR += picocrypt
     SUBDIR += picosha2
     SUBDIR += pidgin-encryption
@@ -874,6 +876,7 @@
     SUBDIR += putty-nogtk
     SUBDIR += pvk
     SUBDIR += pwauth
+    SUBDIR += pwdsafety
     SUBDIR += pwman
     SUBDIR += pwned-check
     SUBDIR += py-SecretStorage
@@ -934,6 +937,7 @@
     SUBDIR += py-dfdatetime
     SUBDIR += py-dfwinreg
     SUBDIR += py-dirhash
+    SUBDIR += py-distro2sbom
     SUBDIR += py-django-auth-kerberos
     SUBDIR += py-docker-pycreds
     SUBDIR += py-ecdsa
@@ -951,7 +955,7 @@
     SUBDIR += py-google-auth
     SUBDIR += py-google-auth-httplib2
     SUBDIR += py-google-auth-oauthlib
-    SUBDIR += py-gpgme
+    SUBDIR += py-gpg
     SUBDIR += py-gpsoauth
     SUBDIR += py-greenbone-feed-sync
     SUBDIR += py-gssapi
@@ -976,6 +980,7 @@
     SUBDIR += py-keyring
     SUBDIR += py-keyrings.alt
     SUBDIR += py-krb5
+    SUBDIR += py-lib4sbom
     SUBDIR += py-libnacl
     SUBDIR += py-liboqs-python
     SUBDIR += py-m2crypto
@@ -992,7 +997,7 @@
     SUBDIR += py-noiseprotocol
     SUBDIR += py-notus-scanner
     SUBDIR += py-ntlm-auth
-    SUBDIR += py-oauth2client
+    SUBDIR += py-nvdlib
     SUBDIR += py-oauthlib
     SUBDIR += py-omemo-dr
     SUBDIR += py-onlykey
@@ -1024,6 +1029,7 @@
     SUBDIR += py-pyelliptic
     SUBDIR += py-pyhanko
     SUBDIR += py-pyhanko-certvalidator
+    SUBDIR += py-pyhanko-cli
     SUBDIR += py-pykeepass
     SUBDIR += py-pykeepass-cache
     SUBDIR += py-pylibacl
@@ -1099,10 +1105,10 @@
     SUBDIR += py-zkg
     SUBDIR += py-zxcvbn
     SUBDIR += pygost
+    SUBDIR += qgpgme
     SUBDIR += qt-sudo
     SUBDIR += qtkeychain
     SUBDIR += quantis-kmod
-    SUBDIR += racoon2
     SUBDIR += rage-encryption
     SUBDIR += ratify
     SUBDIR += ratproxy
@@ -1280,10 +1286,10 @@
     SUBDIR += seccure
     SUBDIR += seclists
     SUBDIR += secpanel
-    SUBDIR += sectok
     SUBDIR += secure_delete
     SUBDIR += sedutil
     SUBDIR += sequoia
+    SUBDIR += sequoia-chameleon-gnupg
     SUBDIR += sequoia-sq
     SUBDIR += setaudit
     SUBDIR += sha1collisiondetection
@@ -1327,6 +1333,7 @@
     SUBDIR += sshguard
     SUBDIR += sshpass
     SUBDIR += ssl-admin
+    SUBDIR += ssl-checker
     SUBDIR += ssllabs-scan
     SUBDIR += sslproxy
     SUBDIR += sslscan
@@ -1380,6 +1387,7 @@
     SUBDIR += trivy
     SUBDIR += trousers
     SUBDIR += trufflehog
+    SUBDIR += tscli
     SUBDIR += tthsum
     SUBDIR += u2f-devd
     SUBDIR += uacme

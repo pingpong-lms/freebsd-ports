@@ -1,4 +1,4 @@
---- gems/gitlab-backup-cli/gitlab-backup-cli.gemspec.orig	2025-05-14 17:45:50 UTC
+--- gems/gitlab-backup-cli/gitlab-backup-cli.gemspec.orig	2025-07-09 01:48:55 UTC
 +++ gems/gitlab-backup-cli/gitlab-backup-cli.gemspec
 @@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
    spec.add_dependency "activerecord", ">= 7"

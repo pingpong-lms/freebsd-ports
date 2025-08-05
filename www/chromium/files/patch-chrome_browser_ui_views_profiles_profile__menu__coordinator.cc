@@ -1,6 +1,6 @@
---- chrome/browser/ui/views/profiles/profile_menu_coordinator.cc.orig	2025-04-04 08:52:13 UTC
+--- chrome/browser/ui/views/profiles/profile_menu_coordinator.cc.orig	2025-07-02 06:08:04 UTC
 +++ chrome/browser/ui/views/profiles/profile_menu_coordinator.cc
-@@ -50,7 +50,7 @@ void ProfileMenuCoordinator::Show(bool is_source_accel
+@@ -46,7 +46,7 @@ void ProfileMenuCoordinator::Show(
    browser.window()->NotifyFeaturePromoFeatureUsed(
        feature_engagement::kIPHProfileSwitchFeature,
        FeaturePromoFeatureUsedAction::kClosePromoIfPresent);
