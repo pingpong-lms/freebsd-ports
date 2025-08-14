@@ -740,6 +740,7 @@
     SUBDIR += mstflint
     SUBDIR += mtm
     SUBDIR += mtxorbd
+    SUBDIR += mult
     SUBDIR += multitail
     SUBDIR += munin-common
     SUBDIR += munin-contrib
@@ -1240,6 +1241,7 @@
     SUBDIR += rubygem-win32-file-stat
     SUBDIR += rubygem-winrm
     SUBDIR += rubygem-winrm-elevated
+    SUBDIR += rubygem-winrm-elevated-gitlab
     SUBDIR += rubygem-yell
     SUBDIR += runas
     SUBDIR += rundeck
