@@ -399,7 +399,6 @@
     SUBDIR += cdialog
     SUBDIR += cdk
     SUBDIR += cereal
-    SUBDIR += cervisia
     SUBDIR += cflow
     SUBDIR += cflow2vcg
     SUBDIR += cfr
@@ -720,6 +719,7 @@
     SUBDIR += fnm
     SUBDIR += folly
     SUBDIR += forge
+    SUBDIR += forgejo-runner
     SUBDIR += forge-devel
     SUBDIR += fortran-stdlib
     SUBDIR += fortran-utils
@@ -1080,6 +1080,7 @@
     SUBDIR += jgoodies-looks
     SUBDIR += jiic
     SUBDIR += jiri
+    SUBDIR += jjui
     SUBDIR += jline
     SUBDIR += jna
     SUBDIR += jsap
@@ -4614,6 +4615,7 @@
     SUBDIR += py-cachy
     SUBDIR += py-cadquery-pywrap
     SUBDIR += py-calver
+    SUBDIR += py-camel-converter
     SUBDIR += py-canonicaljson
     SUBDIR += py-capstone
     SUBDIR += py-capturer

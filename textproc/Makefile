@@ -1464,6 +1464,7 @@
     SUBDIR += py-mdit-py-plugins
     SUBDIR += py-mdurl
     SUBDIR += py-mdx_wikilink_plus
+    SUBDIR += py-meilisearch
     SUBDIR += py-merge3
     SUBDIR += py-mike
     SUBDIR += py-misaka
@@ -1594,8 +1595,10 @@
     SUBDIR += py-rich-rst
     SUBDIR += py-rnc2rng
     SUBDIR += py-roman-numerals-py
+    SUBDIR += py-rouge-score
     SUBDIR += py-rst2ansi
     SUBDIR += py-rst2html5
+    SUBDIR += py-sacremoses
     SUBDIR += py-scour
     SUBDIR += py-segno
     SUBDIR += py-sense2vec

@@ -444,6 +444,7 @@
     SUBDIR += gdu
     SUBDIR += genimage
     SUBDIR += genisoimage
+    SUBDIR += geomman
     SUBDIR += getdelta
     SUBDIR += geteltorito
     SUBDIR += getssl
@@ -515,6 +516,7 @@
     SUBDIR += httplog
     SUBDIR += hw-probe
     SUBDIR += hwstat
+    SUBDIR += hyprpolkitagent
     SUBDIR += i2c-tools
     SUBDIR += i7z
     SUBDIR += iat
@@ -1360,6 +1362,7 @@
     SUBDIR += szyszka
     SUBDIR += tai64nfrac
     SUBDIR += tailspin
+    SUBDIR += tarbsd-builder
     SUBDIR += tarsnap
     SUBDIR += tarsnap-gui
     SUBDIR += tarsnap-periodic
