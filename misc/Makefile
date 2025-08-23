@@ -434,6 +434,7 @@
     SUBDIR += py-crudini
     SUBDIR += py-datasets
     SUBDIR += py-detecta
+    SUBDIR += py-diffusers
     SUBDIR += py-eemeter
     SUBDIR += py-einops
     SUBDIR += py-emoji
@@ -525,6 +526,8 @@
     SUBDIR += py-pytorch-lightning
     SUBDIR += py-pyviz-comms
     SUBDIR += py-safetensors
+    SUBDIR += py-sagemaker
+    SUBDIR += py-sagemaker-core
     SUBDIR += py-schedulefree
     SUBDIR += py-scikit-fusion
     SUBDIR += py-scikit-quant
@@ -532,6 +535,7 @@
     SUBDIR += py-shap2
     SUBDIR += py-shell-gpt
     SUBDIR += py-sigopt
+    SUBDIR += py-smdebug-rulesconfig
     SUBDIR += py-soapy_power
     SUBDIR += py-spdx-tools
     SUBDIR += py-spinners
