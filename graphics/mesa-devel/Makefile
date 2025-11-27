@@ -1,6 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	25.2-branchpoint-2121
-DISTVERSIONSUFFIX=	-g2595b029fac
+DISTVERSION=	25.3-branchpoint-1394
+DISTVERSIONSUFFIX=	-g80db8171deb
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -33,24 +33,19 @@ USE_LDCONFIG=	yes
 GL_SITE=	https://gitlab.freedesktop.org
 BINARY_ALIAS=	python=${PYTHON_CMD}
 SHEBANG_FILES=	src/vulkan/*/*control.py
-MESON_ARGS=	-Dgallium-mediafoundation=disabled \
-		-Dandroid-libbacktrace=disabled \
-		-Dlibunwind=disabled \
-		-Dlmsensors=disabled \
-		-Dmicrosoft-clc=disabled \
-		-Dvalgrind=disabled \
-		-Dplatforms=${PLATFORMS:O:[-1..1]:ts,} \
-		-Dvideo-codecs=all \
-		-Dunversion-libgallium=true \
-		${NULL}
+MESON_DISABLED=	android-libbacktrace gallium-mediafoundation \
+		libunwind lmsensors microsoft-clc valgrind
+MESON_TRUE=	unversion-libgallium
+MESON_ARGS=	-Dplatforms=${PLATFORMS:O:[-1..1]:ts,} -Dvideo-codecs=all
 LDFLAGS+=	-Wl,--undefined-version # https://gitlab.freedesktop.org/mesa/mesa/-/issues/8003
 PLIST_SUB=	ARCH=${ARCH:S/amd/x86_/}
 
-OPTIONS_DEFINE=		DRM LLVM LTO OPENCL VAAPI VDPAU VKLAYERS WAYLAND X11 ZSTD
-OPTIONS_DEFAULT=	DRM LLVM LTO OPENCL VAAPI VDPAU VKLAYERS WAYLAND X11 ZSTD
+OPTIONS_DEFINE=		DRM LLVM LTO OPENCL VAAPI VKLAYERS WAYLAND X11 ZSTD
+OPTIONS_DEFAULT=	DRM LLVM LTO OPENCL VAAPI VKLAYERS WAYLAND X11 ZSTD
 OPTIONS_GROUP=		GALLIUM VULKAN
 OPTIONS_GROUP_GALLIUM=	crocus iris panfrost r600 radeonsi
 OPTIONS_GROUP_VULKAN=	anv hasvk radv
+OPTIONS_EXCLUDE_aarch64=LTO # OPENCL fails to build
 OPTIONS_EXCLUDE_i386=	LTO # anv: vkcube fails on vkCreateSwapchainKHR
 OPTIONS_EXCLUDE+=	${ARCH:Naarch64:C/.+/panfrost/}
 OPTIONS_EXCLUDE+=	${ARCH:Namd64:Ni386:Nx86_64:C/.+/crocus hasvk/}
@@ -124,11 +119,6 @@ OPENCL_IMPLIES=		LLVM ${"${PORT_OPTIONS:Miris}":?iris:radeonsi} # any from OPTIO
 VAAPI_DESC=		Hardware encoding/decoding (only r600, radeonsi)
 VAAPI_BUILD_DEPENDS=	libva>0:multimedia/libva
 VAAPI_MESON_ENABLED=	gallium-va
-
-VDPAU_DESC=		Hardware decoding (only r600, radeonsi) (implies X11)
-VDPAU_BUILD_DEPENDS=	libvdpau>0:multimedia/libvdpau
-VDPAU_MESON_ENABLED=	gallium-vdpau
-VDPAU_IMPLIES=		X11
 
 VKLAYERS_DESC=		Vulkan layers: ${VKLAYERS_MESON_ON:C/.*=//} (implies ${VKLAYERS_IMPLIES})
 VKLAYERS_BUILD_DEPENDS=	glslangValidator:graphics/glslang

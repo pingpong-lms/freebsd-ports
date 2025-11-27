@@ -1,5 +1,6 @@
     COMMENT = Domain Name Service tools
 
+    SUBDIR += aardvark-dns
     SUBDIR += acme-dns
     SUBDIR += adns
     SUBDIR += amass
@@ -11,6 +12,7 @@
     SUBDIR += bindgraph
     SUBDIR += blocky
     SUBDIR += c-ares
+    SUBDIR += cascade
     SUBDIR += cli53
     SUBDIR += coredns
     SUBDIR += ddclient
@@ -18,6 +20,7 @@
     SUBDIR += denominator
     SUBDIR += dhisd
     SUBDIR += dlint
+    SUBDIR += dns-blackhole
     SUBDIR += dns-ui
     SUBDIR += dns2blackhole
     SUBDIR += dns2tcp
@@ -43,6 +46,7 @@
     SUBDIR += dnsrecon
     SUBDIR += dnsreflector
     SUBDIR += dnssec-rr
+    SUBDIR += dnst
     SUBDIR += dnstable
     SUBDIR += dnstable-convert
     SUBDIR += dnstop
@@ -64,7 +68,6 @@
     SUBDIR += encrypted-dns-server
     SUBDIR += fastresolve
     SUBDIR += flamethrower
-    SUBDIR += fpdns
     SUBDIR += gdnsd2
     SUBDIR += gdnsd3
     SUBDIR += gen6dns

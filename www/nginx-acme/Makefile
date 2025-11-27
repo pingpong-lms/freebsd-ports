@@ -1,5 +1,6 @@
 PORTNAME=	acme
 PORTVERSION=	0.1.1
+PORTREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/nginx/nginx-${PORTNAME}/releases/download/v${PORTVERSION}/:acme \
 		https://nginx.org/download/:nginx
@@ -7,7 +8,7 @@ PKGNAMEPREFIX=	nginx-devel-
 DISTFILES=	nginx-${PORTNAME}-${DISTVERSION}.tar.gz:acme \
 		nginx-${NGINX_VERSION}.tar.gz
 
-MAINTAINER=	osa@FreeBSD.org
+MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	ACME module for NGINX
 WWW=		https://github.com/nginx/nginx-acme
 
@@ -48,7 +49,7 @@ NGX_CONFIGURE_ARGS=	--with-compat \
 
 PLIST_FILES=	libexec/nginx/ngx_http_acme_module.so
 
-post-extract:
+pre-configure:
 	( cd ${WRKDIR}/nginx-${NGINX_VERSION} && \
 		${SETENV} ${CONFIGURE_ENV} ${CONFIGURE_CMD} ${NGX_CONFIGURE_ARGS} )
 

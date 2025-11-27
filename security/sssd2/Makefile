@@ -1,6 +1,6 @@
 PORTNAME=	sssd
 PORTVERSION=	2.9.6
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	security
 PKGNAMESUFFIX=	2
 
@@ -30,7 +30,7 @@ LIB_DEPENDS=	libcares.so:dns/c-ares \
 		libinotify.so:devel/libinotify \
 		libjansson.so:devel/jansson \
 		libjose.so:net/jose \
-		libldb.so:${SAMBA_LDB_PORT} \
+		libldb.so:${SAMBA_LDB_PORT:U${SAMBA_PORT}} \
 		libndr-krb5pac.so:${SAMBA_PORT} \
 		libndr-nbt.so:${SAMBA_PORT} \
 		libndr-standard.so:${SAMBA_PORT} \
@@ -51,7 +51,7 @@ RUN_DEPENDS=	adcli:net-mgmt/adcli \
 		cyrus-sasl-gssapi>0:security/cyrus-sasl2-gssapi
 
 USES=	autoreconf cpe gettext gmake gssapi:flags,mit iconv ldap \
-	libtool localbase:ldflags pathfix pkgconfig python:3.9+ samba:env \
+	libtool localbase:ldflags pathfix pkgconfig python samba:env \
 	shebangfix ssl
 
 USE_LDCONFIG=	yes

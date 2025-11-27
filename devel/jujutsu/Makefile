@@ -1,6 +1,7 @@
 PORTNAME=	jujutsu
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.31.0
+DISTVERSION=	0.35.0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	se@FreeBSD.org
@@ -10,7 +11,7 @@ WWW=		https://jj-vcs.github.io/jj/latest/
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cargo localbase shebangfix ssl
+USES=		cargo localbase shebangfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	jj-vcs
 GH_PROJECT=	jj

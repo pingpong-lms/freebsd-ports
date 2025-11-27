@@ -98,6 +98,7 @@ include/wine/msvcrt/wchar.h
 include/wine/msvcrt/wctype.h
 include/wine/svcctl.h
 include/wine/svcctl.idl
+include/wine/unixlib.h
 include/wine/windows/accctrl.h
 include/wine/windows/access.idl
 include/wine/windows/aclapi.h
@@ -231,6 +232,7 @@ include/wine/windows/cpl.h
 include/wine/windows/crtrow.idl
 include/wine/windows/cryptdlg.h
 include/wine/windows/cryptuiapi.h
+include/wine/windows/cryptxml.h
 include/wine/windows/ctfutb.h
 include/wine/windows/ctfutb.idl
 include/wine/windows/ctxtcall.h
@@ -540,6 +542,8 @@ include/wine/windows/fltdefs.h
 include/wine/windows/fontsub.h
 include/wine/windows/fusion.h
 include/wine/windows/fusion.idl
+include/wine/windows/gameinput.h
+include/wine/windows/gameinput.idl
 include/wine/windows/gameux.h
 include/wine/windows/gameux.idl
 include/wine/windows/gamingtcui.h
@@ -905,6 +909,8 @@ include/wine/windows/robuffer.h
 include/wine/windows/robuffer.idl
 include/wine/windows/roerrorapi.h
 include/wine/windows/rometadata.h
+include/wine/windows/rometadataapi.h
+include/wine/windows/rometadataapi.idl
 include/wine/windows/rometadataresolution.h
 include/wine/windows/roparameterizediid.h
 include/wine/windows/roparameterizediid.idl
@@ -1016,6 +1022,7 @@ include/wine/windows/tbs.h
 include/wine/windows/tchar.h
 include/wine/windows/tcpestats.h
 include/wine/windows/tcpmib.h
+include/wine/windows/tdh.h
 include/wine/windows/textserv.h
 include/wine/windows/textstor.h
 include/wine/windows/textstor.idl
@@ -1212,6 +1219,8 @@ include/wine/windows/windows.media.h
 include/wine/windows/windows.media.idl
 include/wine/windows/windows.media.mediaproperties.h
 include/wine/windows/windows.media.mediaproperties.idl
+include/wine/windows/windows.media.playback.h
+include/wine/windows/windows.media.playback.idl
 include/wine/windows/windows.media.render.h
 include/wine/windows/windows.media.render.idl
 include/wine/windows/windows.media.speechrecognition.h
@@ -1226,6 +1235,8 @@ include/wine/windows/windows.networking.h
 include/wine/windows/windows.networking.idl
 include/wine/windows/windows.networking.sockets.h
 include/wine/windows/windows.networking.sockets.idl
+include/wine/windows/windows.perception.h
+include/wine/windows/windows.perception.idl
 include/wine/windows/windows.perception.spatial.h
 include/wine/windows/windows.perception.spatial.idl
 include/wine/windows/windows.perception.spatial.surfaces.h
@@ -1238,6 +1249,8 @@ include/wine/windows/windows.security.credentials.h
 include/wine/windows/windows.security.credentials.idl
 include/wine/windows/windows.security.credentials.ui.h
 include/wine/windows/windows.security.credentials.ui.idl
+include/wine/windows/windows.security.cryptography.core.h
+include/wine/windows/windows.security.cryptography.core.idl
 include/wine/windows/windows.security.cryptography.h
 include/wine/windows/windows.security.cryptography.idl
 include/wine/windows/windows.security.enterprisedata.h
@@ -1450,6 +1463,7 @@ lib/wine/%%WINEARCH%%-unix/libcryptdll.a
 lib/wine/%%WINEARCH%%-unix/libcryptnet.a
 lib/wine/%%WINEARCH%%-unix/libcryptsp.a
 lib/wine/%%WINEARCH%%-unix/libcryptui.a
+lib/wine/%%WINEARCH%%-unix/libcryptxml.a
 lib/wine/%%WINEARCH%%-unix/libd2d1.a
 lib/wine/%%WINEARCH%%-unix/libd3d10.a
 lib/wine/%%WINEARCH%%-unix/libd3d10_1.a
@@ -1465,6 +1479,7 @@ lib/wine/%%WINEARCH%%-unix/libd3dcompiler_43.a
 lib/wine/%%WINEARCH%%-unix/libd3dcompiler_46.a
 lib/wine/%%WINEARCH%%-unix/libd3drm.a
 lib/wine/%%WINEARCH%%-unix/libd3dx10.a
+lib/wine/%%WINEARCH%%-unix/libd3dx10_33.a
 lib/wine/%%WINEARCH%%-unix/libd3dx10_34.a
 lib/wine/%%WINEARCH%%-unix/libd3dx10_35.a
 lib/wine/%%WINEARCH%%-unix/libd3dx10_36.a
@@ -1614,6 +1629,7 @@ lib/wine/%%WINEARCH%%-unix/libstrmiids.a
 lib/wine/%%WINEARCH%%-unix/libsxs.a
 lib/wine/%%WINEARCH%%-unix/libt2embed.a
 lib/wine/%%WINEARCH%%-unix/libtapi32.a
+lib/wine/%%WINEARCH%%-unix/libtdh.a
 lib/wine/%%WINEARCH%%-unix/libucrtbase.a
 lib/wine/%%WINEARCH%%-unix/libuiautomationcore.a
 lib/wine/%%WINEARCH%%-unix/libunicows.a
@@ -1741,6 +1757,7 @@ lib/wine/%%WINEARCH%%-windows/colorcnv.dll
 lib/wine/%%WINEARCH%%-windows/combase.dll
 lib/wine/%%WINEARCH%%-windows/comcat.dll
 lib/wine/%%WINEARCH%%-windows/comctl32.dll
+lib/wine/%%WINEARCH%%-windows/comctl32_v6.dll
 lib/wine/%%WINEARCH%%-windows/comdlg32.dll
 lib/wine/%%WINEARCH%%-windows/coml2.dll
 %%WINE32%%lib/wine/%%WINEARCH%%-windows/comm.drv16
@@ -1764,6 +1781,7 @@ lib/wine/%%WINEARCH%%-windows/cryptnet.dll
 lib/wine/%%WINEARCH%%-windows/cryptowinrt.dll
 lib/wine/%%WINEARCH%%-windows/cryptsp.dll
 lib/wine/%%WINEARCH%%-windows/cryptui.dll
+lib/wine/%%WINEARCH%%-windows/cryptxml.dll
 lib/wine/%%WINEARCH%%-windows/cscript.exe
 lib/wine/%%WINEARCH%%-windows/ctapi32.dll
 %%WINE32%%lib/wine/%%WINEARCH%%-windows/ctl3d.dll16
@@ -1910,6 +1928,7 @@ lib/wine/%%WINEARCH%%-windows/fontsub.dll
 lib/wine/%%WINEARCH%%-windows/fsutil.exe
 lib/wine/%%WINEARCH%%-windows/fusion.dll
 lib/wine/%%WINEARCH%%-windows/fwpuclnt.dll
+lib/wine/%%WINEARCH%%-windows/gameinput.dll
 lib/wine/%%WINEARCH%%-windows/gameux.dll
 lib/wine/%%WINEARCH%%-windows/gamingtcui.dll
 %%WINE32%%lib/wine/%%WINEARCH%%-windows/gdi.exe16
@@ -2009,6 +2028,7 @@ lib/wine/%%WINEARCH%%-windows/libcryptdll.a
 lib/wine/%%WINEARCH%%-windows/libcryptnet.a
 lib/wine/%%WINEARCH%%-windows/libcryptsp.a
 lib/wine/%%WINEARCH%%-windows/libcryptui.a
+lib/wine/%%WINEARCH%%-windows/libcryptxml.a
 lib/wine/%%WINEARCH%%-windows/libd2d1.a
 lib/wine/%%WINEARCH%%-windows/libd3d10.a
 lib/wine/%%WINEARCH%%-windows/libd3d10_1.a
@@ -2024,6 +2044,7 @@ lib/wine/%%WINEARCH%%-windows/libd3dcompiler_43.a
 lib/wine/%%WINEARCH%%-windows/libd3dcompiler_46.a
 lib/wine/%%WINEARCH%%-windows/libd3drm.a
 lib/wine/%%WINEARCH%%-windows/libd3dx10.a
+lib/wine/%%WINEARCH%%-windows/libd3dx10_33.a
 lib/wine/%%WINEARCH%%-windows/libd3dx10_34.a
 lib/wine/%%WINEARCH%%-windows/libd3dx10_35.a
 lib/wine/%%WINEARCH%%-windows/libd3dx10_36.a
@@ -2173,6 +2194,7 @@ lib/wine/%%WINEARCH%%-windows/libstrmiids.a
 lib/wine/%%WINEARCH%%-windows/libsxs.a
 lib/wine/%%WINEARCH%%-windows/libt2embed.a
 lib/wine/%%WINEARCH%%-windows/libtapi32.a
+lib/wine/%%WINEARCH%%-windows/libtdh.a
 lib/wine/%%WINEARCH%%-windows/libucrtbase.a
 lib/wine/%%WINEARCH%%-windows/libuiautomationcore.a
 lib/wine/%%WINEARCH%%-windows/libunicows.a
@@ -2453,6 +2475,7 @@ lib/wine/%%WINEARCH%%-windows/rsaenh.dll
 lib/wine/%%WINEARCH%%-windows/rstrtmgr.dll
 lib/wine/%%WINEARCH%%-windows/rtutils.dll
 lib/wine/%%WINEARCH%%-windows/rtworkq.dll
+lib/wine/%%WINEARCH%%-windows/runas.exe
 %%WINE32%%lib/wine/%%WINEARCH%%-windows/rundll.exe16
 lib/wine/%%WINEARCH%%-windows/rundll32.exe
 lib/wine/%%WINEARCH%%-windows/samlib.dll
@@ -2595,6 +2618,8 @@ lib/wine/%%WINEARCH%%-windows/wimgapi.dll
 lib/wine/%%WINEARCH%%-windows/win32u.dll
 %%WINE32%%lib/wine/%%WINEARCH%%-windows/win87em.dll16
 %%WINE32%%lib/wine/%%WINEARCH%%-windows/winaspi.dll16
+lib/wine/%%WINEARCH%%-windows/winbio.dll
+lib/wine/%%WINEARCH%%-windows/winbrand.dll
 %%WINE32%%lib/wine/%%WINEARCH%%-windows/windebug.dll16
 lib/wine/%%WINEARCH%%-windows/windows.applicationmodel.dll
 lib/wine/%%WINEARCH%%-windows/windows.devices.bluetooth.dll
@@ -2606,6 +2631,8 @@ lib/wine/%%WINEARCH%%-windows/windows.globalization.dll
 lib/wine/%%WINEARCH%%-windows/windows.media.devices.dll
 lib/wine/%%WINEARCH%%-windows/windows.media.dll
 lib/wine/%%WINEARCH%%-windows/windows.media.mediacontrol.dll
+lib/wine/%%WINEARCH%%-windows/windows.media.playback.backgroundmediaplayer.dll
+lib/wine/%%WINEARCH%%-windows/windows.media.playback.mediaplayer.dll
 lib/wine/%%WINEARCH%%-windows/windows.media.speech.dll
 lib/wine/%%WINEARCH%%-windows/windows.networking.connectivity.dll
 lib/wine/%%WINEARCH%%-windows/windows.networking.dll
@@ -2617,6 +2644,7 @@ lib/wine/%%WINEARCH%%-windows/windows.storage.applicationdata.dll
 lib/wine/%%WINEARCH%%-windows/windows.storage.dll
 lib/wine/%%WINEARCH%%-windows/windows.system.profile.systemid.dll
 lib/wine/%%WINEARCH%%-windows/windows.system.profile.systemmanufacturers.dll
+lib/wine/%%WINEARCH%%-windows/windows.ui.core.textinput.dll
 lib/wine/%%WINEARCH%%-windows/windows.ui.dll
 lib/wine/%%WINEARCH%%-windows/windows.ui.xaml.dll
 lib/wine/%%WINEARCH%%-windows/windows.web.dll
@@ -2858,6 +2886,16 @@ share/man/pl.UTF-8/man1/wine.1.gz
 %%DATADIR%%/nls/normnfkd.nls
 %%DATADIR%%/nls/sortdefault.nls
 %%WINE64%%%%DATADIR%%/pkg32.sh
+%%DATADIR%%/winmd/windows.applicationmodel.winmd
+%%DATADIR%%/winmd/windows.globalization.winmd
+%%DATADIR%%/winmd/windows.graphics.winmd
+%%DATADIR%%/winmd/windows.media.winmd
+%%DATADIR%%/winmd/windows.networking.winmd
+%%DATADIR%%/winmd/windows.perception.winmd
+%%DATADIR%%/winmd/windows.storage.winmd
+%%DATADIR%%/winmd/windows.system.winmd
+%%DATADIR%%/winmd/windows.ui.winmd
+%%DATADIR%%/winmd/windows.ui.xaml.winmd
 %%PORTDOCS%%%%DOCSDIR%%/ANNOUNCE.md
 %%PORTDOCS%%%%DOCSDIR%%/AUTHORS
 %%PORTDOCS%%%%DOCSDIR%%/README.md

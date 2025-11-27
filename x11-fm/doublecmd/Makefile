@@ -1,5 +1,5 @@
 PORTNAME=	doublecmd
-PORTVERSION=	1.1.27
+PORTVERSION=	1.1.30
 DISTVERSIONPREFIX=	v
 CATEGORIES=	x11-fm
 PKGNAMESUFFIX=	${LAZARUS_PKGNAMESUFFIX}
@@ -10,7 +10,7 @@ WWW=		https://doublecmd.sourceforge.io
 
 LICENSE=	GPLv2
 
-ONLY_FOR_ARCHS=	i386 amd64 aarch64
+ONLY_FOR_ARCHS=	i386 amd64
 
 gtk2_CONFLICTS_INSTALL=	${PORTNAME}-qt5 ${PORTNAME}-qt6
 qt5_CONFLICTS_INSTALL=	${PORTNAME}-gtk2 ${PORTNAME}-qt6
@@ -25,7 +25,7 @@ USE_GNOME=	cairo glib20
 USE_XORG=	x11
 USE_BINUTILS=	yes
 
-DCHELP=		1.1.26
+DCHELP=		1.1.30
 
 LAZARUS_PROJECT_FILES=	components/chsdet/chsdet.lpk \
 			components/multithreadprocs/multithreadprocslaz.lpk \

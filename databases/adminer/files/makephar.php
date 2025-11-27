@@ -15,14 +15,16 @@ $stub = <<<STUB
 <?php
 /******************************************************************************
  *  
- *  All Adminer plugins are now included in this
+ *  Adminer plugins are now included in this
  *  FreeBSD ports edition, no need to download
  *  them separately.
  *  https://www.adminer.org/en/plugins/
  *  
  *  copyright Paavo-Einari Kaipila (FreeBSD ports edition)
- *  copyright Jakub Vrana          (original Adminer)
- * 
+ *  copyright Jakub Vrana          (Adminer)
+ *  copyright MirLach              (ForcedServer plugin)
+ *  copyright Pematon              (Collations, JsonPreview, LoginServers and SimpleMenu plugins)
+ *  
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
  *  You may obtain a copy of the License at
@@ -54,14 +56,29 @@ foreach(new DirectoryIterator(__DIR__ . '/plugins') as $file)
     if ($file->isFile())
     {
         $contents = php_strip_whitespace($file->getRealPath());
-        $pharFile = 'adminer-plugins/' . $file->getFileName();
-        $plugins[$pharFile] = $contents;
-        if (preg_match('/class\s(A[a-zA-Z]+)\sextends\sAdminer/', $contents, $m))
-        {
+        $fileName = $file->getFileName();
+        $pharFile = 'adminer-plugins/' . $fileName;
+
+        if (
+            /**
+             * Skip affected plugin
+             * https://nvd.nist.gov/vuln/detail/CVE-2023-45197
+             */
+            $fileName !== 'file-upload.php'
+            /**
+             * Adminer editor's plugins are only relevant
+             * in Adminer editor.
+             */
+            && !str_starts_with($fileName, 'editor')
+            && preg_match('/class\s(A[a-zA-Z0-9]+)\s(extends\sAdminer|\{)/', $contents, $m)
+        ) {
+            $plugins[$pharFile] = $contents;
             $classMap[$m[1]] = $file->getFileName();
         }
     }
 }
+
+ksort($classMap);
 
 $phar->setStub(
     sprintf(
@@ -95,6 +112,7 @@ foreach($plugins as $file => $contents)
         $contents
     );
 }
+$phar->compressFiles(Phar::GZ);
 
 $phar->addFromString(
     'adminer.php',

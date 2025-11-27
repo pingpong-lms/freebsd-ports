@@ -1,20 +1,29 @@
---- components/signin/public/base/signin_switches.cc.orig	2025-08-07 06:57:29 UTC
+--- components/signin/public/base/signin_switches.cc.orig	2025-10-30 15:44:36 UTC
 +++ components/signin/public/base/signin_switches.cc
-@@ -60,7 +60,7 @@ BASE_FEATURE(kMakeAccountsAvailableInIdentityManager,
-              base::FEATURE_DISABLED_BY_DEFAULT);
- #endif
+@@ -96,7 +96,7 @@ BASE_FEATURE(kBrowserSigninInSyncHeaderOnGaiaIntegrati
+ BASE_FEATURE(kCctSignInPrompt, base::FEATURE_ENABLED_BY_DEFAULT);
+ #endif  // BUILDFLAG(IS_ANDROID)
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- // Enables the History Sync Opt-in on Desktop.
- BASE_FEATURE(kEnableHistorySyncOptin,
-              "EnableHistorySyncOptin",
-@@ -250,7 +250,7 @@ BASE_FEATURE(kDeferWebSigninTrackerCreation,
-              "DeferWebSigninTrackerCreation",
+ BASE_FEATURE(kChromeIdentitySurveyAddressBubbleSignin,
+              base::FEATURE_DISABLED_BY_DEFAULT);
+ BASE_FEATURE(kChromeIdentitySurveyDiceWebSigninAccepted,
+@@ -123,7 +123,7 @@ BASE_FEATURE(kChromeIdentitySurveySwitchProfileFromPro
+              base::FEATURE_DISABLED_BY_DEFAULT);
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ BASE_FEATURE(kChromeIdentitySurveyLaunchWithDelay,
               base::FEATURE_ENABLED_BY_DEFAULT);
+ BASE_FEATURE_PARAM(base::TimeDelta,
+@@ -325,7 +325,7 @@ BASE_FEATURE(kRetryInterceptionBubbleOnDiceSyncHeaderT
+ BASE_FEATURE(kRollbackDiceMigration, base::FEATURE_DISABLED_BY_DEFAULT);
+ #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT)
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- BASE_FEATURE(kSignInPromoMaterialNextUI,
-              "SignInPromoMaterialNextUI",
-              base::FEATURE_DISABLED_BY_DEFAULT);
+ BASE_FEATURE(kSignInPromoMaterialNextUI, base::FEATURE_ENABLED_BY_DEFAULT);
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+ 

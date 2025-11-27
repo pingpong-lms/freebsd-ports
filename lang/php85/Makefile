@@ -1,8 +1,8 @@
 PORTNAME=	php85
-DISTVERSION=	8.5.0beta1
+DISTVERSION=	8.5.0
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
-MASTER_SITES=	https://downloads.php.net/~edorian/
+MASTER_SITES=	PHP/distributions
 DISTNAME=	php-${DISTVERSION}
 
 MAINTAINER=	bofh@FreeBSD.org
@@ -11,7 +11,7 @@ WWW=		https://www.php.net/
 
 LICENSE=	PHP301
 
-USES+=		compiler:c11 cpe gnome localbase pkgconfig #tar:xz
+USES+=		compiler:c11 cpe gnome localbase pkgconfig tar:xz
 CPE_PRODUCT=	php
 PHP_VER=	85
 

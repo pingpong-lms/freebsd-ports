@@ -1,13 +1,15 @@
---- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2025-05-31 17:16:41 UTC
+--- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2025-11-01 06:40:37 UTC
 +++ chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc
-@@ -118,16 +118,16 @@
+@@ -116,18 +116,18 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/ui/webui/commerce/product_specifications_ui.h"
- #endif
+ #include "components/webapps/isolated_web_apps/scheme.h"
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
+         // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
 -    BUILDFLAG(IS_ANDROID)
@@ -20,6 +22,15 @@
  #include "chrome/browser/ui/webui/whats_new/whats_new_ui.h"
  #endif
  
+@@ -276,7 +276,7 @@ void ChromeWebUIControllerFactory::GetFaviconForURL(
+     const std::vector<int>& desired_sizes_in_pixel,
+     favicon_base::FaviconResultsCallback callback) const {
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+   if (page_url.SchemeIs(webapps::kIsolatedAppScheme)) {
+     ReadIsolatedWebAppFaviconsFromDisk(profile, page_url, std::move(callback));
+     return;
 @@ -411,7 +411,7 @@ base::RefCountedMemory* ChromeWebUIControllerFactory::
      return NewTabPageUI::GetFaviconResourceBytes(scale_factor);
    }

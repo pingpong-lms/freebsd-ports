@@ -1,6 +1,5 @@
 PORTNAME=	keepassxc
-DISTVERSION=	2.7.10
-PORTREVISION=	1
+DISTVERSION=	2.7.11
 CATEGORIES=	security
 MASTER_SITES=	https://github.com/keepassxreboot/keepassxc/releases/download/${DISTVERSION}/
 DISTNAME=	${PORTNAME}-${DISTVERSION}-src
@@ -25,7 +24,7 @@ LIB_DEPENDS=	libargon2.so:security/libargon2 \
 USES=		cmake compiler:c++17-lang desktop-file-utils minizip \
 		pkgconfig qt:5 readline shared-mime-info tar:xz xorg
 
-USE_QT=		concurrent core dbus gui network svg widgets x11extras \
+USE_QT=		concurrent core dbus gui network svg wayland widgets x11extras \
 		buildtools:build linguisttools:build qmake:build testlib:build
 USE_XORG=	x11
 
@@ -36,18 +35,21 @@ CONFLICTS_INSTALL=	keepassx keepassx-0.* keepassx2 keepassxc276
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 
 OPTIONS_DEFINE=		AUTOTYPE BROWSER FDOSECRETS KEESHARE NETWORKING \
-			SSHAGENT TEST YUBIKEY
+			PASSKEYS SSHAGENT TEST YUBIKEY
 OPTIONS_DEFAULT=	AUTOTYPE BROWSER FDOSECRETS KEESHARE NETWORKING \
-			SSHAGENT YUBIKEY
+			PASSKEYS SSHAGENT
 OPTIONS_SUB=		yes
+PASSKEYS_IMPLIES=	BROWSER
 
 AUTOTYPE_DESC=		Auto-type passwords in input fields
 BROWSER_DESC=		Browser integration with KeePassXC-Browser
 FDOSECRETS_DESC=	freedesktop.org secrets service support
 KEESHARE_DESC=		Sharing integration with KeeShare
 NETWORKING_DESC=	Networking support (e.g. for downloading website icons)
+PASSKEYS_DESC=		Passkeys support for browser integration\
+			(requires BROWSER)
 SSHAGENT_DESC=		SSH agent support
-YUBIKEY_DESC=		YubiKey support
+YUBIKEY_DESC=		YubiKey support (broken on <= 14.x)
 
 AUTOTYPE_USE=		XORG=xi,xtst
 AUTOTYPE_CMAKE_BOOL=	WITH_XC_AUTOTYPE
@@ -60,6 +62,8 @@ KEESHARE_CMAKE_BOOL=	WITH_XC_KEESHARE
 
 NETWORKING_CMAKE_BOOL=	WITH_XC_NETWORKING
 
+PASSKEYS_CMAKE_BOOL=	WITH_XC_BROWSER_PASSKEYS
+
 SSHAGENT_CMAKE_BOOL=	WITH_XC_SSHAGENT
 
 TEST_CMAKE_BOOL=	WITH_GUI_TESTS WITH_TESTS
@@ -67,5 +71,11 @@ TEST_TEST_TARGET=	test
 
 YUBIKEY_LIB_DEPENDS=	libpcsclite.so:devel/pcsc-lite
 YUBIKEY_CMAKE_BOOL=	WITH_XC_YUBIKEY
+
+.include <bsd.port.options.mk>
+
+.if ${OSVERSION} >= 1500000
+OPTIONS_DEFAULT+=	YUBIKEY
+.endif
 
 .include <bsd.port.mk>

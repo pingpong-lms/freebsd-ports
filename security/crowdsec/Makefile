@@ -1,6 +1,6 @@
 PORTNAME=	crowdsec
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.6.11
+DISTVERSION=	1.7.3
 PORTREVISION=	1
 CATEGORIES=	security
 
@@ -14,8 +14,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libabsl_base.so:devel/abseil \
 		libre2.so:devel/re2
 
-USES=		go:modules pkgconfig
-_COMMIT=	d64ee2ae
+USES=		go:1.25,modules pkgconfig
+_COMMIT=	c8aad699
 _BUILD_DATE=	$$(date -u "+%F_%T")
 USE_RC_SUBR=	crowdsec
 
@@ -84,6 +84,9 @@ do-install:
 	@(cd ${WRKSRC}/config && ${COPYTREE_SHARE} . ${STAGEDIR}${ETCDIR})
 
 	@${MV} ${STAGEDIR}${ETCDIR}/acquis.yaml \
+		${STAGEDIR}${ETCDIR}/acquis.yaml.sample
+
+	${INSTALL_DATA} ${FILESDIR}/acquis.yaml.sample \
 		${STAGEDIR}${ETCDIR}/acquis.yaml.sample
 
 	@${MV} ${STAGEDIR}${ETCDIR}/config.yaml \
@@ -162,6 +165,7 @@ do-install:
 	@${RM} ${STAGEDIR}${ETCDIR}/context.yaml
 	@${RM} ${STAGEDIR}${ETCDIR}/detect.yaml
 	@${RM} ${STAGEDIR}${ETCDIR}/dev.yaml
+	@${RM} ${STAGEDIR}${ETCDIR}/windows-dev.yaml
 	@${RM} ${STAGEDIR}${ETCDIR}/user.yaml
 	@${RMDIR} ${STAGEDIR}${ETCDIR}/notifications/email
 	@${RMDIR} ${STAGEDIR}${ETCDIR}/notifications/http

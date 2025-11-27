@@ -1,6 +1,6 @@
---- components/feature_engagement/public/feature_constants.cc.orig	2025-08-07 06:57:29 UTC
+--- components/feature_engagement/public/feature_constants.cc.orig	2025-11-12 08:17:34 UTC
 +++ components/feature_engagement/public/feature_constants.cc
-@@ -28,7 +28,7 @@ bool IsOnDeviceStorageEnabled() {
+@@ -32,7 +32,7 @@ bool IsOnDeviceStorageEnabled() {
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -9,7 +9,7 @@
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
  BASE_FEATURE(kEsbDownloadRowPromoFeature,
               "EsbDownloadRowPromo",
-@@ -802,7 +802,7 @@ BASE_FEATURE(kDefaultBrowserTriggerCriteriaExperiment,
+@@ -846,7 +846,7 @@ BASE_FEATURE(kIPHiOSAIHubNewBadge,
  
  #endif  // BUILDFLAG(IS_IOS)
  
@@ -18,7 +18,7 @@
      BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
  BASE_FEATURE(kIPHAutofillBnplAffirmOrZipSuggestionFeature,
               "IPH_AutofillBnplAffirmOrZipSuggestion",
-@@ -958,7 +958,7 @@ BASE_FEATURE(kIPHScalableIphGamingFeature,
+@@ -1002,7 +1002,7 @@ BASE_FEATURE(kIPHScalableIphGamingFeature,
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif
  

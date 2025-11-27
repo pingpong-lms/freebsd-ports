@@ -1,6 +1,6 @@
 PORTNAME=	syncthing
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.0.2
+DISTVERSION=	2.0.11
 PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/v${DISTVERSION}/
@@ -24,13 +24,13 @@ BINS=		syncthing stdiscosrv strelaysrv strelaypoolsrv
 MAKE_ENV+=	BUILD_HOST=freebsd \
 		BUILD_USER=ports
 
+CONFLICTS_INSTALL=	syncthing1
+
 NO_CCACHE=	yes
 NO_WRKSUBDIR=	yes
 
 USERS=		syncthing
 GROUPS=		syncthing
-
-CONFLICTS=	syncthing1
 
 .for x in ${BINS}
 PLIST_FILES+=	bin/${x}

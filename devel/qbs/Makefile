@@ -1,10 +1,12 @@
 PORTNAME=	qbs
 DISTVERSIONPREFIX=	src-
-DISTVERSION=	3.0.1
-PORTREVISION=	1
+DISTVERSION=	3.1.1
 CATEGORIES=	devel
 MASTER_SITES=	QT/official_releases/${PORTNAME}/${PORTVERSION}
 DIST_SUBDIR=	KDE/Qt/qbs
+
+PATCH_SITES=	https://github.com/qbs/qbs/commit/ # Prep for Qt 6.10.x
+PATCHFILES+=	ee78fcb399ec5968a43dc0160ee40cdd5357cc1a.patch:-p1
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qbs Build Suite
@@ -26,7 +28,7 @@ PLIST_SUB=	QBS_VER="${DISTVERSION:R}" \
 OPTIONS_DEFINE=	DOCS
 
 DOCS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beautifulsoup>=4.12.2:www/py-beautifulsoup@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}lxml5>=4.9.3:devel/py-lxml5@${PY_FLAVOR}
+			${PYTHON_PKGNAMEPREFIX}lxml>=4.9.3:devel/py-lxml@${PY_FLAVOR}
 DOCS_USES=		python:build
 DOCS_USE=		QT=tools:build
 DOCS_CMAKE_BOOL=	QBS_INSTALL_HTML_DOCS \

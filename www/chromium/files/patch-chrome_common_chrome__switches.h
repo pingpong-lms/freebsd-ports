@@ -1,6 +1,6 @@
---- chrome/common/chrome_switches.h.orig	2025-08-07 06:57:29 UTC
+--- chrome/common/chrome_switches.h.orig	2025-10-30 15:44:36 UTC
 +++ chrome/common/chrome_switches.h
-@@ -276,7 +276,7 @@ extern const char kAllowNaClSocketAPI[];
+@@ -285,7 +285,7 @@ extern const char kDebugPrint[];
  #endif
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -9,8 +9,8 @@
  extern const char kEnableNewAppMenuIcon[];
  extern const char kGuest[];
  extern const char kForceNtpMobilePromo[];
-@@ -294,7 +294,7 @@ extern const char kGlicDev[];
- extern const char kGlicHostLogging[];
+@@ -305,7 +305,7 @@ extern const char kGlicHostLogging[];
+ extern const char kGlicAdminRedirectPatterns[];
  #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)

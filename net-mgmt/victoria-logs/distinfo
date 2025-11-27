@@ -1,5 +1,5 @@
-TIMESTAMP = 1755945242
-SHA256 (go/net-mgmt_victoria-logs/victoria-logs-v1.29.0/v1.29.0.mod) = ded92b9dad2d315d9fcd742843d74bd21cf1bed4eb8cc571bb01e78aff8aa788
-SIZE (go/net-mgmt_victoria-logs/victoria-logs-v1.29.0/v1.29.0.mod) = 958
-SHA256 (go/net-mgmt_victoria-logs/victoria-logs-v1.29.0/v1.29.0.zip) = deafc9762a093b6215be398e270cc2d435daa5a1d7704b698c4edaec30bbec30
-SIZE (go/net-mgmt_victoria-logs/victoria-logs-v1.29.0/v1.29.0.zip) = 2370954
+TIMESTAMP = 1763336232
+SHA256 (go/net-mgmt_victoria-logs/victoria-logs-v1.38.0/v1.38.0.mod) = 75bb3d35d6a81b687fddfb7e571fc939d754ae9b7881fee57b785ff20115a932
+SIZE (go/net-mgmt_victoria-logs/victoria-logs-v1.38.0/v1.38.0.mod) = 958
+SHA256 (go/net-mgmt_victoria-logs/victoria-logs-v1.38.0/v1.38.0.zip) = 18f886e472c8e6a4a460476c9fe7b597fca10fefe491d88088d4258cdc732f8c
+SIZE (go/net-mgmt_victoria-logs/victoria-logs-v1.38.0/v1.38.0.zip) = 3841839

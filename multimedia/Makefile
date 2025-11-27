@@ -24,6 +24,8 @@
     SUBDIR += blind
     SUBDIR += btavctpd
     SUBDIR += butt
+    SUBDIR += ccextractor
+    SUBDIR += ccextractor-gui
     SUBDIR += celluloid
     SUBDIR += cheese
     SUBDIR += chilitags
@@ -113,6 +115,7 @@
     SUBDIR += gstreamermm
     SUBDIR += gtk-pipe-viewer
     SUBDIR += gtk-youtube-viewer
+    SUBDIR += guvcview
     SUBDIR += handbrake
     SUBDIR += haruna
     SUBDIR += harvid
@@ -296,7 +299,6 @@
     SUBDIR += ptx-kmod
     SUBDIR += pwcbsd
     SUBDIR += pwcview
-    SUBDIR += py-PySceneDetect
     SUBDIR += py-av
     SUBDIR += py-cec
     SUBDIR += py-decord
@@ -315,6 +317,7 @@
     SUBDIR += py-pysubs2
     SUBDIR += py-python-mpv
     SUBDIR += py-pytube
+    SUBDIR += py-scenedetect
     SUBDIR += py-soco
     SUBDIR += py-srt
     SUBDIR += py-subliminal
@@ -364,6 +367,7 @@
     SUBDIR += syncplay
     SUBDIR += szap-s2
     SUBDIR += tautulli
+    SUBDIR += tenacity
     SUBDIR += termplay
     SUBDIR += tinyobjloader
     SUBDIR += tivodecode

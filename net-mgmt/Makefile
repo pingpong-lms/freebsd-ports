@@ -152,7 +152,6 @@
     SUBDIR += mtrace
     SUBDIR += mysql-snmp
     SUBDIR += mysqld_exporter
-    SUBDIR += nagcon
     SUBDIR += nagios
     SUBDIR += nagios-certexp-plugin
     SUBDIR += nagios-check_bacula13
@@ -192,8 +191,6 @@
     SUBDIR += netbox
     SUBDIR += netbox-agent
     SUBDIR += netdata
-    SUBDIR += netdata-go
-    SUBDIR += netdisco
     SUBDIR += netdisco-mibs
     SUBDIR += netleak
     SUBDIR += netmagis-common
@@ -228,6 +225,7 @@
     SUBDIR += ocsinventory-agent
     SUBDIR += ocsinventory-ocsreports
     SUBDIR += ocsinventory-server
+    SUBDIR += omada5
     SUBDIR += omping
     SUBDIR += openbmp
     SUBDIR += openlldp
@@ -298,6 +296,7 @@
     SUBDIR += pandorafms_agent
     SUBDIR += pandorafms_console
     SUBDIR += pandorafms_server
+    SUBDIR += peering-manager
     SUBDIR += pftabled
     SUBDIR += php-fpm_exporter
     SUBDIR += php81-snmp
@@ -345,6 +344,7 @@
     SUBDIR += py-pyIOSXR
     SUBDIR += py-pyang
     SUBDIR += py-pyeapi
+    SUBDIR += py-pyixapi
     SUBDIR += py-pynetbox
     SUBDIR += py-pynxos
     SUBDIR += py-pypowerwall
@@ -389,6 +389,7 @@
     SUBDIR += seafile-server
     SUBDIR += semaphore
     SUBDIR += sendip
+    SUBDIR += simplomon
     SUBDIR += sipcalc
     SUBDIR += sjitter
     SUBDIR += smartctl_exporter

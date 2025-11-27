@@ -1,6 +1,6 @@
---- content/browser/browser_main_loop.cc.orig	2025-05-07 06:48:23 UTC
+--- content/browser/browser_main_loop.cc.orig	2025-11-06 10:11:34 UTC
 +++ content/browser/browser_main_loop.cc
-@@ -249,6 +249,12 @@
+@@ -253,6 +253,12 @@
  #include "mojo/public/cpp/bindings/lib/test_random_mojo_delays.h"
  #endif
  

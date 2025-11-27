@@ -1,7 +1,6 @@
 PORTNAME=	buildah
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.40.1
-PORTREVISION=	1
+DISTVERSION=	1.42.1
 CATEGORIES=	sysutils
 
 MAINTAINER=	dfr@FreeBSD.org
@@ -20,7 +19,7 @@ RUN_DEPENDS=	containernetworking-plugins>=0:net/containernetworking-plugins \
 		containers-common>=0:sysutils/containers-common \
 		ocijail:sysutils/ocijail
 
-USES=		gmake go:no_targets,1.23 pkgconfig
+USES=		gmake go:no_targets,1.24 pkgconfig
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	containers
