@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-app
-PORTVERSION=	2.0
+PORTVERSION=	2.2
 CATEGORIES=	pingpong
 MASTER_SITES=	#
 DISTFILES=	#
@@ -27,7 +27,6 @@ RUN_DEPENDS= \
 	${LOCALBASE}/${APACHEMODDIR}/mod_jk.so:www/mod_jk \
 	${LOCALBASE}/${APACHEMODDIR}/mod_xsendfile.so:www/mod_xsendfile \
 	latex2html:textproc/latex2html \
-	html2ps:print/html2ps \
 	ant:devel/apache-ant \
 	npm-node18>=0:www/npm-node18 \
 	clamd:security/clamav \
