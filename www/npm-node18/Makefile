@@ -3,6 +3,6 @@ EXPIRATION_DATE=2025-09-01
 
 USES=		nodejs:18,run
 
-MASTERDIR=	${.CURDIR}/../npm-node22
+MASTERDIR=	${.CURDIR}/../npm-node24
 
 .include "${MASTERDIR}/Makefile"
