@@ -82,6 +82,7 @@
     SUBDIR += chrony-lite
     SUBDIR += citrix_ica
     SUBDIR += cjdns
+    SUBDIR += claws
     SUBDIR += cloud-init
     SUBDIR += cloud-init-devel
     SUBDIR += cloudflared
@@ -237,7 +238,6 @@
     SUBDIR += gupnp-igd
     SUBDIR += gupnp-tools
     SUBDIR += gutenfetch
-    SUBDIR += gwhois
     SUBDIR += h323plus
     SUBDIR += hanstunnel
     SUBDIR += haproxy
@@ -995,9 +995,6 @@
     SUBDIR += pecl-smbclient
     SUBDIR += pecl-xmlrpc
     SUBDIR += pen
-    SUBDIR += php81-ldap
-    SUBDIR += php81-soap
-    SUBDIR += php81-sockets
     SUBDIR += php82-ldap
     SUBDIR += php82-soap
     SUBDIR += php82-sockets
@@ -1077,6 +1074,7 @@
     SUBDIR += py-haproxy-log-analysis
     SUBDIR += py-haproxyctl
     SUBDIR += py-httpstat
+    SUBDIR += py-icmplib
     SUBDIR += py-ifaddr
     SUBDIR += py-impacket
     SUBDIR += py-iplib
@@ -1098,7 +1096,6 @@
     SUBDIR += py-msrplib
     SUBDIR += py-ndg-httpsclient
     SUBDIR += py-netaddr
-    SUBDIR += py-netif
     SUBDIR += py-netifaces
     SUBDIR += py-netifaces-plus
     SUBDIR += py-netsnmpagent
@@ -1133,6 +1130,7 @@
     SUBDIR += py-pysmb
     SUBDIR += py-pysocks
     SUBDIR += py-pystun
+    SUBDIR += py-pystun3
     SUBDIR += py-python-barbicanclient
     SUBDIR += py-python-bitcoinrpc
     SUBDIR += py-python-cinderclient
@@ -1237,6 +1235,7 @@
     SUBDIR += read_bbrlog
     SUBDIR += realtek-re-kmod
     SUBDIR += realtek-re-kmod198
+    SUBDIR += realtek-rge-kmod
     SUBDIR += reaver
     SUBDIR += recvnet
     SUBDIR += redir
@@ -1496,6 +1495,7 @@
     SUBDIR += samba419
     SUBDIR += samba420
     SUBDIR += samba422
+    SUBDIR += samba423
     SUBDIR += samplicator
     SUBDIR += savvycan
     SUBDIR += sbm
@@ -1655,6 +1655,7 @@
     SUBDIR += usbredir
     SUBDIR += usockets
     SUBDIR += utftpd
+    SUBDIR += uvgrtp
     SUBDIR += v2ray
     SUBDIR += vde
     SUBDIR += vde2

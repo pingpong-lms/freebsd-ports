@@ -209,7 +209,6 @@
     SUBDIR += doom-wolfendoom
     SUBDIR += doomlegacy
     SUBDIR += doomsday
-    SUBDIR += dose-response
     SUBDIR += dreamchess
     SUBDIR += duel
     SUBDIR += dunelegacy
@@ -435,7 +434,6 @@
     SUBDIR += kbreakout
     SUBDIR += kdegames
     SUBDIR += kdiamond
-    SUBDIR += keeperrl
     SUBDIR += kevedit
     SUBDIR += kfourinline
     SUBDIR += kgoldrunner
@@ -867,7 +865,6 @@
     SUBDIR += rezerwar
     SUBDIR += rfksay
     SUBDIR += ri-li
-    SUBDIR += rlvm
     SUBDIR += rnd_jue
     SUBDIR += robocode
     SUBDIR += robocode-naval

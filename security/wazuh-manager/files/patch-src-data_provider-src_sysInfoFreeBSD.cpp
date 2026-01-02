@@ -1,15 +1,22 @@
---- src/data_provider/src/sysInfoFreeBSD.cpp	2025-01-15 06:26:54.000000000 -0800
-+++ src/data_provider/src/sysInfoFreeBSD.cpp	2025-02-17 14:38:11.834720000 -0800
-@@ -11,6 +11,7 @@
+--- src/data_provider/src/sysInfoFreeBSD.cpp	2025-11-07 00:46:03.000000000 -0800
++++ src/data_provider/src/sysInfoFreeBSD.cpp	2026-01-01 13:18:42.411755000 -0800
+@@ -11,20 +11,28 @@
  #include "sysInfo.hpp"
  #include "cmdHelper.h"
  #include "stringHelper.h"
 +#include "timeHelper.h"
  #include "osinfo/sysOsParsers.h"
++#include "sqliteWrapperTemp.h"
++#include "filesystemHelper.h"
  #include <sys/sysctl.h>
  #include <sys/vmmeter.h>
-@@ -19,12 +20,13 @@
+ #include <sys/utsname.h>
+ #include "sharedDefs.h"
++#include <regex>
  
++const std::string PKG_DB_PATHNAME {"/var/db/pkg/local.sqlite"};
++const std::string PKG_QUERY {"SELECT p.name, p.maintainer, p.version, p.arch, p.comment, p.flatsize, p.time, v.annotation AS repository,p.origin FROM packages p LEFT JOIN (SELECT pa.package_id, pa.value_id FROM pkg_annotation pa JOIN annotation t ON t.annotation_id = pa.tag_id AND t.annotation = 'repository') pr ON pr.package_id = p.id LEFT JOIN annotation v ON v.annotation_id = pr.value_id;"};
++
  static void getMemory(nlohmann::json& info)
  {
 +    constexpr auto vmFree{"vm.stats.vm.v_free_count"};
@@ -25,7 +32,7 @@
  
      if (ret)
      {
-@@ -52,11 +54,23 @@
+@@ -52,11 +60,23 @@
          };
      }
  
@@ -52,7 +59,7 @@
  
      if (ret)
      {
-@@ -64,11 +78,11 @@
+@@ -64,11 +84,11 @@
          {
              ret,
              std::system_category(),
@@ -66,7 +73,7 @@
      info["ram_free"] = ramFree;
      info["ram_usage"] = 100 - (100 * ramFree / ramTotal);
  }
-@@ -184,8 +198,12 @@
+@@ -184,8 +204,12 @@
  
  nlohmann::json SysInfo::getProcessesInfo() const
  {
@@ -81,7 +88,7 @@
  }
  
  nlohmann::json SysInfo::getOsInfo() const
-@@ -196,11 +214,12 @@
+@@ -196,11 +220,12 @@
  
      if (!spParser->parseUname(Utils::exec("uname -r"), ret))
      {
@@ -95,108 +102,169 @@
      if (uname(&uts) >= 0)
      {
          ret["sysname"] = uts.sysname;
-@@ -215,18 +234,145 @@
+@@ -215,43 +240,256 @@
  
  nlohmann::json SysInfo::getPorts() const
  {
 -    // Currently not supported for this OS.
 -    return nlohmann::json {};
-+    const auto query{Utils::exec(R"(sockstat -46qs)")};
-+
-+    /* USER COMMAND PID FD PROTO LOCAL_ADDRESS FOREIGN_ADDRESS PATH_STATE CONN_STATE */
-+
+-}
 +    nlohmann::json ports {};
-+
++    
++    /* USER COMMAND PID FD PROTO LOCAL_ADDRESS FOREIGN_ADDRESS PATH_STATE CONN_STATE */
++    
++#if __FreeBSD_version > 1500045
++    const auto query{exec(R"(sockstat -46qs --libxo json)")};
+ 
+-void SysInfo::getProcessesInfo(std::function<void(nlohmann::json&)> /*callback*/) const
+-{
+-    // Currently not supported for this OS.
 +    if (!query.empty())
 +    {
-+        const auto lines{Utils::split(Utils::trimToOneSpace(query), '\n')};
++        nlohmann::json portsjson;
++        portsjson = nlohmann::json::parse(query);
++        auto &portsResult = portsjson["sockstat"]["socket"];
 +
-+        for (const auto& line : lines)
-+        {
++        for(auto &port : portsResult) {
 +            std::string localip = "";
 +            std::string localport = "";
 +            std::string remoteip = "";
 +            std::string remoteport = "";
 +            std::string statedata = "";
 +
-+            const auto data{Utils::split(line, ' ')};
-+            auto localdata{Utils::split(data[5], ':')};
-+            auto remotedata{Utils::split(data[6], ':')};
++            if (port["pid"] != nullptr) {
 +
-+            localip = localdata[0];
-+            localport = localdata[1];
-+            remoteip = remotedata[0];
-+            remoteport = remotedata[1];
++                localip = port["local"]["address"];
++                remoteip = port["foreign"]["address"];
++                statedata = port["conn-state"] != nullptr ? (port["conn-state"] == "LISTEN" ? "listening" : Utils::toLowerCase(port["conn-state"])) : statedata;
 +
-+            if((data[4] != "udp4") && (data[4] != "udp6") && (data[4] != "udp46")) {
-+              statedata = Utils::toLowerCase(data[7]);
-+            }
++                if (port["local"]["address"] == "*") {
++                    if ((port["proto"] == "udp4") || (port["proto"] == "tcp4")) {
++                        localip = "0.0.0.0";
++                    } else {
++                        localip = "::";
++                    }
++                }
 +
-+            if(statedata == "listen") {
-+              statedata = "listening";
-+            }
++                localport = port["local"]["port"];
 +
-+            if(localdata.size() == 4) {
-+              localip = localdata[0] + ":"+ localdata[1] + ":" + localdata[2];
-+              localport = localdata[3];
-+            }
++                if (port["foreign"]["address"] == "*") {
++                    if ((port["proto"] == "udp4") || (port["proto"] == "tcp4")) {
++                        remoteip = 0.0.0.0;
++                    } else {
++                        remoteip = "::";
++                    }
++                }
 +
-+            if(localip == "*") {
-+              if((data[4] == "tcp6") || (data[4] == "udp6")) {
-+                localip = "0:0:0:0:0:0:0:0";
-+              } else if((data[4] == "tcp4") || (data[4] == "udp4")) {
-+                localip = "0.0.0.0";
-+              }
-+            }
++                remoteport = port["foreign"]["port"];
 +
-+            if(localport == "*") {
-+              localport = "0";
-+            }
++                nlohmann::json portRecord {};
 +
-+            if(remotedata.size() == 4) {
-+              remoteip = remotedata[0] + ":"+ remotedata[1] + ":" + remotedata[2];
-+              remoteport = remotedata[3];
-+            }
++                portRecord["protocol"] = port["proto"];
++                portRecord["local_ip"] = localip;
++                portRecord["local_port"] = localport == "*" ? "0" : localport;
++                portRecord["remote_ip"] = remoteip;
++                portRecord["remote_port"] = remoteport == "*" ? "0" : remoteport;
++                portRecord["tx_queue"] = 0;
++                portRecord["rx_queue"] = 0;
++                portRecord["inode"] = port["fd"];
++                portRecord["state"] = statedata == "??" ? "" : statedata;
++                portRecord["pid"] = port["pid"];
++                portRecord["process"] = port["command"];
 +
-+            if(remoteport == "*") {
-+                remoteip = "";
-+                remoteport = "0";
-+            }
-+
-+            if(data[0] != "?") {
-+              nlohmann::json port {};
-+              port["protocol"] = data[4];
-+              port["local_ip"] = localip;
-+              port["local_port"] = localport;
-+              port["remote_ip"] = remoteip;
-+              port["remote_port"] = remoteport;
-+              port["tx_queue"] = 0;
-+              port["rx_queue"] = 0;
-+              port["inode"] = data[3];
-+              port["state"] = statedata;
-+              port["pid"] = data[2];
-+              port["process"] = data[1];
-+
-+              ports.push_back(port);
-+            }
++                ports.push_back(portRecord);
++             }
 +        }
 +    }
-+
-+    return ports;
- }
- 
--void SysInfo::getProcessesInfo(std::function<void(nlohmann::json&)> /*callback*/) const
-+void SysInfo::getProcessesInfo(std::function<void(nlohmann::json&)> callback) const
- {
--    // Currently not supported for this OS.
-+    const auto query{Utils::exec(R"(ps -ax -w -o pid,comm,state,ppid,usertime,systime,user,ruser,svuid,group,rgroup,svgid,pri,nice,ssiz,vsz,rss,pmem,etimes,sid,pgid,tpgid,tty,cpu,nlwp,args --libxo json)")};
++#else
++    const auto query{Utils::exec(R"(sockstat -46qs)")};
 +
 +    if (!query.empty())
 +    {
++        const auto lines{Utils::split(Utils::trimToOneSpace(query), '\n')};
++
++        std::regex expression(R"(^(\S+)\s+(\S+)\s+(\d+)\s+(\d+)\s*(\S+)\s+(\S+)\s+(\S+)(?:\s+(\S+))?\s*$)");
++
++        for (const auto& line : lines)
++        {
++            std::smatch data;
++
++            if (std::regex_search(line, data, expression))
++            {
++                std::string localip = "";
++                std::string localport = "";
++                std::string remoteip = "";
++                std::string remoteport = "";
++                std::string statedata = "";
++
++                auto localdata{Utils::split(data[6], ':')};
++                auto remotedata{Utils::split(data[7], ':')};
++
++                if (data[8].matched ) {
++                  statedata = data[8] == "LISTEN" ? "listening" : Utils::toLowerCase(data[8]);
++                }
++
++                localport = localdata[localdata.size() - 1];
++                localdata.pop_back();
++                localip = Utils::join(localdata, ":");
++                remoteport = remotedata[remotedata.size() - 1];
++                remotedata.pop_back();
++                remoteip = Utils::join(remotedata, ":");
++
++                if(localip == "*") {
++                    if((data[5] == "tcp4") || (data[5] == "udp4")) {
++                        localip = "0.0.0.0";
++                    } else {
++                        localip = "::";
++                    }
++                 }
++
++                if(remoteip == "*") {
++                    if((data[5] == "tcp4") || (data[5] == "udp4")) {
++                        remoteip = "0.0.0.0";
++                    } else {
++                        remoteip = "::";
++                    }
++                 }
++
++                if(data[0] != "?") {
++                    nlohmann::json port {};
++
++                    port["protocol"] = data[5];
++                    port["local_ip"] = localip;
++                    port["local_port"] = localport == "*" ? "0" : localport;
++                    port["remote_ip"] = remoteip;
++                    port["remote_port"] = remoteport == "*" ? "0" : remoteport;
++                    port["tx_queue"] = 0;
++                    port["rx_queue"] = 0;
++                    port["inode"] = data[4];
++                    port["state"] = statedata == "??" ? "" : statedata;
++                    port["pid"] = data[3];
++                    port["process"] = data[2];
++
++                    ports.push_back(port);
++                }
++            }
++        }  
++    }
++#endif
++    return ports;
+ }
+ 
+-void SysInfo::getPackages(std::function<void(nlohmann::json&)> callback) const
++void SysInfo::getProcessesInfo(std::function<void(nlohmann::json&)> callback) const
+ {
+-    const auto query{Utils::exec(R"(pkg query -a "%n|%m|%v|%q|%c")")};
++    const auto query{Utils::exec(R"(ps -ax -w -o pid,comm,state,ppid,usertime,systime,user,ruser,svuid,group,rgroup,svgid,pri,nice,ssiz,vsz,rss,pmem,etimes,sid,pgid,tpgid,tty,cpu,nlwp,args --libxo json)")};
+ 
+     if (!query.empty())
+     {
+-        const auto lines{Utils::split(query, '\n')};
 +      nlohmann::json psjson;
 +      psjson = nlohmann::json::parse(query);
 +      auto &processes = psjson["process-information"]["process"];
-+
+ 
+-        for (const auto& line : lines)
 +      for(auto &process : processes) {
 +          std::string user_time{""};
 +          std::string system_time{""};
@@ -237,39 +305,83 @@
 +          callback(jsProcessInfo);
 +      }
 +    }
- }
- 
- void SysInfo::getPackages(std::function<void(nlohmann::json&)> callback) const
- {
--    const auto query{Utils::exec(R"(pkg query -a "%n|%m|%v|%q|%c")")};
-+    const auto query{Utils::exec(R"(pkg query -a "%n|%m|%v|%q|%c|%sb|%t|%R|%o")")};
- 
-     if (!query.empty())
-     {
-@@ -235,18 +381,22 @@
-         for (const auto& line : lines)
-         {
-             const auto data{Utils::split(line, '|')};
-+            const auto archdata{Utils::split(data[3], ':')};
-+            const auto sectiondata{Utils::split(data[8], '/')};
++}
 +
-             nlohmann::json package;
-             package["name"] = data[0];
-             package["vendor"] = data[1];
-             package["version"] = data[2];
--            package["install_time"] = UNKNOWN_VALUE;
-+            package["install_time"] = data[6];
-             package["location"] = UNKNOWN_VALUE;
--            package["architecture"] = data[3];
-+            package["architecture"] = archdata[2];
-             package["groups"] = UNKNOWN_VALUE;
-             package["description"] = data[4];
--            package["size"] = 0;
-+            package["size"] = data[5];
-             package["priority"] = UNKNOWN_VALUE;
--            package["source"] = UNKNOWN_VALUE;
-+            package["source"] = data[7];
-+            package["section"] = sectiondata[0];
-             package["format"] = "pkg";
-             // The multiarch field won't have a default value
++void SysInfo::getPackages(std::function<void(nlohmann::json&)> callback) const
++{
++    if (Utils::existsRegular(PKG_DB_PATHNAME))
++    {
++        try
+         {
+-            const auto data{Utils::split(line, '|')};
+-            nlohmann::json package;
++            std::shared_ptr<SQLite::IConnection> sqliteConnection = std::make_shared<SQLite::Connection>(PKG_DB_PATHNAME, SQLITE_OPEN_READONLY);
  
+-            package["name"] = data[0];
+-            package["vendor"] = data[1];
+-            package["version"] = data[2];
+-            package["install_time"] = UNKNOWN_VALUE;
+-            package["location"] = UNKNOWN_VALUE;
+-            package["architecture"] = data[3];
+-            package["groups"] = UNKNOWN_VALUE;
+-            package["description"] = data[4];
+-            package["size"] = 0;
+-            package["priority"] = UNKNOWN_VALUE;
+-            package["source"] = UNKNOWN_VALUE;
+-            package["format"] = "pkg";
+-            // The multiarch field won't have a default value
++            SQLite::Statement stmt
++            {
++                sqliteConnection,
++                PKG_QUERY
++            };
+ 
+-            callback(package);
++            while (SQLITE_ROW == stmt.step())
++            {
++                try
++                {
++                    auto pkg_name{ stmt.column(0) };
++                    auto pkg_maintainer{ stmt.column(1) };
++                    auto pkg_version{ stmt.column(2) };
++                    auto pkg_arch{ stmt.column(3) };
++                    auto pkg_comment{ stmt.column(4) };
++                    auto pkg_flatsize{ stmt.column(5) };
++                    auto pkg_time{ stmt.column(6) };
++                    auto pkg_repository{ stmt.column(7) };
++                    auto pkg_origin{ stmt.column(8) };
++
++                    const auto archdata{Utils::split(pkg_arch->value(std::string{}), ':')};
++                    const auto sectiondata{Utils::split(pkg_origin->value(std::string{}), '/')};
++
++                    nlohmann::json package;
++
++                    package["name"] = pkg_name->value(std::string{});
++                    package["vendor"] = pkg_maintainer->value(std::string{});
++                    package["version"] = pkg_version->value(std::string{});
++                    package["install_time"] = pkg_time->value(std::string{});
++                    package["location"] = UNKNOWN_VALUE;
++                    package["architecture"] = archdata[2];
++                    package["groups"] = UNKNOWN_VALUE;
++                    package["description"] = pkg_comment->value(std::string{});
++                    package["size"] = pkg_flatsize->value(uint64_t{});
++                    package["priority"] = UNKNOWN_VALUE;
++                    package["source"] = pkg_repository->value(std::string{});
++                    package["section"] = sectiondata[0];
++                    package["format"] = "pkg";
++                    // The multiarch field won't have a default value
++
++                    callback(package);
++                }
++                catch (const std::exception& e)
++                {
++                    std::cerr << e.what() << std::endl;
++                }
++            }
++        }
++        catch (const std::exception& e)
++        {
++            std::cerr << e.what() << std::endl;
+         }
+     }
+ }

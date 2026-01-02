@@ -36,6 +36,7 @@
     SUBDIR += assh
     SUBDIR += authenticator
     SUBDIR += authoscope
+    SUBDIR += autofirma
     SUBDIR += autossh
     SUBDIR += aws-c-auth
     SUBDIR += aws-c-cal
@@ -98,7 +99,6 @@
     SUBDIR += clamav-unofficial-sigs
     SUBDIR += clamd-stream-client
     SUBDIR += clamsmtp
-    SUBDIR += clamtk
     SUBDIR += cloak
     SUBDIR += cops
     SUBDIR += cosign
@@ -253,6 +253,7 @@
     SUBDIR += kc
     SUBDIR += kdbxviewer
     SUBDIR += keepass
+    SUBDIR += keepass-diff
     SUBDIR += keepass-plugin-keepassrpc
     SUBDIR += keepassxc
     SUBDIR += keepassxc276
@@ -272,7 +273,6 @@
     SUBDIR += kpkpass
     SUBDIR += kpmenu
     SUBDIR += krb5
-    SUBDIR += krb5-120
     SUBDIR += krb5-121
     SUBDIR += krb5-122
     SUBDIR += krb5-devel
@@ -404,7 +404,6 @@
     SUBDIR += netbird
     SUBDIR += nettle
     SUBDIR += nextcloud-end_to_end_encryption
-    SUBDIR += nextcloud-passman
     SUBDIR += nextcloud-twofactor_admin
     SUBDIR += nextcloud-twofactor_webauthn
     SUBDIR += nflib
@@ -828,8 +827,6 @@
     SUBDIR += pgpdump
     SUBDIR += pgpgpg
     SUBDIR += pgpin
-    SUBDIR += php81-filter
-    SUBDIR += php81-sodium
     SUBDIR += php82-filter
     SUBDIR += php82-sodium
     SUBDIR += php83-filter
@@ -1124,7 +1121,6 @@
     SUBDIR += rhash
     SUBDIR += ridl
     SUBDIR += rifiuti2
-    SUBDIR += rkhunter
     SUBDIR += rndpassw
     SUBDIR += rnp
     SUBDIR += rotate
@@ -1220,6 +1216,7 @@
     SUBDIR += rubygem-openssl-ccm
     SUBDIR += rubygem-openssl-cmac
     SUBDIR += rubygem-openssl-signature_algorithm
+    SUBDIR += rubygem-openssl3
     SUBDIR += rubygem-openvas-omp
     SUBDIR += rubygem-origami
     SUBDIR += rubygem-pbkdf2-ruby
@@ -1375,7 +1372,6 @@
     SUBDIR += tinc
     SUBDIR += tinc-devel
     SUBDIR += tinyca
-    SUBDIR += tls-check
     SUBDIR += tlsc
     SUBDIR += tor
     SUBDIR += totp-cli

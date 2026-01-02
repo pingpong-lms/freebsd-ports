@@ -1,5 +1,6 @@
 PORTNAME=	abc
-DISTVERSION=	g202511104
+DISTVERSION=	g20251226
+PORTEPOCH=	1
 CATEGORIES=	cad
 
 MAINTAINER=	alven@FreeBSD.org
@@ -10,12 +11,15 @@ WWW=		https://people.eecs.berkeley.edu/~alanmi/abc/ \
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/copyright.txt
 
+NOT_FOR_ARCHS=	i386
+NOT_FOR_ARCHS_REASON=	__int128 is not supported on this target
+
 BUILD_DEPENDS=	gmake:devel/gmake
 
 USES=		cmake
 USE_GITHUB=	yes
 GH_ACCOUNT=	berkeley-abc
-GH_TAGNAME=	474e7fbe
+GH_TAGNAME=	91e806ff
 USE_LDCONFIG=	yes
 
 CMAKE_ON=	ABC_SKIP_TESTS

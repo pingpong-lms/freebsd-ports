@@ -31,7 +31,6 @@
     SUBDIR += calindori
     SUBDIR += cartotheque
     SUBDIR += cfiles
-    SUBDIR += charmtimetracker
     SUBDIR += chart
     SUBDIR += cherrytree
     SUBDIR += clipit
@@ -260,7 +259,6 @@
     SUBDIR += rubygem-taskjuggler
     SUBDIR += rwpspread
     SUBDIR += semantik
-    SUBDIR += showdown
     SUBDIR += sigi
     SUBDIR += simpleagenda
     SUBDIR += skim
@@ -324,7 +322,6 @@
     SUBDIR += zanshin
     SUBDIR += zim
     SUBDIR += zk
-    SUBDIR += znotes
     SUBDIR += zorro
 
 .include <bsd.port.subdir.mk>

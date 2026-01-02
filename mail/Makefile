@@ -217,6 +217,7 @@
     SUBDIR += mairix
     SUBDIR += masqmail
     SUBDIR += mb2md
+    SUBDIR += mbar
     SUBDIR += mblaze
     SUBDIR += mbox2imap
     SUBDIR += mbox2mdir
@@ -256,7 +257,6 @@
     SUBDIR += msglint
     SUBDIR += msmtp
     SUBDIR += mu
-    SUBDIR += mu4e-maildirs
     SUBDIR += mulberry
     SUBDIR += mutt
     SUBDIR += mutt_vc_query
@@ -472,7 +472,6 @@
     SUBDIR += perdition
     SUBDIR += pflogsumm
     SUBDIR += pfqueue
-    SUBDIR += php81-imap
     SUBDIR += php82-imap
     SUBDIR += php83-imap
     SUBDIR += phplist

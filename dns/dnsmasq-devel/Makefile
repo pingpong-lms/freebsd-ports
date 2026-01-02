@@ -1,13 +1,13 @@
 PORTNAME=	dnsmasq
-DISTVERSION=	2.92test21 # remember to bump PORTEPOCH when going from test to rc!
+DISTVERSION=	2.92rc3 # remember to bump PORTEPOCH when going from test to rc!
 # Leave the PORTREVISION in even if 0 to avoid accidental PORTEPOCH bumps:
-PORTREVISION=	1
-PORTEPOCH=	6
+PORTREVISION=	2
+PORTEPOCH=	7
 CATEGORIES=	dns
-#MASTER_SITES=	LOCAL/mandree/ \
-#		https://www.thekelleys.org.uk/dnsmasq/release-candidates/
 MASTER_SITES=	LOCAL/mandree/ \
-		https://www.thekelleys.org.uk/dnsmasq/test-releases/
+		https://www.thekelleys.org.uk/dnsmasq/release-candidates/
+#MASTER_SITES=	LOCAL/mandree/ \
+#		https://www.thekelleys.org.uk/dnsmasq/test-releases/
 PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	mandree@FreeBSD.org
@@ -55,6 +55,8 @@ CFLAGS+=	-Wno-unused-function -Wno-unused-parameter \
 CPPFLAGS+=	-I${LOCALBASE}/include
 
 CONFLICTS_INSTALL=	dnsmasq-2*
+
+PATCH_STRIP=	-p1
 
 SUB_FILES=	pkg-message
 

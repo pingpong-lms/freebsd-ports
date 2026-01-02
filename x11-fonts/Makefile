@@ -128,7 +128,6 @@
     SUBDIR += genseki
     SUBDIR += gensen
     SUBDIR += gentium
-    SUBDIR += gentium-basic
     SUBDIR += gentium-book
     SUBDIR += gentium-plus-compact
     SUBDIR += genwan
@@ -278,7 +277,6 @@
     SUBDIR += paratype
     SUBDIR += pcf2bdf
     SUBDIR += plex-ttf
-    SUBDIR += powerline-fonts
     SUBDIR += prociono
     SUBDIR += profont
     SUBDIR += proggy_fonts
@@ -304,6 +302,7 @@
     SUBDIR += py-glyphsLib
     SUBDIR += py-opentype-sanitizer
     SUBDIR += py-opentypespec
+    SUBDIR += py-rendercv-fonts
     SUBDIR += py-shaperglot
     SUBDIR += py-ufo2ft
     SUBDIR += py-ufoLib
@@ -333,6 +332,7 @@
     SUBDIR += tlwg-ttf
     SUBDIR += tmu
     SUBDIR += tt2020
+    SUBDIR += ttf-ancient-fonts
     SUBDIR += tv-fonts
     SUBDIR += twemoji-color-font-ttf
     SUBDIR += ubuntu-font

@@ -398,7 +398,6 @@
     SUBDIR += jpeg-turbo
     SUBDIR += jpeginfo
     SUBDIR += jpegoptim
-    SUBDIR += jpgtn
     SUBDIR += jslice
     SUBDIR += kamera
     SUBDIR += kamerka
@@ -556,6 +555,7 @@
     SUBDIR += linux-rl9-cairo-gobject
     SUBDIR += linux-rl9-dri
     SUBDIR += linux-rl9-gdk-pixbuf2
+    SUBDIR += linux-rl9-glx-utils
     SUBDIR += linux-rl9-graphene
     SUBDIR += linux-rl9-graphite2
     SUBDIR += linux-rl9-imageformats-libs
@@ -590,6 +590,7 @@
     SUBDIR += mapnik
     SUBDIR += mapserver
     SUBDIR += mapyrus
+    SUBDIR += materialx
     SUBDIR += matplotlib-cpp
     SUBDIR += matplotplusplus
     SUBDIR += meh
@@ -684,7 +685,6 @@
     SUBDIR += optar
     SUBDIR += optipng
     SUBDIR += osg
-    SUBDIR += osgearth
     SUBDIR += ospray
     SUBDIR += ospray-studio
     SUBDIR += ossim
@@ -772,7 +772,6 @@
     SUBDIR += p5-Image-OCR-Tesseract
     SUBDIR += p5-Image-PBMlib
     SUBDIR += p5-Image-PNG-Libpng
-    SUBDIR += p5-Image-PNG-QRCode
     SUBDIR += p5-Image-Pngslimmer
     SUBDIR += p5-Image-Sane
     SUBDIR += p5-Image-Scale
@@ -832,8 +831,6 @@
     SUBDIR += phototonic
     SUBDIR += php-facedetect
     SUBDIR += php-geos
-    SUBDIR += php81-exif
-    SUBDIR += php81-gd
     SUBDIR += php82-exif
     SUBDIR += php82-gd
     SUBDIR += php83-exif
@@ -925,6 +922,7 @@
     SUBDIR += py-dj52-sorl-thumbnail
     SUBDIR += py-django-easy-thumbnails
     SUBDIR += py-djvulibre
+    SUBDIR += py-easyocr
     SUBDIR += py-exifread
     SUBDIR += py-f3d
     SUBDIR += py-face_recognition
@@ -979,6 +977,7 @@
     SUBDIR += py-optimize-images
     SUBDIR += py-osmnet
     SUBDIR += py-pandana
+    SUBDIR += py-pandarm
     SUBDIR += py-pdf2image
     SUBDIR += py-photocollage
     SUBDIR += py-piexif
@@ -1008,6 +1007,7 @@
     SUBDIR += py-pymaging
     SUBDIR += py-pymaging-png
     SUBDIR += py-pyocr
+    SUBDIR += py-pyogrio
     SUBDIR += py-pypillowfight
     SUBDIR += py-pyproj
     SUBDIR += py-pyqrcode
@@ -1030,8 +1030,8 @@
     SUBDIR += py-rasterstats
     SUBDIR += py-rawkit
     SUBDIR += py-rawpy
-    SUBDIR += py-rlpycairo
     SUBDIR += py-rich-pixels
+    SUBDIR += py-rlpycairo
     SUBDIR += py-s2
     SUBDIR += py-scikit-image
     SUBDIR += py-seqdiag
@@ -1199,7 +1199,6 @@
     SUBDIR += squish
     SUBDIR += ssocr
     SUBDIR += sswf
-    SUBDIR += stamp
     SUBDIR += svgalib
     SUBDIR += svgbob
     SUBDIR += svgpp
@@ -1229,7 +1228,6 @@
     SUBDIR += tslib
     SUBDIR += ttygif
     SUBDIR += ttyplot
-    SUBDIR += tumble
     SUBDIR += tweeny
     SUBDIR += ufraw
     SUBDIR += unpaper

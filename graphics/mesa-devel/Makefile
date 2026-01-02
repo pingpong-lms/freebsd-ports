@@ -1,6 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	25.3-branchpoint-1394
-DISTVERSIONSUFFIX=	-g80db8171deb
+DISTVERSION=	25.3-branchpoint-2892
+DISTVERSIONSUFFIX=	-g7ed6679361f
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -21,6 +21,7 @@ ONLY_FOR_ARCHS_REASON=	Limited scope: no old drivers and no software rendering. 
 			See also https://mesamatrix.net/
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyyaml>0:devel/py-pyyaml@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}packaging>0:devel/py-packaging@${PY_FLAVOR} \
 		libglvnd>=1.3.2:graphics/libglvnd \
 		${PYTHON_PKGNAMEPREFIX}mako>0:textproc/py-mako@${PY_FLAVOR}
 LIB_DEPENDS=	libdrm.so:graphics/libdrm \
@@ -68,8 +69,7 @@ crocus_DESC=		Broadwater, Eaglelake, Ironlake, Sandybridge, Ivybridge, Haswell
 iris_DESC=		Broadwell and newer (implies OPENCL)
 iris_IMPLIES=		OPENCL
 panfrost_DESC=		Midgard, Bifrost
-r600_DESC=		R600, R700, Evergreen, Northern Islands (implies LLVM)
-r600_IMPLIES=		LLVM
+r600_DESC=		R600, R700, Evergreen, Northern Islands
 radeonsi_DESC=		Southern Islands and newer
 
 VULKAN_DESC=		Vulkan drivers

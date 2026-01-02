@@ -492,6 +492,7 @@
     SUBDIR += ltl2ba
     SUBDIR += m4ri
     SUBDIR += m4rie
+    SUBDIR += manifold
     SUBDIR += mate-calc
     SUBDIR += math77
     SUBDIR += mathex
@@ -641,7 +642,6 @@
     SUBDIR += octave-forge-octproj
     SUBDIR += octave-forge-odbc
     SUBDIR += octave-forge-odebvp
-    SUBDIR += octave-forge-onsas
     SUBDIR += octave-forge-optics
     SUBDIR += octave-forge-optim
     SUBDIR += octave-forge-optiminterp
@@ -895,8 +895,6 @@
     SUBDIR += petanque
     SUBDIR += petiga
     SUBDIR += pffft
-    SUBDIR += php81-bcmath
-    SUBDIR += php81-gmp
     SUBDIR += php82-bcmath
     SUBDIR += php82-gmp
     SUBDIR += php83-bcmath
@@ -1165,7 +1163,6 @@
     SUBDIR += qxfun
     SUBDIR += randlib
     SUBDIR += rankwidth
-    SUBDIR += rapid
     SUBDIR += readstat
     SUBDIR += reduce
     SUBDIR += reduce-psl
@@ -1179,6 +1176,7 @@
     SUBDIR += rubiks
     SUBDIR += rubygem-algebra
     SUBDIR += rubygem-bigdecimal
+    SUBDIR += rubygem-bigdecimal-gitlab
     SUBDIR += rubygem-cmath
     SUBDIR += rubygem-enumerable-statistics
     SUBDIR += rubygem-expression_parser

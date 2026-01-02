@@ -107,6 +107,9 @@
     SUBDIR += bareos23-client
     SUBDIR += bareos23-server
     SUBDIR += bareos23-traymonitor
+    SUBDIR += bareos24-client
+    SUBDIR += bareos24-server
+    SUBDIR += bareos24-traymonitor
     SUBDIR += barrier
     SUBDIR += bashtop
     SUBDIR += bastille
@@ -361,7 +364,6 @@
     SUBDIR += env4801
     SUBDIR += envconsul
     SUBDIR += epazote
-    SUBDIR += equinix-metal-cli
     SUBDIR += erdtree
     SUBDIR += etcmerge
     SUBDIR += ethname
@@ -553,7 +555,6 @@
     SUBDIR += ipa
     SUBDIR += ipad_charge
     SUBDIR += ipdbtools
-    SUBDIR += ipfs-go-fs-repo-migrations
     SUBDIR += ipget
     SUBDIR += ipmi_exporter
     SUBDIR += ipmitool
@@ -575,6 +576,7 @@
     SUBDIR += jdupes
     SUBDIR += jest
     SUBDIR += jkill
+    SUBDIR += jmore
     SUBDIR += joshuto
     SUBDIR += jps
     SUBDIR += jruls
@@ -669,6 +671,8 @@
     SUBDIR += logstalgia
     SUBDIR += logstash7
     SUBDIR += logstash8
+    SUBDIR += logstash91
+    SUBDIR += logstash92
     SUBDIR += logtool
     SUBDIR += logwatch
     SUBDIR += loki
@@ -721,6 +725,7 @@
     SUBDIR += memtester
     SUBDIR += metalog
     SUBDIR += mfid
+    SUBDIR += michaelo-periodic
     SUBDIR += minikube
     SUBDIR += minimunin
     SUBDIR += minipot
@@ -737,6 +742,7 @@
     SUBDIR += mmve
     SUBDIR += modman
     SUBDIR += modules
+    SUBDIR += mods
     SUBDIR += mog
     SUBDIR += mongodb_exporter
     SUBDIR += monit
@@ -751,6 +757,7 @@
     SUBDIR += msiklm
     SUBDIR += msktutil
     SUBDIR += mstflint
+    SUBDIR += mtail
     SUBDIR += mtm
     SUBDIR += mtxorbd
     SUBDIR += mult
@@ -955,8 +962,6 @@
     SUBDIR += pfstat
     SUBDIR += pftables
     SUBDIR += pftop
-    SUBDIR += php81-fileinfo
-    SUBDIR += php81-posix
     SUBDIR += php82-fileinfo
     SUBDIR += php82-posix
     SUBDIR += php83-fileinfo
@@ -1101,6 +1106,7 @@
     SUBDIR += py-queuelib
     SUBDIR += py-ranger
     SUBDIR += py-rdiff-backup
+    SUBDIR += py-rendercv
     SUBDIR += py-resolve-march-native
     SUBDIR += py-salt
     SUBDIR += py-salt-tower
@@ -1430,6 +1436,7 @@
     SUBDIR += touchegg
     SUBDIR += toybox
     SUBDIR += tree
+    SUBDIR += treemd
     SUBDIR += treetop
     SUBDIR += triton
     SUBDIR += trueos-libqt5

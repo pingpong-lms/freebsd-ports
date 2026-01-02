@@ -84,6 +84,7 @@
     SUBDIR += bibutils
     SUBDIR += biodiff
     SUBDIR += bn-aspell
+    SUBDIR += bookokrat
     SUBDIR += br-aspell
     SUBDIR += bsd-spell
     SUBDIR += c2html
@@ -493,7 +494,6 @@
     SUBDIR += ml-aspell
     SUBDIR += ml1
     SUBDIR += mn-aspell
-    SUBDIR += moar
     SUBDIR += modlogan
     SUBDIR += moor
     SUBDIR += mp_doccer
@@ -1265,15 +1265,6 @@
     SUBDIR += peco
     SUBDIR += peg
     SUBDIR += perl2html
-    SUBDIR += php81-ctype
-    SUBDIR += php81-dom
-    SUBDIR += php81-enchant
-    SUBDIR += php81-pspell
-    SUBDIR += php81-simplexml
-    SUBDIR += php81-xml
-    SUBDIR += php81-xmlreader
-    SUBDIR += php81-xmlwriter
-    SUBDIR += php81-xsl
     SUBDIR += php82-ctype
     SUBDIR += php82-dom
     SUBDIR += php82-enchant
@@ -1609,6 +1600,7 @@
     SUBDIR += py-rich-cli
     SUBDIR += py-rich-rst
     SUBDIR += py-rnc2rng
+    SUBDIR += py-roman-numerals
     SUBDIR += py-roman-numerals-py
     SUBDIR += py-rouge-score
     SUBDIR += py-rst2ansi
@@ -1721,9 +1713,11 @@
     SUBDIR += py-ttp
     SUBDIR += py-ttp-templates
     SUBDIR += py-typogrify
+    SUBDIR += py-typst
     SUBDIR += py-uc-micro-py
     SUBDIR += py-ucl
     SUBDIR += py-ufal.udpipe
+    SUBDIR += py-unicode-segmentation-rs
     SUBDIR += py-unicodeitplus
     SUBDIR += py-untangle
     SUBDIR += py-urlscan
@@ -1929,6 +1923,7 @@
     SUBDIR += rubygem-liquid4
     SUBDIR += rubygem-loggability
     SUBDIR += rubygem-loofah
+    SUBDIR += rubygem-loofah-gitlab
     SUBDIR += rubygem-loofah222
     SUBDIR += rubygem-ltsv
     SUBDIR += rubygem-markaby
@@ -2019,6 +2014,7 @@
     SUBDIR += rubygem-syntax
     SUBDIR += rubygem-termcolor
     SUBDIR += rubygem-terminal-table
+    SUBDIR += rubygem-terminal-table3
     SUBDIR += rubygem-terser
     SUBDIR += rubygem-text
     SUBDIR += rubygem-tidy_ffi
@@ -2152,6 +2148,7 @@
     SUBDIR += txt2html
     SUBDIR += txt2man
     SUBDIR += txt2tags
+    SUBDIR += typos
     SUBDIR += typst
     SUBDIR += uchardet
     SUBDIR += ucto
@@ -2229,7 +2226,6 @@
     SUBDIR += xorg-sgml-doctools
     SUBDIR += xslide.el
     SUBDIR += xstream
-    SUBDIR += xsv-rs
     SUBDIR += xwindiff
     SUBDIR += xxdiff
     SUBDIR += xxdiff-scripts

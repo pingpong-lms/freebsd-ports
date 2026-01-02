@@ -1,8 +1,9 @@
 PORTNAME=	wazuh
-DISTVERSION=	4.12.0
+DISTVERSION=	4.14.1
 DISTVERSIONPREFIX=	v
+PORTREVISION=	2
 CATEGORIES=	security
-MASTER_SITES=	https://packages.wazuh.com/deps/40/libraries/sources/:wazuh_sources
+MASTER_SITES=	https://packages.wazuh.com/deps/47/libraries/sources/:wazuh_sources
 PKGNAMESUFFIX=	-agent
 DISTFILES=	${EXTERNAL_DISTFILES}
 DIST_SUBDIR=	${PORTNAME}-${DISTVERSION}
@@ -27,7 +28,7 @@ USE_RC_SUBR=	${PORTNAME}${PKGNAMESUFFIX}
 MAKE_ARGS+=	TARGET=agent
 
 WAZUH_EXTRAFILE=	alonsobsd-${PORTNAME}-freebsd-${WAZUH_EXTRAFILE_TAGNAME}_GH0${EXTRACT_SUFX}
-WAZUH_EXTRAFILE_TAGNAME=cd0051b
+WAZUH_EXTRAFILE_TAGNAME=2f1307c
 
 EXTERNAL_DISTFILES=	cJSON.tar.gz:wazuh_sources \
 			curl.tar.gz:wazuh_sources \
@@ -90,14 +91,26 @@ WAZUHMOD770=	/etc/shared/default /logs /queue/alerts /queue/fim \
 
 WAZUHPREFIX=	/var/ossec
 
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == powerpc64
+MAKE_ENV+=	OSSL_TARGET=BSD-ppc64
+.elif ${ARCH} == powerpc64le
+MAKE_ENV+=	OSSL_TARGET=BSD-ppc64le
+.elif ${ARCH} == riscv64
+MAKE_ENV+=	OSSL_TARGET=BSD-riscv64
+.endif
+
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} >= 1300139 && ${OSVERSION} < 1400000
 FBSD_MAJOR_VERSION=13
 .elif ${OSVERSION} >= 1400000 && ${OSVERSION} < 1500000
 FBSD_MAJOR_VERSION=14
-.elif ${OSVERSION} >= 1500000
+.elif ${OSVERSION} >= 1500000 && ${OSVERSION} < 1600000
 FBSD_MAJOR_VERSION=15
+.elif ${OSVERSION} >= 1600000
+FBSD_MAJOR_VERSION=16
 .else
 IGNORE=		FreeBSD ${OSVERSION} ${ARCH} is not supported
 .endif

@@ -42,6 +42,7 @@
     SUBDIR += crystal
     SUBDIR += csharp-mode.el
     SUBDIR += cython
+    SUBDIR += cython0
     SUBDIR += cython3
     SUBDIR += dhall
     SUBDIR += dlang-tools
@@ -111,6 +112,7 @@
     SUBDIR += gluon
     SUBDIR += gnat12
     SUBDIR += gnat13
+    SUBDIR += gnat14
     SUBDIR += gnatcross-binutils-aarch64
     SUBDIR += gnatcross-sysroot-aarch64
     SUBDIR += gnatdroid-binutils
@@ -122,8 +124,6 @@
     SUBDIR += gnustep-base
     SUBDIR += go
     SUBDIR += go-devel
-    SUBDIR += go120
-    SUBDIR += go121
     SUBDIR += go122
     SUBDIR += go123
     SUBDIR += go124
@@ -166,6 +166,7 @@
     SUBDIR += kefir
     SUBDIR += kf5-kross
     SUBDIR += kotlin
+    SUBDIR += kotlin22
     SUBDIR += kturtle
     SUBDIR += lafontaine
     SUBDIR += lci
@@ -271,8 +272,6 @@
     SUBDIR += pfe
     SUBDIR += pharo
     SUBDIR += php-mode.el
-    SUBDIR += php81
-    SUBDIR += php81-extensions
     SUBDIR += php82
     SUBDIR += php82-extensions
     SUBDIR += php83
@@ -365,11 +364,9 @@
     SUBDIR += smlnj
     SUBDIR += snobol4
     SUBDIR += solidity
-    SUBDIR += spidermonkey102
     SUBDIR += spidermonkey115
     SUBDIR += spidermonkey128
     SUBDIR += spidermonkey140
-    SUBDIR += spidermonkey78
     SUBDIR += squeak
     SUBDIR += squirrel
     SUBDIR += starlark-rust
@@ -387,9 +384,7 @@
     SUBDIR += tolua++
     SUBDIR += trealla-prolog
     SUBDIR += tuareg-mode.el
-    SUBDIR += typescript
     SUBDIR += typescript-go
-    SUBDIR += typstfmt
     SUBDIR += typstyle
     SUBDIR += ucc
     SUBDIR += urweb
@@ -404,5 +399,6 @@
     SUBDIR += ypsilon
     SUBDIR += zephir
     SUBDIR += zig
+    SUBDIR += zig014
 
 .include <bsd.port.subdir.mk>

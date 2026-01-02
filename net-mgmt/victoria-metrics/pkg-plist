@@ -68,12 +68,16 @@ bin/victoria-metrics
 %%PORTDOCS%%%%DOCSDIR%%/anomaly-detection/vmanomaly-holtwinters-example.webp
 %%PORTDOCS%%%%DOCSDIR%%/anomaly-detection/vmanomaly-prophet-example.webp
 %%PORTDOCS%%%%DOCSDIR%%/anomaly-detection/vmanomaly-sharding-ha-diagram.webp
+%%PORTDOCS%%%%DOCSDIR%%/anomaly-detection/vmanomaly-ui-example-alert-btn.webp
+%%PORTDOCS%%%%DOCSDIR%%/anomaly-detection/vmanomaly-ui-example-alert-menu.webp
 %%PORTDOCS%%%%DOCSDIR%%/anomaly-detection/vmanomaly-ui-model-config-menu-yaml-tab.webp
 %%PORTDOCS%%%%DOCSDIR%%/anomaly-detection/vmanomaly-ui-model-config-menu.webp
 %%PORTDOCS%%%%DOCSDIR%%/anomaly-detection/vmanomaly-ui-model-config-wizard.webp
 %%PORTDOCS%%%%DOCSDIR%%/anomaly-detection/vmanomaly-ui-open-config-btn.webp
 %%PORTDOCS%%%%DOCSDIR%%/anomaly-detection/vmanomaly-ui-open-config-menu.webp
 %%PORTDOCS%%%%DOCSDIR%%/anomaly-detection/vmanomaly-ui-overview.webp
+%%PORTDOCS%%%%DOCSDIR%%/anomaly-detection/vmanomaly-ui-preconfigured-datasource-1.webp
+%%PORTDOCS%%%%DOCSDIR%%/anomaly-detection/vmanomaly-ui-preconfigured-datasource-2.webp
 %%PORTDOCS%%%%DOCSDIR%%/anomaly-detection/vmanomaly-ui-sections-explore.webp
 %%PORTDOCS%%%%DOCSDIR%%/anomaly-detection/vmanomaly-ui-sections-model.webp
 %%PORTDOCS%%%%DOCSDIR%%/anomaly-detection/vmanomaly-ui-sections-plot-area-detect-mode.webp
@@ -238,6 +242,7 @@ bin/victoria-metrics
 %%PORTDOCS%%%%DOCSDIR%%/victoriametrics/integrations/perses.md
 %%PORTDOCS%%%%DOCSDIR%%/victoriametrics/integrations/prometheus.md
 %%PORTDOCS%%%%DOCSDIR%%/victoriametrics/integrations/pubsub.md
+%%PORTDOCS%%%%DOCSDIR%%/victoriametrics/integrations/zabbixconnector.md
 %%PORTDOCS%%%%DOCSDIR%%/victoriametrics/keyConcepts/_index.md
 %%PORTDOCS%%%%DOCSDIR%%/victoriametrics/keyConcepts/counter.webp
 %%PORTDOCS%%%%DOCSDIR%%/victoriametrics/keyConcepts/data_collection.webp
