@@ -512,6 +512,7 @@
     SUBDIR += novnc
     SUBDIR += npc
     SUBDIR += npm
+    SUBDIR += npm-node18
     SUBDIR += npm-node20
     SUBDIR += npm-node22
     SUBDIR += npm-node24
