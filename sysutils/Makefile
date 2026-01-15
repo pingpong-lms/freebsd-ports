@@ -191,12 +191,14 @@
     SUBDIR += cfengine-masterfiles324
     SUBDIR += cfengine-masterfiles325
     SUBDIR += cfengine-masterfiles326
+    SUBDIR += cfengine-masterfiles327
     SUBDIR += cfengine321
     SUBDIR += cfengine322
     SUBDIR += cfengine323
     SUBDIR += cfengine324
     SUBDIR += cfengine325
     SUBDIR += cfengine326
+    SUBDIR += cfengine327
     SUBDIR += chaoskube
     SUBDIR += checkrestart
     SUBDIR += chezmoi
@@ -741,8 +743,8 @@
     SUBDIR += mmc-utils
     SUBDIR += mmve
     SUBDIR += modman
-    SUBDIR += modules
     SUBDIR += mods
+    SUBDIR += modules
     SUBDIR += mog
     SUBDIR += mongodb_exporter
     SUBDIR += monit
@@ -1313,6 +1315,7 @@
     SUBDIR += screenie
     SUBDIR += scterc
     SUBDIR += sd-agent
+    SUBDIR += sdmon
     SUBDIR += sdparm
     SUBDIR += seatd
     SUBDIR += seatools
@@ -1594,6 +1597,7 @@
     SUBDIR += whowatch
     SUBDIR += wiimms
     SUBDIR += wiper
+    SUBDIR += witr
     SUBDIR += wmapmload
     SUBDIR += wmbluecpu
     SUBDIR += wmbsdbatt

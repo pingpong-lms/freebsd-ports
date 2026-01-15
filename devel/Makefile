@@ -699,7 +699,6 @@
     SUBDIR += exomizer
     SUBDIR += expected
     SUBDIR += f77flow
-    SUBDIR += fam
     SUBDIR += fatal
     SUBDIR += fbthrift
     SUBDIR += fc++
@@ -1335,6 +1334,7 @@
     SUBDIR += libibuddy
     SUBDIR += libical
     SUBDIR += libiec61850
+    SUBDIR += libigloo
     SUBDIR += libindicator
     SUBDIR += libinjection
     SUBDIR += libinotify
@@ -4392,6 +4392,7 @@
     SUBDIR += py-aniso8601
     SUBDIR += py-aniso86016
     SUBDIR += py-anndata
+    SUBDIR += py-annotated-doc
     SUBDIR += py-annotated-types
     SUBDIR += py-ansi
     SUBDIR += py-antlr4-python3-runtime
@@ -6225,6 +6226,7 @@
     SUBDIR += py-vsts
     SUBDIR += py-vsts-cd-manager
     SUBDIR += py-vulture
+    SUBDIR += py-wadler-lindig
     SUBDIR += py-wadllib
     SUBDIR += py-wait-for2
     SUBDIR += py-warlock
@@ -6340,7 +6342,6 @@
     SUBDIR += pycharm
     SUBDIR += pycos
     SUBDIR += pycount
-    SUBDIR += pydbus-common
     SUBDIR += pydeps
     SUBDIR += pyderasn
     SUBDIR += pyenv
@@ -7450,12 +7451,12 @@
     SUBDIR += rubygem-gitlab-labkit
     SUBDIR += rubygem-gitlab-license
     SUBDIR += rubygem-gitlab-pygments.rb
-    SUBDIR += rubygem-gitlab_query_language
     SUBDIR += rubygem-gitlab-sdk
     SUBDIR += rubygem-gitlab-security_report_schemas
     SUBDIR += rubygem-gitlab_chronic_duration
     SUBDIR += rubygem-gitlab_git
     SUBDIR += rubygem-gitlab_meta
+    SUBDIR += rubygem-gitlab_query_language
     SUBDIR += rubygem-glib2
     SUBDIR += rubygem-gobject-introspection
     SUBDIR += rubygem-google-api-client

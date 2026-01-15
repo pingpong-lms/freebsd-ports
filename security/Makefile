@@ -773,6 +773,7 @@
     SUBDIR += pam_search_list
     SUBDIR += pam_ssh_agent_auth
     SUBDIR += pam_u2f
+    SUBDIR += pam_worker
     SUBDIR += pam_yubico
     SUBDIR += pamtester
     SUBDIR += paperkey
@@ -974,6 +975,7 @@
     SUBDIR += py-josepy
     SUBDIR += py-joserfc
     SUBDIR += py-jwcrypto
+    SUBDIR += py-k5test
     SUBDIR += py-keepkey
     SUBDIR += py-kerberos
     SUBDIR += py-keyring

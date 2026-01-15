@@ -452,6 +452,7 @@
     SUBDIR += py-eemeter
     SUBDIR += py-einops
     SUBDIR += py-emoji
+    SUBDIR += py-equinox
     SUBDIR += py-ezc3d
     SUBDIR += py-facenet-pytorch
     SUBDIR += py-fast-histogram
@@ -537,6 +538,7 @@
     SUBDIR += py-pkbar
     SUBDIR += py-placekey
     SUBDIR += py-polars
+    SUBDIR += py-polars-runtime
     SUBDIR += py-posthog
     SUBDIR += py-powerline-status
     SUBDIR += py-progressbar

@@ -1,7 +1,7 @@
 PORTNAME=	wazuh
 DISTVERSION=	4.14.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	security
 MASTER_SITES=	https://packages.wazuh.com/deps/47/libraries/sources/:wazuh_sources
 PKGNAMESUFFIX=	-agent
@@ -28,7 +28,7 @@ USE_RC_SUBR=	${PORTNAME}${PKGNAMESUFFIX}
 MAKE_ARGS+=	TARGET=agent
 
 WAZUH_EXTRAFILE=	alonsobsd-${PORTNAME}-freebsd-${WAZUH_EXTRAFILE_TAGNAME}_GH0${EXTRACT_SUFX}
-WAZUH_EXTRAFILE_TAGNAME=2f1307c
+WAZUH_EXTRAFILE_TAGNAME=830a911
 
 EXTERNAL_DISTFILES=	cJSON.tar.gz:wazuh_sources \
 			curl.tar.gz:wazuh_sources \
@@ -120,6 +120,7 @@ post-extract:
 	@cd ${WRKSRC}/src/external && ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${_DISTDIR}/${FILE:S/:wazuh_sources//} ${EXTRACT_AFTER_ARGS}
 .endfor
 	@${MKDIR} ${WRKSRC}/ruleset/sca/freebsd
+	@${MKDIR} ${WRKSRC}/src/data_provider/src/extended_sources/wrappers/unix/freebsd
 	@cd ${WRKDIR} && ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${_DISTDIR}/${WAZUH_EXTRAFILE} ${EXTRACT_AFTER_ARGS}
 	@${MV} ${WRKDIR}/${PORTNAME}-freebsd-${WAZUH_EXTRAFILE_TAGNAME} ${WRKDIR}/wazuh-freebsd
 	@cd ${WRKDIR}/wazuh-freebsd/var/ossec/ruleset/sca && ${CP} *.yml ${WRKSRC}/ruleset/sca/freebsd/

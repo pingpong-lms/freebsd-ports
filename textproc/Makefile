@@ -208,6 +208,7 @@
     SUBDIR += fcitx5-gtk-common
     SUBDIR += fcitx5-lua
     SUBDIR += fcitx5-m17n
+    SUBDIR += fcitx5-mcfoxim
     SUBDIR += fcitx5-qt
     SUBDIR += fcitx5-qt-common
     SUBDIR += feluda
@@ -1747,6 +1748,7 @@
     SUBDIR += py-zensical
     SUBDIR += py-zope.i18nmessageid
     SUBDIR += py-zpt
+    SUBDIR += qo
     SUBDIR += qprint
     SUBDIR += qr
     SUBDIR += qrcodegen

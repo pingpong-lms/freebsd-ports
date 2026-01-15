@@ -1,7 +1,7 @@
 PORTNAME=	wazuh
 DISTVERSIONPREFIX=	v
 DISTVERSION=	4.14.1
-PORTREVISION=	2
+PORTREVISION=	7
 CATEGORIES=	security
 MASTER_SITES=	https://packages.wazuh.com/deps/47/libraries/sources/:wazuh_sources \
 		LOCAL/acm/${PORTNAME}/:wazuh_cache
@@ -44,12 +44,12 @@ MAKE_ARGS+=	TARGET=server INSTALLDIR=${WAZUHPREFIX} INSTALL_SHARED="${INSTALL_LI
 
 DOS2UNIX_FILES=	${WRKSRC}/api/api/configuration/api.yaml
 
-# WITH_CCACHE_BUILD=	yes
-# CCACHE_DIR=		/zdata/ccache
+#WITH_CCACHE_BUILD=	yes
+#CCACHE_DIR=		/zdata/ccache
 
 WAZUH_CACHEFILE=	${PORTNAME}-cache-any-${DISTVERSION}${EXTRACT_SUFX}
 WAZUH_EXTRAFILE=	alonsobsd-${PORTNAME}-freebsd-${WAZUH_EXTRAFILE_TAGNAME}_GH0${EXTRACT_SUFX}
-WAZUH_EXTRAFILE_TAGNAME=2f1307c
+WAZUH_EXTRAFILE_TAGNAME=830a911
 
 EXTERNAL_DISTFILES=	audit-userspace.tar.gz:wazuh_sources \
 			benchmark.tar.gz:wazuh_sources \
@@ -224,6 +224,7 @@ post-extract:
 	@${RM} ${WRKSRC}/src/external/cpython/python ${WRKSRC}/src/external/cpython/libpython* ${WRKSRC}/src/external/cpython/Modules/*.o
 
 	@${MKDIR} ${WRKSRC}/ruleset/sca/freebsd
+	@${MKDIR} ${WRKSRC}/src/data_provider/src/extended_sources/wrappers/unix/freebsd
 	@cd ${WRKDIR}/wazuh-freebsd/var/ossec/ruleset/sca && ${CP} *.yml ${WRKSRC}/ruleset/sca/freebsd/
 	${FIND} ${WRKSRC}/ruleset/sca -type f -name "*.yml" -exec ${MV} "{}" "{}.disabled" \;
 
