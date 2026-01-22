@@ -1,6 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	25.3-branchpoint-3439
-DISTVERSIONSUFFIX=	-g6f076cdfda3
+DISTVERSION=	26.0-branchpoint-44
+DISTVERSIONSUFFIX=	-g481df222095
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -37,6 +37,7 @@ MESON_DISABLED=	android-libbacktrace gallium-mediafoundation \
 MESON_TRUE=	unversion-libgallium
 MESON_ARGS=	-Dplatforms=${PLATFORMS:O:[-1..1]:ts,} -Dvideo-codecs=all
 LDFLAGS+=	-Wl,--undefined-version # https://gitlab.freedesktop.org/mesa/mesa/-/issues/8003
+FORTIFY_UNSAFE=	yes
 PLIST_SUB=	ARCH=${ARCH:S/amd/x86_/}
 
 OPTIONS_DEFINE=		DRM LLVM LTO OPENCL VAAPI VKLAYERS WAYLAND X11 ZSTD

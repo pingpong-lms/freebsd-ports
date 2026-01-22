@@ -80,6 +80,7 @@ shebangonefile() {
 	/usr/sbin/dtrace) ;;
 	/usr/bin/make) ;;
 	/usr/libexec/atf-sh) ;;
+	/usr/libexec/flua) ;;
 	*)
 		badinterp="${interp}"
 		;;
@@ -569,9 +570,6 @@ proxydeps_suggest_uses() {
 	# bdb
 	elif expr ${pkg} : "^databases/db[456]" > /dev/null; then
 		warn "you need USES+=bdb"
-	# fam/gamin
-	elif [ ${pkg} = "devel/fam" -o ${pkg} = "devel/gamin" ]; then
-		warn "you need USES+=fam"
 	# firebird
 	elif [ ${pkg} = "databases/firebird25-client" ]; then
 		warn "you need USES+=firebird"

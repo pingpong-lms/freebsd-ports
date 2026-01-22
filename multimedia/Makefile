@@ -25,7 +25,6 @@
     SUBDIR += btavctpd
     SUBDIR += butt
     SUBDIR += ccextractor
-    SUBDIR += ccextractor-gui
     SUBDIR += celluloid
     SUBDIR += cheese
     SUBDIR += chilitags
@@ -71,8 +70,7 @@
     SUBDIR += get_iplayer
     SUBDIR += gmmlib
     SUBDIR += gmp-api
-    SUBDIR += gpac-libgpac
-    SUBDIR += gpac-mp4box
+    SUBDIR += gpac
     SUBDIR += gpodder
     SUBDIR += gst123
     SUBDIR += gstreamer1

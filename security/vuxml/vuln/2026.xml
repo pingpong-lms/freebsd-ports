@@ -1,3 +1,307 @@
+  <vuln vid="f8560c1b-f772-11f0-85c5-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>144.0.7559.96</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>144.0.7559.96</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2026/01/stable-channel-update-for-desktop_20.html">
+	 <p>This update includes 1 security fix:</p>
+	 <ul>
+	    <li>[473851441] High CVE-2026-1220: Race in V8. Reported by @p1nky4745 on 2026-01-07</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-1220</cvename>
+      <url>https://chromereleases.googleblog.com/2026/01/stable-channel-update-for-desktop_20.html</url>
+    </references>
+    <dates>
+      <discovery>2026-01-20</discovery>
+      <entry>2026-01-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="61dc7f67-f6e5-11f0-b051-2cf05da270f3">
+    <topic>Gitlab -- vulnerabilities</topic>
+    <affects>
+<package>
+<name>gitlab-ce</name>
+<name>gitlab-ee</name>
+<range><ge>18.8.0</ge><lt>18.8.2</lt></range>
+<range><ge>18.7.0</ge><lt>18.7.2</lt></range>
+<range><ge>11.9.0</ge><lt>18.6.4</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2026/01/21/patch-release-gitlab-18-8-2-released/">
+	  <p>Denial of Service issue in Jira Connect integration impacts GitLab CE/EE</p>
+	  <p>Incorrect Authorization issue in Releases API impacts GitLab CE/EE</p>
+	  <p>Unchecked Return Value issue in authentication services impacts GitLab CE/EE</p>
+	  <p>Infinite Loop issue in Wiki redirects impacts GitLab CE/EE</p>
+	  <p>Denial of Service issue in API endpoint impacts GitLab CE/EE</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-13927</cvename>
+      <cvename>CVE-2025-13928</cvename>
+      <cvename>CVE-2026-0723</cvename>
+      <cvename>CVE-2025-13335</cvename>
+      <cvename>CVE-2026-1102</cvename>
+      <url>https://about.gitlab.com/releases/2026/01/21/patch-release-gitlab-18-8-2-released/</url>
+    </references>
+    <dates>
+      <discovery>2026-01-21</discovery>
+      <entry>2026-01-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="01f34a27-f560-11f0-bbdc-10ffe07f9334">
+    <topic>mail/mailpit -- multiple vulnerabilities</topic>
+    <affects>
+<package>
+<name>mailpit</name>
+<range><lt>1.28.3</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Mailpit author reports:</p>
+	<blockquote cite="https://github.com/axllent/mailpit/releases/tag/v1.28.3">
+	  <p>Ensure SMTP TO &amp; FROM addresses are RFC 5322
+	  compliant and prevent header injection (GHSA-54wq-72mp-cq7c)</p>
+	  <p>Prevent Server-Side Request Forgery (SSRF) via HTML
+	  Check API (GHSA-6jxm-fv7w-rw5j)</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-23829</cvename>
+      <url>https://github.com/axllent/mailpit/security/advisories/GHSA-54wq-72mp-cq7c</url>
+      <cvename>CVE-2026-23845</cvename>
+      <url>https://github.com/axllent/mailpit/security/advisories/GHSA-6jxm-fv7w-rw5j</url>
+    </references>
+    <dates>
+      <discovery>2026-01-18</discovery>
+      <entry>2026-01-19</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fb561db9-0fc1-4d92-81a2-ee01839c9119">
+    <topic>oauth2-proxy -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>oauth2-proxy</name>
+	<range><lt>7.14.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.</p>
+	<p>A flaw was found in the crypto/x509 package in the Go standard library. This vulnerability allows a certificate validation bypass via an excluded subdomain constraint in a certificated chain as it does not restrict the usage of wildcard SANs in the leaf certificate.</p>
+	<p>SSH Agent servers do not validate the size of messages when processing new identity requests, which may cause the program to panic if the message is malformed due to an out of bounds read.</p>
+	<p>SSH servers parsing GSSAPI authentication requests do not validate the number of mechanisms specified in the request, allowing an attacker to cause unbounded memory consumption.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2025-61729</cvename>
+      <cvename>CVE-2025-61727</cvename>
+      <cvename>CVE-2025-47914</cvename>
+      <cvename>CVE-2025-58181</cvename>
+    </references>
+    <dates>
+      <discovery>2026-01-16</discovery>
+      <entry>2026-01-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ff20d3a3-f211-11f0-9ca3-b42e991fc52e">
+    <topic>Mozilla -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>firefox</name>
+	<range><lt>147.0.0,2</lt></range>
+      </package>
+      <package>
+	<name>thunderbird</name>
+	<range><lt>147.0.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>
+	Memory safety bugs present in Firefox 146 and Thunderbird
+	146. Some of these bugs showed evidence of memory corruption
+	and we presume that with enough effort some of these could
+	have been exploited to run arbitrary code.
+	</p>
+	<p>Denial-of-service in the DOM: Service Workers component.</p>
+	<p>Information disclosure in the XML component.</p>
+	<p>Sandbox escape in the Messaging System component.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-0892</cvename>
+      <cvename>CVE-2026-0889</cvename>
+      <cvename>CVE-2026-0888</cvename>
+      <cvename>CVE-2026-0881</cvename>
+    </references>
+    <dates>
+      <discovery>2026-01-13</discovery>
+      <entry>2026-01-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="085101eb-f212-11f0-9ca3-b42e991fc52e">
+    <topic>Mozilla -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>firefox</name>
+	<range><lt>147.0.0,2</lt></range>
+      </package>
+      <package>
+	<name>firefox-esr</name>
+	<range><lt>140.7.0</lt></range>
+      </package>
+      <package>
+	<name>thunderbird</name>
+	<range><lt>147</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Memory safety bugs present in firefox-esr 140.6,
+	Thunderbird ESR 140.6, Firefox 146 and Thunderbird 146.</p>
+	<p>Spoofing issue in the DOM: Copy &amp; Paste and Drag &amp;
+	Drop component.</p>
+	<p>Clickjacking issue and information disclosure in the PDF
+	Viewer component.</p>
+	<p>Use-after-free in the JavaScript: GC component.</p>
+	<p>Use-after-free in the JavaScript Engine component.</p>
+	<p>Information disclosure in the Networking component.</p>
+	<p>Sandbox escape due to incorrect boundary conditions in the
+	Graphics: CanvasWebGL component.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-0891</cvename>
+      <cvename>CVE-2026-0890</cvename>
+      <cvename>CVE-2026-0887</cvename>
+      <cvename>CVE-2026-0885</cvename>
+      <cvename>CVE-2026-0884</cvename>
+      <cvename>CVE-2026-0883</cvename>
+      <cvename>CVE-2026-0878</cvename>
+    </references>
+    <dates>
+      <discovery>2026-01-13</discovery>
+      <entry>2026-01-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="06061c59-f212-11f0-9ca3-b42e991fc52e">
+    <topic>Mozilla -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>firefox</name>
+	<range><lt>147.0.0,2</lt></range>
+      </package>
+      <package>
+	<name>firefox-esr</name>
+	<range><lt>140.7</lt></range>
+      </package>
+      <package>
+	<name>thunderbird</name>
+	<range><lt>147.0.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Incorrect boundary conditions in the Graphics
+	component.</p>
+	<p>Use-after-free in the IPC component.</p>
+	<p>Sandbox escape due to integer overflow in the Graphics
+	component.</p>
+	<p>Sandbox escape due to incorrect boundary conditions in the
+	Graphics component.</p>
+	<p>Mitigation bypass in the DOM: Security component.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-0886</cvename>
+      <cvename>CVE-2026-0882</cvename>
+      <cvename>CVE-2026-0880</cvename>
+      <cvename>CVE-2026-0879</cvename>
+      <cvename>CVE-2026-0877</cvename>
+    </references>
+    <dates>
+      <discovery>2026-01-13</discovery>
+      <entry>2026-01-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6f76a1db-f124-11f0-85c5-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>144.0.7559.59</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>144.0.7559.59</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2026/01/stable-channel-update-for-desktop_13.html">
+	 <p>This update includes 10 security fixes:</p>
+	 <ul>
+	    <li>[458914193] High CVE-2026-0899: Out of bounds memory access in V8. Reported by @p1nky4745 on 2025-11-08</li>
+	    <li>[465730465] High CVE-2026-0900: Inappropriate implementation in V8. Reported by Google on 2025-12-03</li>
+	    <li>[40057499] High CVE-2026-0901: Inappropriate implementation in Blink. Reported by Irvan Kurniawan (sourc7) on 2021-10-04</li>
+	    <li>[469143679] Medium CVE-2026-0902: Inappropriate implementation in V8. Reported by 303f06e3 on 2025-12-16</li>
+	    <li>[444803530] Medium CVE-2026-0903: Insufficient validation of untrusted input in Downloads. Reported by Azur on 2025-09-13</li>
+	    <li>[452209495] Medium CVE-2026-0904: Incorrect security UI in Digital Credentials. Reported by Hafiizh on 2025-10-15</li>
+	    <li>[465466773] Medium CVE-2026-0905: Insufficient policy enforcement in Network. Reported by Google on 2025-12-02</li>
+	    <li>[467448811] Low CVE-2026-0906: Incorrect security UI. Reported by Khalil Zhani on 2025-12-10</li>
+	    <li>[444653104] Low CVE-2026-0907: Incorrect security UI in Split View. Reported by Hafiizh on 2025-09-12</li>
+	    <li>[452209503] Low CVE-2026-0908: Use after free in ANGLE. Reported by Glitchers BoB 14th. on 2025-10-15</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-0899</cvename>
+      <cvename>CVE-2026-0900</cvename>
+      <cvename>CVE-2026-0901</cvename>
+      <cvename>CVE-2026-0902</cvename>
+      <cvename>CVE-2026-0903</cvename>
+      <cvename>CVE-2026-0904</cvename>
+      <cvename>CVE-2026-0905</cvename>
+      <cvename>CVE-2026-0906</cvename>
+      <cvename>CVE-2026-0907</cvename>
+      <cvename>CVE-2026-0908</cvename>
+      <url>https://chromereleases.googleblog.com/2026/01/stable-channel-update-for-desktop_13.html</url>
+    </references>
+    <dates>
+      <discovery>2026-01-13</discovery>
+      <entry>2026-01-15</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="fd3855b8-efbc-11f0-9e3f-b0416f0c4c67">
     <topic>virtualenv -- CWE-59: Improper Link Resolution Before File Access ('Link Following')</topic>
     <affects>
