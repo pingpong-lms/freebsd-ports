@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-app
-PORTVERSION=	2.2
+PORTVERSION=	2.3
 CATEGORIES=	pingpong
 MASTER_SITES=	#
 DISTFILES=	#
@@ -20,7 +20,6 @@ USES=		perl5 python ruby:run magick:7,nox11,run apache:2.4,run java
 
 RUN_DEPENDS= \
 	${LOCALBASE}/openjdk8/bin/java:java/openjdk8 \
-	${LOCALBASE}/openjdk17/bin/java:java/openjdk17 \
 	jsvc:devel/apache-commons-daemon \
 	p5-Pg>0:databases/p5-Pg \
 	p5-XML-Writer>0:textproc/p5-XML-Writer \
@@ -39,6 +38,7 @@ RUN_DEPENDS= \
 	xmlsec1:security/xmlsec1 \
 	${LOCALBASE}/share/fonts/webfonts/arial.ttf:x11-fonts/webfonts \
 	wkhtmltopdf:converters/wkhtmltopdf \
+	weasyprint:print/py-weasyprint \
 	certbot:security/py-certbot \
 	flask:www/py-flask \
 	filebeat:sysutils/beats8 \
