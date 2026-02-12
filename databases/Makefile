@@ -43,6 +43,7 @@
     SUBDIR += credis
     SUBDIR += cutelyst-asql
     SUBDIR += dalmp
+    SUBDIR += datafusion-cli
     SUBDIR += db
     SUBDIR += db18
     SUBDIR += db5
@@ -668,14 +669,6 @@
     SUBDIR += postgresql-tds_fdw
     SUBDIR += postgresql-wal2json
     SUBDIR += postgresql-zhparser
-    SUBDIR += postgresql13-client
-    SUBDIR += postgresql13-contrib
-    SUBDIR += postgresql13-docs
-    SUBDIR += postgresql13-pgtcl
-    SUBDIR += postgresql13-plperl
-    SUBDIR += postgresql13-plpython
-    SUBDIR += postgresql13-pltcl
-    SUBDIR += postgresql13-server
     SUBDIR += postgresql14-client
     SUBDIR += postgresql14-contrib
     SUBDIR += postgresql14-docs
@@ -776,6 +769,9 @@
     SUBDIR += py-flask-sqlalchemy30
     SUBDIR += py-gdbm
     SUBDIR += py-geoalchemy2
+    SUBDIR += py-harlequin
+    SUBDIR += py-harlequin-mysql
+    SUBDIR += py-harlequin-postgres
     SUBDIR += py-hiredis
     SUBDIR += py-influxdb
     SUBDIR += py-kyotocabinet
@@ -887,6 +883,7 @@
     SUBDIR += qt5-sqldrivers-tds
     SUBDIR += qt6-base_sqldriver
     SUBDIR += quake
+    SUBDIR += rainfrog
     SUBDIR += recutils
     SUBDIR += redis
     SUBDIR += redis-devel
@@ -990,7 +987,6 @@
     SUBDIR += rubygem-familia
     SUBDIR += rubygem-flipper-active_record
     SUBDIR += rubygem-flipper-active_record-rails-gitlab
-    SUBDIR += rubygem-flipper-active_record-rails70
     SUBDIR += rubygem-gdbm
     SUBDIR += rubygem-globalid
     SUBDIR += rubygem-globalid-rails-gitlab

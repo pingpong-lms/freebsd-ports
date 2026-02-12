@@ -514,6 +514,7 @@
     SUBDIR += ncspot
     SUBDIR += netease-music-tui
     SUBDIR += neuralrack-lv2
+    SUBDIR += noctavox
     SUBDIR += noise-repellent-lv2
     SUBDIR += noise-suppression-for-voice-lv2
     SUBDIR += normalize
@@ -776,6 +777,7 @@
     SUBDIR += streamtranscoder
     SUBDIR += string-machine-lv2
     SUBDIR += stymulator
+    SUBDIR += subtui
     SUBDIR += suil
     SUBDIR += supercollider
     SUBDIR += surge-synthesizer-lv2

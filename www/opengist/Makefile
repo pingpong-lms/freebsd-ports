@@ -1,7 +1,7 @@
 PORTNAME=	opengist
 PORTVERSION=	1.11.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
+PORTREVISION=	4
 CATEGORIES=	www textproc
 MASTER_SITES=	LOCAL/fox/:js
 DISTFILES=	opengist-${DISTVERSION}-node_modules.tgz:js
@@ -31,8 +31,8 @@ GO_TARGET=	.
 GO_BUILDFLAGS=	-tags fs_embed \
 		-ldflags="-X github.com/thomiceli/opengist/internal/config.OpengistVersion=v${DISTVERSION}"
 
-GROUP=		opengist
-USER=		opengist
+GROUPS=		opengist
+USERS=		opengist
 
 post-extract:
 	@${RLN} ${WRKDIR}/node_modules ${WRKSRC}/node_modules

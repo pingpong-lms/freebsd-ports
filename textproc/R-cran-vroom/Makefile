@@ -37,8 +37,6 @@ USES=		compiler:c++11-lang cran:auto-plist,compiles shebangfix
 
 SHEBANG_FILES=	inst/bench/*.sh
 
-TESTING_UNSAFE=	https://github.com/tidyverse/vroom/issues/611
-
 pre-test:
 
 # Test depends not ported yet

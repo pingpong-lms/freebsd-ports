@@ -38,7 +38,6 @@
     SUBDIR += anacron
     SUBDIR += and
     SUBDIR += android-file-transfer
-    SUBDIR += android-file-transfer-qt5
     SUBDIR += android-ota-payload-extractor
     SUBDIR += angrysearch
     SUBDIR += ansible
@@ -101,9 +100,6 @@
     SUBDIR += bareos-client
     SUBDIR += bareos-server
     SUBDIR += bareos-traymonitor
-    SUBDIR += bareos22-client
-    SUBDIR += bareos22-server
-    SUBDIR += bareos22-traymonitor
     SUBDIR += bareos23-client
     SUBDIR += bareos23-server
     SUBDIR += bareos23-traymonitor
@@ -156,7 +152,6 @@
     SUBDIR += bulk_extractor
     SUBDIR += bupstash
     SUBDIR += burp
-    SUBDIR += burp-devel
     SUBDIR += busybox
     SUBDIR += bvm
     SUBDIR += byobu
@@ -1087,6 +1082,7 @@
     SUBDIR += py-mitogen
     SUBDIR += py-mqttwarn
     SUBDIR += py-nagiosplugin
+    SUBDIR += py-nvitop
     SUBDIR += py-overlord
     SUBDIR += py-packet-python
     SUBDIR += py-pkginfo
@@ -1103,6 +1099,7 @@
     SUBDIR += py-python-consul
     SUBDIR += py-python-crontab
     SUBDIR += py-python-nomad
+    SUBDIR += py-python-on-whales
     SUBDIR += py-pytsk
     SUBDIR += py-pywatchman
     SUBDIR += py-pyznap
@@ -1371,7 +1368,6 @@
     SUBDIR += stow
     SUBDIR += stowES
     SUBDIR += stress
-    SUBDIR += stressdisk
     SUBDIR += superfile
     SUBDIR += superiotool
     SUBDIR += swapd
@@ -1446,6 +1442,7 @@
     SUBDIR += treetop
     SUBDIR += triton
     SUBDIR += trueos-libqt5
+    SUBDIR += try-rs
     SUBDIR += ts
     SUBDIR += tty-clock
     SUBDIR += ttyd
@@ -1589,8 +1586,8 @@
     SUBDIR += wait_on
     SUBDIR += waitforssh
     SUBDIR += walk
-    SUBDIR += watchfolder
     SUBDIR += watchcat
+    SUBDIR += watchfolder
     SUBDIR += watchman
     SUBDIR += watchmen
     SUBDIR += waynergy
@@ -1599,7 +1596,6 @@
     SUBDIR += wemux
     SUBDIR += whatpix
     SUBDIR += whowatch
-    SUBDIR += wiimms
     SUBDIR += wiper
     SUBDIR += witr
     SUBDIR += wmapmload
@@ -1620,6 +1616,7 @@
     SUBDIR += xbatt
     SUBDIR += xbattbar
     SUBDIR += xcdroast
+    SUBDIR += xclipsync
     SUBDIR += xcp
     SUBDIR += xcpustate
     SUBDIR += xdu
