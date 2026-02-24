@@ -1,3 +1,239 @@
+  <vuln vid="4594110e-1151-11f1-b3f8-8447094a420f">
+    <topic>Vaultwarden -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>vaultwarden</name>
+	<range><lt>1.35.4</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Vaultwarden project reports:</p>
+	<blockquote cite="https://github.com/dani-garcia/vaultwarden/releases/tag/1.35.4">
+	  <ul>
+	    <li>GHSA-w9f8-m526-h7fh. This vulnerability would allow an attacker to access a cipher from a different user (fully encrypted) if they already know its internal UUID.</li>
+	    <li>GHSA-h4hq-rgvh-wh27. This vulnerability allows an attacker with manager-level access within an organization to modify collections they can access, even if they do not have management permissions for them.</li>
+	    <li>GHSA-r32r-j5jq-3w4m. This vulnerability allows an attacker with manager-level access within an organization to modify collections they are not assigned.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/dani-garcia/vaultwarden/releases/tag/1.35.4</url>
+    </references>
+    <dates>
+      <discovery>2026-02-23</discovery>
+      <entry>2026-02-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="716d25a6-0fdc-11f1-bfdf-ff9355aecb00">
+    <topic>openexr -- buffer overflow in istream_nonparallel_read on invalid input data</topic>
+    <affects>
+      <package>
+	<name>openexr</name>
+	<range><lt>3.3.7</lt></range>
+	<range><ge>3.4.0</ge><lt>3.4.5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Cary Phillips reports:</p>
+	<blockquote cite="https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v3.4.5">
+	  <p>[openexr] v3.4.5 [...] fixes an incorrect size check in istream_nonparallel_read that could lead to a buffer overflow on invalid input data.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v3.4.5</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/commit/6bb2ddf1068573d073edf81270a015b38cc05cef</url>
+    </references>
+    <dates>
+      <discovery>2026-02-16</discovery>
+      <entry>2026-02-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="428e782a-0e92-11f1-a9b1-0cc47ada5f32">
+    <topic>jenkins -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>jenkins</name>
+	<range><lt>2.551</lt></range>
+      </package>
+      <package>
+	<name>jenkins-lts</name>
+	<range><lt>2.541.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Jenkins Security Advisory:</p>
+	<blockquote cite="https://www.jenkins.io/security/advisory/2026-02-18/">
+	  <h1>Description</h1>
+	  <h5>(High) SECURITY-3669 / CVE-2026-27099</h5>
+	  <p>Stored XSS vulnerability in node offline cause description</p>
+	  <h5>(Medium) SECURITY-3658 / CVE-2026-27100</h5>
+	  <p>Build information disclosure vulnerability through Run Parameter</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-27099</cvename>
+      <cvename>CVE-2026-27100</cvename>
+      <url>https://www.jenkins.io/security/advisory/2026-02-18/</url>
+    </references>
+    <dates>
+      <discovery>2026-02-18</discovery>
+      <entry>2026-02-20</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6a81dc74-0e8b-11f1-b7d1-b42e991fc52e">
+    <topic>Mozilla -- Heap buffer overflow</topic>
+    <affects>
+    <package>
+	<name>firefox</name>
+	<range><lt>147.0.4,2</lt></range>
+    </package>
+    <package>
+	<name>firefox-esr</name>
+	<range><lt>140.7.1</lt></range>
+    </package>
+    <package>
+	<name>thunderbird</name>
+	<range><lt>147.0.2</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://bugzilla.mozilla.org/show_bug.cgi?id=2014390 reports:</p>
+	<blockquote cite="https://bugzilla.mozilla.org/show_bug.cgi?id=2014390">
+	  <p>Heap buffer overflow in libvpx.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-2447</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-2447</url>
+    </references>
+    <dates>
+      <discovery>2026-02-16</discovery>
+      <entry>2026-02-20</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a977cb1c-0d7d-11f1-85c5-a8a1599412c6">
+    <topic>chromium -- security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>145.0.7632.109</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>145.0.7632.109</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2026/02/stable-channel-update-for-desktop_18.html">
+	 <p>This update includes 3 security fixes:</p>
+	 <ul>
+	    <li>[477033835] High CVE-2026-2648: Heap buffer overflow in PDFium. Reported by soiax on 2026-01-19</li>
+	    <li>[481074858] High CVE-2026-2649: Integer overflow in V8. Reported by JunYoung Park(@candymate) of KAIST Hacking Lab on 2026-02-03</li>
+	    <li>[476461867] Medium CVE-2026-2650: Heap buffer overflow in Media. Reported by Google on 2026-01-18</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-2648</cvename>
+      <cvename>CVE-2026-2649</cvename>
+      <cvename>CVE-2026-2650</cvename>
+      <url>https://chromereleases.googleblog.com/2026/02/stable-channel-update-for-desktop_18.html</url>
+    </references>
+    <dates>
+      <discovery>2026-02-18</discovery>
+      <entry>2026-02-19</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="67793feb-0b5b-11f1-a1c0-0050569f0b83">
+    <topic>powerdns-recursor -- Denial of Service</topic>
+    <affects>
+    <package>
+	<name>powerdns-recursor</name>
+	<range><lt>5.3.5</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PowerDNS Team reports:</p>
+	<blockquote cite="https://blog.powerdns.com/2025/12/08/powerdns-security-advisories-2025-07-and-2025-08">
+	<p>2025-07: Internal logic flaw in cache management can lead to
+	a denial of service in Recursor</p>
+	<p>2025-08: Insufficient validation of incoming notifies over
+	TCP can lead to a denial of service in Recursor</p>
+	<p>2026-01: Crafted zones can lead to increased resource usage in Recursor</p>
+	<p>2026-01: This problem can be triggered by publishing and querying a crafted
+	zone that causes large memory usage.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-59029</cvename>
+      <cvename>CVE-2025-59030</cvename>
+      <cvename>CVE-2026-24027</cvename>
+      <cvename>CVE-2026-0398</cvename>
+      <url>https://doc.powerdns.com/recursor/security-advisories/powerdns-advisory-2025-07.html</url>
+      <url>https://doc.powerdns.com/recursor/security-advisories/powerdns-advisory-2025-08.html</url>
+      <url>https://docs.powerdns.com/recursor/security-advisories/powerdns-advisory-2026-01.html</url>
+    </references>
+    <dates>
+      <discovery>2025-12-08</discovery>
+      <entry>2026-02-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f9cb72e4-0b52-11f1-8e75-b42e991fc52e">
+    <topic>png -- CWE-122: Heap-based Buffer Overflow</topic>
+    <affects>
+    <package>
+	<name>png</name>
+	<range><lt>1.6.55</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://github.com/pnggroup/libpng/security/advisories/GHSA-g8hp-mq4h-rqm3 reports:</p>
+	<blockquote cite="https://github.com/pnggroup/libpng/security/advisories/GHSA-g8hp-mq4h-rqm3">
+	  <p>LIBPNG is a reference library for use in applications
+	  that read, create, and manipulate PNG (Portable Network
+	  Graphics) raster image files.  Prior to 1.6.55, an
+	  out-of-bounds read vulnerability exists in the
+	  png_set_quantize() API function.  When the function is
+	  called with no histogram and the number of colors in the
+	  palette is more than twice the maximum supported by the
+	  user's display, certain palettes will cause the function to
+	  enter into an infinite loop that reads past the end of an
+	  internal heap-allocated buffer.  The images that trigger
+	  this vulnerability are valid per the PNG specification.
+	  This vulnerability is fixed in 1.6.55.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-25646</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-25646</url>
+    </references>
+    <dates>
+      <discovery>2026-02-10</discovery>
+      <entry>2026-02-16</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="590979aa-09f7-11f1-a730-5404a68ad561">
     <topic>traefik -- TCP readTimeout bypass via STARTTLS on Postgres</topic>
     <affects>
@@ -70,11 +306,11 @@
     <affects>
       <package>
        <name>chromium</name>
-       <range><lt>144.0.7559.75</lt></range>
+       <range><lt>145.0.7632.75</lt></range>
       </package>
       <package>
        <name>ungoogled-chromium</name>
-       <range><lt>144.0.7559.75</lt></range>
+       <range><lt>145.0.7632.75</lt></range>
       </package>
     </affects>
     <description>

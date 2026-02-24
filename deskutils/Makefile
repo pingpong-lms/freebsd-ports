@@ -132,6 +132,7 @@
     SUBDIR += itinerary
     SUBDIR += jjclient
     SUBDIR += jlj
+    SUBDIR += joplin-desktop
     SUBDIR += jot
     SUBDIR += just
     SUBDIR += kaddressbook
@@ -303,6 +304,7 @@
     SUBDIR += xcalendar
     SUBDIR += xcbautolock
     SUBDIR += xchm
+    SUBDIR += xdgctl
     SUBDIR += xdg-desktop-portal
     SUBDIR += xdg-desktop-portal-lxqt
     SUBDIR += xdg-terminal-exec

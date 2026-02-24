@@ -90,6 +90,7 @@
     SUBDIR += darknet
     SUBDIR += dartsim
     SUBDIR += ddate
+    SUBDIR += deark
     SUBDIR += deco
     SUBDIR += dejagnu
     SUBDIR += delay
@@ -723,7 +724,6 @@
     SUBDIR += urh
     SUBDIR += usbids
     SUBDIR += usbrh-libusb
-    SUBDIR += usd
     SUBDIR += utftools
     SUBDIR += utouch-kmod
     SUBDIR += valentina

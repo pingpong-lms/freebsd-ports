@@ -1,6 +1,6 @@
 PORTNAME=	blender
 DISTVERSION=	5.0.1
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	graphics multimedia
 MASTER_SITES=	http://download.blender.org/source/ \
 		http://mirror.cs.umn.edu/blender.org/source/ \
@@ -106,10 +106,11 @@ JACK_LIB_DEPENDS=		libjack.so:audio/jack
 MANIFOLD_CMAKE_BOOL=		WITH_MANIFOLD
 MANIFOLD_LIB_DEPENDS=		libmanifold.so:math/manifold
 MATERIALX_CMAKE_BOOL=		WITH_MATERIALX
-MATERIALX_CMAKE_ON=		-DMaterialX_DIR:STRING=${PREFIX}/lib/cmake/MaterialX \
-				-DMATERIALX_STDLIB_DIR:STRING=${PREFIX}/share/materialx \
+MATERIALX_CMAKE_ON=		-DMaterialX_DIR:STRING=${LOCALBASE}/lib/cmake/MaterialX \
+				-DMATERIALX_STDLIB_DIR:STRING=${LOCALBASE}/share/materialx \
 				-DMATERIALX_PYTHON_DIR:STRING=${PYTHON_SITELIBDIR}/MaterialX
-MATERIALX_LIB_DEPENDS=		libMaterialXCore.so:graphics/materialx
+MATERIALX_LIB_DEPENDS=		libMaterialXCore.so:graphics/materialx \
+				libMaterialXFormat.so:graphics/materialx
 MENU_USES=			desktop-file-utils
 MOD_FLUID_CMAKE_BOOL=		WITH_MOD_FLUID
 MOD_FLUID_IMPLIES=		TBB
@@ -174,7 +175,7 @@ TRACE_LIB_DEPENDS=		libpotrace.so:graphics/libpotrace
 USD_BROKEN=			does not build with current USD port
 USD_CMAKE_BOOL=			WITH_USD
 USD_IMPLIES=			TBB
-USD_LIB_DEPENDS=		libusd_ms.so:misc/usd
+USD_LIB_DEPENDS=		libusd_ms.so:graphics/openusd
 VULKAN_BUILD_DEPENDS=		${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
 VULKAN_CMAKE_BOOL=		WITH_VULKAN_BACKEND
 VULKAN_LDFLAGS=			-lshaderc_shared -lSPIRV-Tools-shared

@@ -197,6 +197,8 @@
     SUBDIR += mysql91-server
     SUBDIR += mysql94-client
     SUBDIR += mysql94-server
+    SUBDIR += mysql96-client
+    SUBDIR += mysql96-server
     SUBDIR += mysqlbackup
     SUBDIR += mysqldump-secure
     SUBDIR += mysqlreport
@@ -540,6 +542,8 @@
     SUBDIR += pg.el
     SUBDIR += pgFormatter
     SUBDIR += pg_activity
+    SUBDIR += pg_auto_failover
+    SUBDIR += pg_auto_failover-devel
     SUBDIR += pg_citus
     SUBDIR += pg_cron
     SUBDIR += pg_dirtyread
@@ -858,6 +862,7 @@
     SUBDIR += py-sqloxide
     SUBDIR += py-sqlparse
     SUBDIR += py-sqlrelay
+    SUBDIR += py-squall-sql
     SUBDIR += py-tableschema
     SUBDIR += py-tarantool
     SUBDIR += py-tiledb

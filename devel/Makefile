@@ -739,6 +739,7 @@
     SUBDIR += freebsd-nvme-shim
     SUBDIR += freebsd-sysroot
     SUBDIR += frink
+    SUBDIR += frozen
     SUBDIR += fruit
     SUBDIR += fsmtrie
     SUBDIR += fstrcmp
@@ -850,6 +851,7 @@
     SUBDIR += git-extras
     SUBDIR += git-filter-repo
     SUBDIR += git-filter-repo-devel
+    SUBDIR += git-flow-next
     SUBDIR += git-graph
     SUBDIR += git-gui
     SUBDIR += git-lab
@@ -1510,6 +1512,7 @@
     SUBDIR += libzim
     SUBDIR += libzookeeper
     SUBDIR += libzvbi
+    SUBDIR += lief
     SUBDIR += lightning
     SUBDIR += linenoise
     SUBDIR += linux-c7-dbus-libs
@@ -1670,6 +1673,7 @@
     SUBDIR += menhir
     SUBDIR += mercurial
     SUBDIR += mergify
+    SUBDIR += merve
     SUBDIR += meson
     SUBDIR += meson-python
     SUBDIR += mfc-candidates
@@ -4382,6 +4386,7 @@
     SUBDIR += py-aioapns
     SUBDIR += py-aioboto3
     SUBDIR += py-aiobotocore
+    SUBDIR += py-aiofile
     SUBDIR += py-aiofiles
     SUBDIR += py-aiohttp-apispec
     SUBDIR += py-aioice
@@ -4634,6 +4639,7 @@
     SUBDIR += py-cacheyou
     SUBDIR += py-cachier
     SUBDIR += py-cachy
+    SUBDIR += py-caio
     SUBDIR += py-calver
     SUBDIR += py-camel-converter
     SUBDIR += py-canonicaljson
@@ -5614,6 +5620,7 @@
     SUBDIR += py-purl
     SUBDIR += py-py
     SUBDIR += py-py-deviceid
+    SUBDIR += py-py-key-value-aio
     SUBDIR += py-py-partiql-parser
     SUBDIR += py-py-serializable
     SUBDIR += py-py-stackexchange
@@ -8347,6 +8354,7 @@
     SUBDIR += slibtool
     SUBDIR += sltdl
     SUBDIR += smake
+    SUBDIR += small
     SUBDIR += smc
     SUBDIR += smooth
     SUBDIR += smv
@@ -8364,6 +8372,7 @@
     SUBDIR += sope2
     SUBDIR += sord
     SUBDIR += spago
+    SUBDIR += span
     SUBDIR += spark
     SUBDIR += sparsebitset
     SUBDIR += sparsehash
