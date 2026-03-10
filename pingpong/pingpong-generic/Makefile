@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-generic
-PORTVERSION=	1.6
+PORTVERSION=	1.7
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
 DISTFILES=	#
@@ -32,7 +32,7 @@ RUN_DEPENDS= \
 	curl:ftp/curl \
 	mosh:net/mosh \
 	lftp:ftp/lftp \
-	rsync:net/rsync \
+	rsync:net/rsync@python \
 	unzip:archivers/unzip \
 	svn:devel/subversion \
 	python:lang/python \
