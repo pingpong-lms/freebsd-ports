@@ -833,6 +833,7 @@
     SUBDIR += gh
     SUBDIR += ghidra
     SUBDIR += ghostie
+    SUBDIR += ghpr
     SUBDIR += ghq
     SUBDIR += ghub
     SUBDIR += gilt
@@ -921,7 +922,6 @@
     SUBDIR += gocheese
     SUBDIR += godot
     SUBDIR += godot-tools
-    SUBDIR += godot35
     SUBDIR += goffice
     SUBDIR += gogs
     SUBDIR += golangci-lint
@@ -1013,6 +1013,7 @@
     SUBDIR += hs-threadscope
     SUBDIR += htable
     SUBDIR += hub
+    SUBDIR += hut
     SUBDIR += hvm
     SUBDIR += hwloc
     SUBDIR += hwloc2
@@ -1619,6 +1620,7 @@
     SUBDIR += lua-bitlib
     SUBDIR += lua-bitop
     SUBDIR += lua-cjson
+    SUBDIR += lua-cjson-openresty
     SUBDIR += lua-cqueues
     SUBDIR += lua-gettext
     SUBDIR += lua-language-server
@@ -2538,6 +2540,7 @@
     SUBDIR += p5-Directory-Queue
     SUBDIR += p5-Directory-Scratch
     SUBDIR += p5-Directory-Scratch-Structured
+    SUBDIR += p5-Dist-Build
     SUBDIR += p5-Dist-CheckConflicts
     SUBDIR += p5-Dist-Joseki
     SUBDIR += p5-Dist-Metadata
@@ -4711,6 +4714,7 @@
     SUBDIR += py-cloc
     SUBDIR += py-cloudpathlib
     SUBDIR += py-cloudpickle
+    SUBDIR += py-cloup
     SUBDIR += py-cluster
     SUBDIR += py-cmd2
     SUBDIR += py-cmdtest
@@ -4777,6 +4781,7 @@
     SUBDIR += py-custodian
     SUBDIR += py-cvss
     SUBDIR += py-cwcwidth
+    SUBDIR += py-cwltest
     SUBDIR += py-cxx
     SUBDIR += py-cycler
     SUBDIR += py-cyclopts
@@ -5314,6 +5319,7 @@
     SUBDIR += py-minimal-snowplow-tracker
     SUBDIR += py-minimongo
     SUBDIR += py-minio
+    SUBDIR += py-mirakuru
     SUBDIR += py-mmh3
     SUBDIR += py-mock
     SUBDIR += py-molecule
@@ -5803,6 +5809,7 @@
     SUBDIR += py-pytest-order
     SUBDIR += py-pytest-parallel
     SUBDIR += py-pytest-plus
+    SUBDIR += py-pytest-postgresql
     SUBDIR += py-pytest-pretty
     SUBDIR += py-pytest-profiling
     SUBDIR += py-pytest-pycodestyle
@@ -5841,6 +5848,7 @@
     SUBDIR += py-python-dateutil
     SUBDIR += py-python-dbusmock
     SUBDIR += py-python-decouple
+    SUBDIR += py-python-discovery
     SUBDIR += py-python-distutils-extra
     SUBDIR += py-python-dtrace
     SUBDIR += py-python-easyconfig
@@ -5988,6 +5996,7 @@
     SUBDIR += py-schedule
     SUBDIR += py-scheduler
     SUBDIR += py-schema
+    SUBDIR += py-schema-salad
     SUBDIR += py-schematics-patched
     SUBDIR += py-scholarly
     SUBDIR += py-scikit-base
@@ -6182,7 +6191,10 @@
     SUBDIR += py-typeguard
     SUBDIR += py-typer
     SUBDIR += py-typer-slim
+    SUBDIR += py-types-Flask-Cors
     SUBDIR += py-types-Pygments
+    SUBDIR += py-types-aws-xray-sdk
+    SUBDIR += py-types-boto
     SUBDIR += py-types-decorator
     SUBDIR += py-types-docutils
     SUBDIR += py-types-jsonschema
@@ -7267,6 +7279,7 @@
     SUBDIR += rubygem-contracts
     SUBDIR += rubygem-contracts016
     SUBDIR += rubygem-cookbook-omnifetch
+    SUBDIR += rubygem-cookstyle
     SUBDIR += rubygem-cool.io
     SUBDIR += rubygem-corefines
     SUBDIR += rubygem-corefoundation
@@ -8444,7 +8457,6 @@
     SUBDIR += taskctl
     SUBDIR += taskflow
     SUBDIR += tass64
-    SUBDIR += tbb
     SUBDIR += tbox
     SUBDIR += tcl-memchan
     SUBDIR += tcl-mmap
@@ -8540,7 +8552,6 @@
     SUBDIR += universal-ctags
     SUBDIR += unordered-dense
     SUBDIR += upnp
-    SUBDIR += upp
     SUBDIR += urjtag
     SUBDIR += ut
     SUBDIR += utf8cpp

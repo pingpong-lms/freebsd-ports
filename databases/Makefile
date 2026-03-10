@@ -22,6 +22,7 @@
     SUBDIR += beansdb
     SUBDIR += buzhug
     SUBDIR += c3p0
+    SUBDIR += cargo-pgrx
     SUBDIR += cassandra-cpp-driver
     SUBDIR += cassandra3
     SUBDIR += cassandra4
@@ -1083,6 +1084,7 @@
     SUBDIR += rubygem-state_machines-activerecord08
     SUBDIR += rubygem-tarantool
     SUBDIR += rubygem-trilogy
+    SUBDIR += sabiql
     SUBDIR += sequeler
     SUBDIR += sfcgal
     SUBDIR += sharedance
@@ -1145,6 +1147,7 @@
     SUBDIR += usql
     SUBDIR += valkey
     SUBDIR += valkey8
+    SUBDIR += vchord
     SUBDIR += vfront
     SUBDIR += virtualpg
     SUBDIR += weaviate

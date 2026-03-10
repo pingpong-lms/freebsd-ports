@@ -99,6 +99,7 @@
     SUBDIR += clamav-unofficial-sigs
     SUBDIR += clamd-stream-client
     SUBDIR += clamsmtp
+    SUBDIR += clamtk
     SUBDIR += cloak
     SUBDIR += cops
     SUBDIR += cosign
@@ -384,6 +385,7 @@
     SUBDIR += masscan
     SUBDIR += mate-pam-helper
     SUBDIR += mbedtls3
+    SUBDIR += mbedtls4
     SUBDIR += mcrypt
     SUBDIR += md5deep
     SUBDIR += medusa
@@ -478,7 +480,6 @@
     SUBDIR += osslsigncode
     SUBDIR += osv-scanner
     SUBDIR += otpw
-    SUBDIR += owasp-dependency-check
     SUBDIR += p11-kit
     SUBDIR += p5-Alt-Crypt-RSA-BigInt
     SUBDIR += p5-Apache-Htpasswd

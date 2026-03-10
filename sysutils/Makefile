@@ -46,6 +46,7 @@
     SUBDIR += ansible-sshjail
     SUBDIR += ansible-sysrc
     SUBDIR += anvil
+    SUBDIR += aoostar-rs
     SUBDIR += apachetop
     SUBDIR += apcctrl
     SUBDIR += apcpwr
@@ -1050,6 +1051,7 @@
     SUBDIR += py-cron-descriptor
     SUBDIR += py-croniter
     SUBDIR += py-croniter2
+    SUBDIR += py-dbuild
     SUBDIR += py-debian-inspector
     SUBDIR += py-dict-toolbox
     SUBDIR += py-diffoscope
@@ -1191,9 +1193,11 @@
     SUBDIR += rubygem-chef-bin
     SUBDIR += rubygem-chef-cleanroom
     SUBDIR += rubygem-chef-config
+    SUBDIR += rubygem-chef-config18
     SUBDIR += rubygem-chef-licensing
     SUBDIR += rubygem-chef-telemetry
     SUBDIR += rubygem-chef-utils
+    SUBDIR += rubygem-chef-utils18
     SUBDIR += rubygem-chef-vault
     SUBDIR += rubygem-chef-winrm
     SUBDIR += rubygem-chef-winrm-elevated

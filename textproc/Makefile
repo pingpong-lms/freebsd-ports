@@ -546,6 +546,7 @@
     SUBDIR += otree
     SUBDIR += ov
     SUBDIR += ox-gfm.el
+    SUBDIR += oyo
     SUBDIR += p5-AI-Categorizer
     SUBDIR += p5-Algorithm-CheckDigits
     SUBDIR += p5-Algorithm-RabinKarp
@@ -1717,6 +1718,7 @@
     SUBDIR += py-tomli
     SUBDIR += py-tomli-w
     SUBDIR += py-tomlkit
+    SUBDIR += py-tomllint
     SUBDIR += py-toronado
     SUBDIR += py-towncrier
     SUBDIR += py-translationstring
