@@ -1,3 +1,391 @@
+  <vuln vid="c6d41ac8-28d2-11f1-b35e-bc241121aa0a">
+    <topic>FreeBSD -- pf silently ignores certain rules</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.0</ge><lt>15.0_5</lt></range>
+	<range><ge>14.4</ge><lt>14.4_1</lt></range>
+	<range><ge>14.3</ge><lt>14.3_10</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>A regression in the way hashes were calculated caused rules
+	  containing the address range syntax (x.x.x.x - y.y.y.y) that only
+	  differ in the address range(s) involved to be silently dropped as
+	  duplicates.  Only the first of such rules is actually loaded into
+	  pf.  Ranges expressed using the address[/mask-bits] syntax were not
+	  affected.</p>
+	  <p>Some keywords representing actions taken on a packet-matching rule,
+	  such as 'log', 'return tll', or 'dnpipe', may suffer from the same
+	  issue.  It is unlikely that users have such configurations, as these
+	  rules would always be redundant.  The verification described in
+	  "IV.  Workaround" below will find these as well.</p>
+	<h1>Impact:</h1>
+	  <p>Affected rules are silently ignored, which can lead to unexpected
+	  behaviour including over- and underblocking.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-4748</cvename>
+      <freebsdsa>SA-26:09.pf</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-03-25</discovery>
+      <entry>2026-03-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="733febba-28d2-11f1-b35e-bc241121aa0a">
+    <topic>FreeBSD -- Remote code execution via RPCSEC_GSS packet validation</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.0</ge><lt>15.0_5</lt></range>
+	<range><ge>14.4</ge><lt>14.4_1</lt></range>
+	<range><ge>14.3</ge><lt>14.3_10</lt></range>
+	<range><ge>13.5</ge><lt>13.5_11</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>Each RPCSEC_GSS data packet is validated by a routine which
+	  checks a signature in the packet.  This routine copies a portion
+	  of the packet into a stack buffer, but fails to ensure that the
+	  buffer is sufficiently large, and a malicious client can trigger a
+	  stack overflow.  Notably, this does not require the client to
+	  authenticate itself first.</p>
+	<h1>Impact:</h1>
+	  <p>As kgssapi.ko's RPCSEC_GSS implementation is vulnerable, remote
+	  code execution in the kernel is possible by an authenticated user
+	  that is able to send packets to the kernel's NFS server while
+	  kgssapi.ko is loaded into the kernel.</p>
+	  <p>In userspace, applications which have librpcgss_sec loaded and run
+	  an RPC server are vulnerable to remote code execution from any
+	  client able to send it packets.  We are not aware of any such
+	  applications in the FreeBSD base system.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-4747</cvename>
+      <freebsdsa>SA-26:08.rpcsec_gss</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-03-25</discovery>
+      <entry>2026-03-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="11bf64f0-28d2-11f1-b35e-bc241121aa0a">
+    <topic>FreeBSD -- Remote denial of service via null pointer dereference</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.0</ge><lt>15.0_5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>On a system exposing an NVMe/TCP target, a remote client can
+	  trigger a kernel panic by sending a CONNECT command for an I/O queue
+	  with a bogus or stale CNTLID.</p>
+	<h1>Impact:</h1>
+	  <p>An attacker with network access to the NVMe/TCP target can
+	  trigger an unauthenticated Denial of Service condition on the
+	  affected machine.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-4652</cvename>
+      <freebsdsa>SA-26:07.nvmf</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-03-25</discovery>
+      <entry>2026-03-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7aa913e9-28d1-11f1-b35e-bc241121aa0a">
+    <topic>FreeBSD -- TCP: remotely exploitable DoS vector (mbuf leak)</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.0</ge><lt>15.0_5</lt></range>
+	<range><ge>14.4</ge><lt>14.4_1</lt></range>
+	<range><ge>14.3</ge><lt>14.3_10</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>When a challenge ACK is to be sent tcp_respond() constructs and
+	  sends the challenge ACK and consumes the mbuf that is passed in.
+	  When no challenge ACK should be sent the function returns and leaks
+	  the mbuf.</p>
+	<h1>Impact:</h1>
+	  <p>If an attacker is either on path with an established TCP
+	  connection, or can themselves establish a TCP connection, to an
+	  affected FreeBSD machine, they can easily craft and send packets
+	  which meet the challenge ACK criteria and cause the FreeBSD host
+	  to leak an mbuf for each crafted packet in excess of the configured
+	  rate limit settings i.e.  with default settings, crafted packets
+	  in excess of the first 5 sent within a 1s period will leak an mbuf.</p>
+	  <p>Technically, off-path attackers can also exploit this problem by
+	  guessing the IP addresses, TCP port numbers and in some cases the
+	  sequence numbers of established connections and spoofing packets
+	  towards a FreeBSD machine, but this is harder to do effectively.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-4247</cvename>
+      <freebsdsa>SA-26:06.tcp</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-03-25</discovery>
+      <entry>2026-03-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="07d6b170-fed8-4ee2-ba96-b6d61b6d6a26">
+    <topic>chromium -- security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>146.0.7680.164</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>146.0.7680.164</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2026/03/stable-channel-update-for-desktop_23.html">
+	 <p>This update includes 8 security fixes:</p>
+	 <ul>
+	    <li>[485397284] High CVE-2026-4673: Heap buffer overflow in WebAudio. Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-02-18</li>
+	    <li>[488188166] High CVE-2026-4674: Out of bounds read in CSS. Reported by Syn4pse on 2026-02-27</li>
+	    <li>[488270257] High CVE-2026-4675: Heap buffer overflow in WebGL. Reported by 86ac1f1587b71893ed2ad792cd7dde32 on 2026-02-27</li>
+	    <li>[488613135] High CVE-2026-4676: Use after free in Dawn. Reported by 86ac1f1587b71893ed2ad792cd7dde32 on 2026-03-01</li>
+	    <li>[490533968] High CVE-2026-4677: Out of bounds read in WebAudio. Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-03-07</li>
+	    <li>[491164019] High CVE-2026-4678: Use after free in WebGPU. Reported by Google on 2026-03-10</li>
+	    <li>[491516670] High CVE-2026-4679: Integer overflow in Fonts. Reported by GF, Un3xploitable Of DeadSec on 2026-03-11</li>
+	    <li>[491869946] High CVE-2026-4680: Use after free in FedCM. Reported by Shaheen Fazim on 2026-03-12</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-4673</cvename>
+      <cvename>CVE-2026-4674</cvename>
+      <cvename>CVE-2026-4675</cvename>
+      <cvename>CVE-2026-4676</cvename>
+      <cvename>CVE-2026-4677</cvename>
+      <cvename>CVE-2026-4678</cvename>
+      <cvename>CVE-2026-4679</cvename>
+      <cvename>CVE-2026-4680</cvename>
+      <url>https://chromereleases.googleblog.com/2026/03/stable-channel-update-for-desktop_23.html</url>
+    </references>
+    <dates>
+      <discovery>2026-03-23</discovery>
+      <entry>2026-03-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3c370171-b6b6-463a-8746-ee49bea08c87">
+    <topic>chromium -- security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>146.0.7680.153</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>146.0.7680.153</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2026/03/stable-channel-update-for-desktop_18.html">
+	 <p>This update includes 26 security fixes:</p>
+	 <ul>
+	    <li>[475877320] Critical CVE-2026-4439: Out of bounds memory access in WebGL. Reported by Goodluck on 2026-01-15</li>
+	    <li>[485935305] Critical CVE-2026-4440: Out of bounds read and write in WebGL. Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-02-20</li>
+	    <li>[489381399] Critical CVE-2026-4441: Use after free in Base. Reported by Google on 2026-03-03</li>
+	    <li>[484751092] High CVE-2026-4442: Heap buffer overflow in CSS. Reported by Syn4pse on 2026-02-16</li>
+	    <li>[485292589] High CVE-2026-4443: Heap buffer overflow in WebAudio. Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-02-18</li>
+	    <li>[486349161] High CVE-2026-4444: Stack buffer overflow in WebRTC. Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-02-21</li>
+	    <li>[486421953] High CVE-2026-4445: Use after free in WebRTC. Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-02-22</li>
+	    <li>[486421954] High CVE-2026-4446: Use after free in WebRTC. Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-02-22</li>
+	    <li>[486657483] High CVE-2026-4447: Inappropriate implementation in V8. Reported by Erge on 2026-02-23</li>
+	    <li>[486972661] High CVE-2026-4448: Heap buffer overflow in ANGLE. Reported by M. Fauzan Wijaya (Gh05t666nero) on 2026-02-23</li>
+	    <li>[487117772] High CVE-2026-4449: Use after free in Blink. Reported by Syn4pse on 2026-02-24</li>
+	    <li>[487746373] High CVE-2026-4450: Out of bounds write in V8. Reported by qymag1c on 2026-02-26</li>
+	    <li>[487768779] High CVE-2026-4451: Insufficient validation of untrusted input in Navigation. Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-02-26</li>
+	    <li>[487977696] High CVE-2026-4452: Integer overflow in ANGLE. Reported by cinzinga on 2026-02-26</li>
+	    <li>[488400770] High CVE-2026-4453: Integer overflow in Dawn. Reported by sweetchip on 2026-02-27</li>
+	    <li>[488585488] High CVE-2026-4454: Use after free in Network. Reported by heapracer (@heapracer) on 2026-03-01</li>
+	    <li>[488585504] High CVE-2026-4455: Heap buffer overflow in PDFium. Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-03-01</li>
+	    <li>[488617440] High CVE-2026-4456: Use after free in Digital Credentials API. Reported by sean wong on 2026-02-28</li>
+	    <li>[488803413] High CVE-2026-4457: Type Confusion in V8. Reported by Zhenpeng (Leo) Lin at depthfirst on 2026-03-01</li>
+	    <li>[489619753] High CVE-2026-4458: Use after free in Extensions. Reported by Shaheen Fazim on 2026-03-04</li>
+	    <li>[490246422] High CVE-2026-4459: Out of bounds read and write in WebAudio. Reported by Jihyeon Jeong (Compsec Lab, Seoul National University / Research Intern) on 2026-03-06</li>
+	    <li>[490254124] High CVE-2026-4460: Out of bounds read in Skia. Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-03-06</li>
+	    <li>[490558172] High CVE-2026-4461: Inappropriate implementation in V8. Reported by Google on 2026-03-07</li>
+	    <li>[491080830] High CVE-2026-4462: Out of bounds read in Blink. Reported by heapracer (@heapracer) on 2026-03-09</li>
+	    <li>[491358681] High CVE-2026-4463: Heap buffer overflow in WebRTC. Reported by c6eed09fc8b174b0f3eebedcceb1e792 on 2026-03-10</li>
+	    <li>[487208468] Medium CVE-2026-4464: Integer overflow in ANGLE. Reported by heesun on 2026-02-24</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-4439</cvename>
+      <cvename>CVE-2026-4440</cvename>
+      <cvename>CVE-2026-4441</cvename>
+      <cvename>CVE-2026-4442</cvename>
+      <cvename>CVE-2026-4443</cvename>
+      <cvename>CVE-2026-4444</cvename>
+      <cvename>CVE-2026-4445</cvename>
+      <cvename>CVE-2026-4446</cvename>
+      <cvename>CVE-2026-4447</cvename>
+      <cvename>CVE-2026-4448</cvename>
+      <cvename>CVE-2026-4449</cvename>
+      <cvename>CVE-2026-4450</cvename>
+      <cvename>CVE-2026-4451</cvename>
+      <cvename>CVE-2026-4452</cvename>
+      <cvename>CVE-2026-4453</cvename>
+      <cvename>CVE-2026-4454</cvename>
+      <cvename>CVE-2026-4455</cvename>
+      <cvename>CVE-2026-4456</cvename>
+      <cvename>CVE-2026-4457</cvename>
+      <cvename>CVE-2026-4458</cvename>
+      <cvename>CVE-2026-4459</cvename>
+      <cvename>CVE-2026-4460</cvename>
+      <cvename>CVE-2026-4461</cvename>
+      <cvename>CVE-2026-4462</cvename>
+      <cvename>CVE-2026-4463</cvename>
+      <cvename>CVE-2026-4464</cvename>
+      <url>https://chromereleases.googleblog.com/2026/03/stable-channel-update-for-desktop_18.html</url>
+    </references>
+    <dates>
+      <discovery>2026-03-18</discovery>
+      <entry>2026-03-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="832a823b-25b5-11f1-b6f8-5404a68ad561">
+    <topic>traefik -- Multiple vulnerabilities</topic>
+    <affects>
+    <package>
+	<name>traefik</name>
+	<range><lt>3.6.11</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The traefik project releases a new version addressing multiple CVEs:</p>
+	<blockquote cite="https://github.com/traefik/traefik/releases/tag/v3.6.11">
+	  <ul>
+	    <li>CVE-2026-32595 (BasicAuth Middleware Timing Attack)</li>
+	    <li>CVE-2026-32305 (Potential mTLS Bypass via Fragmented TLS ClientHello)</li>
+	    <li>CVE-2026-32695 (Details not yet available)</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-32595</cvename>
+      <cvename>CVE-2026-32305</cvename>
+      <cvename>CVE-2026-32695</cvename>
+      <url>https://github.com/traefik/traefik/releases/tag/v3.6.11</url>
+    </references>
+    <dates>
+      <discovery>2026-03-19</discovery>
+      <entry>2026-03-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="71b4ce56-23c5-11f1-b865-b42e991fc52e">
+    <topic>UniFi Network Application - Multiple vulnerabilities</topic>
+    <affects>
+    <package>
+	<name>unifi10</name>
+	<range><lt>10.1.89</lt></range>
+    </package>
+    <package>
+	<name>unifi9</name>
+	<range><lt>9.0.114</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://community.ui.com/releases/Security-Advisory-Bulletin-062-062/c29719c0-405e-4d4a-8f26-e343e99f931b reports:</p>
+	<blockquote cite="https://community.ui.com/releases/Security-Advisory-Bulletin-062-062/c29719c0-405e-4d4a-8f26-e343e99f931b">
+	  <p>An Authenticated NoSQL Injection vulnerability found in
+	  UniFi Network Application could allow a malicious actor with
+	  authenticated access to the network to escalate
+	  privileges.</p>
+	  <p>A malicious actor with access to the network could
+	  exploit a Path Traversal vulnerability found in the UniFi
+	  Network Application to access files on the underlying system
+	  that could be manipulated to access an underlying
+	  account.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-22558</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-22558</url>
+      <cvename>CVE-2026-22557</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-22557</url>
+    </references>
+    <dates>
+      <discovery>2026-03-19</discovery>
+      <entry>2026-03-19</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c5b93cb5-2363-11f1-81da-8447094a420f">
+    <topic>Roundcube -- Multiple vulnerabilities</topic>
+    <affects>
+	<package>
+	<name>roundcube-php82</name>
+	<name>roundcube-php83</name>
+	<name>roundcube-php84</name>
+	<name>roundcube-php85</name>
+	<range><lt>1.6.14,1</lt></range>
+	</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Roundcube project reports:</p>
+	<blockquote cite="https://github.com/roundcube/roundcubemail/releases/tag/1.6.14">
+	  <p>pre-auth arbitrary file write via unsafe deserialization in redis/memcache session handler</p>
+	  <p>password could get changed without providing the old password</p>
+	  <p>IMAP Injection + CSRF bypass in mail search</p>
+	  <p>remote image blocking bypass via various SVG animate attributes</p>
+	  <p>remote image blocking bypass via a crafted body background attribute</p>
+	  <p>fixed position mitigation bypass via use of !important</p>
+	  <p>XSS issue in a HTML attachment preview</p>
+	  <p>SSRF + Information Disclosure via stylesheet links to a local network hosts</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/roundcube/roundcubemail/releases/tag/1.6.14</url>
+    </references>
+    <dates>
+      <discovery>2026-03-18</discovery>
+      <entry>2026-03-19</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="db3bdcc6-377f-47d9-9ce8-4bdede4fdafe">
     <topic>homebox -- multiple vulnerabilities</topic>
     <affects>
