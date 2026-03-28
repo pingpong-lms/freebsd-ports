@@ -29,6 +29,8 @@ PLIST_SUB+=	LIBVER=0.6${DISTVERSION:S|.||g}.0
 
 HARFBUZZ_SLAVE?=	no
 
+LIB_DEPENDS+=	libpng.so:graphics/png
+
 .if ${HARFBUZZ_SLAVE} == no
 OPTIONS_DEFINE=	DOCS
 OPTIONS_SUB=	yes
