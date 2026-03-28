@@ -13,7 +13,7 @@ COMMENT=	The meta-port for PING PONG application packages
 NO_BUILD=	yes
 NO_MTREE=	yes
 
-USES=		pgsql:14
+USES=		pgsql
 WANT_PGSQL=	server contrib
 
 RUN_DEPENDS=	${LOCALBASE}/share/pingpong-generic/installed.stamp:pingpong/pingpong-generic \
