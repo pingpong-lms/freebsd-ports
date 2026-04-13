@@ -1,5 +1,5 @@
 PORTNAME=	github-copilot-cli
-DISTVERSION=	1.0.12
+DISTVERSION=	1.0.21
 PORTEPOCH=	1
 CATEGORIES=	misc # machine-learning
 DISTFILES=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
@@ -9,9 +9,6 @@ MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	GitHub Copilot CLI brings the power of the coding agent to terminal
 WWW=		https://github.com/github/copilot-cli
 
-ONLY_FOR_ARCHS=		aarch64 amd64
-ONLY_FOR_ARCHS_REASON=	binaries are installed in folders with architecture encoded in them, patches are welcome to fix this limitation
-
 FLAVORS=	script binary
 FLAVOR?=	${FLAVORS:[1]}
 script_PKGNAMESUFFIX=
@@ -19,7 +16,8 @@ binary_PKGNAMESUFFIX=	-bin
 binary_COMMENT=	GitHub Copilot CLI - standalone binary (no npm dependencies)
 binary_PLIST=	${.CURDIR}/pkg-plist.binary
 
-FETCH_DEPENDS=	npm:www/npm \
+FETCH_DEPENDS=	flock:sysutils/flock \
+		npm:www/npm \
 		jq:textproc/jq \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss
 
@@ -30,6 +28,8 @@ PACKAGE_NAME=	@github/copilot
 DD=		${DISTDIR}/${DIST_SUBDIR}
 
 FETCH_SCRIPT=	${PORTSDIR}/Tools/scripts/npmjs-fetch-with-dependencies.sh
+
+FETCH_LOCKFILE=	${DD}/fetch.lock
 
 .if ${FLAVOR} == script
 DISTFILES+=	${NODE_HEADERS}${EXTRACT_SUFX}
@@ -44,6 +44,7 @@ RUN_DEPENDS=	libsecret>0:security/libsecret \
 USES=		nodejs:run pkgconfig python:build
 
 .elif ${FLAVOR} == binary
+BROKEN=		See if the binary flavor somehow causes fetch failures
 DISTFILES+=	${NODE_HEADERS}${EXTRACT_SUFX}
 
 BUILD_DEPENDS=	npm:www/npm \
@@ -79,7 +80,8 @@ USES=		nodejs:build pkgconfig python:build
 
 NODE_HEADERS=	node-v22.19.0-headers
 
-JS_ARCH=	${ARCH:S/amd64/x64/:S/aarch64/arm64/}
+JS_ARCH=	${ARCH:S/amd64/x64/:S/aarch64/arm64/:S/i386/ia32/:S/powerpc64le/ppc64le/:S/powerpc64/ppc64/:C/armv[67]/arm/} # modeled after electron.mk
+PLIST_SUB=	JS_ARCH=${JS_ARCH}
 
 DEP_MODULES=			pty sharp keytar node_addon_api
 dep_pty_npm_name=		@devm33/node-pty
@@ -95,44 +97,43 @@ dep_node_addon_api_version=	8.5.0
 DISTFILES+=	${dep:S/_/-/g}-${dep_${dep}_version}${EXTRACT_SUFX}
 .endfor
 
-PLIST_SUB=	JS_ARCH=${JS_ARCH}
-
 do-fetch:
 	@${MKDIR} ${DD}
-	@if ! [ -f ${DD}/${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX} ]; then \
+	@exec 9>${FETCH_LOCKFILE} && flock -x 9 && \
+	if ! [ -f ${DD}/${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX} ]; then \
 		${ECHO} "====> Fetching ${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}" && \
 		${SETENV} TMPDIR=${WRKDIR} LOCALBASE=${LOCALBASE} ${FETCH_SCRIPT} \
 			${PACKAGE_NAME} ${DISTVERSION} \
 			${FILESDIR}/package-lock.json \
 			${DD}/${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}; \
-	fi
-	@if ! [ -f ${DD}/${NODE_HEADERS}${EXTRACT_SUFX} ]; then \
+	fi && \
+	if ! [ -f ${DD}/${NODE_HEADERS}${EXTRACT_SUFX} ]; then \
 		${ECHO} "====> Fetching ${NODE_HEADERS}${EXTRACT_SUFX}" && \
 		${FETCH_CMD} -q https://nodejs.org/download/release/v22.19.0/${NODE_HEADERS}${EXTRACT_SUFX} \
 			-o ${DD}/${NODE_HEADERS}${EXTRACT_SUFX}; \
-	fi
-	@if ! [ -f ${DD}/pty-${dep_pty_version}${EXTRACT_SUFX} ]; then \
+	fi && \
+	if ! [ -f ${DD}/pty-${dep_pty_version}${EXTRACT_SUFX} ]; then \
 		${ECHO} "====> Fetching dependency pty" && \
 		${SETENV} TMPDIR=${WRKDIR} LOCALBASE=${LOCALBASE} ${FETCH_SCRIPT} \
 			${dep_pty_npm_name} ${dep_pty_version} \
 			${FILESDIR}/package-lock-pty.json \
 			${DD}/pty-${dep_pty_version}${EXTRACT_SUFX}; \
-	fi
-	@if ! [ -f ${DD}/sharp-${dep_sharp_version}${EXTRACT_SUFX} ]; then \
+	fi && \
+	if ! [ -f ${DD}/sharp-${dep_sharp_version}${EXTRACT_SUFX} ]; then \
 		${ECHO} "====> Fetching dependency sharp" && \
 		${SETENV} TMPDIR=${WRKDIR} LOCALBASE=${LOCALBASE} ${FETCH_SCRIPT} \
 			${dep_sharp_npm_name} ${dep_sharp_version} \
 			${FILESDIR}/package-lock-sharp.json \
 			${DD}/sharp-${dep_sharp_version}${EXTRACT_SUFX}; \
-	fi
-	@if ! [ -f ${DD}/keytar-${dep_keytar_version}${EXTRACT_SUFX} ]; then \
+	fi && \
+	if ! [ -f ${DD}/keytar-${dep_keytar_version}${EXTRACT_SUFX} ]; then \
 		${ECHO} "====> Fetching dependency keytar" && \
 		${SETENV} TMPDIR=${WRKDIR} LOCALBASE=${LOCALBASE} ${FETCH_SCRIPT} \
 			${dep_keytar_npm_name} ${dep_keytar_version} \
 			${FILESDIR}/package-lock-keytar.json \
 			${DD}/keytar-${dep_keytar_version}${EXTRACT_SUFX}; \
-	fi
-	@if ! [ -f ${DD}/node-addon-api-${dep_node_addon_api_version}${EXTRACT_SUFX} ]; then \
+	fi && \
+	if ! [ -f ${DD}/node-addon-api-${dep_node_addon_api_version}${EXTRACT_SUFX} ]; then \
 		${ECHO} "====> Fetching dependency node-addon-api" && \
 		${SETENV} TMPDIR=${WRKDIR} LOCALBASE=${LOCALBASE} ${FETCH_SCRIPT} \
 			${dep_node_addon_api_npm_name} ${dep_node_addon_api_version} \

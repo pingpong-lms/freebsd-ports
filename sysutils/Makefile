@@ -27,7 +27,6 @@
     SUBDIR += ah-tty
     SUBDIR += aimage
     SUBDIR += aird
-    SUBDIR += alfio
     SUBDIR += alloy
     SUBDIR += am-utils
     SUBDIR += amazon-ssm-agent
@@ -1038,6 +1037,7 @@
     SUBDIR += pxattr
     SUBDIR += py-ansible-compat
     SUBDIR += py-ansible-core
+    SUBDIR += py-ansible-core218
     SUBDIR += py-ansible-core219
     SUBDIR += py-ansible-core220
     SUBDIR += py-ansible-lint
@@ -1390,6 +1390,7 @@
     SUBDIR += swapusage
     SUBDIR += sweeper
     SUBDIR += swtpm
+    SUBDIR += sylve
     SUBDIR += symlinks
     SUBDIR += symon
     SUBDIR += synergy
@@ -1438,8 +1439,6 @@
     SUBDIR += tldr
     SUBDIR += tlsdate
     SUBDIR += tm
-    SUBDIR += tmate
-    SUBDIR += tmate-ssh-server
     SUBDIR += tmpreaper
     SUBDIR += tmpwatch
     SUBDIR += tmux

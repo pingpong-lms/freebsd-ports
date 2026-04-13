@@ -185,7 +185,6 @@
     SUBDIR += mongodb70
     SUBDIR += mongodb80
     SUBDIR += mongosh
-    SUBDIR += movine
     SUBDIR += mroonga
     SUBDIR += mtop
     SUBDIR += mydumper
@@ -199,10 +198,6 @@
     SUBDIR += mysql80-server
     SUBDIR += mysql84-client
     SUBDIR += mysql84-server
-    SUBDIR += mysql91-client
-    SUBDIR += mysql91-server
-    SUBDIR += mysql94-client
-    SUBDIR += mysql94-server
     SUBDIR += mysql96-client
     SUBDIR += mysql96-server
     SUBDIR += mysqlbackup
@@ -659,7 +654,6 @@
     SUBDIR += postgis34
     SUBDIR += postgis35
     SUBDIR += postgis36
-    SUBDIR += postgresql-cstore_fdw
     SUBDIR += postgresql-idn
     SUBDIR += postgresql-jdbc
     SUBDIR += postgresql-libpgeasy
