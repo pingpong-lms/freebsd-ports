@@ -59,7 +59,6 @@
     SUBDIR += clhep
     SUBDIR += clipper
     SUBDIR += code_saturne
-    SUBDIR += colt
     SUBDIR += conduit
     SUBDIR += coordgenlibs
     SUBDIR += cp2k
@@ -410,6 +409,7 @@
     SUBDIR += py-pygmo2
     SUBDIR += py-pyked
     SUBDIR += py-pymatgen
+    SUBDIR += py-pymatgen-core
     SUBDIR += py-pymatgen-analysis-alloys
     SUBDIR += py-pymbd
     SUBDIR += py-pymol
@@ -423,6 +423,7 @@
     SUBDIR += py-pyteomics
     SUBDIR += py-qcelemental
     SUBDIR += py-qcengine
+    SUBDIR += py-qcmanybody
     SUBDIR += py-qiskit
     SUBDIR += py-qspin
     SUBDIR += py-quantities

@@ -23,6 +23,7 @@
     SUBDIR += alsa-sndio
     SUBDIR += alsa-utils
     SUBDIR += alure
+    SUBDIR += amarok
     SUBDIR += amb-plugins
     SUBDIR += amberol
     SUBDIR += ampache
@@ -358,7 +359,6 @@
     SUBDIR += libid3tag
     SUBDIR += libinstpatch
     SUBDIR += libkcddb
-    SUBDIR += libkcompactdisc
     SUBDIR += libkeyfinder
     SUBDIR += liblastfm
     SUBDIR += liblo
@@ -745,6 +745,7 @@
     SUBDIR += somafm-cli
     SUBDIR += sonata
     SUBDIR += songrec
+    SUBDIR += songsee
     SUBDIR += sonic-visualiser
     SUBDIR += sonicradio
     SUBDIR += sonivox

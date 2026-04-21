@@ -123,6 +123,7 @@
     SUBDIR += bhyve-firmware
     SUBDIR += bhyve-rc
     SUBDIR += bhyvemgr
+    SUBDIR += bin
     SUBDIR += biosfont
     SUBDIR += bkpupsd
     SUBDIR += bksh
@@ -755,6 +756,7 @@
     SUBDIR += moreutils
     SUBDIR += most
     SUBDIR += mountsmb2
+    SUBDIR += mpifileutils
     SUBDIR += mping
     SUBDIR += mprocs
     SUBDIR += mptd
@@ -1413,6 +1415,7 @@
     SUBDIR += tarsnap-gui
     SUBDIR += tarsnap-periodic
     SUBDIR += tartarus
+    SUBDIR += taws
     SUBDIR += tbku
     SUBDIR += tclsyslog
     SUBDIR += tcplist
@@ -1550,6 +1553,7 @@
     SUBDIR += uif2iso
     SUBDIR += unetbootin
     SUBDIR += uniutils
+    SUBDIR += unixexec
     SUBDIR += unquote
     SUBDIR += unstow
     SUBDIR += upower
@@ -1599,6 +1603,7 @@
     SUBDIR += wait_on
     SUBDIR += waitforssh
     SUBDIR += walk
+    SUBDIR += wander
     SUBDIR += watchcat
     SUBDIR += watchfolder
     SUBDIR += watchman

@@ -10,6 +10,7 @@ WWW=		https://github.com/nmeum/android-tools
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BUILD_DEPENDS=	googletest>0:devel/googletest
 LIB_DEPENDS=	libbrotlicommon.so:archivers/brotli \
 		libfmt.so:devel/libfmt \
 		liblz4.so:archivers/liblz4 \
@@ -17,7 +18,7 @@ LIB_DEPENDS=	libbrotlicommon.so:archivers/brotli \
 		libprotobuf.so:devel/protobuf \
 		libzstd.so:archivers/zstd
 
-USES=		cmake compiler:c++20-lang localbase:ldflags python shebangfix tar:xz
+USES=		cmake compiler:c++20-lang localbase:ldflags pkgconfig python shebangfix tar:xz
 
 SHEBANG_FILES=	vendor/avb/avbtool.py \
 		vendor/libufdt/utils/src/mkdtboimg.py \

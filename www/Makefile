@@ -198,6 +198,7 @@
     SUBDIR += filebrowser
     SUBDIR += filebrowser-quantum
     SUBDIR += filepizza
+    SUBDIR += fileserv
     SUBDIR += filtron
     SUBDIR += firedm
     SUBDIR += firefox
@@ -245,7 +246,6 @@
     SUBDIR += gobuffalo
     SUBDIR += gohugo
     SUBDIR += googlebook_dl
-    SUBDIR += googler
     SUBDIR += gophernicus
     SUBDIR += gopherus
     SUBDIR += gotty
@@ -311,6 +311,7 @@
     SUBDIR += joomla4
     SUBDIR += joomla5
     SUBDIR += jwt-cli
+    SUBDIR += kamal-proxy
     SUBDIR += kanboard
     SUBDIR += kannel
     SUBDIR += kannel-sqlbox
@@ -469,6 +470,7 @@
     SUBDIR += moodle45
     SUBDIR += moodle50
     SUBDIR += moodle51
+    SUBDIR += moodle52
     SUBDIR += morty
     SUBDIR += multisort
     SUBDIR += multiwatch
@@ -1552,6 +1554,7 @@
     SUBDIR += py-dj52-django-choices-field
     SUBDIR += py-dj52-django-compression-middleware
     SUBDIR += py-dj52-django-cors-headers
+    SUBDIR += py-dj52-django-crispy-forms
     SUBDIR += py-dj52-django-debug-toolbar
     SUBDIR += py-dj52-django-extensions
     SUBDIR += py-dj52-django-filter
@@ -1918,7 +1921,6 @@
     SUBDIR += py-requests
     SUBDIR += py-requests-aws4auth
     SUBDIR += py-requests-cache
-    SUBDIR += py-requests-cache0
     SUBDIR += py-requests-cache93
     SUBDIR += py-requests-file
     SUBDIR += py-requests-futures
@@ -1975,7 +1977,6 @@
     SUBDIR += py-ttrv
     SUBDIR += py-tuir
     SUBDIR += py-turbogears2
-    SUBDIR += py-tvdb_api
     SUBDIR += py-twill
     SUBDIR += py-urlgrabber
     SUBDIR += py-urlman
@@ -2217,6 +2218,7 @@
     SUBDIR += rubygem-http-accept
     SUBDIR += rubygem-http-cookie
     SUBDIR += rubygem-http-form_data
+    SUBDIR += rubygem-http-form_data2
     SUBDIR += rubygem-http3
     SUBDIR += rubygem-http4
     SUBDIR += rubygem-http_router
@@ -2246,6 +2248,7 @@
     SUBDIR += rubygem-jquery-turbolinks
     SUBDIR += rubygem-jquery-ui-rails-rails4
     SUBDIR += rubygem-jruby-rack
+    SUBDIR += rubygem-js-routes
     SUBDIR += rubygem-jsbundling-rails
     SUBDIR += rubygem-jsbundling-rails-rails70
     SUBDIR += rubygem-jsbundling-rails-rails71
@@ -2352,25 +2355,31 @@
     SUBDIR += rubygem-rack
     SUBDIR += rubygem-rack-accept
     SUBDIR += rubygem-rack-attack
+    SUBDIR += rubygem-rack-attack-gitlab
     SUBDIR += rubygem-rack-cache
     SUBDIR += rubygem-rack-contrib
     SUBDIR += rubygem-rack-cors
+    SUBDIR += rubygem-rack-gitlab
     SUBDIR += rubygem-rack-mount
     SUBDIR += rubygem-rack-openid
     SUBDIR += rubygem-rack-protection
+    SUBDIR += rubygem-rack-protection-gitlab
     SUBDIR += rubygem-rack-protection1
     SUBDIR += rubygem-rack-protection2
     SUBDIR += rubygem-rack-protection3
     SUBDIR += rubygem-rack-proxy
     SUBDIR += rubygem-rack-session
+    SUBDIR += rubygem-rack-session-gitlab
     SUBDIR += rubygem-rack-session10
     SUBDIR += rubygem-rack-ssl
     SUBDIR += rubygem-rack-test
+    SUBDIR += rubygem-rack-test-gitlab
     SUBDIR += rubygem-rack-timeout
     SUBDIR += rubygem-rack16
     SUBDIR += rubygem-rack22
     SUBDIR += rubygem-rack_csrf
     SUBDIR += rubygem-rackup
+    SUBDIR += rubygem-rackup-gitlab
     SUBDIR += rubygem-rackup10
     SUBDIR += rubygem-rails-gitlab
     SUBDIR += rubygem-rails-settings-cached
@@ -2678,6 +2687,7 @@
     SUBDIR += vertx
     SUBDIR += vger
     SUBDIR += vigil
+    SUBDIR += vikunja
     SUBDIR += vimb
     SUBDIR += vinyl09
     SUBDIR += visitors
@@ -2725,6 +2735,7 @@
     SUBDIR += wuzz
     SUBDIR += wwwoffle
     SUBDIR += xapian-omega
+    SUBDIR += xapian-omega14
     SUBDIR += xcaddy
     SUBDIR += xfce4-smartbookmark-plugin
     SUBDIR += xh

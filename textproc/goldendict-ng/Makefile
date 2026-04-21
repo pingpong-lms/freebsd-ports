@@ -1,7 +1,7 @@
 PORTNAME=	goldendict-ng
 DISTVERSIONPREFIX=	v
-DISTVERSION=	26.3.0
-DISTVERSIONSUFFIX=	-Release.fce2b872
+DISTVERSION=	26.5.1
+DISTVERSIONSUFFIX=	-Release.9973c461
 CATEGORIES=	textproc
 
 MAINTAINER=	eduardo@FreeBSD.org
@@ -17,7 +17,7 @@ LIB_DEPENDS=	libfmt.so:devel/libfmt \
 		libopencc.so:chinese/opencc \
 		libtomlplusplus.so:devel/tomlplusplus \
 		libvorbis.so:audio/libvorbis \
-		libxapian.so:databases/xapian-core \
+		libxapian.so:databases/xapian-core14 \
 		libzim.so:devel/libzim
 
 USES=		cmake compiler:c++17-lang desktop-file-utils gl pkgconfig qt:6 \
