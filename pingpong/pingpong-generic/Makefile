@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-generic
-PORTVERSION=	1.7
+PORTVERSION=	1.8
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
 DISTFILES=	#
@@ -32,7 +32,7 @@ RUN_DEPENDS= \
 	curl:ftp/curl \
 	mosh:net/mosh \
 	lftp:ftp/lftp \
-	rsync:net/rsync@python \
+	rsync:net/rsync \
 	unzip:archivers/unzip \
 	svn:devel/subversion \
 	python:lang/python \
@@ -62,6 +62,7 @@ RUN_DEPENDS= \
 	bat:textproc/bat \
 	fzf:textproc/fzf \
 	jo:textproc/jo \
+	jq:textproc/jq \
 	rg:textproc/ripgrep \
 	fd:sysutils/fd \
 	tmux:sysutils/tmux \
