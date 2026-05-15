@@ -30,6 +30,7 @@
     SUBDIR += cassandra-cpp-driver
     SUBDIR += cassandra3
     SUBDIR += cassandra4
+    SUBDIR += cassandra5
     SUBDIR += casstcl
     SUBDIR += cayley
     SUBDIR += cdb
@@ -107,14 +108,13 @@
     SUBDIR += jetbrains-datagrip
     SUBDIR += jlog
     SUBDIR += jrobin
-    SUBDIR += jrrd
     SUBDIR += kbibtex
     SUBDIR += kdb
     SUBDIR += kexi
     SUBDIR += keydb
-    SUBDIR += kuzu
     SUBDIR += kyotocabinet
     SUBDIR += kyototycoon
+    SUBDIR += ladybug
     SUBDIR += ldb25
     SUBDIR += ldb28
     SUBDIR += ldb29
@@ -200,6 +200,8 @@
     SUBDIR += mysql84-server
     SUBDIR += mysql96-client
     SUBDIR += mysql96-server
+    SUBDIR += mysql97-client
+    SUBDIR += mysql97-server
     SUBDIR += mysqlbackup
     SUBDIR += mysqldump-secure
     SUBDIR += mysqlreport
@@ -433,6 +435,7 @@
     SUBDIR += p5-Memcached-libmemcached
     SUBDIR += p5-Metadata
     SUBDIR += p5-Mojo-Pg
+    SUBDIR += p5-Mojo-SQL
     SUBDIR += p5-MongoDB
     SUBDIR += p5-Mongoose
     SUBDIR += p5-MySQL-Diff
@@ -748,6 +751,7 @@
     SUBDIR += py-anysqlite
     SUBDIR += py-apache-arrow
     SUBDIR += py-apsw
+    SUBDIR += py-apswutils
     SUBDIR += py-asyncmy
     SUBDIR += py-asyncpg
     SUBDIR += py-berkeleydb
@@ -792,6 +796,8 @@
     SUBDIR += py-mysql-connector-python
     SUBDIR += py-mysqlclient
     SUBDIR += py-ormar
+    SUBDIR += py-oxyde
+    SUBDIR += py-oxyde-core
     SUBDIR += py-partd
     SUBDIR += py-peewee
     SUBDIR += py-peewee_migrate
@@ -858,6 +864,7 @@
     SUBDIR += py-sqlite-fts4
     SUBDIR += py-sqlite-migrate
     SUBDIR += py-sqlite-utils
+    SUBDIR += py-sqlite-vec
     SUBDIR += py-sqlite3
     SUBDIR += py-sqlmodel
     SUBDIR += py-sqlobject
@@ -1105,6 +1112,8 @@
     SUBDIR += sqlite-ext-pcre
     SUBDIR += sqlite-ext-regexp
     SUBDIR += sqlite-ext-spellfix
+    SUBDIR += sqlite-ext-vec
+    SUBDIR += sqlite-jdbc
     SUBDIR += sqlite2
     SUBDIR += sqlite3
     SUBDIR += sqlitebrowser

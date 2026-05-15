@@ -1,4 +1,4 @@
---- vendor/github.com/elastic/elastic-agent-libs/monitoring/metrics.go.orig     2026-04-16 18:36:25 UTC
+--- vendor/github.com/elastic/elastic-agent-libs/monitoring/metrics.go.orig	2026-04-16 18:36:25 UTC
 +++ vendor/github.com/elastic/elastic-agent-libs/monitoring/metrics.go
 @@ -296,7 +296,12 @@ func NewFunc(r *Registry, name string, f func(Mode, Vi
  	return v
@@ -13,4 +13,4 @@
 +}
  
  func (m makeExpvar) String() string { return m() }
-
+ 

@@ -210,6 +210,9 @@
     SUBDIR += foreign-cdm
     SUBDIR += forgejo
     SUBDIR += forgejo-lts
+    SUBDIR += forgejo11
+    SUBDIR += forgejo14
+    SUBDIR += forgejo15
     SUBDIR += formication
     SUBDIR += foswiki
     SUBDIR += free-sa-devel
@@ -336,6 +339,7 @@
     SUBDIR += libhsts
     SUBDIR += libhubbub
     SUBDIR += libjwt
+    SUBDIR += libjwt3
     SUBDIR += libmicrohttpd
     SUBDIR += libnghttp2
     SUBDIR += libnghttp3
@@ -372,6 +376,7 @@
     SUBDIR += lua-resty-session3
     SUBDIR += luakit
     SUBDIR += luakit-devel
+    SUBDIR += lubelogger
     SUBDIR += lux
     SUBDIR += lychee
     SUBDIR += lycheeorg
@@ -513,6 +518,7 @@
     SUBDIR += node22
     SUBDIR += node24
     SUBDIR += node25
+    SUBDIR += node26
     SUBDIR += nostromo
     SUBDIR += novnc
     SUBDIR += npc
@@ -522,6 +528,7 @@
     SUBDIR += npm-node22
     SUBDIR += npm-node24
     SUBDIR += npm-node25
+    SUBDIR += npm-node26
     SUBDIR += nyxt
     SUBDIR += oatpp
     SUBDIR += oauth2-proxy
@@ -674,7 +681,6 @@
     SUBDIR += p5-Catalyst-Component-ACCEPT_CONTEXT
     SUBDIR += p5-Catalyst-Component-InstancePerContext
     SUBDIR += p5-Catalyst-Controller-ActionRole
-    SUBDIR += p5-Catalyst-Controller-BindLex
     SUBDIR += p5-Catalyst-Controller-FormBuilder
     SUBDIR += p5-Catalyst-Controller-HTML-FormFu
     SUBDIR += p5-Catalyst-Controller-RateLimit
@@ -1472,6 +1478,7 @@
     SUBDIR += pocket-id
     SUBDIR += podcastamatic
     SUBDIR += pomerium
+    SUBDIR += pomerium-envoy-custom
     SUBDIR += pound
     SUBDIR += privatebin
     SUBDIR += privoxy
@@ -1579,6 +1586,7 @@
     SUBDIR += py-dj52-django-timezone-field
     SUBDIR += py-dj52-django-treebeard
     SUBDIR += py-dj52-django-treenode
+    SUBDIR += py-dj52-django-unfold
     SUBDIR += py-dj52-djangorestframework
     SUBDIR += py-dj52-djangorestframework-guardian
     SUBDIR += py-dj52-drf-spectacular
@@ -1610,6 +1618,7 @@
     SUBDIR += py-django-cms
     SUBDIR += py-django-compression-middleware
     SUBDIR += py-django-configurations
+    SUBDIR += py-django-configurator
     SUBDIR += py-django-constance
     SUBDIR += py-django-contact-form
     SUBDIR += py-django-context-decorator
@@ -1717,6 +1726,7 @@
     SUBDIR += py-dtflickr
     SUBDIR += py-enmerkar
     SUBDIR += py-essentials-openapi
+    SUBDIR += py-exa-py
     SUBDIR += py-extruct
     SUBDIR += py-fake-useragent
     SUBDIR += py-falcon
@@ -1724,6 +1734,7 @@
     SUBDIR += py-fastapi-sso
     SUBDIR += py-feedgen
     SUBDIR += py-feedgenerator
+    SUBDIR += py-firecrawl-py
     SUBDIR += py-flasgger
     SUBDIR += py-flask
     SUBDIR += py-flask-admin
@@ -1873,6 +1884,7 @@
     SUBDIR += py-onetimepass
     SUBDIR += py-openbrokerapi
     SUBDIR += py-pafy
+    SUBDIR += py-parallel-web
     SUBDIR += py-paste
     SUBDIR += py-pastedeploy
     SUBDIR += py-path-and-address
@@ -1904,6 +1916,7 @@
     SUBDIR += py-pysmartdl
     SUBDIR += py-python-digitalocean
     SUBDIR += py-python-dotenv
+    SUBDIR += py-python-fasthtml
     SUBDIR += py-python-multipart
     SUBDIR += py-pyweblib
     SUBDIR += py-pywebview-gtk
@@ -1921,7 +1934,6 @@
     SUBDIR += py-requests
     SUBDIR += py-requests-aws4auth
     SUBDIR += py-requests-cache
-    SUBDIR += py-requests-cache93
     SUBDIR += py-requests-file
     SUBDIR += py-requests-futures
     SUBDIR += py-requests-gssapi
@@ -2749,6 +2761,7 @@
     SUBDIR += yarn-node22
     SUBDIR += yarn-node24
     SUBDIR += yarn-node25
+    SUBDIR += yarn-node26
     SUBDIR += yarr
     SUBDIR += yaws
     SUBDIR += you-get

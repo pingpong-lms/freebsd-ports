@@ -1,7 +1,15 @@
 PORTNAME=	llama-cpp
 DISTVERSIONPREFIX=	b
-DISTVERSION=	8182
+DISTVERSION=	9159
 CATEGORIES=	misc # machine-learning
+MASTER_SITES=	https://huggingface.co/buckets/ggml-org/llama-ui/resolve/${DISTVERSIONPREFIX}${DISTVERSION}/:webui
+DISTFILES=	index.html:webui \
+		bundle.js:webui \
+		bundle.css:webui \
+		loading.html:webui
+DIST_SUBDIR=	${PORTNAME}
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX} \
+		nomic-ai-kompute-4565194_GH0.tar.gz
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Facebook's LLaMA model in C/C++ # '
@@ -16,6 +24,7 @@ BROKEN_i386=	compilation fails, see https://github.com/ggerganov/llama.cpp/issue
 LIB_DEPENDS=	libggml-base.so:misc/ggml
 
 USES=		cmake:testing compiler:c++11-lang python:run shebangfix
+
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
@@ -36,8 +45,10 @@ CMAKE_TESTING_ON=	LLAMA_BUILD_TESTS
 USER=		nobody
 SUB_LIST=	USER=${USER}
 
-OPTIONS_DEFINE=		CURL EXAMPLES VULKAN
-OPTIONS_DEFAULT=	CURL VULKAN
+PLIST_SUB+=	DISTVERSION=${DISTVERSION}
+
+OPTIONS_DEFINE=		CURL EXAMPLES
+OPTIONS_DEFAULT=	CURL EXAMPLES
 OPTIONS_SUB=		yes
 
 CURL_DESCR=		Use libcurl to download model from an URL
@@ -47,13 +58,15 @@ CURL_LIB_DEPENDS=	libcurl.so:ftp/curl
 
 EXAMPLES_CMAKE_BOOL=	LLAMA_BUILD_EXAMPLES
 
-VULKAN_CMAKE_BOOL=	GGML_VULKAN
-VULKAN_BUILD_DEPENDS=	glslc:graphics/shaderc \
-			vulkan-headers>0:graphics/vulkan-headers
-VULKAN_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader
-
 BINARY_ALIAS=	git=false \
 		python=${PYTHON_CMD} # for tests
+
+post-extract:
+	@${MKDIR} ${WRKSRC}/tools/server/public
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/index.html ${WRKSRC}/tools/server/public/index.html
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/bundle.js ${WRKSRC}/tools/server/public/bundle.js
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/bundle.css ${WRKSRC}/tools/server/public/bundle.css
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/loading.html ${WRKSRC}/tools/server/public/loading.html
 
 post-patch: # set version in the code
 	@${REINPLACE_CMD} \

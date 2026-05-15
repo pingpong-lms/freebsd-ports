@@ -42,6 +42,7 @@
     SUBDIR += boxes
     SUBDIR += broot
     SUBDIR += bsod
+    SUBDIR += bun-decompile
     SUBDIR += caffe
     SUBDIR += camsnap
     SUBDIR += chatblade
@@ -52,9 +53,9 @@
     SUBDIR += chrono
     SUBDIR += cinnamon-translations
     SUBDIR += claude-code
+    SUBDIR += clawhub
     SUBDIR += clex
     SUBDIR += clifm
-    SUBDIR += clawhub
     SUBDIR += cloc
     SUBDIR += clpbar
     SUBDIR += code2prompt
@@ -201,9 +202,11 @@
     SUBDIR += grizzly
     SUBDIR += grok-cli
     SUBDIR += gwhich
+    SUBDIR += hashcards
     SUBDIR += hashdb
     SUBDIR += hello
     SUBDIR += help2man
+    SUBDIR += hermes-agent
     SUBDIR += heyu2
     SUBDIR += hicolor-icon-theme
     SUBDIR += histring
@@ -442,7 +445,6 @@
     SUBDIR += py-SimpleSoapy
     SUBDIR += py-SoapySDR
     SUBDIR += py-accelerate
-    SUBDIR += py-aider-chat
     SUBDIR += py-alive-progress
     SUBDIR += py-anthropic
     SUBDIR += py-apache-beam
@@ -480,6 +482,7 @@
     SUBDIR += py-evaluate
     SUBDIR += py-ezc3d
     SUBDIR += py-facenet-pytorch
+    SUBDIR += py-fal-client
     SUBDIR += py-fast-histogram
     SUBDIR += py-fastmcp
     SUBDIR += py-fastscapelib
@@ -594,6 +597,7 @@
     SUBDIR += py-sagemaker
     SUBDIR += py-sagemaker-core
     SUBDIR += py-sagemaker-mlops
+    SUBDIR += py-sagemaker-schema-inference-artifacts
     SUBDIR += py-sagemaker-serve
     SUBDIR += py-sagemaker-shim
     SUBDIR += py-sagemaker-train
@@ -658,6 +662,7 @@
     SUBDIR += qt6ct
     SUBDIR += quantum++
     SUBDIR += quary
+    SUBDIR += qwen-code
     SUBDIR += radio_datetime_analyzer
     SUBDIR += raja
     SUBDIR += randomx
@@ -711,6 +716,7 @@
     SUBDIR += snakemake
     SUBDIR += soapysdr
     SUBDIR += solarized
+    SUBDIR += sonoscli
     SUBDIR += spacenavd-devel
     SUBDIR += spnavcfg-devel
     SUBDIR += sshbuddy
@@ -774,6 +780,7 @@
     SUBDIR += viz
     SUBDIR += vote
     SUBDIR += vxl
+    SUBDIR += wacli
     SUBDIR += wavedrom
     SUBDIR += wego
     SUBDIR += whichman

@@ -1,13 +1,14 @@
 PORTNAME=	qh3
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.7.2
+DISTVERSION=	1.8.1
 CATEGORIES=	www python
 #MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Lightway and fast implementation of QUIC and HTTP/3
-WWW=		https://qh3.readthedocs.io/en/latest/
+WWW=		https://qh3.readthedocs.io/en/latest/ \
+		https://github.com/jawah/qh3
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -43,9 +44,10 @@ CARGO_CRATES=	aes-0.8.4 \
 		block-buffer-0.10.4 \
 		block-padding-0.3.3 \
 		cbc-0.1.2 \
-		cc-1.2.60 \
+		cc-1.2.61 \
 		cexpr-0.6.0 \
 		cfg-if-1.0.4 \
+		cfg_aliases-0.2.1 \
 		cipher-0.4.4 \
 		clang-sys-1.8.1 \
 		cmake-0.1.58 \
@@ -54,7 +56,7 @@ CARGO_CRATES=	aes-0.8.4 \
 		crypto-common-0.1.7 \
 		curve25519-dalek-4.1.3 \
 		curve25519-dalek-derive-0.1.1 \
-		data-encoding-2.10.0 \
+		data-encoding-2.11.0 \
 		der-0.7.10 \
 		der-parser-10.0.0 \
 		der_derive-0.7.3 \
@@ -84,13 +86,13 @@ CARGO_CRATES=	aes-0.8.4 \
 		icu_properties_data-2.2.0 \
 		icu_provider-2.2.0 \
 		idna-1.1.0 \
-		idna_adapter-1.2.1 \
+		idna_adapter-1.2.2 \
 		inout-0.1.4 \
 		itertools-0.13.0 \
 		itoa-1.0.18 \
 		jobserver-0.1.34 \
 		lazy_static-1.5.0 \
-		libc-0.2.185 \
+		libc-0.2.186 \
 		libloading-0.8.9 \
 		libm-0.2.16 \
 		litemap-0.8.2 \
@@ -110,6 +112,7 @@ CARGO_CRATES=	aes-0.8.4 \
 		once_cell-1.21.4 \
 		pbkdf2-0.12.2 \
 		pem-rfc7468-0.7.0 \
+		pin-project-lite-0.2.17 \
 		pkcs1-0.7.5 \
 		pkcs5-0.7.1 \
 		pkcs8-0.10.2 \
@@ -125,6 +128,7 @@ CARGO_CRATES=	aes-0.8.4 \
 		pyo3-macros-0.28.3 \
 		pyo3-macros-backend-0.28.3 \
 		python3-dll-a-0.2.15 \
+		quinn-udp-0.6.1 \
 		quote-1.0.45 \
 		r-efi-5.3.0 \
 		rand-0.8.5 \
@@ -139,10 +143,10 @@ CARGO_CRATES=	aes-0.8.4 \
 		rustc-hash-2.1.2 \
 		rustc_version-0.4.1 \
 		rusticata-macros-4.1.0 \
-		rustls-0.23.38 \
+		rustls-0.23.40 \
 		rustls-pemfile-2.2.0 \
-		rustls-pki-types-1.14.0 \
-		rustls-webpki-0.103.12 \
+		rustls-pki-types-1.14.1 \
+		rustls-webpki-0.103.13 \
 		salsa20-0.10.2 \
 		scrypt-0.11.0 \
 		semver-1.0.28 \
@@ -154,6 +158,7 @@ CARGO_CRATES=	aes-0.8.4 \
 		shlex-1.3.0 \
 		signature-2.2.0 \
 		smallvec-1.15.1 \
+		socket2-0.6.3 \
 		spin-0.9.8 \
 		spki-0.7.3 \
 		stable_deref_trait-1.2.1 \
@@ -169,6 +174,8 @@ CARGO_CRATES=	aes-0.8.4 \
 		tinystr-0.8.3 \
 		tls_codec-0.4.2 \
 		tls_codec_derive-0.4.2 \
+		tracing-0.1.44 \
+		tracing-core-0.1.36 \
 		typenum-1.20.0 \
 		unicode-ident-1.0.24 \
 		untrusted-0.9.0 \
@@ -178,6 +185,7 @@ CARGO_CRATES=	aes-0.8.4 \
 		wasip2-1.0.3+wasi-0.2.9 \
 		windows-link-0.2.1 \
 		windows-sys-0.52.0 \
+		windows-sys-0.61.2 \
 		windows-targets-0.52.6 \
 		windows_aarch64_gnullvm-0.52.6 \
 		windows_aarch64_msvc-0.52.6 \

@@ -108,6 +108,7 @@
     SUBDIR += coccigrep
     SUBDIR += code-minimap
     SUBDIR += code2html
+    SUBDIR += codebook
     SUBDIR += codesearch
     SUBDIR += codespell
     SUBDIR += colordiff
@@ -515,6 +516,7 @@
     SUBDIR += muse
     SUBDIR += mxml
     SUBDIR += mythes
+    SUBDIR += nano-pdf
     SUBDIR += nb-aspell
     SUBDIR += nds-aspell
     SUBDIR += nerdlog
