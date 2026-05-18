@@ -4546,7 +4546,6 @@ security/gpgme-cpp|security/gpgmepp|2025-06-24|Gpgme C++ bindings have been spli
 security/gpgme-qt@qt5|security/qgpgme@qt5|2025-06-24|Gpgme Qt5 bindings have been split into a separate project
 security/gpgme-qt@qt6|security/qgpgme@qt6|2025-06-24|Gpgme Qt6 bindings have been split into a separate project
 textproc/py-libxml2|textproc/libxml2-python|2025-06-28|Use correct Python package name
-audio/carla||2025-06-29|Remove expired port. Depends on expired audio/py-pyliblo
 audio/lmms||2025-06-29|Remove expired port. Depends on expiring audio/carla
 audio/py-pyliblo||2025-06-29|Remove expired port. Upstream is inactive for over 9 years
 japanese/anthy|japanese/anthy-unicode|2025-06-29|Has expired: Use japanese/anthy-unicode instead
@@ -5302,3 +5301,6 @@ lang/erlang-runtime24|lang/erlang-runtime28|2026-05-14|Has expired: no longer su
 lang/erlang-runtime25|lang/erlang-runtime28|2026-05-14|Has expired: no longer supported upstream, use lang/erlang >=28
 lang/erlang-runtime26|lang/erlang-runtime28|2026-05-14|Has expired: no longer supported upstream, use lang/erlang >=28
 databases/leofs||2026-05-14|Has expired: no longer maintained upstream, with no supported OTP release
+chinese/fcitx-rime||2026-05-17|Marked broken for almost a year and upstream repo is archived
+deskutils/gnome-shell-extension-audio-output-switcher||2026-05-17|Marked broken and upstream repo is archived
+deskutils/gnome-shell-extension-filesmenu||2026-05-17|Marked broken and abandoned upstream

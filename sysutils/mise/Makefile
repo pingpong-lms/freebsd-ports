@@ -1,6 +1,6 @@
 PORTNAME=	mise
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2026.5.8
+DISTVERSION=	2026.5.11
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -73,6 +73,8 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		aws-lc-sys-0.40.0 \
 		aws-runtime-1.7.1 \
 		aws-sdk-s3-1.119.0 \
+		aws-sdk-sso-1.95.0 \
+		aws-sdk-ssooidc-1.97.0 \
 		aws-sdk-sts-1.99.0 \
 		aws-sigv4-1.4.1 \
 		aws-smithy-async-1.2.13 \
@@ -203,7 +205,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		crossterm_winapi-0.9.1 \
 		crypto-common-0.1.7 \
 		crypto-common-0.2.1 \
-		ctor-0.12.0 \
+		ctor-1.0.6 \
 		ctr-0.9.2 \
 		ctutils-0.4.2 \
 		curve25519-dalek-4.1.3 \
@@ -466,7 +468,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		libloading-0.9.0 \
 		libm-0.2.16 \
 		libredox-0.1.16 \
-		link-section-0.12.0 \
+		link-section-0.17.0 \
 		linktime-proc-macro-0.1.0 \
 		linux-raw-sys-0.4.15 \
 		linux-raw-sys-0.12.1 \
@@ -562,9 +564,13 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		pest_meta-2.8.6 \
 		petgraph-0.8.3 \
 		phf-0.11.3 \
+		phf-0.13.1 \
 		phf_codegen-0.11.3 \
+		phf_codegen-0.13.1 \
 		phf_generator-0.11.3 \
+		phf_generator-0.13.1 \
 		phf_shared-0.11.3 \
+		phf_shared-0.13.1 \
 		pin-project-1.1.12 \
 		pin-project-internal-1.1.12 \
 		pin-project-lite-0.2.17 \
