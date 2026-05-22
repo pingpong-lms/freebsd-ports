@@ -15,6 +15,7 @@
     SUBDIR += amanda-perl-wrapper
     SUBDIR += amanda-server
     SUBDIR += ansiweather
+    SUBDIR += antigravity-cli
     SUBDIR += apparix
     SUBDIR += arrow-datafusion
     SUBDIR += artikulate
@@ -679,6 +680,7 @@
     SUBDIR += rsclock
     SUBDIR += rtfm
     SUBDIR += rubygem-dotenv
+    SUBDIR += rubygem-dotenv-gitlab
     SUBDIR += rubygem-dotenv-rails
     SUBDIR += rubygem-dotenv-rails-rails4
     SUBDIR += rubygem-dotenv-rails-rails5
