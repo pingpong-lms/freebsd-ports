@@ -359,6 +359,7 @@
     SUBDIR += bustle
     SUBDIR += byacc
     SUBDIR += byaccj
+    SUBDIR += c-stdaux
     SUBDIR += c2mdoc
     SUBDIR += c4core
     SUBDIR += calibrator
@@ -614,7 +615,6 @@
     SUBDIR += desed
     SUBDIR += desktop-file-utils
     SUBDIR += dev86
-    SUBDIR += devhelp
     SUBDIR += devtodo
     SUBDIR += dfuzzer
     SUBDIR += dia2code
@@ -2559,6 +2559,7 @@
     SUBDIR += p5-Devel-TraceUse
     SUBDIR += p5-Devel-ebug
     SUBDIR += p5-Devel-ptkdb
+    SUBDIR += p5-Device-Modbus
     SUBDIR += p5-Device-USB
     SUBDIR += p5-Digest-TransformPath
     SUBDIR += p5-Dir-Project
@@ -3568,6 +3569,7 @@
     SUBDIR += p5-Sub-Exporter-Lexical
     SUBDIR += p5-Sub-Exporter-Progressive
     SUBDIR += p5-Sub-HandlesVia
+    SUBDIR += p5-Sub-HandlesVia-XS
     SUBDIR += p5-Sub-Identify
     SUBDIR += p5-Sub-Infix
     SUBDIR += p5-Sub-Info
@@ -4345,6 +4347,7 @@
     SUBDIR += picprog
     SUBDIR += pijul
     SUBDIR += pika
+    SUBDIR += pinact
     SUBDIR += pipelight
     SUBDIR += pipestatus
     SUBDIR += pire
@@ -4405,6 +4408,7 @@
     SUBDIR += py-PYB11Generator
     SUBDIR += py-PeachPy
     SUBDIR += py-PyExecJS
+    SUBDIR += py-PyGObject-stubs
     SUBDIR += py-PyGithub
     SUBDIR += py-PyLD
     SUBDIR += py-PyPubSub
@@ -4760,6 +4764,8 @@
     SUBDIR += py-cluster
     SUBDIR += py-cmd2
     SUBDIR += py-cmdtest
+    SUBDIR += py-cmeel
+    SUBDIR += py-cmeel-eigen
     SUBDIR += py-cobble
     SUBDIR += py-codegen
     SUBDIR += py-cogapp
@@ -4877,6 +4883,7 @@
     SUBDIR += py-decoratortools
     SUBDIR += py-deepdiff
     SUBDIR += py-deepmerge
+    SUBDIR += py-defusedcsv
     SUBDIR += py-defusedxml
     SUBDIR += py-demjson
     SUBDIR += py-dep-logic
@@ -4897,6 +4904,7 @@
     SUBDIR += py-distlib
     SUBDIR += py-distributed
     SUBDIR += py-dj52-django-rq
+    SUBDIR += py-dj52-graphene-django
     SUBDIR += py-dj52-strawberry-graphql
     SUBDIR += py-django-rq
     SUBDIR += py-dlinfo
@@ -5071,6 +5079,7 @@
     SUBDIR += py-google-i18n-address
     SUBDIR += py-google-pasta
     SUBDIR += py-google-re2
+    SUBDIR += py-google-re2-stubs
     SUBDIR += py-googleapis-common-protos
     SUBDIR += py-gptscript
     SUBDIR += py-gpxpy
@@ -5213,6 +5222,7 @@
     SUBDIR += py-jep
     SUBDIR += py-jinja2-ansible-filters
     SUBDIR += py-jinja2-time
+    SUBDIR += py-jinxed
     SUBDIR += py-jira
     SUBDIR += py-jitterentropy
     SUBDIR += py-jmespath
@@ -5427,6 +5437,7 @@
     SUBDIR += py-nbformat
     SUBDIR += py-nbval
     SUBDIR += py-nest-asyncio
+    SUBDIR += py-nest-asyncio2
     SUBDIR += py-ninja
     SUBDIR += py-node-semver
     SUBDIR += py-nodeenv
@@ -5611,6 +5622,7 @@
     SUBDIR += py-pip-shims
     SUBDIR += py-pip-tools
     SUBDIR += py-pip-tools4
+    SUBDIR += py-pipcl
     SUBDIR += py-pipdeptree
     SUBDIR += py-pipenv
     SUBDIR += py-pipreqs
@@ -6166,6 +6178,7 @@
     SUBDIR += py-super-collections
     SUBDIR += py-sure
     SUBDIR += py-swagger-spec-validator
+    SUBDIR += py-swig
     SUBDIR += py-sybil
     SUBDIR += py-synr
     SUBDIR += py-syrupy
@@ -8196,7 +8209,6 @@
     SUBDIR += rubygem-rufo
     SUBDIR += rubygem-rufus-scheduler
     SUBDIR += rubygem-rugged
-    SUBDIR += rubygem-rugged17
     SUBDIR += rubygem-runt
     SUBDIR += rubygem-ruport
     SUBDIR += rubygem-safe_yaml
@@ -8467,7 +8479,6 @@
     SUBDIR += rvi
     SUBDIR += rvm
     SUBDIR += rxcpp
-    SUBDIR += rye
     SUBDIR += sabre
     SUBDIR += safe-iop
     SUBDIR += samurai
@@ -8700,7 +8711,6 @@
     SUBDIR += truc
     SUBDIR += tup
     SUBDIR += tvision
-    SUBDIR += twiggy
     SUBDIR += typeshare
     SUBDIR += ua_parser-core
     SUBDIR += uclcmd
@@ -8735,6 +8745,7 @@
     SUBDIR += venom
     SUBDIR += vera++
     SUBDIR += vexcl
+    SUBDIR += viewvc
     SUBDIR += viewvc-devel
     SUBDIR += violet
     SUBDIR += vipack

@@ -1,6 +1,7 @@
 PORTNAME=	electron
 DISTVERSIONPREFIX=	v
 DISTVERSION=	${ELECTRON_VER}
+PORTREVISION=	1
 PULSEMV=	16
 PULSEV=		${PULSEMV}.1
 CATEGORIES=	devel
@@ -145,7 +146,8 @@ GN_ARGS+=	clang_use_chrome_plugins=false \
 		extra_cxxflags="${CXXFLAGS} -I${LOCALBASE}/include/libepoll-shim ${PINCLUDES}" \
 		extra_ldflags="${LDFLAGS}" \
 		ffmpeg_branding="${FFMPEG_BRAND}" \
-		override_electron_version="${ELECTRON_VER}"
+		override_electron_version="${ELECTRON_VER}" \
+		v8_builtins_profiling_log_file=""
 
 # TODO: investigate building with these options:
 # use_system_minigbm
@@ -222,7 +224,7 @@ SNDIO_VARS=		GN_ARGS+=use_sndio=true
 SNDIO_VARS_OFF=		GN_ARGS+=use_sndio=false
 
 # See ${WRKSRC}/electron/DEPS for CHROMIUM_VER
-CHROMIUM_VER=			148.0.7778.97
+CHROMIUM_VER=			148.0.7778.218
 # See ${WRKSRC}/electron/DEPS for NODE_VER
 NODE_VER=			24.15.0
 # See ${WRKSRC}/electron/DEPS for NAN_VER

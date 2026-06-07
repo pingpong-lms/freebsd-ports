@@ -257,6 +257,11 @@ pre-everything::
 .endif
 	@${ECHO_MSG}
 
+post-extract-AUTH_JWT-on:
+	@${RMDIR} ${WRKSRC_auth_jwt}/nxe-json ${WRKSRC_auth_jwt}/nxe-jwx
+	@${LN} -s ${WRKSRC_nxe_json} ${WRKSRC_auth_jwt}/nxe-json
+	@${LN} -s ${WRKSRC_nxe_jwx} ${WRKSRC_auth_jwt}/nxe-jwx
+
 post-extract-NAXSI-on:
 	@${RMDIR} ${WRKSRC_naxsi}/naxsi_src/libinjection
 	@${LN} -s ${WRKSRC_libinjection} ${WRKSRC_naxsi}/naxsi_src/libinjection

@@ -64,7 +64,9 @@
     SUBDIR += bsdsfv
     SUBDIR += bsmtrace
     SUBDIR += bsmtrace3
+    SUBDIR += bumblebee
     SUBDIR += bzrtp
+    SUBDIR += c-siphash
     SUBDIR += ca_root_nss
     SUBDIR += caesarcipher
     SUBDIR += caldera
@@ -243,6 +245,7 @@
     SUBDIR += idea
     SUBDIR += identify
     SUBDIR += imds-filterd
+    SUBDIR += infisical-cli
     SUBDIR += intel-ipsec-mb
     SUBDIR += interactsh
     SUBDIR += ipfmeta
@@ -879,6 +882,7 @@
     SUBDIR += pwdsafety
     SUBDIR += pwman
     SUBDIR += pwned-check
+    SUBDIR += py-PAM
     SUBDIR += py-SecretStorage
     SUBDIR += py-YubiOTP
     SUBDIR += py-acme
@@ -1028,6 +1032,7 @@
     SUBDIR += py-pnu-vuxml
     SUBDIR += py-policyuniverse
     SUBDIR += py-potr
+    SUBDIR += py-privleap
     SUBDIR += py-pwntools
     SUBDIR += py-pyaes
     SUBDIR += py-pyaff4
@@ -1085,6 +1090,7 @@
     SUBDIR += py-shamir-mnemonic
     SUBDIR += py-signedjson
     SUBDIR += py-signxml
+    SUBDIR += py-siphash24
     SUBDIR += py-slip10
     SUBDIR += py-social-auth-core
     SUBDIR += py-spake2

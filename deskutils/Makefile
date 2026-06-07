@@ -70,6 +70,7 @@
     SUBDIR += gcal
     SUBDIR += genius
     SUBDIR += glabels
+    SUBDIR += gitte
     SUBDIR += gnome-calendar
     SUBDIR += gnome-characters
     SUBDIR += gnome-clocks
@@ -257,6 +258,7 @@
     SUBDIR += rwpspread
     SUBDIR += semantik
     SUBDIR += sigi
+    SUBDIR += sigye
     SUBDIR += simpleagenda
     SUBDIR += skim
     SUBDIR += sliderule

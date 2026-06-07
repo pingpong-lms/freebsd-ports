@@ -428,6 +428,7 @@
     SUBDIR += php83-calendar
     SUBDIR += php84-calendar
     SUBDIR += php85-calendar
+    SUBDIR += picoclaw
     SUBDIR += pinfo
     SUBDIR += pipe
     SUBDIR += posixtestsuite
@@ -515,6 +516,7 @@
     SUBDIR += py-langchain-core
     SUBDIR += py-langchain-google-genai
     SUBDIR += py-langchain-openai
+    SUBDIR += py-langchain-protocol
     SUBDIR += py-langchain-tests
     SUBDIR += py-langchain-text-splitters
     SUBDIR += py-langgraph
@@ -783,6 +785,7 @@
     SUBDIR += vote
     SUBDIR += vxl
     SUBDIR += wacli
+    SUBDIR += warp
     SUBDIR += wavedrom
     SUBDIR += wego
     SUBDIR += whichman

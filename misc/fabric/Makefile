@@ -1,6 +1,6 @@
 PORTNAME=	fabric
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.4.452
+DISTVERSION=	1.4.454
 PORTREVISION=	1
 CATEGORIES=	misc # machine-learning
 PKGNAMESUFFIX=	-ai
@@ -12,7 +12,7 @@ WWW=		https://github.com/danielmiessler/fabric
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:modules
+USES=		go:1.26+,modules
 
 GO_MODULE=	github.com/danielmiessler/fabric
 GO_TARGET=	./cmd/fabric
