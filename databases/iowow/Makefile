@@ -9,7 +9,7 @@ WWW=		https://iowow.softmotions.com/
 
 LICENSE=	MIT
 
-USES=		cmake compiler:c11 cpe
+USES=		cmake compiler:c11
 USE_GITHUB=	yes
 GH_ACCOUNT=	Softmotions
 USE_LDCONFIG=	yes
@@ -21,8 +21,6 @@ OPTIONS_DEFINE=	DOCS TEST
 
 TEST_BUILD_DEPENDS=	${LOCALBASE}/include/CUnit/Basic.h:devel/cunit
 TEST_CMAKE_ON=	-DBUILD_TESTS:BOOL=ON
-
-CPE_VENDOR=	${GH_ACCOUNT}
 
 do-test-TEST-on:
 	@cd ${TEST_WRKSRC} && ctest -C ${CMAKE_BUILD_TYPE} ${_MAKE_JOBS}
