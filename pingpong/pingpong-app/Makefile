@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-app
-PORTVERSION=	2.4
+PORTVERSION=	2.5
 CATEGORIES=	pingpong
 MASTER_SITES=	#
 DISTFILES=	#
@@ -11,7 +11,7 @@ MAINTAINER=	girgen@pingpong.net
 COMMENT=	The meta-port for PING PONG application packages
 
 NO_BUILD=	yes
-JAVA_VERSION=	25
+JAVA_VERSION=	21
 JAVA_FLAVOR=	headless
 
 PLIST_FILES=	sbin/ppctl \
@@ -21,7 +21,6 @@ USES=		perl5 python ruby:run magick:7,nox11,run apache:2.4,run java
 
 RUN_DEPENDS= \
 	${LOCALBASE}/openjdk8/bin/java:java/openjdk8 \
-	${LOCALBASE}/openjdk21/bin/java:java/openjdk21 \
 	jsvc:devel/apache-commons-daemon \
 	p5-Pg>0:databases/p5-Pg \
 	p5-XML-Writer>0:textproc/p5-XML-Writer \
