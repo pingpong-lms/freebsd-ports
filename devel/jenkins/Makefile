@@ -14,7 +14,7 @@ WWW=		https://jenkins.io/
 LICENSE=	MIT
 
 USES=		cpe java
-JAVA_VERSION=	21+
+JAVA_VERSION=	21
 USE_RC_SUBR=	jenkins
 
 CONFLICTS=	jenkins-lts
