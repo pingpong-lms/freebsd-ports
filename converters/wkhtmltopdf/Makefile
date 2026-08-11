@@ -29,6 +29,8 @@ WKQT_TAGNAME=	5db36ec
 GH_TUPLE=	${PORTNAME}:qt:${WKQT_TAGNAME}:qt
 HAS_CONFIGURE=	yes
 
+CXXFLAGS+=	-I${WRKSRC}/build/qt/src/gui/.rcc/release-static
+
 PATCH_WRKSRC=		${WRKSRC}/qt
 CONFIGURE_WRKSRC=	${WRKSRC}/build/qt
 BUILD_WRKSRC=		${WRKSRC}/build/qt
