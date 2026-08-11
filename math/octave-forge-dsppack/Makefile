@@ -1,6 +1,5 @@
 PORTNAME=	octave-forge-dsppack
-DISTVERSION=	1.0.0
-PORTREVISION=	1
+DISTVERSION=	1.2.0
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org

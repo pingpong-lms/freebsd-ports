@@ -1,6 +1,6 @@
 PORTNAME=	python
 DISTVERSION=	${PYTHON_DISTVERSION}
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	lang python
 MASTER_SITES=	PYTHON/ftp/python/${DISTVERSION:C/[a-z].*//}
 PKGNAMESUFFIX=	${PYTHON_SUFFIX}
@@ -9,7 +9,11 @@ DIST_SUBDIR=	python
 
 PATCH_SITES=	https://github.com/python/cpython/commit/
 PATCHFILES=	cbba6119391112aba9c5aebf7b94aea447922c48.patch:-p1 \
-		cc023511238ad93ecc8796157c6f9139a2bb2932.patch:-p1
+		cc023511238ad93ecc8796157c6f9139a2bb2932.patch:-p1 \
+		c00c386faa579ad71196d33408644478488e43ec.patch:-p1 \
+		ea8d735eb084cf8cc021df1a30e90d10a8f052e3.patch:-p1 \
+		a4d3edf3a6ecfde504d02126410d2a65a859b744.patch:-p1 \
+		57558307909b703f669437594778c7482671a3a5.patch:-p1
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Interpreted object-oriented programming language
@@ -17,7 +21,8 @@ WWW=		https://www.python.org/
 
 LICENSE=	PSFL
 
-LIB_DEPENDS=	libffi.so:devel/libffi
+LIB_DEPENDS=	libexpat.so:textproc/expat2 \
+		libffi.so:devel/libffi
 
 USES=		compiler:c11 cpe ncurses pathfix pkgconfig \
 		python:${PYTHON_DISTVERSION:R},env readline shebangfix ssl tar:xz
@@ -31,7 +36,7 @@ SHEBANG_FILES+=	Lib/test/ziptestdata/exe_with_z64 \
 		Lib/test/ziptestdata/header.sh
 
 DISABLED_EXTENSIONS=	_sqlite3 _tkinter _gdbm
-CONFIGURE_ARGS+=	--enable-shared --without-ensurepip
+CONFIGURE_ARGS+=	--enable-shared --without-ensurepip --with-system-expat
 CONFIGURE_ENV+=		OPT="" # Null out OPT to respect user CFLAGS and remove optimizations
 
 INSTALL_TARGET=		altinstall					# Don't want cloberring of unprefixed files

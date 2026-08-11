@@ -1,5 +1,5 @@
 PORTNAME=	zabbix6
-DISTVERSION=	6.0.46
+DISTVERSION=	6.0.48
 CATEGORIES=	net-mgmt
 MASTER_SITES=	https://cdn.zabbix.com/zabbix/sources/stable/${DISTVERSION:R}/
 PKGNAMESUFFIX?=	-server
@@ -18,8 +18,13 @@ CONFLICTS_INSTALL=	${PORTNAME}[0-9]${PKGNAMESUFFIX} \
 
 ZABBIX_BUILD=	${PKGNAMESUFFIX:S/^-//:S/-$//}
 
+USES+=		cpe
+
+CPE_PRODUCT?=	zabbix_server
+CPE_VENDOR=	zabbix
+
 .if ${ZABBIX_BUILD} != "frontend" # frontend only needs the version/distribution settings
-USES=		iconv pkgconfig
+USES+=		iconv pkgconfig
 .if ${ZABBIX_BUILD} != "agent"
 CONFIGURE_ARGS+=	--cache-file=${WRKSRC}/config.cache \
 			--with-libevent=${LOCALBASE} \
@@ -120,7 +125,7 @@ MDB5_USES+=		compiler:c11 mysql:105m
 MDB5_DESC=		Mariadb 10.5 database support
 
 MDB6_CONFIGURE_ON=	--with-mysql=${LOCALBASE}/bin/mysql_config
-MDB6_USES+=		compiler:c11 mysql:106m
+MDB6_USES+=		compiler:c11 mysql:1011m
 MDB6_DESC=		Mariadb 10.6 database support
 
 ORACLE_CONFIGURE_WITH=	oracle
@@ -140,7 +145,6 @@ SSH_LIB_DEPENDS=	libssh2.so:security/libssh2
 UNIXODBC_CONFIGURE_WITH=	unixodbc
 UNIXODBC_LIB_DEPENDS=		libodbc.so:databases/unixODBC
 .elif ${ZABBIX_BUILD} == "agent"
-OPTOINS_DEFINE+=		PCRE
 OPTIONS_SINGLE+=		SSL
 OPTIONS_SINGLE_SSL=		GNUTLS OPENSSL
 .endif # if ${ZABBIX_BUILD} != "agent"

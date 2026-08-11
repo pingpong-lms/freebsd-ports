@@ -69,6 +69,7 @@ include/glaze/core/custom.hpp
 include/glaze/core/custom_meta.hpp
 include/glaze/core/error_category.hpp
 include/glaze/core/feature_test.hpp
+include/glaze/core/format_str.hpp
 include/glaze/core/istream_buffer.hpp
 include/glaze/core/manage.hpp
 include/glaze/core/meta.hpp
@@ -87,6 +88,7 @@ include/glaze/core/wrapper_traits.hpp
 include/glaze/core/wrappers.hpp
 include/glaze/core/write.hpp
 include/glaze/core/write_chars.hpp
+include/glaze/core/write_wrappers.hpp
 include/glaze/csv.hpp
 include/glaze/csv/read.hpp
 include/glaze/csv/skip.hpp
@@ -127,6 +129,7 @@ include/glaze/glaze_exceptions.hpp
 include/glaze/hardware/volatile_array.hpp
 include/glaze/hash/sweethash.hpp
 include/glaze/json.hpp
+include/glaze/json/chrono_format.hpp
 include/glaze/json/escape_unicode.hpp
 include/glaze/json/flatten_map.hpp
 include/glaze/json/float_format.hpp
@@ -248,6 +251,8 @@ include/glaze/yaml/opts.hpp
 include/glaze/yaml/read.hpp
 include/glaze/yaml/skip.hpp
 include/glaze/yaml/write.hpp
+%%DATADIR%%/FindAsio.cmake
+%%DATADIR%%/glaze-asio.cmake
 %%DATADIR%%/glazeConfig.cmake
 %%DATADIR%%/glazeConfigVersion.cmake
 %%DATADIR%%/glazeTargets.cmake

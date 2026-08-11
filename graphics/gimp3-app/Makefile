@@ -1,6 +1,5 @@
 PORTNAME=	gimp
-DISTVERSION=	3.2.0
-PORTREVISION=	1
+DISTVERSION=	3.2.4
 CATEGORIES?=	graphics gnome
 MASTER_SITES=	GIMP/gimp/v${PORTVERSION:R}
 PKGNAMESUFFIX=	3-app
@@ -57,7 +56,7 @@ RUN_DEPENDS=	iso-codes>=0:misc/iso-codes \
 		mypaint-brushes>0:graphics/mypaint-brushes
 
 USES=		cpe desktop-file-utils gettext gnome jpeg libarchive \
-		localbase:ldflags meson ninja perl5 pkgconfig python:3.7+ \
+		localbase:ldflags meson ninja perl5 pkgconfig python \
 		shebangfix tar:xz xorg
 USE_CXXSTD=	gnu++14
 USE_GNOME=	gtk30 introspection cairo gdkpixbuf librsvg2 libxslt
@@ -154,8 +153,9 @@ SHEBANG_FILES=	plug-ins/python/*.py \
 
 SHEBANG_LANG+=	gjs
 
+PLIST_SUB+=	BINVER=${PORTVERSION:R:R} ABIVER=${PORTVERSION:R} APIVER=${PORTVERSION:R:R}.0 SHLIBVER=0.${PORTVERSION:R:E}0${PORTVERSION:E}.0
 #PLIST_SUB+=	BINVER=${PORTVERSION:R:R} ABIVER=${PORTVERSION:R} SHLIBVER=${PORTVERSION:R:E}.${PORTVERSION:E}.${PORTVERSION:R:E}
-PLIST_SUB+=	BINVER=3 ABIVER=3.2 APIVER=3.0 SHLIBVER=0.200.0
+#PLIST_SUB+=	BINVER=3 ABIVER=3.2 APIVER=3.0 SHLIBVER=0.204.0
 
 .include <bsd.port.options.mk>
 

@@ -1,7 +1,7 @@
-TIMESTAMP = 1776522200
-SHA256 (go/net_nats-surveyor/nats-io-nats-surveyor-v0.9.9_GH0/v0.9.9.mod) = dc59aa0385915cf55fd787d039e83b0e65aca9443cd1d0defcbe974270645c3a
-SIZE (go/net_nats-surveyor/nats-io-nats-surveyor-v0.9.9_GH0/v0.9.9.mod) = 2119
-SHA256 (go/net_nats-surveyor/nats-io-nats-surveyor-v0.9.9_GH0/v0.9.9.zip) = bd88e06b296183fcf129a129316c28ff7a5f47295a2c6b73e39e2eaa263eba38
-SIZE (go/net_nats-surveyor/nats-io-nats-surveyor-v0.9.9_GH0/v0.9.9.zip) = 168304
-SHA256 (go/net_nats-surveyor/nats-io-nats-surveyor-v0.9.9_GH0/nats-io-nats-surveyor-v0.9.9_GH0.tar.gz) = 4b8555a7e12d4760d0f0ef1ff8cc5eda383db7ab680ed9599ff882f94b552955
-SIZE (go/net_nats-surveyor/nats-io-nats-surveyor-v0.9.9_GH0/nats-io-nats-surveyor-v0.9.9_GH0.tar.gz) = 125030
+TIMESTAMP = 1784878547
+SHA256 (go/net_nats-surveyor/nats-io-nats-surveyor-v0.9.11_GH0/v0.9.11.mod) = 9361f21f9d5f128d5302021c7c1d75c61b33af4d8ea871e65855383e0a24c464
+SIZE (go/net_nats-surveyor/nats-io-nats-surveyor-v0.9.11_GH0/v0.9.11.mod) = 2117
+SHA256 (go/net_nats-surveyor/nats-io-nats-surveyor-v0.9.11_GH0/v0.9.11.zip) = 8aedf605153ce8b7ab473324efcf3435dbfba9f7554143f4e32273580de0e2d8
+SIZE (go/net_nats-surveyor/nats-io-nats-surveyor-v0.9.11_GH0/v0.9.11.zip) = 170453
+SHA256 (go/net_nats-surveyor/nats-io-nats-surveyor-v0.9.11_GH0/nats-io-nats-surveyor-v0.9.11_GH0.tar.gz) = a5dac11947da108831628d8322bd4cdacf03bc1f7665f030e153746cb7b71189
+SIZE (go/net_nats-surveyor/nats-io-nats-surveyor-v0.9.11_GH0/nats-io-nats-surveyor-v0.9.11_GH0.tar.gz) = 126858

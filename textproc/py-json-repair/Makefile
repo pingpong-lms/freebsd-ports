@@ -1,6 +1,6 @@
 PORTNAME=	json-repair
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.60.1
+DISTVERSION=	0.61.7
 CATEGORIES=	textproc python
 #MASTER_SITES=	PYPI # missing file for tests
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,7 +15,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PY_SETUPTOOLS} \
 		${PYTHON_PKGNAMEPREFIX}wheel>=0.44.0:devel/py-wheel@${PY_FLAVOR}
-TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest-benchmark>0:devel/py-pytest-benchmark@${PY_FLAVOR}
+TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}flask-cors>0:www/py-flask-cors@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pytest-benchmark>0:devel/py-pytest-benchmark@${PY_FLAVOR}
 
 USES=		python
 USE_PYTHON=	pep517 autoplist pytest
@@ -26,7 +27,8 @@ GH_PROJECT=	${PORTNAME:S/-/_/}
 
 NO_ARCH=	yes
 
-# tests as of 0.59.10: 265 passed
-# tests as of 0.60.1: 6 failed, 272 passed, 1 skipped in 24.94s, see https://github.com/mangiucugna/json_repair/issues/199
+TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
+
+# tests as of 0.61.7: 322 passed in 16.06s
 
 .include <bsd.port.mk>

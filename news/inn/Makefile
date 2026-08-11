@@ -1,6 +1,6 @@
 PORTNAME?=	inn
-PORTVERSION?=	2.7.3
-PORTREVISION?=	3
+PORTVERSION?=	2.7.4
+PORTREVISION?=	1
 CATEGORIES=	news
 MASTER_SITES=	ISC
 MASTER_SITE_SUBDIR?=	${PORTNAME}
@@ -48,9 +48,9 @@ CONFLICTS?=	inn-current
 SUB_FILES=	pkg-install
 SUB_LIST+=	EGDIR="${EXAMPLESDIR:C,^${PREFIX},\\$\\${PREFIX},}"
 
-INNLIB_LONG?=		9.0.2
-LIBVER_LONG?=		3.0.9
-LIBSTORAGEVER_LONG?=	3.1.3
+INNLIB_LONG?=		9.1.0
+LIBVER_LONG?=		3.0.10
+LIBSTORAGEVER_LONG?=	5.0.0
 
 CONFIG_FILES+=	actsync.cfg actsync.ign buffindexed.conf control.ctl \
 		control.ctl.local cycbuff.conf distrib.pats distributions \
@@ -98,16 +98,12 @@ SQLITE_DESC=		Enable SQLite (for ovsqlite overview method)
 TAGGED_HASH_DESC=	Use tagged hash table for history
 UUCP_RNEWS_DESC=	Install rnews suitable for use with net/freebsd-uucp
 
-BERKELEYDB_USES=		bdb
+BERKELEYDB_USES=		bdb:18
 BERKELEYDB_CONFIGURE_ON=	--with-bdb-include=${BDB_INCLUDE_DIR} \
 				--with-bdb-lib=${LOCALBASE}/lib \
 				--with-bdb=${LOCALBASE}
 
-.if ${BRANCH:U} == 2.8
 BLOCKLISTD_CONFIGURE_WITH=	blocklist
-.else
-BLOCKLISTD_CONFIGURE_WITH=	blacklist
-.endif
 
 CANLOCK_LIB_DEPENDS=	libcanlock.so:news/libcanlock
 CANLOCK_CONFIGURE_ON=	--with-canlock=${LOCALBASE}
@@ -142,6 +138,7 @@ SETGID_INEWS_CONFIGURE_ENABLE=	setgid-inews
 SETGID_INEWS_PLIST_SUB=		MODE_INEWS="2555"
 SETGID_INEWS_PLIST_SUB_OFF=	MODE_INEWS=""
 
+SQLITE_RUN_DEPENDS=	p5-DBD-SQLite>=0:databases/p5-DBD-SQLite
 SQLITE_USES=		sqlite
 SQLITE_CONFIGURE_ON=	--with-sqlite3=${LOCALBASE}
 SQLITE_CONFIGURE_OFF=	--without-sqlite3
@@ -167,14 +164,6 @@ post-patch:
 	                  ${WRKSRC}/site/Makefile
 .if ${PORT_OPTIONS:MBERKELEYDB}
 	@${REINPLACE_CMD} -e 's!-ldb!-ldb-${BDB_VER}!' ${WRKSRC}/configure
-.endif
-.if ${BRANCH:U} == 2.7
-.  if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1500000
-	@${FIND} ${WRKSRC} -type f -exec ${SED} -i '' \
-		-e 's/BLACKLIST/BLOCKLIST/g' \
-		-e 's/Blacklist/Blocklist/g' \
-		-e 's/blacklist/blocklist/g' {} +
-.  endif
 .endif
 
 pre-install:

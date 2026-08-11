@@ -1,7 +1,6 @@
 PORTNAME=	elephant
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.21.0
-PORTREVISION=	2
+DISTVERSION=	2.22.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	tagattie@FreeBSD.org
@@ -14,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 NOT_FOR_ARCHS=		aarch64 armv7 i386
 NOT_FOR_ARCHS_REASON=	-buildmode=plugin is not supported on these architectures
 
-USES=		go:1.25+,modules
+USES=		go:modules
 
 GO_MODULE=	github.com/abenz1267/elephant/v2
 GO_TARGET=	./cmd/elephant
@@ -23,8 +22,7 @@ PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	README.md
 
 OPTIONS_DEFINE=		DOCS
-# BITWARDEN: Runtime dependency rbw is not in ports tree yet
-OPTIONS_DEFAULT=	${OPTIONS_GROUP_PROVIDERS:NBITWARDEN:NNIRIACTIONS:NNIRISESSIONS}
+OPTIONS_DEFAULT=	${OPTIONS_GROUP_PROVIDERS:NNIRIACTIONS:NNIRISESSIONS}
 OPTIONS_GROUP=		PROVIDERS
 OPTIONS_GROUP_PROVIDERS=1PASSWORD BITWARDEN BOOKMARKS CALC CLIPBOARD \
 			DESKTOPAPPLICATIONS FILES MENUS NIRIACTIONS \
@@ -55,7 +53,8 @@ WIREPLUMBER_DESC=	Configure audio devices via Pipewire/Wireplumber
 
 1PASSWORD_RUN_DEPENDS=	op:security/1password-client2
 1PASSWORD_PLIST_FILES=	etc/xdg/elephant/providers/1password.so
-BITWARDEN_RUN_DEPENDS=	wl-copy:x11/wl-clipboard \
+BITWARDEN_RUN_DEPENDS=	rbw:security/rbw \
+			wl-copy:x11/wl-clipboard \
 			wtype:x11/wtype
 BITWARDEN_PLIST_FILES=	etc/xdg/elephant/providers/bitwarden.so
 BOOKMARKS_RUN_DEPENDS=	jq:textproc/jq

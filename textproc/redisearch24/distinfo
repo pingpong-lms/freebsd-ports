@@ -1,7 +1,5 @@
-TIMESTAMP = 1780749229
-SHA256 (RediSearch-RediSearch-v2.4.2_GH0.tar.gz) = 34b3d9cb5e0a3b04cba5d9a5d6e672957fc7488f79b6a84afef8bb201e9e9efa
-SIZE (RediSearch-RediSearch-v2.4.2_GH0.tar.gz) = 4299180
-SHA256 (RedisAI-VectorSimilarity-b341bb7_GH0.tar.gz) = 56987c486281d193645b0591d2695852fc258d9adcfee3a551d27882a6bb015a
-SIZE (RedisAI-VectorSimilarity-b341bb7_GH0.tar.gz) = 117887
-SHA256 (google-cpu_features-2f5a7bf_GH0.tar.gz) = 91bde3c1fa7dfea3a71b4417eca7c7a5494be7ceff154d284a1087db85d5f597
-SIZE (google-cpu_features-2f5a7bf_GH0.tar.gz) = 83581
+TIMESTAMP = 1785324799
+SHA256 (RediSearch-RediSearch-v2.4.10_GH0.tar.gz) = 5d84a7a40652cd5e1a164de037bde63e1ec71cbbcffdbf6e75e03fc7eb8223a2
+SIZE (RediSearch-RediSearch-v2.4.10_GH0.tar.gz) = 4338861
+SHA256 (RedisAI-VectorSimilarity-6252f94_GH0.tar.gz) = fbd2722ca30b6b0bdff8cce628003f848b2e308b03c9fa847ea614d7d706d8aa
+SIZE (RedisAI-VectorSimilarity-6252f94_GH0.tar.gz) = 121586

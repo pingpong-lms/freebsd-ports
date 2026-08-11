@@ -1,12 +1,13 @@
 PORTNAME=	angie-module-vod
-MODULE_VERSION=	1.33
-MODULE_PORTREVISION=	5
-GH_TUPLE=	kaltura:nginx-vod-module:${MODULE_VERSION}:module
+MODULE_VERSION=		1.9.1
+MODULE_PORTREVISION=	0
+MODULE_PORTEPOCH=	2
+GH_TUPLE=	dio-az:nginx-vod-module:v${MODULE_VERSION}:module
 
 COMMENT=	VOD dynamic module for Angie
-WWW=		https://github.com/kaltura/nginx-vod-module/
+WWW=		https://github.com/dio-az/nginx-vod-module/
 
-LICENSE= AGPLv3
+LICENSE=	AGPLv3
 
 LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libswscale.so:multimedia/ffmpeg

@@ -1,17 +1,23 @@
 PORTNAME=	gnat12
 DISTVERSION=	12.4.0
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GCC:C|%SUBDIR%|${MASTER_SITE_SUBDIR}|}:gcc \
 		LOCAL/thierry:gnat
 MASTER_SITE_SUBDIR=	releases/gcc-${DISTVERSION}
 DISTFILES=	gcc-${DISTVERSION}.tar.xz:gcc
 
-MAINTAINER=	thierry@FreeBSD.org
-COMMENT=	GNAT Ada compiler
-WWW=		https://www.adacore.com/community
+MAINTAINER=	ada@FreeBSD.org
+COMMENT=	GNAT (GNU Ada) compiler
+WWW=		https://www.gnu.org/software/gnat/
 
-LICENSE=	GPLv2 GPLv3 GPLv3RLE
+LICENSE=	GPLv2 GPLv3+ GPLv3RLE+ LGPL21 LGPL3
 LICENSE_COMB=	multi
+LICENSE_FILE_GPLv2=	${WRKSRC}/COPYING
+LICENSE_FILE_GPLv3+ =	${WRKSRC}/COPYING3
+LICENSE_FILE_GPLv3RLE+ =	${WRKSRC}/COPYING.RUNTIME
+LICENSE_FILE_LGPL21=	${WRKSRC}/COPYING.LIB
+LICENSE_FILE_LGPL3=	${WRKSRC}/COPYING3.LIB
 
 BUILD_DEPENDS=	gcc${_GCC_VER}>0:lang/gcc${_GCC_VER}
 LIB_DEPENDS=	libgmp.so:math/gmp \
@@ -21,7 +27,7 @@ LIB_DEPENDS=	libgmp.so:math/gmp \
 RUN_DEPENDS=	${LOCALBASE}/bin/as:devel/binutils \
 		gcc${_GCC_VER}>0:lang/gcc${_GCC_VER}
 
-USES=		bison gmake iconv libtool localbase tar:xz
+USES=		bison gettext-runtime gmake iconv libtool localbase tar:xz
 USE_BINUTILS=	yes
 USE_LDCONFIG=	${_TARGLIB}
 
@@ -29,7 +35,6 @@ GNU_CONFIGURE=		yes
 GNU_CONFIGURE_MANPREFIX=	${_PKG_PREFIX}/share
 GNU_CONFIGURE_PREFIX=	${_PKG_PREFIX}
 CONFIGURE_ARGS=		--disable-bootstrap \
-			--disable-libgomp \
 			--disable-libmudflap \
 			--disable-libquadmath \
 			--disable-libssp \
@@ -61,6 +66,8 @@ WRKSRC=		${WRKDIR}/gcc-${DISTVERSION}
 
 PLIST_SUB=	ASSET_FILE=${_ASSET_FILE} \
 		CONFTRGT=${CONFIGURE_TARGET} \
+		GNAT=${PORTNAME} \
+		GNAT_SO_VERSION=${_GCC_VER:R} \
 		VER=${DISTVERSION}
 
 OPTIONS_DEFINE=			ASSETS NLS
@@ -95,7 +102,6 @@ MULTILIB_CONFIGURE_ENABLE=	multilib
 .else
 CONFIGURE_ARGS+=		--disable-multilib
 .endif
-NLS_USES=			gettext-runtime
 NLS_CONFIGURE_ON=		--enable-nls
 NLS_CONFIGURE_OFF=		--disable-nls
 PREVASSET_DISTFILES+=		${_PREV_ASSET_FILE}.tar.xz:gnat
@@ -167,7 +173,7 @@ post-install-ASSETS-on:
 	${CP} -Rp ${STAGEDIR}${_PKG_PREFIX}/* ${WRKDIR}/${_ASSET_FILE}
 	(cd ${WRKDIR} && \
 		${TAR} cfJ ${STAGEDIR}${DATADIR}/assets/${_ASSET_FILE}.tar.xz \
-		${_ASSET_FILE})
+		--options='xz:threads=${MAKE_JOBS_NUMBER}' ${_ASSET_FILE})
 
 post-stage:
 # add-plist-info does not honor GNU_CONFIGURE_PREFIX so remove INFO files
@@ -180,10 +186,24 @@ post-stage:
 .endfor
 
 post-stage-ASSETS-on:
-	${ECHO_CMD} "The file ${DATADIR}/assets/${_ASSET_FILE}.tar.xz has been created" \
-		> ${PKGMESSAGE}
-	${ECHO_CMD} "You may want to copy it under ${DISTDIR} to use the option PREVASSET next time." \
+	${ECHO_CMD} "[" > ${PKGMESSAGE}
+	${ECHO_CMD} "{" >> ${PKGMESSAGE}
+	${ECHO_CMD} "  type: install" >> ${PKGMESSAGE}
+	${ECHO_CMD} "  message: <<EOM" >> ${PKGMESSAGE}
+	${ECHO_CMD} "The option ASSETS was enabled for the build and the following asset," \
 		>> ${PKGMESSAGE}
-	${ECHO_CMD} "(and adjust distinfo)" >> ${PKGMESSAGE}
+	${ECHO_CMD} "${DATADIR}/assets/${_ASSET_FILE}.tar.xz was installed." \
+		>> ${PKGMESSAGE}
+	${ECHO_CMD} "If you would like to use this asset in future you will need to copy" \
+		>> ${PKGMESSAGE}
+	${ECHO_CMD} "it under ${DISTDIR}, update the Port's distinfo, and make sure the " \
+		>> ${PKGMESSAGE}
+	${ECHO_CMD} "option PREVASSET is enabled." >> ${PKGMESSAGE}
+	${ECHO_CMD} "See ports(7) and make.conf(5) for details on ${DISTDIR} and using" \
+		>> ${PKGMESSAGE}
+	${ECHO_CMD} "makesum to update distinfo." >> ${PKGMESSAGE}
+	${ECHO_CMD} "EOM" >> ${PKGMESSAGE}
+	${ECHO_CMD} "}" >> ${PKGMESSAGE}
+	${ECHO_CMD} "]" >> ${PKGMESSAGE}
 
 .include <bsd.port.post.mk>

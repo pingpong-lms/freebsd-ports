@@ -1,7 +1,7 @@
 PORTNAME=	eksctl
 PORTVERSION=	0.226.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	sysutils
 
 MAINTAINER=	danilo@FreeBSD.org
@@ -12,7 +12,7 @@ LICENSE=	APACHE20
 
 RUN_DEPENDS=	kubectl:sysutils/kubectl
 
-USES=		go:1.25+,modules
+USES=		go:modules
 
 PLIST_FILES=	bin/${PORTNAME}
 

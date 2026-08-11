@@ -1,6 +1,6 @@
---- src/vs/code/electron-main/app.ts.orig	2026-05-29 07:25:37 UTC
+--- src/vs/code/electron-main/app.ts.orig	2026-07-28 06:40:51 UTC
 +++ src/vs/code/electron-main/app.ts
-@@ -1088,6 +1088,7 @@ export class CodeApplication extends Disposable {
+@@ -1164,6 +1164,7 @@ export class CodeApplication extends Disposable {
  				break;
  
  			case 'linux':

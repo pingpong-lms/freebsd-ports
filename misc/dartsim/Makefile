@@ -1,6 +1,7 @@
 PORTNAME=	dartsim
 DISTVERSIONPREFIX=	v
-DISTVERSION=	6.17.0
+DISTVERSION=	6.19.2
+PORTREVISION=	1
 CATEGORIES=	misc
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -30,6 +31,7 @@ LIB_DEPENDS=	libassimp.so:multimedia/assimp \
 		libosg.so:graphics/osg \
 		libnlopt.so:math/nlopt \
 		libpagmo.so:science/pagmo2 \
+		libspdlog.so:devel/spdlog \
 		libtinyxml2.so:textproc/tinyxml2 \
 		liburdfdom_world.so:devel/ros-urdfdom
 TEST_DEPENDS=	benchmark>0:devel/benchmark \
@@ -73,6 +75,6 @@ post-test:
 	@cd ${BUILD_WRKSRC} && \
 		${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} test
 
-# tests as of 6.17.0: 100% tests passed, 0 tests failed out of 92
+# tests as of 6.19.2: 100% tests passed, 0 tests failed out of 100
 
 .include <bsd.port.mk>

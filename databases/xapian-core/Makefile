@@ -22,6 +22,8 @@ USE_LDCONFIG=	yes
 
 CONFLICTS_INSTALL=	xapian-core14
 
+CPE_VENDOR=	xapian
+
 PORTSCOUT=	limitw:1,even
 
 OPTIONS_DEFINE=	DOCS SSE2

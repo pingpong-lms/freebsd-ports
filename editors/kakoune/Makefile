@@ -1,5 +1,5 @@
 PORTNAME=	kakoune
-DISTVERSION=	2026.04.12
+DISTVERSION=	2026.05.21
 CATEGORIES=	editors
 MASTER_SITES=	https://github.com/mawww/kakoune/releases/download/v${DISTVERSION}/
 
@@ -22,7 +22,6 @@ OPTIONS_DEFINE=	DEBUG DOCS
 DEBUG_MAKE_ARGS=	debug=yes
 
 TEST_TARGET=	test
-TEST_ENV+=	LC_ALL=en_US.UTF-8
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/kak

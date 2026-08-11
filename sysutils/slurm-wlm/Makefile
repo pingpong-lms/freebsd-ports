@@ -1,5 +1,5 @@
 PORTNAME=	slurm
-DISTVERSION=	25.11.5
+DISTVERSION=	26.05.2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://download.schedmd.com/slurm/
 PKGNAMESUFFIX=	-wlm
@@ -17,6 +17,7 @@ NOT_FOR_ARCHS_REASON=	32-bit support is deprecated
 LIB_DEPENDS=	libhttp_parser.so:www/http-parser \
 		libjson-c.so:devel/json-c \
 		libjwt.so:www/libjwt \
+		libllhttp.so:www/llhttp \
 		liblz4.so:archivers/liblz4 \
 		libmunge.so:security/munge \
 		librdkafka.so:net/librdkafka \
@@ -46,10 +47,10 @@ CONFIGURE_ENV=	MAKE=${GMAKE}
 
 INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
-TESTING_UNSAFE=	yes
 
 CFLAGS+=	-I${WRKSRC}/slurm
 LDFLAGS+=	-lsysinfo -lprocstat -fcommon
+TESTING_UNSAFE=	yes
 
 SUB_FILES=	pkg-message
 
@@ -80,7 +81,6 @@ GUI_BUILD_DEPENDS=	itstool:textproc/itstool
 GUI_USES=		gnome
 GUI_USE=		GNOME=cairo,gdkpixbuf,glib20,gtk20,pango
 GUI_CONFIGURE_ENABLE=	sview
-GUI_CONFIGURE_OFF=	--disable-sview
 
 HDF5_LIB_DEPENDS=	libhdf5.so:science/hdf5 \
 			libhdf5_hl.so:science/hdf5
@@ -98,7 +98,6 @@ IPMI_CONFIGURE_WITH=	freeipmi
 
 S2N_LIB_DEPENDS=	libs2n.so:security/s2n-tls
 S2N_CONFIGURE_WITH=	s2n=${LOCALBASE}
-S2N_CONFIGURE_OFF=	--without-s2n
 
 _ARCH=	${ARCH:S|aarch64|aarch64elf|:S|amd64|elf_amd64|:S|powerpc64le|elf64lppc|:S|powerpc64|elf64ppc|:S|riscv64|elf64lriscv|}
 

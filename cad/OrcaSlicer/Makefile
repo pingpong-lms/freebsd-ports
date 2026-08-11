@@ -1,6 +1,7 @@
 PORTNAME=	OrcaSlicer
-DISTVERSIONPREFIX=v
+DISTVERSIONPREFIX=	v
 DISTVERSION=	2.3.2
+PORTREVISION=	2
 CATEGORIES=	cad
 
 MAINTAINER=	kenrap@FreeBSD.org
@@ -29,32 +30,34 @@ LIB_DEPENDS=	libboost_filesystem.so:devel/boost-libs \
 		libspnav.so:misc/libspnav \
 		libtbb.so:devel/onetbb \
 		libTKernel.so:cad/opencascade \
+		libmpfr.so:math/mpfr \
+		libgmpxx.so:math/gmp \
+		libqhull_r.so:math/qhull \
+		libImath-3_2.so:math/Imath \
+		libexpat.so:textproc/expat2 \
+		libdraco.so:archivers/draco \
+		libsoup-3.0.so:devel/libsoup3 \
 		libwebkit2gtk-4.1.so:www/webkit2-gtk@41 \
 		libwx_baseu-3.2.so:x11-toolkits/wxgtk32
 
-USES=	cmake desktop-file-utils gl gnome gstreamer jpeg \
-	localbase:ldflags pkgconfig ssl xorg
+USES=		cmake desktop-file-utils gl gnome gstreamer iconv jpeg \
+		localbase:ldflags pkgconfig ssl xorg
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	OrcaSlicer
 
 USE_GL=		gl glew
 USE_GNOME=	gtk30
-USE_XORG=	x11
+USE_XORG=	ice sm x11 xext
 
-CMAKE_ARGS=	-DSLIC3R_FHS=1 \
-		-DSLIC3R_GTK=3 \
-		-DSLIC3R_STATIC=0 \
-		-DORCA_TOOLS=1 \
+CMAKE_ARGS=	-DBBL_INTERNAL_TESTING=0 \
 		-DBBL_RELEASE_TO_PUBLIC=1 \
-		-DBBL_INTERNAL_TESTING=0
-
-CXXFLAGS+=	-DwxDEBUG_LEVEL=0
+		-DORCA_TOOLS=1 \
+		-DSLIC3R_FHS=1 \
+		-DSLIC3R_GTK=3 \
+		-DSLIC3R_STATIC=0
 
 post-patch:
 	${CP} ${FILESDIR}/hid.c ${WRKSRC}/deps_src/hidapi/linux/hid.c
-	@${REINPLACE_CMD} -e '/Boost/s| system | |' \
-		${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>
-

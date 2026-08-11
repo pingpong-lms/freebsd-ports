@@ -19,6 +19,7 @@
     SUBDIR += R-cran-farver
     SUBDIR += R-cran-ggforce
     SUBDIR += R-cran-ggplot2
+    SUBDIR += R-cran-ggpolypath
     SUBDIR += R-cran-ggrepel
     SUBDIR += R-cran-gridBase
     SUBDIR += R-cran-gridExtra
@@ -38,6 +39,7 @@
     SUBDIR += R-cran-scales
     SUBDIR += R-cran-shape
     SUBDIR += R-cran-tweenr
+    SUBDIR += R-cran-venn
     SUBDIR += R-cran-viridis
     SUBDIR += R-cran-viridisLite
     SUBDIR += R-cran-visNetwork
@@ -265,7 +267,6 @@
     SUBDIR += gimp-app
     SUBDIR += gimp-beautify-plugin
     SUBDIR += gimp-data-extras
-    SUBDIR += gimp-jxl-plugin
     SUBDIR += gimp-lensfun-plugin
     SUBDIR += gimp-lqr-plugin
     SUBDIR += gimp-refocus-plugin
@@ -499,7 +500,6 @@
     SUBDIR += libjxl
     SUBDIR += libjxr
     SUBDIR += libkdcraw
-    SUBDIR += libkdcraw-qt5
     SUBDIR += libkexiv2
     SUBDIR += libksane
     SUBDIR += libliftoff
@@ -511,7 +511,6 @@
     SUBDIR += libnsgif
     SUBDIR += libopendrive
     SUBDIR += libopenraw
-    SUBDIR += libosmesa
     SUBDIR += libpano13
     SUBDIR += libpcd
     SUBDIR += libpgf
@@ -602,9 +601,6 @@
     SUBDIR += mesa-demos
     SUBDIR += mesa-devel
     SUBDIR += mesa-dri
-    SUBDIR += mesa-gallium-va
-    SUBDIR += mesa-gallium-vdpau
-    SUBDIR += mesa-gallium-xa
     SUBDIR += mesa-libs
     SUBDIR += metacam
     SUBDIR += metapixel
@@ -640,12 +636,12 @@
     SUBDIR += nvidia-drm-61-kmod
     SUBDIR += nvidia-drm-61-kmod-580
     SUBDIR += nvidia-drm-61-kmod-devel
-    SUBDIR += nvidia-drm-66-kmod
-    SUBDIR += nvidia-drm-66-kmod-580
-    SUBDIR += nvidia-drm-66-kmod-devel
     SUBDIR += nvidia-drm-612-kmod
     SUBDIR += nvidia-drm-612-kmod-580
     SUBDIR += nvidia-drm-612-kmod-devel
+    SUBDIR += nvidia-drm-66-kmod
+    SUBDIR += nvidia-drm-66-kmod-580
+    SUBDIR += nvidia-drm-66-kmod-devel
     SUBDIR += nvidia-drm-kmod
     SUBDIR += nvidia-drm-kmod-580
     SUBDIR += nvidia-drm-kmod-devel
@@ -831,7 +827,6 @@
     SUBDIR += pear-Image_Transform
     SUBDIR += pecl-geospatial
     SUBDIR += pecl-imagick
-    SUBDIR += pecl-qrencode
     SUBDIR += pecl-vips
     SUBDIR += pencil2d
     SUBDIR += perceptualdiff
@@ -846,6 +841,7 @@
     SUBDIR += phototonic
     SUBDIR += php-facedetect
     SUBDIR += php-geos
+    SUBDIR += php-qrencode
     SUBDIR += php82-exif
     SUBDIR += php82-gd
     SUBDIR += php83-exif
@@ -854,6 +850,8 @@
     SUBDIR += php84-gd
     SUBDIR += php85-exif
     SUBDIR += php85-gd
+    SUBDIR += php86-exif
+    SUBDIR += php86-gd
     SUBDIR += phplot
     SUBDIR += picpuz
     SUBDIR += piddle
@@ -934,7 +932,7 @@
     SUBDIR += py-contextily
     SUBDIR += py-descartes
     SUBDIR += py-diplib
-    SUBDIR += py-dj52-sorl-thumbnail
+    SUBDIR += py-dj60-sorl-thumbnail
     SUBDIR += py-django-easy-thumbnails
     SUBDIR += py-djvulibre
     SUBDIR += py-easyocr
@@ -976,6 +974,7 @@
     SUBDIR += py-kornia-rs
     SUBDIR += py-leather
     SUBDIR += py-lerc
+    SUBDIR += py-liffile
     SUBDIR += py-mapclassify
     SUBDIR += py-mayavi
     SUBDIR += py-mcomix
@@ -999,6 +998,8 @@
     SUBDIR += py-pandana
     SUBDIR += py-pandarm
     SUBDIR += py-pdf2image
+    SUBDIR += py-pdfminer-six
+    SUBDIR += py-pdfplumber
     SUBDIR += py-photocollage
     SUBDIR += py-piexif
     SUBDIR += py-pillow
@@ -1030,6 +1031,7 @@
     SUBDIR += py-pymaging-png
     SUBDIR += py-pyocr
     SUBDIR += py-pyogrio
+    SUBDIR += py-pypdf2
     SUBDIR += py-pypdfium2
     SUBDIR += py-pypillowfight
     SUBDIR += py-pyproj
@@ -1056,6 +1058,7 @@
     SUBDIR += py-rich-pixels
     SUBDIR += py-rlpycairo
     SUBDIR += py-s2
+    SUBDIR += py-sane
     SUBDIR += py-scikit-image
     SUBDIR += py-seqdiag
     SUBDIR += py-simplejpeg
@@ -1067,6 +1070,7 @@
     SUBDIR += py-svgwrite
     SUBDIR += py-term-image
     SUBDIR += py-termtosvg
+    SUBDIR += py-tesserocr
     SUBDIR += py-tifffile
     SUBDIR += py-tkcolorpicker
     SUBDIR += py-toyplot
@@ -1078,6 +1082,7 @@
     SUBDIR += py-vecrec
     SUBDIR += py-vispy
     SUBDIR += py-visvis
+    SUBDIR += py-vtracer
     SUBDIR += py-vulkan
     SUBDIR += py-wand
     SUBDIR += py-webcolors
@@ -1186,6 +1191,7 @@
     SUBDIR += satty
     SUBDIR += scale2x
     SUBDIR += scantailor
+    SUBDIR += scantpaper
     SUBDIR += scr2png
     SUBDIR += scrot
     SUBDIR += scwm-icons
@@ -1267,12 +1273,14 @@
     SUBDIR += viewnior
     SUBDIR += vigra
     SUBDIR += vips
+    SUBDIR += virtio-gpu-qemu-kmod
     SUBDIR += visprint
     SUBDIR += viu
     SUBDIR += vkrunner
     SUBDIR += volpack
     SUBDIR += vp
     SUBDIR += vpaint
+    SUBDIR += vtracer
     SUBDIR += vulkan-caps-viewer
     SUBDIR += vulkan-extension-layer
     SUBDIR += vulkan-headers
@@ -1280,7 +1288,6 @@
     SUBDIR += vulkan-tools
     SUBDIR += vulkan-utility-libraries
     SUBDIR += vulkan-validation-layers
-    SUBDIR += vv
     SUBDIR += waffle
     SUBDIR += waifu2x-converter-cpp
     SUBDIR += waifu2x-ncnn-vulkan

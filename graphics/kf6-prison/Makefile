@@ -1,9 +1,10 @@
 PORTNAME=	prison
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	graphics kde kde-frameworks
 
-COMMENT=	Qt-based barcode abstraction layer/library
 MAINTAINER=	kde@FreeBSD.org
+COMMENT=	Qt-based barcode abstraction layer/library
 
 LIB_DEPENDS=	libdmtx.so:graphics/libdmtx \
 		libqrencode.so:graphics/libqrencode \

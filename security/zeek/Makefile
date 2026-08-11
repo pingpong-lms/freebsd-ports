@@ -1,5 +1,6 @@
 PORTNAME=	zeek
-DISTVERSION=	8.0.8
+DISTVERSION=	8.0.9
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	https://download.zeek.org/
 
@@ -16,8 +17,8 @@ LIB_DEPENDS=	libcares.so:dns/c-ares \
 		libzmq.so:net/libzmq4
 RUN_DEPENDS=	c-ares>=1.25.0:dns/c-ares
 
-USES=		bison cmake compiler:c++17-lang cpe gettext-runtime perl5 \
-		python:3.9+ shebangfix ssl
+USES=		bison cmake compiler:c++20-lang cpe gettext-runtime perl5 \
+		python shebangfix ssl
 
 USE_LDCONFIG=	yes
 
@@ -171,6 +172,8 @@ post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/zeek-cut
 	@${RM} ${STAGEDIR}${PREFIX}/share/zeek/tests
 	${LN} -s ../btest/data ${STAGEDIR}${PREFIX}/share/zeek/tests
+	# upstream leaks a lot of empty include directories!
+	@${FIND} ${STAGEDIR}${PREFIX}/include/zeek -type d -empty -delete
 
 post-install-ZEEKCTL-on:
 	${MKDIR} ${STAGEDIR}/var/spool/zeek/installed-scripts-do-not-touch/auto

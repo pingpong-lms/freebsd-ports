@@ -1,6 +1,6 @@
 PORTNAME=	spirv-headers
 DISTVERSIONPREFIX=	vulkan-sdk-
-DISTVERSION=	1.4.341.0
+DISTVERSION=	1.4.357.0
 CATEGORIES=	graphics
 
 MAINTAINER=	yuri@FreeBSD.org

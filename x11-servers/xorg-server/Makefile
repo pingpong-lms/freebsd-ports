@@ -1,5 +1,5 @@
 PORTNAME=	xorg
-PORTVERSION=	21.1.23
+PORTVERSION=	21.1.24
 PORTEPOCH=	1
 CATEGORIES=	x11-servers
 MASTER_SITES=	XORG/individual/xserver
@@ -38,10 +38,10 @@ PLIST_FILES=	bin/${BINARY_NAME} \
 
 DESCR=	${.CURDIR}/pkg-descr-${FLAVOR}
 
-BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/mesa-dri
+BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/mesa-libs
 RUN_DEPENDS+=	xkeyboard-config>=2.5:x11/xkeyboard-config \
 		xkbcomp:x11/xkbcomp \
-		${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/mesa-dri
+		${LOCALBASE}/lib/dri/libdril_dri.so:graphics/mesa-dri
 
 MESON_ARGS+=	-Dxwin=false \
 		-Dxquartz=false \

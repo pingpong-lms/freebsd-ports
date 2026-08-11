@@ -1,6 +1,6 @@
 PORTNAME=	duckdb
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.5.3
+DISTVERSION=	1.5.5
 CATEGORIES=	databases
 MASTER_SITES=	https://github.com/postgres/postgres/archive/refs/tags/:postgres_sources
 DISTFILES=	REL_15_13.tar.gz:postgres_sources
@@ -18,22 +18,22 @@ LIB_DEPENDS=	libcurl.so:ftp/curl
 USES=		cmake:testing compiler:c++11-lang ssl
 USE_GITHUB=	yes
 GH_TUPLE=	\
-		duckdb:duckdb-avro:7f423d69709045e38f8431b3470e0395fce1a595:avro/extension/avro \
-		duckdb:duckdb-aws:38d4ed30b7f5855168f4b494bf9be611c868c69a:aws/extension/aws \
-		duckdb:duckdb-azure:2ad247d4ca090cd2110f2e35531ab6fcdb80c186:azure/extension/azure \
-		duckdb:ducklake:e6a3bd0a8554b74d97cbc7e8acc3e2c9f01a0385:ducklake/extension/ducklake \
+		duckdb:duckdb-avro:f9d590297485f0318f480372c70bdd852826e258:avro/extension/avro \
+		duckdb:duckdb-aws:efa54a990e16c976576685dd4134d2478cf5a574:aws/extension/aws \
+		duckdb:duckdb-azure:003214c96d0caa39d5c3e27a9e1976a0692c7d37:azure/extension/azure \
+		duckdb:ducklake:d8a1881e22516ea3d186d73e83c65fe5bd1a1dc4:ducklake/extension/ducklake \
 		duckdb:duckdb-encodings:06295e77b13de65842992c82f14289ea679e4730:encodings/extension/encodings \
 		duckdb:duckdb-excel:f4c72b5ef04a03b3a78a95b5a2ee94ba93e3178d:excel/extension/excel \
 		duckdb:duckdb-fts:6814ec9a7d5fd63500176507262b0dbf7cea0095:fts/extension/fts \
-		duckdb:duckdb-httpfs:52afb4204a3238d6ee132e83340f8d68c40ee91c:httpfs/extension/httpfs \
-		duckdb:duckdb-iceberg:4008894c57168e0e9dff00e87cd725c5168fd81e:iceberg/extension/iceberg \
+		duckdb:duckdb-httpfs:827222fb45a043a7a852d1f7aae46901492a3cda:httpfs/extension/httpfs \
+		duckdb:duckdb-iceberg:45163a28e0ed6a2071a82a1bf1dd432d0216cf9c:iceberg/extension/iceberg \
 		duckdb:duckdb-inet:fe7f60bb60245197680fb07ecd1629a1dc3d91c8:inet/extension/inet \
-		duckdb:duckdb-postgres:6b2b12cad3afef61e8a4637e714e8a88895fed1a:postgres/extension/postgres_scanner \
-		duckdb:duckdb-mysql:496ac9e3cb61bd8d6d1255f73cf69b958a311525:mysql/extension/mysql_scanner \
-		duckdb:odbc-scanner:8a3266017af8a9abf14a49e2fd5df83d64eb5520:odbc_scanner/extension/odbc_scanner \
-		duckdb:duckdb-quack:1693647c152b438aa2a6a9ad71764f99c5a561e0:quack/extension/quack \
-		duckdb:duckdb-spatial:b68b309d371dba936c5bb362980e559b7756b16d:spatial/extension/spatial \
-		duckdb:duckdb-sqlite:a087a5878900d8bae155e97fd1b18c4cec0cca21:sqlite/extension/sqlite_scanner \
+		duckdb:duckdb-postgres:41223e51559cd581f1c06e170b71c71df25bbaac:postgres/extension/postgres_scanner \
+		duckdb:duckdb-mysql:7267164dab3409e943261aeee6ae32f1b00847a7:mysql/extension/mysql_scanner \
+		duckdb:odbc-scanner:274a3307341dcafd62471c09b45c5d858d6c95cc:odbc_scanner/extension/odbc_scanner \
+		duckdb:duckdb-quack:c1548111c1bfd16207e22fd3cb7e4bde1335b9d0:quack/extension/quack \
+		duckdb:duckdb-spatial:eb1e57c9d92c0f3f76eb03eaa52c315090f328cc:spatial/extension/spatial \
+		duckdb:duckdb-sqlite:f79b1db7d7730b18d0f8400d3650ffa6b45168d8:sqlite/extension/sqlite_scanner \
 		duckdb:duckdb-sqlsmith:e47106c6fef6e019feaf8cedfc2ef737428a386c:sqlsmith/extension/sqlsmith \
 		duckdb:duckdb-vss:b833341c8737fd3f3558c7720cc575ae8fc82598:vss/extension/vss
 # the list of out-of-tree extensions is here: .github/config/out_of_tree_extensions.cmake
@@ -118,6 +118,6 @@ post-patch: # remove cmake files of out-of-tree extensions to build them like in
 post-test: # run tests
 	@cd ${TEST_WRKSRC} && test/unittest
 
-# tests as of 1.5.3: All tests passed (22 skipped tests, 978885 assertions in 4469 test cases)
+# tests as of 1.5.5: All tests passed (21 skipped tests, 982095 assertions in 4564 test cases)
 
 .include <bsd.port.mk>

@@ -22,13 +22,13 @@
 .if !defined(_INCLUDE_USES_NODEJS_MK)
 _INCLUDE_USES_NODEJS_MK=	yes
 
-_VALID_NODEJS_VERSIONS=	18 20 22 24 25 26 current lts
+_VALID_NODEJS_VERSIONS=	18 20 22 24 26 current lts
 
 .  if ! ${_VALID_NODEJS_VERSIONS:M${NODEJS_DEFAULT}}
 IGNORE=	Invalid default nodejs version ${NODEJS_DEFAULT}; valid versions are ${_VALID_NODEJS_VERSIONS}
 .  endif
 
-.  if !empty(nodejs_ARGS:Nbuild:Nenv:Nrun:Nlts:Ncurrent:N18:N20:N22:N24:N25:N26)
+.  if !empty(nodejs_ARGS:Nbuild:Nenv:Nrun:Nlts:Ncurrent:N18:N20:N22:N24:N26)
 IGNORE=		USES=nodejs has invalid arguments ${nodejs_ARGS}
 .  endif
 

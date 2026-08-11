@@ -1,6 +1,6 @@
 PORTNAME=	qwen-code
-DISTVERSION=	0.15.3
-CATEGORIES=	misc # machine-learning
+DISTVERSION=	0.21.5
+CATEGORIES=	misc
 DISTFILES=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	olivier@FreeBSD.org
@@ -18,6 +18,8 @@ USES=		nodejs:run
 
 NO_BUILD=	yes
 NO_ARCH=	yes
+
+PLIST_FILES=	bin/qwen
 
 PACKAGE_NAME=	@qwen-code/qwen-code
 
@@ -38,19 +40,25 @@ do-install:
 	# remove bundled ripgrep (we use textproc/ripgrep via RUN_DEPENDS);
 	# cli.js falls back to system rg when the builtin path is absent
 	@${RM} -r ${STAGEDIR}${PREFIX}/lib/node_modules/${PACKAGE_NAME}/vendor/ripgrep
-	# remove macOS-only sandbox profiles
 	@${RM} ${STAGEDIR}${PREFIX}/lib/node_modules/${PACKAGE_NAME}/sandbox-macos-*.sb
 	${REINPLACE_CMD} -i '' \
 		-e "s|#!/usr/bin/env node|#!${PREFIX}/bin/node|" \
-		${STAGEDIR}${PREFIX}/lib/node_modules/${PACKAGE_NAME}/cli.js
-	${REINPLACE_CMD} -i '' \
+		${STAGEDIR}${PREFIX}/lib/node_modules/${PACKAGE_NAME}/cli-entry.js
+	@${FIND} ${STAGEDIR}${PREFIX}/lib/node_modules/${PACKAGE_NAME}/chunks \
+		-name '*.js' -exec ${REINPLACE_CMD} -i '' \
 		-e 's|settings.merged.general?.enableAutoUpdate !== false|false|g' \
-		${STAGEDIR}${PREFIX}/lib/node_modules/${PACKAGE_NAME}/cli.js
-	@${CHMOD} +x ${STAGEDIR}${PREFIX}/lib/node_modules/${PACKAGE_NAME}/cli.js
+		{} +
+	@${CHMOD} +x ${STAGEDIR}${PREFIX}/lib/node_modules/${PACKAGE_NAME}/cli-entry.js
 	# create wrapper script
 	@${MKDIR} ${STAGEDIR}${PREFIX}/bin
 	@${ECHO_CMD} '#!/bin/sh' > ${STAGEDIR}${PREFIX}/bin/qwen
-	@${ECHO_CMD} 'exec ${PREFIX}/lib/node_modules/${PACKAGE_NAME}/cli.js "$$@"' >> ${STAGEDIR}${PREFIX}/bin/qwen
+	@${ECHO_CMD} 'exec ${PREFIX}/lib/node_modules/${PACKAGE_NAME}/cli-entry.js "$$@"' >> ${STAGEDIR}${PREFIX}/bin/qwen
 	@${CHMOD} +x ${STAGEDIR}${PREFIX}/bin/qwen
+
+# The bundled node_modules tree contains hundreds of hash-named files that
+# churn every release; generate the plist for it instead of hand-listing.
+post-install:
+	@cd ${STAGEDIR}${PREFIX} && \
+		${FIND} lib/node_modules \( -type f -o -type l \) | ${SORT} >> ${TMPPLIST}
 
 .include <bsd.port.mk>

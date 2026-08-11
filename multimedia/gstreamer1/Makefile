@@ -1,6 +1,5 @@
 PORTNAME=	gstreamer
 PORTVERSION=	${_GST_VERSION}
-PORTREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gstreamer/
 PKGNAMESUFFIX=	1
@@ -61,14 +60,65 @@ PTP_MESON_ENABLED=	ptp-helper
 MESON_ARGS+=	-D ptp-helper=disabled
 .endif
 
+# Define standard ports requiring a basic makesum
+_GST_MAKESUM_PORTS=	devel/gstreamer1-devtools \
+			multimedia/gstreamer1-editing-services \
+			multimedia/gstreamer1-libav \
+			multimedia/gstreamer1-rtsp-server \
+			multimedia/py-gstreamer1
+
 # Custom target to update distinfo for all gstreamer1 ports under control of
 # _GST1_VERSION set in Mk/Uses/gstreamer.mk
 makesum-all: makesum
-.for p in editing-services libav rtsp-server
-	@${MAKE} -C ${.CURDIR:H:H}/multimedia/gstreamer1-${p} makesum
+.for p in ${_GST_MAKESUM_PORTS}
+	@${MAKE} -C ${.CURDIR:H:H}/${p} makesum
 .endfor
-	@${MAKE} -C ${.CURDIR:H:H}/devel/gstreamer1-devtools makesum
 	@${MAKE} -C ${.CURDIR:H:H}/multimedia/gstreamer1-plugins makesum-all
-	@${MAKE} -C ${.CURDIR:H:H}/multimedia/py-gstreamer1 makesum
+	@${MAKE} -C ${.CURDIR:H:H}/multimedia/gstreamer1-plugins-rust makesum cargo-crates-merge
+
+# Custom target to check for python mods needed by generate-vuxml-entry.py.
+# This is a helper, since the FreeBSD ports infrastructure doesn't currently
+# have a built-in method to deal with dependencies required by custom targets.
+generate-vuxml-py-mod-check:
+	@for mod in "bs4,beautifulsoup" "requests,requests"; do \
+	    IFS=","; \
+	    set -- $${mod}; \
+	    if ! ${PYTHON_CMD} -c "import $${1}" 2>/dev/null; then \
+		${ECHO_MSG} "====> Error: Missing Python module $${1}. Please install it: \`pkg install ${PYTHON_PKGNAMEPREFIX}$${2}\`"; \
+		exit 1; \
+	    else \
+		${ECHO_MSG} "====> Found Python module $${1}"; \
+	    fi \
+	done
+
+# Automatically creates a VuXML entry for the GSreamer suite. This uses a
+# python script to scrape https://gstreamer.freedesktop.org/security/
+# and is pretty good in auto mode, but the output should still be verifed.
+# The script can be run manually with finer parameters for quirky cases.
+generate-vuxml: generate-vuxml-py-mod-check
+	@${ECHO_MSG} "===>  Auto-generating VuXML entry for GStreamer ${PORTVERSION}..."
+	@if [ -f "${FILESDIR}/generate-vuxml-entry.py" ]; then \
+		set -e; \
+		current_year=$$(date +%Y); \
+		vuxml_file="${.CURDIR:H:H}/security/vuxml/vuln/$${current_year}.xml"; \
+		tmp_vuxml=$$(${MKTEMP} -t gst_vuxml); \
+		trap '${RM} -f "$${tmp_vuxml}"' EXIT; \
+		if ! ${SETENV} ${PYTHON_CMD} ${FILESDIR}/generate-vuxml-entry.py -a -v "${PORTVERSION}" > "$${tmp_vuxml}"; then \
+			${ECHO_MSG} "====>  Error: Python VuXML generator failed."; \
+			exit 1; \
+		fi; \
+		if [ -s "$${tmp_vuxml}" ]; then \
+			if [ -f "$${vuxml_file}" ]; then \
+				${ECHO_CMD} "====> Prepending entry to $${vuxml_file}..."; \
+				${CAT} "$${tmp_vuxml}" "$${vuxml_file}" > "$${vuxml_file}.new"; \
+				${MV} "$${vuxml_file}.new" "$${vuxml_file}"; \
+			else \
+				${ECHO_CMD} "====> Warning: $${vuxml_file} not found. Saving to ${.CURDIR}/vuxml_entry.xml instead. Maybe it's the new year and security/vuxml needs to be updated?"; \
+				${CP} "$${tmp_vuxml}" ${.CURDIR}/vuxml_entry.xml; \
+			fi; \
+		fi; \
+	else \
+		${ECHO_CMD} "====> Warning: ${FILESDIR}/generate-vuxml-entry.py not found. Skipping VuXML generation."; \
+	fi
 
 .include <bsd.port.mk>

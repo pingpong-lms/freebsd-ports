@@ -1,3 +1,9 @@
+===>  License MPL20 accepted by the user
+===>   deltachat-rpc-server-2.57.0 depends on file: /usr/local/sbin/pkg - found
+===> Fetching all distfiles required by deltachat-rpc-server-2.57.0 for building
+===>  Extracting for deltachat-rpc-server-2.57.0
+=> SHA256 Checksum OK for chatmail-core-v2.57.0_GH0.tar.gz.
+===>  Moving crates to /usr/local/poudriere/ports/default/net/deltachat-rpc-server/work/core-2.57.0//cargo-crates
 CARGO_CRATES=	addr2line-0.25.1 \
 		adler2-2.0.0 \
 		aead-0.5.2 \
@@ -12,20 +18,20 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		android_system_properties-0.1.5 \
 		anes-0.1.6 \
 		anstyle-1.0.6 \
-		anyhow-1.0.102 \
+		anyhow-1.0.103 \
 		argon2-0.5.3 \
 		arrayref-0.3.9 \
 		arrayvec-0.7.6 \
 		asn1-rs-0.6.2 \
 		asn1-rs-derive-0.5.1 \
 		asn1-rs-impl-0.2.0 \
-		astral-tokio-tar-0.6.2 \
+		astral-tokio-tar-0.6.3 \
 		async-broadcast-0.7.2 \
 		async-channel-1.9.0 \
 		async-channel-2.5.0 \
 		async-compat-0.2.4 \
 		async-compression-0.4.21 \
-		async-imap-0.11.2 \
+		async-imap-0.11.3 \
 		async-lock-3.4.0 \
 		async-native-tls-0.6.0 \
 		async-smtp-0.10.2 \
@@ -60,7 +66,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		bolero-kani-0.13.0 \
 		bolero-libfuzzer-0.13.0 \
 		bounded-integer-0.5.8 \
-		brotli-8.0.2 \
+		brotli-8.0.4 \
 		brotli-decompressor-5.0.0 \
 		buffer-redux-1.0.2 \
 		bumpalo-3.17.0 \
@@ -68,21 +74,22 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		bytemuck-1.23.0 \
 		byteorder-1.5.0 \
 		byteorder-lite-0.1.0 \
-		bytes-1.11.1 \
+		bytes-1.12.0 \
 		camellia-0.1.0 \
 		camino-1.1.9 \
 		cargo-platform-0.1.8 \
 		cargo_metadata-0.14.2 \
 		cast-0.3.0 \
 		cast5-0.11.1 \
-		cc-1.2.14 \
+		cc-1.2.63 \
 		cfb-mode-0.8.2 \
 		cfg-if-1.0.0 \
 		cfg_aliases-0.2.1 \
 		chacha20-0.9.1 \
+		chacha20-0.10.1 \
 		chacha20poly1305-0.10.1 \
 		charset-0.1.5 \
-		chrono-0.4.44 \
+		chrono-0.4.45 \
 		ciborium-0.2.2 \
 		ciborium-io-0.2.2 \
 		ciborium-ll-0.2.2 \
@@ -114,7 +121,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		critical-section-1.2.0 \
 		crossbeam-channel-0.5.15 \
 		crossbeam-deque-0.8.6 \
-		crossbeam-epoch-0.9.18 \
+		crossbeam-epoch-0.9.20 \
 		crossbeam-utils-0.8.21 \
 		crossterm-0.28.1 \
 		crossterm_winapi-0.9.1 \
@@ -186,7 +193,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		fdeflate-0.3.7 \
 		ff-0.13.0 \
 		fiat-crypto-0.2.9 \
-		filetime-0.2.25 \
+		find-msvc-tools-0.1.9 \
 		fixedbitset-0.5.7 \
 		flate2-1.1.1 \
 		fnv-1.0.7 \
@@ -211,13 +218,14 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		generic-array-0.14.7 \
 		getrandom-0.2.16 \
 		getrandom-0.3.3 \
+		getrandom-0.4.3 \
 		ghash-0.5.1 \
 		gif-0.14.0 \
 		gimli-0.32.3 \
 		glob-0.3.2 \
 		gloo-timers-0.3.0 \
 		group-0.13.0 \
-		h2-0.4.7 \
+		h2-0.4.15 \
 		half-2.6.0 \
 		hashbrown-0.15.4 \
 		hashlink-0.10.0 \
@@ -244,7 +252,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		humansize-2.1.3 \
 		hybrid-array-0.2.3 \
 		hybrid-array-0.3.1 \
-		hyper-1.9.0 \
+		hyper-1.10.1 \
 		hyper-rustls-0.27.5 \
 		hyper-util-0.1.20 \
 		iana-time-zone-0.1.61 \
@@ -300,7 +308,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		litemap-0.7.4 \
 		litrs-0.4.1 \
 		lock_api-0.4.14 \
-		log-0.4.29 \
+		log-0.4.33 \
 		loom-0.7.2 \
 		lru-0.12.5 \
 		lru-0.13.0 \
@@ -311,7 +319,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		matchers-0.2.0 \
 		md-5-0.10.6 \
 		md5-0.7.0 \
-		memchr-2.7.4 \
+		memchr-2.8.2 \
 		mime-0.3.17 \
 		minimal-lexical-0.2.1 \
 		miniz_oxide-0.8.8 \
@@ -380,10 +388,10 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		pest_derive-2.7.10 \
 		pest_generator-2.7.10 \
 		pest_meta-2.7.15 \
-		pgp-0.19.0 \
+		pgp-0.20.0 \
 		pharos-0.5.3 \
-		pin-project-1.1.11 \
-		pin-project-internal-1.1.11 \
+		pin-project-1.1.13 \
+		pin-project-internal-1.1.13 \
 		pin-project-lite-0.2.16 \
 		pin-utils-0.1.0 \
 		pkarr-3.7.1 \
@@ -423,22 +431,26 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		qrcode-0.14.1 \
 		qrcodegen-1.8.0 \
 		quick-error-2.0.1 \
-		quick-xml-0.39.2 \
+		quick-xml-0.41.0 \
 		quinn-0.11.6 \
-		quinn-proto-0.11.14 \
+		quinn-proto-0.11.16 \
 		quinn-udp-0.5.10 \
-		quote-1.0.45 \
+		quote-1.0.46 \
 		quoted-string-parser-0.1.0 \
 		quoted_printable-0.5.1 \
 		r-efi-5.2.0 \
+		r-efi-6.0.0 \
 		radium-0.7.0 \
 		radix_trie-0.2.1 \
 		rand-0.8.6 \
 		rand-0.9.4 \
+		rand-0.10.2 \
 		rand_chacha-0.3.1 \
 		rand_chacha-0.9.0 \
 		rand_core-0.6.4 \
 		rand_core-0.9.3 \
+		rand_core-0.10.1 \
+		rand_pcg-0.10.2 \
 		rand_xorshift-0.4.0 \
 		rand_xoshiro-0.7.0 \
 		rayon-1.10.0 \
@@ -447,10 +459,10 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		redox_syscall-0.4.1 \
 		redox_syscall-0.5.12 \
 		redox_users-0.5.0 \
-		regex-1.12.3 \
+		regex-1.12.4 \
 		regex-automata-0.4.13 \
 		regex-lite-0.1.6 \
-		regex-syntax-0.8.8 \
+		regex-syntax-0.8.11 \
 		replace_with-0.1.8 \
 		reqwest-0.12.15 \
 		resolv-conf-0.7.1 \
@@ -495,7 +507,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		serde_core-1.0.228 \
 		serde_derive-1.0.228 \
 		serde_derive_internals-0.29.0 \
-		serde_json-1.0.149 \
+		serde_json-1.0.150 \
 		serde_spanned-1.0.4 \
 		serde_urlencoded-0.7.1 \
 		serdect-0.2.0 \
@@ -509,7 +521,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		shadowsocks-1.23.1 \
 		shadowsocks-crypto-0.6.1 \
 		sharded-slab-0.1.7 \
-		shlex-1.3.0 \
+		shlex-2.0.1 \
 		signal-hook-registry-1.4.2 \
 		signature-2.2.0 \
 		simd-adler32-0.3.7 \
@@ -517,14 +529,16 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		simple-dns-0.9.3 \
 		slab-0.4.9 \
 		slh-dsa-0.0.3 \
-		smallvec-1.15.1 \
+		smallvec-1.15.2 \
 		smawk-0.3.2 \
 		snafu-0.8.5 \
+		snafu-0.9.1 \
 		snafu-derive-0.8.5 \
+		snafu-derive-0.9.1 \
 		socket2-0.5.9 \
 		socket2-0.6.3 \
-		spin-0.9.8 \
-		spin-0.10.0 \
+		spin-0.9.9 \
+		spin-0.10.1 \
 		spki-0.7.3 \
 		stable_deref_trait-1.2.0 \
 		stop-token-0.7.0 \
@@ -538,7 +552,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		subtle-2.6.1 \
 		surge-ping-0.8.1 \
 		syn-1.0.109 \
-		syn-2.0.117 \
+		syn-2.0.118 \
 		sync_wrapper-1.0.0 \
 		synstructure-0.13.1 \
 		sysinfo-0.26.9 \
@@ -563,7 +577,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		tinytemplate-1.2.1 \
 		tinyvec-1.6.0 \
 		tinyvec_macros-0.1.1 \
-		tokio-1.52.1 \
+		tokio-1.52.3 \
 		tokio-io-timeout-1.2.1 \
 		tokio-macros-2.7.0 \
 		tokio-rustls-0.26.4 \

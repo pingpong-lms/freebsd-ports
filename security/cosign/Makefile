@@ -1,6 +1,6 @@
 PORTNAME=	cosign
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.1.0
+DISTVERSION=	3.1.3
 CATEGORIES=	security
 
 MAINTAINER=	bofh@FreeBSD.org
@@ -10,7 +10,7 @@ WWW=		https://www.sigstore.dev/
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cpe go:modules
+USES=		cpe go:1.26+,modules
 CPE_VENDOR=	sigstore
 
 GO_MODULE=	github.com/sigstore/cosign/v3
@@ -23,7 +23,7 @@ GO_BUILDFLAGS=	-ldflags="-buildid= \
 
 PLIST_FILES=	bin/${PORTNAME}
 
-GIT_HASH=	d253adffe00042d99e7bd7cdcd1d6d2abc3d750d
+GIT_HASH=	11926fa5bbbbde47e88fc006b625a17769b743b2
 
 .include <bsd.port.pre.mk>
 

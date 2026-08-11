@@ -34,6 +34,7 @@
     SUBDIR += emulationstation
     SUBDIR += emutos
     SUBDIR += es-de
+    SUBDIR += fab-agon-emulator
     SUBDIR += fbneo
     SUBDIR += fbsd-duckstation
     SUBDIR += fceux
@@ -141,6 +142,7 @@
     SUBDIR += spim
     SUBDIR += stella
     SUBDIR += stonx
+    SUBDIR += supermodel
     SUBDIR += teo
     SUBDIR += tic-80
     SUBDIR += tiemu3
@@ -192,6 +194,7 @@
     SUBDIR += x49gp
     SUBDIR += xbraitenberg
     SUBDIR += xcpc
+    SUBDIR += xemu
     SUBDIR += xen-kernel
     SUBDIR += xhomer
     SUBDIR += xsystem35

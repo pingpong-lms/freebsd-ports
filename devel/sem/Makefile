@@ -1,7 +1,7 @@
 PORTNAME=	sem
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.6.0
-PORTREVISION=	1
+DISTVERSION=	0.21.0
+PORTREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	adamw@FreeBSD.org
@@ -14,7 +14,8 @@ LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE-APACHE
 LICENSE_FILE_MIT=	${WRKSRC}/LICENSE-MIT
 
 LIB_DEPENDS=	libgit2.so:devel/libgit2 \
-		libssh2.so:security/libssh2
+		libssh2.so:security/libssh2 \
+		libzstd.so:archivers/zstd
 
 USES=		cargo ssl
 USE_GITHUB=	yes
@@ -22,6 +23,8 @@ GH_ACCOUNT=	ataraxy-labs
 
 CARGO_CARGOTOML=	${WRKSRC}/crates/sem-cli/Cargo.toml
 CARGO_INSTALL_PATH=	./crates/sem-cli
+# For maintainer:
+CARGO_LOCK_URL=	https://raw.githubusercontent.com/ataraxy-labs/sem/refs/tags/${DISTVERSIONPREFIX}${DISTVERSION}/crates/Cargo.lock
 
 PLIST_FILES=	bin/sem \
 		share/bash-completion/completions/sem.bash \

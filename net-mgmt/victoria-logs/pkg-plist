@@ -5,8 +5,6 @@ bin/vlogscli
 %%PORTDOCS%%%%DOCSDIR%%/cluster-ha.excalidraw
 %%PORTDOCS%%%%DOCSDIR%%/cluster-ha.webp
 %%PORTDOCS%%%%DOCSDIR%%/data-ingestion/openshift.md
-%%PORTDOCS%%%%DOCSDIR%%/security-and-lb-search-auth.excalidraw
-%%PORTDOCS%%%%DOCSDIR%%/security-and-lb-search-auth.webp
 %%PORTDOCS%%%%DOCSDIR%%/security-and-lb-tenants.excalidraw
 %%PORTDOCS%%%%DOCSDIR%%/security-and-lb-tenants.webp
 %%PORTDOCS%%%%DOCSDIR%%/CHANGELOG.md
@@ -66,6 +64,7 @@ bin/vlogscli
 %%PORTDOCS%%%%DOCSDIR%%/integrations/bindplane-pipelines.webp
 %%PORTDOCS%%%%DOCSDIR%%/integrations/bindplane.md
 %%PORTDOCS%%%%DOCSDIR%%/data-ingestion/Splunk.md
+%%PORTDOCS%%%%DOCSDIR%%/quick-start-vmui.webp
 @dir(%%VICTORIA_USER%%,%%VICTORIA_GROUP%%,750) %%VICTORIA_DATA%%
 @dir(%%VICTORIA_USER%%,%%VICTORIA_GROUP%%,750) %%VICTORIA_LOGS%%
 @dir(%%VICTORIA_USER%%,%%VICTORIA_GROUP%%,750) %%VICTORIA_RUN%%

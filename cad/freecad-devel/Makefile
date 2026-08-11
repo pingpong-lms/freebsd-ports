@@ -1,6 +1,6 @@
 PORTNAME=	FreeCAD
 DISTVERSION=	r${GIT_SRC_DATE}
-PORTREVISION=	1
+#PORTREVISION=	1
 CATEGORIES=	cad
 PKGNAMESUFFIX=  -devel
 
@@ -14,6 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 CONFLICTS_INSTALL=      freecad # bin/FreeCAD
 
 BUILD_DEPENDS=	doxygen:devel/doxygen \
+		googletest>0:devel/googletest \
 		pybind11-config:devel/py-pybind11@${PY_FLAVOR} \
 		pybind11>0:devel/pybind11 \
 		${PYTHON_PKGNAMEPREFIX}pyside6-tools>0:devel/pyside6-tools@${PY_FLAVOR} \
@@ -39,23 +40,23 @@ LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreeimage.so:graphics/freeimage \
 		libavutil.so.60:multimedia/ffmpeg \
-		libavformat.so.58:multimedia/ffmpeg4 \
 		libmed.so:french/med \
 		libshiboken6.abi3.so:devel/shiboken6@${PY_FLAVOR} \
 		libhdf5.so:science/hdf5 \
 		libicui18n.so:devel/icu
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pivy>0:graphics/py-pivy@${PY_FLAVOR} \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}defusedxml>=0.7.1<0.8:devel/py-defusedxml@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pivy>0:graphics/py-pivy@${PY_FLAVOR} \
 		${PYTHON_SITELIBDIR}/matplotlib/__init__.py:math/py-matplotlib@${PY_FLAVOR}
 
 USES=		dos2unix compiler:c++20-lang cmake cpe gl eigen:3 fortran gmake jpeg \
 		localbase:ldflags mpi:openmpi pkgconfig python localbase qt:6 xorg \
 		desktop-file-utils shared-mime-info shebangfix
 USE_GITHUB=	yes
-GH_ACCOUNT=	FreeCAD:ondsel google:gtest microsoft:gsl FreeCAD:addonmgr
-GH_PROJECT=	OndselSolver:ondsel googletest:gtest GSL:gsl AddonManager:addonmgr
-GH_TAGNAME=	${GIT_SRC_HASH} ${GIT_ONDSEL_HASH}:ondsel ${GIT_GTEST_HASH}:gtest ${GIT_GSL_HASH}:gsl ${GIT_ADDONMGR_HASH}:addonmgr
-GH_SUBDIR=	src/3rdParty/OndselSolver:ondsel tests/lib:gtest src/3rdParty/GSL:gsl src/Mod/AddonManager:addonmgr
+GH_ACCOUNT=	FreeCAD:ondsel microsoft:gsl FreeCAD:addonmgr FreeCAD:coin FreeCAD:pivy
+GH_PROJECT=	OndselSolver:ondsel GSL:gsl AddonManager:addonmgr coin:coin pivy:pivy
+GH_TAGNAME=	${GIT_SRC_HASH} ${GIT_ONDSEL_HASH}:ondsel ${GIT_GSL_HASH}:gsl ${GIT_ADDONMGR_HASH}:addonmgr ${GIT_COIN_HASH}:coin ${GIT_PIVY_HASH}:pivy
+GH_SUBDIR=	src/3rdParty/OndselSolver:ondsel src/3rdParty/GSL:gsl src/Mod/AddonManager:addonmgr src/3rdParty/coin:coin src/3rdParty/pivy:pivy
 USE_XORG=	ice sm x11 xext xt
 USE_GL=		gl glu
 USE_QT=		base svg tools

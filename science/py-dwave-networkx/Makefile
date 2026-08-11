@@ -1,5 +1,5 @@
-PORTNAME=	dwave-networkx
-DISTVERSION=	0.8.18
+PORTNAME=	dwave-networkx # dwave-networkx is being deprecated in favor of dwave-graphs, but it is still used by some packages
+DISTVERSION=	0.8.19
 PORTREVISION=	2
 CATEGORIES=	science python # quantum-computing
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -25,6 +25,7 @@ USE_PYTHON=	distutils cython autoplist unittest
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	dwavesystems
+GH_PROJECT=	dwave-graphs
 
 NO_ARCH=	yes
 

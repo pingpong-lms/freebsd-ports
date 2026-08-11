@@ -1,7 +1,7 @@
 PORTNAME=	podman
 DISTVERSIONPREFIX=	v
-DISTVERSION=	5.8.2
-PORTREVISION=	2
+DISTVERSION=	5.8.4
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	dfr@FreeBSD.org
@@ -28,6 +28,7 @@ USE_RC_SUBR=	podman podman_service
 
 SHEBANG_FILES=	${WRKSRC}/hack/markdown-preprocess
 MAKE_ARGS=	SHELL=${LOCALBASE}/bin/bash
+MAKE_ENV+=	GOTOOLCHAIN=local
 
 INSTALL_TARGET=	install install.completions
 

@@ -19,6 +19,7 @@
     SUBDIR += ashell
     SUBDIR += aterm
     SUBDIR += autorandr
+    SUBDIR += awww
     SUBDIR += babl
     SUBDIR += bbappconf
     SUBDIR += bbdock
@@ -68,6 +69,7 @@
     SUBDIR += dmenu
     SUBDIR += dmenu2
     SUBDIR += docker-tray
+    SUBDIR += dragon-drop
     SUBDIR += dsbautostart
     SUBDIR += dsbxinput
     SUBDIR += dwlb
@@ -442,12 +444,10 @@
     SUBDIR += swayr
     SUBDIR += swayrbar
     SUBDIR += swaysettings
-    SUBDIR += swww
     SUBDIR += sxhkd
     SUBDIR += sxmo-wayout
     SUBDIR += sxpc
     SUBDIR += tabbed
-    SUBDIR += taiga
     SUBDIR += tecla
     SUBDIR += temperature.app
     SUBDIR += terminal.app
@@ -469,7 +469,6 @@
     SUBDIR += virtualgl
     SUBDIR += walker
     SUBDIR += wallutils
-    SUBDIR += wapanel
     SUBDIR += watershot
     SUBDIR += waveterm
     SUBDIR += way-displays
@@ -644,6 +643,7 @@
     SUBDIR += xorg-libraries
     SUBDIR += xorg-minimal
     SUBDIR += xorgproto
+    SUBDIR += xpointerbarrier
     SUBDIR += xpr
     SUBDIR += xpra
     SUBDIR += xpra-html5
@@ -702,7 +702,6 @@
     SUBDIR += xzoom
     SUBDIR += yad
     SUBDIR += yakuake
-    SUBDIR += yalias
     SUBDIR += yeahconsole
     SUBDIR += yelp
     SUBDIR += zenity

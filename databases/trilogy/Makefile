@@ -1,5 +1,5 @@
 PORTNAME=	trilogy
-PORTVERSION=	2.12.5
+PORTVERSION=	2.12.6
 DISTVERSIONPREFIX=	v
 CATEGORIES=	databases
 
@@ -14,6 +14,8 @@ USES=		gmake ssl
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	trilogy-libraries
+
+CPE_VENDOR=	trilogy_project
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/example/trilogy_query ${STAGEDIR}${PREFIX}/bin/

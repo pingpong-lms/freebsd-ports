@@ -9,6 +9,10 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Python Qt bindings for Qt 5.12+
 WWW=		https://wiki.qt.io/Qt_for_Python
 
+BROKEN=		does not support Python 3.12+
+DEPRECATED=	Depends on deprecated Qt5 WebEngine
+EXPIRATION_DATE=2026-09-30
+
 LICENSE=	LGPL3
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools-scm>0:devel/py-setuptools-scm@${PY_FLAVOR} \

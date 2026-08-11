@@ -1,6 +1,7 @@
 PORTNAME=	surge
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.8.7
+DISTVERSION=	0.9.0
+PORTREVISION=	1
 CATEGORIES=	ftp
 PKGNAMESUFFIX=	-download-manager
 
@@ -12,7 +13,10 @@ WWW=		https://surgedm.github.io/ \
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.25+,modules
+ONLY_FOR_ARCHS=	aarch64 amd64
+ONLY_FOR_ARCHS_REASON=	module modernc.org/sqlite only supported on aarch64 and amd64
+
+USES=		go:modules
 
 GO_MODULE=	github.com/SurgeDM/Surge
 

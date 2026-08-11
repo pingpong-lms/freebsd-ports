@@ -1,7 +1,7 @@
 PORTNAME=	electron
 DISTVERSIONPREFIX=	v
 DISTVERSION=	${ELECTRON_VER}
-PORTREVISION=	1
+PORTREVISION=	2
 PULSEMV=	16
 PULSEV=		${PULSEMV}.1
 CATEGORIES=	devel
@@ -23,6 +23,9 @@ LICENSE=	BSD3CLAUSE LGPL21 MPL11 MIT
 LICENSE_COMB=	multi
 LICENSE_FILE=	${WRKSRC}/electron/LICENSE
 
+DEPRECATED=	EOLed upstream, switch to newer version
+EXPIRATION_DATE=2026-08-30
+
 BROKEN_i386=	fetch fails: node process stalls during fetch phase and eats up all CPUs
 ONLY_FOR_ARCHS=	aarch64 amd64 i386
 
@@ -34,7 +37,7 @@ BUILD_DEPENDS=	esbuild:devel/esbuild \
 		gperf:devel/gperf \
 		bindgen:devel/rust-bindgen-cli \
 		yasm:devel/yasm \
-		${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/mesa-dri \
+		${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/mesa-libs \
 		rustc:lang/rust \
 		${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat \
 		node${NODEJS_VERSION}>0:www/node${NODEJS_VERSION} \
@@ -70,10 +73,10 @@ RUN_DEPENDS=	xdg-open:devel/xdg-utils
 TEST_DEPENDS=	git:devel/git \
 		${PYTHON_PKGNAMEPREFIX}python-dbusmock>0:devel/py-python-dbusmock@${PY_FLAVOR}
 
-USES=		bison compiler:c++17-lang cpe display:test electron:env \
-		gettext-tools gl gmake gnome iconv:wchar_t jpeg \
-		localbase:ldflags ninja nodejs:24,build pkgconfig \
-		python:build,test qt:5 shebangfix tar:xz xorg
+USES=		bison compiler:c++17-lang cpe display:test gettext-tools gl \
+		gmake gnome iconv:wchar_t jpeg localbase:ldflags ninja \
+		nodejs:24,build npm:yarn4 pkgconfig python:build,test qt:5 \
+		shebangfix tar:xz xorg
 
 CPE_VENDOR=	electronjs
 USE_GITHUB=	yes
@@ -89,7 +92,6 @@ USE_GNOME=	atk cairo gdkpixbuf gtk30 libxml2 libxslt pango
 USE_XORG=	x11 xcb xcomposite xcursor xdamage xext xfixes xi xrandr \
 		xrender xscrnsaver xtst
 USE_QT=		buildtools:build core:build widgets:build
-USE_ELECTRON=	npm:yarn4 prefetch extract
 NPM_EXTRACT_WRKSRC=	${WRKSRC:H}/${PORTNAME}-${ELECTRON_VER}
 
 SHEBANG_FILES=	chrome/tools/build/linux/chrome-wrapper buildtools/linux64/clang-format
@@ -230,7 +232,7 @@ MANTLE_VER=			78d3966b3c331292ea29ec38661b25df0a245948
 # See ${WRKSRC}/electron/DEPS for ENGFLOW_RECLIENT_CONFIGS_VER
 ENGFLOW_RECLIENT_CONFIGS_VER=	955335c30a752e9ef7bff375baab5e0819b6c00d
 # Keep in sync with devel/esbuild
-ESBUILD_VER=			0.28.0
+ESBUILD_VER=			0.28.1
 
 .include "Makefile.version"
 .include <bsd.port.pre.mk>
@@ -304,7 +306,7 @@ pre-extract:
 	@${CAT} ${DISTDIR}/${DIST_SUBDIR}/chromium-${CHROMIUM_VER}${EXTRACT_SUFX}.? > \
 		${WRKSRC:H}/chromium-${CHROMIUM_VER}${EXTRACT_SUFX}
 	@cd ${WRKSRC:H} && \
-	${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} \
+	${SETENV} ${EXTRACT_ENV} ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} \
 		chromium-${CHROMIUM_VER}${EXTRACT_SUFX} ${EXTRACT_AFTER_ARGS}
 
 post-extract:

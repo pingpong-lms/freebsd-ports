@@ -1,6 +1,6 @@
---- crates/project/src/agent_server_store.rs.orig	2026-06-06 03:37:40 UTC
+--- crates/project/src/agent_server_store.rs.orig	2026-07-29 14:43:24 UTC
 +++ crates/project/src/agent_server_store.rs
-@@ -1088,6 +1088,10 @@ impl ExternalAgentServer for LocalRegistryArchiveAgent
+@@ -1181,6 +1181,10 @@ impl ExternalAgentServer for LocalRegistryArchiveAgent
                  "linux"
              } else if cfg!(target_os = "windows") {
                  "windows"

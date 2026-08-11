@@ -1,7 +1,7 @@
 PORTNAME=	gnuradio
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.10.12.0
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	comms astro hamradio
 
 MAINTAINER=	hamradio@FreeBSD.org
@@ -84,6 +84,8 @@ USE_QT=		buildtools core gui qmake widgets
 USE_LDCONFIG=	yes
 LIBSTRIP_FILES=	analog audio blocks channels digital dtv fec fft filter pmt \
 		qtgui runtime trellis video-sdl vocoder wavelet
+
+PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS UHD
 OPTIONS_SUB=	yes

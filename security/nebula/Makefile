@@ -1,6 +1,6 @@
 PORTNAME=	nebula
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.10.3
+DISTVERSION=	1.11.0
 CATEGORIES=	security
 
 MAINTAINER=	ashish@FreeBSD.org
@@ -10,11 +10,11 @@ WWW=		https://github.com/slackhq/nebula
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cpe go:modules
+USES=		cpe go:1.26+,modules
 USE_GITHUB=	nodefault
-GH_TUPLE=	golang:net:v0.19.0:net \
-		golang:term:v0.15.0:term \
-		golang:sys:v0.15.0:sys
+GH_TUPLE=	golang:net:v0.57.0:net \
+		golang:term:v0.45.0:term \
+		golang:sys:v0.47.0:sys
 
 CPE_VENDOR=	slack
 GO_MODULE=	github.com/slackhq/nebula
@@ -24,6 +24,13 @@ USE_RC_SUBR=	${PORTNAME}
 PLIST_FILES=	bin/nebula \
 		bin/nebula-cert \
 		etc/${PORTNAME}/config.yml.example
+
+.include <bsd.port.pre.mk>
+
+# 32 bit architectures
+.if ${ARCH:Marmv?} || ${ARCH} == "i386" || ${ARCH} == "powerpc"
+EXTRA_PATCHES=	${PATCHDIR}/extra-patch-overlay_tun__freebsd.go
+.endif
 
 pre-patch:
 .for m in net term sys
@@ -41,4 +48,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/config.yml \
 		${STAGEDIR}${PREFIX}/etc/${PORTNAME}/config.yml.example
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

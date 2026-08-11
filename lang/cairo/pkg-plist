@@ -79,6 +79,9 @@ lib/cairo-lang/corelib/src/qm31.cairo
 lib/cairo-lang/corelib/src/result.cairo
 lib/cairo-lang/corelib/src/serde.cairo
 lib/cairo-lang/corelib/src/sha256.cairo
+lib/cairo-lang/corelib/src/sha2_64_core.cairo
+lib/cairo-lang/corelib/src/sha384.cairo
+lib/cairo-lang/corelib/src/sha512.cairo
 lib/cairo-lang/corelib/src/starknet.cairo
 lib/cairo-lang/corelib/src/starknet/account.cairo
 lib/cairo-lang/corelib/src/starknet/class_hash.cairo
@@ -140,6 +143,7 @@ lib/cairo-lang/corelib/src/test/language_features/other_paths/inner/b.cairo
 lib/cairo-lang/corelib/src/test/language_features/panics_test.cairo
 lib/cairo-lang/corelib/src/test/language_features/path_attr_test.cairo
 lib/cairo-lang/corelib/src/test/language_features/trait_test.cairo
+lib/cairo-lang/corelib/src/test/language_features/tuple_test.cairo
 lib/cairo-lang/corelib/src/test/language_features/while_test.cairo
 lib/cairo-lang/corelib/src/test/let_else_test.cairo
 lib/cairo-lang/corelib/src/test/math_test.cairo
@@ -154,6 +158,8 @@ lib/cairo-lang/corelib/src/test/result_test.cairo
 lib/cairo-lang/corelib/src/test/secp256k1_test.cairo
 lib/cairo-lang/corelib/src/test/secp256r1_test.cairo
 lib/cairo-lang/corelib/src/test/sha256_test.cairo
+lib/cairo-lang/corelib/src/test/sha384_test.cairo
+lib/cairo-lang/corelib/src/test/sha512_test.cairo
 lib/cairo-lang/corelib/src/test/test_utils.cairo
 lib/cairo-lang/corelib/src/test/testing_test.cairo
 lib/cairo-lang/corelib/src/test/to_byte_array_test.cairo

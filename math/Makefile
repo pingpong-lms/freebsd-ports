@@ -165,6 +165,7 @@
     SUBDIR += abella
     SUBDIR += abs
     SUBDIR += acalc
+    SUBDIR += adasat
     SUBDIR += add
     SUBDIR += adept
     SUBDIR += adol-c
@@ -863,7 +864,6 @@
     SUBDIR += p5-Roman
     SUBDIR += p5-Set-IntSpan
     SUBDIR += p5-Set-IntSpan-Fast
-    SUBDIR += p5-Set-IntSpan-Fast-XS
     SUBDIR += p5-Set-Partition
     SUBDIR += p5-Set-Window
     SUBDIR += p5-Statistics-Basic
@@ -915,6 +915,8 @@
     SUBDIR += php84-gmp
     SUBDIR += php85-bcmath
     SUBDIR += php85-gmp
+    SUBDIR += php86-bcmath
+    SUBDIR += php86-gmp
     SUBDIR += physcalc
     SUBDIR += picosat
     SUBDIR += piranha
@@ -953,6 +955,7 @@
     SUBDIR += py-animatplot-ng
     SUBDIR += py-annoy
     SUBDIR += py-apgl
+    SUBDIR += py-apted
     SUBDIR += py-arviz
     SUBDIR += py-arviz-base
     SUBDIR += py-arviz-plots
@@ -986,21 +989,27 @@
     SUBDIR += py-cyipopt
     SUBDIR += py-cypari2
     SUBDIR += py-daqp
+    SUBDIR += py-dcor
     SUBDIR += py-deap
     SUBDIR += py-dgl
     SUBDIR += py-diffcp
     SUBDIR += py-dionysus
     SUBDIR += py-disjoint-set
+    SUBDIR += py-distance
     SUBDIR += py-docplex
     SUBDIR += py-ducc0
     SUBDIR += py-ecos
+    SUBDIR += py-edit-distance
     SUBDIR += py-emcee
     SUBDIR += py-evalidate
+    SUBDIR += py-fairlearn
     SUBDIR += py-faiss
     SUBDIR += py-fastcluster
+    SUBDIR += py-fdasrsf
     SUBDIR += py-fenics-basix
     SUBDIR += py-fenics-ffcx
     SUBDIR += py-fenics-ufl
+    SUBDIR += py-findiff
     SUBDIR += py-flax
     SUBDIR += py-formulaic
     SUBDIR += py-formulaic-contrasts
@@ -1038,6 +1047,7 @@
     SUBDIR += py-keras-applications
     SUBDIR += py-keras-preprocessing
     SUBDIR += py-kiwisolver
+    SUBDIR += py-latex2sympy2-extended
     SUBDIR += py-levmar
     SUBDIR += py-libceed
     SUBDIR += py-libpoly
@@ -1045,8 +1055,8 @@
     SUBDIR += py-lmfit
     SUBDIR += py-logical-unification
     SUBDIR += py-lrcalc
-    SUBDIR += py-luminol
     SUBDIR += py-mapbox-earcut
+    SUBDIR += py-math-verify
     SUBDIR += py-mathics
     SUBDIR += py-mathics-scanner
     SUBDIR += py-matplotlib
@@ -1059,6 +1069,7 @@
     SUBDIR += py-mnnpy
     SUBDIR += py-moarchiving
     SUBDIR += py-modin
+    SUBDIR += py-moocore
     SUBDIR += py-mpmath
     SUBDIR += py-munkres
     SUBDIR += py-narwhals
@@ -1081,6 +1092,7 @@
     SUBDIR += py-osqp
     SUBDIR += py-pandas
     SUBDIR += py-pandas-datareader
+    SUBDIR += py-pandas-stubs
     SUBDIR += py-patsy
     SUBDIR += py-pcodec
     SUBDIR += py-pdal
@@ -1135,6 +1147,8 @@
     SUBDIR += py-rpy2
     SUBDIR += py-rustworkx
     SUBDIR += py-rvlib
+    SUBDIR += py-scikit-datasets
+    SUBDIR += py-scikit-fda
     SUBDIR += py-scikit-fem
     SUBDIR += py-scikit-umfpack
     SUBDIR += py-scs
@@ -1186,7 +1200,6 @@
     SUBDIR += randlib
     SUBDIR += rankwidth
     SUBDIR += readstat
-    SUBDIR += reduce
     SUBDIR += reduce-psl
     SUBDIR += reed-solomon
     SUBDIR += rehearse
@@ -1296,7 +1309,6 @@
     SUBDIR += tlfloat
     SUBDIR += tmv
     SUBDIR += tomsfastmath
-    SUBDIR += topaz
     SUBDIR += topcom
     SUBDIR += topologic
     SUBDIR += triangle

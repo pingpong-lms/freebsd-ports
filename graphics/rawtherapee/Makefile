@@ -1,6 +1,6 @@
 PORTNAME=	rawtherapee
 PORTVERSION=	5.12
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	https://github.com/RawTherapee/RawTherapee/releases/download/${PORTVERSION}/ \
 		https://rawtherapee.com/shared/source/ \
@@ -119,7 +119,7 @@ _RANLIB=	${RANLIB}
 CMAKE_ARGS+=	-DPROC_TARGET_NUMBER="1"
 .endif
 
-.if (${OPSYS} == FreeBSD) && (${OSVERSION} >= 1500000)
+.if (${OPSYS} == FreeBSD) && (${OSVERSION} >= 1600000)
 # don't waste everybody's time with Tier-2 and moving targets.
 ONLY_FOR_ARCHS=	amd64
 ONLY_FOR_ARCHS_REASON=only amd64 is supported on non-released FreeBSD versions
@@ -162,7 +162,7 @@ TESTIMAGES=	${MASTERDIR}/testimages
 # _check_version strips stuffixes from distnames etc. that do not appear
 # in the program's version numbering
 _check_version=	${PKGVERSION:C/.g0//}
-_env=		LANG= LC_ALL=C LANGUAGE= DISPLAY= HOME="$$TMP" RT_SETTINGS=${WRKDIR}/rt-config RT_CACHE="$$TMP/rtcache"
+_env=		LANGUAGE= DISPLAY= HOME="$$TMP" RT_SETTINGS=${WRKDIR}/rt-config RT_CACHE="$$TMP/rtcache"
 post-install:
 	@${RM} -f ${WRKDIR}/selftest.exitcodes ${WRKDIR}/selftest.expect
 	@(set -e; _mp=$$(/bin/df -P ${STAGEDIR}${PREFIX}/bin/rawtherapee | ${AWK} 'NR==2{print $$NF}') ; \

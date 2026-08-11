@@ -1,12 +1,11 @@
 PORTNAME=	telegram-desktop
-DISTVERSION=	6.8.2
-PORTREVISION=	2
+DISTVERSION=	7.0.9
 CATEGORIES=	net-im
 MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/releases/download/v${DISTVERSION}/
 DISTNAME=	tdesktop-${DISTVERSION}-full
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	osa@FreeBSD.org
+MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	Telegram Desktop messaging app
 WWW=		https://desktop.telegram.org/
 
@@ -23,7 +22,9 @@ BUILD_DEPENDS=	boost-libs>0:devel/boost-libs \
 		microsoft-gsl>0:devel/microsoft-gsl \
 		range-v3>0:devel/range-v3 \
 		tl-expected>0:devel/tl-expected \
+		toomanycooks>0:devel/toomanycooks \
 		v4l_compat>0:multimedia/v4l_compat \
+		vulkan-headers>0:graphics/vulkan-headers \
 		yasm:devel/yasm \
 		${LOCALBASE}/lib/libtde2e.a:net-im/tde2e \
 		${LOCALBASE}/lib/libtg_owt.a:net-im/tg_owt
@@ -33,6 +34,7 @@ LIB_DEPENDS=	libabsl_base.so:devel/abseil \
 		libcrc32c.so:devel/crc32c \
 		libdbus-1.so:devel/dbus \
 		libdispatch.so:devel/libdispatch \
+		libfido2.so:security/libfido2 \
 		libfmt.so:devel/libfmt \
 		libheif.so:graphics/libheif \
 		libhunspell-1.7.so:textproc/hunspell \
@@ -108,6 +110,7 @@ post-extract:
 	${RM} -rf \
 		${WRKSRC}/Telegram/ThirdParty/GSL \
 		${WRKSRC}/Telegram/ThirdParty/QR \
+		${WRKSRC}/Telegram/ThirdParty/TooManyCooks \
 		${WRKSRC}/Telegram/ThirdParty/dispatch \
 		${WRKSRC}/Telegram/ThirdParty/expected \
 		${WRKSRC}/Telegram/ThirdParty/fcitx5-qt \

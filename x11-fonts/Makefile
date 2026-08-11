@@ -25,6 +25,7 @@
     SUBDIR += bdf2sfd
     SUBDIR += bdfresize
     SUBDIR += bdftopcf
+    SUBDIR += bedstead
     SUBDIR += bitstream-vera
     SUBDIR += bitter
     SUBDIR += blackout
@@ -198,6 +199,7 @@
     SUBDIR += nerd-fonts-3270
     SUBDIR += nerd-fonts-adwaitamono
     SUBDIR += nerd-fonts-agave
+    SUBDIR += nerd-fonts-annotationmono
     SUBDIR += nerd-fonts-anonymicepro
     SUBDIR += nerd-fonts-arimo
     SUBDIR += nerd-fonts-atkynsonmono
@@ -211,7 +213,7 @@
     SUBDIR += nerd-fonts-comicshannsmono
     SUBDIR += nerd-fonts-commitmono
     SUBDIR += nerd-fonts-cousine
-    SUBDIR += nerd-fonts-d2coding
+    SUBDIR += nerd-fonts-d2koding
     SUBDIR += nerd-fonts-daddytimemono
     SUBDIR += nerd-fonts-dejavusansmono
     SUBDIR += nerd-fonts-departuremono
@@ -223,6 +225,7 @@
     SUBDIR += nerd-fonts-geistmono
     SUBDIR += nerd-fonts-gohu
     SUBDIR += nerd-fonts-gomono
+    SUBDIR += nerd-fonts-googlesanscode
     SUBDIR += nerd-fonts-hack
     SUBDIR += nerd-fonts-hasklug
     SUBDIR += nerd-fonts-heavydata
