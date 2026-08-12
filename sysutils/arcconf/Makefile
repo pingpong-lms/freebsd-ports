@@ -40,10 +40,6 @@ DIST_TYPE=	15_x86_64
 DIST_TYPE=	14_x86_64
 .endif
 
-.if !exists(${DISTDIR}/${DISTNAME}${EXTRACT_SUFX})
-IGNORE=		may not be redistributed because of licensing reasons. Please visit ${WWW}, accept the Microchip software license agreement, and download ${DISTNAME}${EXTRACT_SUFX} into ${DISTDIR}
-.endif
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/freebsd${DIST_TYPE}/cmdline/arcconf ${STAGEDIR}${PREFIX}/sbin
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/daily
