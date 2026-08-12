@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	pingpong-hardware
-PORTVERSION=	1.1
+PORTVERSION=	1.3
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
 
