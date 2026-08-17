@@ -5,6 +5,26 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20260814:
+  AFFECTS: users of sysutils/screen*
+  AUTHOR: cy@FreeBSD.org
+
+  sysutils/screen no longer sets the MULTUSER option by default anymore.
+  MUTIUSER installs a setuid root screen binary. This introduces an exploit
+  vector. Users who need multi-user functionality should either build
+  screen with the MULTIUSER option or binary package users should add the
+  setuid bit to the screen binary.
+
+20260813:
+  AFFECTS: users of security/openssh-portable
+  AUTHOR: bdrewery@FreeBSD.org
+
+  For FreeBSD 15+, the option BLACKLISTD has been renamed to BLOCKLISTD.
+  The option is enabled by default. If you had this option disabled you
+  will need to disable the new spelling as well.
+
+  The ssh config file supports both UseBlacklist and UseBlocklist.
+
 20260724:
   AFFECTS: users of news/inn, news/inn-current
   AUTHOR: kbowling@FreeBSD.org
@@ -1348,6 +1368,13 @@ you update your ports collection, before attempting any port upgrades.
   installed after each update. These can be removed with
 
   pkg remove glib-bootstrap gobject-introspection-bootstrap
+
+  When updating these ports outside of Poudriere, make sure to
+  * remove bootstrap packages
+  * clean working dirs of bootstrap flavors (make clean FLAVOR=bootstrap) of
+    both ports
+  * sometimes it is additionally required to run "pkg remove -f glib20" before
+    building a new version
 
 20250327:
   AFFECTS: users of thunderbird

@@ -133,6 +133,7 @@
     SUBDIR += dico
     SUBDIR += dictd
     SUBDIR += dogtag-ldap-sdk
+    SUBDIR += dot1ag-utils
     SUBDIR += dpdk
     SUBDIR += dpdk-20.11
     SUBDIR += dpinger
@@ -1546,6 +1547,7 @@
     SUBDIR += sipsak
     SUBDIR += sl2tps
     SUBDIR += slackcat
+    SUBDIR += slapi-nis
     SUBDIR += slurm
     SUBDIR += smb4k
     SUBDIR += smbldap-tools

@@ -215,7 +215,8 @@ LUA_LIB_DEPENDS=	libluajit-5.1.so:lang/luajit-openresty
 LUA_RUN_DEPENDS=	lua-resty-core>0:www/lua-resty-core
 LUA_CONFIGURE_ENV=	LUAJIT_INC=${LOCALBASE}/include/luajit-2.1 \
 			LUAJIT_LIB=${LOCALBASE}/lib
-LUA_GH_TUPLE=		openresty:lua-nginx-module:v0.10.29:lua
+LUA_BUILD_DEPENDS=	nginx-module-lua>0:www/nginx-module-lua
+WRKSRC_lua=		${WRKDIR}/lua-nginx-module
 LUA_VARS=		DSO_EXTMODS+=lua
 
 LUASTREAM_IMPLIES=	DEVEL_KIT
@@ -223,7 +224,7 @@ LUASTREAM_LIB_DEPENDS=	libluajit-5.1.so:lang/luajit-openresty
 LUASTREAM_RUN_DEPENDS=	lua-resty-core>0:www/lua-resty-core
 LUASTREAM_CONFIGURE_ENV=LUAJIT_INC=${LOCALBASE}/include/luajit-2.1 \
 			LUAJIT_LIB=${LOCALBASE}/lib
-LUASTREAM_BUILD_DEPENDS=lua-stream-nginx-module>=0.0.17:www/lua-stream-nginx-module
+LUASTREAM_BUILD_DEPENDS=nginx-module-lua-stream>0:www/nginx-module-lua-stream
 WRKSRC_luastream=	${WRKDIR}/lua-stream-nginx-module
 LUASTREAM_VARS=		DSO_EXTMODS+=luastream
 
@@ -250,6 +251,12 @@ NAXSI_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-naxsi-libinjection__sqli_c \
 NJS_GH_TUPLE=		nginx:njs:1.0.0:njs
 NJS_VARS=		DSO_EXTMODS+=njs NJS_SUBDIR=/nginx
 NJS_IMPLIES=		STREAM
+
+NJS_QJS_IMPLIES=	NJS
+NJS_QJS_LIB_DEPENDS=	libquickjs.so:lang/quickjs
+# njs auto-enables QuickJS whenever it is found at configure time,
+# keep the build deterministic when the option is disabled
+NJS_QJS_CONFIGURE_ENV_OFF=	NJS_QUICKJS=NO
 
 NJS_XML_IMPLIES=	HTTP NJS
 NJS_XML_LIB_DEPENDS=	libxml2.so:textproc/libxml2 \
