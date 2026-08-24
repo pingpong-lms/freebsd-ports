@@ -1,7 +1,6 @@
 PORTNAME=	joplin
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.6.15
-PORTREVISION=	3
+DISTVERSION=	3.6.16
 CATEGORIES=	deskutils
 PKGNAMESUFFIX=	-desktop
 DISTFILES=	${DEFAULT_PLUGINS_NODE_MODULES_FILE}:prefetch \
@@ -74,7 +73,7 @@ pre-fetch:
 		done; \
 		cd ${WRKDIR} && \
 		${SETENV} SCRIPTSDIR=${SCRIPTSDIR} WRKDIR=${WRKDIR} \
-			${SH} ${SCRIPTSDIR}/electron-create-mtree.sh node-modules-cache > \
+			${SH} ${SCRIPTSDIR}/npm-create-mtree.sh node-modules-cache > \
 			node-modules-cache.mtree && \
 		${TAR} -cz --options 'gzip:!timestamp' \
 			-f ${DISTDIR}/${DEFAULT_PLUGINS_NODE_MODULES_FILE} @node-modules-cache.mtree; \
@@ -90,7 +89,7 @@ pre-fetch:
 		${RM} package.json package-lock.json; \
 		cd ${WRKDIR} && \
 		${SETENV} SCRIPTSDIR=${SCRIPTSDIR} WRKDIR=${WRKDIR} \
-			${SH} ${SCRIPTSDIR}/electron-create-mtree.sh node-modules-cache-app-clipper > \
+			${SH} ${SCRIPTSDIR}/npm-create-mtree.sh node-modules-cache-app-clipper > \
 			node-modules-cache-app-clipper.mtree && \
 		${TAR} -cz --options 'gzip:!timestamp' \
 			-f ${DISTDIR}/${APP_CLIPPER_NODE_MODULES_FILE} @node-modules-cache-app-clipper.mtree; \

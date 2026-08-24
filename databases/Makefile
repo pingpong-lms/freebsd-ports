@@ -73,6 +73,10 @@
     SUBDIR += firebird40-server
     SUBDIR += fmptools
     SUBDIR += fortytwo-bdb
+    SUBDIR += foundationdb71-client
+    SUBDIR += foundationdb71-server
+    SUBDIR += foundationdb73-client
+    SUBDIR += foundationdb73-server
     SUBDIR += frece
     SUBDIR += freetds
     SUBDIR += freetds-devel
@@ -598,6 +602,7 @@
     SUBDIR += pgsql-http
     SUBDIR += pgtcl
     SUBDIR += pgtop
+    SUBDIR += pgtui
     SUBDIR += pguri
     SUBDIR += pgvector
     SUBDIR += php-memvector
@@ -736,6 +741,14 @@
     SUBDIR += postgresql18-plpython
     SUBDIR += postgresql18-pltcl
     SUBDIR += postgresql18-server
+    SUBDIR += postgresql19-client
+    SUBDIR += postgresql19-contrib
+    SUBDIR += postgresql19-docs
+    SUBDIR += postgresql19-pgtcl
+    SUBDIR += postgresql19-plperl
+    SUBDIR += postgresql19-plpython
+    SUBDIR += postgresql19-pltcl
+    SUBDIR += postgresql19-server
     SUBDIR += powa-archivist
     SUBDIR += powa-web
     SUBDIR += powerarchitect

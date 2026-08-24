@@ -111,6 +111,7 @@
     SUBDIR += ghmm
     SUBDIR += gnudatalanguage
     SUBDIR += gpaw-setups
+    SUBDIR += gperiodic
     SUBDIR += gramps
     SUBDIR += gromacs
     SUBDIR += gsmc
@@ -451,6 +452,7 @@
     SUBDIR += py-rmf
     SUBDIR += py-rmsd
     SUBDIR += py-ruffus
+    SUBDIR += py-sarkit
     SUBDIR += py-sarpy
     SUBDIR += py-scikit-fuzzy
     SUBDIR += py-scikit-learn

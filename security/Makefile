@@ -836,6 +836,7 @@
     SUBDIR += pecl-ssh2
     SUBDIR += pecl-xxtea
     SUBDIR += peda
+    SUBDIR += periodic-filter-vuxml
     SUBDIR += pev
     SUBDIR += pgpdump
     SUBDIR += pgpgpg
@@ -1167,6 +1168,7 @@
     SUBDIR += rubygem-attr_encrypted
     SUBDIR += rubygem-attr_encrypted3
     SUBDIR += rubygem-auth-sanitizer
+    SUBDIR += rubygem-auth-sanitizer-gitlab
     SUBDIR += rubygem-bcrypt
     SUBDIR += rubygem-bcrypt-ruby
     SUBDIR += rubygem-bcrypt_pbkdf
