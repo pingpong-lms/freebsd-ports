@@ -2,6 +2,7 @@
 #
 PORTNAME=	pingpong-app
 PORTVERSION=	2.6
+PORTREVISION=	1
 CATEGORIES=	pingpong
 MASTER_SITES=	#
 DISTFILES=	#
@@ -28,7 +29,7 @@ RUN_DEPENDS= \
 	${LOCALBASE}/${APACHEMODDIR}/mod_xsendfile.so:www/mod_xsendfile \
 	latex2html:textproc/latex2html \
 	ant:devel/apache-ant \
-	mvn:devel/maven \
+	maven>0:devel/maven \
 	npm-node18>=0:www/npm-node18 \
 	clamd:security/clamav \
 	ffmpeg:multimedia/ffmpeg \
