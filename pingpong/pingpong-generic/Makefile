@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-generic
-PORTVERSION=	1.8
+PORTVERSION=	1.9
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
 DISTFILES=	#
@@ -28,6 +28,7 @@ RUN_DEPENDS= \
 	zsh:shells/zsh \
 	vim:editors/vim \
 	bat:textproc/bat \
+	groff:textproc/groff \
 	tree:sysutils/tree \
 	curl:ftp/curl \
 	mosh:net/mosh \
