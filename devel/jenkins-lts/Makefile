@@ -17,7 +17,7 @@ LICENSE=	MIT
 
 USES=		cpe java
 CPE_EDITION=	lts
-JAVA_VERSION=	21+
+JAVA_VERSION=	21
 USE_RC_SUBR=	jenkins
 
 CONFLICTS=	jenkins
