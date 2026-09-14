@@ -19,7 +19,8 @@ AJP_GH_TUPLE=		msva:nginx_ajp_module:fcbb2cc:ajp
 AJP_VARS=		DSO_EXTMODS+=ajp
 
 ARRAYVAR_IMPLIES=	DEVEL_KIT
-ARRAYVAR_GH_TUPLE=	openresty:array-var-nginx-module:v0.06:arrayvar
+ARRAYVAR_BUILD_DEPENDS=	nginx-module-array-var>0:www/nginx-module-array-var
+WRKSRC_arrayvar=	${WRKDIR}/array-var-nginx-module
 ARRAYVAR_VARS=		DSO_EXTMODS+=arrayvar
 
 AWS_AUTH_GH_TUPLE=	anomalizer:ngx_aws_auth:f3d9862:aws_auth
@@ -30,7 +31,8 @@ BROTLI_GH_TUPLE=	google:ngx_brotli:a71f931:brotli
 BROTLI_VARS=		DSO_EXTMODS+=brotli
 BROTLI_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-ngx_brotli_filter_config
 
-CACHE_PURGE_GH_TUPLE=	nginx-modules:ngx_cache_purge:3.0.2:cache_purge
+CACHE_PURGE_BUILD_DEPENDS=	nginx-module-cache-purge>0:www/nginx-module-cache-purge
+WRKSRC_cache_purge=	${WRKDIR}/ngx_cache_purge
 CACHE_PURGE_VARS=	DSO_EXTMODS+=cache_purge
 
 ECHO_GH_TUPLE=		openresty:echo-nginx-module:4eeda3c:echo
@@ -59,7 +61,8 @@ FIPS_CHECK_GH_TUPLE=	ogarrett:nginx-fips-check-module:6cb4270:fipscheck
 FIPS_CHECK_VARS=	DSO_EXTMODS+=fipscheck
 
 FORMINPUT_IMPLIES=	DEVEL_KIT
-FORMINPUT_GH_TUPLE=	calio:form-input-nginx-module:v0.12:forminput
+FORMINPUT_BUILD_DEPENDS=	nginx-module-form-input>0:www/nginx-module-form-input
+WRKSRC_forminput=	${WRKDIR}/form-input-nginx-module
 FORMINPUT_VARS=		DSO_EXTMODS+=forminput
 
 GRIDFS_GH_TUPLE=	nieoding:nginx-gridfs:059bdc3:gridfs
@@ -247,7 +250,7 @@ NAXSI_VARS=		DSO_EXTMODS+=naxsi NAXSI_SUBDIR=/naxsi_src
 NAXSI_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-naxsi-libinjection__sqli_c \
 			${PATCHDIR}/extra-patch-naxsi_config
 
-NJS_BUILD_DEPENDS=	nginx-module-njs>=1.0.0:www/nginx-module-njs
+NJS_BUILD_DEPENDS=	nginx-module-njs>=1.0.1:www/nginx-module-njs
 WRKSRC_njs=		${WRKDIR}/njs
 NJS_LIB_DEPENDS=	libquickjs.so:lang/quickjs \
 			libxml2.so:textproc/libxml2 \

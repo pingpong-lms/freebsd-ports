@@ -1,6 +1,6 @@
 PORTNAME=	grpcui
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.5.3
+DISTVERSION=	1.5.4
 CATEGORIES=	net www
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,7 +10,7 @@ WWW=		https://github.com/fullstorydev/grpcui
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.24+,modules
+USES=		go:modules
 
 GO_MODULE=	github.com/fullstorydev/grpcui
 GO_TARGET=	./cmd/${PORTNAME}

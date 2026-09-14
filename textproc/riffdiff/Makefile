@@ -1,6 +1,6 @@
 PORTNAME=	riffdiff
-DISTVERSION=	3.6.1
-PORTREVISION=	6
+DISTVERSION=	3.6.2
+PORTREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -144,5 +144,8 @@ CARGO_CRATES=	addr2line-0.14.0 \
 		zerovec-derive-0.11.1
 
 PLIST_FILES=	bin/riff
+
+post-install:
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/riff
 
 .include <bsd.port.mk>

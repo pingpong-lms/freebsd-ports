@@ -400,6 +400,7 @@
     SUBDIR += py-nglview
     SUBDIR += py-nibabel
     SUBDIR += py-nixio
+    SUBDIR += py-obspy
     SUBDIR += py-oddt
     SUBDIR += py-openEMS
     SUBDIR += py-openbabel
@@ -455,6 +456,7 @@
     SUBDIR += py-scikit-fuzzy
     SUBDIR += py-scikit-learn
     SUBDIR += py-scikit-optimize
+    SUBDIR += py-scikit-rf
     SUBDIR += py-scikit-sparse
     SUBDIR += py-scimath
     SUBDIR += py-scipy

@@ -2489,7 +2489,6 @@ net/ceph14||2023-11-02|Has expired: End of life upstream since 2021-06-30
 www/sfnt2woff||2023-11-02|Has expired: Superseded by WOFF 2.0, please consider using devel/woff2
 textproc/kibana7||2023-11-02|Has expired: Depends on EOL NodeJS 16
 devel/electron22|devel/electron24|2023-11-02|Has expired: Depends on EOL NodeJS 16
-www/hedgedoc||2023-11-02|Has expired: Depends on EOL NodeJS 16
 games/libretro-beetle_bsnes|games/libretro-mednafen_bsnes|2023-11-06|Follow naming of libretro-super build script
 games/libretro-beetle_gba|games/libretro-mednafen_gba|2023-11-06|Follow naming of libretro-super build script
 games/libretro-beetle_lynx|games/libretro-mednafen_lynx|2023-11-06|Follow naming of libretro-super build script
@@ -5566,7 +5565,6 @@ www/joomla4||2026-08-31|Has expired: Upstream EOL
 security/globalprotect-openconnect||2026-08-31|Has expired: This version has a vulnerability (CVE-2021-45810)
 www/archiva||2026-08-31|Has expired: Not updated for years and moved to Apache Attic in 2024-05: https://issues.apache.org/jira/browse/ATTIC-221
 databases/py-Elixir||2026-08-31|Has expired: Depends on expired databases/py-sqlalchemy10
-science/py-obspy||2026-08-31|Has expired: Depends on expired databases/py-sqlalchemy10
 databases/py-sqlalchemy10||2026-08-31|Has expired: Upstream makred EOL in Release Status
 net-im/zkgroup||2026-08-31|Has expired: Merged into libsignal by upstream
 textproc/ruby-rd-mode.el||2026-08-31|Has expired: Depends on expired textproc/ruby-rdtool
@@ -5588,3 +5586,14 @@ www/py-django42||2026-08-31|Has expired: Django 4.2 is now in Extended Support, 
 www/py-seafdav||2026-08-31|Removed, depended on net-mgmt/seafile-server
 mail/james||2026-08-31|Has expired: This is a version that is over 10 years old and has multiple vulnerabilities
 www/py-seafobj||2026-08-31|Removed, depended on net-mgmt/seafile-server
+devel/sfml|multimedia/sfml3|2026-09-02|SFML move to appropriate catagory and suffix name with major version number, 3
+sysutils/intel-nvmupdate-10g|sysutils/intel-nvmupdate-x550|2026-09-03|Rename to match supported hardware
+sysutils/intel-nvmupdate-100g|sysutils/intel-nvmupdate-e810|2026-09-03|Rename to match supported hardware
+sysutils/intel-nvmupdate-40g|sysutils/intel-nvmupdate-700series|2026-09-03|Rename to match supported hardware
+sysutils/intel-nvmupdate-e830|sysutils/intel-nvmupdate-e830-e835|2026-09-03|Rename to match supported hardware
+sysutils/mprocs|sysutils/dekit|2026-09-05|Upstream renamed
+www/py-beautifulsoup|www/py-beautifulsoup4|2026-09-06|Renamed to match upstream PyPI package name
+devel/libheinz|devel/heinz|2026-09-12|Project was renamed upstream from libheinz to heinz
+devel/pecl-mustache|devel/php-mustache|2026-09-12|PECL is deprecated. Migrate devel/pecl-mustache to devel/php-mustache
+devel/py-pytest-httpserver|devel/py-pytest_httpserver|2026-09-12|Rename to match upstream naming
+math/libformfactor|math/formfactor|2026-09-12|Project was renamed upstream from libformfactor to formfactor

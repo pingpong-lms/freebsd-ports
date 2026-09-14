@@ -1,7 +1,7 @@
 PORTNAME=	smelter
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.6.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,6 +11,8 @@ WWW=		https://smelter.dev \
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN=		Fails to build with FFmpeg 9
 
 LIB_DEPENDS=	libavutil.so:multimedia/ffmpeg \
 		libopus.so:audio/opus

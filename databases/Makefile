@@ -146,6 +146,7 @@
     SUBDIR += libmemcached
     SUBDIR += libmongocrypt
     SUBDIR += libmswstr
+    SUBDIR += libnusqlite3
     SUBDIR += libnvpair
     SUBDIR += libodbc++
     SUBDIR += libpbl
@@ -795,6 +796,7 @@
     SUBDIR += py-databases
     SUBDIR += py-databricks-sql-connector
     SUBDIR += py-datafusion
+    SUBDIR += py-db-dtypes
     SUBDIR += py-dbf
     SUBDIR += py-dbt-core
     SUBDIR += py-dbt-duckdb
@@ -802,6 +804,7 @@
     SUBDIR += py-dbt-snowflake
     SUBDIR += py-dbutils
     SUBDIR += py-deltalake
+    SUBDIR += py-django-pgware
     SUBDIR += py-duckdb
     SUBDIR += py-duckdb_engine
     SUBDIR += py-fakeredis
@@ -953,6 +956,7 @@
     SUBDIR += redisbloom
     SUBDIR += redisjson
     SUBDIR += redisjson86
+    SUBDIR += redistimeseries
     SUBDIR += retcl
     SUBDIR += rocksdb
     SUBDIR += rocksdb-jni

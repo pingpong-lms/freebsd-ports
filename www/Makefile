@@ -274,6 +274,7 @@
     SUBDIR += h2c
     SUBDIR += h2o
     SUBDIR += habari
+    SUBDIR += hedgedoc
     SUBDIR += hiawatha
     SUBDIR += hiawatha-monitor
     SUBDIR += homepage
@@ -526,6 +527,9 @@
     SUBDIR += nginx-devel
     SUBDIR += nginx-full
     SUBDIR += nginx-lite
+    SUBDIR += nginx-module-array-var
+    SUBDIR += nginx-module-cache-purge
+    SUBDIR += nginx-module-form-input
     SUBDIR += nginx-module-lua
     SUBDIR += nginx-module-lua-stream
     SUBDIR += nginx-module-ndk
@@ -1536,7 +1540,7 @@
     SUBDIR += py-azure-common
     SUBDIR += py-baize
     SUBDIR += py-beaker
-    SUBDIR += py-beautifulsoup
+    SUBDIR += py-beautifulsoup4
     SUBDIR += py-betamax
     SUBDIR += py-binarycookies
     SUBDIR += py-biscuits
@@ -1598,6 +1602,8 @@
     SUBDIR += py-dj60-drf-spectacular-sidecar
     SUBDIR += py-dj60-social-auth-app-django
     SUBDIR += py-dj60-strawberry-graphql-django
+    SUBDIR += py-dj61-django-stubs-ext
+    SUBDIR += py-dj61-djangorestframework
     SUBDIR += py-django-admin-rangefilter
     SUBDIR += py-django-advanced-filters
     SUBDIR += py-django-allauth
@@ -1658,6 +1664,7 @@
     SUBDIR += py-django-mptt
     SUBDIR += py-django-multiselectfield
     SUBDIR += py-django-netfields
+    SUBDIR += py-django-ninja
     SUBDIR += py-django-object-actions
     SUBDIR += py-django-otp
     SUBDIR += py-django-otp-yubikey
@@ -1815,6 +1822,7 @@
     SUBDIR += py-google-cloud-vision
     SUBDIR += py-google-resumable-media
     SUBDIR += py-googlemaps
+    SUBDIR += py-googlesearch-python
     SUBDIR += py-grafana-dashboard-manager
     SUBDIR += py-granian
     SUBDIR += py-graphite-api
@@ -1948,6 +1956,7 @@
     SUBDIR += py-requests-mock
     SUBDIR += py-requests-oauthlib
     SUBDIR += py-requests-ratelimiter
+    SUBDIR += py-requests-sse
     SUBDIR += py-requests-toolbelt
     SUBDIR += py-requests-unixsocket
     SUBDIR += py-requests-wsgi-adapter
@@ -2061,6 +2070,7 @@
     SUBDIR += reddsaver
     SUBDIR += redmine60
     SUBDIR += redmine61
+    SUBDIR += redmine70
     SUBDIR += rejik
     SUBDIR += remark42
     SUBDIR += reportmagic
@@ -2455,6 +2465,7 @@
     SUBDIR += rubygem-redis-rails-rails61
     SUBDIR += rubygem-requestjs-rails
     SUBDIR += rubygem-requestjs-rails-rails72
+    SUBDIR += rubygem-requestjs-rails-rails81
     SUBDIR += rubygem-responders
     SUBDIR += rubygem-responders-rails-gitlab
     SUBDIR += rubygem-responders-rails5

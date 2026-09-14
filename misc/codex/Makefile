@@ -1,6 +1,6 @@
 PORTNAME=	codex
 DISTVERSIONPREFIX=	rust-v
-DISTVERSION=	0.151.0
+DISTVERSION=	0.154.0
 CATEGORIES=	misc devel
 
 MAINTAINER=	tagattie@FreeBSD.org
@@ -23,8 +23,11 @@ RUN_DEPENDS=	bash:shells/bash \
 		rg:textproc/ripgrep
 TEST_DEPENDS=	bash:shells/bash
 
-USES=		cargo gnome llvm:min=21 ninja:build python:test \
+USES=		cargo dos2unix gnome llvm:min=21 ninja:build python:test \
 		shebangfix ssl
+
+DOS2UNIX_WRKSRC=${WRKSRC_crate_mxc_telemetry}
+DOS2UNIX_REGEX=	.*/Cargo\.toml
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	openai
@@ -71,6 +74,7 @@ BINARY_ALIAS=	python3=${PYTHON_CMD} \
 		ar=${LOCALBASE}/bin/llvm-ar${LLVM_VERSION} \
 		nm=${LOCALBASE}/bin/llvm-nm${LLVM_VERSION} \
 		ld=${LOCALBASE}/bin/ld.lld${LLVM_VERSION}
+PORTSCOUT=	limit:^rust-v[0-9]\.
 
 BUILD_WRKSRC=	${WRKSRC}/codex-rs
 
@@ -115,6 +119,7 @@ post-patch:
 		${BUILD_WRKSRC}/core/tests/suite/guardian_review.rs \
 		${BUILD_WRKSRC}/core/tests/suite/shell_snapshot.rs \
 		${BUILD_WRKSRC}/core/tests/suite/unified_exec.rs \
+		${BUILD_WRKSRC}/core/tests/suite/unified_exec_stdin_approval.rs \
 		${BUILD_WRKSRC}/core/tests/suite/unified_exec_stdin_review_size.rs \
 		${BUILD_WRKSRC}/core/tests/suite/user_notification.rs \
 		${BUILD_WRKSRC}/exec-server/src/process_sandbox_tests.rs \
@@ -131,6 +136,7 @@ post-patch:
 		${BUILD_WRKSRC}/app-server/tests/suite/v2/command_exec.rs \
 		${BUILD_WRKSRC}/app-server/tests/suite/v2/guardian_v2.rs \
 		${BUILD_WRKSRC}/app-server/tests/suite/v2/hooks_list.rs \
+		${BUILD_WRKSRC}/app-server/tests/suite/v2/selected_capability_stack.rs \
 		${BUILD_WRKSRC}/app-server/tests/suite/v2/session_end.rs \
 		${BUILD_WRKSRC}/app-server/tests/suite/v2/thread_queue.rs \
 		${BUILD_WRKSRC}/app-server/tests/suite/v2/thread_resume.rs \
@@ -138,6 +144,7 @@ post-patch:
 		${BUILD_WRKSRC}/app-server/tests/suite/v2/turn_interrupt.rs \
 		${BUILD_WRKSRC}/app-server/tests/suite/v2/turn_start.rs \
 		${BUILD_WRKSRC}/app-server/tests/suite/v2/turn_start_zsh_fork.rs \
+		${BUILD_WRKSRC}/cli/tests/sandbox_tty.rs \
 		${BUILD_WRKSRC}/config/src/config_requirements.rs \
 		${BUILD_WRKSRC}/config/src/hooks_tests.rs \
 		${BUILD_WRKSRC}/core-plugins/src/script_attribution.rs \
@@ -157,6 +164,7 @@ post-patch:
 		${BUILD_WRKSRC}/core/tests/suite/hooks.rs \
 		${BUILD_WRKSRC}/core/tests/suite/hooks_mcp.rs \
 		${BUILD_WRKSRC}/core/tests/suite/interrupt_hooks.rs \
+		${BUILD_WRKSRC}/core/tests/suite/mcp_user_verification.rs \
 		${BUILD_WRKSRC}/core/tests/suite/network_approval.rs \
 		${BUILD_WRKSRC}/core/tests/suite/openai_file_mcp.rs \
 		${BUILD_WRKSRC}/core/tests/suite/subagent_notifications.rs \
@@ -184,8 +192,7 @@ post-patch:
 		${BUILD_WRKSRC}/tui/src/chatwidget/tests/exec_flow.rs \
 		${BUILD_WRKSRC}/tui/src/debug_config.rs \
 		${BUILD_WRKSRC}/tui/src/exec_command.rs \
-		${BUILD_WRKSRC}/tui/src/render/highlight.rs \
-		${BUILD_WRKSRC}/utils/pty/src/tests.rs
+		${BUILD_WRKSRC}/tui/src/render/highlight.rs
 
 post-build-COMPLETIONS-on:
 	@${MKDIR} ${WRKSRC}/completions

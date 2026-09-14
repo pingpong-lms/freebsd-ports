@@ -106,6 +106,7 @@
     SUBDIR += cl-ppcre-sbcl
     SUBDIR += clucene
     SUBDIR += cmark
+    SUBDIR += cmark-gfm
     SUBDIR += coccigrep
     SUBDIR += code-minimap
     SUBDIR += code2html
@@ -1571,6 +1572,7 @@
     SUBDIR += py-mkdocstrings-python
     SUBDIR += py-mkdocstrings-python-legacy
     SUBDIR += py-morse3
+    SUBDIR += py-multimark
     SUBDIR += py-mwparserfromhell
     SUBDIR += py-myst-parser
     SUBDIR += py-nbsphinx
@@ -1898,6 +1900,7 @@
     SUBDIR += rubygem-actionpack-xml_parser-rails52
     SUBDIR += rubygem-actionpack-xml_parser-rails61
     SUBDIR += rubygem-actionpack-xml_parser-rails72
+    SUBDIR += rubygem-actionpack-xml_parser-rails81
     SUBDIR += rubygem-actiontext-gitlab
     SUBDIR += rubygem-actiontext60
     SUBDIR += rubygem-actiontext61
