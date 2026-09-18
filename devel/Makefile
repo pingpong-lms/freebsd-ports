@@ -5140,7 +5140,6 @@
     SUBDIR += py-fuzzywuzzy
     SUBDIR += py-fypp
     SUBDIR += py-game
-    SUBDIR += py-game_sdl2
     SUBDIR += py-gapic-generator
     SUBDIR += py-gast
     SUBDIR += py-gelidum
@@ -5582,6 +5581,7 @@
     SUBDIR += py-opencensus-context
     SUBDIR += py-opendht
     SUBDIR += py-openfeature-sdk
+    SUBDIR += py-opengrok-tools
     SUBDIR += py-openstacksdk
     SUBDIR += py-opentelemetry-api
     SUBDIR += py-opentelemetry-configuration
@@ -6044,7 +6044,6 @@
     SUBDIR += py-python-decouple
     SUBDIR += py-python-discovery
     SUBDIR += py-python-distutils-extra
-    SUBDIR += py-python-dtrace
     SUBDIR += py-python-easyconfig
     SUBDIR += py-python-editor
     SUBDIR += py-python-engineio
@@ -6380,7 +6379,6 @@
     SUBDIR += py-tree-sitter-yaml
     SUBDIR += py-tree-sitter023
     SUBDIR += py-treelib
-    SUBDIR += py-trimesh
     SUBDIR += py-trove-classifiers
     SUBDIR += py-ttictoc
     SUBDIR += py-ttkbootstrap
@@ -7802,6 +7800,7 @@
     SUBDIR += rubygem-google-iam-v1
     SUBDIR += rubygem-google-logging-utils
     SUBDIR += rubygem-google-protobuf
+    SUBDIR += rubygem-google-protobuf-gitlab
     SUBDIR += rubygem-google-protobuf3
     SUBDIR += rubygem-googleapis-common-protos
     SUBDIR += rubygem-googleapis-common-protos-gitlab
