@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	pingpong-hardware
-PORTVERSION=	1.3
+PORTVERSION=	1.4
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
 
@@ -12,6 +12,7 @@ COMMENT=	Meta-port for PING PONG hardware monitoring tools
 LICENSE=	BSD2CLAUSE
 
 RUN_DEPENDS= \
+	cpu-microcode>0:sysutils/cpu-microcode \
 	${LOCALBASE}/libexec/nagios/check_smartmon:net-mgmt/nagios-check_smartmon \
 	zfSnap:filesystems/zfsnap \
 	amrstat:sysutils/amrstat \
