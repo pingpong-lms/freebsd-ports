@@ -270,6 +270,7 @@
     SUBDIR += icmpinfo
     SUBDIR += icpld
     SUBDIR += identme
+    SUBDIR += if_pair-kmod
     SUBDIR += ifdepd
     SUBDIR += iffinder
     SUBDIR += ifstat
@@ -450,6 +451,7 @@
     SUBDIR += linux-c7-avahi-libs
     SUBDIR += linux-c7-openldap
     SUBDIR += linux-c7-tcp_wrappers-libs
+    SUBDIR += linux-remotedesktopmanager
     SUBDIR += linux-rl9-avahi-libs
     SUBDIR += linux-rl9-openldap
     SUBDIR += linux-rl9-sdl_net
@@ -588,10 +590,6 @@
     SUBDIR += openbgpd7
     SUBDIR += openbgpd8
     SUBDIR += openbgpd9
-    SUBDIR += openldap25-client
-    SUBDIR += openldap25-server
-    SUBDIR += openldap26-client
-    SUBDIR += openldap26-server
     SUBDIR += openmdns
     SUBDIR += openmpi
     SUBDIR += openmpi4
@@ -1192,6 +1190,7 @@
     SUBDIR += py-suds
     SUBDIR += py-terminado
     SUBDIR += py-tiny-proxy
+    SUBDIR += py-tinytuya
     SUBDIR += py-tofu
     SUBDIR += py-transip
     SUBDIR += py-trio

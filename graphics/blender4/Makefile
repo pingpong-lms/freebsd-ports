@@ -1,6 +1,6 @@
 PORTNAME=	blender4
 DISTVERSION=	4.5.5
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	graphics multimedia
 MASTER_SITES=	http://download.blender.org/source/ \
 		http://mirror.cs.umn.edu/blender.org/source/ \
@@ -14,6 +14,7 @@ WWW=		https://www.blender.org/
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/doc/license/GPL3-license.txt
 
+BROKEN=		Fails to find Python 3.11 while port depends on default version which is 3.12
 ONLY_FOR_ARCHS=		aarch64 amd64 powerpc64 powerpc64le riscv64
 ONLY_FOR_ARCHS_REASON=	static_assert(sizeof(unsigned long long) == sizeof(struct hipArray*))
 

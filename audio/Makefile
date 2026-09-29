@@ -100,6 +100,7 @@
     SUBDIR += darkice
     SUBDIR += dcd
     SUBDIR += deadbeef
+    SUBDIR += deadbeef-gui-plugins
     SUBDIR += deadbeef-jack-plugin
     SUBDIR += deadbeef-mpris2-plugin
     SUBDIR += deadbeef-musical-spectrum-plugin
@@ -134,6 +135,7 @@
     SUBDIR += elisa
     SUBDIR += emms
     SUBDIR += enscribe
+    SUBDIR += entropypianotuner
     SUBDIR += eq10q-lv2
     SUBDIR += espeak-ng
     SUBDIR += espressivo-lv2

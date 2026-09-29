@@ -100,6 +100,7 @@
     SUBDIR += chkascii
     SUBDIR += choose
     SUBDIR += chpp
+    SUBDIR += ciigo
     SUBDIR += cl-ppcre
     SUBDIR += cl-ppcre-ccl
     SUBDIR += cl-ppcre-clisp
@@ -255,6 +256,7 @@
     SUBDIR += goldendict
     SUBDIR += goldendict-ng
     SUBDIR += google-ctemplate
+    SUBDIR += google-translate
     SUBDIR += gpp
     SUBDIR += grap
     SUBDIR += grass
@@ -367,6 +369,7 @@
     SUBDIR += kibana92
     SUBDIR += kibana93
     SUBDIR += kibana94
+    SUBDIR += kibana95
     SUBDIR += kiss-templates
     SUBDIR += kmfl-european-latin
     SUBDIR += kmfl-khmer
@@ -454,7 +457,9 @@
     SUBDIR += linux-c7-libcroco
     SUBDIR += linux-c7-libxml2
     SUBDIR += linux-c7-libxslt
+    SUBDIR += linux-rl9-enchant2
     SUBDIR += linux-rl9-expat
+    SUBDIR += linux-rl9-hyphen
     SUBDIR += linux-rl9-libstemmer
     SUBDIR += linux-rl9-libxml2
     SUBDIR += linux-rl9-libxslt
@@ -1350,6 +1355,7 @@
     SUBDIR += py-agate-dbf
     SUBDIR += py-agate-excel
     SUBDIR += py-alabaster
+    SUBDIR += py-anonip
     SUBDIR += py-ansi2html
     SUBDIR += py-ansicolors
     SUBDIR += py-ansiwrap
@@ -1691,6 +1697,7 @@
     SUBDIR += py-rouge-score
     SUBDIR += py-rst2ansi
     SUBDIR += py-rst2html5
+    SUBDIR += py-sacrebleu
     SUBDIR += py-sacremoses
     SUBDIR += py-scour
     SUBDIR += py-segments
@@ -1800,6 +1807,7 @@
     SUBDIR += py-tomli-w
     SUBDIR += py-tomlkit
     SUBDIR += py-tomllint
+    SUBDIR += py-toon-format
     SUBDIR += py-toronado
     SUBDIR += py-towncrier
     SUBDIR += py-translationstring
@@ -2264,8 +2272,8 @@
     SUBDIR += ugrep
     SUBDIR += uim
     SUBDIR += uim-el
-    SUBDIR += uim-gtk2
     SUBDIR += uim-gtk3
+    SUBDIR += uim-gtk4
     SUBDIR += uim-m17nlib
     SUBDIR += uim-qt5
     SUBDIR += uim-qt6

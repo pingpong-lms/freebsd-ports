@@ -103,6 +103,7 @@
     SUBDIR += linux-rl9-cups-libs
     SUBDIR += linux-rl9-freetype
     SUBDIR += linux-rl9-harfbuzz
+    SUBDIR += linux-rl9-harfbuzz-icu
     SUBDIR += lout
     SUBDIR += lprps
     SUBDIR += lyx
@@ -191,6 +192,7 @@
     SUBDIR += py-psautohint
     SUBDIR += py-pycups
     SUBDIR += py-pydyf
+    SUBDIR += py-pyipp
     SUBDIR += py-pypdf
     SUBDIR += py-python-ly
     SUBDIR += py-relatorio

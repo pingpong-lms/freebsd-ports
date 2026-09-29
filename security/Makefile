@@ -364,6 +364,7 @@
     SUBDIR += linux-rl9-libgcrypt
     SUBDIR += linux-rl9-libgpg-error
     SUBDIR += linux-rl9-libksba
+    SUBDIR += linux-rl9-libseccomp
     SUBDIR += linux-rl9-libsecret
     SUBDIR += linux-rl9-libssh
     SUBDIR += linux-rl9-libtasn1
@@ -1151,6 +1152,7 @@
     SUBDIR += ratify
     SUBDIR += ratproxy
     SUBDIR += rats
+    SUBDIR += rauthy
     SUBDIR += rbw
     SUBDIR += rcracki_mt
     SUBDIR += rekor
@@ -1473,6 +1475,7 @@
     SUBDIR += wpa_supplicant-devel
     SUBDIR += wpa_supplicant210
     SUBDIR += wpa_supplicant29
+    SUBDIR += x11appjail
     SUBDIR += xca
     SUBDIR += xhash
     SUBDIR += xinetd

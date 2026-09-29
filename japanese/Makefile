@@ -175,6 +175,7 @@
     SUBDIR += migemo.el
     SUBDIR += mime_pls
     SUBDIR += mozc-el
+    SUBDIR += mozc-modeless
     SUBDIR += mozc-server
     SUBDIR += mozc-tool
     SUBDIR += multiskkserv
@@ -270,6 +271,7 @@
     SUBDIR += srd-fpw-package
     SUBDIR += sudachi
     SUBDIR += suicavalue
+    SUBDIR += tc
     SUBDIR += tdiary
     SUBDIR += tegaki-zinnia-japanese
     SUBDIR += tex-ptex

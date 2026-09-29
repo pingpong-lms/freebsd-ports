@@ -7,10 +7,12 @@
     SUBDIR += ImageMagick6
     SUBDIR += ImageMagick7
     SUBDIR += O2-tools
+    SUBDIR += R-cran-Cairo
     SUBDIR += R-cran-DiagrammeR
     SUBDIR += R-cran-GDD
     SUBDIR += R-cran-R.devices
     SUBDIR += R-cran-RColorBrewer
+    SUBDIR += R-cran-bmp
     SUBDIR += R-cran-colorspace
     SUBDIR += R-cran-cowplot
     SUBDIR += R-cran-diagram
@@ -274,7 +276,6 @@
     SUBDIR += gimp-resynthesizer
     SUBDIR += gimp3-app
     SUBDIR += gkrellkam2
-    SUBDIR += glad
     SUBDIR += glaxnimate
     SUBDIR += glbinding
     SUBDIR += gle
@@ -354,7 +355,6 @@
     SUBDIR += hdr_histogram
     SUBDIR += hdr_tools
     SUBDIR += heimer
-    SUBDIR += hiptext
     SUBDIR += hobbes-icons-xpm
     SUBDIR += hppsmtools
     SUBDIR += hs-tart
@@ -563,6 +563,7 @@
     SUBDIR += linux-rl9-graphene
     SUBDIR += linux-rl9-graphite2
     SUBDIR += linux-rl9-imageformats-libs
+    SUBDIR += linux-rl9-lcms2
     SUBDIR += linux-rl9-libdrm
     SUBDIR += linux-rl9-libepoxy
     SUBDIR += linux-rl9-libglvnd
@@ -577,6 +578,7 @@
     SUBDIR += linux-rl9-spirv-tools
     SUBDIR += linux-rl9-vulkan
     SUBDIR += linux-rl9-wayland
+    SUBDIR += linux-slang
     SUBDIR += lua-gd
     SUBDIR += lua-qrencode
     SUBDIR += lunasvg
@@ -816,6 +818,7 @@
     SUBDIR += pcdtojpeg
     SUBDIR += pcl-pointclouds
     SUBDIR += pdf2svg
+    SUBDIR += pdfium
     SUBDIR += pdfpc
     SUBDIR += pear-Horde_Image
     SUBDIR += pear-Image_3D
@@ -951,6 +954,7 @@
     SUBDIR += py-geosnap
     SUBDIR += py-giddy
     SUBDIR += py-gizeh
+    SUBDIR += py-glad2
     SUBDIR += py-glcontext
     SUBDIR += py-glfw
     SUBDIR += py-glooey
@@ -1057,6 +1061,7 @@
     SUBDIR += py-qt6-3d
     SUBDIR += py-qudida
     SUBDIR += py-railroad-diagrams
+    SUBDIR += py-rapidocr
     SUBDIR += py-rasterio
     SUBDIR += py-rasterstats
     SUBDIR += py-rawkit

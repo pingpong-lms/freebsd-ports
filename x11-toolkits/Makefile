@@ -5,7 +5,6 @@
     SUBDIR += aquamarine
     SUBDIR += blt
     SUBDIR += bwidget
-    SUBDIR += color-widgets-qt5
     SUBDIR += como
     SUBDIR += copperspice
     SUBDIR += ctk
@@ -112,6 +111,7 @@
     SUBDIR += linux-rl9-qt5-qtdeclarative
     SUBDIR += linux-rl9-qt5-qtquickcontrols
     SUBDIR += linux-rl9-tk86
+    SUBDIR += linux-rl9-vte291
     SUBDIR += movingmotif
     SUBDIR += mowitz
     SUBDIR += mygui
@@ -201,6 +201,7 @@
     SUBDIR += pythonqt
     SUBDIR += qhotkey
     SUBDIR += qml-box2d
+    SUBDIR += qt-color-widgets
     SUBDIR += qt5-charts
     SUBDIR += qt5-datavis3d
     SUBDIR += qt5-declarative

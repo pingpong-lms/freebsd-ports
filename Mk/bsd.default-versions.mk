@@ -78,7 +78,9 @@ GUILE_DEFAULT?=		2.2
 # Examples:	     6-nox11, 7
 IMAGEMAGICK_DEFAULT?=	7
 # Possible values: 8, 11, 17, 21, 25
-.  if ${ARCH:Marmv*} || ${ARCH} == powerpc
+.  if ${ARCH:Marmv*}
+JAVA_DEFAULT?=		8
+.  elif ${ARCH} == powerpc
 JAVA_DEFAULT?=		11
 .  elif ${ARCH:Mi386}
 JAVA_DEFAULT?=		21
@@ -143,7 +145,7 @@ PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 # Possible values: 13, 14, 15, 16, 17, 18
 PGSQL_DEFAULT?=		18
 # Possible values: 8.2, 8.3, 8.4, 8.5, 8.6
-PHP_DEFAULT?=		8.4
+PHP_DEFAULT?=		8.5
 # Possible values: 33, 34, 35, 36, 37
 POSTGIS_DEFAULT?=	36
 # Possible values: rust, legacy
