@@ -364,6 +364,7 @@
     SUBDIR += kf6-kcodecs
     SUBDIR += kf6-sonnet
     SUBDIR += kf6-syntax-highlighting
+    SUBDIR += kibana811
     SUBDIR += kibana8
     SUBDIR += kibana91
     SUBDIR += kibana92
