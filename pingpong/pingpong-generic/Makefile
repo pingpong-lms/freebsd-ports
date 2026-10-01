@@ -1,7 +1,7 @@
 # Created by: girgen
 #
 PORTNAME=	pingpong-generic
-PORTVERSION=	1.9
+PORTVERSION=	1.10
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
 DISTFILES=	#
@@ -12,7 +12,7 @@ COMMENT=	The meta-port for generic ppab server deps
 
 NO_BUILD=	yes
 
-USES=		perl5 gmake pgsql python autoreconf
+USES=		perl5 gmake pgsql python autoreconf ldap
 WANT_PGSQL=	client
 USE_OPENLDAP=	yes
 
