@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	pingpong-hardware
-PORTVERSION=	1.5
+PORTVERSION=	1.6
 CATEGORIES=	pingpong sysutils
 MASTER_SITES=	#
 
@@ -19,6 +19,7 @@ RUN_DEPENDS= \
 	amrstat:sysutils/amrstat \
 	cciss_vol_status:sysutils/cciss_vol_status \
 	${LOCALBASE}/etc/rc.d/microcode_update:sysutils/cpu-microcode-rc \
+	p5-Net-SNMP>0:net-mgmt/p5-Net-SNMP \
 	p5-HTML-Table>0:www/p5-HTML-Table \
 	arcconf:sysutils/arcconf
 
