@@ -259,8 +259,6 @@
     SUBDIR += honeyd
     SUBDIR += hostapd
     SUBDIR += hostapd-devel
-    SUBDIR += hostapd210
-    SUBDIR += hostapd29
     SUBDIR += hping3
     SUBDIR += hsflowd
     SUBDIR += htpdate
@@ -1133,7 +1131,7 @@
     SUBDIR += py-pypcap
     SUBDIR += py-pyprowl
     SUBDIR += py-pyroute2
-    SUBDIR += py-pyroute2.minimal
+    SUBDIR += py-pyroute2-minimal
     SUBDIR += py-pyroute2.protocols
     SUBDIR += py-pysendfile
     SUBDIR += py-pyshark
@@ -1215,7 +1213,6 @@
     SUBDIR += py-zope.proxy
     SUBDIR += pyrad
     SUBDIR += qadsl
-    SUBDIR += qoauth-qt5
     SUBDIR += qrcp
     SUBDIR += qt5-network
     SUBDIR += qt5-networkauth
@@ -1236,6 +1233,7 @@
     SUBDIR += radsecproxy
     SUBDIR += radvd
     SUBDIR += rathole
+    SUBDIR += rayfish
     SUBDIR += rclone
     SUBDIR += rclone-browser
     SUBDIR += rdapper
@@ -1377,6 +1375,7 @@
     SUBDIR += rubygem-google-cloud-pubsub
     SUBDIR += rubygem-google-cloud-pubsub-v1
     SUBDIR += rubygem-google-cloud-resource_manager
+    SUBDIR += rubygem-google-cloud-resource_manager-v3
     SUBDIR += rubygem-google-cloud-spanner
     SUBDIR += rubygem-google-cloud-spanner-admin-database-v1
     SUBDIR += rubygem-google-cloud-spanner-admin-instance-v1
