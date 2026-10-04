@@ -5,6 +5,38 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20261003:
+  AFFECTS: users of mail/postfix-current
+  AUTHOR: otis@FreeBSD.org
+
+  mail/postfix-current now can depend on either databases/lmdb0 or
+  databases/lmdb. The default is lmdb0 for now.
+
+  If you want/need to use lmdb1, you will need to build the package
+  with apropriate lmdb version selected.
+
+20261003:
+  AFFECTS: users of mail/postfix
+  AUTHOR: otis@FreeBSD.org
+
+  mail/postfix now can depend on either databases/lmdb0 or databases/lmdb.
+  The default is lmdb0 for now.
+
+  If you want/need to use lmdb1, you will need to build the package
+  with apropriate lmdb version selected.
+
+20261002:
+  AFFECTS: users of www/nginx-devel
+  AUTHOR: joneum@FreeBSD.org
+
+  Following the rename of security/openssl35 to security/openssl, the
+  HTTPV3_OSSL35 option has been renamed to HTTPV3_OSSL.
+
+  The saved setting does not carry over.  If you had the old option
+  enabled, select the new one and rebuild the port:
+
+  # make -C /usr/ports/www/nginx-devel config
+
 20260930:
   AFFECTS: users of security/openssl and security/openssl35
   AUTHOR: brnrd@FreeBSD.org

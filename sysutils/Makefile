@@ -219,6 +219,7 @@
     SUBDIR += cmogstored
     SUBDIR += cmospwd
     SUBDIR += cni-dnsname
+    SUBDIR += cni-epair
     SUBDIR += colorize
     SUBDIR += conan
     SUBDIR += condy
@@ -412,6 +413,7 @@
     SUBDIR += firstboot-freebsd-update
     SUBDIR += firstboot-pkg-upgrade
     SUBDIR += firstboot-pkgs
+    SUBDIR += fjord
     SUBDIR += flasher
     SUBDIR += flashrom
     SUBDIR += flexbackup
@@ -608,6 +610,7 @@
     SUBDIR += jstest-gtk
     SUBDIR += jtop
     SUBDIR += jtopen
+    SUBDIR += jtransfer
     SUBDIR += jvmtop
     SUBDIR += k3b
     SUBDIR += k8temp
@@ -856,7 +859,9 @@
     SUBDIR += opentofu
     SUBDIR += openupsd
     SUBDIR += openvox-agent8
+    SUBDIR += openvox-agent9
     SUBDIR += openvox-server8
+    SUBDIR += openvox-server9
     SUBDIR += osinfo-db-tools
     SUBDIR += osquery
     SUBDIR += p5-App-Regather
@@ -1072,7 +1077,6 @@
     SUBDIR += py-ansible-core221
     SUBDIR += py-ansible-lint
     SUBDIR += py-ansible-runner
-    SUBDIR += py-appjail-gui
     SUBDIR += py-azure-cli
     SUBDIR += py-azure-cli-core
     SUBDIR += py-azure-cli-telemetry
@@ -1507,7 +1511,6 @@
     SUBDIR += tvterm
     SUBDIR += tw_cli
     SUBDIR += twa-kmod
-    SUBDIR += twmn
     SUBDIR += tzdialog
     SUBDIR += u-boot-a13-olinuxino
     SUBDIR += u-boot-a64-olinuxino
