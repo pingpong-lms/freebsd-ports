@@ -5,7 +5,7 @@ DISTVERSIONSUFFIX=	-linux-x86_64
 CATEGORIES=	textproc www
 MASTER_SITES=	https://artifacts.elastic.co/downloads/kibana/ \
 		http://artifacts.elastic.co/downloads/kibana/
-PKGNAMESUFFIX=	8
+PKGNAMESUFFIX=	811
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	elastic@FreeBSD.org
