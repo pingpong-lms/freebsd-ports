@@ -50,6 +50,7 @@
     SUBDIR += crystal
     SUBDIR += cython
     SUBDIR += cython0
+    SUBDIR += dart
     SUBDIR += dhall
     SUBDIR += dlang-tools
     SUBDIR += dotnet
@@ -342,6 +343,7 @@
     SUBDIR += rust
     SUBDIR += rust-bootstrap
     SUBDIR += rust-nightly
+    SUBDIR += rust-nightly-bun
     SUBDIR += rust188
     SUBDIR += rustpython
     SUBDIR += s7

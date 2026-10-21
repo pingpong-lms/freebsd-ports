@@ -106,6 +106,7 @@
     SUBDIR += R-cran-parallelly
     SUBDIR += R-cran-parsedate
     SUBDIR += R-cran-patrick
+    SUBDIR += R-cran-pbapply
     SUBDIR += R-cran-pillar
     SUBDIR += R-cran-pkgbuild
     SUBDIR += R-cran-pkgcache
@@ -164,6 +165,7 @@
     SUBDIR += R-cran-uuid
     SUBDIR += R-cran-vcd
     SUBDIR += R-cran-vctrs
+    SUBDIR += R-cran-vdiffr
     SUBDIR += R-cran-waldo
     SUBDIR += R-cran-webfakes
     SUBDIR += R-cran-whisker
@@ -500,7 +502,6 @@
     SUBDIR += commitizen
     SUBDIR += commoncpp
     SUBDIR += compdbgen
-    SUBDIR += compiler-rt
     SUBDIR += compiz-bcop
     SUBDIR += computelibrary
     SUBDIR += concurrencpp
@@ -528,7 +529,6 @@
     SUBDIR += cpprestsdk
     SUBDIR += cpptest
     SUBDIR += cppunit
-    SUBDIR += cppurses
     SUBDIR += cpputest
     SUBDIR += cproto
     SUBDIR += cpu_features
@@ -586,6 +586,7 @@
     SUBDIR += cwrap
     SUBDIR += cxmon
     SUBDIR += cxref
+    SUBDIR += cxx-rust-cssparser
     SUBDIR += cxxopts
     SUBDIR += cxxtest
     SUBDIR += cxxtools
@@ -712,7 +713,6 @@
     SUBDIR += exomizer
     SUBDIR += expected
     SUBDIR += f77flow
-    SUBDIR += fatal
     SUBDIR += fbthrift
     SUBDIR += fc++
     SUBDIR += fccf
@@ -1733,6 +1733,7 @@
     SUBDIR += maven363
     SUBDIR += maven38
     SUBDIR += maven39
+    SUBDIR += maven310
     SUBDIR += mcpp
     SUBDIR += mdb
     SUBDIR += mdds
@@ -4891,6 +4892,7 @@
     SUBDIR += py-coveralls
     SUBDIR += py-cppheaderparser
     SUBDIR += py-cppy
+    SUBDIR += py-cpsat-logutils
     SUBDIR += py-crank
     SUBDIR += py-crashtest
     SUBDIR += py-crc32c
@@ -5202,6 +5204,7 @@
     SUBDIR += py-hash_ring
     SUBDIR += py-hatch
     SUBDIR += py-hatch-autorun
+    SUBDIR += py-hatch-cython
     SUBDIR += py-hatch-docstring-description
     SUBDIR += py-hatch-fancy-pypi-readme
     SUBDIR += py-hatch-jupyter-builder
@@ -5434,6 +5437,7 @@
     SUBDIR += py-loguru
     SUBDIR += py-logutils
     SUBDIR += py-logzero
+    SUBDIR += py-loky
     SUBDIR += py-looseversion
     SUBDIR += py-loro
     SUBDIR += py-louie
@@ -5626,6 +5630,7 @@
     SUBDIR += py-orderedmultidict
     SUBDIR += py-orderly-set
     SUBDIR += py-orjson
+    SUBDIR += py-orloge
     SUBDIR += py-ormsgpack
     SUBDIR += py-os-brick
     SUBDIR += py-os-client-config
@@ -5676,6 +5681,7 @@
     SUBDIR += py-path
     SUBDIR += py-path.py
     SUBDIR += py-pathable
+    SUBDIR += py-pathlib-abc
     SUBDIR += py-pathlib2
     SUBDIR += py-pathos
     SUBDIR += py-pathspec
@@ -6096,6 +6102,7 @@
     SUBDIR += py-q
     SUBDIR += py-qasync
     SUBDIR += py-qcs-api-client
+    SUBDIR += py-qcs-api-client-common
     SUBDIR += py-qcs-sdk-python
     SUBDIR += py-qstylizer
     SUBDIR += py-qt5
@@ -7617,6 +7624,7 @@
     SUBDIR += rubygem-drb-gitlab
     SUBDIR += rubygem-dry-cli
     SUBDIR += rubygem-dry-configurable
+    SUBDIR += rubygem-dry-configurable-gitlab
     SUBDIR += rubygem-dry-container
     SUBDIR += rubygem-dry-core
     SUBDIR += rubygem-dry-core-gitlab
@@ -7988,7 +7996,6 @@
     SUBDIR += rubygem-mixlib-versioning
     SUBDIR += rubygem-mize
     SUBDIR += rubygem-mkrf
-    SUBDIR += rubygem-mmap2
     SUBDIR += rubygem-mocha
     SUBDIR += rubygem-molinillo
     SUBDIR += rubygem-moneta
@@ -8791,6 +8798,7 @@
     SUBDIR += talloc242
     SUBDIR += talloc243
     SUBDIR += talloc244
+    SUBDIR += talloc250
     SUBDIR += task
     SUBDIR += taskctl
     SUBDIR += taskflow
@@ -8818,12 +8826,14 @@
     SUBDIR += termbox2
     SUBDIR += termcolor
     SUBDIR += terminality
+    SUBDIR += termox
     SUBDIR += terraform-ls
     SUBDIR += test-drive
     SUBDIR += testsweeper
     SUBDIR += tevent
     SUBDIR += tevent016
     SUBDIR += tevent017
+    SUBDIR += tevent0172
     SUBDIR += tex-kpathsea
     SUBDIR += tex-libtexlua
     SUBDIR += tex-libtexluajit
@@ -8855,6 +8865,7 @@
     SUBDIR += tlsh
     SUBDIR += tlx
     SUBDIR += tnt
+    SUBDIR += tobi-try
     SUBDIR += tokei
     SUBDIR += tokio-console
     SUBDIR += toml11
@@ -8895,6 +8906,7 @@
     SUBDIR += unordered-dense
     SUBDIR += upnp
     SUBDIR += urjtag
+    SUBDIR += usage
     SUBDIR += ut
     SUBDIR += utf8cpp
     SUBDIR += uthash
@@ -8960,6 +8972,7 @@
     SUBDIR += xdgpaths
     SUBDIR += xelfviewer
     SUBDIR += xeus
+    SUBDIR += xeus-cling
     SUBDIR += xeus-zmq
     SUBDIR += xfce4-dev-tools
     SUBDIR += xmake

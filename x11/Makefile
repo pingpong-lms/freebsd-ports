@@ -28,6 +28,23 @@
     SUBDIR += bemenu
     SUBDIR += bgrot
     SUBDIR += bgs
+    SUBDIR += bhotkeys
+    SUBDIR += bhotkeys-airplane
+    SUBDIR += bhotkeys-albert
+    SUBDIR += bhotkeys-audio
+    SUBDIR += bhotkeys-brightness
+    SUBDIR += bhotkeys-display-common
+    SUBDIR += bhotkeys-extend
+    SUBDIR += bhotkeys-gnome
+    SUBDIR += bhotkeys-i3
+    SUBDIR += bhotkeys-kde
+    SUBDIR += bhotkeys-lid-state
+    SUBDIR += bhotkeys-lock
+    SUBDIR += bhotkeys-mate
+    SUBDIR += bhotkeys-media
+    SUBDIR += bhotkeys-mirror
+    SUBDIR += bhotkeys-screenshot
+    SUBDIR += bhotkeys-xfce
     SUBDIR += bitmap
     SUBDIR += bmpanel2
     SUBDIR += boomer
@@ -59,6 +76,7 @@
     SUBDIR += controllermap
     SUBDIR += cool-retro-term
     SUBDIR += coreterminal
+    SUBDIR += cosmic-bg
     SUBDIR += damask
     SUBDIR += darktile
     SUBDIR += deforaos-integration
@@ -93,6 +111,9 @@
     SUBDIR += fnott
     SUBDIR += foot
     SUBDIR += framework-autorotate
+    SUBDIR += framework-autorotate-hotkey
+    SUBDIR += framework-keyboard
+    SUBDIR += framework-laptop12
     SUBDIR += fstobdf
     SUBDIR += fuzzel
     SUBDIR += gbsddialog
@@ -138,6 +159,7 @@
     SUBDIR += hyprcursor
     SUBDIR += hypridle
     SUBDIR += hyprland-guiutils
+    SUBDIR += hyprland-preview-share-picker
     SUBDIR += hyprlauncher
     SUBDIR += hyprlock
     SUBDIR += hyprls
@@ -229,6 +251,7 @@
     SUBDIR += libsx
     SUBDIR += libsynaptics
     SUBDIR += libwacom
+    SUBDIR += libwinpos
     SUBDIR += libxcb
     SUBDIR += libxcvt
     SUBDIR += libxdg-basedir
@@ -329,6 +352,8 @@
     SUBDIR += nxcomp
     SUBDIR += openrgb
     SUBDIR += oscar
+    SUBDIR += owe
+    SUBDIR += owe-lockfeed
     SUBDIR += p5-Clipboard
     SUBDIR += p5-X11-GUITest
     SUBDIR += p5-X11-IdleTime

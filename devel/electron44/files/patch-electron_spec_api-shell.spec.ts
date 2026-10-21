@@ -1,4 +1,4 @@
---- electron/spec/api-shell.spec.ts.orig	2026-09-29 23:27:57 UTC
+--- electron/spec/api-shell.spec.ts.orig	2026-10-17 02:46:46 UTC
 +++ electron/spec/api-shell.spec.ts
 @@ -37,7 +37,7 @@ describe('shell module', () => {
  
