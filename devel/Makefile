@@ -984,7 +984,6 @@
     SUBDIR += gradle62
     SUBDIR += gradle761
     SUBDIR += gradle8
-    SUBDIR += grantlee5
     SUBDIR += grcov
     SUBDIR += grex
     SUBDIR += grpc
@@ -1121,6 +1120,7 @@
     SUBDIR += janet-lsp
     SUBDIR += jansson
     SUBDIR += java-findbugs
+    SUBDIR += java-subversion
     SUBDIR += javafx-jars
     SUBDIR += javax-activation
     SUBDIR += javax-activation-api
@@ -1478,7 +1478,6 @@
     SUBDIR += librashader
     SUBDIR += librcc
     SUBDIR += librcd
-    SUBDIR += libreadline-java
     SUBDIR += libregf
     SUBDIR += librelp
     SUBDIR += librest
@@ -1704,7 +1703,6 @@
     SUBDIR += lua-sysctl
     SUBDIR += luabind
     SUBDIR += luafilesystem
-    SUBDIR += luajava
     SUBDIR += lutok
     SUBDIR += luv
     SUBDIR += lwgrp
@@ -1730,10 +1728,10 @@
     SUBDIR += matreshka
     SUBDIR += maven
     SUBDIR += maven-wrapper
+    SUBDIR += maven310
     SUBDIR += maven363
     SUBDIR += maven38
     SUBDIR += maven39
-    SUBDIR += maven310
     SUBDIR += mcpp
     SUBDIR += mdb
     SUBDIR += mdds
@@ -5249,7 +5247,6 @@
     SUBDIR += py-immutables
     SUBDIR += py-importlab
     SUBDIR += py-importlib-metadata
-    SUBDIR += py-importlib-metadata7
     SUBDIR += py-importlib-metadata8
     SUBDIR += py-importlib-resources
     SUBDIR += py-in-n-out
@@ -5598,13 +5595,18 @@
     SUBDIR += py-opentelemetry-configuration
     SUBDIR += py-opentelemetry-distro
     SUBDIR += py-opentelemetry-exporter-credential-provider-gcp
+    SUBDIR += py-opentelemetry-exporter-http-transport
     SUBDIR += py-opentelemetry-exporter-otlp
+    SUBDIR += py-opentelemetry-exporter-otlp-common
     SUBDIR += py-opentelemetry-exporter-otlp-proto-common
     SUBDIR += py-opentelemetry-exporter-otlp-proto-grpc
     SUBDIR += py-opentelemetry-exporter-otlp-proto-http
     SUBDIR += py-opentelemetry-exporter-prometheus
     SUBDIR += py-opentelemetry-instrumentation
+    SUBDIR += py-opentelemetry-instrumentation-aiohttp-client
+    SUBDIR += py-opentelemetry-instrumentation-aiohttp-server
     SUBDIR += py-opentelemetry-instrumentation-asgi
+    SUBDIR += py-opentelemetry-instrumentation-botocore
     SUBDIR += py-opentelemetry-instrumentation-dbapi
     SUBDIR += py-opentelemetry-instrumentation-django
     SUBDIR += py-opentelemetry-instrumentation-fastapi
@@ -5613,10 +5615,14 @@
     SUBDIR += py-opentelemetry-instrumentation-httpx
     SUBDIR += py-opentelemetry-instrumentation-logging
     SUBDIR += py-opentelemetry-instrumentation-psycopg2
+    SUBDIR += py-opentelemetry-instrumentation-pyramid
     SUBDIR += py-opentelemetry-instrumentation-requests
+    SUBDIR += py-opentelemetry-instrumentation-sqlalchemy
+    SUBDIR += py-opentelemetry-instrumentation-tornado
     SUBDIR += py-opentelemetry-instrumentation-urllib
     SUBDIR += py-opentelemetry-instrumentation-urllib3
     SUBDIR += py-opentelemetry-instrumentation-wsgi
+    SUBDIR += py-opentelemetry-propagator-aws-xray
     SUBDIR += py-opentelemetry-proto
     SUBDIR += py-opentelemetry-proto-json
     SUBDIR += py-opentelemetry-resource-detector-azure
@@ -6649,7 +6655,6 @@
     SUBDIR += qbe
     SUBDIR += qbs
     SUBDIR += qca
-    SUBDIR += qconf
     SUBDIR += qcoro
     SUBDIR += qgit
     SUBDIR += qlementine
@@ -6949,6 +6954,7 @@
     SUBDIR += rubygem-aws-sdk-cloudwatchevents
     SUBDIR += rubygem-aws-sdk-cloudwatchevidently
     SUBDIR += rubygem-aws-sdk-cloudwatchlogs
+    SUBDIR += rubygem-aws-sdk-cloudwatchomni
     SUBDIR += rubygem-aws-sdk-cloudwatchrum
     SUBDIR += rubygem-aws-sdk-codeartifact
     SUBDIR += rubygem-aws-sdk-codebuild
@@ -7028,6 +7034,7 @@
     SUBDIR += rubygem-aws-sdk-emrserverless
     SUBDIR += rubygem-aws-sdk-entityresolution
     SUBDIR += rubygem-aws-sdk-eventbridge
+    SUBDIR += rubygem-aws-sdk-eventbridgev2
     SUBDIR += rubygem-aws-sdk-evs
     SUBDIR += rubygem-aws-sdk-finspace
     SUBDIR += rubygem-aws-sdk-finspacedata
@@ -7157,6 +7164,7 @@
     SUBDIR += rubygem-aws-sdk-networkflowmonitor
     SUBDIR += rubygem-aws-sdk-networkmanager
     SUBDIR += rubygem-aws-sdk-networkmonitor
+    SUBDIR += rubygem-aws-sdk-networksecuritymanager
     SUBDIR += rubygem-aws-sdk-notifications
     SUBDIR += rubygem-aws-sdk-notificationscontacts
     SUBDIR += rubygem-aws-sdk-novaact
@@ -8064,6 +8072,7 @@
     SUBDIR += rubygem-opentelemetry-common
     SUBDIR += rubygem-opentelemetry-common-gitlab
     SUBDIR += rubygem-opentelemetry-exporter-otlp
+    SUBDIR += rubygem-opentelemetry-exporter-otlp-common
     SUBDIR += rubygem-opentelemetry-exporter-otlp-gitlab
     SUBDIR += rubygem-opentelemetry-exporter-otlp-logs
     SUBDIR += rubygem-opentelemetry-exporter-otlp-metrics
@@ -8797,7 +8806,6 @@
     SUBDIR += systemc
     SUBDIR += t1lib
     SUBDIR += ta-lib
-    SUBDIR += tabby
     SUBDIR += tablist
     SUBDIR += tabulate
     SUBDIR += tagref
@@ -8906,7 +8914,6 @@
     SUBDIR += uid_wrapper
     SUBDIR += ultragetopt
     SUBDIR += umbrello
-    SUBDIR += umlgraph
     SUBDIR += umpire
     SUBDIR += undead
     SUBDIR += unibilium
