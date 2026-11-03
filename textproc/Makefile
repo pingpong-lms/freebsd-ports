@@ -477,7 +477,6 @@
     SUBDIR += lua-icu-utils
     SUBDIR += lua-luaexpat
     SUBDIR += lua-lyaml
-    SUBDIR += lucene
     SUBDIR += lucene9
     SUBDIR += luceneplusplus
     SUBDIR += lv-aspell
@@ -1853,6 +1852,7 @@
     SUBDIR += py-youseedee
     SUBDIR += py-yte
     SUBDIR += py-zensical
+    SUBDIR += py-zensical-ui
     SUBDIR += py-zope.i18nmessageid
     SUBDIR += py-zpt
     SUBDIR += py-zxing-cpp
