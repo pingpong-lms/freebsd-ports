@@ -212,6 +212,7 @@
     SUBDIR += hello
     SUBDIR += help2man
     SUBDIR += hermes-agent
+    SUBDIR += hermes-tui
     SUBDIR += heyu2
     SUBDIR += hicolor-icon-theme
     SUBDIR += histring
@@ -244,6 +245,7 @@
     SUBDIR += kf5-purpose
     SUBDIR += kf6-purpose
     SUBDIR += kgeography
+    SUBDIR += kimi-code
     SUBDIR += klettres
     SUBDIR += koboldcpp
     SUBDIR += kookbook
@@ -483,6 +485,7 @@
     SUBDIR += py-comfyui-workflow-templates-json
     SUBDIR += py-comfyui-workflow-templates-media-api
     SUBDIR += py-comfyui-workflow-templates-media-assets-01
+    SUBDIR += py-comfyui-workflow-templates-media-assets-02
     SUBDIR += py-comfyui-workflow-templates-media-image
     SUBDIR += py-comfyui-workflow-templates-media-other
     SUBDIR += py-comfyui-workflow-templates-media-video
@@ -605,6 +608,7 @@
     SUBDIR += py-modelscope-hub
     SUBDIR += py-molequeue
     SUBDIR += py-napari
+    SUBDIR += py-napari-resources
     SUBDIR += py-napari-svg
     SUBDIR += py-npTDMS
     SUBDIR += py-npe2
@@ -643,6 +647,7 @@
     SUBDIR += py-polars-runtime
     SUBDIR += py-posthog
     SUBDIR += py-powerline-status
+    SUBDIR += py-prefab-ui
     SUBDIR += py-progressbar
     SUBDIR += py-progressbar2
     SUBDIR += py-pyEDFlib
