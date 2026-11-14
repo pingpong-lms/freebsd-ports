@@ -167,6 +167,7 @@
     SUBDIR += imap-tools
     SUBDIR += imapdedup
     SUBDIR += imapfilter
+    SUBDIR += imapgoose
     SUBDIR += imapsync
     SUBDIR += imaptools
     SUBDIR += imaputils
@@ -492,6 +493,7 @@
     SUBDIR += popular
     SUBDIR += postfinger
     SUBDIR += postfix
+    SUBDIR += postfix_exporter
     SUBDIR += postfix-current
     SUBDIR += postfix-logwatch
     SUBDIR += postfix-policyd-sf
@@ -764,6 +766,7 @@
     SUBDIR += thunderbird
     SUBDIR += thunderbird-dictionaries
     SUBDIR += thunderbird-esr
+    SUBDIR += tidemail
     SUBDIR += tlb
     SUBDIR += tmpmail
     SUBDIR += tpop3d

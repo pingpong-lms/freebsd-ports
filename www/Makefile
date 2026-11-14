@@ -2659,6 +2659,7 @@
     SUBDIR += sabredav
     SUBDIR += samdruckerserver
     SUBDIR += sarg
+    SUBDIR += sblg
     SUBDIR += scloader
     SUBDIR += script4rss
     SUBDIR += selenium
