@@ -25,7 +25,7 @@ BUILD_DEPENDS=	bash:shells/bash \
 		ggrep:textproc/gnugrep \
 		terminfo-db>0:misc/terminfo-db \
 		${LOCALBASE}/lib/compat/libssl.so.111:misc/compat13x
-LIB_DEPENDS=	libbrotlienc.so:archivers/brotli \
+LIB_DEPENDS?=	libbrotlienc.so:archivers/brotli \
 		libicuuc.so:devel/icu \
 		libinotify.so:devel/libinotify \
 		libunwind.so.11:devel/libunwind-devel
@@ -53,7 +53,7 @@ DOTNET_ENV+=	CMAKE_LIBRARY_PATH=${LOCALBASE}/libunwind11/lib \
 BOOTSTRAP_DOTNETVERSION?=			10.0
 BOOTSTRAP_SDKVERSION?=				${BOOTSTRAP_DOTNETVERSION}.112
 BOOTSTRAP_SDKVERSIONSUFFIX?=			-servicing.26422.108
-BOOTSTRAP_SOURCEBUILT_ARTIFACTS_DISTNAME=	Private.SourceBuilt.Artifacts.${BOOTSTRAP_SDKVERSION}${BOOTSTRAP_SDKVERSIONSUFFIX}.freebsd-${DOTNET_ARCH}
+BOOTSTRAP_SOURCEBUILT_ARTIFACTS_DISTNAME?=	Private.SourceBuilt.Artifacts.${BOOTSTRAP_SDKVERSION}${BOOTSTRAP_SDKVERSIONSUFFIX}.freebsd-${DOTNET_ARCH}
 BOOTSTRAP_SDK_DISTNAME=				dotnet-sdk-${BOOTSTRAP_SDKVERSION}-freebsd-${DOTNET_ARCH}
 
 DOTNETVERSION?=		10.0
