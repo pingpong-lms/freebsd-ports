@@ -1473,6 +1473,7 @@
     SUBDIR += p5-webservice-validator-css-w3c
     SUBDIR += p5-webservice-validator-html-w3c
     SUBDIR += pacparser
+    SUBDIR += paseo-web
     SUBDIR += payara
     SUBDIR += pear-HTML_AJAX
     SUBDIR += pear-HTML_TagCloud
